@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
+  m_Name: Chr_ArmUpperRight_Female_13_Item
+  m_EditorClassIdentifier: 
+  name: ArmUpperLeft_Female_13
+  icon: {fileID: 21300000, guid: 79cc0a2bc4f5ea04d97532990b2fe53f, type: 3}
+  isDefaultItem: 0
+  equipSlot: 7
+  armorModifier: 0
+  damageModifier: 0
+  mesh: {fileID: 315049156208675995, guid: e25af3ee54c625f4394cf9641a66c50d, type: 3}

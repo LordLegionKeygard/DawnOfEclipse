@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
+  m_Name: Chr_LegRight_Female_05_Item
+  m_EditorClassIdentifier: 
+  name: LegRight_Female_05
+  icon: {fileID: 21300000, guid: c031025275227f04cb78a1d38fc2e3ca, type: 3}
+  isDefaultItem: 0
+  equipSlot: 3
+  armorModifier: 0
+  damageModifier: 0
+  mesh: {fileID: 7604592110160971999, guid: 720d544b2f1c4c243b2ad179dfb120db, type: 3}

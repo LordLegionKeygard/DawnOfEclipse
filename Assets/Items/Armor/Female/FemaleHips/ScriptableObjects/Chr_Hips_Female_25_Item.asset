@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
+  m_Name: Chr_Hips_Female_25_Item
+  m_EditorClassIdentifier: 
+  name: Hips_Female_25
+  icon: {fileID: 21300000, guid: cf4892287daef7a499a7f280023a76c8, type: 3}
+  isDefaultItem: 0
+  equipSlot: 2
+  armorModifier: 0
+  damageModifier: 0
+  mesh: {fileID: 8092659344269538110, guid: 4bcc6aa81328dca4fa7f8440328557ae, type: 3}

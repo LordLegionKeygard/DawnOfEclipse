@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
+  m_Name: Chr_Head_No_Elements_Female_09
+  m_EditorClassIdentifier: 
+  name: Head_No_Elements_Female_09
+  icon: {fileID: 21300000, guid: 521ce8e4c18f8ac4db334273d851d068, type: 3}
+  isDefaultItem: 0
+  equipSlot: 0
+  armorModifier: 0
+  damageModifier: 0
+  mesh: {fileID: 3934089860324835958, guid: d505de29a92160a4bab88d2f31ee5c56, type: 3}
+  hatNumber: 2
+  noHair: 2
+  canChangehead: 1

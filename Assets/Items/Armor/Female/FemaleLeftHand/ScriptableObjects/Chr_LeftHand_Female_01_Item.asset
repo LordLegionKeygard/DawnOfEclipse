@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
+  m_Name: Chr_LeftHand_Female_01_Item
+  m_EditorClassIdentifier: 
+  name: LeftHand_Female_01
+  icon: {fileID: 21300000, guid: 7eeb796f252974e47b3c718e705613c6, type: 3}
+  isDefaultItem: 0
+  equipSlot: 6
+  armorModifier: 0
+  damageModifier: 0
+  mesh: {fileID: 3935021125678446923, guid: 03090defc19304744a04c9294918a18d, type: 3}

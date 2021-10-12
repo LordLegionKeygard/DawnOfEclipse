@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
+  m_Name: Chr_HeadCoverings_No_Hair_13
+  m_EditorClassIdentifier: 
+  name: HeadCoverings_No_Hair_13
+  icon: {fileID: 21300000, guid: ae33f568e12e44748b4ee7c14c0804ef, type: 3}
+  isDefaultItem: 0
+  equipSlot: 0
+  armorModifier: 0
+  damageModifier: 0
+  mesh: {fileID: 2754652847234392870, guid: 5f820d5786c490b498b3ccce501080ad, type: 3}
+  hatNumber: 1
+  noHair: 1
+  canChangehead: 1

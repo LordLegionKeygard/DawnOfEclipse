@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1247362280047629827
+--- !u!1 &49575773825519406
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,23 +8,23 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1244722352035927717}
-  - component: {fileID: 1238980183973803493}
-  - component: {fileID: 1232856895108713435}
+  - component: {fileID: 52215702936293256}
+  - component: {fileID: 58010699110132936}
+  - component: {fileID: 64274519383642870}
   m_Layer: 0
   m_Name: Tree_Twig_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
---- !u!4 &1244722352035927717
+--- !u!4 &52215702936293256
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1247362280047629827}
+  m_GameObject: {fileID: 49575773825519406}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -32,21 +32,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &1238980183973803493
+--- !u!33 &58010699110132936
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1247362280047629827}
+  m_GameObject: {fileID: 49575773825519406}
   m_Mesh: {fileID: 4300000, guid: a596a1d79fca8ab4b8bbdfb8a5e353dd, type: 3}
---- !u!23 &1232856895108713435
+--- !u!23 &64274519383642870
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1247362280047629827}
+  m_GameObject: {fileID: 49575773825519406}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1

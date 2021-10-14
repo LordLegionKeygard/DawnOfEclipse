@@ -10,10 +10,9 @@ public class EnemyManager : CharacterManager
     EnemyStats enemyStats;   
     public State currentState;
     public CharacterStats currentTarget;
-    public NavMeshAgent navMeshAgent;
-    public Rigidbody enemyRigidBody;
+    [HideInInspector] public NavMeshAgent navMeshAgent;
+    [HideInInspector] public Rigidbody enemyRigidBody;
     public bool isPerformingAction;
-
     public bool isInteracting;
     public float rotationSpeed = 15;
     public float maximumAttackRange = 1.5f;
@@ -43,6 +42,8 @@ public class EnemyManager : CharacterManager
     private void Update()
     {
         HandleRecoveryTime();
+
+        isRotatingWithRootMotion = enemyAnimationManager.anim.GetBool("isRotatingWithRootMotion");
 
         isInteracting = enemyAnimationManager.anim.GetBool("isInteracting");
     }

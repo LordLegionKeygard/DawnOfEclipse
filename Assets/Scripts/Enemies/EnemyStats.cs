@@ -7,6 +7,8 @@ public class EnemyStats : CharacterStats
     [SerializeField] private Collider[] colliders;
     private EnemyAnimatorManager enemyAnimatorManager;
 
+    public UIEnemyHealthBar enemyHealthBar;
+
     private CameraLockOnTarget cameraLockOnTarget;
 
     private EnemyManager enemyManager;
@@ -25,6 +27,7 @@ public class EnemyStats : CharacterStats
     {
         maxHealth = SetMaxHealthFromHealthLevel();
         currentHealth = maxHealth;
+        enemyHealthBar.SetMaxHealth(maxHealth);
     }
 
     private int SetMaxHealthFromHealthLevel()
@@ -36,6 +39,8 @@ public class EnemyStats : CharacterStats
     public void TakeDamage(int damage)
     {
         currentHealth = currentHealth - damage;
+
+        enemyHealthBar.SetHealth(currentHealth);
 
         enemyAnimatorManager.PlayerTargetAnimation("SwordTakeDamage", true);
 

@@ -10,6 +10,7 @@ public class PlayerController : CharacterManager
     [SerializeField] private LayerMask groundMask;
     [SerializeField] private Transform cam;
     [SerializeField] private float speed;
+    [SerializeField] private float normalSpeed = 5f;
     [SerializeField] private float turnSmothTime;
     [SerializeField] private float turnSmoothVelocity;
     [SerializeField] private float gravity = -9.8f;
@@ -149,7 +150,7 @@ public class PlayerController : CharacterManager
         else if (NotSneak)
         {
             staminaControl.staminaRun = false;
-            speed = 5;
+            speed = normalSpeed;
             anim.SetBool(Run, false);
             StartCoroutine(ExecuteAfterTime(0.3f, DisableFastRun));
         }

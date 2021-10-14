@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7932063695570735578}
   - component: {fileID: 7940194354090419450}
   - component: {fileID: 7947243446961332065}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Tree_Stump_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 7954882873060817198}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.1558868, y: 1.4228019, z: 1.1558868}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0

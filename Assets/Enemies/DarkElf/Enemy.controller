@@ -484,6 +484,8 @@ MonoBehaviour:
   isInteractingStatus: 0
   isRotatingWithRootMotion: isRotatingWithRootMotion
   isRotatingWithRootMotionStatus: 0
+  canRotateBool: canRotate
+  canRotateStatus: 1
 --- !u!1101 &378368349766648587
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -742,7 +744,7 @@ BlendTree:
     m_Mirror: 0
   - serializedVersion: 2
     m_Motion: {fileID: -203655887218126122, guid: f6c197871825bd745bfeefa7954aa086, type: 3}
-    m_Threshold: 1
+    m_Threshold: 0.25
     m_Position: {x: 0, y: 1}
     m_TimeScale: 1
     m_CycleOffset: 0
@@ -751,7 +753,7 @@ BlendTree:
   m_BlendParameter: Horizontal
   m_BlendParameterY: Vertical
   m_MinThreshold: 0
-  m_MaxThreshold: 1
+  m_MaxThreshold: 0.25
   m_UseAutomaticThresholds: 1
   m_NormalizedBlendValues: 0
   m_BlendType: 3

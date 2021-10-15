@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class RotateTowardTargetState : State
 {
+    public PursueTargetState pursueTargetState;
     public override State Tick(EnemyManager enemyManager, EnemyStats enemyStats, EnemyAnimatorManager enemyAnimatorManager)
     {
         enemyAnimatorManager.anim.SetFloat("Vertical", 0);
@@ -15,23 +16,23 @@ public class RotateTowardTargetState : State
         if (viewableAngle >= 100 && viewableAngle <= 180 && !enemyManager.isInteracting)
         {
             enemyAnimatorManager.PlayerTargetAnimationWithRootRotation("Sword and Shiled 180 Turn", true);
-            return this;
+            return pursueTargetState;
         }
         else if (viewableAngle <= -101 && viewableAngle >= -180 && !enemyManager.isInteracting)
         {
             enemyAnimatorManager.PlayerTargetAnimationWithRootRotation("Sword and Shiled 180 Turn", true);
-            return this;
+            return pursueTargetState;
         }
         else if (viewableAngle <= -45 && viewableAngle >= -100 && !enemyManager.isInteracting)
         {
             enemyAnimatorManager.PlayerTargetAnimationWithRootRotation("Turn Right", true);
-            return this;
+            return pursueTargetState;
         }
         else if (viewableAngle >= 45 && viewableAngle <= 100 && !enemyManager.isInteracting)
         {
             enemyAnimatorManager.PlayerTargetAnimationWithRootRotation("Turn Left", true);
-            return this;
+            return pursueTargetState;
         }
-        return this;
+        return pursueTargetState;
     }
 }

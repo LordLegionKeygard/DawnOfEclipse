@@ -214,6 +214,9 @@ public class PlayerController : CharacterManager
                 anim.SetBool(Sneak, true);
                 speed = 2;
                 sneak = true;
+                CharacterManager.maximumDetectionAngle = 50f;
+                CharacterManager.minimumDetectionAngle = -50f;
+                CharacterManager.detectionRadius = 10f;
             }
 
             else
@@ -222,6 +225,9 @@ public class PlayerController : CharacterManager
                 anim.SetBool(Sneak, false);
                 sneak = false;
                 speed = 5;
+                CharacterManager.maximumDetectionAngle = 180f;
+                CharacterManager.minimumDetectionAngle = -180f;
+                CharacterManager.detectionRadius = 20f;
             }
         }
     }

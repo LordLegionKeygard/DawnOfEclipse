@@ -16,14 +16,6 @@ public class EnemyManager : CharacterManager
     public bool isInteracting;
     public float rotationSpeed = 15;
     public float maximumAttackRange = 1.5f;
-
-    [Header("A.I Settings")]
-    public float detectionRadius = 20;
-    public float maximumDetectionAngle = 50;
-    public float minimumDetectionAngle = -50;
-
-    public float currentRecoveryTime = 0;
-
     private void Awake()
     {
         enemyLocomotionManager = GetComponent<EnemyLocomotionManager>();

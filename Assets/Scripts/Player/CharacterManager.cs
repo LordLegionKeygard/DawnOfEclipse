@@ -9,4 +9,11 @@ public class CharacterManager : MonoBehaviour
 
     [Header("Movement Flags")]
     public bool isRotatingWithRootMotion;
+    public bool canRotate;
+
+    [Header("A.I Settings")]
+    public static float detectionRadius = 20;
+    public static float maximumDetectionAngle = 180;
+    public static float minimumDetectionAngle = -180;
+    public float currentRecoveryTime = 0;
 }

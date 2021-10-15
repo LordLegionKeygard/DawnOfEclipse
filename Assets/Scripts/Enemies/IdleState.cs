@@ -9,7 +9,7 @@ public class IdleState : State
     public override State Tick(EnemyManager enemyManager, EnemyStats enemyStats, EnemyAnimatorManager enemyAnimatorManager)
     {
         #region Handle Enemy Target Detection
-        Collider[] colliders = Physics.OverlapSphere(transform.position, enemyManager.detectionRadius, detectionLayer);
+        Collider[] colliders = Physics.OverlapSphere(transform.position, EnemyManager.detectionRadius, detectionLayer);
 
         for (int i = 0; i < colliders.Length; i++)
         {
@@ -20,7 +20,7 @@ public class IdleState : State
                 Vector3 targetDirection = characterStats.transform.position - transform.position;
                 float viewableAngle = Vector3.Angle(targetDirection, transform.forward);
 
-                if (viewableAngle > enemyManager.minimumDetectionAngle && viewableAngle < enemyManager.maximumDetectionAngle)
+                if (viewableAngle > EnemyManager.minimumDetectionAngle && viewableAngle < EnemyManager.maximumDetectionAngle)
                 {
                     enemyManager.currentTarget = characterStats;
                 }
@@ -40,4 +40,3 @@ public class IdleState : State
         #endregion
     }
 }
-

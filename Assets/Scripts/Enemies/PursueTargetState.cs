@@ -5,8 +5,19 @@ using UnityEngine;
 public class PursueTargetState : State
 {
     public CombatStanceState combatStanceState;
+
+    public RotateTowardTargetState rotateTowardTargetState;
     public override State Tick(EnemyManager enemyManager, EnemyStats enemyStats, EnemyAnimatorManager enemyAnimatorManager)
     {
+        Vector3 targetDirection = enemyManager.currentTarget.transform.position - enemyManager.transform.position;
+        float distanceFromTarget = Vector3.Distance(enemyManager.currentTarget.transform.position, enemyManager.transform.position);
+        float viewableAngle = Vector3.SignedAngle(targetDirection, enemyManager.transform.forward, Vector3.up);
+
+        HandleRotateTowardsTarget(enemyManager);
+
+        if(viewableAngle >= 55 || viewableAngle <= -55)
+            return rotateTowardTargetState;
+
         if (enemyManager.isPerformingAction)
         {
             enemyAnimatorManager.anim.SetFloat("Vertical", 0, 0.1f, Time.deltaTime);
@@ -14,16 +25,13 @@ public class PursueTargetState : State
         }
 
 
-        Vector3 targetDirection = enemyManager.currentTarget.transform.position - enemyManager.transform.position;
-        float distanceFromTarget = Vector3.Distance(enemyManager.currentTarget.transform.position, enemyManager.transform.position);
-        float viewableAngle = Vector3.Angle(targetDirection, enemyManager.transform.forward);
 
         if (distanceFromTarget > enemyManager.maximumAttackRange)
         {
             enemyAnimatorManager.anim.SetFloat("Vertical", 1, 0.1f, Time.deltaTime);
         }
 
-        HandleRotateTowardsTarget(enemyManager);
+
         enemyManager.navMeshAgent.transform.localPosition = Vector3.zero;
         enemyManager.navMeshAgent.transform.localRotation = Quaternion.identity;
 

@@ -44,7 +44,7 @@ public class HealthControl : CharacterStats
 
     private void RandomTakeDamage()
     {
-        int randomState = Random.Range(0, 2);
+        int randomState = Random.Range(0, 6);
         if (randomState == 0)
         {
             animator.SetTrigger("takeDamage");
@@ -52,6 +52,22 @@ public class HealthControl : CharacterStats
         if (randomState == 1)
         {
             animator.SetTrigger("takeDamage1");
+        }
+        if (randomState == 2)
+        {
+            
+        }
+        if (randomState == 3)
+        {
+            
+        }
+        if (randomState == 4)
+        {
+            
+        }
+        if (randomState == 5)
+        {
+            
         }
     }
 

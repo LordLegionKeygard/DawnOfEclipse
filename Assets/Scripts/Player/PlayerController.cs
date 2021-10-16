@@ -216,7 +216,6 @@ public class PlayerController : CharacterManager
                 sneak = true;
                 CharacterManager.maximumDetectionAngle = 50f;
                 CharacterManager.minimumDetectionAngle = -50f;
-                CharacterManager.detectionRadius = 10f;
             }
 
             else
@@ -227,7 +226,6 @@ public class PlayerController : CharacterManager
                 speed = 5;
                 CharacterManager.maximumDetectionAngle = 180f;
                 CharacterManager.minimumDetectionAngle = -180f;
-                CharacterManager.detectionRadius = 20f;
             }
         }
     }

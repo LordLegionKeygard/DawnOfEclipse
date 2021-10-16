@@ -14,7 +14,7 @@ public class Equipment : Item
     public int hatNumber;  
     public int noHair; // 0 = withHair, 1 = noHair & noEars, 2 = fullHelmet(noAll)
     public bool canChangehead;
-
+    
     // When pressed in inventory
     public override void Use()
     {

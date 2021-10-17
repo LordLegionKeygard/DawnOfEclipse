@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c178d9a6f4eaceb4881bbd1358c3cbe3, type: 3}
   m_Name: HealthPotion
   m_EditorClassIdentifier: 
-  name: HealhPotions
+  name: New Item
   icon: {fileID: 21300000, guid: 8bba4b5ee74900b4ea2ce0fef9c25afb, type: 3}
   isDefaultItem: 0
-  maxStack: 64
+  maxStack: 9
+  isUsageItem: 1
+  item: {fileID: 0}
+  amount: 1

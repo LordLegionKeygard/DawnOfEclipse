@@ -15,10 +15,13 @@ MonoBehaviour:
   name: Chr_ElbowAttachLeft_03
   icon: {fileID: 21300000, guid: ee05ee49c85e613449f8109332d9bea5, type: 3}
   isDefaultItem: 0
+  maxStack: 1
+  item: {fileID: 0}
+  amount: 0
   equipSlot: 15
   armorModifier: 0
-  damageModifier: 0
   mesh: {fileID: 5060270301488254079, guid: 885e29e90fa4cd946b20b1aa504cac05, type: 3}
+  prefab: {fileID: 0}
   hatNumber: 0
   noHair: 0
   canChangehead: 0

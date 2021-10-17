@@ -15,10 +15,13 @@ MonoBehaviour:
   name: ElbowAttachRight_05
   icon: {fileID: 21300000, guid: 1a888ba06a1b3ef43b72cb5c7b1f63cb, type: 3}
   isDefaultItem: 0
+  maxStack: 1
+  item: {fileID: 0}
+  amount: 0
   equipSlot: 14
   armorModifier: 0
-  damageModifier: 0
   mesh: {fileID: 6216005752614216364, guid: f8d41c4d96c1aeb448bb8cd4b20e8b80, type: 3}
+  prefab: {fileID: 0}
   hatNumber: 0
   noHair: 0
   canChangehead: 0

@@ -15,7 +15,13 @@ MonoBehaviour:
   name: ShoulderAttachLeft_20
   icon: {fileID: 21300000, guid: 87ec4a3f685b00e459ca9ed8568de79f, type: 3}
   isDefaultItem: 0
+  maxStack: 1
+  item: {fileID: 0}
+  amount: 0
   equipSlot: 13
   armorModifier: 0
-  damageModifier: 0
   mesh: {fileID: 8572456214270902010, guid: 6659e5592b5c36440abfcb61e7a4732a, type: 3}
+  prefab: {fileID: 0}
+  hatNumber: 0
+  noHair: 0
+  canChangehead: 0

@@ -15,10 +15,13 @@ MonoBehaviour:
   name: KneeAttachRight_09
   icon: {fileID: 21300000, guid: 81d49e1ef984c814494e3e3db1863d6a, type: 3}
   isDefaultItem: 0
+  maxStack: 1
+  item: {fileID: 0}
+  amount: 0
   equipSlot: 17
   armorModifier: 0
-  damageModifier: 0
   mesh: {fileID: 7829845432988995515, guid: 288e0e8d54e233c48ae24dce55f89f7b, type: 3}
+  prefab: {fileID: 0}
   hatNumber: 0
   noHair: 0
   canChangehead: 0

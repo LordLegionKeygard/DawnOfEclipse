@@ -15,7 +15,13 @@ MonoBehaviour:
   name: LegLeft_Female_03
   icon: {fileID: 21300000, guid: 5cf5882d7618362438129b33563fff9a, type: 3}
   isDefaultItem: 0
+  maxStack: 1
+  item: {fileID: 0}
+  amount: 0
   equipSlot: 4
   armorModifier: 0
-  damageModifier: 0
   mesh: {fileID: 8697630540912409169, guid: 8b968346417adc843b12a2a085d09c82, type: 3}
+  prefab: {fileID: 0}
+  hatNumber: 0
+  noHair: 0
+  canChangehead: 0

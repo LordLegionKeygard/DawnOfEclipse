@@ -15,10 +15,13 @@ MonoBehaviour:
   name: Head_No_Elements_Female_03
   icon: {fileID: 21300000, guid: 521a998912bcaa5488fc9e629429d641, type: 3}
   isDefaultItem: 0
+  maxStack: 1
+  item: {fileID: 0}
+  amount: 0
   equipSlot: 0
   armorModifier: 0
-  damageModifier: 0
   mesh: {fileID: 7192426989327998409, guid: fcbf7d26a6ff01547bada6f72d26e82c, type: 3}
+  prefab: {fileID: 0}
   hatNumber: 2
   noHair: 2
   canChangehead: 1

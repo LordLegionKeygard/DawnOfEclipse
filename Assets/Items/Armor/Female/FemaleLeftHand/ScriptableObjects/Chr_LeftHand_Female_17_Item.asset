@@ -15,7 +15,13 @@ MonoBehaviour:
   name: LeftHand_Female_17
   icon: {fileID: 21300000, guid: 69e9b40026e467147863226c7d8ee1f3, type: 3}
   isDefaultItem: 0
+  maxStack: 1
+  item: {fileID: 0}
+  amount: 0
   equipSlot: 6
   armorModifier: 0
-  damageModifier: 0
   mesh: {fileID: 7231094564551782470, guid: dac4030aaa028094aa04e9b1c89ef7ca, type: 3}
+  prefab: {fileID: 0}
+  hatNumber: 0
+  noHair: 0
+  canChangehead: 0

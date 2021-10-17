@@ -15,7 +15,13 @@ MonoBehaviour:
   name: RightHand_Female_08
   icon: {fileID: 21300000, guid: 8c4fcd5ef5da6164b8d5455a11de2c1a, type: 3}
   isDefaultItem: 0
+  maxStack: 1
+  item: {fileID: 0}
+  amount: 0
   equipSlot: 5
   armorModifier: 0
-  damageModifier: 0
   mesh: {fileID: 8124857637002063396, guid: 0cb9a90caca86b340862ea1a5f59c686, type: 3}
+  prefab: {fileID: 0}
+  hatNumber: 0
+  noHair: 0
+  canChangehead: 0

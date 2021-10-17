@@ -15,10 +15,13 @@ MonoBehaviour:
   name: HeadCoverings_No_Hair_13
   icon: {fileID: 21300000, guid: ae33f568e12e44748b4ee7c14c0804ef, type: 3}
   isDefaultItem: 0
+  maxStack: 1
+  item: {fileID: 0}
+  amount: 0
   equipSlot: 0
   armorModifier: 0
-  damageModifier: 0
   mesh: {fileID: 2754652847234392870, guid: 5f820d5786c490b498b3ccce501080ad, type: 3}
+  prefab: {fileID: 0}
   hatNumber: 1
   noHair: 1
   canChangehead: 1

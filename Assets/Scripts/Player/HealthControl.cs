@@ -7,6 +7,8 @@ public class HealthControl : CharacterStats
 {
     [SerializeField] private Slider healthBar;
     private Animator animator;
+
+    [SerializeField] private Image healthBarImage;
     private PlayerController playerController;
 
     private void Start()
@@ -32,6 +34,7 @@ public class HealthControl : CharacterStats
         {
             currentHealth = currentHealth - damage;
             healthBar.value = currentHealth;
+            UpdateHealthColorBar();
 
             RandomTakeDamage();
         }
@@ -40,6 +43,15 @@ public class HealthControl : CharacterStats
         {
             RandomDeath();
         }
+    }
+
+    private void UpdateHealthColorBar()
+    {
+        Color healthGreenColor = new Color(0.01176471f, 0.8117647f, 0.1607843f);
+        float healthBarPercent = (float)currentHealth / (float)maxHealth;
+
+        healthBarImage.color = Color.Lerp(Color.red, healthGreenColor, healthBarPercent);
+
     }
 
     private void RandomTakeDamage()

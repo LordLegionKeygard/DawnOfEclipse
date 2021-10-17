@@ -15,7 +15,13 @@ MonoBehaviour:
   name: BackAttachment_15
   icon: {fileID: 21300000, guid: 11199c9f36c312943b8f896d13fcdd59, type: 3}
   isDefaultItem: 0
+  maxStack: 1
+  item: {fileID: 0}
+  amount: 0
   equipSlot: 11
   armorModifier: 0
-  damageModifier: 0
   mesh: {fileID: 6958566401075670357, guid: aadc35dd23937b042b70315dabe33dec, type: 3}
+  prefab: {fileID: 0}
+  hatNumber: 0
+  noHair: 0
+  canChangehead: 0

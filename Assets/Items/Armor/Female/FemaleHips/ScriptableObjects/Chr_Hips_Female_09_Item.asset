@@ -15,7 +15,13 @@ MonoBehaviour:
   name: Hips_Female_09
   icon: {fileID: 21300000, guid: 5441e99235d6dc24589527d4d8a0234d, type: 3}
   isDefaultItem: 0
+  maxStack: 1
+  item: {fileID: 0}
+  amount: 0
   equipSlot: 2
   armorModifier: 0
-  damageModifier: 0
   mesh: {fileID: 8827415947792008032, guid: 366d94c43f2288c4fafb5615cf720533, type: 3}
+  prefab: {fileID: 0}
+  hatNumber: 0
+  noHair: 0
+  canChangehead: 0

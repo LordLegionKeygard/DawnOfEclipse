@@ -15,10 +15,13 @@ MonoBehaviour:
   name: HipsAttachment_09
   icon: {fileID: 21300000, guid: 69aba71ace849ad41b74fd832036b520, type: 3}
   isDefaultItem: 0
+  maxStack: 1
+  item: {fileID: 0}
+  amount: 0
   equipSlot: 16
   armorModifier: 0
-  damageModifier: 0
   mesh: {fileID: 5416741983613212710, guid: 12c9a280c6331084b88f049ff4712872, type: 3}
+  prefab: {fileID: 0}
   hatNumber: 0
   noHair: 0
   canChangehead: 0

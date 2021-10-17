@@ -15,7 +15,13 @@ MonoBehaviour:
   name: ArmUpperLeft_Female_04
   icon: {fileID: 21300000, guid: c28885ab429938f499fb6aa9efb0123f, type: 3}
   isDefaultItem: 0
+  maxStack: 1
+  item: {fileID: 0}
+  amount: 0
   equipSlot: 8
   armorModifier: 0
-  damageModifier: 0
   mesh: {fileID: 2345786233353256310, guid: 62707e485bfc7e143b48571367ac65bd, type: 3}
+  prefab: {fileID: 0}
+  hatNumber: 0
+  noHair: 0
+  canChangehead: 0

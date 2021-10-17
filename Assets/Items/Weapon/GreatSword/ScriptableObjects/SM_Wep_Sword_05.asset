@@ -15,6 +15,9 @@ MonoBehaviour:
   name: SM_Wep_Sword_05
   icon: {fileID: 21300000, guid: ae0acc51652797440af464946392e416, type: 3}
   isDefaultItem: 0
+  maxStack: 1
+  item: {fileID: 0}
+  amount: 0
   equipSlot: 19
   armorModifier: 0
   mesh: {fileID: 0}

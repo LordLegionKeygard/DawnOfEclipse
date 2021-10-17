@@ -15,6 +15,9 @@ MonoBehaviour:
   name: SM_Wep_Crystal_DoubleSword_01_Drop
   icon: {fileID: 21300000, guid: 0f7d3e95da40d0b4b93a02d943685f47, type: 3}
   isDefaultItem: 0
+  maxStack: 1
+  item: {fileID: 0}
+  amount: 0
   equipSlot: 19
   armorModifier: 0
   mesh: {fileID: 0}

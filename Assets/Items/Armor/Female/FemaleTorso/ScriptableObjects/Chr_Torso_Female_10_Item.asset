@@ -15,8 +15,13 @@ MonoBehaviour:
   name: Torso_Female_10
   icon: {fileID: 21300000, guid: 1b8e5e1a337098c4db8a1c32d3e75ca4, type: 3}
   isDefaultItem: 0
+  maxStack: 1
+  item: {fileID: 0}
+  amount: 0
   equipSlot: 1
   armorModifier: 0
-  damageModifier: 0
   mesh: {fileID: 2739902330425037062, guid: 5fc2baa58455c7c47b438d44bc2e59ea, type: 3}
-  coveredMeshRegions: 
+  prefab: {fileID: 0}
+  hatNumber: 0
+  noHair: 0
+  canChangehead: 0

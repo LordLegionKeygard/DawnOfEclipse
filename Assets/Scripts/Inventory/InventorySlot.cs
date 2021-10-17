@@ -13,13 +13,20 @@ public class InventorySlot : MonoBehaviour
 
     [SerializeField] private GameObject ringFromBtn;
 
+    private PlayerController playerController;
+
     public Item item;  // Current item in the slot
 
     // Add item to the slot
 
-    private void Awake()
+    // private void Awake()
+    // {
+    //     item = new Item();
+    // }
+
+    private void Start()
     {
-        item = new Item();
+        playerController = FindObjectOfType<PlayerController>();
     }
 
     private void Update()
@@ -51,14 +58,15 @@ public class InventorySlot : MonoBehaviour
     }
     public void ClearSlot()
     {
-        item = new Item();
+        // item = new Item();
         RefreshSlot();
     }
 
     // Called when the remove button is pressed
     public void OnRemoveButton()
     {
-        Inventory.instance.Remove(item);
+        Inventory.instance.RemoveItemFromInventoryList(item);
+        DeActiveItemInfo();
     }
 
     // Called when the item is pressed
@@ -66,17 +74,26 @@ public class InventorySlot : MonoBehaviour
     {
         if (item != null)
         {
+            Debug.Log("UseItem");
             item.Use();
-            icon.sprite = null;
-            icon.enabled = false;
-            removeButton.interactable = false;
-            ringFromBtn.SetActive(false);
-            amount.enabled = false;
-            if (item.isUsageItem)
+            DeActiveItemInfo();
+
+            if (item.isUsedItem == true)
             {
+                Debug.Log("IsedItem");
                 OnRemoveButton();
+                playerController.Drinking();
             }
         }
 
+    }
+
+    private void DeActiveItemInfo()
+    {
+        icon.sprite = null;
+        icon.enabled = false;
+        removeButton.interactable = false;
+        ringFromBtn.SetActive(false);
+        amount.enabled = false;
     }
 }

@@ -9,13 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c178d9a6f4eaceb4881bbd1358c3cbe3, type: 3}
+  m_Script: {fileID: 11500000, guid: 4d06099a2e3264046bea119e4c8637b9, type: 3}
   m_Name: HealthPotion
   m_EditorClassIdentifier: 
-  name: New Item
+  CurrentItem: {fileID: 0}
   icon: {fileID: 21300000, guid: 8bba4b5ee74900b4ea2ce0fef9c25afb, type: 3}
-  isDefaultItem: 0
   maxStack: 9
-  isUsageItem: 1
-  item: {fileID: 0}
   amount: 1
+  isDefaultItem: 0
+  isUsedItem: 1
+  PotionType: 0

@@ -45,8 +45,9 @@ public class HealthControl : CharacterStats
         }
     }
 
-    private void UpdateHealthColorBar()
+    public void UpdateHealthColorBar()
     {
+        healthBar.value = currentHealth;
         Color healthGreenColor = new Color(0.01176471f, 0.8117647f, 0.1607843f);
         float healthBarPercent = (float)currentHealth / (float)maxHealth;
 

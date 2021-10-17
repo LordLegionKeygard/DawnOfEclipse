@@ -51,13 +51,13 @@ public class InventoryClickHandler : MonoBehaviour
         {
             if (!cursor.item.hasItem)
                 return;
-            if (!cursor.item.item.isStackable)
+            if (!cursor.item.CurrentItem.isStackable)
                 return;
-            if (clicked.item.amount == clicked.item.item.maxStack)
+            if (clicked.item.amount == clicked.item.CurrentItem.maxStack)
                 return;
 
             int total = cursor.item.amount + clicked.item.amount;
-            int maxStack = cursor.item.item.maxStack;
+            int maxStack = cursor.item.CurrentItem.maxStack;
 
             if (total <= maxStack)
             {

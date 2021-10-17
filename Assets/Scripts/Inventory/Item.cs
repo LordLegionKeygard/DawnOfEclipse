@@ -4,13 +4,16 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Item", menuName = "Inventory/Item")]
 public class Item : ScriptableObject
 {
-    new public string name = "New Item";
+    [HideInInspector] public Item CurrentItem; // Current item in the slot
     public Sprite icon = null;
-    public bool isDefaultItem = false;
     public int maxStack;
+    public int amount;
+    public bool isDefaultItem = false;
     public bool isStackable { get { return (maxStack > 1); } }
-    public bool isUsageItem = false;
+    public bool hasItem { get { return (CurrentItem != null); } }
+    private InventorySlot inventorySlot;
 
+    public bool isUsedItem = false;
     public virtual void Use()
     {
         Debug.Log("Using " + name);
@@ -18,13 +21,10 @@ public class Item : ScriptableObject
 
     public void RemoveFromInventory()
     {
-        Inventory.instance.Remove(this);
+        Inventory.instance.RemoveItemFromInventoryList(this);
     }
 
-    public Item item; // Current item in the slot
 
-    private InventorySlot inventorySlot;
-    public int amount;
     // public int amount
     // {
     //     get { return _amount; }
@@ -37,11 +37,11 @@ public class Item : ScriptableObject
     //         RefreshUISlot();
     //     }
     // }
-    public bool hasItem { get { return (item != null); } }
+
 
     public static bool Compare(Item slotA, Item slotB)
     {
-        if (slotA.item != slotB.item)
+        if (slotA.CurrentItem != slotB.CurrentItem)
             return false;
 
         return true;
@@ -50,13 +50,13 @@ public class Item : ScriptableObject
     public static void Swap(Item slotA, Item slotB)
     {
         Debug.Log("Swap");
-        Item _item = slotA.item;
-        int _amount = slotA.item.amount;
+        Item _item = slotA.CurrentItem;
+        int _amount = slotA.CurrentItem.amount;
 
-        slotA.item = slotB.item;
+        slotA.CurrentItem = slotB.CurrentItem;
         slotA.amount = slotB.amount;
 
-        slotB.item = _item;
+        slotB.CurrentItem = _item;
         slotB.amount = _amount;
 
         slotA.RefreshUISlot();
@@ -65,7 +65,7 @@ public class Item : ScriptableObject
 
     public void Clear()
     {
-        item = null;
+        CurrentItem = null;
         amount = 0;
         RefreshUISlot();
     }

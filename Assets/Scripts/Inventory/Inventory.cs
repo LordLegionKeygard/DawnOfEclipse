@@ -56,7 +56,7 @@ public class Inventory : MonoBehaviour {
 	}
 
 	// Remove an item
-	public void Remove (Item item)
+	public void RemoveItemFromInventoryList (Item item)
 	{
 		items.Remove(item);		// Remove item from list
 

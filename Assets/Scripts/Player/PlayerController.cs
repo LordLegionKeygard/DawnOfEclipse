@@ -37,6 +37,7 @@ public class PlayerController : CharacterManager
     private static readonly int Roll = Animator.StringToHash("roll");
     private static readonly int Attack_R1_Trigger = Animator.StringToHash("AttackR1");
     private static readonly int Block_L1_Trigger = Animator.StringToHash("Block(L1)");
+    private static readonly int Drink = Animator.StringToHash("drink");
     private bool NotRoll => roll == false;
     private bool NotSneak => sneak == false;
     private bool IsAir => isGround == false;
@@ -293,6 +294,11 @@ public class PlayerController : CharacterManager
     {
         anim.SetBool(Roll, false);
         roll = false;
+    }
+
+    public void Drinking()
+    {
+        anim.SetTrigger(Drink);
     }
 
     private IEnumerator ExecuteAfterTime(float timeInSec, Action action)

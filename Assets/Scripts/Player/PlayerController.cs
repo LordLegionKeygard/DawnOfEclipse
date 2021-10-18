@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerController : CharacterManager
 {
+    private Animator anim;
     public bool walk { get; set; }
     [SerializeField] private CharacterController controller;
     [SerializeField] private Transform groundCheck;
@@ -18,29 +19,18 @@ public class PlayerController : CharacterManager
     [SerializeField] private float groundDistance = 0.4f;
     [SerializeField] private float acceleration = 0.1f;
     [SerializeField] private float deceleration = 0.5f;
+
+    private PlayerAnimatorManager playerAnimatorManager;
     private StaminaControl staminaControl;
     private Vector3 velocity;
-    private float velocityMove;
-    private Animator anim;
-    public bool isGround;
-    private bool roll;
+    public bool roll;
     private bool sneak;
-    private bool fastRun;
+    public bool fastRun;
     public bool attack;
     public bool block;
-    private static readonly int Speed = Animator.StringToHash("speed");
-    private static readonly int IsInAir = Animator.StringToHash("isInAir");
-    private static readonly int Attack_R2_Trigger = Animator.StringToHash("AttackR2");
-    private static readonly int Run = Animator.StringToHash("run");
-    private static readonly int Sneak = Animator.StringToHash("sneak");
-    private static readonly int Jump_Trigger = Animator.StringToHash("jump");
-    private static readonly int Roll = Animator.StringToHash("roll");
-    private static readonly int Attack_R1_Trigger = Animator.StringToHash("AttackR1");
-    private static readonly int Block_L1_Trigger = Animator.StringToHash("Block(L1)");
-    private static readonly int Drink = Animator.StringToHash("drink");
     private bool NotRoll => roll == false;
     private bool NotSneak => sneak == false;
-    private bool IsAir => isGround == false;
+    public bool isGround = false;
     private bool NotAttack => attack == false;
 
     [Header("Time")]
@@ -66,6 +56,7 @@ public class PlayerController : CharacterManager
 
     private void Start()
     {
+        playerAnimatorManager = GetComponent<PlayerAnimatorManager>();
         anim = GetComponent<Animator>();
         staminaControl = GetComponent<StaminaControl>();
         cameraLockOnTarget = GetComponent<CameraLockOnTarget>();
@@ -88,21 +79,19 @@ public class PlayerController : CharacterManager
 
             isGround = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
             if (isGround && velocity.y < 0) velocity.y = -2f;
-
-            velocity.y += gravity * Time.deltaTime;
-            controller.Move(velocity * Time.deltaTime);
-
-            anim.SetBool(IsInAir, IsAir);
-
+            {
+                velocity.y += gravity * Time.deltaTime;
+                controller.Move(velocity * Time.deltaTime);
+            }
+            if (isGround == false) { playerAnimatorManager.InAir(); }
+            if (isGround) { playerAnimatorManager.OnGround(); }
             bool jumpDown = Input.GetKeyDown(KeyCode.JoystickButton0);
 
             bool canJump = jumpDown && isGround && NotSneak && NotRoll && NotAttack;
 
-            if (canJump && staminaControl.CurrentStamina > 50 && !attack) // square
-                Jump();
+            if (canJump && staminaControl.CurrentStamina > 50 && !attack) Jump(); //square
 
-            if (walk)
-                Walk();
+            if (walk) Walk();
         }
 
     }
@@ -116,51 +105,51 @@ public class PlayerController : CharacterManager
         if (Input.GetKey(KeyCode.JoystickButton7) && staminaControl.CurrentStamina > 250 && canNewMoveR1) // R2
         {
             staminaControl.UseStamina(250);
-            AttackR2();
-            StartCoroutine(ExecuteAfterTime(timeR2, DisableAttackR2));
+            playerAnimatorManager.AttackR2();
+            StartCoroutine(ExecuteAfterTime(timeR2, playerAnimatorManager.DisableAttackR2));
         }
 
         if (Input.GetKey(KeyCode.JoystickButton5) && staminaControl.CurrentStamina > 100 && canNewMoveR1 && fastRun == false) // R1
         {
             staminaControl.UseStamina(100);
-            AttackR1();
-            StartCoroutine(ExecuteAfterTime(timeR1, DisableAttackR1));
+            playerAnimatorManager.AttackR1();
+            StartCoroutine(ExecuteAfterTime(timeR1, playerAnimatorManager.DisableAttackR1));
         }
         if (Input.GetKey(KeyCode.JoystickButton5) && staminaControl.CurrentStamina > 150 && canNewMoveR1 && fastRun == true) // R1
         {
             staminaControl.UseStamina(150);
-            AttackR1FastRun();
-            StartCoroutine(ExecuteAfterTime(timeR1FastRun, DisableAttackR1));
+            playerAnimatorManager.AttackR1FastRun();
+            StartCoroutine(ExecuteAfterTime(timeR1FastRun, playerAnimatorManager.DisableAttackR1));
         }
 
         if (Input.GetKey(KeyCode.JoystickButton4) && staminaControl.CurrentStamina > 100 && canNewMove) //L1
         {
             staminaControl.UseStamina(100);
-            BlockL1();
-            StartCoroutine(ExecuteAfterTime(timeL1, DisableBlockL1));
+            playerAnimatorManager.BlockL1();
+            StartCoroutine(ExecuteAfterTime(timeL1, playerAnimatorManager.DisableBlockL1));
         }
 
         if (Input.GetKey(KeyCode.JoystickButton2) && staminaControl.CurrentStamina > 50 && canNewMove) // circle
         {
             staminaControl.staminaRun = true;
             speed = 7;
-            anim.SetBool(Run, true);
-            StartCoroutine(ExecuteAfterTime(0.3f, EnableFastRun));
+            playerAnimatorManager.Running();
+            StartCoroutine(ExecuteAfterTime(0.3f, playerAnimatorManager.EnableFastRun));
         }
 
         else if (NotSneak)
         {
             staminaControl.staminaRun = false;
             speed = normalSpeed;
-            anim.SetBool(Run, false);
-            StartCoroutine(ExecuteAfterTime(0.3f, DisableFastRun));
+            playerAnimatorManager.NotRunning();
+            StartCoroutine(ExecuteAfterTime(0.3f, playerAnimatorManager.DisableFastRun));
         }
     }
 
     private void Jump()
     {
         staminaControl.UseStamina(50);
-        anim.SetTrigger(Jump_Trigger);
+        playerAnimatorManager.JumpTrigger();
         velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
     }
 
@@ -180,27 +169,27 @@ public class PlayerController : CharacterManager
             Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
             controller.Move(moveDir.normalized * speed * Time.deltaTime);
 
-            if (velocityMove < 1.0f)
+            if (playerAnimatorManager.velocityMove < 1.0f)
             {
-                velocityMove += Time.deltaTime * acceleration;
+                playerAnimatorManager.velocityMove += Time.deltaTime * acceleration;
             }
 
             if (Input.GetKeyUp(KeyCode.JoystickButton2) && fastRun == false && staminaControl.CurrentStamina > 100 && canNewMove)
             {
                 staminaControl.UseStamina(100);
-                EnableRoll();
-                StartCoroutine(ExecuteAfterTime(1.1f, DisableRoll));
+                playerAnimatorManager.EnableRoll();
+                StartCoroutine(ExecuteAfterTime(1.1f, playerAnimatorManager.DisableRoll));
             }
         }
         else
         {
-            if (velocityMove > 0.0f)
+            if (playerAnimatorManager.velocityMove > 0.0f)
             {
-                velocityMove -= Time.deltaTime * deceleration;
+                playerAnimatorManager.velocityMove -= Time.deltaTime * deceleration;
             }
         }
 
-        anim.SetFloat(Speed, velocityMove);
+        playerAnimatorManager.Speeding();
     }
 
     private void Sneaking()
@@ -212,7 +201,7 @@ public class PlayerController : CharacterManager
                 Vector3 tempCenter = controller.center;
                 tempCenter.y = controller.height / 2;
                 controller.center = tempCenter;
-                anim.SetBool(Sneak, true);
+                playerAnimatorManager.Sneaking();
                 speed = 2;
                 sneak = true;
                 CharacterManager.maximumDetectionAngle = 50f;
@@ -222,83 +211,13 @@ public class PlayerController : CharacterManager
             else
             {
                 controller.height = 1.7f;
-                anim.SetBool(Sneak, false);
+                playerAnimatorManager.NotSneaking();
                 sneak = false;
                 speed = 5;
                 CharacterManager.maximumDetectionAngle = 180f;
                 CharacterManager.minimumDetectionAngle = -180f;
             }
         }
-    }
-
-    private void EnableFastRun() =>
-        fastRun = true;
-
-    private void DisableFastRun() =>
-        fastRun = false;
-
-    private void AttackR2()
-    {
-        walk = false;
-        attack = true;
-        anim.SetBool(Attack_R2_Trigger, true);
-    }
-
-    private void AttackR1()
-    {
-        walk = false;
-        attack = true;
-        anim.SetBool(Attack_R1_Trigger, true);
-    }
-    private void AttackR1FastRun()
-    {
-        walk = false;
-        attack = true;
-        anim.SetBool(Attack_R1_Trigger, true);
-    }
-
-    private void BlockL1()
-    {
-        walk = false;
-        block = true;
-        anim.SetBool(Block_L1_Trigger, true);
-    }
-
-    private void DisableBlockL1()
-    {
-        walk = true;
-        attack = false;
-        block = false;
-        anim.SetBool(Block_L1_Trigger, false);
-    }
-    private void DisableAttackR2()
-    {
-        walk = true;
-        attack = false;
-        anim.SetBool(Attack_R2_Trigger, false);
-    }
-
-    private void DisableAttackR1()
-    {
-        attack = false;
-        anim.SetBool(Attack_R1_Trigger, false);
-    }
-
-    private void EnableRoll()
-    {
-        roll = true;
-        anim.SetBool(Roll, true);
-    }
-
-    private void DisableRoll()
-    {
-        anim.SetBool(Roll, false);
-        roll = false;
-    }
-
-    public void Drinking()
-    {
-        anim.SetTrigger(Drink);
     }
 
     private IEnumerator ExecuteAfterTime(float timeInSec, Action action)

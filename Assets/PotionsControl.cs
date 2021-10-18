@@ -8,6 +8,10 @@ public class PotionsControl : MonoBehaviour
 
     private HealthControl healthControl;
 
+    [SerializeField] private GameObject healthPotion;
+
+    [SerializeField] private GameObject manaPotion;
+
     private void Start()
     {
         healthControl = GetComponent<HealthControl>();

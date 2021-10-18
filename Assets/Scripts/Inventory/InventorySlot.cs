@@ -13,7 +13,7 @@ public class InventorySlot : MonoBehaviour
 
     [SerializeField] private GameObject ringFromBtn;
 
-    private PlayerController playerController;
+    private PlayerAnimatorManager playerAnimatorManager;
 
     public Item item;  // Current item in the slot
 
@@ -26,7 +26,7 @@ public class InventorySlot : MonoBehaviour
 
     private void Start()
     {
-        playerController = FindObjectOfType<PlayerController>();
+        playerAnimatorManager = FindObjectOfType<PlayerAnimatorManager>();
     }
 
     private void Update()
@@ -82,7 +82,7 @@ public class InventorySlot : MonoBehaviour
             {
                 Debug.Log("IsedItem");
                 OnRemoveButton();
-                playerController.Drinking();
+                playerAnimatorManager.Drinking();
             }
         }
 

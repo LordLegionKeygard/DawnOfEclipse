@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8822623594535616225}
   - component: {fileID: 8814019456529536791}
   - component: {fileID: 7420924854433990909}
-  m_Layer: 3
+  m_Layer: 10
   m_Name: Tree_Log_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 8791545428966898785}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.1512431, y: 1.4146754, z: 1.1512431}
+  m_LocalScale: {x: 1.0875, y: 1.3031249, z: 1.0875}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0

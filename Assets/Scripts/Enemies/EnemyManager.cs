@@ -7,7 +7,7 @@ public class EnemyManager : CharacterManager
 {
     EnemyLocomotionManager enemyLocomotionManager;
     EnemyAnimatorManager enemyAnimationManager;
-    EnemyStats enemyStats;   
+    EnemyStats enemyStats;
     public State currentState;
     public CharacterStats currentTarget;
     [HideInInspector] public NavMeshAgent navMeshAgent;

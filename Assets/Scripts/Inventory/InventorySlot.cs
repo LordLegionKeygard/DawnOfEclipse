@@ -15,7 +15,7 @@ public class InventorySlot : MonoBehaviour
 
     private PlayerAnimatorManager playerAnimatorManager;
 
-    public Item item;  // Current item in the slot
+    Item item;  // Current item in the slot
 
     // Add item to the slot
 
@@ -36,16 +36,10 @@ public class InventorySlot : MonoBehaviour
         transform.position = Input.mousePosition;
     }
 
-    public void RefreshSlot()
-    {
-        // if (!item.hasItem)
-        // {
-        //     amount.enabled = false;
-        // }
-    }
     public void AddItem(Item newItem)
     {
         item = newItem;
+
         icon.sprite = item.icon;
         icon.enabled = true;
         removeButton.interactable = true;
@@ -56,17 +50,20 @@ public class InventorySlot : MonoBehaviour
             amount.text = item.amount.ToString();
         }
     }
+
     public void ClearSlot()
     {
-        // item = new Item();
-        RefreshSlot();
+        item = null;
+        icon.sprite = null;
+        icon.enabled = false;
+        removeButton.interactable = false;
+        ringFromBtn.SetActive(false);
+        amount.enabled = false;
     }
-
-    // Called when the remove button is pressed
     public void OnRemoveButton()
     {
         Inventory.instance.RemoveItemFromInventoryList(item);
-        DeActiveItemInfo();
+        ClearSlot();
     }
 
     // Called when the item is pressed
@@ -74,26 +71,11 @@ public class InventorySlot : MonoBehaviour
     {
         if (item != null)
         {
-            Debug.Log("UseItem");
-            item.Use();
-            DeActiveItemInfo();
-
-            if (item.isUsedItem == true)
+            if (item.isUsedItem)
             {
-                Debug.Log("IsedItem");
-                OnRemoveButton();
                 playerAnimatorManager.Drinking();
             }
+            item.Use();
         }
-
-    }
-
-    private void DeActiveItemInfo()
-    {
-        icon.sprite = null;
-        icon.enabled = false;
-        removeButton.interactable = false;
-        ringFromBtn.SetActive(false);
-        amount.enabled = false;
     }
 }

@@ -59,15 +59,15 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0.08768971
-        functionName: CanWalk
+      - time: 0.10991193
+        functionName: StopRoot
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.08768971
-        functionName: StopRoot
+      - time: 0.17037034
+        functionName: CanWalk
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0

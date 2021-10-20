@@ -78,14 +78,12 @@ public class PlayerAnimatorManager : MonoBehaviour
 
     public void DisableBlockL1()
     {
-        playerController.walk = true;
         playerController.attack = false;
         playerController.block = false;
         anim.SetBool(Block_L1_Trigger, false);
     }
     public void DisableAttackR2()
     {
-        playerController.walk = true;
         playerController.attack = false;
         anim.SetBool(Attack_R2_Trigger, false);
     }

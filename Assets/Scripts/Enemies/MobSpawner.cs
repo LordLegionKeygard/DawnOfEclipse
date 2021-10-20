@@ -13,13 +13,14 @@ public class MobSpawner : MonoBehaviour
 
     private void FixedUpdate()
     {
-        SpawnRadius();
+        if (spawn)
+        {
+            SpawnRadius();
+        }
     }
 
     private void SpawnRadius()
     {
-        if (spawn)
-        {
             Collider[] colliders = Physics.OverlapSphere(transform.position, detectionRadius, detectionLayer);
             for (int i = 0; i < colliders.Length; i++)
             {
@@ -31,8 +32,6 @@ public class MobSpawner : MonoBehaviour
                     spawn = false;
                 }
             }
-        }
-
     }
 
     public void SpawnObject()

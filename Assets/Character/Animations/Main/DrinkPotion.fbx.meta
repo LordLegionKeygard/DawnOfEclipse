@@ -81,13 +81,6 @@ ModelImporter:
         intParameter: 0
         messageOptions: 0
       - time: 0.91851854
-        functionName: CanWalk
-        data: 
-        objectReferenceParameter: {instanceID: 0}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
-      - time: 0.91851854
         functionName: StopRoot
         data: 
         objectReferenceParameter: {instanceID: 0}

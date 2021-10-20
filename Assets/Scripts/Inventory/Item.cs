@@ -39,56 +39,56 @@ public class Item : ScriptableObject
     // }
 
 
-    public static bool Compare(Item slotA, Item slotB)
-    {
-        if (slotA.CurrentItem != slotB.CurrentItem)
-            return false;
+    // public static bool Compare(Item slotA, Item slotB)
+    // {
+    //     if (slotA.CurrentItem != slotB.CurrentItem)
+    //         return false;
 
-        return true;
-    }
+    //     return true;
+    // }
 
-    public static void Swap(Item slotA, Item slotB)
-    {
-        Debug.Log("Swap");
-        Item _item = slotA.CurrentItem;
-        int _amount = slotA.CurrentItem.amount;
+    // public static void Swap(Item slotA, Item slotB)
+    // {
+    //     Debug.Log("Swap");
+    //     Item _item = slotA.CurrentItem;
+    //     int _amount = slotA.CurrentItem.amount;
 
-        slotA.CurrentItem = slotB.CurrentItem;
-        slotA.amount = slotB.amount;
+    //     slotA.CurrentItem = slotB.CurrentItem;
+    //     slotA.amount = slotB.amount;
 
-        slotB.CurrentItem = _item;
-        slotB.amount = _amount;
+    //     slotB.CurrentItem = _item;
+    //     slotB.amount = _amount;
 
-        slotA.RefreshUISlot();
-        slotB.RefreshUISlot();
-    }
+    //     slotA.RefreshUISlot();
+    //     slotB.RefreshUISlot();
+    // }
 
-    public void Clear()
-    {
-        CurrentItem = null;
-        amount = 0;
-        RefreshUISlot();
-    }
+    // public void Clear()
+    // {
+    //     CurrentItem = null;
+    //     amount = 0;
+    //     RefreshUISlot();
+    // }
 
-    public void AttachUI(InventorySlot uiSlot)
-    {
-        inventorySlot = uiSlot;
-        inventorySlot.item = this;
-        RefreshUISlot();
-    }
-    public void DetatchUI()
-    {
-        inventorySlot.ClearSlot();
-        inventorySlot = null;
-    }
+    // public void AttachUI(InventorySlot uiSlot)
+    // {
+    //     inventorySlot = uiSlot;
+    //     inventorySlot.item = this;
+    //     RefreshUISlot();
+    // }
+    // public void DetatchUI()
+    // {
+    //     //inventorySlot.ClearSlot();
+    //     inventorySlot = null;
+    // }
 
-    public bool isAttachedToUI { get { return (inventorySlot != null); } }
+    // public bool isAttachedToUI { get { return (inventorySlot != null); } }
 
-    public void RefreshUISlot()
-    {
-        if (!isAttachedToUI)
-            return;
+    // public void RefreshUISlot()
+    // {
+    //     if (!isAttachedToUI)
+    //         return;
 
-        inventorySlot.RefreshSlot();
-    }
+    //     // inventorySlot.RefreshSlot();
+    // }
 }

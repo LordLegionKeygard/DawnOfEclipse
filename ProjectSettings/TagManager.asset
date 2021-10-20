@@ -17,7 +17,7 @@ TagManager:
   - Player
   - Enemy
   - Character Collision Blocker
-  - 
+  - GroundOnlyForPlayer
   - 
   - 
   - 

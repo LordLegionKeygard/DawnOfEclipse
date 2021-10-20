@@ -5,11 +5,9 @@ using UnityEngine;
 public class StopPlayerController : MonoBehaviour
 {
     private PlayerController controller;
-    private StaminaControl staminaControl;
     private void Start()
     {
         controller = GetComponent<PlayerController>();
-        staminaControl = GetComponent<StaminaControl>();
     }
     public void StopWalk()
     {
@@ -19,11 +17,6 @@ public class StopPlayerController : MonoBehaviour
     public void CanWalk()
     {
         controller.walk = true;
-    }
-
-    public void R1ComboMain()
-    {
-        staminaControl.UseStamina(100);
     }
 
     public void Roll()

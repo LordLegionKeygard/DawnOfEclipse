@@ -13,16 +13,16 @@ public class IdleState : State
 
         for (int i = 0; i < colliders.Length; i++)
         {
-            CharacterStats characterStats = colliders[i].transform.GetComponent<CharacterStats>();
+            HealthControl playerHealthControl = colliders[i].transform.GetComponent<HealthControl>();
 
-            if (characterStats != null)
+            if (playerHealthControl != null)
             {
-                Vector3 targetDirection = characterStats.transform.position - transform.position;
+                Vector3 targetDirection = playerHealthControl.transform.position - transform.position;
                 float viewableAngle = Vector3.Angle(targetDirection, transform.forward);
 
                 if (viewableAngle > EnemyManager.minimumDetectionAngle && viewableAngle < EnemyManager.maximumDetectionAngle)
                 {
-                    enemyManager.currentTarget = characterStats;
+                    enemyManager.currentTarget = playerHealthControl.gameObject;
                 }
             }
         }

@@ -12,7 +12,7 @@ public class AttackState : State
         Vector3 targetDirection = enemyManager.currentTarget.transform.position - transform.position;
         float distanceFromTarget = Vector3.Distance(enemyManager.currentTarget.transform.position, enemyManager.transform.position);
         float viewableAngle = Vector3.Angle(targetDirection, transform.forward);
-        
+
         if (enemyManager.isPerformingAction)
             return combatStanceState;
 

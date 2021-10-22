@@ -8,6 +8,8 @@ public class HealthControl : CharacterStats
     [SerializeField] private Slider healthBar;
     private Animator animator;
 
+    private EnemyManager[] enemyManagers;
+
     [SerializeField] private Image healthBarImage;
     private PlayerController playerController;
 
@@ -50,35 +52,21 @@ public class HealthControl : CharacterStats
         healthBar.value = currentHealth;
         Color healthGreenColor = new Color(0.01176471f, 0.8117647f, 0.1607843f);
         float healthBarPercent = (float)currentHealth / (float)maxHealth;
-
         healthBarImage.color = Color.Lerp(Color.red, healthGreenColor, healthBarPercent);
-
     }
 
     private void RandomTakeDamage()
     {
-        int randomState = Random.Range(0, 6);
+        int randomState = Random.Range(0, 3);
         if (randomState == 0)
         {
             animator.SetTrigger("takeDamage");
         }
-        if (randomState == 1)
+        else if (randomState == 1)
         {
             animator.SetTrigger("takeDamage1");
         }
-        if (randomState == 2)
-        {
-            
-        }
-        if (randomState == 3)
-        {
-            
-        }
-        if (randomState == 4)
-        {
-            
-        }
-        if (randomState == 5)
+        else if (randomState == 2)
         {
             
         }
@@ -94,6 +82,12 @@ public class HealthControl : CharacterStats
         if (randomState == 1)
         {
             animator.SetTrigger("death1");
+        }
+
+        enemyManagers = FindObjectsOfType<EnemyManager>();
+        foreach (var spawn in enemyManagers)
+        {
+            spawn.ReturnToSpawn();
         }
     }
 }

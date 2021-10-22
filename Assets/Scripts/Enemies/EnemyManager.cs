@@ -9,13 +9,14 @@ public class EnemyManager : CharacterManager
     EnemyAnimatorManager enemyAnimationManager;
     EnemyStats enemyStats;
     public State currentState;
-    public CharacterStats currentTarget;
+    public GameObject currentTarget;
     [HideInInspector] public NavMeshAgent navMeshAgent;
     [HideInInspector] public Rigidbody enemyRigidBody;
     public bool isPerformingAction;
     public bool isInteracting;
     public float rotationSpeed = 15;
     public float maximumAttackRange = 1.5f;
+    public MobSpawner spawnPoint;
     private void Awake()
     {
         enemyLocomotionManager = GetComponent<EnemyLocomotionManager>();
@@ -23,12 +24,15 @@ public class EnemyManager : CharacterManager
         enemyStats = GetComponent<EnemyStats>();
         enemyRigidBody = GetComponent<Rigidbody>();
         navMeshAgent = GetComponentInChildren<NavMeshAgent>();
-        navMeshAgent.enabled = false;
+        navMeshAgent.enabled = false;        
     }
 
     private void Start()
     {
+        float randomY = Random.Range(0, 180);
         enemyRigidBody.isKinematic = false;
+        transform.Rotate(0f, randomY, 0.0f, Space.World);
+        spawnPoint = GetComponentInParent<MobSpawner>();
     }
 
     private void Update()
@@ -76,5 +80,10 @@ public class EnemyManager : CharacterManager
                 isPerformingAction = false;
             }
         }
+    }
+
+    public void ReturnToSpawn()
+    {
+        currentTarget = spawnPoint.gameObject;
     }
 }

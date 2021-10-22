@@ -34,7 +34,7 @@ public class AmbushState : State
                 if (viewableAngle > EnemyManager.minimumDetectionAngle
                     && viewableAngle < EnemyManager.maximumDetectionAngle)
                 {
-                    enemyManager.currentTarget = characterStats;
+                    enemyManager.currentTarget = characterStats.gameObject;
                     isSleeping = false;
                     enemyAnimatorManager.PlayerTargetAnimation(wakeAnimation, true);
                 }

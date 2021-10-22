@@ -6,6 +6,8 @@ public class PursueTargetState : State
 {
     public CombatStanceState combatStanceState;
 
+    public IdleState idleState;
+
     public RotateTowardTargetState rotateTowardTargetState;
     public override State Tick(EnemyManager enemyManager, EnemyStats enemyStats, EnemyAnimatorManager enemyAnimatorManager)
     {
@@ -15,7 +17,7 @@ public class PursueTargetState : State
 
         HandleRotateTowardsTarget(enemyManager);
 
-        if(viewableAngle >= 55 || viewableAngle <= -55)
+        if (viewableAngle >= 55 || viewableAngle <= -55)
             return rotateTowardTargetState;
 
         if (enemyManager.isPerformingAction)
@@ -23,8 +25,6 @@ public class PursueTargetState : State
             enemyAnimatorManager.anim.SetFloat("Vertical", 0, 0.1f, Time.deltaTime);
             return this;
         }
-
-
 
         if (distanceFromTarget > enemyManager.maximumAttackRange)
         {

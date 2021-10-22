@@ -49,6 +49,7 @@ public class AttackState : State
     }
     private void GetNewAttack(EnemyManager enemyManager)
     {
+        enemyManager.ResetChaseTimer();
         Vector3 targetsDirection = enemyManager.currentTarget.transform.position - transform.position;
         float viewableAngle = Vector3.Angle(targetsDirection, transform.forward);
         float distanceFromTarget = Vector3.Distance(enemyManager.currentTarget.transform.position, transform.position);

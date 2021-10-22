@@ -1065,6 +1065,7 @@ MonoBehaviour:
   rotationSpeed: 31
   maximumAttackRange: 1.5
   spawnPoint: {fileID: 0}
+  isChasingPlayer: 0
 --- !u!114 &2468787932838462733
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2828,3 +2829,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackState: {fileID: 5424605625826977061}
   pursueTargetState: {fileID: 5424605625643913161}
+  idleState: {fileID: 5424605624970381583}

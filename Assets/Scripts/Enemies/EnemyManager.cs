@@ -17,6 +17,9 @@ public class EnemyManager : CharacterManager
     public float rotationSpeed = 15;
     public float maximumAttackRange = 1.5f;
     public MobSpawner spawnPoint;
+    private float timeToChase = 6f;
+    private float chaseTime;
+    public bool isChasingPlayer = false;
     private void Awake()
     {
         enemyLocomotionManager = GetComponent<EnemyLocomotionManager>();
@@ -24,7 +27,7 @@ public class EnemyManager : CharacterManager
         enemyStats = GetComponent<EnemyStats>();
         enemyRigidBody = GetComponent<Rigidbody>();
         navMeshAgent = GetComponentInChildren<NavMeshAgent>();
-        navMeshAgent.enabled = false;        
+        navMeshAgent.enabled = false;
     }
 
     private void Start()
@@ -33,6 +36,7 @@ public class EnemyManager : CharacterManager
         enemyRigidBody.isKinematic = false;
         transform.Rotate(0f, randomY, 0.0f, Space.World);
         spawnPoint = GetComponentInParent<MobSpawner>();
+        chaseTime = timeToChase;
     }
 
     private void Update()
@@ -42,10 +46,27 @@ public class EnemyManager : CharacterManager
         isRotatingWithRootMotion = enemyAnimationManager.anim.GetBool("isRotatingWithRootMotion");
 
         isInteracting = enemyAnimationManager.anim.GetBool("isInteracting");
+
+        if (isChasingPlayer)
+        {
+            StartChasingTimer();
+        }
+
     }
     private void FixedUpdate()
     {
         HandleStateMachine();
+
+        if (currentTarget != null)
+        {
+            float distanceFromTarget = Vector3.Distance(currentTarget.transform.position, transform.position);
+            if (currentTarget == spawnPoint.gameObject && distanceFromTarget < 3)
+            {
+                currentTarget = null;
+                navMeshAgent.enabled = false;
+                enemyAnimationManager.anim.SetFloat("Vertical", 0, 0f, Time.deltaTime);
+            }
+        }
     }
 
     private void HandleStateMachine()
@@ -84,6 +105,23 @@ public class EnemyManager : CharacterManager
 
     public void ReturnToSpawn()
     {
-        currentTarget = spawnPoint.gameObject;
+        
+        isChasingPlayer = false;
+        ResetChaseTimer();
+        currentTarget = spawnPoint.gameObject;       
+    }
+
+    private void StartChasingTimer()
+    {
+        chaseTime -= Time.deltaTime;
+
+        if (chaseTime < 0f)
+        {
+            ReturnToSpawn();
+        }
+    }
+    public void ResetChaseTimer()
+    {
+        chaseTime = timeToChase;
     }
 }

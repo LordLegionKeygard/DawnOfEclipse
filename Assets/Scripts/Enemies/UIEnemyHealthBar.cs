@@ -50,4 +50,9 @@ public class UIEnemyHealthBar : MonoBehaviour
             }
         }
     }
+
+    private void LateUpdate()
+    {
+        transform.LookAt(Camera.main.transform);
+    }
 }

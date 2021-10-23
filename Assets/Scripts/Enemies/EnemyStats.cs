@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyStats : CharacterStats
 {
-    [SerializeField] private Collider[] colliders;
+    private Collider col;
     private EnemyAnimatorManager enemyAnimatorManager;
     public UIEnemyHealthBar enemyHealthBar;
     private CameraLockOnTarget cameraLockOnTarget;
@@ -18,7 +18,7 @@ public class EnemyStats : CharacterStats
         rb = GetComponent<Rigidbody>();
         enemyManager = GetComponent<EnemyManager>();
         cameraLockOnTarget = FindObjectOfType<CameraLockOnTarget>();
-        
+        col = GetComponent<Collider>();       
     }
 
     private void Start()
@@ -52,10 +52,7 @@ public class EnemyStats : CharacterStats
     private void Death()
     {
         enemyAnimatorManager.PlayerTargetAnimation("Falling Back Death", true);
-        foreach (var col in colliders)
-        {
-            col.enabled = false;
-        }
+        col.enabled = false;       
         rb.isKinematic = true;
         enemyManager.enabled = false;
         cameraLockOnTarget.TargetDeath();
@@ -75,13 +72,7 @@ public class EnemyStats : CharacterStats
         {
             enemyAnimatorManager.PlayerTargetAnimation("SwordTakeDamage", true);
         }
-        if (randomState == 1)
-        {
-
-        }
-        else if (randomState == 2)
-        {
-
-        }
+        if (randomState == 1){}
+        else if (randomState == 2){}
     }
 }

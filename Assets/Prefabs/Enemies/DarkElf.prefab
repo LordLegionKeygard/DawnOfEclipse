@@ -1056,16 +1056,16 @@ MonoBehaviour:
   isRotatingWithRootMotion: 0
   canRotate: 0
   currentRecoveryTime: 0
-  currentState: {fileID: 5424605624970381583}
-  currentTarget: {fileID: 0}
+  spawnPoint: {fileID: 0}
   navMeshAgent: {fileID: 0}
   enemyRigidBody: {fileID: 0}
   isPerformingAction: 0
   isInteracting: 0
   rotationSpeed: 31
-  maximumAttackRange: 1.5
-  spawnPoint: {fileID: 0}
   isChasingPlayer: 0
+  maximumAttackRange: 1.5
+  currentState: {fileID: 5424605624970381583}
+  currentTarget: {fileID: 0}
 --- !u!114 &2468787932838462733
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1096,9 +1096,6 @@ MonoBehaviour:
   healthLevel: 20
   maxHealth: 0
   currentHealth: 0
-  colliders:
-  - {fileID: 2468787932838462729}
-  - {fileID: 0}
   enemyHealthBar: {fileID: 5424605625640548770}
 --- !u!1 &2468808205852947110
 GameObject:

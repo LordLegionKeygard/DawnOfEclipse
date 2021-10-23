@@ -35,7 +35,7 @@ public class HealthControl : CharacterStats
         if (playerController.block == false)
         {
             currentHealth = currentHealth - damage;
-            healthBar.value = currentHealth;
+            //healthBar.value = currentHealth;
             UpdateHealthColorBar();
 
             RandomTakeDamage();
@@ -47,9 +47,26 @@ public class HealthControl : CharacterStats
         }
     }
 
+    private void Update()
+    {
+        if(healthBar.value == currentHealth)
+        {
+            return;
+        }
+        if (healthBar.value > currentHealth)
+        {
+            healthBar.value -= Time.deltaTime * 50;
+        }
+        if (healthBar.value < currentHealth)
+        {
+            healthBar.value += Time.deltaTime * 50;
+        }
+
+    }
+
     public void UpdateHealthColorBar()
     {
-        healthBar.value = currentHealth;
+        //healthBar.value = currentHealth;
         Color healthGreenColor = new Color(0.01176471f, 0.8117647f, 0.1607843f);
         float healthBarPercent = (float)currentHealth / (float)maxHealth;
         healthBarImage.color = Color.Lerp(Color.red, healthGreenColor, healthBarPercent);
@@ -68,7 +85,7 @@ public class HealthControl : CharacterStats
         }
         else if (randomState == 2)
         {
-            
+
         }
     }
 

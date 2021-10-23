@@ -5,28 +5,29 @@ using UnityEngine.AI;
 
 public class EnemyManager : CharacterManager
 {
-    EnemyLocomotionManager enemyLocomotionManager;
-    EnemyAnimatorManager enemyAnimationManager;
-    EnemyStats enemyStats;
-    public State currentState;
-    public GameObject currentTarget;
-    [HideInInspector] public NavMeshAgent navMeshAgent;
-    [HideInInspector] public Rigidbody enemyRigidBody;
-    public bool isPerformingAction;
-    public bool isInteracting;
-    public float rotationSpeed = 15;
-    public float maximumAttackRange = 1.5f;
-    public MobSpawner spawnPoint;
+    private EnemyLocomotionManager enemyLocomotionManager;
+    private EnemyAnimatorManager enemyAnimationManager;
+    private EnemyStats enemyStats;
+    [SerializeField] private MobSpawner spawnPoint;
     private float timeToChase = 6f;
     private float chaseTime;
-    public bool isChasingPlayer = false;
+    [HideInInspector] public NavMeshAgent navMeshAgent;
+    [HideInInspector] public Rigidbody enemyRigidBody;
+    [HideInInspector] public bool isPerformingAction;
+    [HideInInspector] public bool isInteracting;
+    [HideInInspector] public float rotationSpeed = 15;
+    [HideInInspector] public bool isChasingPlayer = false;
+    [HideInInspector] public float maximumAttackRange = 1.5f;
+    public State currentState;
+    public GameObject currentTarget;
+
     private void Awake()
     {
         enemyLocomotionManager = GetComponent<EnemyLocomotionManager>();
         enemyAnimationManager = GetComponentInChildren<EnemyAnimatorManager>();
         enemyStats = GetComponent<EnemyStats>();
         enemyRigidBody = GetComponent<Rigidbody>();
-        navMeshAgent = GetComponentInChildren<NavMeshAgent>();
+        navMeshAgent = GetComponentInChildren<NavMeshAgent>();       
         navMeshAgent.enabled = false;
     }
 
@@ -60,7 +61,7 @@ public class EnemyManager : CharacterManager
         if (currentTarget != null)
         {
             float distanceFromTarget = Vector3.Distance(currentTarget.transform.position, transform.position);
-            if (currentTarget == spawnPoint.gameObject && distanceFromTarget < 3)
+            if (currentTarget == spawnPoint.gameObject && distanceFromTarget < 3 && currentTarget != null)
             {
                 currentTarget = null;
                 navMeshAgent.enabled = false;
@@ -105,10 +106,9 @@ public class EnemyManager : CharacterManager
 
     public void ReturnToSpawn()
     {
-        
         isChasingPlayer = false;
         ResetChaseTimer();
-        currentTarget = spawnPoint.gameObject;       
+        currentTarget = spawnPoint.gameObject;
     }
 
     private void StartChasingTimer()

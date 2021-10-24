@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Linq;
 
 /* Sits on all InventorySlots. */
 
@@ -10,23 +11,14 @@ public class InventorySlot : MonoBehaviour
     [SerializeField] private Image icon;            // Reference to the Icon image
     public TextMeshProUGUI amount;
     [SerializeField] private Button removeButton; // Reference to the remove button
-
     [SerializeField] private GameObject ringFromBtn;
-
     private PlayerAnimatorManager playerAnimatorManager;
-
     Item item;  // Current item in the slot
-
-    // Add item to the slot
-
-    // private void Awake()
-    // {
-    //     item = new Item();
-    // }
-
+    Inventory inventory;
     private void Start()
     {
         playerAnimatorManager = FindObjectOfType<PlayerAnimatorManager>();
+        inventory = FindObjectOfType<Inventory>();
     }
 
     private void Update()
@@ -37,18 +29,32 @@ public class InventorySlot : MonoBehaviour
     }
 
     public void AddItem(Item newItem)
-    {
+    {        
         item = newItem;
-
         icon.sprite = item.icon;
-        icon.enabled = true;
         removeButton.interactable = true;
-        ringFromBtn.SetActive(true);
+        icon.enabled = true;
+        ringFromBtn.SetActive(true);      
         if (item.maxStack > 1)
         {
             amount.enabled = true;
             amount.text = item.amount.ToString();
         }
+        
+        // for (int i = 0; i < inventory.items.Count; i++)
+        // {
+        //     if (inventory.items[i].name == "HealthPotion")
+        //     {
+        //         int HealthPotionCount = inventory.items.Count(item => item.name == "HealthPotion");
+
+        //         if (HealthPotionCount == 2)
+        //         {
+
+        //             //ResetPotionCount();
+        //             return;
+        //         }
+        //     }
+        // }
     }
 
     public void ClearSlot()
@@ -74,8 +80,23 @@ public class InventorySlot : MonoBehaviour
             if (item.isUsedItem)
             {
                 playerAnimatorManager.Drinking();
+                item.amount--;
+                amount.text = item.amount.ToString();
             }
-            item.Use();
+            if (item.amount == 0)
+            {
+                if (item.isUsedItem)
+                {
+                    item.amount = 5;
+                }
+                item.Use();
+            }
         }
     }
+
+    // public void ResetPotionCount()
+    // {
+    //     item.amount = 5;
+    //     amount.text = item.amount.ToString();
+    // }
 }

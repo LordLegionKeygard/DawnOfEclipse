@@ -21,7 +21,7 @@ public class InventoryUI : MonoBehaviour
     void Update()
     {
         // Check to see if we should open/close the inventory
-        if (Input.GetKeyDown(KeyCode.JoystickButton9))
+        if (Input.GetKeyDown(KeyCode.JoystickButton9) || Input.GetKeyDown(KeyCode.Tab))
         {
             inventoryUI.SetActive(!inventoryUI.activeSelf);
         }

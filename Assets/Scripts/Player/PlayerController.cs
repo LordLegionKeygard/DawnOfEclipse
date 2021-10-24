@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : CharacterManager
 {
@@ -45,7 +46,15 @@ public class PlayerController : CharacterManager
 
     private HealthControl healthControl;
 
+    [SerializeField] private Inventory inventory;
+
+    [SerializeField] private InventorySlot inventorySlot;
+
+    [SerializeField] private Image[] iconImage;
+
     Vector2 inputStrafe;
+
+    private bool canDrink = true;
 
     private void Awake()
     {
@@ -96,11 +105,27 @@ public class PlayerController : CharacterManager
 
     }
 
+    private void CanDrink(){canDrink = true;}
+
     private void FixedUpdate()
     {
         bool canNewMove = !attack && isGround && walk && NotSneak && !block;
 
         bool canNewMoveR1 = !attack && isGround && NotSneak;
+
+        if (Input.GetKey(KeyCode.Q))
+        {
+            for (int i = 0; i < iconImage.Length; i++)
+            {
+                if (iconImage[i].sprite.name == "Health_Potion_Icon" && canDrink == true)
+                {
+                    var potion = iconImage[i].GetComponentInParent<InventorySlot>();
+                    potion.UseItem();
+                    canDrink = false;
+                    StartCoroutine(ExecuteAfterTime(2, CanDrink));
+                }
+            }
+        }
 
         if (Input.GetKey(KeyCode.JoystickButton7) && staminaControl.CurrentStamina > 250 && canNewMoveR1) // R2
         {

@@ -15,7 +15,7 @@ MonoBehaviour:
   CurrentItem: {fileID: 0}
   icon: {fileID: 21300000, guid: 8bba4b5ee74900b4ea2ce0fef9c25afb, type: 3}
   maxStack: 9
-  amount: 1
+  amount: 5
   isDefaultItem: 0
   isUsedItem: 1
   PotionType: 0

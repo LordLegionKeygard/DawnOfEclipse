@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
   m_Name: Chr_RightHand_Female_14_Item
   m_EditorClassIdentifier: 
-  name: RightHand_Female_14
+  CurrentItem: {fileID: 0}
   icon: {fileID: 21300000, guid: 5acb03451b730e84c90605b7dba1e756, type: 3}
-  isDefaultItem: 0
   maxStack: 1
-  item: {fileID: 0}
   amount: 0
+  isDefaultItem: 0
+  isUsedItem: 0
   equipSlot: 5
-  armorModifier: 0
+  armorModifier: 1
   mesh: {fileID: 1164548712076094242, guid: 82b413d3b173ed648bb97643497aeca9, type: 3}
   prefab: {fileID: 0}
   hatNumber: 0

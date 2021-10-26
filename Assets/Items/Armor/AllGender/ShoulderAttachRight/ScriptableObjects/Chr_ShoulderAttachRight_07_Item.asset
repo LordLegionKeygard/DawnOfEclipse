@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
   m_Name: Chr_ShoulderAttachRight_07_Item
   m_EditorClassIdentifier: 
-  name: ShoulderAttachRight_07
+  CurrentItem: {fileID: 0}
   icon: {fileID: 21300000, guid: 0da347714bb13ec47a111a6bfa7c8ed9, type: 3}
-  isDefaultItem: 0
   maxStack: 1
-  item: {fileID: 0}
   amount: 0
+  isDefaultItem: 0
+  isUsedItem: 0
   equipSlot: 12
-  armorModifier: 0
+  armorModifier: 1
   mesh: {fileID: 7846216224589359030, guid: aaf10e1ad83aace4f924020f3c05632f, type: 3}
   prefab: {fileID: 0}
   hatNumber: 0

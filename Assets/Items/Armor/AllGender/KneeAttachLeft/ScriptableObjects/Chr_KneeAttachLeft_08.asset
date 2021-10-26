@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
   m_Name: Chr_KneeAttachLeft_08
   m_EditorClassIdentifier: 
-  name: KneeAttachLeft_08
+  CurrentItem: {fileID: 0}
   icon: {fileID: 21300000, guid: 31ad26f599da1af43a1d99ac9120f396, type: 3}
-  isDefaultItem: 0
   maxStack: 1
-  item: {fileID: 0}
   amount: 0
+  isDefaultItem: 0
+  isUsedItem: 0
   equipSlot: 18
-  armorModifier: 0
+  armorModifier: 1
   mesh: {fileID: 7952820341191119583, guid: 211bb3bc40b5fa04596c8c21901e293a, type: 3}
   prefab: {fileID: 0}
   hatNumber: 0

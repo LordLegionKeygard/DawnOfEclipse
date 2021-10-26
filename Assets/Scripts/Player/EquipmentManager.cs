@@ -16,6 +16,7 @@ public class EquipmentManager : MonoBehaviour
     [SerializeField] private GameObject ears;
     [SerializeField] private GameObject head;
     [SerializeField] private Equipment[] defaultEquipment;
+    [SerializeField] private ArmorControl armorControl;
     [SerializeField] private SkinnedMeshRenderer targetMeshTorso;
     [SerializeField] private SkinnedMeshRenderer targetMeshRightHand;
     [SerializeField] private SkinnedMeshRenderer targetMeshLeftHand;
@@ -39,8 +40,8 @@ public class EquipmentManager : MonoBehaviour
     [SerializeField] private SkinnedMeshRenderer targetMeshKneeAttachmentLeft;
     [SerializeField] private MeshFilter _targetMeshFilterWeapon;
     [SerializeField] private Transform weaponPoint;
-    SkinnedMeshRenderer[] currentMeshes;
-    GameObject[] currentGameObject;
+    private SkinnedMeshRenderer[] currentMeshes;
+    private GameObject[] currentGameObject;
     private WeaponTimeCooldown weaponTimeCooldown;
 
     void Awake()
@@ -171,6 +172,8 @@ public class EquipmentManager : MonoBehaviour
                 newMeshTorso.rootBone = targetMeshTorso.rootBone;
                 newMeshTorso.bones = targetMeshTorso.bones;
                 currentMeshes[slotIndex] = newMeshTorso;
+                armorControl.torsoArmor = item.armorModifier;
+                //Debug.Log(item.armorModifier);
                 break;
             case EquipmentSlot.HandRight:
                 SkinnedMeshRenderer newMeshHandRight = Instantiate(item.mesh);
@@ -178,6 +181,7 @@ public class EquipmentManager : MonoBehaviour
                 newMeshHandRight.rootBone = targetMeshRightHand.rootBone;
                 newMeshHandRight.bones = targetMeshRightHand.bones;
                 currentMeshes[slotIndex] = newMeshHandRight;
+                armorControl.handRightArmor = item.armorModifier;
                 break;
             case EquipmentSlot.HandLeft:
                 SkinnedMeshRenderer newMeshHandLeft = Instantiate(item.mesh);
@@ -185,6 +189,7 @@ public class EquipmentManager : MonoBehaviour
                 newMeshHandLeft.rootBone = targetMeshLeftHand.rootBone;
                 newMeshHandLeft.bones = targetMeshLeftHand.bones;
                 currentMeshes[slotIndex] = newMeshHandLeft;
+                armorControl.handLeftArmor = item.armorModifier;
                 break;
             case EquipmentSlot.ArmUpperRight:
                 SkinnedMeshRenderer newMeshArmUpperRight = Instantiate(item.mesh);
@@ -192,6 +197,7 @@ public class EquipmentManager : MonoBehaviour
                 newMeshArmUpperRight.rootBone = targetMeshArmUpperRight.rootBone;
                 newMeshArmUpperRight.bones = targetMeshArmUpperRight.bones;
                 currentMeshes[slotIndex] = newMeshArmUpperRight;
+                armorControl.armUpperRightArmor = item.armorModifier;
                 break;
             case EquipmentSlot.ArmUpperLeft:
                 SkinnedMeshRenderer newMeshArmUpperLeft = Instantiate(item.mesh);
@@ -199,6 +205,7 @@ public class EquipmentManager : MonoBehaviour
                 newMeshArmUpperLeft.rootBone = targetMeshArmUpperLeft.rootBone;
                 newMeshArmUpperLeft.bones = targetMeshArmUpperLeft.bones;
                 currentMeshes[slotIndex] = newMeshArmUpperLeft;
+                armorControl.armUpperLeftArmor = item.armorModifier;
                 break;
             case EquipmentSlot.ArmLowerRight:
                 SkinnedMeshRenderer newMeshArmLowerRight = Instantiate(item.mesh);
@@ -206,6 +213,7 @@ public class EquipmentManager : MonoBehaviour
                 newMeshArmLowerRight.rootBone = targetMeshArmLowerRight.rootBone;
                 newMeshArmLowerRight.bones = targetMeshArmLowerRight.bones;
                 currentMeshes[slotIndex] = newMeshArmLowerRight;
+                armorControl.armLowerRightArmor = item.armorModifier;
                 break;
             case EquipmentSlot.ArmLowerLeft:
                 SkinnedMeshRenderer newMeshArmLowerLeft = Instantiate(item.mesh);
@@ -213,6 +221,7 @@ public class EquipmentManager : MonoBehaviour
                 newMeshArmLowerLeft.rootBone = targetMeshArmLowerLeft.rootBone;
                 newMeshArmLowerLeft.bones = targetMeshArmLowerLeft.bones;
                 currentMeshes[slotIndex] = newMeshArmLowerLeft;
+                armorControl.armLowerLeftArmor = item.armorModifier;
                 break;
             case EquipmentSlot.Hips:
                 SkinnedMeshRenderer newMeshHips = Instantiate(item.mesh);
@@ -220,6 +229,7 @@ public class EquipmentManager : MonoBehaviour
                 newMeshHips.rootBone = targetMeshHips.rootBone;
                 newMeshHips.bones = targetMeshHips.bones;
                 currentMeshes[slotIndex] = newMeshHips;
+                armorControl.hipsArmor = item.armorModifier;
                 break;
             case EquipmentSlot.LegLeft:
                 SkinnedMeshRenderer newMeshLegLeft = Instantiate(item.mesh);
@@ -227,6 +237,7 @@ public class EquipmentManager : MonoBehaviour
                 newMeshLegLeft.rootBone = targetMeshLegLeft.rootBone;
                 newMeshLegLeft.bones = targetMeshLegLeft.bones;
                 currentMeshes[slotIndex] = newMeshLegLeft;
+                armorControl.legLeftArmor = item.armorModifier;
                 break;
             case EquipmentSlot.LegRight:
                 SkinnedMeshRenderer newMeshLegRight = Instantiate(item.mesh);
@@ -234,6 +245,7 @@ public class EquipmentManager : MonoBehaviour
                 newMeshLegRight.rootBone = targetMeshLegRight.rootBone;
                 newMeshLegRight.bones = targetMeshLegRight.bones;
                 currentMeshes[slotIndex] = newMeshLegRight;
+                armorControl.legRightArmor = item.armorModifier;
                 break;
             case EquipmentSlot.BackAttachment:
                 SkinnedMeshRenderer newMeshBackAttachment = Instantiate(item.mesh);
@@ -241,6 +253,7 @@ public class EquipmentManager : MonoBehaviour
                 newMeshBackAttachment.rootBone = targetMeshBackAttachmnet.rootBone;
                 newMeshBackAttachment.bones = targetMeshBackAttachmnet.bones;
                 currentMeshes[slotIndex] = newMeshBackAttachment;
+                armorControl.backAttachmentArmor = item.armorModifier;
                 break;
             case EquipmentSlot.ShoulderLeft:
                 SkinnedMeshRenderer newMeshShoulderLeft = Instantiate(item.mesh);
@@ -248,6 +261,7 @@ public class EquipmentManager : MonoBehaviour
                 newMeshShoulderLeft.rootBone = targetMeshShoulderLeft.rootBone;
                 newMeshShoulderLeft.bones = targetMeshShoulderLeft.bones;
                 currentMeshes[slotIndex] = newMeshShoulderLeft;
+                armorControl.shoulderLeftArmor = item.armorModifier;
                 break;
             case EquipmentSlot.ShoulderRight:
                 SkinnedMeshRenderer newMeshShoulderRight = Instantiate(item.mesh);
@@ -255,6 +269,7 @@ public class EquipmentManager : MonoBehaviour
                 newMeshShoulderRight.rootBone = targetMeshShoulderRight.rootBone;
                 newMeshShoulderRight.bones = targetMeshShoulderRight.bones;
                 currentMeshes[slotIndex] = newMeshShoulderRight;
+                armorControl.shoulderRightArmor = item.armorModifier;
                 break;
             case EquipmentSlot.HeadSlot:
 
@@ -282,6 +297,7 @@ public class EquipmentManager : MonoBehaviour
                     newMeshHeadNoElememts.bones = targetMeshHeadNoElements.bones;
                     currentMeshes[slotIndex] = newMeshHeadNoElememts;
                 }
+                armorControl.headSlotArmor = item.armorModifier;
                 break;
             case EquipmentSlot.ElbowRight:
                 SkinnedMeshRenderer newMeshElbowRight = Instantiate(item.mesh);
@@ -289,6 +305,7 @@ public class EquipmentManager : MonoBehaviour
                 newMeshElbowRight.rootBone = targetMeshElbowRight.rootBone;
                 newMeshElbowRight.bones = targetMeshElbowRight.bones;
                 currentMeshes[slotIndex] = newMeshElbowRight;
+                armorControl.elbowRightArmor = item.armorModifier;
                 break;
             case EquipmentSlot.ElbowLeft:
                 SkinnedMeshRenderer newMeshElbowLeft = Instantiate(item.mesh);
@@ -296,6 +313,7 @@ public class EquipmentManager : MonoBehaviour
                 newMeshElbowLeft.rootBone = targetMeshElbowLeft.rootBone;
                 newMeshElbowLeft.bones = targetMeshElbowLeft.bones;
                 currentMeshes[slotIndex] = newMeshElbowLeft;
+                armorControl.elbowLeftArmor = item.armorModifier;
                 break;
             case EquipmentSlot.HipsAttachment:
                 SkinnedMeshRenderer newMeshHipsAttachment = Instantiate(item.mesh);
@@ -310,6 +328,7 @@ public class EquipmentManager : MonoBehaviour
                 newMeshKneeRight.rootBone = targetMeshKneeAttachmentRight.rootBone;
                 newMeshKneeRight.bones = targetMeshKneeAttachmentRight.bones;
                 currentMeshes[slotIndex] = newMeshKneeRight;
+                armorControl.kneeRightArmor = item.armorModifier;
                 break;
             case EquipmentSlot.KneeLeft:
                 SkinnedMeshRenderer newMeshKneeLeft = Instantiate(item.mesh);
@@ -317,6 +336,7 @@ public class EquipmentManager : MonoBehaviour
                 newMeshKneeLeft.rootBone = targetMeshKneeAttachmentLeft.rootBone;
                 newMeshKneeLeft.bones = targetMeshKneeAttachmentLeft.bones;
                 currentMeshes[slotIndex] = newMeshKneeLeft;
+                armorControl.kneeLeftArmor = item.armorModifier;
                 break;
             case EquipmentSlot.WeaponTwoHand:
                 weaponTimeCooldown.GreatSword();
@@ -328,6 +348,7 @@ public class EquipmentManager : MonoBehaviour
                 currentGameObject[slotIndex] = newGameObhectPrefab;
                 break;
         }
+        armorControl.UpdateArmor();
     }
 
     void EquipDefaults()

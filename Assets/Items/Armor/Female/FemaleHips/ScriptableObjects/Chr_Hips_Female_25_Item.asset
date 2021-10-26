@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
   m_Name: Chr_Hips_Female_25_Item
   m_EditorClassIdentifier: 
-  name: Hips_Female_25
+  CurrentItem: {fileID: 0}
   icon: {fileID: 21300000, guid: cf4892287daef7a499a7f280023a76c8, type: 3}
-  isDefaultItem: 0
   maxStack: 1
-  item: {fileID: 0}
   amount: 0
+  isDefaultItem: 0
+  isUsedItem: 0
   equipSlot: 2
-  armorModifier: 0
+  armorModifier: 1
   mesh: {fileID: 8092659344269538110, guid: 4bcc6aa81328dca4fa7f8440328557ae, type: 3}
   prefab: {fileID: 0}
   hatNumber: 0

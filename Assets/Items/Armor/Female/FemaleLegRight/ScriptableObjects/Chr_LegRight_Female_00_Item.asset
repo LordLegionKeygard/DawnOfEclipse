@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
   m_Name: Chr_LegRight_Female_00_Item
   m_EditorClassIdentifier: 
-  name: LegRight_Female_00
+  CurrentItem: {fileID: 0}
   icon: {fileID: 21300000, guid: 7a8105f41ad5f7d46ba1567c1da3c2d2, type: 3}
-  isDefaultItem: 1
   maxStack: 1
-  item: {fileID: 0}
   amount: 0
+  isDefaultItem: 1
+  isUsedItem: 0
   equipSlot: 3
   armorModifier: 0
   mesh: {fileID: 4067412990411436430, guid: f446481bdd8d9034a9f0643c30c3aa82, type: 3}

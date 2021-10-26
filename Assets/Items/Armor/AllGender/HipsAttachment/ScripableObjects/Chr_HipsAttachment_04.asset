@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
   m_Name: Chr_HipsAttachment_04
   m_EditorClassIdentifier: 
-  name: HipsAttachment_04
+  CurrentItem: {fileID: 0}
   icon: {fileID: 21300000, guid: f237fbe6150f1fb4b934bb21381220ec, type: 3}
-  isDefaultItem: 0
   maxStack: 1
-  item: {fileID: 0}
   amount: 0
+  isDefaultItem: 0
+  isUsedItem: 0
   equipSlot: 16
-  armorModifier: 0
+  armorModifier: 1
   mesh: {fileID: 7819449240011078468, guid: 5bb22e0a0acbd224d8976a326aab70b9, type: 3}
   prefab: {fileID: 0}
   hatNumber: 0

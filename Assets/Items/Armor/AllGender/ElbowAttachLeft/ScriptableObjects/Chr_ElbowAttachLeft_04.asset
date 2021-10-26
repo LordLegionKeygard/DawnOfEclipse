@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
   m_Name: Chr_ElbowAttachLeft_04
   m_EditorClassIdentifier: 
-  name: Chr_ElbowAttachLeft_04
+  CurrentItem: {fileID: 0}
   icon: {fileID: 21300000, guid: 4b16d82806a885844ab155d4396100af, type: 3}
-  isDefaultItem: 0
   maxStack: 1
-  item: {fileID: 0}
   amount: 0
+  isDefaultItem: 0
+  isUsedItem: 0
   equipSlot: 15
-  armorModifier: 0
+  armorModifier: 1
   mesh: {fileID: 4816770110076711951, guid: 24e45833fe6b39b40a90dcc20a4d8547, type: 3}
   prefab: {fileID: 0}
   hatNumber: 0

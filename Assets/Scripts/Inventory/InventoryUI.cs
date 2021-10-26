@@ -31,7 +31,7 @@ public class InventoryUI : MonoBehaviour
     //		- Adding items
     //		- Clearing empty slots
     // This is called using a delegate on the Inventory.
-    void UpdateUI()
+    public void UpdateUI()
     {
         // Loop through all the slots
         for (int i = 0; i < slots.Length; i++)

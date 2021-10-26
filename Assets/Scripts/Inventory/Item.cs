@@ -4,7 +4,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Item", menuName = "Inventory/Item")]
 public class Item : ScriptableObject
 {
-    [HideInInspector] public Item CurrentItem; // Current item in the slot
+    [HideInInspector] public Item CurrentItem;
     public Sprite icon = null;
     public int maxStack;
     public int amount;
@@ -12,7 +12,6 @@ public class Item : ScriptableObject
     public bool isStackable { get { return (maxStack > 1); } }
     public bool hasItem { get { return (CurrentItem != null); } }
     private InventorySlot inventorySlot;
-
     public bool isUsedItem = false;
     public virtual void Use()
     {

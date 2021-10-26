@@ -16,5 +16,6 @@ public class UsedItems : Item
 public enum PotionType
 {
     Health = 0,
-    Speed = 1
+    Speed = 1,
+    Mana = 2
 }

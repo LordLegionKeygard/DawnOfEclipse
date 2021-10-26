@@ -3,18 +3,16 @@ using UnityEngine.UI;
 using TMPro;
 using System.Linq;
 
-/* Sits on all InventorySlots. */
-
 public class InventorySlot : MonoBehaviour
 {
     public bool isCursor;
-    [SerializeField] private Image icon;            // Reference to the Icon image
+    [SerializeField] private Image icon;
     public TextMeshProUGUI amount;
-    [SerializeField] private Button removeButton; // Reference to the remove button
+    [SerializeField] private Button removeButton;
     [SerializeField] private GameObject ringFromBtn;
     private PlayerAnimatorManager playerAnimatorManager;
-    Item item;  // Current item in the slot
-    Inventory inventory;
+    private Item item;
+    private Inventory inventory;
     private void Start()
     {
         playerAnimatorManager = FindObjectOfType<PlayerAnimatorManager>();
@@ -29,32 +27,17 @@ public class InventorySlot : MonoBehaviour
     }
 
     public void AddItem(Item newItem)
-    {        
+    {
         item = newItem;
         icon.sprite = item.icon;
         removeButton.interactable = true;
         icon.enabled = true;
-        ringFromBtn.SetActive(true);      
+        ringFromBtn.SetActive(true);
         if (item.maxStack > 1)
         {
             amount.enabled = true;
             amount.text = item.amount.ToString();
         }
-        
-        // for (int i = 0; i < inventory.items.Count; i++)
-        // {
-        //     if (inventory.items[i].name == "HealthPotion")
-        //     {
-        //         int HealthPotionCount = inventory.items.Count(item => item.name == "HealthPotion");
-
-        //         if (HealthPotionCount == 2)
-        //         {
-
-        //             //ResetPotionCount();
-        //             return;
-        //         }
-        //     }
-        // }
     }
 
     public void ClearSlot()
@@ -71,17 +54,35 @@ public class InventorySlot : MonoBehaviour
         Inventory.instance.RemoveItemFromInventoryList(item);
         ClearSlot();
     }
-
-    // Called when the item is pressed
     public void UseItem()
     {
         if (item != null)
         {
             if (item.isUsedItem)
             {
-                playerAnimatorManager.Drinking();
                 item.amount--;
                 amount.text = item.amount.ToString();
+                switch (item.name)
+                {
+                    case ("HealthPotion"):
+                        {
+                            playerAnimatorManager.Drinking(0);
+                            Debug.Log("HealthPotion");
+                            break;
+                        }
+                    case ("SpeedPotion"):
+                        {
+                            playerAnimatorManager.Drinking(1);
+                            Debug.Log("SpeedPotion");
+                            break;
+                        }
+                    case ("ManaPotion"):
+                        {
+                            playerAnimatorManager.Drinking(2);
+                            Debug.Log("ManaPotion");
+                            break;
+                        }
+                }
             }
             if (item.amount == 0)
             {
@@ -93,10 +94,4 @@ public class InventorySlot : MonoBehaviour
             }
         }
     }
-
-    // public void ResetPotionCount()
-    // {
-    //     item.amount = 5;
-    //     amount.text = item.amount.ToString();
-    // }
 }

@@ -7,11 +7,6 @@ public class PotionsControl : MonoBehaviour
     PotionType potionType;
 
     private HealthControl healthControl;
-
-    [SerializeField] private GameObject healthPotion;
-
-    [SerializeField] private GameObject manaPotion;
-
     private void Start()
     {
         healthControl = GetComponent<HealthControl>();
@@ -35,6 +30,9 @@ public class PotionsControl : MonoBehaviour
                 break;
 
             case (PotionType.Speed):
+
+                break;
+            case (PotionType.Mana):
 
                 break;
         }

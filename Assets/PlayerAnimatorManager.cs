@@ -6,6 +6,7 @@ public class PlayerAnimatorManager : MonoBehaviour
 {
     private Animator anim;
 
+    [SerializeField] private GameObject[] potions;
     public float velocityMove;
     private PlayerController playerController;
     private static readonly int Speed = Animator.StringToHash("speed");
@@ -106,9 +107,36 @@ public class PlayerAnimatorManager : MonoBehaviour
         playerController.roll = false;
     }
 
-    public void Drinking()
+    public void Drinking(int item)
     {
+        switch (item)
+        {
+            case (0):
+                {
+                    potions[0].SetActive(true);
+                    break;
+                }
+            case (1):
+                {
+                    potions[1].SetActive(true);
+                    break;
+                }
+            case (2):
+                {
+                    potions[2].SetActive(true);
+                    break;
+                }
+        }
         anim.SetTrigger(Drink);
+        StartCoroutine(ExecuteAfterTime(2.5f));
+        IEnumerator ExecuteAfterTime(float timeInSec)
+        {
+            yield return new WaitForSeconds(timeInSec);
+            foreach (var allPot in potions)
+            {
+                allPot.SetActive(false);
+            }
+        }
     }
 
     public void InAir()

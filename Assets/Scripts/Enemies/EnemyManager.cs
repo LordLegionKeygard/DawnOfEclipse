@@ -9,7 +9,7 @@ public class EnemyManager : CharacterManager
     private EnemyAnimatorManager enemyAnimationManager;
     private EnemyStats enemyStats;
     [SerializeField] private MobSpawner spawnPoint;
-    private float timeToChase = 6f;
+    private float timeToChase = 15f;
     private float chaseTime;
     [HideInInspector] public NavMeshAgent navMeshAgent;
     [HideInInspector] public Rigidbody enemyRigidBody;

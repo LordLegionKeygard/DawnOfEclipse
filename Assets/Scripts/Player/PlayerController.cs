@@ -20,9 +20,9 @@ public class PlayerController : CharacterManager
     [SerializeField] private float groundDistance = 0.4f;
     [SerializeField] private float acceleration = 0.1f;
     [SerializeField] private float deceleration = 0.5f;
-
     private PlayerAnimatorManager playerAnimatorManager;
     private StaminaControl staminaControl;
+    private PotionsControl potionsControl;
     private Vector3 velocity;
     public bool roll;
     private bool sneak;
@@ -65,6 +65,7 @@ public class PlayerController : CharacterManager
 
     private void Start()
     {
+        potionsControl = GetComponent<PotionsControl>();
         playerAnimatorManager = GetComponent<PlayerAnimatorManager>();
         anim = GetComponent<Animator>();
         staminaControl = GetComponent<StaminaControl>();
@@ -94,24 +95,20 @@ public class PlayerController : CharacterManager
             }
             if (isGround == false) { playerAnimatorManager.InAir(); }
             if (isGround) { playerAnimatorManager.OnGround(); }
-            bool jumpDown = Input.GetKeyDown(KeyCode.JoystickButton0);
-
-            bool canJump = jumpDown && isGround && NotSneak && NotRoll && NotAttack;
-
-            if (canJump && staminaControl.CurrentStamina > 50 && !attack) Jump(); //square
-
             if (walk) Walk();
         }
 
     }
 
-    private void CanDrink(){canDrink = true;}
+    private void CanDrink() { canDrink = true; }
 
     private void FixedUpdate()
     {
         bool canNewMove = !attack && isGround && walk && NotSneak && !block;
-
         bool canNewMoveR1 = !attack && isGround && NotSneak;
+        bool canJump = isGround && NotSneak && NotRoll && NotAttack;
+
+        if ((Input.GetKeyDown(KeyCode.JoystickButton0) || Input.GetKeyDown(KeyCode.Space)) && canJump && staminaControl.CurrentStamina > 50 && !attack) Jump(); //square
 
         if (Input.GetKey(KeyCode.Q))
         {
@@ -154,18 +151,25 @@ public class PlayerController : CharacterManager
             StartCoroutine(ExecuteAfterTime(timeL1, playerAnimatorManager.DisableBlockL1));
         }
 
-        if (Input.GetKey(KeyCode.JoystickButton2) && staminaControl.CurrentStamina > 50 && canNewMove) // circle
+        else if ((Input.GetKey(KeyCode.JoystickButton2) || Input.GetKey(KeyCode.LeftShift)) && staminaControl.CurrentStamina > 50 && canNewMove && potionsControl.speedPotion == false) // circle
         {
             staminaControl.staminaRun = true;
             speed = 7;
             playerAnimatorManager.Running();
             StartCoroutine(ExecuteAfterTime(0.3f, playerAnimatorManager.EnableFastRun));
         }
+        else if ((Input.GetKey(KeyCode.JoystickButton2) || Input.GetKey(KeyCode.LeftShift)) && canNewMove && potionsControl.speedPotion == true) // circle
+        {
+            potionsControl.potionSpeed = 5;
+            playerAnimatorManager.Running();
+            StartCoroutine(ExecuteAfterTime(0.3f, playerAnimatorManager.EnableFastRun));
+        }
 
         else if (NotSneak)
-        {
+        {         
             staminaControl.staminaRun = false;
             speed = normalSpeed;
+            potionsControl.potionSpeed = 0;
             playerAnimatorManager.NotRunning();
             StartCoroutine(ExecuteAfterTime(0.3f, playerAnimatorManager.DisableFastRun));
         }
@@ -192,14 +196,14 @@ public class PlayerController : CharacterManager
             float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmothTime);
             transform.rotation = Quaternion.Euler(0f, angle, 0f);
             Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
-            controller.Move(moveDir.normalized * speed * Time.deltaTime);
+            controller.Move(moveDir.normalized * (speed + potionsControl.potionSpeed) * Time.deltaTime);
 
             if (playerAnimatorManager.velocityMove < 1.0f)
             {
                 playerAnimatorManager.velocityMove += Time.deltaTime * acceleration;
             }
 
-            if (Input.GetKeyUp(KeyCode.JoystickButton2) && fastRun == false && staminaControl.CurrentStamina > 100 && canNewMove)
+            if ((Input.GetKeyUp(KeyCode.JoystickButton2) || Input.GetKeyUp(KeyCode.LeftShift)) && fastRun == false && staminaControl.CurrentStamina > 100 && canNewMove)
             {
                 staminaControl.UseStamina(100);
                 playerAnimatorManager.EnableRoll();

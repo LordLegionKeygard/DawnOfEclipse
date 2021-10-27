@@ -1,7 +1,8 @@
 using UnityEngine;
+using System;
+using System.Collections;
 using UnityEngine.UI;
 using TMPro;
-using System.Linq;
 
 public class InventorySlot : MonoBehaviour
 {
@@ -13,10 +14,16 @@ public class InventorySlot : MonoBehaviour
     private PlayerAnimatorManager playerAnimatorManager;
     private Item item;
     private Inventory inventory;
+    private InventorySlot[] inventorySlots;
+    private PotionsControl potionsControl;
+    private bool canDrinkAnyPotions = true;
+
     private void Start()
     {
+        potionsControl = FindObjectOfType<PotionsControl>();
         playerAnimatorManager = FindObjectOfType<PlayerAnimatorManager>();
         inventory = FindObjectOfType<Inventory>();
+        inventorySlots = FindObjectsOfType<InventorySlot>();
     }
 
     private void Update()
@@ -58,28 +65,30 @@ public class InventorySlot : MonoBehaviour
     {
         if (item != null)
         {
-            if (item.isUsedItem)
+            if (item.isUsedItem && canDrinkAnyPotions)
             {
                 item.amount--;
                 amount.text = item.amount.ToString();
+                CantDrinkAnyPotions();
                 switch (item.name)
                 {
                     case ("HealthPotion"):
                         {
                             playerAnimatorManager.Drinking(0);
-                            Debug.Log("HealthPotion");
+                            potionsControl.UsePotions(1);
+
                             break;
                         }
                     case ("SpeedPotion"):
                         {
                             playerAnimatorManager.Drinking(1);
-                            Debug.Log("SpeedPotion");
+                            potionsControl.UsePotions(2);
                             break;
                         }
                     case ("ManaPotion"):
                         {
                             playerAnimatorManager.Drinking(2);
-                            Debug.Log("ManaPotion");
+                            potionsControl.UsePotions(3);
                             break;
                         }
                 }
@@ -92,6 +101,30 @@ public class InventorySlot : MonoBehaviour
                 }
                 item.Use();
             }
+        }
+    }
+    private void CantDrinkAnyPotions()
+    {
+        foreach (var pot in inventorySlots)
+        {
+            pot.canDrinkAnyPotions = false;
+        }
+        StartCoroutine(ExecuteAfterTime(3f));
+        IEnumerator ExecuteAfterTime(float timeInSec)
+        {
+            yield return new WaitForSeconds(timeInSec);
+            foreach (var pot in inventorySlots)
+            {
+                pot.canDrinkAnyPotions = true;
+            }
+        }
+    }
+
+    private void OnDisable()
+    {
+        foreach (var pot in inventorySlots)
+        {
+            pot.canDrinkAnyPotions = true;
         }
     }
 }

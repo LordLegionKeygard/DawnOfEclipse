@@ -5,7 +5,6 @@ using UnityEngine;
 public class PlayerAnimatorManager : MonoBehaviour
 {
     private Animator anim;
-
     [SerializeField] private GameObject[] potions;
     public float velocityMove;
     private PlayerController playerController;

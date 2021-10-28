@@ -21,11 +21,6 @@ public class StopPlayerController : MonoBehaviour
         controller.walk = true;
     }
 
-    public void R1ComboMain()
-    {
-        staminaControl.UseStamina(100);
-    }
-
     public void Roll()
     {
         controller.block = true;

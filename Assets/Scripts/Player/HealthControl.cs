@@ -6,19 +6,22 @@ using UnityEngine.UI;
 public class HealthControl : CharacterStats
 {
     [SerializeField] private Slider healthBar;
-    private Animator animator;
-
-    private EnemyManager[] enemyManagers;
-
     [SerializeField] private Image healthBarImage;
+    private Animator animator;
+    private EnemyManager[] enemyManagers;
     private PlayerController playerController;
+    private ArmorControl armorControl;
 
+    private void Awake()
+    {
+        animator = GetComponent<Animator>();
+        playerController = GetComponent<PlayerController>();    
+        armorControl = GetComponent<ArmorControl>();  
+    }
     private void Start()
     {
         maxHealth = SetMaxHealthFromHealthLevel();
         currentHealth = maxHealth;
-        animator = GetComponent<Animator>();
-        playerController = GetComponent<PlayerController>();
         currentHealth = maxHealth;
         healthBar.maxValue = maxHealth;
         healthBar.value = maxHealth;
@@ -34,8 +37,7 @@ public class HealthControl : CharacterStats
     {
         if (playerController.block == false)
         {
-            currentHealth = currentHealth - damage;
-            //healthBar.value = currentHealth;
+            currentHealth = currentHealth - (damage - armorControl.currentArmor / 10);
             UpdateHealthColorBar();
 
             RandomTakeDamage();
@@ -49,7 +51,7 @@ public class HealthControl : CharacterStats
 
     private void Update()
     {
-        if(healthBar.value == currentHealth)
+        if (healthBar.value == currentHealth)
         {
             return;
         }
@@ -66,7 +68,6 @@ public class HealthControl : CharacterStats
 
     public void UpdateHealthColorBar()
     {
-        //healthBar.value = currentHealth;
         Color healthGreenColor = new Color(0.01176471f, 0.8117647f, 0.1607843f);
         float healthBarPercent = (float)currentHealth / (float)maxHealth;
         healthBarImage.color = Color.Lerp(Color.red, healthGreenColor, healthBarPercent);
@@ -74,7 +75,7 @@ public class HealthControl : CharacterStats
 
     private void RandomTakeDamage()
     {
-        int randomState = Random.Range(0, 3);
+        int randomState = Random.Range(0, 4);
         if (randomState == 0)
         {
             animator.SetTrigger("takeDamage");
@@ -84,6 +85,10 @@ public class HealthControl : CharacterStats
             animator.SetTrigger("takeDamage1");
         }
         else if (randomState == 2)
+        {
+
+        }
+        else if (randomState == 3)
         {
 
         }

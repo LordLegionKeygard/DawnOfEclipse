@@ -124,29 +124,25 @@ public class PlayerController : CharacterManager
             }
         }
 
-        if (Input.GetKey(KeyCode.JoystickButton7) && staminaControl.CurrentStamina > 250 && canNewMoveR1) // R2
+        if (Input.GetKey(KeyCode.JoystickButton7) && staminaControl.CurrentStamina > 300 && canNewMoveR1) // R2
         {
-            staminaControl.UseStamina(250);
             playerAnimatorManager.AttackR2();
             StartCoroutine(ExecuteAfterTime(timeR2, playerAnimatorManager.DisableAttackR2));
         }
 
         if (Input.GetKey(KeyCode.JoystickButton5) && staminaControl.CurrentStamina > 100 && canNewMoveR1 && fastRun == false) // R1
         {
-            staminaControl.UseStamina(100);
             playerAnimatorManager.AttackR1();
             StartCoroutine(ExecuteAfterTime(timeR1, playerAnimatorManager.DisableAttackR1));
         }
         if (Input.GetKey(KeyCode.JoystickButton5) && staminaControl.CurrentStamina > 150 && canNewMoveR1 && fastRun == true) // R1
         {
-            staminaControl.UseStamina(150);
             playerAnimatorManager.AttackR1FastRun();
-            StartCoroutine(ExecuteAfterTime(timeR1FastRun, playerAnimatorManager.DisableAttackR1));
+            StartCoroutine(ExecuteAfterTime(timeR1, playerAnimatorManager.DisableAttackR1));
         }
 
         if (Input.GetKey(KeyCode.JoystickButton4) && staminaControl.CurrentStamina > 100 && canNewMove) //L1
         {
-            staminaControl.UseStamina(100);
             playerAnimatorManager.BlockL1();
             StartCoroutine(ExecuteAfterTime(timeL1, playerAnimatorManager.DisableBlockL1));
         }
@@ -177,7 +173,6 @@ public class PlayerController : CharacterManager
 
     private void Jump()
     {
-        staminaControl.UseStamina(50);
         playerAnimatorManager.JumpTrigger();
         velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
     }
@@ -205,7 +200,6 @@ public class PlayerController : CharacterManager
 
             if ((Input.GetKeyUp(KeyCode.JoystickButton2) || Input.GetKeyUp(KeyCode.LeftShift)) && fastRun == false && staminaControl.CurrentStamina > 100 && canNewMove)
             {
-                staminaControl.UseStamina(100);
                 playerAnimatorManager.EnableRoll();
                 StartCoroutine(ExecuteAfterTime(1.1f, playerAnimatorManager.DisableRoll));
             }
@@ -259,7 +253,6 @@ public class PlayerController : CharacterManager
     {
         input.Enable();
     }
-
     private void OnDisable()
     {
         input.Disable();

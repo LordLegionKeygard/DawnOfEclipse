@@ -35,12 +35,29 @@ public class StaminaControl : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if (staminaBar.value == currentStamina)
+        {
+            return;
+        }
+        if (staminaBar.value > currentStamina)
+        {
+            staminaBar.value -= Time.deltaTime * 400;
+        }
+        if (staminaBar.value < currentStamina)
+        {
+            staminaBar.value += Time.deltaTime * 400;
+        }
+
+    }
+
     public void UseStamina(int amount)
     {
         if (currentStamina - amount >= 0)
         {
             currentStamina -= amount;
-            staminaBar.value = currentStamina;
+            //staminaBar.value = currentStamina;
             RegenTimer();
         }
     }

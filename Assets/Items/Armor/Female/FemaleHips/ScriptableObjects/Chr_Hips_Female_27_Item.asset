@@ -19,7 +19,7 @@ MonoBehaviour:
   isDefaultItem: 0
   isUsedItem: 0
   equipSlot: 2
-  armorModifier: 1
+  armorModifier: 14
   mesh: {fileID: 3824069027276648492, guid: 434936d69daed6c479b7e1e89aa72977, type: 3}
   prefab: {fileID: 0}
   hatNumber: 0

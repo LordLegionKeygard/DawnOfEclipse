@@ -57,7 +57,6 @@ public class StaminaControl : MonoBehaviour
         if (currentStamina - amount >= 0)
         {
             currentStamina -= amount;
-            //staminaBar.value = currentStamina;
             RegenTimer();
         }
     }

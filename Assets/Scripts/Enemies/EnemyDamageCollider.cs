@@ -5,11 +5,13 @@ using UnityEngine;
 public class EnemyDamageCollider : MonoBehaviour
 {
     PlayerController playerController;
-    public int currentWeaponDamage;
+    public float currentWeaponDamage;
 
+    private BoxCollider col;
     private void Awake()
     {
         playerController = FindObjectOfType<PlayerController>();
+        col = GetComponent<BoxCollider>();
     }
 
     private void OnTriggerEnter(Collider collision)
@@ -17,10 +19,10 @@ public class EnemyDamageCollider : MonoBehaviour
         if (collision.tag == "Player")
         {
             HealthControl playerHealth = collision.GetComponent<HealthControl>();
-
             if (playerHealth != null)
             {
                 playerHealth.TakeDamage(currentWeaponDamage);
+                col.enabled = false;
             }
         }
     }

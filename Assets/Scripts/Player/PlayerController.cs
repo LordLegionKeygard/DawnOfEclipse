@@ -141,10 +141,19 @@ public class PlayerController : CharacterManager
             StartCoroutine(ExecuteAfterTime(timeR1, playerAnimatorManager.DisableAttackR1));
         }
 
-        if (Input.GetKey(KeyCode.JoystickButton4) && staminaControl.CurrentStamina > 100 && canNewMove) //L1
+        if (Input.GetKeyDown(KeyCode.JoystickButton4) && staminaControl.CurrentStamina > 50) //L1 block true
         {
             playerAnimatorManager.BlockL1();
-            StartCoroutine(ExecuteAfterTime(timeL1, playerAnimatorManager.DisableBlockL1));
+
+        }
+        if (Input.GetKeyUp(KeyCode.JoystickButton4)) //L1 block false
+        {
+            playerAnimatorManager.DisableBlockL1();
+        }
+
+        if (staminaControl.CurrentStamina <= 50)
+        {
+            playerAnimatorManager.DisableBlockL1();
         }
 
         else if ((Input.GetKey(KeyCode.JoystickButton2) || Input.GetKey(KeyCode.LeftShift)) && staminaControl.CurrentStamina > 50 && canNewMove && potionsControl.speedPotion == false) // circle
@@ -162,11 +171,12 @@ public class PlayerController : CharacterManager
         }
 
         else if (NotSneak)
-        {         
+        {
             staminaControl.staminaRun = false;
             speed = normalSpeed;
             potionsControl.potionSpeed = 0;
             playerAnimatorManager.NotRunning();
+
             StartCoroutine(ExecuteAfterTime(0.3f, playerAnimatorManager.DisableFastRun));
         }
     }

@@ -11,12 +11,14 @@ public class HealthControl : CharacterStats
     private EnemyManager[] enemyManagers;
     private PlayerController playerController;
     private ArmorControl armorControl;
+    private StaminaControl staminaControl;
 
     private void Awake()
     {
+        staminaControl = GetComponent<StaminaControl>();
         animator = GetComponent<Animator>();
-        playerController = GetComponent<PlayerController>();    
-        armorControl = GetComponent<ArmorControl>();  
+        playerController = GetComponent<PlayerController>();
+        armorControl = GetComponent<ArmorControl>();
     }
     private void Start()
     {
@@ -33,14 +35,30 @@ public class HealthControl : CharacterStats
         return maxHealth;
     }
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(float damage)
     {
         if (playerController.block == false)
         {
-            currentHealth = currentHealth - (damage - armorControl.currentArmor / 10);
+            var enemyDamage = (1 - (armorControl.currentArmor / damage)) * damage;
+            Debug.Log(enemyDamage);
+            if (enemyDamage >= 0)
+            {
+                currentHealth = currentHealth - (int)enemyDamage;
+            }
+            else
+            {
+                currentHealth = currentHealth - (int)(damage * 0.05f);
+            }
+
             UpdateHealthColorBar();
 
             RandomTakeDamage();
+        }
+
+        if(playerController.block == true)
+        {
+            Debug.Log("block");
+            staminaControl.UseStamina((int)damage * 10);
         }
 
         if (currentHealth <= 0)

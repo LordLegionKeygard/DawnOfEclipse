@@ -1063,7 +1063,7 @@ MonoBehaviour:
   isInteracting: 0
   rotationSpeed: 31
   isChasingPlayer: 0
-  maximumAttackRange: 1.5
+  maximumAttackRange: 2
   currentState: {fileID: 5424605624970381583}
   currentTarget: {fileID: 0}
 --- !u!114 &2468787932838462733

@@ -13,11 +13,11 @@ public class EnemyManager : CharacterManager
     private float chaseTime;
     [HideInInspector] public NavMeshAgent navMeshAgent;
     [HideInInspector] public Rigidbody enemyRigidBody;
-    [HideInInspector] public bool isPerformingAction;
-    [HideInInspector] public bool isInteracting;
-    [HideInInspector] public float rotationSpeed = 15;
-    [HideInInspector] public bool isChasingPlayer = false;
-    [HideInInspector] public float maximumAttackRange = 1.5f;
+    public bool isPerformingAction;
+    public bool isInteracting;
+    public float rotationSpeed;
+    public bool isChasingPlayer = false;
+    public float maximumAttackRange;
     public State currentState;
     public GameObject currentTarget;
 

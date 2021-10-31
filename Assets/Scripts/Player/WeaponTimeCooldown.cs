@@ -20,4 +20,11 @@ public class WeaponTimeCooldown : MonoBehaviour
         playerController.timeL1 = 0.7f;
         playerController.timeR1FastRun = 1.5f;
     }
+    public void LongSword()
+    {
+        playerController.timeR1 = 0.8f;
+        playerController.timeR2 = 1.5f;
+        playerController.timeL1 = 0.7f;
+        playerController.timeR1FastRun = 1.5f;
+    }
 }

@@ -86,7 +86,14 @@ public class PlayerController : CharacterManager
                 anim.SetFloat("inputX", inputStrafe.x);
                 anim.SetFloat("inputY", inputStrafe.y);
             }
-
+            if (staminaControl.CurrentStamina <= 50)
+            {
+                playerAnimatorManager.DisableBlockL1();
+            }
+            if (Input.GetKeyUp(KeyCode.JoystickButton4)) //L1 block false
+            {
+                playerAnimatorManager.DisableBlockL1();
+            }
             isGround = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
             if (isGround && velocity.y < 0) velocity.y = -2f;
             {
@@ -97,6 +104,7 @@ public class PlayerController : CharacterManager
             if (isGround) { playerAnimatorManager.OnGround(); }
             if (walk) Walk();
         }
+
 
     }
 
@@ -135,6 +143,7 @@ public class PlayerController : CharacterManager
             playerAnimatorManager.AttackR1();
             StartCoroutine(ExecuteAfterTime(timeR1, playerAnimatorManager.DisableAttackR1));
         }
+
         if (Input.GetKey(KeyCode.JoystickButton5) && staminaControl.CurrentStamina > 150 && canNewMoveR1 && fastRun == true) // R1
         {
             playerAnimatorManager.AttackR1FastRun();
@@ -146,15 +155,6 @@ public class PlayerController : CharacterManager
             playerAnimatorManager.BlockL1();
 
         }
-        if (Input.GetKeyUp(KeyCode.JoystickButton4)) //L1 block false
-        {
-            playerAnimatorManager.DisableBlockL1();
-        }
-
-        if (staminaControl.CurrentStamina <= 50)
-        {
-            playerAnimatorManager.DisableBlockL1();
-        }
 
         else if ((Input.GetKey(KeyCode.JoystickButton2) || Input.GetKey(KeyCode.LeftShift)) && staminaControl.CurrentStamina > 50 && canNewMove && potionsControl.speedPotion == false) // circle
         {
@@ -163,6 +163,7 @@ public class PlayerController : CharacterManager
             playerAnimatorManager.Running();
             StartCoroutine(ExecuteAfterTime(0.3f, playerAnimatorManager.EnableFastRun));
         }
+
         else if ((Input.GetKey(KeyCode.JoystickButton2) || Input.GetKey(KeyCode.LeftShift)) && canNewMove && potionsControl.speedPotion == true) // circle
         {
             potionsControl.potionSpeed = 5;
@@ -214,6 +215,7 @@ public class PlayerController : CharacterManager
                 StartCoroutine(ExecuteAfterTime(1.1f, playerAnimatorManager.DisableRoll));
             }
         }
+
         else
         {
             if (playerAnimatorManager.velocityMove > 0.0f)

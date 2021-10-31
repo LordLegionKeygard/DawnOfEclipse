@@ -10,11 +10,13 @@ public class HealthControl : CharacterStats
     private Animator animator;
     private EnemyManager[] enemyManagers;
     private PlayerController playerController;
+    private PlayerAnimatorManager playerAnimatorManager;
     private ArmorControl armorControl;
     private StaminaControl staminaControl;
 
     private void Awake()
     {
+        playerAnimatorManager = GetComponent<PlayerAnimatorManager>();
         staminaControl = GetComponent<StaminaControl>();
         animator = GetComponent<Animator>();
         playerController = GetComponent<PlayerController>();
@@ -57,8 +59,8 @@ public class HealthControl : CharacterStats
 
         if(playerController.block == true)
         {
-            Debug.Log("block");
             staminaControl.UseStamina((int)damage * 10);
+            playerAnimatorManager.BlockReact();
         }
 
         if (currentHealth <= 0)

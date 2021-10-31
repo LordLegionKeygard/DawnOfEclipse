@@ -39,11 +39,11 @@ public class EquipmentManager : MonoBehaviour
     [SerializeField] private SkinnedMeshRenderer targetMeshKneeAttachmentRight;
     [SerializeField] private SkinnedMeshRenderer targetMeshKneeAttachmentLeft;
     [SerializeField] private MeshFilter _targetMeshFilterWeapon;
-    [SerializeField] private Transform weaponPoint;
+    [SerializeField] private Transform greatSwordPoint;
+    [SerializeField] private Transform longSwordPoint;
     private SkinnedMeshRenderer[] currentMeshes;
     private GameObject[] currentGameObject;
     private WeaponTimeCooldown weaponTimeCooldown;
-
     void Awake()
     {
         instance = this;
@@ -52,29 +52,24 @@ public class EquipmentManager : MonoBehaviour
 
     #endregion
 
-    Equipment[] currentEquipment;   // Items we currently have equipped
-
-    // Callback for when an item is equipped/unequipped
+    Equipment[] currentEquipment;
     public delegate void OnEquipmentChanged(Equipment newItem, Equipment oldItem);
     public OnEquipmentChanged onEquipmentChanged;
 
 
-    Inventory inventory;    // Reference to our inventory
+    Inventory inventory;
 
     void Start()
     {
-        inventory = Inventory.instance;     // Get a reference to our inventory
-
+        inventory = Inventory.instance; // Get a reference to our inventory
         // Initialize currentEquipment based on number of equipment slots
         int numSlots = System.Enum.GetNames(typeof(EquipmentSlot)).Length;
         currentEquipment = new Equipment[numSlots];
         currentMeshes = new SkinnedMeshRenderer[numSlots];
         currentGameObject = new GameObject[numSlots];
-
         EquipDefaults();
     }
 
-    // Equip a new item
     public void Equip(Equipment newItem)
     {
         if (newItem.canChangehead)
@@ -99,17 +94,19 @@ public class EquipmentManager : MonoBehaviour
                     break;
             }
         }
-        // Find out what slot the item fits in
+        if (newItem.weapon == true)
+        {
+            Equipment oldWeapon = Unequip(19);
+            Equipment oldWeapon1 = Unequip(20);
+        }
         int slotIndex = (int)newItem.equipSlot;
         Equipment oldItem = Unequip(slotIndex);
 
-        // An item has been equipped so we trigger the callback
         if (onEquipmentChanged != null)
         {
             onEquipmentChanged.Invoke(newItem, oldItem);
         }
 
-        // Insert the item into the slot
         currentEquipment[slotIndex] = newItem;
         AttachToMesh(newItem, slotIndex);
     }
@@ -173,7 +170,6 @@ public class EquipmentManager : MonoBehaviour
                 newMeshTorso.bones = targetMeshTorso.bones;
                 currentMeshes[slotIndex] = newMeshTorso;
                 armorControl.torsoArmor = item.armorModifier;
-                //Debug.Log(item.armorModifier);
                 break;
             case EquipmentSlot.HandRight:
                 SkinnedMeshRenderer newMeshHandRight = Instantiate(item.mesh);
@@ -343,9 +339,18 @@ public class EquipmentManager : MonoBehaviour
                 anim.runtimeAnimatorController = Resources.Load("Animation/GreatSwordController") as RuntimeAnimatorController;
                 GameObject newGameObhectPrefab = Instantiate(item.prefab);
                 newGameObhectPrefab.transform.parent = _targetMeshFilterWeapon.transform.parent;
-                newGameObhectPrefab.transform.position = weaponPoint.transform.position;
-                newGameObhectPrefab.transform.rotation = weaponPoint.transform.rotation;
+                newGameObhectPrefab.transform.position = greatSwordPoint.transform.position;
+                newGameObhectPrefab.transform.rotation = greatSwordPoint.transform.rotation;
                 currentGameObject[slotIndex] = newGameObhectPrefab;
+                break;
+            case EquipmentSlot.WeaponRightHand:
+                weaponTimeCooldown.LongSword();
+                anim.runtimeAnimatorController = Resources.Load("Animation/SwordAndShieldController") as RuntimeAnimatorController;
+                GameObject newGameObjectPrefab = Instantiate(item.prefab);
+                newGameObjectPrefab.transform.parent = _targetMeshFilterWeapon.transform.parent;
+                newGameObjectPrefab.transform.position = longSwordPoint.transform.position;
+                newGameObjectPrefab.transform.rotation = longSwordPoint.transform.rotation;
+                currentGameObject[slotIndex] = newGameObjectPrefab;
                 break;
         }
         armorControl.UpdateArmor();

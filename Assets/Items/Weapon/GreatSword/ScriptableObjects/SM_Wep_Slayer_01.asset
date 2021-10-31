@@ -25,3 +25,4 @@ MonoBehaviour:
   hatNumber: 0
   noHair: 0
   canChangehead: 0
+  weapon: 1

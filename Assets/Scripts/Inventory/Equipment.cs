@@ -15,14 +15,13 @@ public class Equipment : Item
     public int noHair; // 0 = withHair, 1 = noHair & noEars, 2 = fullHelmet(noAll)
     public bool canChangehead;
 
-    // When pressed in inventory
+    public bool weapon;
     public override void Use()
     {
         base.Use();
         EquipmentManager.instance.Equip(this);       
         RemoveFromInventory();
     }
-
 }
 
 public enum EquipmentSlot
@@ -46,6 +45,7 @@ public enum EquipmentSlot
     HipsAttachment = 16,
     KneeRight = 17,
     KneeLeft = 18,
-    WeaponTwoHand = 19
+    WeaponTwoHand = 19,
+    WeaponRightHand = 20
 }
 

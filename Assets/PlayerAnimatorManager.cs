@@ -17,6 +17,7 @@ public class PlayerAnimatorManager : MonoBehaviour
     private static readonly int Roll = Animator.StringToHash("roll");
     private static readonly int Attack_R1_Trigger = Animator.StringToHash("AttackR1");
     private static readonly int Block_L1_Trigger = Animator.StringToHash("Block(L1)");
+    private static readonly int Block_L1_React_Trigger = Animator.StringToHash("Block_React(L1)");
     private static readonly int Drink = Animator.StringToHash("drink");
 
     private void Start()
@@ -74,6 +75,13 @@ public class PlayerAnimatorManager : MonoBehaviour
         playerController.walk = false;
         playerController.block = true;
         anim.SetBool(Block_L1_Trigger, true);
+    }
+
+    public void BlockReact()
+    {
+        playerController.walk = false;
+        playerController.block = true;
+        anim.SetBool(Block_L1_React_Trigger, true);
     }
 
     public void DisableBlockL1()

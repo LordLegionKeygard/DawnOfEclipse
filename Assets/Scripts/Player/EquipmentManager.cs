@@ -39,8 +39,10 @@ public class EquipmentManager : MonoBehaviour
     [SerializeField] private SkinnedMeshRenderer targetMeshKneeAttachmentRight;
     [SerializeField] private SkinnedMeshRenderer targetMeshKneeAttachmentLeft;
     [SerializeField] private MeshFilter _targetMeshFilterWeapon;
+    [SerializeField] private MeshFilter _targetMeshFilterShield;
     [SerializeField] private Transform greatSwordPoint;
     [SerializeField] private Transform longSwordPoint;
+    [SerializeField] private Transform shieldPoint;
     private SkinnedMeshRenderer[] currentMeshes;
     private GameObject[] currentGameObject;
     private WeaponTimeCooldown weaponTimeCooldown;
@@ -351,6 +353,14 @@ public class EquipmentManager : MonoBehaviour
                 newGameObjectPrefab.transform.position = longSwordPoint.transform.position;
                 newGameObjectPrefab.transform.rotation = longSwordPoint.transform.rotation;
                 currentGameObject[slotIndex] = newGameObjectPrefab;
+                break;
+            case EquipmentSlot.Shield:
+                anim.runtimeAnimatorController = Resources.Load("Animation/SwordAndShieldController") as RuntimeAnimatorController;
+                GameObject shieldGameObjectPrefab = Instantiate(item.prefab);
+                shieldGameObjectPrefab.transform.parent = _targetMeshFilterShield.transform.parent;
+                shieldGameObjectPrefab.transform.position = shieldPoint.transform.position;
+                shieldGameObjectPrefab.transform.rotation = shieldPoint.transform.rotation;
+                currentGameObject[slotIndex] = shieldGameObjectPrefab;
                 break;
         }
         armorControl.UpdateArmor();

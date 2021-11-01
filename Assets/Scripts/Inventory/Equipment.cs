@@ -46,6 +46,7 @@ public enum EquipmentSlot
     KneeRight = 17,
     KneeLeft = 18,
     WeaponTwoHand = 19,
-    WeaponRightHand = 20
+    WeaponRightHand = 20,
+    Shield = 21
 }
 

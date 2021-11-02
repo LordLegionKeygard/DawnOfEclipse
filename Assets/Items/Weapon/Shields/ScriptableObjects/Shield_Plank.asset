@@ -13,16 +13,19 @@ MonoBehaviour:
   m_Name: Shield_Plank
   m_EditorClassIdentifier: 
   CurrentItem: {fileID: 0}
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 3ea4f92acb1d2f448bd14e2c73254ac6, type: 3}
   maxStack: 0
   amount: 0
   isDefaultItem: 0
   isUsedItem: 0
   equipSlot: 21
-  armorModifier: 0
+  armorModifier: 20
   mesh: {fileID: 0}
   prefab: {fileID: 7629398275243286947, guid: 76bff881d1ce925469065d77ea4fac14, type: 3}
   hatNumber: 0
   noHair: 0
   canChangehead: 0
   weapon: 0
+  twoHandedWeapon: 0
+  shield: 1
+  shieldBlockArmorModifier: 100

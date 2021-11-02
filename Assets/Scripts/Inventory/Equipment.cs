@@ -2,24 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-/* An Item that can be equipped. */
-
 [CreateAssetMenu(fileName = "New Equipment", menuName = "Inventory/Equipment")]
 public class Equipment : Item
 {
-    public EquipmentSlot equipSlot; // Slot to store equipment in
-    public int armorModifier;       // Increase/decrease in armor
+    public EquipmentSlot equipSlot;
+    public int armorModifier;
     public SkinnedMeshRenderer mesh;
     public GameObject prefab;
     public int hatNumber;
     public int noHair; // 0 = withHair, 1 = noHair & noEars, 2 = fullHelmet(noAll)
     public bool canChangehead;
-
     public bool weapon;
+    public bool twoHandedWeapon;
+    public bool shield;
+    public int shieldBlockArmorModifier;
     public override void Use()
     {
         base.Use();
-        EquipmentManager.instance.Equip(this);       
+        EquipmentManager.instance.Equip(this);
         RemoveFromInventory();
     }
 }

@@ -13,16 +13,19 @@ MonoBehaviour:
   m_Name: Shield_11
   m_EditorClassIdentifier: 
   CurrentItem: {fileID: 0}
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: ae2ca9e88498e65459f56cb59ff20ea6, type: 3}
   maxStack: 0
   amount: 0
   isDefaultItem: 0
   isUsedItem: 0
   equipSlot: 21
-  armorModifier: 0
+  armorModifier: 20
   mesh: {fileID: 0}
   prefab: {fileID: 192391738051181482, guid: e1b40f3bd2da3484598925253bb79a2c, type: 3}
   hatNumber: 0
   noHair: 0
   canChangehead: 0
   weapon: 0
+  twoHandedWeapon: 0
+  shield: 1
+  shieldBlockArmorModifier: 100

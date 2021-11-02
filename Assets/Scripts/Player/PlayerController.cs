@@ -23,6 +23,7 @@ public class PlayerController : CharacterManager
     private PlayerAnimatorManager playerAnimatorManager;
     private StaminaControl staminaControl;
     private PotionsControl potionsControl;
+    private ArmorControl armorControl;
     private Vector3 velocity;
     public bool roll;
     private bool sneak;
@@ -65,6 +66,7 @@ public class PlayerController : CharacterManager
 
     private void Start()
     {
+        armorControl = GetComponent<ArmorControl>();
         potionsControl = GetComponent<PotionsControl>();
         playerAnimatorManager = GetComponent<PlayerAnimatorManager>();
         anim = GetComponent<Animator>();
@@ -153,7 +155,6 @@ public class PlayerController : CharacterManager
         if (Input.GetKeyDown(KeyCode.JoystickButton4) && staminaControl.CurrentStamina > 50) //L1 block true
         {
             playerAnimatorManager.BlockL1();
-
         }
 
         else if ((Input.GetKey(KeyCode.JoystickButton2) || Input.GetKey(KeyCode.LeftShift)) && staminaControl.CurrentStamina > 50 && canNewMove && potionsControl.speedPotion == false) // circle
@@ -177,7 +178,6 @@ public class PlayerController : CharacterManager
             speed = normalSpeed;
             potionsControl.potionSpeed = 0;
             playerAnimatorManager.NotRunning();
-
             StartCoroutine(ExecuteAfterTime(0.3f, playerAnimatorManager.DisableFastRun));
         }
     }

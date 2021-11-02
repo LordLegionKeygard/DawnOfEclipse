@@ -13,16 +13,19 @@ MonoBehaviour:
   m_Name: Shield_Heater_2
   m_EditorClassIdentifier: 
   CurrentItem: {fileID: 0}
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 5e3dee3debab7ad4ebe8301ed21db97e, type: 3}
   maxStack: 0
   amount: 0
   isDefaultItem: 0
   isUsedItem: 0
   equipSlot: 21
-  armorModifier: 0
+  armorModifier: 20
   mesh: {fileID: 0}
   prefab: {fileID: 4647369713033010808, guid: 9828f60f2259309419973ea1340361ee, type: 3}
   hatNumber: 0
   noHair: 0
   canChangehead: 0
   weapon: 0
+  twoHandedWeapon: 0
+  shield: 1
+  shieldBlockArmorModifier: 100

@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: 8c0215d12a273f04e9eac00c084a7a71
+guid: 552544d86383da14f9381bb505cb99ac
 ModelImporter:
   serializedVersion: 21100
   internalIDToNameTable:
   - first:
       74: -203655887218126122
-    second: GreatSwordBlocking(L1)
+    second: Sword And Shield Strafe
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -35,18 +35,18 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: GreatSwordBlocking(L1)
+      name: Sword And Shield Strafe
       takeName: mixamo.com
       internalID: 0
       firstFrame: 0
-      lastFrame: 20
+      lastFrame: 21
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 1
       loopBlendPositionY: 0
@@ -55,26 +55,19 @@ ModelImporter:
       keepOriginalPositionY: 1
       keepOriginalPositionXZ: 0
       heightFromFeet: 0
-      mirror: 1
+      mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0.05564924
-        functionName: CanRoot
+      - time: 0.07933194
+        functionName: ShieldUnBlock
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.91905564
-        functionName: StopRoot
-        data: 
-        objectReferenceParameter: {instanceID: 0}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
-      - time: 0.577551
-        functionName: Use100Stamina
+      - time: 0.07933194
+        functionName: CanWalk
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0

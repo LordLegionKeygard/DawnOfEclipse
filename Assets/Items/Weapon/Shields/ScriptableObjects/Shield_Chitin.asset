@@ -13,16 +13,19 @@ MonoBehaviour:
   m_Name: Shield_Chitin
   m_EditorClassIdentifier: 
   CurrentItem: {fileID: 0}
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 85d023c73ec2cb0488085da5e30cfc6d, type: 3}
   maxStack: 0
   amount: 0
   isDefaultItem: 0
   isUsedItem: 0
   equipSlot: 21
-  armorModifier: 0
+  armorModifier: 20
   mesh: {fileID: 0}
   prefab: {fileID: 6546356693241542353, guid: fd1d404fc79e64c41acca9ef62aa1cd3, type: 3}
   hatNumber: 0
   noHair: 0
   canChangehead: 0
   weapon: 0
+  twoHandedWeapon: 0
+  shield: 1
+  shieldBlockArmorModifier: 100

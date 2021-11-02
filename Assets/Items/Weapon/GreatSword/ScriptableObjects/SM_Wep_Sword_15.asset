@@ -26,3 +26,6 @@ MonoBehaviour:
   noHair: 0
   canChangehead: 0
   weapon: 1
+  twoHandedWeapon: 1
+  shield: 0
+  shieldBlockArmorModifier: 20

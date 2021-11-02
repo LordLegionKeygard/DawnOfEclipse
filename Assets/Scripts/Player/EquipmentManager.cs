@@ -100,6 +100,14 @@ public class EquipmentManager : MonoBehaviour
         {
             Equipment oldWeapon = Unequip(19);
             Equipment oldWeapon1 = Unequip(20);
+            if (newItem.twoHandedWeapon == true)
+            {
+                Equipment oldShield = Unequip(21);
+            }
+        }
+        if(newItem.shield == true)
+        {
+           Equipment oldWeapon = Unequip(19); 
         }
         int slotIndex = (int)newItem.equipSlot;
         Equipment oldItem = Unequip(slotIndex);
@@ -344,6 +352,7 @@ public class EquipmentManager : MonoBehaviour
                 newGameObhectPrefab.transform.position = greatSwordPoint.transform.position;
                 newGameObhectPrefab.transform.rotation = greatSwordPoint.transform.rotation;
                 currentGameObject[slotIndex] = newGameObhectPrefab;
+                armorControl.shieldBlockArmorDefault = item.shieldBlockArmorModifier;
                 break;
             case EquipmentSlot.WeaponRightHand:
                 weaponTimeCooldown.LongSword();
@@ -361,6 +370,8 @@ public class EquipmentManager : MonoBehaviour
                 shieldGameObjectPrefab.transform.position = shieldPoint.transform.position;
                 shieldGameObjectPrefab.transform.rotation = shieldPoint.transform.rotation;
                 currentGameObject[slotIndex] = shieldGameObjectPrefab;
+                armorControl.shieldArmorPassive = item.armorModifier;
+                armorControl.shieldBlockArmorDefault = item.shieldBlockArmorModifier;
                 break;
         }
         armorControl.UpdateArmor();

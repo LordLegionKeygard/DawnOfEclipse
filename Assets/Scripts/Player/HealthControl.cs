@@ -7,15 +7,18 @@ public class HealthControl : CharacterStats
 {
     [SerializeField] private Slider healthBar;
     [SerializeField] private Image healthBarImage;
+    [SerializeField] private GameObject combatCollider;
     private Animator animator;
     private EnemyManager[] enemyManagers;
     private PlayerController playerController;
     private PlayerAnimatorManager playerAnimatorManager;
     private ArmorControl armorControl;
     private StaminaControl staminaControl;
+    private CharacterController characterController;
 
     private void Awake()
     {
+        characterController = GetComponent<CharacterController>();
         playerAnimatorManager = GetComponent<PlayerAnimatorManager>();
         staminaControl = GetComponent<StaminaControl>();
         animator = GetComponent<Animator>();
@@ -39,25 +42,23 @@ public class HealthControl : CharacterStats
 
     public void TakeDamage(float damage)
     {
-        if (playerController.block == false)
+
+        var enemyDamage = (1 - (armorControl.currentArmor / damage)) * damage;
+        Debug.Log(enemyDamage);
+        if (enemyDamage >= 0)
         {
-            var enemyDamage = (1 - (armorControl.currentArmor / damage)) * damage;
-            Debug.Log(enemyDamage);
-            if (enemyDamage >= 0)
-            {
-                currentHealth = currentHealth - (int)enemyDamage;
-            }
-            else
-            {
-                currentHealth = currentHealth - (int)(damage * 0.05f);
-            }
-
-            UpdateHealthColorBar();
-
-            RandomTakeDamage();
+            currentHealth = currentHealth - (int)enemyDamage;
+        }
+        else
+        {
+            currentHealth = currentHealth - (int)(damage * 0.05f);
         }
 
-        if(playerController.block == true)
+        UpdateHealthColorBar();
+
+        if(playerController.block == false) RandomTakeDamage();
+
+        if (playerController.block == true)
         {
             staminaControl.UseStamina((int)damage * 10);
             playerAnimatorManager.BlockReact();
@@ -83,7 +84,6 @@ public class HealthControl : CharacterStats
         {
             healthBar.value += Time.deltaTime * 50;
         }
-
     }
 
     public void UpdateHealthColorBar()
@@ -125,7 +125,8 @@ public class HealthControl : CharacterStats
         {
             animator.SetTrigger("death1");
         }
-
+        characterController.enabled = false;
+        combatCollider.SetActive(false);
         enemyManagers = FindObjectsOfType<EnemyManager>();
         foreach (var spawn in enemyManagers)
         {

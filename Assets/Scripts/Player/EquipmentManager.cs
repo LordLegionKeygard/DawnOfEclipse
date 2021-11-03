@@ -165,7 +165,7 @@ public class EquipmentManager : MonoBehaviour
             hair.SetActive(true);
             Unequip(i);
         }
-
+        armorControl.ResetArmor();
         EquipDefaults();
     }
 

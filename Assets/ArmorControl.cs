@@ -32,7 +32,18 @@ public class ArmorControl : MonoBehaviour
 
     public void ResetArmor()
     {
-
+        backAttachmentArmor = 0;
+        shoulderLeftArmor = 0;
+        shoulderRightArmor = 0;
+        headSlotArmor = 0;
+        elbowRightArmor = 0;
+        elbowLeftArmor = 0;
+        kneeRightArmor = 0;
+        kneeLeftArmor = 0;
+        shieldArmorPassive = 0;
+        shieldBlockArmor = 0;
+        shieldBlockArmorDefault = 0;
+        UpdateArmor();
     }
 
     public void ShieldBlock()

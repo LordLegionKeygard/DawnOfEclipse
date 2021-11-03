@@ -80,6 +80,10 @@ public class PlayerController : CharacterManager
     {
         if (healthControl.currentHealth >= 1)
         {
+            if (Input.GetKeyDown(KeyCode.JoystickButton4) && staminaControl.CurrentStamina > 50) //L1 block true
+            {
+                playerAnimatorManager.BlockL1();
+            }
             if (roll == false)
             {
                 inputStrafe.x = Input.GetAxis("Horizontal");
@@ -106,8 +110,6 @@ public class PlayerController : CharacterManager
             if (isGround) { playerAnimatorManager.OnGround(); }
             if (walk) Walk();
         }
-
-
     }
 
     private void CanDrink() { canDrink = true; }
@@ -150,11 +152,6 @@ public class PlayerController : CharacterManager
         {
             playerAnimatorManager.AttackR1FastRun();
             StartCoroutine(ExecuteAfterTime(timeR1, playerAnimatorManager.DisableAttackR1));
-        }
-
-        if (Input.GetKeyDown(KeyCode.JoystickButton4) && staminaControl.CurrentStamina > 50) //L1 block true
-        {
-            playerAnimatorManager.BlockL1();
         }
 
         else if ((Input.GetKey(KeyCode.JoystickButton2) || Input.GetKey(KeyCode.LeftShift)) && staminaControl.CurrentStamina > 50 && canNewMove && potionsControl.speedPotion == false) // circle

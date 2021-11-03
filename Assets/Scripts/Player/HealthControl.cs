@@ -49,25 +49,21 @@ public class HealthControl : CharacterStats
         {
             currentHealth = currentHealth - (int)enemyDamage;
         }
-        else
+        else if (playerController.block == false && enemyDamage < 0)
         {
             currentHealth = currentHealth - (int)(damage * 0.05f);
+            RandomTakeDamage();
         }
-
-        UpdateHealthColorBar();
-
-        if(playerController.block == false) RandomTakeDamage();
-
-        if (playerController.block == true)
+        else if (playerController.block == true)
         {
             staminaControl.UseStamina((int)damage * 10);
             playerAnimatorManager.BlockReact();
         }
-
-        if (currentHealth <= 0)
+        else if (currentHealth <= 0)
         {
             RandomDeath();
         }
+        UpdateHealthColorBar();
     }
 
     private void Update()

@@ -6,6 +6,7 @@ public class PlayerAnimatorManager : MonoBehaviour
 {
     private Animator anim;
     [SerializeField] private GameObject[] potions;
+    [SerializeField] private GameObject leftHand;
     public float velocityMove;
     private PlayerController playerController;
     private static readonly int Speed = Animator.StringToHash("speed");
@@ -116,6 +117,7 @@ public class PlayerAnimatorManager : MonoBehaviour
 
     public void Drinking(int item)
     {
+        leftHand.SetActive(false);
         switch (item)
         {
             case (0):
@@ -142,6 +144,7 @@ public class PlayerAnimatorManager : MonoBehaviour
             foreach (var allPot in potions)
             {
                 allPot.SetActive(false);
+                leftHand.SetActive(true);
             }
         }
     }

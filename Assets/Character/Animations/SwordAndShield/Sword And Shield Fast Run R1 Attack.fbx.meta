@@ -39,9 +39,9 @@ ModelImporter:
       takeName: mixamo.com
       internalID: 0
       firstFrame: 0
-      lastFrame: 39
+      lastFrame: 32.2
       wrapMode: 0
-      orientationOffsetY: 0
+      orientationOffsetY: -14.4
       level: 0
       cycleOffset: 0
       loop: 0
@@ -66,7 +66,7 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.07789855
+      - time: 0.16948733
         functionName: StopWalk
         data: 
         objectReferenceParameter: {instanceID: 0}

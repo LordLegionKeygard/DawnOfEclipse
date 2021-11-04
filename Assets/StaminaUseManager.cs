@@ -18,4 +18,8 @@ public class StaminaUseManager : MonoBehaviour
     {
         staminaControl.UseStamina(100);
     }
+    public void Use150Stamina()
+    {
+        staminaControl.UseStamina(150);
+    }
 }

@@ -74,7 +74,7 @@ ModelImporter:
         intParameter: 0
         messageOptions: 0
       - time: 0.47346938
-        functionName: Use100Stamina
+        functionName: Use150Stamina
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0

@@ -41,6 +41,10 @@ public class PlayerController : CharacterManager
     public float timeR2 = 1f;
     public float timeL1 = 1.6f;
 
+    [Header("Stamina")]
+    public float staminaForR1 = 100f;
+    public float staminaForR2 = 100f;
+
     private CameraLockOnTarget cameraLockOnTarget;
 
     private PlayerInput input;
@@ -136,19 +140,19 @@ public class PlayerController : CharacterManager
             }
         }
 
-        if (Input.GetKey(KeyCode.JoystickButton7) && staminaControl.CurrentStamina > 300 && canNewMoveR1) // R2
+        if (Input.GetKey(KeyCode.JoystickButton7) && staminaControl.CurrentStamina > staminaForR2 && canNewMoveR1) // R2
         {
             playerAnimatorManager.AttackR2();
             StartCoroutine(ExecuteAfterTime(timeR2, playerAnimatorManager.DisableAttackR2));
         }
 
-        if (Input.GetKey(KeyCode.JoystickButton5) && staminaControl.CurrentStamina > 100 && canNewMoveR1 && fastRun == false) // R1
+        if (Input.GetKey(KeyCode.JoystickButton5) && staminaControl.CurrentStamina > staminaForR1 && canNewMoveR1 && fastRun == false) // R1
         {
             playerAnimatorManager.AttackR1();
             StartCoroutine(ExecuteAfterTime(timeR1, playerAnimatorManager.DisableAttackR1));
         }
 
-        if (Input.GetKey(KeyCode.JoystickButton5) && staminaControl.CurrentStamina > 150 && canNewMoveR1 && fastRun == true) // R1
+        if (Input.GetKey(KeyCode.JoystickButton5) && staminaControl.CurrentStamina > staminaForR1 && canNewMoveR1 && fastRun == true) // R1
         {
             playerAnimatorManager.AttackR1FastRun();
             StartCoroutine(ExecuteAfterTime(timeR1, playerAnimatorManager.DisableAttackR1));

@@ -12,6 +12,8 @@ public class WeaponTimeCooldown : MonoBehaviour
         playerController.timeR2 = 2f;
         playerController.timeL1 = 1.6f;
         playerController.timeR1FastRun = 1f;
+        playerController.staminaForR1 = 100f;
+        playerController.staminaForR2 = 100f;
     }
     public void GreatSword()
     {
@@ -19,6 +21,8 @@ public class WeaponTimeCooldown : MonoBehaviour
         playerController.timeR2 = 3.5f;
         playerController.timeL1 = 0.7f;
         playerController.timeR1FastRun = 1.5f;
+        playerController.staminaForR1 = 150f;
+        playerController.staminaForR2 = 300f;
     }
     public void LongSword()
     {
@@ -26,5 +30,7 @@ public class WeaponTimeCooldown : MonoBehaviour
         playerController.timeR2 = 1.5f;
         playerController.timeL1 = 0.7f;
         playerController.timeR1FastRun = 1.5f;
+        playerController.staminaForR1 = 100f;
+        playerController.staminaForR2 = 100f;
     }
 }

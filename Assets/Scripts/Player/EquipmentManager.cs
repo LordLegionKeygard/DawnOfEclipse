@@ -2,20 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-/* Keep track of equipment. Has functions for adding and removing items. */
-
 public class EquipmentManager : MonoBehaviour
 {
 
     #region Singleton
 
     public static EquipmentManager instance;
-
+    [SerializeField] private EquipSlot[] equipSlot;
     [SerializeField] private Animator anim;
     [SerializeField] private GameObject hair;
     [SerializeField] private GameObject ears;
     [SerializeField] private GameObject head;
-    [SerializeField] private Equipment[] defaultEquipment;
+    public Equipment[] defaultEquipment;
     [SerializeField] private ArmorControl armorControl;
     [SerializeField] private SkinnedMeshRenderer targetMeshTorso;
     [SerializeField] private SkinnedMeshRenderer targetMeshRightHand;
@@ -63,8 +61,7 @@ public class EquipmentManager : MonoBehaviour
 
     void Start()
     {
-        inventory = Inventory.instance; // Get a reference to our inventory
-        // Initialize currentEquipment based on number of equipment slots
+        inventory = Inventory.instance;
         int numSlots = System.Enum.GetNames(typeof(EquipmentSlot)).Length;
         currentEquipment = new Equipment[numSlots];
         currentMeshes = new SkinnedMeshRenderer[numSlots];
@@ -105,9 +102,9 @@ public class EquipmentManager : MonoBehaviour
                 Equipment oldShield = Unequip(21);
             }
         }
-        if(newItem.shield == true)
+        if (newItem.shield == true)
         {
-           Equipment oldWeapon = Unequip(19); 
+            Equipment oldWeapon = Unequip(19);
         }
         int slotIndex = (int)newItem.equipSlot;
         Equipment oldItem = Unequip(slotIndex);
@@ -120,19 +117,22 @@ public class EquipmentManager : MonoBehaviour
         currentEquipment[slotIndex] = newItem;
         AttachToMesh(newItem, slotIndex);
     }
-
-    // Unequip an item with a particular index
     public Equipment Unequip(int slotIndex)
     {
         Equipment oldItem = null;
-        // Only do this if an item is there
+
         if (currentEquipment[slotIndex] != null)
         {
             // Add the item to the inventory
             oldItem = currentEquipment[slotIndex];
             inventory.Add(oldItem);
+            if (slotIndex == 0)
+            {
+                head.SetActive(true);
+                ears.SetActive(true);
+                hair.SetActive(true);
+            }
 
-            // Destroy the mesh
             if (currentMeshes[slotIndex] != null)
             {
                 Destroy(currentMeshes[slotIndex].gameObject);
@@ -142,10 +142,8 @@ public class EquipmentManager : MonoBehaviour
                 Destroy(currentGameObject[slotIndex].gameObject);
             }
 
-            // Remove the item from the equipment array
             currentEquipment[slotIndex] = null;
 
-            // Equipment has been removed so we trigger the callback
             if (onEquipmentChanged != null)
             {
                 onEquipmentChanged.Invoke(null, oldItem);
@@ -155,7 +153,6 @@ public class EquipmentManager : MonoBehaviour
         return null;
     }
 
-    // Unequip all items
     public void UnequipAll()
     {
         for (int i = 0; i < currentEquipment.Length; i++)
@@ -169,7 +166,7 @@ public class EquipmentManager : MonoBehaviour
         EquipDefaults();
     }
 
-    void AttachToMesh(Equipment item, int slotIndex)
+    private void AttachToMesh(Equipment item, int slotIndex)
     {
         switch (item.equipSlot)
         {
@@ -180,6 +177,11 @@ public class EquipmentManager : MonoBehaviour
                 newMeshTorso.bones = targetMeshTorso.bones;
                 currentMeshes[slotIndex] = newMeshTorso;
                 armorControl.torsoArmor = item.armorModifier;
+                if (item.icon != null)
+                {
+                    equipSlot[1].icon.sprite = item.icon;
+                    equipSlot[1].Equip();
+                }
                 break;
             case EquipmentSlot.HandRight:
                 SkinnedMeshRenderer newMeshHandRight = Instantiate(item.mesh);
@@ -268,6 +270,8 @@ public class EquipmentManager : MonoBehaviour
                 newMeshShoulderLeft.bones = targetMeshShoulderLeft.bones;
                 currentMeshes[slotIndex] = newMeshShoulderLeft;
                 armorControl.shoulderLeftArmor = item.armorModifier;
+                equipSlot[13].icon.sprite = item.icon;
+                equipSlot[13].Equip();
                 break;
             case EquipmentSlot.ShoulderRight:
                 SkinnedMeshRenderer newMeshShoulderRight = Instantiate(item.mesh);
@@ -276,6 +280,8 @@ public class EquipmentManager : MonoBehaviour
                 newMeshShoulderRight.bones = targetMeshShoulderRight.bones;
                 currentMeshes[slotIndex] = newMeshShoulderRight;
                 armorControl.shoulderRightArmor = item.armorModifier;
+                equipSlot[12].icon.sprite = item.icon;
+                equipSlot[12].Equip();
                 break;
             case EquipmentSlot.HeadSlot:
 
@@ -303,6 +309,8 @@ public class EquipmentManager : MonoBehaviour
                     newMeshHeadNoElememts.bones = targetMeshHeadNoElements.bones;
                     currentMeshes[slotIndex] = newMeshHeadNoElememts;
                 }
+                equipSlot[0].icon.sprite = item.icon;
+                equipSlot[0].Equip();
                 armorControl.headSlotArmor = item.armorModifier;
                 break;
             case EquipmentSlot.ElbowRight:
@@ -377,7 +385,7 @@ public class EquipmentManager : MonoBehaviour
         armorControl.UpdateArmor();
     }
 
-    void EquipDefaults()
+    private void EquipDefaults()
     {
         foreach (Equipment e in defaultEquipment)
         {
@@ -387,7 +395,7 @@ public class EquipmentManager : MonoBehaviour
         }
     }
 
-    void Update()
+    private void Update()
     {
         if (Input.GetKeyDown(KeyCode.U))
             UnequipAll();

@@ -190,6 +190,11 @@ public class EquipmentManager : MonoBehaviour
                 newMeshHandRight.bones = targetMeshRightHand.bones;
                 currentMeshes[slotIndex] = newMeshHandRight;
                 armorControl.handRightArmor = item.armorModifier;
+                if (item.icon != null)
+                {
+                    equipSlot[5].icon.sprite = item.icon;
+                    equipSlot[5].Equip();
+                }
                 break;
             case EquipmentSlot.HandLeft:
                 SkinnedMeshRenderer newMeshHandLeft = Instantiate(item.mesh);
@@ -198,6 +203,11 @@ public class EquipmentManager : MonoBehaviour
                 newMeshHandLeft.bones = targetMeshLeftHand.bones;
                 currentMeshes[slotIndex] = newMeshHandLeft;
                 armorControl.handLeftArmor = item.armorModifier;
+                if (item.icon != null)
+                {
+                    equipSlot[6].icon.sprite = item.icon;
+                    equipSlot[6].Equip();
+                }
                 break;
             case EquipmentSlot.ArmUpperRight:
                 SkinnedMeshRenderer newMeshArmUpperRight = Instantiate(item.mesh);
@@ -206,6 +216,11 @@ public class EquipmentManager : MonoBehaviour
                 newMeshArmUpperRight.bones = targetMeshArmUpperRight.bones;
                 currentMeshes[slotIndex] = newMeshArmUpperRight;
                 armorControl.armUpperRightArmor = item.armorModifier;
+                if (item.icon != null)
+                {
+                    equipSlot[7].icon.sprite = item.icon;
+                    equipSlot[7].Equip();
+                }
                 break;
             case EquipmentSlot.ArmUpperLeft:
                 SkinnedMeshRenderer newMeshArmUpperLeft = Instantiate(item.mesh);
@@ -214,6 +229,11 @@ public class EquipmentManager : MonoBehaviour
                 newMeshArmUpperLeft.bones = targetMeshArmUpperLeft.bones;
                 currentMeshes[slotIndex] = newMeshArmUpperLeft;
                 armorControl.armUpperLeftArmor = item.armorModifier;
+                if (item.icon != null)
+                {
+                    equipSlot[8].icon.sprite = item.icon;
+                    equipSlot[8].Equip();
+                }
                 break;
             case EquipmentSlot.ArmLowerRight:
                 SkinnedMeshRenderer newMeshArmLowerRight = Instantiate(item.mesh);
@@ -222,6 +242,11 @@ public class EquipmentManager : MonoBehaviour
                 newMeshArmLowerRight.bones = targetMeshArmLowerRight.bones;
                 currentMeshes[slotIndex] = newMeshArmLowerRight;
                 armorControl.armLowerRightArmor = item.armorModifier;
+                if (item.icon != null)
+                {
+                    equipSlot[9].icon.sprite = item.icon;
+                    equipSlot[9].Equip();
+                }
                 break;
             case EquipmentSlot.ArmLowerLeft:
                 SkinnedMeshRenderer newMeshArmLowerLeft = Instantiate(item.mesh);
@@ -230,6 +255,11 @@ public class EquipmentManager : MonoBehaviour
                 newMeshArmLowerLeft.bones = targetMeshArmLowerLeft.bones;
                 currentMeshes[slotIndex] = newMeshArmLowerLeft;
                 armorControl.armLowerLeftArmor = item.armorModifier;
+                if (item.icon != null)
+                {
+                    equipSlot[10].icon.sprite = item.icon;
+                    equipSlot[10].Equip();
+                }
                 break;
             case EquipmentSlot.Hips:
                 SkinnedMeshRenderer newMeshHips = Instantiate(item.mesh);
@@ -238,6 +268,11 @@ public class EquipmentManager : MonoBehaviour
                 newMeshHips.bones = targetMeshHips.bones;
                 currentMeshes[slotIndex] = newMeshHips;
                 armorControl.hipsArmor = item.armorModifier;
+                if (item.icon != null)
+                {
+                    equipSlot[2].icon.sprite = item.icon;
+                    equipSlot[2].Equip();
+                }
                 break;
             case EquipmentSlot.LegLeft:
                 SkinnedMeshRenderer newMeshLegLeft = Instantiate(item.mesh);
@@ -246,6 +281,11 @@ public class EquipmentManager : MonoBehaviour
                 newMeshLegLeft.bones = targetMeshLegLeft.bones;
                 currentMeshes[slotIndex] = newMeshLegLeft;
                 armorControl.legLeftArmor = item.armorModifier;
+                if (item.icon != null)
+                {
+                    equipSlot[4].icon.sprite = item.icon;
+                    equipSlot[4].Equip();
+                }
                 break;
             case EquipmentSlot.LegRight:
                 SkinnedMeshRenderer newMeshLegRight = Instantiate(item.mesh);
@@ -254,6 +294,11 @@ public class EquipmentManager : MonoBehaviour
                 newMeshLegRight.bones = targetMeshLegRight.bones;
                 currentMeshes[slotIndex] = newMeshLegRight;
                 armorControl.legRightArmor = item.armorModifier;
+                if (item.icon != null)
+                {
+                    equipSlot[3].icon.sprite = item.icon;
+                    equipSlot[3].Equip();
+                }
                 break;
             case EquipmentSlot.BackAttachment:
                 SkinnedMeshRenderer newMeshBackAttachment = Instantiate(item.mesh);
@@ -320,6 +365,8 @@ public class EquipmentManager : MonoBehaviour
                 newMeshElbowRight.bones = targetMeshElbowRight.bones;
                 currentMeshes[slotIndex] = newMeshElbowRight;
                 armorControl.elbowRightArmor = item.armorModifier;
+                equipSlot[14].icon.sprite = item.icon;
+                equipSlot[14].Equip();
                 break;
             case EquipmentSlot.ElbowLeft:
                 SkinnedMeshRenderer newMeshElbowLeft = Instantiate(item.mesh);
@@ -328,6 +375,8 @@ public class EquipmentManager : MonoBehaviour
                 newMeshElbowLeft.bones = targetMeshElbowLeft.bones;
                 currentMeshes[slotIndex] = newMeshElbowLeft;
                 armorControl.elbowLeftArmor = item.armorModifier;
+                equipSlot[15].icon.sprite = item.icon;
+                equipSlot[15].Equip();
                 break;
             case EquipmentSlot.HipsAttachment:
                 SkinnedMeshRenderer newMeshHipsAttachment = Instantiate(item.mesh);
@@ -343,6 +392,8 @@ public class EquipmentManager : MonoBehaviour
                 newMeshKneeRight.bones = targetMeshKneeAttachmentRight.bones;
                 currentMeshes[slotIndex] = newMeshKneeRight;
                 armorControl.kneeRightArmor = item.armorModifier;
+                equipSlot[17].icon.sprite = item.icon;
+                equipSlot[17].Equip();
                 break;
             case EquipmentSlot.KneeLeft:
                 SkinnedMeshRenderer newMeshKneeLeft = Instantiate(item.mesh);
@@ -351,6 +402,8 @@ public class EquipmentManager : MonoBehaviour
                 newMeshKneeLeft.bones = targetMeshKneeAttachmentLeft.bones;
                 currentMeshes[slotIndex] = newMeshKneeLeft;
                 armorControl.kneeLeftArmor = item.armorModifier;
+                equipSlot[18].icon.sprite = item.icon;
+                equipSlot[18].Equip();
                 break;
             case EquipmentSlot.WeaponTwoHand:
                 weaponTimeCooldown.GreatSword();

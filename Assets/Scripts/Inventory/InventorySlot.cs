@@ -68,6 +68,7 @@ public class InventorySlot : MonoBehaviour
             if (item.isUsedItem && canDrinkAnyPotions)
             {
                 item.amount--;
+                if(item.amount == 0) amount.enabled = false;
                 amount.text = item.amount.ToString();
                 CantDrinkAnyPotions();
                 switch (item.name)

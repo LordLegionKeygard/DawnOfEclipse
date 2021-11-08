@@ -32,13 +32,52 @@ public class EquipSlot : MonoBehaviour
                 armorControl.headSlotArmor = 0;
                 break;
             case 1:
+                equipmentManager.Equip(equipmentManager.defaultEquipment[1]);
+                break;
+            case 2:
+                equipmentManager.Equip(equipmentManager.defaultEquipment[2]);
+                break;
+            case 3:
+                equipmentManager.Equip(equipmentManager.defaultEquipment[6]);
+                break;
+            case 4:
+                equipmentManager.Equip(equipmentManager.defaultEquipment[9]);
+                break;
+            case 5:
                 equipmentManager.Equip(equipmentManager.defaultEquipment[0]);
+                break;
+            case 6:
+                equipmentManager.Equip(equipmentManager.defaultEquipment[3]);
+                break;
+            case 7:
+                equipmentManager.Equip(equipmentManager.defaultEquipment[7]);
+                break;
+            case 8:
+                equipmentManager.Equip(equipmentManager.defaultEquipment[8]);
+                break;
+            case 9:
+                equipmentManager.Equip(equipmentManager.defaultEquipment[4]);
+                break;
+            case 10:
+                equipmentManager.Equip(equipmentManager.defaultEquipment[5]);
                 break;
             case 12:
                 armorControl.shoulderRightArmor = 0;
                 break;
             case 13:
                 armorControl.shoulderLeftArmor = 0;
+                break;
+            case 14:
+                armorControl.elbowRightArmor = 0;
+                break;
+            case 15:
+                armorControl.elbowLeftArmor = 0;
+                break;
+            case 17:
+                armorControl.kneeRightArmor = 0;
+                break;
+            case 18:
+                armorControl.kneeLeftArmor = 0;
                 break;
         }
         armorControl.UpdateArmor();

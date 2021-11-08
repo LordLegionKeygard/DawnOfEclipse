@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
+  m_Name: Chr_KneeAttachLeft_04
+  m_EditorClassIdentifier: 
+  CurrentItem: {fileID: 0}
+  icon: {fileID: 21300000, guid: d45e7eada978ec945a681b2a2d2367a6, type: 3}
+  maxStack: 1
+  amount: 0
+  isDefaultItem: 0
+  isUsedItem: 0
+  equipSlot: 18
+  armorModifier: 10
+  mesh: {fileID: 7677800466871956190, guid: 30386e6acf635784fb19e1d116a760d2, type: 3}
+  prefab: {fileID: 0}
+  hatNumber: 0
+  noHair: 0
+  canChangehead: 0

@@ -14,6 +14,7 @@ public class EquipmentManager : MonoBehaviour
     [SerializeField] private GameObject hair;
     [SerializeField] private GameObject ears;
     [SerializeField] private GameObject head;
+    [SerializeField] private Image shieldEquipSlotImage;
     public Equipment[] defaultEquipment;
     [SerializeField] private ArmorControl armorControl;
     [SerializeField] private SkinnedMeshRenderer targetMeshTorso;
@@ -430,6 +431,7 @@ public class EquipmentManager : MonoBehaviour
                 equipSlot[19].icon.sprite = item.icon;
                 equipSlot[21].icon.sprite = item.icon;
                 equipSlot[21].icon.gameObject.GetComponentInParent<Button>().enabled = false;
+                shieldEquipSlotImage.color = new Color(shieldEquipSlotImage.color.r, shieldEquipSlotImage.color.g, shieldEquipSlotImage.color.b, 0.5f);
                 equipSlot[19].Equip();
                 equipSlot[21].Equip();
                 twoHandWeaponNow = true;
@@ -462,8 +464,10 @@ public class EquipmentManager : MonoBehaviour
                 armorControl.shieldBlockArmorDefault = item.shieldBlockArmorModifier;
                 equipSlot[21].icon.sprite = item.icon;
                 equipSlot[21].icon.gameObject.GetComponentInParent<Button>().enabled = true;
+                shieldEquipSlotImage.color = new Color(shieldEquipSlotImage.color.r, shieldEquipSlotImage.color.g, shieldEquipSlotImage.color.b, 1f);
                 if (twoHandWeaponNow == true)
                 {
+                    ResetAnimator();
                     equipSlot[19].backIcon.enabled = true;
                     equipSlot[19].icon.enabled = false;
                 }

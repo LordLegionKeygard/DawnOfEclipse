@@ -1205,7 +1205,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: StandingMeleeComboAttack(R1(2))
+  m_Name: R1Combo
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -1221,7 +1221,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -203655887218126122, guid: 2c7be81f80369c347a5b0f20e052f55b, type: 3}
+  m_Motion: {fileID: -203655887218126122, guid: 44fc373b0c83a6341bb7ff8920c48850, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -1477,7 +1477,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -203655887218126122, guid: 491f854e2b0a4534693d6e5a4045c766, type: 3}
+  m_Motion: {fileID: -203655887218126122, guid: 4dabb4048185dbd4d87fcdfe008f3d45, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -1819,16 +1819,16 @@ AnimatorStateMachine:
     m_Position: {x: 130, y: -220, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 4268309126322382200}
-    m_Position: {x: -290, y: -450, z: 0}
+    m_Position: {x: -330, y: -330, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 2435783728133926178}
-    m_Position: {x: 290, y: -690, z: 0}
+    m_Position: {x: 390, y: -540, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 2881675327660964719}
-    m_Position: {x: -250, y: -560, z: 0}
+    m_Position: {x: 1500, y: -90, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -1668940166986824523}
-    m_Position: {x: 960, y: -190, z: 0}
+    m_Position: {x: 1500, y: -200, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -7718594632313571262}
     m_Position: {x: 790, y: -350, z: 0}
@@ -1837,13 +1837,13 @@ AnimatorStateMachine:
     m_Position: {x: 680, y: -520, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 8904499870166447867}
-    m_Position: {x: -60, y: -650, z: 0}
+    m_Position: {x: 50, y: -590, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -2339186514037298062}
     m_Position: {x: 30.862854, y: 206.89508, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 116821038769450674}
-    m_Position: {x: 180, y: -830, z: 0}
+    m_Position: {x: 260, y: -680, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -1955,7 +1955,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -203655887218126122, guid: 140b4acc0a059d04b8e605b52906b4bf, type: 3}
+  m_Motion: {fileID: -203655887218126122, guid: 6a9920c45355f8f4b8e4e6e4bf0edfb1, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -2022,7 +2022,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: StandingMeleeComboAttack
+  m_Name: R1
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -2038,7 +2038,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -203655887218126122, guid: ee3ef3a60e8770d4dae78d7fee1fa5f1, type: 3}
+  m_Motion: {fileID: -203655887218126122, guid: 7612b33e09223dd4b992322598f2e51d, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -2228,7 +2228,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MmaKick(R2)
+  m_Name: R2
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -2244,7 +2244,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -203655887218126122, guid: d12e0a84baa4449409653c173833d0ae, type: 3}
+  m_Motion: {fileID: -203655887218126122, guid: 909745c5180271d4e858199102685e1b, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -2453,7 +2453,7 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
+  m_TransitionDuration: 0.2
   m_TransitionOffset: 0
   m_ExitTime: 0.60526323
   m_HasExitTime: 0

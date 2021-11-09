@@ -9,7 +9,7 @@ public class WeaponTimeCooldown : MonoBehaviour
     public void NoWeapon()
     {
         playerController.timeR1 = 1f;
-        playerController.timeR2 = 2f;
+        playerController.timeR2 = 1f;
         playerController.timeL1 = 1.6f;
         playerController.timeR1FastRun = 1f;
         playerController.staminaForR1 = 100f;

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EquipmentManager : MonoBehaviour
 {
@@ -44,7 +45,9 @@ public class EquipmentManager : MonoBehaviour
     private SkinnedMeshRenderer[] currentMeshes;
     private GameObject[] currentGameObject;
     private WeaponTimeCooldown weaponTimeCooldown;
-    void Awake()
+    public Button shieldButton;
+    public bool twoHandWeaponNow;
+    private void Awake()
     {
         instance = this;
         weaponTimeCooldown = GetComponent<WeaponTimeCooldown>();
@@ -55,12 +58,11 @@ public class EquipmentManager : MonoBehaviour
     Equipment[] currentEquipment;
     public delegate void OnEquipmentChanged(Equipment newItem, Equipment oldItem);
     public OnEquipmentChanged onEquipmentChanged;
-
-
     Inventory inventory;
 
     void Start()
     {
+        shieldButton = equipSlot[21].icon.gameObject.GetComponentInParent<Button>();
         inventory = Inventory.instance;
         int numSlots = System.Enum.GetNames(typeof(EquipmentSlot)).Length;
         currentEquipment = new Equipment[numSlots];
@@ -99,6 +101,7 @@ public class EquipmentManager : MonoBehaviour
             Equipment oldWeapon1 = Unequip(20);
             if (newItem.twoHandedWeapon == true)
             {
+                twoHandWeaponNow = true;
                 Equipment oldShield = Unequip(21);
             }
         }
@@ -116,6 +119,13 @@ public class EquipmentManager : MonoBehaviour
 
         currentEquipment[slotIndex] = newItem;
         AttachToMesh(newItem, slotIndex);
+    }
+
+    public void UnequipTwoHandedWeaponFromShield()
+    {
+        shieldButton.enabled = true;
+        equipSlot[21].backIcon.enabled = true;
+        equipSlot[21].icon.enabled = false;
     }
     public Equipment Unequip(int slotIndex)
     {
@@ -307,6 +317,8 @@ public class EquipmentManager : MonoBehaviour
                 newMeshBackAttachment.bones = targetMeshBackAttachmnet.bones;
                 currentMeshes[slotIndex] = newMeshBackAttachment;
                 armorControl.backAttachmentArmor = item.armorModifier;
+                equipSlot[11].icon.sprite = item.icon;
+                equipSlot[11].Equip();
                 break;
             case EquipmentSlot.ShoulderLeft:
                 SkinnedMeshRenderer newMeshShoulderLeft = Instantiate(item.mesh);
@@ -414,6 +426,13 @@ public class EquipmentManager : MonoBehaviour
                 newGameObhectPrefab.transform.rotation = greatSwordPoint.transform.rotation;
                 currentGameObject[slotIndex] = newGameObhectPrefab;
                 armorControl.shieldBlockArmorDefault = item.shieldBlockArmorModifier;
+                armorControl.shieldArmorPassive = 0;
+                equipSlot[19].icon.sprite = item.icon;
+                equipSlot[21].icon.sprite = item.icon;
+                equipSlot[21].icon.gameObject.GetComponentInParent<Button>().enabled = false;
+                equipSlot[19].Equip();
+                equipSlot[21].Equip();
+                twoHandWeaponNow = true;
                 break;
             case EquipmentSlot.WeaponRightHand:
                 weaponTimeCooldown.LongSword();
@@ -423,9 +442,17 @@ public class EquipmentManager : MonoBehaviour
                 newGameObjectPrefab.transform.position = longSwordPoint.transform.position;
                 newGameObjectPrefab.transform.rotation = longSwordPoint.transform.rotation;
                 currentGameObject[slotIndex] = newGameObjectPrefab;
+                equipSlot[19].icon.sprite = item.icon;
+                equipSlot[21].icon.gameObject.GetComponentInParent<Button>().enabled = true;
+                if (twoHandWeaponNow == true)
+                {
+                    equipSlot[21].backIcon.enabled = true;
+                    equipSlot[21].icon.enabled = false;
+                }
+                twoHandWeaponNow = false;
+                equipSlot[20].Equip();
                 break;
             case EquipmentSlot.Shield:
-                anim.runtimeAnimatorController = Resources.Load("Animation/SwordAndShieldController") as RuntimeAnimatorController;
                 GameObject shieldGameObjectPrefab = Instantiate(item.prefab);
                 shieldGameObjectPrefab.transform.parent = _targetMeshFilterShield.transform.parent;
                 shieldGameObjectPrefab.transform.position = shieldPoint.transform.position;
@@ -433,9 +460,24 @@ public class EquipmentManager : MonoBehaviour
                 currentGameObject[slotIndex] = shieldGameObjectPrefab;
                 armorControl.shieldArmorPassive = item.armorModifier;
                 armorControl.shieldBlockArmorDefault = item.shieldBlockArmorModifier;
+                equipSlot[21].icon.sprite = item.icon;
+                equipSlot[21].icon.gameObject.GetComponentInParent<Button>().enabled = true;
+                if (twoHandWeaponNow == true)
+                {
+                    equipSlot[19].backIcon.enabled = true;
+                    equipSlot[19].icon.enabled = false;
+                }
+                twoHandWeaponNow = false;
+                equipSlot[21].Equip();
                 break;
         }
         armorControl.UpdateArmor();
+    }
+
+    public void ResetAnimator()
+    {
+        anim.runtimeAnimatorController = Resources.Load("Animation/MainController") as RuntimeAnimatorController;
+
     }
 
     private void EquipDefaults()
@@ -444,7 +486,7 @@ public class EquipmentManager : MonoBehaviour
         {
             Equip(e);
             weaponTimeCooldown.NoWeapon();
-            anim.runtimeAnimatorController = Resources.Load("Animation/MainController") as RuntimeAnimatorController;
+            ResetAnimator();
         }
     }
 

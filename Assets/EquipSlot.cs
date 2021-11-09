@@ -61,6 +61,9 @@ public class EquipSlot : MonoBehaviour
             case 10:
                 equipmentManager.Equip(equipmentManager.defaultEquipment[5]);
                 break;
+            case 11:
+                armorControl.backAttachmentArmor = 0;
+                break;
             case 12:
                 armorControl.shoulderRightArmor = 0;
                 break;
@@ -78,6 +81,20 @@ public class EquipSlot : MonoBehaviour
                 break;
             case 18:
                 armorControl.kneeLeftArmor = 0;
+                break;
+            case 19:
+                equipmentManager.Unequip(19);
+                equipmentManager.Unequip(20);
+                if(equipmentManager.shieldButton.enabled == false)
+                {
+                    equipmentManager.UnequipTwoHandedWeaponFromShield();
+                }                             
+                equipmentManager.ResetAnimator();
+                break;
+            case 21:
+                equipmentManager.Unequip(21);
+                equipmentManager.ResetAnimator();
+                armorControl.shieldArmorPassive = 0;
                 break;
         }
         armorControl.UpdateArmor();

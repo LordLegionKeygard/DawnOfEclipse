@@ -49,4 +49,3 @@ public enum EquipmentSlot
     WeaponRightHand = 20,
     Shield = 21
 }
-

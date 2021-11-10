@@ -15,7 +15,7 @@ public class EquipSlot : MonoBehaviour
     {
         armorControl = FindObjectOfType<ArmorControl>();
     }
-    public void Equip()
+    public void Icon()
     {
         icon.enabled = true;
         backIcon.enabled = false;

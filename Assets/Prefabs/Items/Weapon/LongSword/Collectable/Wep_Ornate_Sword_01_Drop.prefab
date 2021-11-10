@@ -128,4 +128,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 0.5
   interactionTransform: {fileID: 1324944237419395811}
-  item: {fileID: 11400000, guid: 6c5ca77caecd840418237141f7f28a1f, type: 2}
+  item: {fileID: 11400000, guid: 97b9f1ad4b223b14dadd76156840b309, type: 2}

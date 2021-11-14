@@ -14,7 +14,6 @@ public class WeaponTimeCooldown : MonoBehaviour
         playerController.timeR1FastRun = 1f;
         playerController.staminaForR1 = 100f;
         playerController.staminaForR2 = 100f;
-        Debug.Log("NoWeapon");
     }
     public void GreatSword()
     {
@@ -24,7 +23,6 @@ public class WeaponTimeCooldown : MonoBehaviour
         playerController.timeR1FastRun = 1.5f;
         playerController.staminaForR1 = 150f;
         playerController.staminaForR2 = 300f;
-        Debug.Log("Great");
     }
     public void LongSword()
     {
@@ -34,6 +32,5 @@ public class WeaponTimeCooldown : MonoBehaviour
         playerController.timeR1FastRun = 1.5f;
         playerController.staminaForR1 = 100f;
         playerController.staminaForR2 = 100f;
-        Debug.Log("Long");
     }
 }

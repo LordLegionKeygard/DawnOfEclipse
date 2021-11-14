@@ -42,7 +42,6 @@ public class HealthControl : CharacterStats
 
     public void TakeDamage(float damage)
     {
-
         var enemyDamage = (1 - (armorControl.currentArmor / damage)) * damage;
         Debug.Log(enemyDamage);
         if (enemyDamage >= 0)
@@ -59,10 +58,7 @@ public class HealthControl : CharacterStats
             staminaControl.UseStamina((int)damage * 10);
             playerAnimatorManager.BlockReact();
         }
-        else if (currentHealth <= 0)
-        {
-            RandomDeath();
-        }
+        CheckDeath();
         UpdateHealthColorBar();
     }
 
@@ -79,6 +75,14 @@ public class HealthControl : CharacterStats
         if (healthBar.value < currentHealth)
         {
             healthBar.value += Time.deltaTime * 50;
+        }
+    }
+
+    private void CheckDeath()
+    {
+        if (currentHealth <= 0)
+        {
+            RandomDeath();
         }
     }
 
@@ -100,14 +104,6 @@ public class HealthControl : CharacterStats
         {
             animator.SetTrigger("takeDamage1");
         }
-        else if (randomState == 2)
-        {
-
-        }
-        else if (randomState == 3)
-        {
-
-        }
     }
 
     private void RandomDeath()
@@ -117,7 +113,7 @@ public class HealthControl : CharacterStats
         {
             animator.SetTrigger("death");
         }
-        if (randomState == 1)
+        else if (randomState == 1)
         {
             animator.SetTrigger("death1");
         }

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - UIItemSlot
+  - DropItem
   layers:
   - Default
   - TransparentFX
@@ -13,7 +14,7 @@ TagManager:
   - Ground
   - Water
   - UI
-  - DropItems
+  - 
   - Player
   - Enemy
   - Character Collision Blocker

@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 142800094539153945}
   - component: {fileID: 5293492969233839265}
   - component: {fileID: 8001398941581089987}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Wep_Greatsword_Round_01_Drop
-  m_TagString: Untagged
+  m_TagString: DropItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -93,7 +93,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4124746994690559737}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.07722676, y: 1.5068289, z: 0.35368967}
@@ -109,8 +109,8 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -126,6 +126,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b18e0cc9fc8e9ce4889e0e7fced1cd6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 1
-  interactionTransform: {fileID: 4124746994690395353}
   item: {fileID: 11400000, guid: 9b8d20a32f6e3884c88001d449d60e3d, type: 2}

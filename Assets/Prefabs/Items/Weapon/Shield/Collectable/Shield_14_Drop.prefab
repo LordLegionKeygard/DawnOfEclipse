@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 7764172372515078952}
   - component: {fileID: 7764172372515078953}
   - component: {fileID: 7764172372515078966}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Shield_14_Drop
-  m_TagString: Untagged
+  m_TagString: DropItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -93,7 +93,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7764172372515078967}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.90560746, y: 0.90560687, z: 0.17196605}
@@ -109,8 +109,8 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -126,6 +126,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b18e0cc9fc8e9ce4889e0e7fced1cd6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 0.4
-  interactionTransform: {fileID: 7761894368486673949}
   item: {fileID: 11400000, guid: 7cefd71e080b2804ba358f3876fea6f1, type: 2}

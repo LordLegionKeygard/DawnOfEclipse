@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
-  m_Name: Wep_Mace_Large_03
+  m_Name: Wep_Goblin_Axe
   m_EditorClassIdentifier: 
   CurrentItem: {fileID: 0}
-  icon: {fileID: 21300000, guid: 80b5bf46c3fd2744b91b64bdb7d82f55, type: 3}
+  icon: {fileID: 21300000, guid: a95013ec89220a14896c0b5d5279d356, type: 3}
   maxStack: 1
   amount: 0
   isDefaultItem: 0
@@ -21,7 +21,7 @@ MonoBehaviour:
   equipSlot: 20
   armorModifier: 0
   mesh: {fileID: 0}
-  prefab: {fileID: 8145321040089539236, guid: e09699c857751344fbebccdbe5d0e0ad, type: 3}
+  prefab: {fileID: 7053853276659597100, guid: c6abaed1b5d3bfe40ac858280d3f2094, type: 3}
   hatNumber: 0
   noHair: 0
   canChangehead: 0

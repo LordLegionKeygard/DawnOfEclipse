@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 6166042748751786100}
   - component: {fileID: 2403278665616057635}
   - component: {fileID: 5596978543230623210}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Chr_Hips_Female_19_Drop
-  m_TagString: Untagged
+  m_TagString: DropItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -97,8 +97,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b18e0cc9fc8e9ce4889e0e7fced1cd6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 0.5
-  interactionTransform: {fileID: 6168164003040146277}
   item: {fileID: 11400000, guid: c2e7a7125a74539438adbadae3c6d53f, type: 2}
 --- !u!65 &2403278665616057635
 BoxCollider:
@@ -108,7 +106,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6166042748751786101}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 42.577637, y: 58.05213, z: 27.808197}
@@ -124,8 +122,8 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0

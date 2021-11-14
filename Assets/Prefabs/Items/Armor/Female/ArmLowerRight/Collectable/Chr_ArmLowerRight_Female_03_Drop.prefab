@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 7579620817806126402}
   - component: {fileID: 4871427824897569866}
   - component: {fileID: 6678394591293862123}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Chr_ArmLowerRight_Female_03_Drop
-  m_TagString: Untagged
+  m_TagString: DropItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -97,8 +97,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b18e0cc9fc8e9ce4889e0e7fced1cd6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 0.4
-  interactionTransform: {fileID: 7576463397095095915}
   item: {fileID: 11400000, guid: b58a2a37d973fe849a6af86fcdeaddcf, type: 2}
 --- !u!65 &4871427824897569866
 BoxCollider:
@@ -108,7 +106,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7579620817806126401}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 29.43853, y: 14.431824, z: 10.429334}
@@ -124,8 +122,8 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0

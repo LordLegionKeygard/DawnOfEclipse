@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class Interactable : MonoBehaviour
 {
-
     [SerializeField] private float radius = 3f;
     [SerializeField] private Transform interactionTransform;
     private Transform player;

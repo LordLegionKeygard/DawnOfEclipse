@@ -11,13 +11,12 @@ GameObject:
   - component: {fileID: 4632437365783385687}
   - component: {fileID: 4624615892108437241}
   - component: {fileID: 4614973406326109845}
-  - component: {fileID: 4664844225235405019}
   - component: {fileID: 4637688489019167124}
   - component: {fileID: 4637688489019167125}
   - component: {fileID: 4637688489019167126}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Wep_Sword_Medium_04_Drop
-  m_TagString: Untagged
+  m_TagString: DropItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -86,20 +85,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &4664844225235405019
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4637688489019167127}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 43490523094638392, guid: c0a2b6b7e3d5fd643aac4d2b9f864eaa, type: 2}
 --- !u!65 &4637688489019167124
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -108,7 +93,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4637688489019167127}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.078884274, y: 1.0805523, z: 0.25826934}
@@ -124,8 +109,8 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -141,6 +126,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b18e0cc9fc8e9ce4889e0e7fced1cd6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 0.5
-  interactionTransform: {fileID: 4632437365783385687}
   item: {fileID: 11400000, guid: 317bd36bc033a7e49b6bae81fab10f7f, type: 2}

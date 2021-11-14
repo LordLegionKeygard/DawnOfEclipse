@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 5679941710559878994}
   - component: {fileID: 9179224972243883381}
   - component: {fileID: 5791248118391145004}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Wep_Axe_08_Drop
-  m_TagString: Untagged
+  m_TagString: DropItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -93,7 +93,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 367920682882578935}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.092528746, y: 1.5563233, z: 0.7282047}
@@ -109,8 +109,8 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -126,6 +126,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b18e0cc9fc8e9ce4889e0e7fced1cd6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 0.4
-  interactionTransform: {fileID: 364674328821631269}
   item: {fileID: 11400000, guid: f6153a39c3a376e4ab75fcf246f6af6c, type: 2}

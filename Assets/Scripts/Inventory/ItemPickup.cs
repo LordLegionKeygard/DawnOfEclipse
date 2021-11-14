@@ -1,27 +1,23 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ItemPickup : Interactable
+public class ItemPickup : MonoBehaviour
 {
     public Item item;
     private Inventory inventory;
-
     private InventoryUI inventoryUI;
-    public override void Interact()
-    {
-        base.Interact();
 
-        PickUp();
-    }
-
-    private void PickUp()
+    private void Start()
     {
-        Debug.Log("Picking up " + item.name);
         inventory = FindObjectOfType<Inventory>();
         inventoryUI = FindObjectOfType<InventoryUI>();
+    }
+    public void PickUp()
+    {
+        Debug.Log("Picking up " + item.name);
 
         if (item.name == "HealthPotion")
-        {          
+        {
             for (int i = 0; i < inventory.items.Count; i++)
             {
                 if (inventory.items[i].name == "HealthPotion")
@@ -61,6 +57,5 @@ public class ItemPickup : Interactable
         }
         Inventory.instance.Add(item);
         Destroy(gameObject);
-
     }
 }

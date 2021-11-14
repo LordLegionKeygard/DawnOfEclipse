@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 5293540110643822001}
   - component: {fileID: 5264992567549085341}
   - component: {fileID: 5274419072588202895}
-  - component: {fileID: 5296864998601261811}
   m_Layer: 0
   m_Name: Wep_Sword_Medium_01
   m_TagString: Untagged
@@ -83,17 +82,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &5296864998601261811
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5288294946218129711}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 43452431728921934, guid: 5e05935e8ddb88641b16d45026195367, type: 2}

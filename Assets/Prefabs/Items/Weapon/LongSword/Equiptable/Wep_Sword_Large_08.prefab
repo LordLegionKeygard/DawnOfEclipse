@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 5394957625265946012}
   - component: {fileID: 5379222747272477702}
   - component: {fileID: 5369239987075590980}
-  - component: {fileID: 5347248328083355912}
   m_Layer: 0
   m_Name: Wep_Sword_Large_08
   m_TagString: Untagged
@@ -83,17 +82,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &5347248328083355912
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5392860187469587750}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 43652363266351530, guid: c32eafaf6b05d294a854d5741e3c1c7e, type: 2}

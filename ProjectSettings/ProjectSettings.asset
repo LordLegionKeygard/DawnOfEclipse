@@ -592,7 +592,7 @@ PlayerSettings:
   webGLThreadsSupport: 0
   webGLDecompressionFallback: 0
   scriptingDefineSymbols:
-    1: GRIFFIN
+    1: GRIFFIN;GRIFFIN_2021;POSEIDON
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend: {}

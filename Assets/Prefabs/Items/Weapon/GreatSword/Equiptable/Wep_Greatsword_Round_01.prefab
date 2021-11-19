@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4235347773270673150}
   - component: {fileID: 3649499883474587582}
   - component: {fileID: -3792252868218593211}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Wep_Greatsword_Round_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

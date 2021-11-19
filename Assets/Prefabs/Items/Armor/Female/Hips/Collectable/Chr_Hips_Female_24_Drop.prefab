@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4304893900058219607}
   - component: {fileID: 6492330621667169240}
   - component: {fileID: 6816821613351327113}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Chr_Hips_Female_24_Drop
   m_TagString: DropItem
   m_Icon: {fileID: 0}

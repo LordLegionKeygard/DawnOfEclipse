@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6865881681930880546}
   - component: {fileID: 6859360763733560984}
   - component: {fileID: 6851028031566586566}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Wep_BarbarianGiant
   m_TagString: Untagged
   m_Icon: {fileID: 0}

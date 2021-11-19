@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 735520581706733141}
   - component: {fileID: 752542573230668251}
   - component: {fileID: 1947726111628715951}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Wep_Crystal_DoubleSword_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

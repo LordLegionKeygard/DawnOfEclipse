@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4959134016783781849}
   - component: {fileID: 4950932533073565077}
   - component: {fileID: 4940940342287367371}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Wep_DarkElf_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

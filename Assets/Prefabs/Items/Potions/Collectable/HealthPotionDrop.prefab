@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5019512568574048643}
   - component: {fileID: 1868767077170643026}
   - component: {fileID: 7546152013682120499}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: HealthPotionDrop
   m_TagString: DropItem
   m_Icon: {fileID: 0}

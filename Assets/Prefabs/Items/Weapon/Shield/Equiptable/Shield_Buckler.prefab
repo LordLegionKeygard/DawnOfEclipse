@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4812900765614559534}
   - component: {fileID: 4806212226007589468}
   - component: {fileID: 4798309397355845346}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Shield_Buckler
   m_TagString: Untagged
   m_Icon: {fileID: 0}

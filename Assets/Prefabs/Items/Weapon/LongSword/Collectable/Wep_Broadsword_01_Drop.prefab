@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6593712223698580317}
   - component: {fileID: 5266586944111896038}
   - component: {fileID: 1188481115056972249}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Wep_Broadsword_01_Drop
   m_TagString: DropItem
   m_Icon: {fileID: 0}

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5430562540521870182}
   - component: {fileID: 62954972675400136}
   - component: {fileID: 7856556028718396593}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Wep_Ornate_GreatAxe_Drop
   m_TagString: DropItem
   m_Icon: {fileID: 0}

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6266311641716990934}
   - component: {fileID: 6266311641721770872}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Chr_Torso_Female_13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,6 +42,7 @@ SkinnedMeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1

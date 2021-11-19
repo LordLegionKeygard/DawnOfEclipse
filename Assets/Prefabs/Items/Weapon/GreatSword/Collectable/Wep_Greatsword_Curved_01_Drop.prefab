@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5587277981349970082}
   - component: {fileID: 8300081495240619071}
   - component: {fileID: 7523934889262891092}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Wep_Greatsword_Curved_01_Drop
   m_TagString: DropItem
   m_Icon: {fileID: 0}

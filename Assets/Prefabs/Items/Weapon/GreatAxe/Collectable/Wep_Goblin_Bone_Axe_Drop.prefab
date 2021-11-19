@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3174211909667749085}
   - component: {fileID: 4212127248609705535}
   - component: {fileID: 3950003040199033157}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Wep_Goblin_Bone_Axe_Drop
   m_TagString: DropItem
   m_Icon: {fileID: 0}

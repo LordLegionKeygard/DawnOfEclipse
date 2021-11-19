@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6414278386681759796}
   - component: {fileID: 4610713040839335811}
   - component: {fileID: 8737310973170793853}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Wep_BarbarianGiant_Drop
   m_TagString: DropItem
   m_Icon: {fileID: 0}

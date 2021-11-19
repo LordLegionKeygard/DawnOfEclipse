@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4131679985438676986}
   - component: {fileID: 4131679985438676987}
   - component: {fileID: 4131679985438676984}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Wep_Sword_16_Drop
   m_TagString: DropItem
   m_Icon: {fileID: 0}

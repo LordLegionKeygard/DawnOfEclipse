@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7146095631243094499}
   - component: {fileID: 5560550832811648056}
   - component: {fileID: 5560550832811648063}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Wep_Zweihander_Drop
   m_TagString: DropItem
   m_Icon: {fileID: 0}

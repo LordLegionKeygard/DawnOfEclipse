@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8394927898338648386}
   - component: {fileID: 8423370257227237166}
   - component: {fileID: 8413610137694205580}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Shield_Long_7
   m_TagString: Untagged
   m_Icon: {fileID: 0}

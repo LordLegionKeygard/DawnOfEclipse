@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7271349501596260516}
   - component: {fileID: 7271349501596260517}
   - component: {fileID: 7271349501596260518}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Chr_ShoulderAttachRight_07_Drop
   m_TagString: DropItem
   m_Icon: {fileID: 0}

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7051621001847531706}
   - component: {fileID: 7051621001847531705}
   - component: {fileID: 7051621001847531704}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Shield_15_Drop
   m_TagString: DropItem
   m_Icon: {fileID: 0}

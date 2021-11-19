@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3516070150550387929}
   - component: {fileID: 8896719647697352749}
   - component: {fileID: 1667355033263573656}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Wep_PickAxe_Large_Drop
   m_TagString: DropItem
   m_Icon: {fileID: 0}

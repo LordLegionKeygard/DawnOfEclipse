@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3523353200243435656}
   - component: {fileID: 3523353200239998462}
   - component: {fileID: 3523353200241113154}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Wep_BrokenSword_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

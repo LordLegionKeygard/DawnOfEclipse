@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6756370007557906368}
   - component: {fileID: 6756370007558639282}
   - component: {fileID: 6756370007559670710}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Wep_Ornate_Axe
   m_TagString: Untagged
   m_Icon: {fileID: 0}

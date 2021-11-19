@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3666217082067194865}
   - component: {fileID: -8923952746069435735}
   - component: {fileID: 5482449732162463677}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Wep_Sword_Large_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

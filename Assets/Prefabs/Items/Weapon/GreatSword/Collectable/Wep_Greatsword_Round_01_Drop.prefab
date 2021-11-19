@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 142800094539153945}
   - component: {fileID: 5293492969233839265}
   - component: {fileID: 8001398941581089987}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Wep_Greatsword_Round_01_Drop
   m_TagString: DropItem
   m_Icon: {fileID: 0}

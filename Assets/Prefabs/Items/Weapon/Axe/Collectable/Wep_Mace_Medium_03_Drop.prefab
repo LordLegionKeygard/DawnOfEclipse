@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6953981815030488187}
   - component: {fileID: 8768339048191980081}
   - component: {fileID: 3551824363087583206}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Wep_Mace_Medium_03_Drop
   m_TagString: DropItem
   m_Icon: {fileID: 0}

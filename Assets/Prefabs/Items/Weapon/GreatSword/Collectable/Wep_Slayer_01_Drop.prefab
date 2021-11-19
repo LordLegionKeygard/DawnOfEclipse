@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4916401950278170239}
   - component: {fileID: 2450335541680918463}
   - component: {fileID: 5062558717528434989}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Wep_Slayer_01_Drop
   m_TagString: DropItem
   m_Icon: {fileID: 0}

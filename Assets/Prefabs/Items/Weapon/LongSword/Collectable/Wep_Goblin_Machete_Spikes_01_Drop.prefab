@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5695055055954034251}
   - component: {fileID: 6543063644432985791}
   - component: {fileID: 5008172837924235444}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Wep_Goblin_Machete_Spikes_01_Drop
   m_TagString: DropItem
   m_Icon: {fileID: 0}

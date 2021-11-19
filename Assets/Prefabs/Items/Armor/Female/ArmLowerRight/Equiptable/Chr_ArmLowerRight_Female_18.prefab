@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5012229424605677400}
   - component: {fileID: 5012229424611259534}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Chr_ArmLowerRight_Female_18
   m_TagString: Untagged
   m_Icon: {fileID: 0}

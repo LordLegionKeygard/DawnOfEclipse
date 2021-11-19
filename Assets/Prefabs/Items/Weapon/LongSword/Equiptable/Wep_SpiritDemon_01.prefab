@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4267959529362610463}
   - component: {fileID: 4269708237774571827}
   - component: {fileID: 4280117826907166249}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Wep_SpiritDemon_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

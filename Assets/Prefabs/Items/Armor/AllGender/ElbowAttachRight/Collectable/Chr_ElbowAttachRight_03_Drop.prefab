@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1670616152693406715}
   - component: {fileID: 1670616152693406714}
   - component: {fileID: 1670616152693406693}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Chr_ElbowAttachRight_03_Drop
   m_TagString: DropItem
   m_Icon: {fileID: 0}

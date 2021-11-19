@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 129072364400458642}
   - component: {fileID: 5413734391238483001}
   - component: {fileID: 4035217966233579546}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: WeaponFX (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4817,7 +4817,7 @@ GameObject:
   - component: {fileID: 6319186883322617668}
   - component: {fileID: 2475850784173911229}
   - component: {fileID: 379403920102691939}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: WeaponFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9684,7 +9684,7 @@ GameObject:
   - component: {fileID: 9033775039010011254}
   - component: {fileID: 7079058495058165086}
   - component: {fileID: 5879339921097699515}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Wep_Slayer_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

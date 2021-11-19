@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1366467336732517701}
   - component: {fileID: 1366467336732517700}
   - component: {fileID: 1366467336732517703}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Chr_HeadCoverings_Base_Hair_05_Drop
   m_TagString: DropItem
   m_Icon: {fileID: 0}

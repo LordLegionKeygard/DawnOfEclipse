@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2835077441171996602}
   - component: {fileID: 2835077441174867506}
   - component: {fileID: 2835077441173840706}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Wep_HandAxe
   m_TagString: Untagged
   m_Icon: {fileID: 0}

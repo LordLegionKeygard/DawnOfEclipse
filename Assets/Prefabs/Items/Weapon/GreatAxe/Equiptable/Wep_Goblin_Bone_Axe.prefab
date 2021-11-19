@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5019020404973552600}
   - component: {fileID: 5019020404972784024}
   - component: {fileID: 5019020404971693028}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Wep_Goblin_Bone_Axe
   m_TagString: Untagged
   m_Icon: {fileID: 0}

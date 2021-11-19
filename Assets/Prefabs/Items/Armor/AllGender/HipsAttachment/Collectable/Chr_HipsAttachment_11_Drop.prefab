@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7241364637202996071}
   - component: {fileID: 7241364637202996064}
   - component: {fileID: 7241364637202996065}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Chr_HipsAttachment_11_Drop
   m_TagString: DropItem
   m_Icon: {fileID: 0}

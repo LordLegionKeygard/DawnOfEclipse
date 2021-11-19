@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5261477427730286621}
   - component: {fileID: 5261477427730286595}
   - component: {fileID: 5261477427730286594}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Wep_Greatsword_Straight_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

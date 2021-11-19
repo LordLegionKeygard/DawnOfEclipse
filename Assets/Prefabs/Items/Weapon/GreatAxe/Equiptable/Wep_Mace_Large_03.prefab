@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8150998745824823800}
   - component: {fileID: 8176593716502894840}
   - component: {fileID: 8168293095623652418}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Wep_Mace_Large_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2260667760964761047}
   - component: {fileID: 3180097389543922450}
   - component: {fileID: 163174069495032062}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Chr_ArmLowerLeft_Female_02_Drop
   m_TagString: DropItem
   m_Icon: {fileID: 0}

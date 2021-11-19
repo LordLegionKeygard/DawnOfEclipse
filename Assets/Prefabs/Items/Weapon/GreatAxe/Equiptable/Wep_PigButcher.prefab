@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3696306445154993713}
   - component: {fileID: 3692168393999277403}
   - component: {fileID: 3680799205824664219}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Wep_PigButcher
   m_TagString: Untagged
   m_Icon: {fileID: 0}

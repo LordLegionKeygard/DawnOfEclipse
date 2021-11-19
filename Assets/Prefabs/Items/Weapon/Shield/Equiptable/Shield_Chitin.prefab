@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6546356693241868351}
   - component: {fileID: 6546356693240549085}
   - component: {fileID: 6546356693239553465}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Shield_Chitin
   m_TagString: Untagged
   m_Icon: {fileID: 0}

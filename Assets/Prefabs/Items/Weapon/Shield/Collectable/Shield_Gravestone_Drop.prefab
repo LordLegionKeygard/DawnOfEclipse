@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2708323197797408141}
   - component: {fileID: 2708323197797408142}
   - component: {fileID: 2708323197797408143}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Shield_Gravestone_Drop
   m_TagString: DropItem
   m_Icon: {fileID: 0}

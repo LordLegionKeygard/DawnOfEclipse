@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5646477331784173024}
   - component: {fileID: 5646477331784173055}
   - component: {fileID: 5458025623797234309}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Chr_Torso_Female_21_Drop
   m_TagString: DropItem
   m_Icon: {fileID: 0}

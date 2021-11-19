@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8825136757690962151}
   - component: {fileID: 8825136757690194705}
   - component: {fileID: 8825136757689032785}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Wep_Goblin_Axe_Spikes
   m_TagString: Untagged
   m_Icon: {fileID: 0}

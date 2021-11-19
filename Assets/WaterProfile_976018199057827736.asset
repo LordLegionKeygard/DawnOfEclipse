@@ -23,7 +23,7 @@ MonoBehaviour:
   maxDepth: 4.68
   enableFoam: 1
   foamColor: {r: 0.060236078, g: 0.13207549, b: 0.055446785, a: 1}
-  foamDistance: 15.49
+  foamDistance: 15
   enableFoamHQ: 1
   foamNoiseScaleHQ: 1.37
   foamNoiseSpeedHQ: 1.25
@@ -46,9 +46,9 @@ MonoBehaviour:
   fresnelStrength: 6.83
   fresnelBias: 0.457
   enableReflection: 1
-  reflectionTextureResolution: 256
+  reflectionTextureResolution: 1024
   enableReflectionPixelLight: 1
-  reflectionClipPlaneOffset: 16.65
+  reflectionClipPlaneOffset: 19
   reflectionLayers:
     serializedVersion: 2
     m_Bits: 4294967295

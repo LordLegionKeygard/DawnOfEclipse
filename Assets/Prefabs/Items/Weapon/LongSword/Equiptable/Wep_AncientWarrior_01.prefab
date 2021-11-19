@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7616779774923853253}
   - component: {fileID: 7624327675607715041}
   - component: {fileID: 7632199321301135621}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Wep_AncientWarrior_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

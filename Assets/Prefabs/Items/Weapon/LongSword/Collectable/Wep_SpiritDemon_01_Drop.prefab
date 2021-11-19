@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1980334272391796348}
   - component: {fileID: 5295428373773639957}
   - component: {fileID: 8614760657034362263}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Wep_SpiritDemon_01_Drop
   m_TagString: DropItem
   m_Icon: {fileID: 0}

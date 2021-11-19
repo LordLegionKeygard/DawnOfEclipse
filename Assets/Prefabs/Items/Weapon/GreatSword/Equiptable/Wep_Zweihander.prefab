@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8239162658042074945}
   - component: {fileID: 8239162658042074947}
   - component: {fileID: 8239162658042074944}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Wep_Zweihander
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -9,7 +9,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: Jupiter/Sky
   m_Shader: {fileID: 4800000, guid: 3129e3b90193a0547900ecf4cf4e9864, type: 3}
-  m_ShaderKeywords: ALLOW_STEP_EFFECT DETAIL_OVERLAY MOON MOON_USE_TEXTURE OVERHEAD_CLOUD
+  m_ShaderKeywords: ALLOW_STEP_EFFECT HORIZON_CLOUD MOON MOON_USE_TEXTURE OVERHEAD_CLOUD
     STARS STARS_LAYER_0 STARS_LAYER_1 STARS_LAYER_2 SUN SUN_USE_TEXTURE
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -53,15 +53,15 @@ Material:
     - _DetailOverlayLayer: 0
     - _DetailOverlayRotationSpeed: 0
     - _HorizonCloudAnimationSpeed: 50
-    - _HorizonCloudEndPosition: 0.65
-    - _HorizonCloudSize: 4.91
-    - _HorizonCloudStartPosition: -0.1
+    - _HorizonCloudEndPosition: 0.35
+    - _HorizonCloudSize: 4.959908
+    - _HorizonCloudStartPosition: 0
     - _HorizonCloudStep: 25
-    - _HorizonExponent: 4.1529365
+    - _HorizonExponent: 4.5185432
     - _HorizonStep: 500
     - _HorizonThickness: 0.4
     - _MoonGlow: 0.3
-    - _MoonLightIntensity: 0.39850813
+    - _MoonLightIntensity: 0.6988451
     - _MoonSize: 0.16
     - _MoonSoftEdge: 0.4
     - _OverheadCloudAltitude: 1000
@@ -69,44 +69,44 @@ Material:
     - _OverheadCloudFlowDirectionX: 1
     - _OverheadCloudFlowDirectionZ: 1
     - _OverheadCloudRemapMax: 1
-    - _OverheadCloudRemapMin: -0.40806276
-    - _OverheadCloudSize: 10
-    - _OverheadCloudStep: 42
-    - _StarsDensity0: 0.36975893
-    - _StarsDensity1: 0.36218563
+    - _OverheadCloudRemapMin: -0.42331704
+    - _OverheadCloudSize: 5
+    - _OverheadCloudStep: 80
+    - _StarsDensity0: 0.36982724
+    - _StarsDensity1: 0.36239648
     - _StarsDensity2: 0.46274108
     - _StarsEndPosition: 1
     - _StarsGlow0: 0.01
     - _StarsGlow1: 0.01
     - _StarsGlow2: 0.01
-    - _StarsOpacity: 0.753255
-    - _StarsSize0: 0.42
-    - _StarsSize1: 0.53
-    - _StarsSize2: 0.46
+    - _StarsOpacity: 0.8199158
+    - _StarsSize0: 0.25048307
+    - _StarsSize1: 0.24972385
+    - _StarsSize2: 0.25020075
     - _StarsStartPosition: -0.01
     - _StarsTwinkle0: 5
     - _StarsTwinkle1: 6
     - _StarsTwinkle2: 2
     - _SunGlow: 0.7
-    - _SunLightIntensity: 0.5747627
+    - _SunLightIntensity: 0.9695638
     - _SunSize: 0.16
     - _SunSoftEdge: 0.3
     m_Colors:
     - _DetailOverlayTintColor: {r: 0, g: 0, b: 0, a: 0}
     - _FogColor: {r: 0, g: 0, b: 0, a: 0}
-    - _GroundColor: {r: 0.882782, g: 0.7118664, b: 0.6440735, a: 1}
-    - _HorizonCloudColor: {r: 1, g: 1, b: 1, a: 1}
-    - _HorizonColor: {r: 0.43656042, g: 0.37639892, b: 0.54793805, a: 1}
-    - _MoonColor: {r: 0.9963115, g: 0.9320399, b: 0.44646034, a: 1}
-    - _MoonDirection: {r: 0, g: -0.81650865, b: 0.5773332, a: 0}
+    - _GroundColor: {r: 0.9072889, g: 0.84709954, b: 0.73179215, a: 1}
+    - _HorizonCloudColor: {r: 0.08056989, g: 0.03172837, b: 0.21698111, a: 1}
+    - _HorizonColor: {r: 0.4159287, g: 0.36391956, b: 0.5471698, a: 1}
+    - _MoonColor: {r: 0.9652988, g: 0.86282474, b: 0.43256313, a: 1}
+    - _MoonDirection: {r: 0, g: -0.8756755, b: -0.48290002, a: 0}
     - _MoonLightColor: {r: 0.84313726, g: 0.9843137, b: 1, a: 0}
-    - _OverheadCloudColor: {r: 1, g: 1, b: 1, a: 0.83546954}
-    - _SkyColor: {r: 0.08056989, g: 0.031728387, b: 0.21698111, a: 1}
+    - _OverheadCloudColor: {r: 1, g: 1, b: 1, a: 0.83650094}
+    - _SkyColor: {r: 0.08056989, g: 0.03172837, b: 0.21698111, a: 1}
     - _StarsColor0: {r: 0.96470594, g: 0.9450981, b: 0.76470596, a: 1}
-    - _StarsColor1: {r: 0.91878283, g: 0.80331284, b: 0.12656121, a: 1}
-    - _StarsColor2: {r: 0.5021281, g: 0.4833097, b: 0.2700727, a: 1}
-    - _SunColor: {r: 0.9900992, g: 0.97178626, b: 0.9403927, a: 0}
-    - _SunDirection: {r: 0, g: 0.81650865, b: -0.5773332, a: 0}
+    - _StarsColor1: {r: 0.94989765, g: 0.7671189, b: 0.13988991, a: 1}
+    - _StarsColor2: {r: 0.7579835, g: 0.6786745, b: 0.20237857, a: 1}
+    - _SunColor: {r: 0.99276793, g: 0.98083466, b: 0.96114475, a: 0}
+    - _SunDirection: {r: 0, g: 0.8756755, b: 0.48290002, a: 0}
     - _SunLightColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
 --- !u!114 &11400000
@@ -127,7 +127,7 @@ MonoBehaviour:
   horizonThickness: 0.4
   horizonExponent: 3
   horizonStep: 500
-  fogSyncOption: 2
+  fogSyncOption: 1
   fogColor: {r: 0, g: 0, b: 0, a: 0}
   enableStars: 1
   starsStartPosition: -0.01
@@ -173,7 +173,7 @@ MonoBehaviour:
   moonLightColor: {r: 0.84313726, g: 0.9843137, b: 1, a: 0}
   moonLightIntensity: 0
   customCloudTexture: {fileID: 0}
-  enableHorizonCloud: 0
+  enableHorizonCloud: 1
   horizonCloudColor: {r: 1, g: 1, b: 1, a: 1}
   horizonCloudStartPosition: -0.1
   horizonCloudEndPosition: 0.65
@@ -183,8 +183,8 @@ MonoBehaviour:
   enableOverheadCloud: 1
   overheadCloudColor: {r: 1, g: 1, b: 1, a: 0.5647059}
   overheadCloudAltitude: 1000
-  overheadCloudSize: 10
-  overheadCloudStep: 42
+  overheadCloudSize: 5
+  overheadCloudStep: 80
   overheadCloudAnimationSpeed: 30
   overheadCloudFlowDirectionX: 1
   overheadCloudFlowDirectionZ: 1
@@ -192,7 +192,7 @@ MonoBehaviour:
   overheadCloudRemapMax: 0
   overheadCloudCastShadow: 0
   overheadCloudShadowClipMask: 0
-  enableDetailOverlay: 1
+  enableDetailOverlay: 0
   detailOverlayTintColor: {r: 0, g: 0, b: 0, a: 0}
   detailOverlayCubeMap: {fileID: 0}
   detailOverlayLayer: 0
@@ -209,7 +209,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: Jupiter/SkyShadow
   m_Shader: {fileID: 4800000, guid: 561c1777fd66e5d488ef1b85ed82bbaa, type: 3}
-  m_ShaderKeywords: ALLOW_STEP_EFFECT DETAIL_OVERLAY MOON MOON_USE_TEXTURE OVERHEAD_CLOUD
+  m_ShaderKeywords: ALLOW_STEP_EFFECT HORIZON_CLOUD MOON MOON_USE_TEXTURE OVERHEAD_CLOUD
     STARS STARS_LAYER_0 STARS_LAYER_1 STARS_LAYER_2 SUN SUN_USE_TEXTURE
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -229,8 +229,8 @@ Material:
     - _OverheadCloudRemapMax: 0
     - _OverheadCloudRemapMin: 0
     - _OverheadCloudShadowClipMask: 0
-    - _OverheadCloudSize: 10
-    - _OverheadCloudStep: 42
+    - _OverheadCloudSize: 5
+    - _OverheadCloudStep: 80
     m_Colors:
     - _OverheadCloudColor: {r: 1, g: 1, b: 1, a: 0.5647059}
   m_BuildTextureStacks: []

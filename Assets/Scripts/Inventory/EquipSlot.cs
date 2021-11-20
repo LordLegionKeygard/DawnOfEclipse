@@ -32,34 +32,34 @@ public class EquipSlot : MonoBehaviour
                 armorControl.headSlotArmor = 0;
                 break;
             case 1:
-                equipmentManager.Equip(equipmentManager.defaultEquipment[1]);
+                equipmentManager.Equip(equipmentManager.DefaultEquipment[1]);
                 break;
             case 2:
-                equipmentManager.Equip(equipmentManager.defaultEquipment[2]);
+                equipmentManager.Equip(equipmentManager.DefaultEquipment[2]);
                 break;
             case 3:
-                equipmentManager.Equip(equipmentManager.defaultEquipment[6]);
+                equipmentManager.Equip(equipmentManager.DefaultEquipment[6]);
                 break;
             case 4:
-                equipmentManager.Equip(equipmentManager.defaultEquipment[9]);
+                equipmentManager.Equip(equipmentManager.DefaultEquipment[9]);
                 break;
             case 5:
-                equipmentManager.Equip(equipmentManager.defaultEquipment[0]);
+                equipmentManager.Equip(equipmentManager.DefaultEquipment[0]);
                 break;
             case 6:
-                equipmentManager.Equip(equipmentManager.defaultEquipment[3]);
+                equipmentManager.Equip(equipmentManager.DefaultEquipment[3]);
                 break;
             case 7:
-                equipmentManager.Equip(equipmentManager.defaultEquipment[7]);
+                equipmentManager.Equip(equipmentManager.DefaultEquipment[7]);
                 break;
             case 8:
-                equipmentManager.Equip(equipmentManager.defaultEquipment[8]);
+                equipmentManager.Equip(equipmentManager.DefaultEquipment[8]);
                 break;
             case 9:
-                equipmentManager.Equip(equipmentManager.defaultEquipment[4]);
+                equipmentManager.Equip(equipmentManager.DefaultEquipment[4]);
                 break;
             case 10:
-                equipmentManager.Equip(equipmentManager.defaultEquipment[5]);
+                equipmentManager.Equip(equipmentManager.DefaultEquipment[5]);
                 break;
             case 11:
                 armorControl.backAttachmentArmor = 0;
@@ -85,7 +85,7 @@ public class EquipSlot : MonoBehaviour
             case 19:
                 equipmentManager.Unequip(19);
                 equipmentManager.Unequip(20);
-                if(equipmentManager.shieldButton.enabled == false)
+                if(equipmentManager.ShieldButton.enabled == false)
                 {
                     equipmentManager.UnequipTwoHandedWeaponFromShield();
                 }                             
@@ -93,7 +93,6 @@ public class EquipSlot : MonoBehaviour
                 break;
             case 21:
                 equipmentManager.Unequip(21);
-                equipmentManager.ResetAnimator();
                 armorControl.shieldArmorPassive = 0;
                 break;
         }

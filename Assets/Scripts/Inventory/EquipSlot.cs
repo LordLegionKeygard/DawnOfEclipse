@@ -30,6 +30,7 @@ public class EquipSlot : MonoBehaviour
         {
             case 0:
                 armorControl.headSlotArmor = 0;
+                equipmentManager.ActiveAllHeadElements(0);
                 break;
             case 1:
                 equipmentManager.Equip(equipmentManager.DefaultEquipment[1]);

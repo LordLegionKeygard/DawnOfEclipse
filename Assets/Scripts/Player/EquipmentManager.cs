@@ -6,21 +6,21 @@ using UnityEngine.UI;
 public class EquipmentManager : MonoBehaviour
 {
     public static EquipmentManager Instance; //синглтон, не явная зависимость
+    public Equipment[] DefaultEquipment;
+    [HideInInspector] public Button ShieldButton;
     [SerializeField] private EquipSlot[] _equipSlot;
     [SerializeField] private GameObject[] _hairEarsHead;
     [SerializeField] private SkinnedMeshRenderer[] _targetsMesh;
     [SerializeField] private Transform[] _weaponsAttachPoints;
-    private SkinnedMeshRenderer[] _currentMeshes;
-    private GameObject[] _currentGameObject;
-    public Equipment[] DefaultEquipment;
-    private Equipment[] _currentEquipment;
     [SerializeField] private Animator _anim;
     [SerializeField] private Image _shieldEquipSlotImage;
     [SerializeField] private ArmorControl _armorControl;
     [SerializeField] private MeshFilter _targetMeshFilterWeapon;
     [SerializeField] private MeshFilter _targetMeshFilterShield;
+    private SkinnedMeshRenderer[] _currentMeshes;
+    private GameObject[] _currentGameObject;
+    private Equipment[] _currentEquipment;
     private WeaponTimeCooldown _weaponTimeCooldown;
-    [HideInInspector] public Button ShieldButton;
     private bool _twoHandWeaponNow;
     public delegate void OnEquipmentChanged(Equipment newItem, Equipment oldItem);
     private OnEquipmentChanged _onEquipmentChanged;
@@ -46,7 +46,6 @@ public class EquipmentManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.U)) UnequipAll();
     }
-
     public void Equip(Equipment newItem)
     {
         if (newItem.canChangehead)
@@ -63,7 +62,7 @@ public class EquipmentManager : MonoBehaviour
                     _hairEarsHead[2].SetActive(true);
                     break;
                 case 2: //fullHelmet
-                    ActiveAllHeadElements(1);
+                    ActiveAllHeadElements(1);                   
                     break;
             }
         }
@@ -93,7 +92,7 @@ public class EquipmentManager : MonoBehaviour
         AttachToMesh(newItem, slotIndex);
     }
 
-    private void ActiveAllHeadElements(int active)
+    public void ActiveAllHeadElements(int active)
     {
         foreach (var headParts in _hairEarsHead)
         {
@@ -118,14 +117,13 @@ public class EquipmentManager : MonoBehaviour
         {
             oldItem = _currentEquipment[slotIndex];
             _inventory.Add(oldItem);
-            if (slotIndex == 0) { ActiveAllHeadElements(0); }
+            // if (slotIndex == 0) { ActiveAllHeadElements(0); }
 
             if (slotIndex == 19 || slotIndex == 20)
             {
                 _weaponTimeCooldown.NoWeapon();
                 if (slotIndex == 19)
                 {
-                    //twoHandWeaponNow = false;
                     _equipSlot[21].backIcon.enabled = true;
                     _equipSlot[21].icon.enabled = false;
                 }

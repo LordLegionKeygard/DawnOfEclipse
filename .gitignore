@@ -9,6 +9,7 @@
 /Assets/AssetStoreTools*
 /Assets/_TerrainData*
 /Assets/AssetStore*
+/GriffinBackup/*
 /Packages/*
 */Examples/
 */Example/

@@ -20,6 +20,7 @@ public class PlayerController : CharacterManager
     [SerializeField] private float groundDistance = 0.4f;
     [SerializeField] private float acceleration = 0.1f;
     [SerializeField] private float deceleration = 0.5f;
+    [SerializeField] private float _velocityUpdateY;
     private PlayerAnimatorManager playerAnimatorManager;
     private StaminaControl staminaControl;
     private PotionsControl potionsControl;
@@ -44,30 +45,19 @@ public class PlayerController : CharacterManager
     [Header("Stamina")]
     public float staminaForR1 = 100f;
     public float staminaForR2 = 100f;
-
     private CameraLockOnTarget cameraLockOnTarget;
-
     private PlayerInput input;
-
     private HealthControl healthControl;
-
     [SerializeField] private Inventory inventory;
-
-    [SerializeField] private InventorySlot inventorySlot;
-
     [SerializeField] private Image[] iconImage;
-
     Vector2 inputStrafe;
-
     private bool canDrink = true;
-
     private void Awake()
     {
         input = new PlayerInput();
         input.Player.TargetLock.performed += context => cameraLockOnTarget.TargetLock(); // wait new input system for last dualshock joysick
         input.Player.Sneak.performed += context => Sneaking();
     }
-
     private void Start()
     {
         armorControl = GetComponent<ArmorControl>();
@@ -79,7 +69,6 @@ public class PlayerController : CharacterManager
         healthControl = GetComponent<HealthControl>();
 
     }
-
     private void Update()
     {
         if (healthControl.currentHealth >= 1)
@@ -105,7 +94,7 @@ public class PlayerController : CharacterManager
                 playerAnimatorManager.DisableBlockL1();
             }
             isGround = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
-            if (isGround && velocity.y < 0) velocity.y = -2f;
+            if (isGround && velocity.y < 0) velocity.y = _velocityUpdateY;
             {
                 velocity.y += gravity * Time.deltaTime;
                 controller.Move(velocity * Time.deltaTime);

@@ -1,15 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class HealthControl : CharacterStats
 {
+    public static event Action PlayerDeathEvent;
     [SerializeField] private Slider healthBar;
     [SerializeField] private Image healthBarImage;
     [SerializeField] private GameObject combatCollider;
     private Animator animator;
-    private EnemyManager[] enemyManagers;
     private PlayerController playerController;
     private PlayerAnimatorManager playerAnimatorManager;
     private ArmorControl armorControl;
@@ -95,7 +96,7 @@ public class HealthControl : CharacterStats
 
     private void RandomTakeDamage()
     {
-        int randomState = Random.Range(0, 4);
+        int randomState = UnityEngine.Random.Range(0, 4);
         if (randomState == 0)
         {
             animator.SetTrigger("takeDamage");
@@ -108,7 +109,7 @@ public class HealthControl : CharacterStats
 
     private void RandomDeath()
     {
-        int randomState = Random.Range(0, 2);
+        int randomState = UnityEngine.Random.Range(0, 2);
         if (randomState == 0)
         {
             animator.SetTrigger("death");
@@ -119,10 +120,6 @@ public class HealthControl : CharacterStats
         }
         characterController.enabled = false;
         combatCollider.SetActive(false);
-        enemyManagers = FindObjectsOfType<EnemyManager>();
-        foreach (var spawn in enemyManagers)
-        {
-            spawn.ReturnToSpawn();
-        }
+        PlayerDeathEvent?.Invoke();
     }
 }

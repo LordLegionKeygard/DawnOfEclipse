@@ -10,5 +10,9 @@ public class PlayerPickUpItem : MonoBehaviour
         {
             other.gameObject.GetComponent<ItemPickup>().PickUp();
         }
+        if(other.gameObject.CompareTag("Money") && (Input.GetKey(KeyCode.JoystickButton1) || Input.GetKey(KeyCode.E)))
+        {
+            other.gameObject.GetComponent<MoneyPickUp>().PickUp();
+        }
     }
 }

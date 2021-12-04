@@ -27,12 +27,13 @@ public class EnemyManager : CharacterManager
         enemyAnimationManager = GetComponentInChildren<EnemyAnimatorManager>();
         enemyStats = GetComponent<EnemyStats>();
         enemyRigidBody = GetComponent<Rigidbody>();
-        navMeshAgent = GetComponentInChildren<NavMeshAgent>();       
+        navMeshAgent = GetComponentInChildren<NavMeshAgent>();
         navMeshAgent.enabled = false;
     }
 
     private void Start()
     {
+        HealthControl.PlayerDeathEvent += ReturnToSpawn;
         float randomY = Random.Range(0, 180);
         enemyRigidBody.isKinematic = false;
         transform.Rotate(0f, randomY, 0.0f, Space.World);
@@ -123,5 +124,10 @@ public class EnemyManager : CharacterManager
     public void ResetChaseTimer()
     {
         chaseTime = timeToChase;
+    }
+
+    private void OnDisable()
+    {
+        HealthControl.PlayerDeathEvent -= ReturnToSpawn;
     }
 }

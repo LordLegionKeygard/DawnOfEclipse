@@ -8,6 +8,7 @@ TagManager:
   - UIItemSlot
   - DropItem
   - NotCollideWithCamera
+  - Money
   layers:
   - Default
   - TransparentFX

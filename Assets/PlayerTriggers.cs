@@ -5,16 +5,23 @@ using UnityEngine;
 public class PlayerTriggers : MonoBehaviour
 {
     [SerializeField] private GameObject[] _playerActions;
+
+    private void Update()
+    {
+        if(_playerActions[0/4].activeInHierarchy && (Input.GetKey(KeyCode.JoystickButton1) || Input.GetKey(KeyCode.E))) //What??
+            FalseAllActions();
+    }
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("one");
-        if (other.gameObject.CompareTag("NPC"))        
-            _playerActions[0].SetActive(true);        
+        if (other.gameObject.CompareTag("NPC"))
+            _playerActions[0].SetActive(true);       
     }
 
-    private void OnTriggerExit(Collider other)
+    private void OnTriggerExit(Collider other){FalseAllActions();}
+
+    private void FalseAllActions()
     {
-        foreach (var action in _playerActions)       
-            action.SetActive(false);        
+        foreach (var action in _playerActions)
+            action.SetActive(false);
     }
 }

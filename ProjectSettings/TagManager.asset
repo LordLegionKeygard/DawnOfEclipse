@@ -9,6 +9,7 @@ TagManager:
   - DropItem
   - NotCollideWithCamera
   - CoinPurse
+  - NPC
   layers:
   - Default
   - TransparentFX

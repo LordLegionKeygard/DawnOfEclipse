@@ -5,80 +5,75 @@ using UnityEngine.UI;
 
 public class StaminaControl : MonoBehaviour
 {
-    [SerializeField] private Slider staminaBar;
+    [SerializeField] private Slider _staminaBar;
+    private int _maxStamina = 1000;
+    private int _currentStamina;
+    private WaitForSeconds _regenTick = new WaitForSeconds(0.0002f);
+    private Coroutine _regen;
+    public int CurrentStamina => _currentStamina;
+    [HideInInspector] public bool StaminaRun = false;
 
-    private int maxStamina = 1000;
-
-    private int currentStamina;
-
-    private WaitForSeconds regenTick = new WaitForSeconds(0.0001f);
-
-    private Coroutine regen;
-
-    public int CurrentStamina => currentStamina;
-
-    public bool staminaRun = false;
     private void Start()
     {
-        currentStamina = maxStamina;
-        staminaBar.maxValue = maxStamina;
-        staminaBar.value = maxStamina;
+        _currentStamina = _maxStamina;
+        _staminaBar.maxValue = _maxStamina;
+        _staminaBar.value = _maxStamina;
     }
 
     private void FixedUpdate()
     {
-        if (currentStamina > 10 && staminaRun)
+        if (_currentStamina > 10 && StaminaRun)
         {
-            currentStamina -= 2;
-            staminaBar.value = currentStamina;
+            _currentStamina -= 2;
+            _staminaBar.value = _currentStamina;
             RegenTimer();
         }
     }
 
     private void Update()
     {
-        if (staminaBar.value == currentStamina)
+        if (_staminaBar.value == _currentStamina)
         {
             return;
         }
-        if (staminaBar.value > currentStamina)
+        if (_staminaBar.value > _currentStamina)
         {
-            staminaBar.value -= Time.deltaTime * 400;
+            _staminaBar.value -= Time.deltaTime * 400;
         }
-        if (staminaBar.value < currentStamina)
+        if (_staminaBar.value < _currentStamina)
         {
-            staminaBar.value += Time.deltaTime * 400;
+            _staminaBar.value += Time.deltaTime * 400;
         }
 
     }
 
     public void UseStamina(int amount)
     {
-        if (currentStamina - amount >= 0)
+        if (_currentStamina - amount >= 0)
         {
-            currentStamina -= amount;
+            _currentStamina -= amount;
             RegenTimer();
         }
     }
 
     private void RegenTimer()
     {
-        if (regen != null)
-            StopCoroutine(regen);
+        if (_regen != null)
+            StopCoroutine(_regen);
 
-        regen = StartCoroutine(RegenStamina());
+        _regen = StartCoroutine(RegenStamina());
     }
 
     private IEnumerator RegenStamina()
     {
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(1f);
 
-        while (currentStamina < maxStamina)
+        while (_currentStamina < _maxStamina)
         {
-            currentStamina += maxStamina / 1000;
-            staminaBar.value = currentStamina;
-            yield return regenTick;
+            _currentStamina += _maxStamina / 1000;
+            _staminaBar.value = _currentStamina;
+            yield return _regenTick;
         }
-        regen = null;
+        _regen = null;
     }
 }

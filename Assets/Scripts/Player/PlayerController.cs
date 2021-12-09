@@ -149,7 +149,7 @@ public class PlayerController : CharacterManager
 
         else if ((Input.GetKey(KeyCode.JoystickButton2) || Input.GetKey(KeyCode.LeftShift)) && staminaControl.CurrentStamina > 50 && canNewMove && potionsControl.speedPotion == false) // circle
         {
-            staminaControl.staminaRun = true;
+            staminaControl.StaminaRun = true;
             speed = 7;
             playerAnimatorManager.Running();
             StartCoroutine(ExecuteAfterTime(0.3f, playerAnimatorManager.EnableFastRun));
@@ -164,7 +164,7 @@ public class PlayerController : CharacterManager
 
         else if (NotSneak)
         {
-            staminaControl.staminaRun = false;
+            staminaControl.StaminaRun = false;
             speed = normalSpeed;
             potionsControl.potionSpeed = 0;
             playerAnimatorManager.NotRunning();
@@ -250,7 +250,6 @@ public class PlayerController : CharacterManager
         yield return new WaitForSeconds(timeInSec);
         action?.Invoke();
     }
-
     private void OnEnable()
     {
         input.Enable();

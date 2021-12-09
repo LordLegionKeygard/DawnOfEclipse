@@ -394,6 +394,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1c6a7d4ef0ddac438f7218a9d3be2a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerBank: {fileID: 0}
   _icon: {fileID: 4274335613751853828}
   _price: {fileID: 1458592088034761558}
   ItemShopPrice: 0

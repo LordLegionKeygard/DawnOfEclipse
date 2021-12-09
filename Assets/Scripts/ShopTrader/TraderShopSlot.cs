@@ -6,6 +6,7 @@ using TMPro;
 
 public class TraderShopSlot : MonoBehaviour
 {
+    [SerializeField] private PlayerBank _playerBank;
     [SerializeField] private Image _icon;
     [SerializeField] private TextMeshProUGUI _price;
     public int ItemShopPrice;
@@ -22,6 +23,12 @@ public class TraderShopSlot : MonoBehaviour
 
     public void BuyItem()
     {
-        Inventory.instance.Add(_item);
+        if(_playerBank.isEnoughCoins(ItemShopPrice) == true)
+        {
+            _playerBank.SpendCoins(ItemShopPrice);
+            Inventory.instance.Add(_item);
+        }
+        else
+            Debug.Log("Need more coins");
     }
 }

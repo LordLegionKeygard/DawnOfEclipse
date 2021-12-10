@@ -77,7 +77,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4278241791
-  m_fontColor: {r: 1, g: 0.78784084, b: 0, a: 1}
+  m_fontColor: {r: 1, g: 0.79, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -94,8 +94,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 29.94
-  m_fontSizeBase: 29.94
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -296,7 +296,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4274335614499140921}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
@@ -335,7 +335,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4274335614889770434}
         m_TargetAssemblyTypeName: TraderShopSlot, Assembly-CSharp
-        m_MethodName: BuyItem
+        m_MethodName: SelectItem
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -395,6 +395,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerBank: {fileID: 0}
+  _buySlot: {fileID: 0}
   _icon: {fileID: 4274335613751853828}
-  _price: {fileID: 1458592088034761558}
+  _priceText: {fileID: 1458592088034761558}
+  _itemNameText: {fileID: 0}
+  _shopSlotButton: {fileID: 4274335614499140925}
   ItemShopPrice: 0
+  Item: {fileID: 0}

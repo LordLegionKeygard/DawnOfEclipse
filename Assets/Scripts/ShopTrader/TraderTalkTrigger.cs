@@ -5,6 +5,8 @@ using UnityEngine;
 public class TraderTalkTrigger : MonoBehaviour
 {
     [SerializeField] private GameObject _traderShopPanel;
+
+    [SerializeField] private GameObject[] _otherPanels;
     private TraderItems _traderItems;
 
     private void Start()
@@ -17,6 +19,9 @@ public class TraderTalkTrigger : MonoBehaviour
         {
             _traderItems.AddItemToShop();
             _traderShopPanel.SetActive(true);
+
+            foreach (var panel in _otherPanels)
+                panel.SetActive(false);
         }
     }
 

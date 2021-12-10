@@ -7,28 +7,58 @@ using TMPro;
 public class TraderShopSlot : MonoBehaviour
 {
     [SerializeField] private PlayerBank _playerBank;
+    [SerializeField] private BuySlot _buySlot;
     [SerializeField] private Image _icon;
-    [SerializeField] private TextMeshProUGUI _price;
+    [SerializeField] private TextMeshProUGUI _priceText;
+    [SerializeField] private TextMeshProUGUI _itemNameText;
+    [SerializeField] private Button _shopSlotButton;
     public int ItemShopPrice;
-    private Item _item;
-
-    public void AddShopItem(Item newItem)
-    {       
-        _item = newItem;
-        _icon.sprite = _item.icon;
-        _icon.enabled = true;
-        _price.enabled = true;
-        _price.text = ItemShopPrice.ToString();
+    public Item Item;
+    private void Start()
+    {
+        _buySlot.UpdatePriceColorsEvent += UpdatePriceColor;
     }
 
-    public void BuyItem()
+    public void AddShopItem(Item newItem)
     {
-        if(_playerBank.isEnoughCoins(ItemShopPrice) == true)
+        _shopSlotButton.enabled = true;
+        Item = newItem;
+        _icon.sprite = Item.icon;
+        _icon.enabled = true;
+        _priceText.enabled = true;
+        _priceText.text = ItemShopPrice.ToString();
+
+        UpdatePriceColor();
+    }
+
+    public void SelectItem()
+    {
+        if (ItemShopPrice <= _playerBank.Coins)
         {
-            _playerBank.SpendCoins(ItemShopPrice);
-            Inventory.instance.Add(_item);
+            _buySlot.AddBuySlotItem(Item, ItemShopPrice);
+            _itemNameText.text = Item.name.ToString();
         }
         else
-            Debug.Log("Need more coins");
+        {
+            _itemNameText.text = "Need more moons";
+            _buySlot.ClearSlot();
+        }
+    }
+
+    private void UpdatePriceColor()
+    {
+        if (ItemShopPrice > _playerBank.Coins)
+        {
+            _priceText.color = Color.black;
+        }
+        else
+            _priceText.color = new Color(1, 0.79f, 0, 1);
+    }
+
+    private void OnDisable()
+    {
+        _icon.enabled = false;
+        _priceText.enabled = false;
+        _shopSlotButton.enabled = false;
     }
 }

@@ -17,6 +17,6 @@ public class UpdatePlayerCoins : MonoBehaviour
     private void UpdateCoinsText(int amount)
     {
         _coinsText.text = ("Coins: " + amount.ToString());
-        _coinsShopText.text = ("My coins " + amount.ToString());
+        _coinsShopText.text = amount.ToString();
     }
 }

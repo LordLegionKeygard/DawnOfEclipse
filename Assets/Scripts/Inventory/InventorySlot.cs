@@ -12,7 +12,7 @@ public class InventorySlot : MonoBehaviour
     [SerializeField] private Button removeButton;
     [SerializeField] private GameObject ringFromBtn;
     private PlayerAnimatorManager playerAnimatorManager;
-    private Item item;
+    public Item item;
     private Inventory inventory;
     private InventorySlot[] inventorySlots;
     private PotionsControl potionsControl;

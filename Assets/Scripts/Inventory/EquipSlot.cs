@@ -89,7 +89,7 @@ public class EquipSlot : MonoBehaviour
                 if(equipmentManager.ShieldButton.enabled == false)
                 {
                     equipmentManager.UnequipTwoHandedWeaponFromShield();
-                }                             
+                }                           
                 equipmentManager.ResetAnimator();
                 break;
             case 21:

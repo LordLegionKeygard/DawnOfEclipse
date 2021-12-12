@@ -7,7 +7,7 @@ public class EquipmentManager : MonoBehaviour
 {
     public static EquipmentManager Instance; //синглтон, не явная зависимость
     public Equipment[] DefaultEquipment;
-    [HideInInspector] public Button ShieldButton;
+    public Button ShieldButton;
     [SerializeField] private EquipSlot[] _equipSlot;
     [SerializeField] private GameObject[] _hairEarsHead;
     [SerializeField] private SkinnedMeshRenderer[] _targetsMesh;
@@ -34,7 +34,6 @@ public class EquipmentManager : MonoBehaviour
 
     private void Start()
     {
-        ShieldButton = _equipSlot[21].icon.gameObject.GetComponentInParent<Button>();
         _inventory = Inventory.instance;
         int numSlots = System.Enum.GetNames(typeof(EquipmentSlot)).Length;
         _currentEquipment = new Equipment[numSlots];
@@ -358,6 +357,7 @@ public class EquipmentManager : MonoBehaviour
     public void ResetAnimator()
     {
         _anim.runtimeAnimatorController = Resources.Load("Animation/MainController") as RuntimeAnimatorController;
+        Debug.Log("ResetAnimator");
     }
 
     private void EquipDefaults()

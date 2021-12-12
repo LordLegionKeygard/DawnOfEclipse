@@ -1,12 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using TMPro;
 
 public class ArmorControl : MonoBehaviour
 {
 
-    [SerializeField] private Text armorText;
+    [SerializeField] private TextMeshProUGUI armorText;
     public int currentArmor = 0;
     public int torsoArmor;
     public int handRightArmor;
@@ -81,6 +81,6 @@ public class ArmorControl : MonoBehaviour
         shieldArmorPassive +
         shieldBlockArmor;
 
-        armorText.text = ("Armor: " + currentArmor.ToString());
+        armorText.text = (currentArmor.ToString());
     }
 }

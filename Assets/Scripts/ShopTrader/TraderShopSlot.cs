@@ -7,7 +7,7 @@ using TMPro;
 public class TraderShopSlot : MonoBehaviour
 {
     [SerializeField] private PlayerBank _playerBank;
-    [SerializeField] private BuySlot _buySlot;
+    [SerializeField] private SelectSlot _selectSlot;
     [SerializeField] private Image _icon;
     [SerializeField] private TextMeshProUGUI _priceText;
     [SerializeField] private TextMeshProUGUI _itemNameText;
@@ -16,7 +16,7 @@ public class TraderShopSlot : MonoBehaviour
     public Item Item;
     private void Start()
     {
-        _buySlot.UpdatePriceColorsEvent += UpdatePriceColor;
+        _selectSlot.UpdatePriceColorsEvent += UpdatePriceColor;
     }
 
     public void AddShopItem(Item newItem)
@@ -35,13 +35,13 @@ public class TraderShopSlot : MonoBehaviour
     {
         if (ItemShopPrice <= _playerBank.Coins)
         {
-            _buySlot.AddBuySlotItem(Item, ItemShopPrice);
+            _selectSlot.AddBuySlotItem(Item, ItemShopPrice, 0);
             _itemNameText.text = Item.name.ToString();
         }
         else
         {
             _itemNameText.text = "Need more moons";
-            _buySlot.ClearSlot();
+            _selectSlot.ClearSlot();
         }
     }
 

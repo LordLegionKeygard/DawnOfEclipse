@@ -8,6 +8,7 @@ public class Item : ScriptableObject
     public Sprite icon = null;
     public int maxStack;
     public int amount;
+    public int Price = 250;
     public bool isDefaultItem = false;
     public bool isStackable { get { return (maxStack > 1); } }
     public bool hasItem { get { return (CurrentItem != null); } }

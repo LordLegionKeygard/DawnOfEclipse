@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Sheep_Armor_Set
+  m_Name: _Armor_Set
   m_Shader: {fileID: 4800000, guid: e603b0446c7f2804db0c8dd0fb5c1af0, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -51,21 +51,21 @@ Material:
     m_Floats:
     - _BodyArt_Amount: 0
     - _Emission: 0
-    - _Metallic: 0.314
+    - _Metallic: 0.4
     - _Smoothness: 0
     - __dirty: 1
     m_Colors:
     - _Color_BodyArt: {r: 0.2283196, g: 0.5822246, b: 0.7573529, a: 1}
     - _Color_Eyes: {r: 0.2283196, g: 0.5822246, b: 0.7573529, a: 1}
-    - _Color_Hair: {r: 0.2627451, g: 0.21176471, b: 0.13333334, a: 0}
-    - _Color_Leather_Primary: {r: 0.282353, g: 0.2078432, b: 0.1647059, a: 0}
-    - _Color_Leather_Secondary: {r: 0.372549, g: 0.3294118, b: 0.2784314, a: 0}
-    - _Color_Metal_Dark: {r: 0.1764706, g: 0.1960784, b: 0.2156863, a: 0}
-    - _Color_Metal_Primary: {r: 0.5960785, g: 0.6117647, b: 0.627451, a: 0}
-    - _Color_Metal_Secondary: {r: 0.345098, g: 0.3764706, b: 0.3960785, a: 0}
-    - _Color_Primary: {r: 0.59607846, g: 0.6117647, b: 0.627451, a: 0}
+    - _Color_Hair: {r: 0.41509432, g: 0.24793269, b: 0.22908507, a: 0}
+    - _Color_Leather_Primary: {r: 0.15574935, g: 0.17221428, b: 0.18867922, a: 0}
+    - _Color_Leather_Secondary: {r: 0.8862745, g: 0.8862745, b: 0.88235295, a: 0}
+    - _Color_Metal_Dark: {r: 0.18431827, g: 0.24063033, b: 0.3584906, a: 0}
+    - _Color_Metal_Primary: {r: 0.13333334, g: 0.14901961, b: 0.36078432, a: 0}
+    - _Color_Metal_Secondary: {r: 0.7264151, g: 0.7264151, b: 0.7264151, a: 0}
+    - _Color_Primary: {r: 0.8867924, g: 0.8851192, b: 0.8826094, a: 0}
     - _Color_Scar: {r: 0.9294118, g: 0.6862745, b: 0.5921569, a: 1}
-    - _Color_Secondary: {r: 0.28235295, g: 0.20784314, b: 0.16470589, a: 0}
+    - _Color_Secondary: {r: 0.13333334, g: 0.14901961, b: 0.36078432, a: 0}
     - _Color_Skin: {r: 1, g: 0.8000001, b: 0.682353, a: 1}
-    - _Color_Stubble: {r: 0.8039216, g: 0.7019608, b: 0.6313726, a: 1}
+    - _Color_Stubble: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3486612109803667403}
   - component: {fileID: 3486612109803667402}
   m_Layer: 0
-  m_Name: EmptyArmorSet
+  m_Name: EmptyArmorSet(Full)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

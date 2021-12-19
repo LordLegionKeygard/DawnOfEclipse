@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Archer_Armor_Set
+  m_Name: "\u0421arapace_Armor_Set"
   m_Shader: {fileID: 4800000, guid: e603b0446c7f2804db0c8dd0fb5c1af0, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -51,18 +51,18 @@ Material:
     m_Floats:
     - _BodyArt_Amount: 0
     - _Emission: 0
-    - _Metallic: 0.314
+    - _Metallic: 0.3
     - _Smoothness: 0
     - __dirty: 1
     m_Colors:
     - _Color_BodyArt: {r: 0.2283196, g: 0.5822246, b: 0.7573529, a: 1}
     - _Color_Eyes: {r: 0.2283196, g: 0.5822246, b: 0.7573529, a: 1}
     - _Color_Hair: {r: 0.2627451, g: 0.21176471, b: 0.13333334, a: 0}
-    - _Color_Leather_Primary: {r: 0.282353, g: 0.2078432, b: 0.1647059, a: 0}
-    - _Color_Leather_Secondary: {r: 0.372549, g: 0.3294118, b: 0.2784314, a: 0}
-    - _Color_Metal_Dark: {r: 0.1764706, g: 0.1960784, b: 0.2156863, a: 0}
-    - _Color_Metal_Primary: {r: 0.5960785, g: 0.6117647, b: 0.627451, a: 0}
-    - _Color_Metal_Secondary: {r: 0.345098, g: 0.3764706, b: 0.3960785, a: 0}
+    - _Color_Leather_Primary: {r: 0.122641504, g: 0.058428265, b: 0.058428265, a: 0}
+    - _Color_Leather_Secondary: {r: 0.3137255, g: 0.16862746, b: 0.09803922, a: 0}
+    - _Color_Metal_Dark: {r: 0.13461198, g: 0.15265842, b: 0.23584908, a: 0}
+    - _Color_Metal_Primary: {r: 0.31132078, g: 0.16573495, b: 0.09545213, a: 0}
+    - _Color_Metal_Secondary: {r: 0.1254902, g: 0.05882353, b: 0.05882353, a: 0}
     - _Color_Primary: {r: 0.2431373, g: 0.4196079, b: 0.6196079, a: 0}
     - _Color_Scar: {r: 0.9294118, g: 0.6862745, b: 0.5921569, a: 1}
     - _Color_Secondary: {r: 0.8196079, g: 0.6431373, b: 0.2980392, a: 0}

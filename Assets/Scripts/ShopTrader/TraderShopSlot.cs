@@ -36,7 +36,7 @@ public class TraderShopSlot : MonoBehaviour
         if (ItemShopPrice <= _playerBank.Coins)
         {
             _selectSlot.AddBuySlotItem(Item, ItemShopPrice, 0);
-            _itemNameText.text = Item.name.ToString();
+            _itemNameText.text = Item.Name[0]; // Will need Static Language Number
         }
         else
         {

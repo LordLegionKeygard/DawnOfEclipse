@@ -14,6 +14,7 @@ public class Item : ScriptableObject
     public bool hasItem { get { return (CurrentItem != null); } }
     private InventorySlot inventorySlot;
     public bool isUsedItem = false;
+    public string[] Name; //0 eng, 1 rus 
     public virtual void Use()
     {
         Debug.Log("Using " + name);

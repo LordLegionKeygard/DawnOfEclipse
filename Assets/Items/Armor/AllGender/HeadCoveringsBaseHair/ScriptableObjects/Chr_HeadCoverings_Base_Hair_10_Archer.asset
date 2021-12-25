@@ -10,18 +10,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
-  m_Name: Chr_HeadCoverings_Base_Hair_02
+  m_Name: Chr_HeadCoverings_Base_Hair_10_Archer
   m_EditorClassIdentifier: 
   CurrentItem: {fileID: 0}
-  icon: {fileID: 21300000, guid: 44bd1bf855b9c2546bb41d658141855f, type: 3}
+  icon: {fileID: 21300000, guid: 4d9676404ff2df048b69354e349a8064, type: 3}
   maxStack: 1
   amount: 0
+  Price: 250
   isDefaultItem: 0
   isUsedItem: 0
+  Name:
+  - Archer Hat
+  - "\u0428\u043B\u044F\u043F\u0430 \u041B\u0443\u0447\u043D\u0438\u043A\u0430"
   equipSlot: 0
-  armorModifier: 2
-  mesh: {fileID: 2412270070579298261, guid: de9aac84e4c8a6548a2f71e4c9556897, type: 3}
+  armorModifier: 6
+  mesh: {fileID: 8490328563219934902, guid: 5ccc5279f33b91b4eb960b8d0edd7274, type: 3}
   prefab: {fileID: 0}
   hatNumber: 0
   noHair: 0
   canChangehead: 1
+  weapon: 0
+  twoHandedWeapon: 0
+  shield: 0
+  shieldBlockArmorModifier: 0
+  FirstAttachmentNumber: 0
+  SecondAttachmentNumber: 0

@@ -10,14 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
-  m_Name: Chr_HeadCoverings_Base_Hair_11
+  m_Name: Chr_HeadCoverings_Base_Hair_11_EliteScout
   m_EditorClassIdentifier: 
   CurrentItem: {fileID: 0}
   icon: {fileID: 21300000, guid: e063a2401df73b54e9fc93aa7bd1eae1, type: 3}
   maxStack: 1
   amount: 0
+  Price: 250
   isDefaultItem: 0
   isUsedItem: 0
+  Name:
+  - Elite Scout Hat
+  - "\u0428\u043B\u044F\u043F\u0430 \u042D\u043B\u0438\u0442\u043D\u043E\u0433\u043E
+    \u0420\u0430\u0437\u0432\u0435\u0434\u0447\u0438\u043A\u0430"
   equipSlot: 0
   armorModifier: 13
   mesh: {fileID: 6714428503418473069, guid: d8b7ce4e4d8a8b249aed9a3a7b6e5f3e, type: 3}
@@ -25,3 +30,9 @@ MonoBehaviour:
   hatNumber: 0
   noHair: 0
   canChangehead: 1
+  weapon: 0
+  twoHandedWeapon: 0
+  shield: 0
+  shieldBlockArmorModifier: 0
+  FirstAttachmentNumber: 0
+  SecondAttachmentNumber: 0

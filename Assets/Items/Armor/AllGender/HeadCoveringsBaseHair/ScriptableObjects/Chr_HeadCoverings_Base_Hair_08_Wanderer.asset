@@ -10,18 +10,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
-  m_Name: Chr_HeadCoverings_Base_Hair_01
+  m_Name: Chr_HeadCoverings_Base_Hair_08_Wanderer
   m_EditorClassIdentifier: 
   CurrentItem: {fileID: 0}
-  icon: {fileID: 21300000, guid: 83a08a2fc392ad1489caa68eef475f55, type: 3}
+  icon: {fileID: 21300000, guid: 5431c650a746bf04f8b6ee151417fba1, type: 3}
   maxStack: 1
   amount: 0
+  Price: 250
   isDefaultItem: 0
   isUsedItem: 0
+  Name:
+  - Wanderer Hat
+  - "\u0428\u043B\u044F\u043F\u0430 \u0421\u0442\u0440\u0430\u043D\u043D\u0438\u043A\u0430"
   equipSlot: 0
-  armorModifier: 3
-  mesh: {fileID: 921220138459812336, guid: e1cb2e41251215b4784f2f976d1e8558, type: 3}
+  armorModifier: 7
+  mesh: {fileID: 2048288737187911202, guid: 18ace5e0cb5722741841a34e76e2cfa9, type: 3}
   prefab: {fileID: 0}
   hatNumber: 0
   noHair: 0
   canChangehead: 1
+  weapon: 0
+  twoHandedWeapon: 0
+  shield: 0
+  shieldBlockArmorModifier: 0
+  FirstAttachmentNumber: 0
+  SecondAttachmentNumber: 0

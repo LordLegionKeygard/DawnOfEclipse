@@ -55,12 +55,10 @@ public class Inventory : MonoBehaviour {
 		return true;
 	}
 
-	// Remove an item
 	public void RemoveItemFromInventoryList (Item item)
 	{
-		items.Remove(item);		// Remove item from list
+		items.Remove(item);
 
-		// Trigger callback
 		if (onItemChangedCallback != null)
 			onItemChangedCallback.Invoke();
 	}

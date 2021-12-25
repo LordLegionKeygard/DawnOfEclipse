@@ -78,11 +78,18 @@ public class SelectSlot : MonoBehaviour
         ClearSlot();
         UpdatePriceColorsEvent?.Invoke();
         _itemNameText1.text = "Select item";
-        _inventory.items[_slotNumber].RemoveFromInventory();
-        _inventorySlot[_slotNumber].ClearSlot();
-        _inventorySellSlot[_slotNumber].ClearSlot();
+        _inventory.items[_slotNumber].RemoveFromInventory();      
         _sellButton.interactable = false;
         _buyButton.interactable = false;
+        UpdateAllSellSlots();
+    }
+
+    private void UpdateAllSellSlots()
+    {
+        foreach (var slot in _inventorySellSlot)
+        {
+            slot.UpdateSlot();
+        }
     }
 
     private void OnDisable()

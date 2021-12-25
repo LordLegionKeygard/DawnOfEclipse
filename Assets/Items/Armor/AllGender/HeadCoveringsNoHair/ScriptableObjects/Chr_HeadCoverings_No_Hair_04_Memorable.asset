@@ -10,18 +10,29 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
-  m_Name: Chr_HeadCoverings_No_Hair_02
+  m_Name: Chr_HeadCoverings_No_Hair_04_Memorable
   m_EditorClassIdentifier: 
   CurrentItem: {fileID: 0}
-  icon: {fileID: 21300000, guid: 2b5449e9380bcea4ba9bdc4a30f42f76, type: 3}
+  icon: {fileID: 21300000, guid: 4bd912e950b597742aefd3fa12315419, type: 3}
   maxStack: 1
   amount: 0
+  Price: 250
   isDefaultItem: 0
   isUsedItem: 0
+  Name:
+  - Memorable Plate Helmet
+  - "\u041D\u0435\u0437\u0430\u0431\u0432\u0435\u043D\u043D\u044B\u0439 \u041B\u0430\u0442\u043D\u044B\u0439
+    \u0428\u043B\u0435\u043C"
   equipSlot: 0
-  armorModifier: 26
-  mesh: {fileID: 2314369417994790274, guid: be51762b48f0085488d596b94987da2a, type: 3}
+  armorModifier: 25
+  mesh: {fileID: 1150069071056333178, guid: 0c8d79b07bea8f44ba41698a9855eff1, type: 3}
   prefab: {fileID: 0}
   hatNumber: 1
   noHair: 1
   canChangehead: 1
+  weapon: 0
+  twoHandedWeapon: 0
+  shield: 0
+  shieldBlockArmorModifier: 0
+  FirstAttachmentNumber: 6
+  SecondAttachmentNumber: 0

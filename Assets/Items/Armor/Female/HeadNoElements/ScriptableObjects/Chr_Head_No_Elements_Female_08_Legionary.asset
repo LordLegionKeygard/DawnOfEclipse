@@ -10,18 +10,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
-  m_Name: Chr_Head_No_Elements_Female_01
+  m_Name: Chr_Head_No_Elements_Female_08_Legionary
   m_EditorClassIdentifier: 
   CurrentItem: {fileID: 0}
-  icon: {fileID: 21300000, guid: 551d4a2485cee0b458f12abac6673a76, type: 3}
+  icon: {fileID: 21300000, guid: 43afd67f5f52e1e40a9244033acca213, type: 3}
   maxStack: 1
   amount: 0
+  Price: 250
   isDefaultItem: 0
   isUsedItem: 0
+  Name:
+  - Legionary Helmet
+  - "\u0428\u043B\u0435\u043C \u041B\u0435\u0433\u0438\u043E\u043D\u0435\u0440\u0430"
   equipSlot: 0
-  armorModifier: 17
-  mesh: {fileID: 1501822854626067604, guid: c6c5542a2a927274aa83c02c44d8ebef, type: 3}
+  armorModifier: 33
+  mesh: {fileID: 5984194921244061511, guid: d91b77eb06d53934485578912ae3b95c, type: 3}
   prefab: {fileID: 0}
   hatNumber: 2
   noHair: 2
   canChangehead: 1
+  weapon: 0
+  twoHandedWeapon: 0
+  shield: 0
+  shieldBlockArmorModifier: 0
+  FirstAttachmentNumber: 6
+  SecondAttachmentNumber: 0

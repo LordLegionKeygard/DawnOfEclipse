@@ -10,14 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
-  m_Name: Chr_HeadCoverings_No_Hair_07
+  m_Name: Chr_HeadCoverings_No_Hair_07_Manticore
   m_EditorClassIdentifier: 
   CurrentItem: {fileID: 0}
   icon: {fileID: 21300000, guid: 832c8da8afea0694cb593976efa0ffcd, type: 3}
   maxStack: 1
   amount: 0
+  Price: 250
   isDefaultItem: 0
   isUsedItem: 0
+  Name:
+  - Manticore Skin Hood
+  - "\u041A\u0430\u043F\u044E\u0448\u043E\u043D \u0438\u0437 \u0428\u043A\u0443\u0440\u044B
+    \u041C\u0430\u043D\u0442\u0438\u043A\u043E\u0440\u044B"
   equipSlot: 0
   armorModifier: 20
   mesh: {fileID: 7344309313383846659, guid: d488437a781201f46a8cbb1deb765d01, type: 3}
@@ -25,3 +30,9 @@ MonoBehaviour:
   hatNumber: 1
   noHair: 1
   canChangehead: 1
+  weapon: 0
+  twoHandedWeapon: 0
+  shield: 0
+  shieldBlockArmorModifier: 0
+  FirstAttachmentNumber: 0
+  SecondAttachmentNumber: 0

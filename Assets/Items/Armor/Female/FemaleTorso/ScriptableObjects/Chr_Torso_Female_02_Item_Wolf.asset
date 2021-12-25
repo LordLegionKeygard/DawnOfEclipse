@@ -20,9 +20,9 @@ MonoBehaviour:
   isDefaultItem: 0
   isUsedItem: 0
   Name:
-  - Wolf Leather Armor
-  - "\u0412\u043E\u043B\u0447\u044C\u044F \u041A\u043E\u0436\u0430\u043D\u0430\u044F
-    \u0411\u0440\u043E\u043D\u044F"
+  - Wolf Skin Shirt
+  - "\u0420\u0443\u0431\u0430\u0445\u0430 \u0438\u0437 \u0428\u043A\u0443\u0440\u044B
+    \u0412\u043E\u043B\u043A\u0430"
   equipSlot: 1
   armorModifier: 15
   mesh: {fileID: 7468844054330769146, guid: fbc1d587ada49e147913dcba89219ff0, type: 3}
@@ -34,3 +34,5 @@ MonoBehaviour:
   twoHandedWeapon: 0
   shield: 0
   shieldBlockArmorModifier: 0
+  FirstAttachmentNumber: 0
+  SecondAttachmentNumber: 0

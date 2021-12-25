@@ -10,6 +10,7 @@ public class EquipmentManager : MonoBehaviour
     public Button ShieldButton;
     [SerializeField] private EquipSlot[] _equipSlot;
     [SerializeField] private GameObject[] _hairEarsHead;
+    [SerializeField] private GameObject[] _headAttachment;
     [SerializeField] private SkinnedMeshRenderer[] _targetsMesh;
     [SerializeField] private Transform[] _weaponsAttachPoints;
     [SerializeField] private Animator _anim;
@@ -49,6 +50,7 @@ public class EquipmentManager : MonoBehaviour
     {
         if (newItem.canChangehead)
         {
+            InActiveAllHeadAttachment();
             switch (newItem.noHair)
             {
                 case 0: //withAll
@@ -61,9 +63,17 @@ public class EquipmentManager : MonoBehaviour
                     _hairEarsHead[2].SetActive(true);
                     break;
                 case 2: //fullHelmet
-                    ActiveAllHeadElements(1);                   
+                    ActiveAllHeadElements(1);
                     break;
             }
+        }
+        if (newItem.FirstAttachmentNumber > 0)
+        {
+            _headAttachment[newItem.FirstAttachmentNumber].SetActive(true);
+        }
+        if (newItem.SecondAttachmentNumber > 0)
+        {
+            _headAttachment[newItem.SecondAttachmentNumber].SetActive(true);
         }
         if (newItem.weapon == true)
         {
@@ -102,6 +112,8 @@ public class EquipmentManager : MonoBehaviour
         }
     }
 
+    public void InActiveAllHeadAttachment() { foreach (var item in _headAttachment) item.SetActive(false); }
+
     public void UnequipTwoHandedWeaponFromShield()
     {
         ShieldButton.enabled = true;
@@ -116,7 +128,6 @@ public class EquipmentManager : MonoBehaviour
         {
             oldItem = _currentEquipment[slotIndex];
             _inventory.Add(oldItem);
-            // if (slotIndex == 0) { ActiveAllHeadElements(0); }
 
             if (slotIndex == 19 || slotIndex == 20)
             {

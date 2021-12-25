@@ -20,9 +20,8 @@ MonoBehaviour:
   isDefaultItem: 0
   isUsedItem: 0
   Name:
-  - Fanatic Leather Tunic
-  - "\u041A\u043E\u0436\u0430\u043D\u0430\u044F \u0422\u0443\u043D\u0438\u043A\u0430
-    \u0424\u0430\u043D\u0430\u0442\u0438\u043A\u0430"
+  - Fanatic Tunic
+  - "\u0422\u0443\u043D\u0438\u043A\u0430 \u0424\u0430\u043D\u0430\u0442\u0438\u043A\u0430"
   equipSlot: 1
   armorModifier: 14
   mesh: {fileID: 3235181388991344339, guid: a4cdb8365d631ec4894fcc62940d7611, type: 3}
@@ -34,3 +33,5 @@ MonoBehaviour:
   twoHandedWeapon: 0
   shield: 0
   shieldBlockArmorModifier: 0
+  FirstAttachmentNumber: 0
+  SecondAttachmentNumber: 0

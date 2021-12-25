@@ -10,18 +10,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
-  m_Name: Chr_Head_No_Elements_Female_09
+  m_Name: Chr_Head_No_Elements_Female_03_FullPlate
   m_EditorClassIdentifier: 
   CurrentItem: {fileID: 0}
-  icon: {fileID: 21300000, guid: 521ce8e4c18f8ac4db334273d851d068, type: 3}
+  icon: {fileID: 21300000, guid: 521a998912bcaa5488fc9e629429d641, type: 3}
   maxStack: 1
   amount: 0
+  Price: 250
   isDefaultItem: 0
   isUsedItem: 0
+  Name:
+  - Full Plate Helmet
+  - "\u041F\u043E\u043B\u043D\u044B\u0439 \u041B\u0430\u0442\u043D\u044B\u0439 \u0428\u043B\u0435\u043C"
   equipSlot: 0
-  armorModifier: 31
-  mesh: {fileID: 3934089860324835958, guid: d505de29a92160a4bab88d2f31ee5c56, type: 3}
+  armorModifier: 39
+  mesh: {fileID: 7192426989327998409, guid: fcbf7d26a6ff01547bada6f72d26e82c, type: 3}
   prefab: {fileID: 0}
   hatNumber: 2
   noHair: 2
   canChangehead: 1
+  weapon: 0
+  twoHandedWeapon: 0
+  shield: 0
+  shieldBlockArmorModifier: 0
+  FirstAttachmentNumber: 1
+  SecondAttachmentNumber: 0

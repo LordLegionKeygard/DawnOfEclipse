@@ -10,18 +10,29 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
-  m_Name: Chr_Head_No_Elements_Female_11
+  m_Name: Chr_Head_No_Elements_Female_04_SandGolem
   m_EditorClassIdentifier: 
   CurrentItem: {fileID: 0}
-  icon: {fileID: 21300000, guid: eb367cfc57c1fe94ebaa77f78865929b, type: 3}
+  icon: {fileID: 21300000, guid: 506b3de3526752e429f5f3392e9d0ac5, type: 3}
   maxStack: 1
   amount: 0
+  Price: 250
   isDefaultItem: 0
   isUsedItem: 0
+  Name:
+  - Sand Golem Helmet
+  - "\u0428\u043B\u0435\u043C \u041F\u0435\u0441\u0447\u0430\u043D\u043E\u0433\u043E
+    \u0413\u043E\u043B\u0435\u043C\u0430"
   equipSlot: 0
-  armorModifier: 29
-  mesh: {fileID: 6511125740039594085, guid: de0ae7e5d0c72f849a8f3c86ec434c51, type: 3}
+  armorModifier: 38
+  mesh: {fileID: 7596856198804127899, guid: d3a581e21a49c204f8e9eba775f024a8, type: 3}
   prefab: {fileID: 0}
   hatNumber: 2
   noHair: 2
   canChangehead: 1
+  weapon: 0
+  twoHandedWeapon: 0
+  shield: 0
+  shieldBlockArmorModifier: 0
+  FirstAttachmentNumber: 0
+  SecondAttachmentNumber: 0

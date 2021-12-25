@@ -10,18 +10,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
-  m_Name: Chr_Head_No_Elements_Female_12
+  m_Name: Chr_Head_No_Elements_Female_06_Demon
   m_EditorClassIdentifier: 
   CurrentItem: {fileID: 0}
-  icon: {fileID: 21300000, guid: d4b4b98c32ff119469eeccbdec7c1323, type: 3}
+  icon: {fileID: 21300000, guid: 1875e31fab05f7844821a7e3962cf410, type: 3}
   maxStack: 1
   amount: 0
+  Price: 250
   isDefaultItem: 0
   isUsedItem: 0
+  Name:
+  - Demon Helmet
+  - "\u0414\u0435\u043C\u043E\u043D\u0438\u0447\u0435\u0441\u043A\u0438\u0439 \u0428\u043B\u0435\u043C"
   equipSlot: 0
-  armorModifier: 37
-  mesh: {fileID: 6070032566346882289, guid: d0cdcb2c3eda09d45959aeae3c728064, type: 3}
+  armorModifier: 30
+  mesh: {fileID: 6546076064043356761, guid: bae27d85a95ae874b89d69c0be075f16, type: 3}
   prefab: {fileID: 0}
   hatNumber: 2
   noHair: 2
   canChangehead: 1
+  weapon: 0
+  twoHandedWeapon: 0
+  shield: 0
+  shieldBlockArmorModifier: 0
+  FirstAttachmentNumber: 7
+  SecondAttachmentNumber: 0

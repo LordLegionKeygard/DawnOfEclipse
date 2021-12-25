@@ -45,7 +45,7 @@ public class InventorySellSlot : MonoBehaviour
         if (Item != null)
         {
             _selectSlot.AddBuySlotItem(Item, Item.Price, _slotNumber);
-            _itemNameText.text = Item.name.ToString();
+            _itemNameText.text = Item.Name[0];
         }
     }
 }

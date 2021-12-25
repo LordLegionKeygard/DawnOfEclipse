@@ -10,18 +10,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
-  m_Name: Chr_Head_No_Elements_Female_10
+  m_Name: Chr_Head_No_Elements_Female_07_Carapace
   m_EditorClassIdentifier: 
   CurrentItem: {fileID: 0}
-  icon: {fileID: 21300000, guid: b4df7dc19cc9f3745b435824c9d27db5, type: 3}
+  icon: {fileID: 21300000, guid: 9aeb0d95680858d48a36b34a9282a7b0, type: 3}
   maxStack: 1
   amount: 0
+  Price: 250
   isDefaultItem: 0
   isUsedItem: 0
+  Name:
+  - Carapace Helmet
+  - "\u041F\u0430\u043D\u0446\u0438\u0440\u043D\u044B\u0439 \u0428\u043B\u0435\u043C"
   equipSlot: 0
-  armorModifier: 40
-  mesh: {fileID: 4957251162125480661, guid: c640b0e89b040674da64050e830a4b0b, type: 3}
+  armorModifier: 32
+  mesh: {fileID: 668981963518534742, guid: ee4f2078a2352c34fa870506d71a4194, type: 3}
   prefab: {fileID: 0}
   hatNumber: 2
   noHair: 2
   canChangehead: 1
+  weapon: 0
+  twoHandedWeapon: 0
+  shield: 0
+  shieldBlockArmorModifier: 0
+  FirstAttachmentNumber: 0
+  SecondAttachmentNumber: 0

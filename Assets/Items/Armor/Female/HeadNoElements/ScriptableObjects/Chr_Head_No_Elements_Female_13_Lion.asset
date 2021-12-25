@@ -10,18 +10,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
-  m_Name: Chr_Head_No_Elements_Female_03
+  m_Name: Chr_Head_No_Elements_Female_13_Lion
   m_EditorClassIdentifier: 
   CurrentItem: {fileID: 0}
-  icon: {fileID: 21300000, guid: 521a998912bcaa5488fc9e629429d641, type: 3}
+  icon: {fileID: 21300000, guid: e3c21722a91c4ab47b68470db6e895f3, type: 3}
   maxStack: 1
   amount: 0
+  Price: 250
   isDefaultItem: 0
   isUsedItem: 0
+  Name:
+  - Lion Helmet
+  - "\u0428\u043B\u0435\u043C \u041B\u044C\u0432\u0430"
   equipSlot: 0
-  armorModifier: 39
-  mesh: {fileID: 7192426989327998409, guid: fcbf7d26a6ff01547bada6f72d26e82c, type: 3}
+  armorModifier: 35
+  mesh: {fileID: 1600254553888998662, guid: 4ae2546e2dd97c449a17cf9e4c6df616, type: 3}
   prefab: {fileID: 0}
   hatNumber: 2
   noHair: 2
   canChangehead: 1
+  weapon: 0
+  twoHandedWeapon: 0
+  shield: 0
+  shieldBlockArmorModifier: 0
+  FirstAttachmentNumber: 10
+  SecondAttachmentNumber: 0

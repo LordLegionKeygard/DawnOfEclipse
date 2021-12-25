@@ -10,18 +10,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
-  m_Name: Chr_Head_No_Elements_Female_13
+  m_Name: Chr_Head_No_Elements_Female_10_BlackRider
   m_EditorClassIdentifier: 
   CurrentItem: {fileID: 0}
-  icon: {fileID: 21300000, guid: e3c21722a91c4ab47b68470db6e895f3, type: 3}
+  icon: {fileID: 21300000, guid: b4df7dc19cc9f3745b435824c9d27db5, type: 3}
   maxStack: 1
   amount: 0
+  Price: 250
   isDefaultItem: 0
   isUsedItem: 0
+  Name:
+  - Black Rider Helmet
+  - "\u0428\u043B\u0435\u043C \u0427\u0435\u0440\u043D\u043E\u0433\u043E \u0412\u0441\u0430\u0434\u043D\u0438\u043A\u0430"
   equipSlot: 0
-  armorModifier: 35
-  mesh: {fileID: 1600254553888998662, guid: 4ae2546e2dd97c449a17cf9e4c6df616, type: 3}
+  armorModifier: 40
+  mesh: {fileID: 4957251162125480661, guid: c640b0e89b040674da64050e830a4b0b, type: 3}
   prefab: {fileID: 0}
   hatNumber: 2
   noHair: 2
   canChangehead: 1
+  weapon: 0
+  twoHandedWeapon: 0
+  shield: 0
+  shieldBlockArmorModifier: 0
+  FirstAttachmentNumber: 2
+  SecondAttachmentNumber: 0

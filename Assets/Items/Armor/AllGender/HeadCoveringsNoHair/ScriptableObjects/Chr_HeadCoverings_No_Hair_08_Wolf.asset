@@ -10,18 +10,29 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
-  m_Name: Chr_HeadCoverings_No_Hair_03
+  m_Name: Chr_HeadCoverings_No_Hair_08_Wolf
   m_EditorClassIdentifier: 
   CurrentItem: {fileID: 0}
-  icon: {fileID: 21300000, guid: 5e647ae6a5e205846adf99ef4659200f, type: 3}
+  icon: {fileID: 21300000, guid: 1a50b221a846ff64cbe70dedc1a3aed8, type: 3}
   maxStack: 1
   amount: 0
+  Price: 250
   isDefaultItem: 0
   isUsedItem: 0
+  Name:
+  - Wolf Skin Hood
+  - "\u041A\u0430\u043F\u044E\u0448\u043E\u043D \u0438\u0437 \u0428\u043A\u0443\u0440\u044B
+    \u0412\u043E\u043B\u043A\u0430"
   equipSlot: 0
-  armorModifier: 17
-  mesh: {fileID: 1295757590479326440, guid: cf3823b8b2166ff469aff575359efcfc, type: 3}
+  armorModifier: 21
+  mesh: {fileID: 4476356558496408693, guid: f0289bf78d379a846847969644992f3d, type: 3}
   prefab: {fileID: 0}
   hatNumber: 1
   noHair: 1
   canChangehead: 1
+  weapon: 0
+  twoHandedWeapon: 0
+  shield: 0
+  shieldBlockArmorModifier: 0
+  FirstAttachmentNumber: 0
+  SecondAttachmentNumber: 0

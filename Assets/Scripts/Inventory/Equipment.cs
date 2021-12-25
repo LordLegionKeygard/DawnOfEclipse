@@ -16,6 +16,8 @@ public class Equipment : Item
     public bool twoHandedWeapon;
     public bool shield;
     public int shieldBlockArmorModifier;
+    public int FirstAttachmentNumber;
+    public int SecondAttachmentNumber;
     public override void Use()
     {
         base.Use();

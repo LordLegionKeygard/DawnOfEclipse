@@ -24,7 +24,7 @@ MonoBehaviour:
   - "\u041A\u043E\u043B\u044C\u0447\u0443\u0436\u043D\u0430\u044F \u0411\u0440\u043E\u043D\u044F
     \u0424\u0430\u0440\u0430\u043E\u043D\u0430"
   equipSlot: 1
-  armorModifier: 30
+  armorModifier: 80
   mesh: {fileID: 244204137268829597, guid: 88af3431e51808248be8481a84caac5c, type: 3}
   prefab: {fileID: 0}
   hatNumber: 0
@@ -34,3 +34,5 @@ MonoBehaviour:
   twoHandedWeapon: 0
   shield: 0
   shieldBlockArmorModifier: 0
+  FirstAttachmentNumber: 0
+  SecondAttachmentNumber: 0

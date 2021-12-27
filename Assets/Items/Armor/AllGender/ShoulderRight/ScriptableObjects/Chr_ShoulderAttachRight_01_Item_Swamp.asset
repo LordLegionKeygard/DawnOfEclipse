@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
+  m_Name: Chr_ShoulderAttachRight_01_Item_Swamp
+  m_EditorClassIdentifier: 
+  CurrentItem: {fileID: 0}
+  icon: {fileID: 21300000, guid: 3756e290016a2cb40a7a3f394c8a66db, type: 3}
+  maxStack: 1
+  amount: 0
+  Price: 250
+  isDefaultItem: 0
+  isUsedItem: 0
+  Name:
+  - Swamp Right Shoulder
+  - "\u041F\u0440\u0430\u0432\u044B\u0439 \u0411\u043E\u043B\u043E\u0442\u043D\u044B\u0439
+    \u041D\u0430\u043F\u043B\u0435\u0447\u043D\u0438\u043A"
+  equipSlot: 12
+  armorModifier: 12
+  mesh: {fileID: 3890641904811170059, guid: 0b144a919610d84478609f482226dfdc, type: 3}
+  prefab: {fileID: 0}
+  hatNumber: 0
+  noHair: 0
+  canChangehead: 0
+  weapon: 0
+  twoHandedWeapon: 0
+  shield: 0
+  shieldBlockArmorModifier: 0
+  FirstAttachmentNumber: 0
+  SecondAttachmentNumber: 0

@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
+  m_Name: Chr_ShoulderAttachRight_21_Item_Horned
+  m_EditorClassIdentifier: 
+  CurrentItem: {fileID: 0}
+  icon: {fileID: 21300000, guid: 17ce4b395dc1caa40aceebde8c6d7d20, type: 3}
+  maxStack: 1
+  amount: 0
+  Price: 250
+  isDefaultItem: 0
+  isUsedItem: 0
+  Name:
+  - Horned Right Shoulder
+  - "\u041F\u0440\u0430\u0432\u044B\u0439 \u0420\u043E\u0433\u0430\u0442\u044B\u0439
+    \u041D\u0430\u043F\u043B\u0435\u0447\u043D\u0438\u043A"
+  equipSlot: 12
+  armorModifier: 10
+  mesh: {fileID: 8957802575627189696, guid: 6ffdbb7cc43908449b0bc95fa37bfe3e, type: 3}
+  prefab: {fileID: 0}
+  hatNumber: 0
+  noHair: 0
+  canChangehead: 0
+  weapon: 0
+  twoHandedWeapon: 0
+  shield: 0
+  shieldBlockArmorModifier: 0
+  FirstAttachmentNumber: 0
+  SecondAttachmentNumber: 0

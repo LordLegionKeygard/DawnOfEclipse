@@ -20,9 +20,8 @@ MonoBehaviour:
   isDefaultItem: 0
   isUsedItem: 0
   Name:
-  - Ancient Golden Left Shoulder
-  - "\u041B\u0435\u0432\u044B\u0439 \u0417\u043E\u043B\u043E\u0442\u043E\u0439 \u0414\u0440\u0435\u0432\u043D\u0438\u0439
-    \u041D\u0430\u043F\u043B\u0435\u0447\u043D\u0438\u043A"
+  - Ancient Left Shoulder
+  - "\u041B\u0435\u0432\u044B\u0439 \u0414\u0440\u0435\u0432\u043D\u0438\u0439 \u041D\u0430\u043F\u043B\u0435\u0447\u043D\u0438\u043A"
   equipSlot: 13
   armorModifier: 16
   mesh: {fileID: 5695392244477409129, guid: 50b2d5b6156d1b04a9fbe67ed61d4cd3, type: 3}

@@ -10,22 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
-  m_Name: Chr_ArmUpperLeft_Female_16_Item_Worker
+  m_Name: Chr_ArmUpperRight_Female_16_Item_Savage
   m_EditorClassIdentifier: 
   CurrentItem: {fileID: 0}
-  icon: {fileID: 21300000, guid: 50115f3b990b6114ea5ecc1760628f4a, type: 3}
+  icon: {fileID: 21300000, guid: 2e19717d9caee474aa777cecda518dc2, type: 3}
   maxStack: 1
   amount: 0
   Price: 250
   isDefaultItem: 0
   isUsedItem: 0
   Name:
-  - Worker Left Forearm
-  - "\u041B\u0435\u0432\u044B\u0439 \u041F\u0440\u0435\u0434\u043F\u043B\u0435\u0447\u043D\u0438\u043A
-    \u0420\u0430\u0431\u043E\u0447\u0435\u0433\u043E"
-  equipSlot: 8
+  - Savage Right Forearm
+  - "\u041F\u0440\u0430\u0432\u044B\u0439 \u041F\u0440\u0435\u0434\u043F\u043B\u0435\u0447\u043D\u0438\u043A
+    \u0414\u0438\u043A\u0430\u0440\u044F"
+  equipSlot: 7
   armorModifier: 2
-  mesh: {fileID: 7019812226784269485, guid: a85f3926cfbbc404092b3ccd5f3cbe04, type: 3}
+  mesh: {fileID: 6798205616430894564, guid: 7ee128cb300ec5a419e03866e8ac6a91, type: 3}
   prefab: {fileID: 0}
   hatNumber: 0
   noHair: 0

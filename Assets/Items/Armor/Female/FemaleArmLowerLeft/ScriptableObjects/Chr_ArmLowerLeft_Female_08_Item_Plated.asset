@@ -10,21 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
-  m_Name: Chr_Hips_Female_01_Item_Worker
+  m_Name: Chr_ArmLowerLeft_Female_08_Item_Plated
   m_EditorClassIdentifier: 
   CurrentItem: {fileID: 0}
-  icon: {fileID: 21300000, guid: 6e6a40838a99ed141b881ee700323c6f, type: 3}
+  icon: {fileID: 21300000, guid: edd840122092cce428221f240b537aa6, type: 3}
   maxStack: 1
   amount: 0
   Price: 250
   isDefaultItem: 0
   isUsedItem: 0
   Name:
-  - Worker Gaiters
-  - "\u041D\u0430\u0431\u0435\u0434\u0440\u0435\u043D\u043D\u0438\u043A\u0438 \u0420\u0430\u0431\u043E\u0447\u0435\u0433\u043E"
-  equipSlot: 2
-  armorModifier: 4
-  mesh: {fileID: 494492676588476099, guid: a7e95182db3f4c3409fc91720d946129, type: 3}
+  - Plated Leather Left Bracer
+  - "\u041B\u0435\u0432\u044B\u0439 \u041B\u0430\u0442\u043D\u044B\u0439 \u041A\u043E\u0436\u0430\u043D\u044B\u0439
+    \u041D\u0430\u0440\u0443\u0447"
+  equipSlot: 10
+  armorModifier: 7
+  mesh: {fileID: 3153135984889283497, guid: 99dd60d6a4b0beb43819b60a84d15ba0, type: 3}
   prefab: {fileID: 0}
   hatNumber: 0
   noHair: 0

@@ -16,8 +16,12 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: 456d4c0657abf844eba9bbefd81635d8, type: 3}
   maxStack: 1
   amount: 0
+  Price: 250
   isDefaultItem: 0
   isUsedItem: 0
+  Name:
+  - ' Left Glove'
+  - "\u041B\u0435\u0432\u0430\u044F \u041F\u0435\u0440\u0447\u0430\u0442\u043A\u0430"
   equipSlot: 6
   armorModifier: 17
   mesh: {fileID: 3240547167875005421, guid: e9a0165a25e169449a399209885952be, type: 3}
@@ -25,3 +29,9 @@ MonoBehaviour:
   hatNumber: 0
   noHair: 0
   canChangehead: 0
+  weapon: 0
+  twoHandedWeapon: 0
+  shield: 0
+  shieldBlockArmorModifier: 0
+  FirstAttachmentNumber: 0
+  SecondAttachmentNumber: 0

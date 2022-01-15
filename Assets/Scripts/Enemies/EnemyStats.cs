@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class EnemyStats : CharacterStats
 {
+    [SerializeField] private UIEnemyHealthBar enemyHealthBar;
     private Collider col;
-    private EnemyAnimatorManager enemyAnimatorManager;
-    public UIEnemyHealthBar enemyHealthBar;
+    private EnemyAnimatorManager enemyAnimatorManager;  
     private CameraLockOnTarget cameraLockOnTarget;
     private EnemyManager enemyManager;
     private Rigidbody rb;
@@ -37,7 +37,7 @@ public class EnemyStats : CharacterStats
 
     public void TakeDamage(int damage)
     {
-        currentHealth = currentHealth - damage;
+        currentHealth -= damage;
 
         enemyHealthBar.SetHealth(currentHealth);
 

@@ -62,7 +62,7 @@ Material:
     - _Color_Leather_Secondary: {r: 0.3137255, g: 0.16862746, b: 0.09803922, a: 0}
     - _Color_Metal_Dark: {r: 0.13461198, g: 0.15265842, b: 0.23584908, a: 0}
     - _Color_Metal_Primary: {r: 0.31132078, g: 0.16573495, b: 0.09545213, a: 0}
-    - _Color_Metal_Secondary: {r: 0.1254902, g: 0.05882353, b: 0.05882353, a: 0}
+    - _Color_Metal_Secondary: {r: 0.62352943, g: 0.4509804, b: 0.24313726, a: 0}
     - _Color_Primary: {r: 0.6226415, g: 0.45036656, b: 0.24377, a: 0}
     - _Color_Scar: {r: 0.5, g: 0.2523585, b: 0.26226413, a: 1}
     - _Color_Secondary: {r: 0.5943396, g: 0.5092777, b: 0.40650585, a: 0}

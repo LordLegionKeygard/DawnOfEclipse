@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
+  m_Name: Chr_RightHand_Female_16_Item_Savage
+  m_EditorClassIdentifier: 
+  CurrentItem: {fileID: 0}
+  icon: {fileID: 21300000, guid: 466bc6a1014457040ae87ae0de0b99ee, type: 3}
+  maxStack: 1
+  amount: 0
+  Price: 250
+  isDefaultItem: 0
+  isUsedItem: 0
+  Name:
+  - Savage Right Glove
+  - "\u041F\u0440\u0430\u0432\u0430\u044F \u041F\u0435\u0440\u0447\u0430\u0442\u043A\u0430
+    \u0414\u0438\u043A\u0430\u0440\u044F"
+  equipSlot: 5
+  armorModifier: 2
+  mesh: {fileID: 7738966644249594549, guid: d359cf2bb45c04d4d88f43342e075cc8, type: 3}
+  prefab: {fileID: 0}
+  hatNumber: 0
+  noHair: 0
+  canChangehead: 0
+  weapon: 0
+  twoHandedWeapon: 0
+  shield: 0
+  shieldBlockArmorModifier: 0
+  FirstAttachmentNumber: 0
+  SecondAttachmentNumber: 0

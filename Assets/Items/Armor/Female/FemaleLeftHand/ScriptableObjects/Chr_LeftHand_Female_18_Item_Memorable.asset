@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Chr_LeftHand_Female_18_Item_Memorable
   m_EditorClassIdentifier: 
   CurrentItem: {fileID: 0}
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 3314cd87eabdaf644bf76414e30d0b1d, type: 3}
   maxStack: 1
   amount: 0
   Price: 250

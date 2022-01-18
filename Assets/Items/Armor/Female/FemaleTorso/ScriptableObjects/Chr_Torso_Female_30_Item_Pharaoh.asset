@@ -20,9 +20,8 @@ MonoBehaviour:
   isDefaultItem: 0
   isUsedItem: 0
   Name:
-  - Pharaon Chain Mail Armor
-  - "\u041A\u043E\u043B\u044C\u0447\u0443\u0436\u043D\u0430\u044F \u0411\u0440\u043E\u043D\u044F
-    \u0424\u0430\u0440\u0430\u043E\u043D\u0430"
+  - Pharaon Breastplate Armor
+  - "\u041A\u0438\u0440\u0430\u0441\u0430 \u0424\u0430\u0440\u0430\u043E\u043D\u0430"
   equipSlot: 1
   armorModifier: 80
   mesh: {fileID: 244204137268829597, guid: 88af3431e51808248be8481a84caac5c, type: 3}

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Chr_LeftHand_Female_20_Item_Hunter
   m_EditorClassIdentifier: 
   CurrentItem: {fileID: 0}
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 2f5bcb60368966b4bb15f0597d91a9d0, type: 3}
   maxStack: 1
   amount: 0
   Price: 250

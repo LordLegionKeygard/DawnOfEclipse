@@ -13,14 +13,14 @@ MonoBehaviour:
   m_Name: Chr_LeftHand_Female_29_Item_Manticore
   m_EditorClassIdentifier: 
   CurrentItem: {fileID: 0}
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: c33fdfb28e0a4474d87d467ab3ec2c38, type: 3}
   maxStack: 1
   amount: 0
   Price: 250
   isDefaultItem: 0
   isUsedItem: 0
   Name:
-  - Manticore Right Glove
+  - Manticore Skin Right Glove
   - "\u041B\u0435\u0432\u0430\u044F \u041F\u0435\u0440\u0447\u0430\u0442\u043A\u0430
     \u0438\u0437 \u0428\u043A\u0443\u0440\u044B \u041C\u0430\u043D\u0442\u0438\u043A\u043E\u0440\u044B"
   equipSlot: 6

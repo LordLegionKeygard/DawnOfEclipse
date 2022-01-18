@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Chr_LeftHand_Female_30_Item_Pharaoh
   m_EditorClassIdentifier: 
   CurrentItem: {fileID: 0}
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 969d6a0cf8588e84b81e24851dc6087b, type: 3}
   maxStack: 1
   amount: 0
   Price: 250

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Chr_LeftHand_Female_28_Item_Swamp
   m_EditorClassIdentifier: 
   CurrentItem: {fileID: 0}
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 452f6bd5704cbf846aafbc9ce6bcfadb, type: 3}
   maxStack: 1
   amount: 0
   Price: 250

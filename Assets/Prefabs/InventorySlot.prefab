@@ -399,6 +399,7 @@ MonoBehaviour:
   amount: {fileID: 5863171851336365641}
   removeButton: {fileID: 9093510803215905771}
   ringFromBtn: {fileID: 9093510802239042107}
+  item: {fileID: 0}
 --- !u!1 &9093510802508346510
 GameObject:
   m_ObjectHideFlags: 0

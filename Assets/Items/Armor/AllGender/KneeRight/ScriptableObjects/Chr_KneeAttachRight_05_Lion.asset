@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
-  m_Name: Chr_ElbowAttachRight_04
+  m_Name: Chr_KneeAttachRight_05_Lion
   m_EditorClassIdentifier: 
   CurrentItem: {fileID: 0}
-  icon: {fileID: 21300000, guid: 904903795abe26c4ca311af9e1396461, type: 3}
+  icon: {fileID: 21300000, guid: e3f23598d801bb641b87990a2acf2bd2, type: 3}
   maxStack: 1
   amount: 0
   isDefaultItem: 0
   isUsedItem: 0
-  equipSlot: 14
-  armorModifier: 7
-  mesh: {fileID: 4616175808849929073, guid: 05c56eb8f06f8d545a2d834ad3391858, type: 3}
+  equipSlot: 17
+  armorModifier: 5
+  mesh: {fileID: 4912079236781236594, guid: 2137a08427ab6b6488a781dc54c346b0, type: 3}
   prefab: {fileID: 0}
   hatNumber: 0
   noHair: 0

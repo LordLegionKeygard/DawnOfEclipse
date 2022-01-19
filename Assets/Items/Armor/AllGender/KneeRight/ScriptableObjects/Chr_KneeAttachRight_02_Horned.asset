@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
-  m_Name: Chr_KneeAttachRight_05
+  m_Name: Chr_KneeAttachRight_02_Horned
   m_EditorClassIdentifier: 
   CurrentItem: {fileID: 0}
-  icon: {fileID: 21300000, guid: e3f23598d801bb641b87990a2acf2bd2, type: 3}
+  icon: {fileID: 21300000, guid: f4fdff358ff247647a71b70abd2bc15e, type: 3}
   maxStack: 1
   amount: 0
   isDefaultItem: 0
   isUsedItem: 0
   equipSlot: 17
-  armorModifier: 5
-  mesh: {fileID: 4912079236781236594, guid: 2137a08427ab6b6488a781dc54c346b0, type: 3}
+  armorModifier: 8
+  mesh: {fileID: 6077656007283407492, guid: 9596ab030f6e5d242977403b398886bd, type: 3}
   prefab: {fileID: 0}
   hatNumber: 0
   noHair: 0

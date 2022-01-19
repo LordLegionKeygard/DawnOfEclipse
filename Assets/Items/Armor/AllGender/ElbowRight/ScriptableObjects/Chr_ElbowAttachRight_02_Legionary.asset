@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
-  m_Name: Chr_ElbowAttachRight_06
+  m_Name: Chr_ElbowAttachRight_02_Legionary
   m_EditorClassIdentifier: 
   CurrentItem: {fileID: 0}
-  icon: {fileID: 21300000, guid: f2c66a1b98651a542ae9828bcd09911d, type: 3}
+  icon: {fileID: 21300000, guid: 6d05bf0d03605e14da687249d4d6154a, type: 3}
   maxStack: 1
   amount: 0
   isDefaultItem: 0
   isUsedItem: 0
   equipSlot: 14
-  armorModifier: 9
-  mesh: {fileID: 1925733323001764560, guid: dc315108ce485514198e9d71f82ea43b, type: 3}
+  armorModifier: 6
+  mesh: {fileID: 3053720125645388000, guid: ba34c5a0b01d3c84b80de4db6d0f054d, type: 3}
   prefab: {fileID: 0}
   hatNumber: 0
   noHair: 0

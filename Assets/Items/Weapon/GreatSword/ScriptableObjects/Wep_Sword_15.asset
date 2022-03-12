@@ -16,8 +16,12 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: 384d3c27264bf8f48a1210aa5ebb0a78, type: 3}
   maxStack: 1
   amount: 0
+  Price: 250
   isDefaultItem: 0
   isUsedItem: 0
+  Name:
+  - Great Sword
+  - "\u0411\u043E\u043B\u044C\u0448\u043E\u0439 \u041C\u0435\u0447"
   equipSlot: 19
   armorModifier: 0
   mesh: {fileID: 0}
@@ -29,3 +33,5 @@ MonoBehaviour:
   twoHandedWeapon: 1
   shield: 0
   shieldBlockArmorModifier: 20
+  FirstAttachmentNumber: 0
+  SecondAttachmentNumber: 0

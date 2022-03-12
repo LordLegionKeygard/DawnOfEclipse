@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
-  m_Name: Chr_KneeAttachRight_03
+  m_Name: Chr_KneeAttachRight_07_BlackRider
   m_EditorClassIdentifier: 
   CurrentItem: {fileID: 0}
-  icon: {fileID: 21300000, guid: bfae28837aa84d74d838828915124cbf, type: 3}
+  icon: {fileID: 21300000, guid: 63f730b9ef2559045bfbe2ec00bbdb85, type: 3}
   maxStack: 1
   amount: 0
   isDefaultItem: 0
   isUsedItem: 0
   equipSlot: 17
-  armorModifier: 9
-  mesh: {fileID: 8347281364856643809, guid: f4dcb849994dc1a46adf18ed572a07e1, type: 3}
+  armorModifier: 14
+  mesh: {fileID: 7055047711237409855, guid: d703f932c94feee4e9305c95d8245b32, type: 3}
   prefab: {fileID: 0}
   hatNumber: 0
   noHair: 0

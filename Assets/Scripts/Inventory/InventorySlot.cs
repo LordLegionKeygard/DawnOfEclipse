@@ -7,24 +7,13 @@ using TMPro;
 public class InventorySlot : MonoBehaviour
 {
     public bool isCursor;
+    [SerializeField] private int _numberSlot;
+    [SerializeField] private int _amount;
     [SerializeField] private Image icon;
-    public TextMeshProUGUI amount;
+    public TextMeshProUGUI _amountText;
     [SerializeField] private Button removeButton;
     [SerializeField] private GameObject ringFromBtn;
-    private PlayerAnimatorManager playerAnimatorManager;
     public Item item;
-    private Inventory inventory;
-    private InventorySlot[] inventorySlots;
-    private PotionsControl potionsControl;
-    private bool canDrinkAnyPotions = true;
-
-    private void Start()
-    {
-        potionsControl = FindObjectOfType<PotionsControl>();
-        playerAnimatorManager = FindObjectOfType<PlayerAnimatorManager>();
-        inventory = FindObjectOfType<Inventory>();
-        inventorySlots = FindObjectsOfType<InventorySlot>();
-    }
 
     private void Update()
     {
@@ -33,99 +22,72 @@ public class InventorySlot : MonoBehaviour
         transform.position = Input.mousePosition;
     }
 
-    public void AddItem(Item newItem)
+    public void AddItem(Item newItem, string name)
     {
         item = newItem;
         icon.sprite = item.icon;
         removeButton.interactable = true;
-        icon.enabled = true;
+        if (newItem.name != "Empty_Item")
+            icon.enabled = true;
         ringFromBtn.SetActive(true);
         if (item.maxStack > 1)
         {
-            amount.enabled = true;
-            amount.text = item.amount.ToString();
+            _amountText.enabled = true;
+            if (newItem.name == name)
+                _amount += item.amount;
+            _amountText.text = _amount.ToString();
         }
     }
 
     public void ClearSlot()
     {
-        item = null;
         icon.sprite = null;
         icon.enabled = false;
         removeButton.interactable = false;
         ringFromBtn.SetActive(false);
-        amount.enabled = false;
+        _amountText.enabled = false;
+        _amount = 1;
     }
     public void OnRemoveButton()
     {
-        Inventory.instance.RemoveItemFromInventoryList(item);
+        Inventory.instance.RemoveItemFromInventoryList(item, _numberSlot);
         ClearSlot();
     }
     public void UseItem()
     {
-        if (item != null)
+        if (item.isUsedItem && PotionsControl.CanDrinkAnyPotions)
         {
-            if (item.isUsedItem && canDrinkAnyPotions)
+            _amount--;
+            _amountText.text = _amount.ToString();
+            item.Use();
+            switch (item.name)
             {
-                item.amount--;
-                if(item.amount == 0) amount.enabled = false;
-                amount.text = item.amount.ToString();
-                CantDrinkAnyPotions();
-                switch (item.name)
-                {
-                    case ("HealthPotion"):
-                        {
-                            playerAnimatorManager.Drinking(0);
-                            potionsControl.UsePotions(1);
-
-                            break;
-                        }
-                    case ("SpeedPotion"):
-                        {
-                            playerAnimatorManager.Drinking(1);
-                            potionsControl.UsePotions(2);
-                            break;
-                        }
-                    case ("ManaPotion"):
-                        {
-                            playerAnimatorManager.Drinking(2);
-                            potionsControl.UsePotions(3);
-                            break;
-                        }
-                }
+                case ("HealthPotion"):
+                    {
+                        CustomEvents.FireUsePotion(0);
+                        break;
+                    }
+                case ("SpeedPotion"):
+                    {
+                        CustomEvents.FireUsePotion(1);
+                        break;
+                    }
+                case ("ManaPotion"):
+                    {
+                        CustomEvents.FireUsePotion(2);
+                        break;
+                    }
             }
-            if (item.amount == 0)
+            if (_amount == 0)
             {
-                if (item.isUsedItem)
-                {
-                    item.amount = 5;
-                }
-                item.Use();
+                OnRemoveButton();
             }
+            return;
         }
-    }
-    private void CantDrinkAnyPotions()
-    {
-        foreach (var pot in inventorySlots)
+        if (item.amount == 0)
         {
-            pot.canDrinkAnyPotions = false;
-        }
-        StartCoroutine(ExecuteAfterTime(3f));
-        IEnumerator ExecuteAfterTime(float timeInSec)
-        {
-            yield return new WaitForSeconds(timeInSec);
-            foreach (var pot in inventorySlots)
-            {
-                pot.canDrinkAnyPotions = true;
-            }
-        }
-    }
-
-    private void OnDisable()
-    {
-        foreach (var pot in inventorySlots)
-        {
-            pot.canDrinkAnyPotions = true;
+            item.Use();
+            OnRemoveButton();
         }
     }
 }

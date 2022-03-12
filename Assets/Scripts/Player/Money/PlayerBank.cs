@@ -1,34 +1,34 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 using System;
 
 public class PlayerBank : MonoBehaviour
 {
-    public static event Action<int> OnCoinsValueChangedActionEvent;
     public int Coins;
+    [SerializeField] private TextMeshProUGUI _coinsText;
+    [SerializeField] private TextMeshProUGUI _coinsShopText;
 
-    private void Start()
+    private void OnEnable()
     {
-        OnCoinsValueChangedActionEvent?.Invoke(this.Coins);
+        CustomEvents.OnChangeCoins += ChangeCoins;
     }
 
-    public void AddCoins(int amount)
+    public void ChangeCoins(int amount)
     {
-        this.Coins += amount;
-
-        OnCoinsValueChangedActionEvent?.Invoke(this.Coins);
+        Coins += amount;
+        UpdateCoinsText();
     }
 
-    public void SpendCoins(int amount)
+    private void UpdateCoinsText()
     {
-        this.Coins -= amount;
-
-        OnCoinsValueChangedActionEvent?.Invoke(this.Coins);
+        _coinsText.text = Coins.ToString();
+        _coinsShopText.text = Coins.ToString();
     }
 
-    public bool isEnoughCoins(int amount)
+    private void OnDisable()
     {
-        return amount <= Coins;
+        CustomEvents.OnChangeCoins -= ChangeCoins;
     }
 }

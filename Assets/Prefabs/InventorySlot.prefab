@@ -395,11 +395,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isCursor: 0
+  _numberSlot: 0
+  _amount: 1
   icon: {fileID: 9093510803503705627}
-  amount: {fileID: 5863171851336365641}
+  _amountText: {fileID: 5863171851336365641}
   removeButton: {fileID: 9093510803215905771}
   ringFromBtn: {fileID: 9093510802239042107}
-  item: {fileID: 0}
+  item: {fileID: 11400000, guid: 63753bdbbcf3e734289031a30d77b118, type: 2}
 --- !u!1 &9093510802508346510
 GameObject:
   m_ObjectHideFlags: 0

@@ -3,59 +3,24 @@ using UnityEngine.UI;
 
 public class ItemPickup : MonoBehaviour
 {
-    public Item item;
-    private Inventory inventory;
-    private InventoryUI inventoryUI;
-
-    private void Start()
-    {
-        inventory = FindObjectOfType<Inventory>();
-        inventoryUI = FindObjectOfType<InventoryUI>();
-    }
+    [SerializeField] private Item _item;  
     public void PickUp()
     {
-        Debug.Log("Picking up " + item.name);
+        Debug.Log("Picking up " + _item.name);
+        if (_item.maxStack > 1)
+        {
+            for (int i = 0; i < Inventory.instance.items.Count; i++)
+            {
+                if (Inventory.instance.items[i].name == _item.name)
+                {
+                    Inventory.instance.UpdateUI(_item.name);
+                    Destroy(gameObject);
+                    return;
+                }
+            }
+        }
 
-        if (item.name == "HealthPotion")
-        {
-            for (int i = 0; i < inventory.items.Count; i++)
-            {
-                if (inventory.items[i].name == "HealthPotion")
-                {
-                    inventory.items[i].amount = 5;
-                    inventoryUI.UpdateUI();
-                    Destroy(gameObject);
-                    return;
-                }
-            }
-        }
-        else if (item.name == "SpeedPotion")
-        {
-            for (int i = 0; i < inventory.items.Count; i++)
-            {
-                if (inventory.items[i].name == "SpeedPotion")
-                {
-                    inventory.items[i].amount = 5;
-                    inventoryUI.UpdateUI();
-                    Destroy(gameObject);
-                    return;
-                }
-            }
-        }
-        else if (item.name == "ManaPotion")
-        {
-            for (int i = 0; i < inventory.items.Count; i++)
-            {
-                if (inventory.items[i].name == "ManaPotion")
-                {
-                    inventory.items[i].amount = 5;
-                    inventoryUI.UpdateUI();
-                    Destroy(gameObject);
-                    return;
-                }
-            }
-        }
-        Inventory.instance.Add(item);
+        Inventory.instance.Add(_item);
         Destroy(gameObject);
     }
 }

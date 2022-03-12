@@ -2,64 +2,70 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Inventory : MonoBehaviour {
+public class Inventory : MonoBehaviour
+{
 
-	#region Singleton
+    #region Singleton
 
-	public static Inventory instance;
+    public static Inventory instance;
 
-	void Awake ()
-	{
-		if (instance != null)
-		{
-			Debug.LogWarning("More than one instance of Inventory found!");
-			return;
-		}
+    void Awake()
+    {
+        if (instance != null)
+        {
+            Debug.LogWarning("More than one instance of Inventory found!");
+            return;
+        }
 
-		instance = this;
-	}
+        instance = this;
+    }
 
-	#endregion
+    #endregion
 
-	// Callback which is triggered when
-	// an item gets added/removed.
-	public delegate void OnItemChanged();
-	public OnItemChanged onItemChangedCallback;
+    public int space = 20;
+    [SerializeField] private Item _emptySlot;
+    [SerializeField] private InventorySlot[] _slots;
+    public List<Item> items = new List<Item>();
 
-	public int space = 20;	// Amount of slots in inventory
+    public void Add(Item item)
+    {
+        Debug.Log("Add");
+        if (item.isDefaultItem) return;
 
-	// Current list of items in inventory
-	public List<Item> items = new List<Item>();
+        if (items.Count >= space)
+        {
+            Debug.Log("Not enough space in inventory.");
+            return;
+        }
+        for (int i = 0; i < items.Count; i++)
+        {
+            if (items[i].name == "Empty_Item")
+            {
+                items[i] = item;
+                UpdateUI(item.Name[Language.Number]);
+                return;
+            }
+        }
+        return;
+    }
 
-	// Add a new item. If there is enough room we
-	// return true. Else we return false.
-	public bool Add (Item item)
-	{
-		// Don't do anything if it's a default item
-		if (!item.isDefaultItem)
-		{
-			// Check if out of space
-			if (items.Count >= space)
-			{
-				Debug.Log("Not enough space in inventory.");
-				return false;
-			}
+    public void UpdateUI(string name)
+    {
+        for (int i = 0; i < _slots.Length; i++)
+        {
+            if (i < instance.items.Count)
+            {
+                _slots[i].AddItem(instance.items[i], name);
+            }
 
-			items.Add(item);	// Add item to list
+            else
+                _slots[i].ClearSlot();
+        }
+    }
 
-			// Trigger callback
-			if (onItemChangedCallback != null)
-				onItemChangedCallback.Invoke();
-		}
-
-		return true;
-	}
-
-	public void RemoveItemFromInventoryList (Item item)
-	{
-		items.Remove(item);
-
-		if (onItemChangedCallback != null)
-			onItemChangedCallback.Invoke();
-	}
+    public void RemoveItemFromInventoryList(Item item, int number)
+    {
+        items[number] = _emptySlot;
+        UpdateUI(item.Name[Language.Number]);
+    }
 }

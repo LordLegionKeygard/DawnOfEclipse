@@ -16,8 +16,12 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: 5a39078a942f2bb43a1316a78bffebbf, type: 3}
   maxStack: 1
   amount: 0
+  Price: 250
   isDefaultItem: 0
   isUsedItem: 0
+  Name:
+  - Axe
+  - "\u0422\u043E\u043F\u043E\u0440"
   equipSlot: 20
   armorModifier: 0
   mesh: {fileID: 0}
@@ -29,3 +33,5 @@ MonoBehaviour:
   twoHandedWeapon: 0
   shield: 0
   shieldBlockArmorModifier: 0
+  FirstAttachmentNumber: 0
+  SecondAttachmentNumber: 0

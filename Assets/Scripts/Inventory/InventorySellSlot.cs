@@ -21,7 +21,7 @@ public class InventorySellSlot : MonoBehaviour
     }
     public void UpdateSlot()
     {
-        if (_inventorySlot.item != null)
+        if (_inventorySlot.item.name != "Empty_Item")
         {
             Item = _inventorySlot.item;
             _priceText.enabled = true;
@@ -29,13 +29,11 @@ public class InventorySellSlot : MonoBehaviour
             _icon.sprite = _inventorySlot.item.icon;
             _icon.enabled = true;
         }
-        else
-            ClearSlot();
+        else ClearSlot();
     }
 
-    public void ClearSlot()
+    private void ClearSlot()
     {
-        Item = null;
         _priceText.enabled = false;
         _icon.enabled = false;
     }
@@ -45,7 +43,7 @@ public class InventorySellSlot : MonoBehaviour
         if (Item != null)
         {
             _selectSlot.AddBuySlotItem(Item, Item.Price, _slotNumber);
-            _itemNameText.text = Item.Name[0];
+            _itemNameText.text = Item.Name[Language.Number];
         }
     }
 }

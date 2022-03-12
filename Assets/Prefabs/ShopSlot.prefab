@@ -395,7 +395,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerBank: {fileID: 0}
-  _buySlot: {fileID: 0}
+  _selectSlot: {fileID: 0}
   _icon: {fileID: 4274335613751853828}
   _priceText: {fileID: 1458592088034761558}
   _itemNameText: {fileID: 0}

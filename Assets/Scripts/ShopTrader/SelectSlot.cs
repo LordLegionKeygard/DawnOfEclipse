@@ -19,10 +19,8 @@ public class SelectSlot : MonoBehaviour
     [SerializeField] private InventorySellSlot[] _inventorySellSlot;
     [SerializeField] private GameObject _sellPanel;
     private Item _item;
-    public int BuySlotPrice;
-
+    [SerializeField] private int _buySlotPrice;
     private int _slotNumber;
-
     public void AddBuySlotItem(Item newItem, int price, int slot)
     {
         _item = newItem;
@@ -30,7 +28,7 @@ public class SelectSlot : MonoBehaviour
         _icon.enabled = true;
         _priceText.enabled = true;
         _priceText.text = price.ToString();
-        BuySlotPrice = price;
+        _buySlotPrice = price;
         _slotNumber = slot;
         CheckBuyOrSellItem();
     }
@@ -53,12 +51,12 @@ public class SelectSlot : MonoBehaviour
         _icon.enabled = false;
         _priceText.enabled = false;
         _item = null;
-        BuySlotPrice = 0;
+        _buySlotPrice = 0;
         ButtonsFalse();
     }
     public void BuyItem()
     {
-        _playerBank.SpendCoins(BuySlotPrice);
+        CustomEvents.FireChangeCoins(-_buySlotPrice);
         Inventory.instance.Add(_item);
         ClearSlot();
         UpdatePriceColorsEvent?.Invoke();
@@ -74,13 +72,14 @@ public class SelectSlot : MonoBehaviour
 
     public void SellItem()
     {
-        _playerBank.AddCoins(BuySlotPrice);
-        ClearSlot();
+        CustomEvents.FireChangeCoins(_buySlotPrice);
         UpdatePriceColorsEvent?.Invoke();
         _itemNameText1.text = "Select item";
-        _inventory.items[_slotNumber].RemoveFromInventory();      
-        _sellButton.interactable = false;
-        _buyButton.interactable = false;
+        Inventory.instance.RemoveItemFromInventoryList(_inventorySellSlot[_slotNumber].Item, _slotNumber);
+        _inventorySellSlot[_slotNumber].Item = _inventorySlot[_slotNumber].item;
+        _inventorySlot[_slotNumber].OnRemoveButton();
+        ClearSlot();
+        ButtonsFalse();
         UpdateAllSellSlots();
     }
 

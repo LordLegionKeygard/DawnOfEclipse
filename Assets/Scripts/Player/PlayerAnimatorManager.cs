@@ -21,6 +21,11 @@ public class PlayerAnimatorManager : MonoBehaviour
     private static readonly int Block_L1_React_Trigger = Animator.StringToHash("Block_React(L1)");
     private static readonly int Drink = Animator.StringToHash("drink");
 
+    private void OnEnable()
+    {
+        CustomEvents.OnUsePotion += Drinking;
+    }
+
     private void Start()
     {
         anim = GetComponent<Animator>();
@@ -115,27 +120,12 @@ public class PlayerAnimatorManager : MonoBehaviour
         playerController.roll = false;
     }
 
-    public void Drinking(int item)
+    public void Drinking(int potionNumber)
     {
         leftHand.SetActive(false);
-        switch (item)
-        {
-            case (0):
-                {
-                    potions[0].SetActive(true);
-                    break;
-                }
-            case (1):
-                {
-                    potions[1].SetActive(true);
-                    break;
-                }
-            case (2):
-                {
-                    potions[2].SetActive(true);
-                    break;
-                }
-        }
+
+        potions[potionNumber].SetActive(true);
+
         anim.SetTrigger(Drink);
         StartCoroutine(ExecuteAfterTime(2.5f));
         IEnumerator ExecuteAfterTime(float timeInSec)
@@ -166,5 +156,10 @@ public class PlayerAnimatorManager : MonoBehaviour
     public void NotRunning()
     {
         anim.SetBool(Run, false);
+    }
+
+    private void OnDisable()
+    {
+        CustomEvents.OnUsePotion -= Drinking;
     }
 }

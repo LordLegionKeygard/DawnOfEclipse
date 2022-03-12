@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
-  m_Name: Chr_KneeAttachRight_07
+  m_Name: Chr_ElbowAttachRight_01_Mithril
   m_EditorClassIdentifier: 
   CurrentItem: {fileID: 0}
-  icon: {fileID: 21300000, guid: 63f730b9ef2559045bfbe2ec00bbdb85, type: 3}
+  icon: {fileID: 21300000, guid: edc3e2f1b84284e46bbe029662914ed7, type: 3}
   maxStack: 1
   amount: 0
   isDefaultItem: 0
   isUsedItem: 0
-  equipSlot: 17
-  armorModifier: 14
-  mesh: {fileID: 7055047711237409855, guid: d703f932c94feee4e9305c95d8245b32, type: 3}
+  equipSlot: 14
+  armorModifier: 5
+  mesh: {fileID: 2539052970779474988, guid: 256d1be9d7bc9fd41b26bc66dc36c463, type: 3}
   prefab: {fileID: 0}
   hatNumber: 0
   noHair: 0

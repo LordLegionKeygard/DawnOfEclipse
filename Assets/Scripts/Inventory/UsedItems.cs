@@ -9,7 +9,7 @@ public class UsedItems : Item
     public override void Use()
     {
         base.Use();
-        RemoveFromInventory();
+        // RemoveFromInventory();
     }
 }
 

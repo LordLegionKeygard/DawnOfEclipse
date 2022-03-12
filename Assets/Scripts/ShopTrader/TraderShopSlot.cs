@@ -14,7 +14,7 @@ public class TraderShopSlot : MonoBehaviour
     [SerializeField] private Button _shopSlotButton;
     public int ItemShopPrice;
     public Item Item;
-    private void Start()
+    private void OnEnable()
     {
         _selectSlot.UpdatePriceColorsEvent += UpdatePriceColor;
     }
@@ -33,10 +33,10 @@ public class TraderShopSlot : MonoBehaviour
 
     public void SelectItem()
     {
-        if (ItemShopPrice <= _playerBank.Coins)
+        if (ItemShopPrice <= _playerBank.Coins )
         {
             _selectSlot.AddBuySlotItem(Item, ItemShopPrice, 0);
-            _itemNameText.text = Item.Name[0]; // Will need Static Language Number
+            _itemNameText.text = Item.Name[Language.Number];
         }
         else
         {
@@ -57,6 +57,7 @@ public class TraderShopSlot : MonoBehaviour
 
     private void OnDisable()
     {
+        _selectSlot.UpdatePriceColorsEvent -= UpdatePriceColor;
         _icon.enabled = false;
         _priceText.enabled = false;
         _shopSlotButton.enabled = false;

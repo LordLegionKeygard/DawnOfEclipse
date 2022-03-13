@@ -3,7 +3,8 @@ using UnityEngine.UI;
 
 public class ItemPickup : MonoBehaviour
 {
-    [SerializeField] private Item _item;  
+    [SerializeField] private Item _item;
+
     public void PickUp()
     {
         Debug.Log("Picking up " + _item.name);
@@ -19,7 +20,6 @@ public class ItemPickup : MonoBehaviour
                 }
             }
         }
-
         Inventory.instance.Add(_item);
         Destroy(gameObject);
     }

@@ -13,15 +13,23 @@ MonoBehaviour:
   m_Name: Chr_ElbowAttachRight_07_BlackRider
   m_EditorClassIdentifier: 
   CurrentItem: {fileID: 0}
-  icon: {fileID: 21300000, guid: 1a888ba06a1b3ef43b72cb5c7b1f63cb, type: 3}
+  icon: {fileID: 21300000, guid: 5345223644b595f4aaea0e7f2cdd9cf5, type: 3}
   maxStack: 1
   amount: 0
+  Price: 250
   isDefaultItem: 0
   isUsedItem: 0
+  Name: []
   equipSlot: 14
   armorModifier: 8
-  mesh: {fileID: 6216005752614216364, guid: f8d41c4d96c1aeb448bb8cd4b20e8b80, type: 3}
+  mesh: {fileID: 6216005752614216364, guid: 5df483fc3224b0b49bdbed2382b1b72a, type: 3}
   prefab: {fileID: 0}
   hatNumber: 0
   noHair: 0
   canChangehead: 0
+  weapon: 0
+  twoHandedWeapon: 0
+  shield: 0
+  shieldBlockArmorModifier: 0
+  FirstAttachmentNumber: 0
+  SecondAttachmentNumber: 0

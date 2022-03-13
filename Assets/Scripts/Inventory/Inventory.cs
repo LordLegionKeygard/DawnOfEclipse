@@ -29,7 +29,6 @@ public class Inventory : MonoBehaviour
 
     public void Add(Item item)
     {
-        Debug.Log("Add");
         if (item.isDefaultItem) return;
 
         if (items.Count >= space)

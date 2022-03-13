@@ -33,5 +33,5 @@ MonoBehaviour:
   twoHandedWeapon: 0
   shield: 0
   shieldBlockArmorModifier: 0
-  FirstAttachmentNumber: 0
-  SecondAttachmentNumber: 0
+  FirstAttachmentNumber: 14
+  SecondAttachmentNumber: 15

@@ -19,7 +19,9 @@ MonoBehaviour:
   Price: 250
   isDefaultItem: 0
   isUsedItem: 0
-  Name: []
+  Name:
+  - Knee Right
+  - "\u041F\u0440\u0430\u0432\u044B\u0439 \u041D\u0430\u043A\u043E\u043B\u0435\u043D\u0438\u043A"
   equipSlot: 17
   armorModifier: 5
   mesh: {fileID: 4912079236781236594, guid: 1b36f68804759a54fab041abc285e239, type: 3}

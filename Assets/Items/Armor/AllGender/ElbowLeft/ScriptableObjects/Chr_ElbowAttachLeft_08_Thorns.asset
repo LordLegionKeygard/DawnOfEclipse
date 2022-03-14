@@ -19,7 +19,9 @@ MonoBehaviour:
   Price: 250
   isDefaultItem: 0
   isUsedItem: 0
-  Name: []
+  Name:
+  - Elbow Left
+  - "\u041B\u0435\u0432\u044B\u0439 \u041B\u043E\u043A\u043E\u0442\u044C"
   equipSlot: 15
   armorModifier: 9
   mesh: {fileID: 3203623461551212692, guid: 19f90f7a23b91af4da82d59b1edf38f7, type: 3}

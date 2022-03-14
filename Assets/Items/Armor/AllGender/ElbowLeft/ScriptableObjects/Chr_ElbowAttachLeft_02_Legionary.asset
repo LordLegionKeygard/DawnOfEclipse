@@ -16,8 +16,12 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: 52478158e3d11064ea83b40682857275, type: 3}
   maxStack: 1
   amount: 0
+  Price: 250
   isDefaultItem: 0
   isUsedItem: 0
+  Name:
+  - Elbow Left
+  - "\u041B\u0435\u0432\u044B\u0439 \u041B\u043E\u043A\u043E\u0442\u044C"
   equipSlot: 15
   armorModifier: 6
   mesh: {fileID: 6491227170295135085, guid: b32701d4ee180894fa2865de8b454c2b, type: 3}
@@ -25,3 +29,9 @@ MonoBehaviour:
   hatNumber: 0
   noHair: 0
   canChangehead: 0
+  weapon: 0
+  twoHandedWeapon: 0
+  shield: 0
+  shieldBlockArmorModifier: 0
+  FirstAttachmentNumber: 0
+  SecondAttachmentNumber: 0

@@ -20,8 +20,9 @@ MonoBehaviour:
   isDefaultItem: 0
   isUsedItem: 0
   Name:
-  - Elbow Left
-  - "\u041B\u0435\u0432\u044B\u0439 \u041B\u043E\u043A\u043E\u0442\u044C"
+  - Full Plate Left Elbow
+  - "\u041B\u0435\u0432\u044B\u0439 \u041F\u043E\u043B\u043D\u044B\u0439 \u041B\u0430\u0442\u043D\u044B\u0439
+    \u041D\u0430\u043B\u043E\u043A\u043E\u0442\u043D\u0438\u043A"
   equipSlot: 15
   armorModifier: 9
   mesh: {fileID: 3203623461551212692, guid: 3e93ad8166b62ae42be3ffda220169b1, type: 3}

@@ -20,8 +20,9 @@ MonoBehaviour:
   isDefaultItem: 0
   isUsedItem: 0
   Name:
-  - Knee Right
-  - "\u041F\u0440\u0430\u0432\u044B\u0439 \u041D\u0430\u043A\u043E\u043B\u0435\u043D\u0438\u043A"
+  - Thorn Right Knee
+  - "\u041F\u0440\u0430\u0432\u044B\u0439 \u0428\u0438\u043F\u0430\u0441\u0442\u044B\u0439
+    \u041D\u0430\u043A\u043E\u043B\u0435\u043D\u043D\u0438\u043A"
   equipSlot: 17
   armorModifier: 7
   mesh: {fileID: 8173219022187279296, guid: 0199203af341dfd4ea6e3516e38f2cba, type: 3}

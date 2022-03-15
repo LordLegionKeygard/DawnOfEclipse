@@ -20,8 +20,9 @@ MonoBehaviour:
   isDefaultItem: 0
   isUsedItem: 0
   Name:
-  - Knee Right
-  - "\u041F\u0440\u0430\u0432\u044B\u0439 \u041D\u0430\u043A\u043E\u043B\u0435\u043D\u0438\u043A"
+  - Swamp Right Knee
+  - "\u041F\u0440\u0430\u0432\u044B\u0439 \u0411\u043E\u043B\u043E\u0442\u043D\u044B\u0439
+    \u041D\u0430\u043A\u043E\u043B\u0435\u043D\u043D\u0438\u043A"
   equipSlot: 17
   armorModifier: 7
   mesh: {fileID: 8173219022187279296, guid: a863f78da7fb2784cbac62db9c0cd0a3, type: 3}

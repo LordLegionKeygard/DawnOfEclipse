@@ -20,8 +20,8 @@ MonoBehaviour:
   isDefaultItem: 0
   isUsedItem: 0
   Name:
-  - Knee Left
-  - "\u041B\u0435\u0432\u044B\u0439 \u041D\u0430\u043A\u043E\u043B\u0435\u043D\u0438\u043A"
+  - Lion Left Knee
+  - "\u041B\u0435\u0432\u044B\u0439 \u041B\u044C\u0432\u0438\u043D\u044B\u0439 \u041D\u0430\u043A\u043E\u043B\u0435\u043D\u043D\u0438\u043A"
   equipSlot: 18
   armorModifier: 5
   mesh: {fileID: 7211619289321896188, guid: 64b4ffeb46f146e4dad31fa2e4c33b74, type: 3}

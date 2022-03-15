@@ -19,4 +19,10 @@ public class CustomEvents
     {
         OnUsePotion?.Invoke(amount);
     }
+
+    public static event Action OnCheckFullInventory;
+    public static void FireCheckFullInventory()
+    {
+        OnCheckFullInventory?.Invoke();
+    }
 }

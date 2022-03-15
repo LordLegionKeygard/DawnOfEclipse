@@ -20,8 +20,9 @@ MonoBehaviour:
   isDefaultItem: 0
   isUsedItem: 0
   Name:
-  - Elbow Right
-  - "\u041F\u0440\u0430\u0432\u044B\u0439 \u041B\u043E\u043A\u043E\u0442\u044C"
+  - Demon Right Elbow
+  - "\u041F\u0440\u0430\u0432\u044B\u0439 \u041D\u0430\u043B\u043E\u043A\u043E\u0442\u043D\u0438\u043A
+    \u0414\u0435\u043C\u043E\u043D\u0430"
   equipSlot: 14
   armorModifier: 8
   mesh: {fileID: 6216005752614216364, guid: 0dba614d80c30b04cbf2e5b262c27ce0, type: 3}

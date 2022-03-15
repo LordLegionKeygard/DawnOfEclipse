@@ -20,8 +20,9 @@ MonoBehaviour:
   isDefaultItem: 0
   isUsedItem: 0
   Name:
-  - Elbow Left
-  - "\u041B\u0435\u0432\u044B\u0439 \u041B\u043E\u043A\u043E\u0442\u044C"
+  - Memorable Left Elbow
+  - "\u041B\u0435\u0432\u044B\u0439 \u041D\u0435\u0437\u0430\u0431\u0432\u0435\u043D\u043D\u044B\u0439
+    \u041D\u0430\u043B\u043E\u043A\u043E\u0442\u043D\u0438\u043A"
   equipSlot: 15
   armorModifier: 8
   mesh: {fileID: 801749426456034271, guid: 1e65fe27812c8b64882c374482af03eb, type: 3}

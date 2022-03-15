@@ -20,8 +20,9 @@ MonoBehaviour:
   isDefaultItem: 0
   isUsedItem: 0
   Name:
-  - Knee Left
-  - "\u041B\u0435\u0432\u044B\u0439 \u041D\u0430\u043A\u043E\u043B\u0435\u043D\u0438\u043A"
+  - Memorable Left Knee
+  - "\u041B\u0435\u0432\u044B\u0439 \u041D\u0435\u0437\u0430\u0431\u0432\u0435\u043D\u043D\u044B\u0439
+    \u041D\u0430\u043A\u043E\u043B\u0435\u043D\u043D\u0438\u043A"
   equipSlot: 18
   armorModifier: 13
   mesh: {fileID: 447038246835768470, guid: b039e361b2b11d846bd9966942e31301, type: 3}

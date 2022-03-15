@@ -20,8 +20,9 @@ MonoBehaviour:
   isDefaultItem: 0
   isUsedItem: 0
   Name:
-  - Knee Left
-  - "\u041B\u0435\u0432\u044B\u0439 \u041D\u0430\u043A\u043E\u043B\u0435\u043D\u0438\u043A"
+  - Mithril Left Knee
+  - "\u041B\u0435\u0432\u044B\u0439 \u041C\u0438\u0444\u0440\u0438\u043B\u043E\u0432\u044B\u0439
+    \u041D\u0430\u043A\u043E\u043B\u0435\u043D\u043D\u0438\u043A"
   equipSlot: 18
   armorModifier: 9
   mesh: {fileID: 264878472094393484, guid: 1a4ea7e5afbc0ae4ba4a78ccde6003c6, type: 3}

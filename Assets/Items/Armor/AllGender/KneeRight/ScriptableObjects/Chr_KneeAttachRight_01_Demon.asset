@@ -20,8 +20,9 @@ MonoBehaviour:
   isDefaultItem: 0
   isUsedItem: 0
   Name:
-  - Knee Right
-  - "\u041F\u0440\u0430\u0432\u044B\u0439 \u041D\u0430\u043A\u043E\u043B\u0435\u043D\u0438\u043A"
+  - Demon Right Knee
+  - "\u041F\u0440\u0430\u0432\u044B\u0439 \u041D\u0430\u043A\u043E\u043B\u0435\u043D\u043D\u0438\u043A
+    \u0414\u0435\u043C\u043E\u043D\u0430"
   equipSlot: 17
   armorModifier: 6
   mesh: {fileID: 2606849370809268975, guid: 31d08230840d72a43a0a3cfd03d622fa, type: 3}

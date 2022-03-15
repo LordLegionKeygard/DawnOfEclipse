@@ -22,6 +22,11 @@ public class EquipSlot : MonoBehaviour
     }
     public void Unequip()
     {
+        if(Inventory.InventoryStatic.FullInventory)
+        {
+            Debug.Log("Can't unequip item, because Inventory is Full");
+            return;
+        }
         backIcon.enabled = true;
         icon.enabled = false;
         equipmentManager.Unequip((int)equipmentSlot);
@@ -99,5 +104,6 @@ public class EquipSlot : MonoBehaviour
                 break;
         }
         armorControl.UpdateArmor();
+        CustomEvents.FireCheckFullInventory();
     }
 }

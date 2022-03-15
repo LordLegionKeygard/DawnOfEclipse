@@ -20,8 +20,9 @@ MonoBehaviour:
   isDefaultItem: 0
   isUsedItem: 0
   Name:
-  - Elbow Right
-  - "\u041F\u0440\u0430\u0432\u044B\u0439 \u041B\u043E\u043A\u043E\u0442\u044C"
+  - Mithril Right Elbow
+  - "\u041F\u0440\u0430\u0432\u044B\u0439 \u041C\u0438\u0444\u0440\u0438\u043B\u043E\u0432\u044B\u0439
+    \u041D\u0430\u043B\u043E\u043A\u043E\u0442\u043D\u0438\u043A"
   equipSlot: 14
   armorModifier: 5
   mesh: {fileID: 2539052970779474988, guid: 256d1be9d7bc9fd41b26bc66dc36c463, type: 3}

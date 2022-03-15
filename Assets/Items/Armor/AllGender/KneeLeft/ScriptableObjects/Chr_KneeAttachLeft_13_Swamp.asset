@@ -20,11 +20,12 @@ MonoBehaviour:
   isDefaultItem: 0
   isUsedItem: 0
   Name:
-  - Knee Left
-  - "\u041B\u0435\u0432\u044B\u0439 \u041D\u0430\u043A\u043E\u043B\u0435\u043D\u0438\u043A"
+  - Swamp Left Knee
+  - "\u041B\u0435\u0432\u044B\u0439 \u0411\u043E\u043B\u043E\u0442\u043D\u044B\u0439
+    \u041D\u0430\u043A\u043E\u043B\u0435\u043D\u043D\u0438\u043A"
   equipSlot: 18
   armorModifier: 11
-  mesh: {fileID: 111586609121558878, guid: 22be00191538dc94e8fcf557137f0b16, type: 3}
+  mesh: {fileID: 7952820341191119583, guid: 86a6edb094039e8448d9e765ba324fcb, type: 3}
   prefab: {fileID: 0}
   hatNumber: 0
   noHair: 0

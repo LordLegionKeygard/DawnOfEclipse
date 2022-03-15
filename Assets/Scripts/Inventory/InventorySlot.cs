@@ -50,7 +50,7 @@ public class InventorySlot : MonoBehaviour
     }
     public void OnRemoveButton()
     {
-        Inventory.instance.RemoveItemFromInventoryList(item, _numberSlot);
+        Inventory.InventoryStatic.RemoveItemFromInventoryList(item, _numberSlot);
         ClearSlot();
     }
     public void UseItem()
@@ -81,6 +81,7 @@ public class InventorySlot : MonoBehaviour
             if (_amount == 0)
             {
                 OnRemoveButton();
+                CustomEvents.FireCheckFullInventory();
             }
             return;
         }
@@ -88,6 +89,7 @@ public class InventorySlot : MonoBehaviour
         {
             item.Use();
             OnRemoveButton();
+            CustomEvents.FireCheckFullInventory();
         }
     }
 }

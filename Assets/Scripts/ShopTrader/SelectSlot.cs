@@ -57,7 +57,7 @@ public class SelectSlot : MonoBehaviour
     public void BuyItem()
     {
         CustomEvents.FireChangeCoins(-_buySlotPrice);
-        Inventory.instance.Add(_item);
+        Inventory.InventoryStatic.Add(_item);
         ClearSlot();
         UpdatePriceColorsEvent?.Invoke();
         _itemNameText1.text = "Select item";
@@ -75,7 +75,7 @@ public class SelectSlot : MonoBehaviour
         CustomEvents.FireChangeCoins(_buySlotPrice);
         UpdatePriceColorsEvent?.Invoke();
         _itemNameText1.text = "Select item";
-        Inventory.instance.RemoveItemFromInventoryList(_inventorySellSlot[_slotNumber].Item, _slotNumber);
+        Inventory.InventoryStatic.RemoveItemFromInventoryList(_inventorySellSlot[_slotNumber].Item, _slotNumber);
         _inventorySellSlot[_slotNumber].Item = _inventorySlot[_slotNumber].item;
         _inventorySlot[_slotNumber].OnRemoveButton();
         ClearSlot();

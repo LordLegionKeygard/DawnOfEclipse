@@ -20,8 +20,9 @@ MonoBehaviour:
   isDefaultItem: 0
   isUsedItem: 0
   Name:
-  - Elbow Right
-  - "\u041F\u0440\u0430\u0432\u044B\u0439 \u041B\u043E\u043A\u043E\u0442\u044C"
+  - Legionary Right Elbow
+  - "\u041F\u0440\u0430\u0432\u044B\u0439 \u041D\u0430\u043B\u043E\u043A\u043E\u0442\u043D\u0438\u043A
+    \u041B\u0435\u0433\u0438\u043E\u043D\u0435\u0440\u0430"
   equipSlot: 14
   armorModifier: 6
   mesh: {fileID: 3053720125645388000, guid: ba34c5a0b01d3c84b80de4db6d0f054d, type: 3}

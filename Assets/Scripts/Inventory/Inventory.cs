@@ -7,54 +7,64 @@ public class Inventory : MonoBehaviour
 
     #region Singleton
 
-    public static Inventory instance;
+    public static Inventory InventoryStatic;
 
-    void Awake()
+    private void OnEnable()
     {
-        if (instance != null)
+        CustomEvents.OnCheckFullInventory += CheckFullInventory;
+        CheckFullInventory();
+    }
+
+    private void Awake()
+    {
+        if (InventoryStatic != null)
         {
             Debug.LogWarning("More than one instance of Inventory found!");
             return;
         }
 
-        instance = this;
+        InventoryStatic = this;
     }
 
     #endregion
 
-    public int space = 20;
+    public int _space;
     [SerializeField] private Item _emptySlot;
     [SerializeField] private InventorySlot[] _slots;
     public List<Item> items = new List<Item>();
+
+    public bool FullInventory;
 
     public void Add(Item item)
     {
         if (item.isDefaultItem) return;
 
-        if (items.Count >= space)
+        StartCoroutine(ExecuteAfterTime(0.1f));
+        IEnumerator ExecuteAfterTime(float timeInSec)
         {
-            Debug.Log("Not enough space in inventory.");
-            return;
-        }
-        for (int i = 0; i < items.Count; i++)
-        {
-            if (items[i].name == "Empty_Item")
+            yield return new WaitForSeconds(timeInSec);
+            for (int i = 0; i < items.Count; i++)
             {
-                items[i] = item;
-                UpdateUI(item.Name[Language.Number]);
-                return;
+                if (items[i].name == "Empty_Item")
+                {
+                    items[i] = item;
+                    UpdateUI(item.Name[Language.Number]);
+                    CustomEvents.FireCheckFullInventory();
+                    break;
+                }
             }
         }
-        return;
+
+
     }
 
     public void UpdateUI(string name)
     {
         for (int i = 0; i < _slots.Length; i++)
         {
-            if (i < instance.items.Count)
+            if (i < InventoryStatic.items.Count)
             {
-                _slots[i].AddItem(instance.items[i], name);
+                _slots[i].AddItem(InventoryStatic.items[i], name);
             }
 
             else
@@ -62,9 +72,30 @@ public class Inventory : MonoBehaviour
         }
     }
 
+    private void CheckFullInventory()
+    {
+        for (int i = 0; i < items.Count; i++)
+        {
+            if (items[i].name == "Empty_Item")
+            {
+                FullInventory = false;
+                return;
+            }
+            else
+            {
+                FullInventory = true;
+            }
+        }
+    }
+
     public void RemoveItemFromInventoryList(Item item, int number)
     {
         items[number] = _emptySlot;
         UpdateUI(item.Name[Language.Number]);
+    }
+
+    private void OnDisable()
+    {
+        CustomEvents.OnCheckFullInventory -= CheckFullInventory;
     }
 }

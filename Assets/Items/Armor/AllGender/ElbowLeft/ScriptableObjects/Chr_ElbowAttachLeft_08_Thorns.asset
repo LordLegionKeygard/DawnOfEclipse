@@ -20,8 +20,9 @@ MonoBehaviour:
   isDefaultItem: 0
   isUsedItem: 0
   Name:
-  - Elbow Left
-  - "\u041B\u0435\u0432\u044B\u0439 \u041B\u043E\u043A\u043E\u0442\u044C"
+  - Thorns Left Elbow
+  - "\u041B\u0435\u0432\u044B\u0439 \u0428\u0438\u043F\u0430\u0441\u0442\u044B\u0439
+    \u041D\u0430\u043B\u043E\u043A\u043E\u0442\u043D\u0438\u043A"
   equipSlot: 15
   armorModifier: 9
   mesh: {fileID: 3203623461551212692, guid: 19f90f7a23b91af4da82d59b1edf38f7, type: 3}

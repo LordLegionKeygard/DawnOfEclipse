@@ -20,8 +20,9 @@ MonoBehaviour:
   isDefaultItem: 0
   isUsedItem: 0
   Name:
-  - Knee Left
-  - "\u041B\u0435\u0432\u044B\u0439 \u041D\u0430\u043A\u043E\u043B\u0435\u043D\u0438\u043A"
+  - Legionary Left Knee
+  - "\u041B\u0435\u0432\u044B\u0439 \u041D\u0430\u043A\u043E\u043B\u0435\u043D\u043D\u0438\u043A
+    \u041B\u0435\u0433\u0438\u043E\u043D\u0435\u0440\u0430"
   equipSlot: 18
   armorModifier: 15
   mesh: {fileID: 4169224461939567706, guid: c9f255f5ba845bf45996d83ed37b38e2, type: 3}

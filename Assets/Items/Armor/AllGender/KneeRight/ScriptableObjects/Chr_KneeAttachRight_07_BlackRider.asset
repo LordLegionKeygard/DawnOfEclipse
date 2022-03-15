@@ -20,8 +20,9 @@ MonoBehaviour:
   isDefaultItem: 0
   isUsedItem: 0
   Name:
-  - Knee Right
-  - "\u041F\u0440\u0430\u0432\u044B\u0439 \u041D\u0430\u043A\u043E\u043B\u0435\u043D\u0438\u043A"
+  - Black Rider Right Knee
+  - "\u041F\u0440\u0430\u0432\u044B\u0439 \u041D\u0430\u043A\u043E\u043B\u0435\u043D\u043D\u0438\u043A
+    \u0427\u0435\u0440\u043D\u043E\u0433\u043E \u0412\u0441\u0430\u0434\u043D\u0438\u043A\u0430"
   equipSlot: 17
   armorModifier: 14
   mesh: {fileID: 7055047711237409855, guid: d703f932c94feee4e9305c95d8245b32, type: 3}

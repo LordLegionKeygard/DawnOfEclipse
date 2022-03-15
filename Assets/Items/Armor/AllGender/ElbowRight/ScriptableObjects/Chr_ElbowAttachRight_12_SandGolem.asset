@@ -20,8 +20,9 @@ MonoBehaviour:
   isDefaultItem: 0
   isUsedItem: 0
   Name:
-  - Elbow Right
-  - "\u041F\u0440\u0430\u0432\u044B\u0439 \u041B\u043E\u043A\u043E\u0442\u044C"
+  - Sand Golem Right Elbow
+  - "\u041F\u0440\u0430\u0432\u044B\u0439 \u041D\u0430\u043B\u043E\u043A\u043E\u0442\u043D\u0438\u043A
+    \u041F\u0435\u0441\u0447\u0430\u043D\u043E\u0433\u043E \u0413\u043E\u043B\u0435\u043C\u0430"
   equipSlot: 14
   armorModifier: 8
   mesh: {fileID: 6216005752614216364, guid: 4de2862c84511fc4ab28b72a3b7a1f6f, type: 3}

@@ -35,7 +35,7 @@ public class EquipmentManager : MonoBehaviour
 
     private void Start()
     {
-        _inventory = Inventory.instance;
+        _inventory = Inventory.InventoryStatic;
         int numSlots = System.Enum.GetNames(typeof(EquipmentSlot)).Length;
         _currentEquipment = new Equipment[numSlots];
         _currentMeshes = new SkinnedMeshRenderer[numSlots];

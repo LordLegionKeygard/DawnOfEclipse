@@ -20,11 +20,11 @@ MonoBehaviour:
   isDefaultItem: 0
   isUsedItem: 0
   Name:
-  - Knee Left
-  - "\u041B\u0435\u0432\u044B\u0439 \u041D\u0430\u043A\u043E\u043B\u0435\u043D\u0438\u043A"
+  - Ancient Left Knee
+  - "\u041B\u0435\u0432\u044B\u0439 \u0414\u0440\u0435\u0432\u043D\u0438\u0439 \u041D\u0430\u043A\u043E\u043B\u0435\u043D\u043D\u0438\u043A"
   equipSlot: 18
   armorModifier: 11
-  mesh: {fileID: 111586609121558878, guid: 22be00191538dc94e8fcf557137f0b16, type: 3}
+  mesh: {fileID: 6230313410800987241, guid: 8b81501b428e15346968d1b65d11a77e, type: 3}
   prefab: {fileID: 0}
   hatNumber: 0
   noHair: 0

@@ -20,8 +20,8 @@ MonoBehaviour:
   isDefaultItem: 0
   isUsedItem: 0
   Name:
-  - Knee Left
-  - "\u041B\u0435\u0432\u044B\u0439 \u041D\u0430\u043A\u043E\u043B\u0435\u043D\u0438\u043A"
+  - Horned Left Knee
+  - "\u041B\u0435\u0432\u044B\u0439 \u0420\u043E\u0433\u0430\u0442\u044B\u0439 \u041D\u0430\u043A\u043E\u043B\u0435\u043D\u043D\u0438\u043A "
   equipSlot: 18
   armorModifier: 8
   mesh: {fileID: 3007708795920394762, guid: 6776cf1b43f652244bf2aec8133008bd, type: 3}

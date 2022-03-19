@@ -60,7 +60,7 @@ Material:
     - _Color_Hair: {r: 0.2627451, g: 0.21176471, b: 0.13333334, a: 0}
     - _Color_Leather_Primary: {r: 0.254717, g: 0.19435003, b: 0.111739054, a: 0}
     - _Color_Leather_Secondary: {r: 0.3137255, g: 0.16862746, b: 0.09803922, a: 0}
-    - _Color_Metal_Dark: {r: 0.13461198, g: 0.15265842, b: 0.23584908, a: 0}
+    - _Color_Metal_Dark: {r: 0.3019608, g: 0.25882354, b: 0.18431373, a: 0}
     - _Color_Metal_Primary: {r: 0.31132078, g: 0.16573495, b: 0.09545213, a: 0}
     - _Color_Metal_Secondary: {r: 0.62352943, g: 0.4509804, b: 0.24313726, a: 0}
     - _Color_Primary: {r: 0.6226415, g: 0.45036656, b: 0.24377, a: 0}

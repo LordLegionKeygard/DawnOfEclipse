@@ -16,12 +16,22 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: 70d359a3527c6354793c9a549cf29d83, type: 3}
   maxStack: 1
   amount: 0
+  Price: 250
   isDefaultItem: 0
   isUsedItem: 0
+  Name:
+  - Cloak
+  - "\u041F\u043B\u0430\u0449"
   equipSlot: 11
-  armorModifier: 20
+  armorModifier: 6
   mesh: {fileID: 8369133723397717296, guid: 864d016f704444646811374ce7911d99, type: 3}
   prefab: {fileID: 0}
   hatNumber: 0
   noHair: 0
   canChangehead: 0
+  weapon: 0
+  twoHandedWeapon: 0
+  shield: 0
+  shieldBlockArmorModifier: 0
+  FirstAttachmentNumber: 0
+  SecondAttachmentNumber: 0

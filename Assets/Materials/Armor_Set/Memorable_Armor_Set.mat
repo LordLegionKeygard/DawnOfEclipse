@@ -66,6 +66,6 @@ Material:
     - _Color_Primary: {r: 0.59607846, g: 0.6117647, b: 0.627451, a: 0}
     - _Color_Scar: {r: 0.9294118, g: 0.6862745, b: 0.5921569, a: 1}
     - _Color_Secondary: {r: 0.28235295, g: 0.20784314, b: 0.16470589, a: 0}
-    - _Color_Skin: {r: 1, g: 0.8000001, b: 0.682353, a: 1}
+    - _Color_Skin: {r: 0.33375475, g: 0.4245283, b: 0.05807228, a: 1}
     - _Color_Stubble: {r: 0.8039216, g: 0.7019608, b: 0.6313726, a: 1}
   m_BuildTextureStacks: []

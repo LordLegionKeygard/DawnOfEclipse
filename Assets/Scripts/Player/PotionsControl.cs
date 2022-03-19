@@ -42,7 +42,7 @@ public class PotionsControl : MonoBehaviour
                     break;
 
                 case (1):
-                    StopAllCoroutines();
+                    StopCoroutine(ExecuteAfterTime(0f));
                     speedPotionParticle.Play();
                     potionSpeed = 5;
                     speedPotion = true;

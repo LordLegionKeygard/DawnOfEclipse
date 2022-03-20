@@ -21,12 +21,12 @@ public class InventorySellSlot : MonoBehaviour
     }
     public void UpdateSlot()
     {
-        if (_inventorySlot.item.name != "Empty_Item")
+        if (_inventorySlot.Item.name != "Empty_Item")
         {
-            Item = _inventorySlot.item;
+            Item = _inventorySlot.Item;
             _priceText.enabled = true;
             _priceText.text = Item.Price.ToString();
-            _icon.sprite = _inventorySlot.item.icon;
+            _icon.sprite = _inventorySlot.Item.icon;
             _icon.enabled = true;
         }
         else ClearSlot();

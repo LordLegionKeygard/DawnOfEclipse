@@ -4,36 +4,26 @@ using UnityEngine.UI;
 public class ItemPickup : MonoBehaviour
 {
     [SerializeField] private Item _item;
-
     public void PickUp()
     {
-        for (int k = 0; k < Inventory.InventoryStatic.items.Count; k++)
+        if (_item.IsStackable)
         {
-            if (Inventory.InventoryStatic.items[k].name == "Empty_Item")
+            for (int i = 0; i < Inventory.InventoryStatic.items.Count; i++)
             {
-                Inventory.InventoryStatic.FullInventory = false;
-                if (_item.maxStack > 1)
+                if (Inventory.InventoryStatic.items[i].name == _item.name)
                 {
-                    for (int i = 0; i < Inventory.InventoryStatic.items.Count; i++)
-                    {
-                        if (Inventory.InventoryStatic.items[i].name == _item.name)
-                        {
-                            Inventory.InventoryStatic.UpdateUI(_item.name);
-                            Destroy(gameObject);
-                            return;
-                        }
-                    }
+                    Inventory.InventoryStatic.UpdateUI(_item.name);
+                    Destroy(gameObject);
+                    return;
                 }
-                Debug.Log("Picking up " + _item.name);
-                Inventory.InventoryStatic.Add(_item);
-                Destroy(gameObject);
-                return;
-            }
-            else
-            {
-                Inventory.InventoryStatic.FullInventory = true;
             }
         }
 
+        if (Inventory.InventoryStatic.FullInventory) return;
+        
+        Debug.Log("Picking up " + _item.name);
+        Inventory.InventoryStatic.Add(_item);
+        Destroy(gameObject);
+        return;
     }
 }

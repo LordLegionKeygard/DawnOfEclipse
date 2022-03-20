@@ -5,105 +5,110 @@ using UnityEngine.UI;
 
 public class EquipSlot : MonoBehaviour
 {
-    public Image icon;
-    public Image backIcon;
-    public EquipmentSlot equipmentSlot;
-    private ArmorControl armorControl;
-    public EquipmentManager equipmentManager;
+    public Image Icon;
+    public Image BackIcon;
+    [SerializeField] private EquipmentSlot _equipmentSlot;
+    [SerializeField] private ArmorControl _armorControl;
+    [SerializeField] private MagicArmorControl _magicArmorControl;
+    [SerializeField] private EquipmentManager _equipmentManager;
 
-    private void Start()
+    public void EquipIcon()
     {
-        armorControl = FindObjectOfType<ArmorControl>();
-    }
-    public void Icon()
-    {
-        icon.enabled = true;
-        backIcon.enabled = false;
+        Icon.enabled = true;
+        BackIcon.enabled = false;
     }
     public void Unequip()
     {
-        if(Inventory.InventoryStatic.FullInventory)
+        if (Inventory.InventoryStatic.FullInventory)
         {
             Debug.Log("Can't unequip item, because Inventory is Full");
             return;
         }
-        backIcon.enabled = true;
-        icon.enabled = false;
-        equipmentManager.Unequip((int)equipmentSlot);
+        BackIcon.enabled = true;
+        Icon.enabled = false;
+        _equipmentManager.Unequip((int)_equipmentSlot);
 
-        switch ((int)equipmentSlot)
+        switch ((int)_equipmentSlot)
         {
             case 0:
-                armorControl.headSlotArmor = 0;
-                equipmentManager.ActiveAllHeadElements(0);
-                equipmentManager.InActiveAllHeadAttachment();
+                _armorControl.HeadSlotArmor = 0;
+                _equipmentManager.ActiveAllHeadElements(0);
+                _equipmentManager.InActiveAllHeadAttachment();
                 break;
             case 1:
-                equipmentManager.Equip(equipmentManager.DefaultEquipment[1]);
+                _equipmentManager.Equip(_equipmentManager.DefaultEquipment[1]);
                 break;
             case 2:
-                equipmentManager.Equip(equipmentManager.DefaultEquipment[2]);
+                _equipmentManager.Equip(_equipmentManager.DefaultEquipment[2]);
                 break;
             case 3:
-                equipmentManager.Equip(equipmentManager.DefaultEquipment[6]);
+                _equipmentManager.Equip(_equipmentManager.DefaultEquipment[6]);
                 break;
             case 4:
-                equipmentManager.Equip(equipmentManager.DefaultEquipment[9]);
+                _equipmentManager.Equip(_equipmentManager.DefaultEquipment[9]);
                 break;
             case 5:
-                equipmentManager.Equip(equipmentManager.DefaultEquipment[0]);
+                _equipmentManager.Equip(_equipmentManager.DefaultEquipment[0]);
                 break;
             case 6:
-                equipmentManager.Equip(equipmentManager.DefaultEquipment[3]);
+                _equipmentManager.Equip(_equipmentManager.DefaultEquipment[3]);
                 break;
             case 7:
-                equipmentManager.Equip(equipmentManager.DefaultEquipment[7]);
+                _equipmentManager.Equip(_equipmentManager.DefaultEquipment[7]);
                 break;
             case 8:
-                equipmentManager.Equip(equipmentManager.DefaultEquipment[8]);
+                _equipmentManager.Equip(_equipmentManager.DefaultEquipment[8]);
                 break;
             case 9:
-                equipmentManager.Equip(equipmentManager.DefaultEquipment[4]);
+                _equipmentManager.Equip(_equipmentManager.DefaultEquipment[4]);
                 break;
             case 10:
-                equipmentManager.Equip(equipmentManager.DefaultEquipment[5]);
+                _equipmentManager.Equip(_equipmentManager.DefaultEquipment[5]);
                 break;
             case 11:
-                armorControl.backAttachmentArmor = 0;
+                _armorControl.BackAttachmentArmor = 0;
                 break;
             case 12:
-                armorControl.shoulderRightArmor = 0;
+                _armorControl.ShoulderRightArmor = 0;
                 break;
             case 13:
-                armorControl.shoulderLeftArmor = 0;
+                _armorControl.ShoulderLeftArmor = 0;
                 break;
             case 14:
-                armorControl.elbowRightArmor = 0;
+                _armorControl.ElbowRightArmor = 0;
                 break;
             case 15:
-                armorControl.elbowLeftArmor = 0;
+                _armorControl.ElbowLeftArmor = 0;
                 break;
             case 17:
-                armorControl.kneeRightArmor = 0;
+                _armorControl.KneeRightArmor = 0;
                 break;
             case 18:
-                armorControl.kneeLeftArmor = 0;
+                _armorControl.KneeLeftArmor = 0;
                 break;
             case 19:
-                equipmentManager.Unequip(19);
-                equipmentManager.Unequip(20);
-                if(equipmentManager.ShieldButton.enabled == false)
+                _equipmentManager.Unequip(19);
+                _equipmentManager.Unequip(20);
+                if (_equipmentManager.ShieldButton.enabled == false)
                 {
-                    equipmentManager.UnequipTwoHandedWeaponFromShield();
-                }                           
-                equipmentManager.ResetAnimator();
+                    _equipmentManager.UnequipTwoHandedWeaponFromShield();
+                }
+                _equipmentManager.ResetAnimator();
                 break;
             case 21:
-                equipmentManager.Unequip(21);
-                armorControl.shieldArmorPassive = 0;
+                _equipmentManager.Unequip(21);
+                _armorControl.ShieldArmorPassive = 0;
                 break;
+            case 22:
+                _magicArmorControl.LeftRingMagicArmor = 0;
+                break;
+            case 23:
+                _magicArmorControl.RightRingMagicArmor = 0;
+                break;
+
         }
-        armorControl.UpdateArmor();
+        _armorControl.UpdateArmor();
+        _magicArmorControl.UpdateMagicArmor();
         CustomEvents.FireCheckFullInventory();
     }
 }

@@ -7,6 +7,7 @@ public class Equipment : Item
 {
     public EquipmentSlot equipSlot;
     public int armorModifier;
+    public int MagicArmorModifier;
     public SkinnedMeshRenderer mesh;
     public GameObject prefab;
     public int hatNumber;
@@ -49,5 +50,10 @@ public enum EquipmentSlot
     KneeLeft = 18,
     WeaponTwoHand = 19,
     WeaponRightHand = 20,
-    Shield = 21
+    Shield = 21,
+    LeftRing = 22,
+    RightRing = 23,
+    LeftEarring = 24,
+    RightEarring = 25,
+    Necklace = 26
 }

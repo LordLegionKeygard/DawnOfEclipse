@@ -6,35 +6,35 @@ using TMPro;
 
 public class InventorySlot : MonoBehaviour
 {
-    public bool isCursor;
+    public bool IsCursor;
     [SerializeField] private int _numberSlot;
     [SerializeField] private int _amount;
     [SerializeField] private Image icon;
-    public TextMeshProUGUI _amountText;
-    [SerializeField] private Button removeButton;
-    [SerializeField] private GameObject ringFromBtn;
-    public Item item;
+    [SerializeField] private TextMeshProUGUI _amountText;
+    [SerializeField] private Button _removeButton;
+    [SerializeField] private GameObject _ringFromBtn;
+    public Item Item;
 
     private void Update()
     {
-        if (!isCursor) return;
+        if (!IsCursor) return;
 
         transform.position = Input.mousePosition;
     }
 
     public void AddItem(Item newItem, string name)
     {
-        item = newItem;
-        icon.sprite = item.icon;
-        removeButton.interactable = true;
+        Item = newItem;
+        icon.sprite = Item.icon;
+        _removeButton.interactable = true;
         if (newItem.name != "Empty_Item")
             icon.enabled = true;
-        ringFromBtn.SetActive(true);
-        if (item.maxStack > 1)
+        _ringFromBtn.SetActive(true);
+        if (Item.IsStackable)
         {
             _amountText.enabled = true;
             if (newItem.name == name)
-                _amount += item.amount;
+                _amount++;
             _amountText.text = _amount.ToString();
         }
     }
@@ -43,24 +43,24 @@ public class InventorySlot : MonoBehaviour
     {
         icon.sprite = null;
         icon.enabled = false;
-        removeButton.interactable = false;
-        ringFromBtn.SetActive(false);
+        _removeButton.interactable = false;
+        _ringFromBtn.SetActive(false);
         _amountText.enabled = false;
         _amount = 1;
     }
     public void OnRemoveButton()
     {
-        Inventory.InventoryStatic.RemoveItemFromInventoryList(item, _numberSlot);
+        Inventory.InventoryStatic.RemoveItemFromInventoryList(Item, _numberSlot);
         ClearSlot();
     }
     public void UseItem()
     {
-        if (item.isUsedItem && PotionsControl.CanDrinkAnyPotions)
+        if (Item.IsUsedItem && PotionsControl.CanDrinkAnyPotions)
         {
             _amount--;
             _amountText.text = _amount.ToString();
-            item.Use();
-            switch (item.name)
+            Item.Use();
+            switch (Item.name)
             {
                 case ("HealthPotion"):
                     {
@@ -81,15 +81,13 @@ public class InventorySlot : MonoBehaviour
             if (_amount == 0)
             {
                 OnRemoveButton();
-                CustomEvents.FireCheckFullInventory();
             }
             return;
         }
-        if (item.amount == 0)
+        if (!Item.IsStackable)
         {
-            item.Use();
+            Item.Use();
             OnRemoveButton();
-            CustomEvents.FireCheckFullInventory();
         }
     }
 }

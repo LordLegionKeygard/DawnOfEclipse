@@ -4,16 +4,13 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Item", menuName = "Inventory/Item")]
 public class Item : ScriptableObject
 {
+    private InventorySlot _inventorySlot;
     [HideInInspector] public Item CurrentItem;
     public Sprite icon = null;
-    public int maxStack;
-    public int amount;
     public int Price = 250;
-    public bool isDefaultItem = false;
-    public bool isStackable { get { return (maxStack > 1); } }
-    public bool hasItem { get { return (CurrentItem != null); } }
-    private InventorySlot inventorySlot;
-    public bool isUsedItem = false;
+    public bool IsDefaultItem;
+    public bool IsStackable;
+    public bool IsUsedItem;
     public string[] Name; //0 eng, 1 rus 
     public virtual void Use()
     {

@@ -13,6 +13,7 @@ public class PlayerBank : MonoBehaviour
     private void OnEnable()
     {
         CustomEvents.OnChangeCoins += ChangeCoins;
+        UpdateCoinsText();
     }
 
     public void ChangeCoins(int amount)

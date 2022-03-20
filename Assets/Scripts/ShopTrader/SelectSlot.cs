@@ -12,7 +12,7 @@ public class SelectSlot : MonoBehaviour
     [SerializeField] private PlayerBank _playerBank;
     [SerializeField] private Image _icon;
     [SerializeField] private TextMeshProUGUI _priceText;
-    [SerializeField] private TextMeshProUGUI _itemNameText1;
+    [SerializeField] private TextMeshProUGUI _itemNameText;
     [SerializeField] private Button _buyButton;
     [SerializeField] private Button _sellButton;
     [SerializeField] private InventorySlot[] _inventorySlot;
@@ -56,11 +56,16 @@ public class SelectSlot : MonoBehaviour
     }
     public void BuyItem()
     {
+        if(_inventory.FullInventory)
+        {
+            _itemNameText.text = "Full Inventory";
+            return;
+        }
         CustomEvents.FireChangeCoins(-_buySlotPrice);
         Inventory.InventoryStatic.Add(_item);
         ClearSlot();
         UpdatePriceColorsEvent?.Invoke();
-        _itemNameText1.text = "Select item";
+        _itemNameText.text = "Select item";
         ButtonsFalse();
     }
 
@@ -74,9 +79,9 @@ public class SelectSlot : MonoBehaviour
     {
         CustomEvents.FireChangeCoins(_buySlotPrice);
         UpdatePriceColorsEvent?.Invoke();
-        _itemNameText1.text = "Select item";
+        _itemNameText.text = "Select item";
         Inventory.InventoryStatic.RemoveItemFromInventoryList(_inventorySellSlot[_slotNumber].Item, _slotNumber);
-        _inventorySellSlot[_slotNumber].Item = _inventorySlot[_slotNumber].item;
+        _inventorySellSlot[_slotNumber].Item = _inventorySlot[_slotNumber].Item;
         _inventorySlot[_slotNumber].OnRemoveButton();
         ClearSlot();
         ButtonsFalse();

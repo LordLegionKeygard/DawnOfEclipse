@@ -37,7 +37,7 @@ public class Inventory : MonoBehaviour
 
     public void Add(Item item)
     {
-        if (item.isDefaultItem) return;
+        if (item.IsDefaultItem) return;
 
         StartCoroutine(ExecuteAfterTime(0.1f));
         IEnumerator ExecuteAfterTime(float timeInSec)
@@ -49,13 +49,11 @@ public class Inventory : MonoBehaviour
                 {
                     items[i] = item;
                     UpdateUI(item.Name[Language.Number]);
-                    CustomEvents.FireCheckFullInventory();
+                    CheckFullInventory();
                     break;
                 }
             }
         }
-
-
     }
 
     public void UpdateUI(string name)
@@ -92,6 +90,7 @@ public class Inventory : MonoBehaviour
     {
         items[number] = _emptySlot;
         UpdateUI(item.Name[Language.Number]);
+        CheckFullInventory();
     }
 
     private void OnDisable()

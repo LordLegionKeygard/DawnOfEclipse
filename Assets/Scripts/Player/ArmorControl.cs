@@ -6,81 +6,81 @@ using TMPro;
 public class ArmorControl : MonoBehaviour
 {
 
-    [SerializeField] private TextMeshProUGUI armorText;
-    public int currentArmor = 0;
-    public int torsoArmor;
-    public int handRightArmor;
-    public int handLeftArmor;
-    public int armUpperRightArmor;
-    public int armUpperLeftArmor;
-    public int armLowerRightArmor;
-    public int armLowerLeftArmor;
-    public int hipsArmor;
-    public int legLeftArmor;
-    public int legRightArmor;
-    public int backAttachmentArmor;
-    public int shoulderLeftArmor;
-    public int shoulderRightArmor;
-    public int headSlotArmor;
-    public int elbowRightArmor;
-    public int elbowLeftArmor;
-    public int kneeRightArmor;
-    public int kneeLeftArmor;
-    public int shieldArmorPassive;
-    public int shieldBlockArmor;
-    public int shieldBlockArmorDefault;
+    [SerializeField] private TextMeshProUGUI _armorText;
+    public int CurrentArmor = 0;
+    public int TorsoArmor;
+    public int HandRightArmor;
+    public int HandLeftArmor;
+    public int ArmUpperRightArmor;
+    public int ArmUpperLeftArmor;
+    public int ArmLowerRightArmor;
+    public int ArmLowerLeftArmor;
+    public int HipsArmor;
+    public int LegLeftArmor;
+    public int LegRightArmor;
+    public int BackAttachmentArmor;
+    public int ShoulderLeftArmor;
+    public int ShoulderRightArmor;
+    public int HeadSlotArmor;
+    public int ElbowRightArmor;
+    public int ElbowLeftArmor;
+    public int KneeRightArmor;
+    public int KneeLeftArmor;
+    public int ShieldArmorPassive;
+    public int ShieldBlockArmor;
+    public int ShieldBlockArmorDefault;
 
     public void ResetArmor()
     {
-        backAttachmentArmor = 0;
-        shoulderLeftArmor = 0;
-        shoulderRightArmor = 0;
-        headSlotArmor = 0;
-        elbowRightArmor = 0;
-        elbowLeftArmor = 0;
-        kneeRightArmor = 0;
-        kneeLeftArmor = 0;
-        shieldArmorPassive = 0;
-        shieldBlockArmor = 0;
-        shieldBlockArmorDefault = 0;
+        BackAttachmentArmor = 0;
+        ShoulderLeftArmor = 0;
+        ShoulderRightArmor = 0;
+        HeadSlotArmor = 0;
+        ElbowRightArmor = 0;
+        ElbowLeftArmor = 0;
+        KneeRightArmor = 0;
+        KneeLeftArmor = 0;
+        ShieldArmorPassive = 0;
+        ShieldBlockArmor = 0;
+        ShieldBlockArmorDefault = 0;
         UpdateArmor();
     }
 
     public void ShieldBlock()
     {
-        shieldBlockArmor = shieldBlockArmorDefault;
+        ShieldBlockArmor = ShieldBlockArmorDefault;
         UpdateArmor();
     }
 
     public void ShieldUnBlock()
     {
-        shieldBlockArmor = 0;
+        ShieldBlockArmor = 0;
         UpdateArmor();
     }
 
     public void UpdateArmor()
     {
-        currentArmor = torsoArmor +
-        handRightArmor +
-        handLeftArmor +
-        armUpperRightArmor +
-        armUpperLeftArmor +
-        armLowerRightArmor +
-        armLowerLeftArmor +
-        hipsArmor +
-        legLeftArmor +
-        legRightArmor +
-        backAttachmentArmor +
-        shoulderLeftArmor +
-        shoulderRightArmor +
-        headSlotArmor +
-        elbowLeftArmor +
-        elbowRightArmor +
-        kneeRightArmor +
-        kneeLeftArmor +
-        shieldArmorPassive +
-        shieldBlockArmor;
+        CurrentArmor = TorsoArmor +
+        HandRightArmor +
+        HandLeftArmor +
+        ArmUpperRightArmor +
+        ArmUpperLeftArmor +
+        ArmLowerRightArmor +
+        ArmLowerLeftArmor +
+        HipsArmor +
+        LegLeftArmor +
+        LegRightArmor +
+        BackAttachmentArmor +
+        ShoulderLeftArmor +
+        ShoulderRightArmor +
+        HeadSlotArmor +
+        ElbowLeftArmor +
+        ElbowRightArmor +
+        KneeRightArmor +
+        KneeLeftArmor +
+        ShieldArmorPassive +
+        ShieldBlockArmor;
 
-        armorText.text = (currentArmor.ToString());
+        _armorText.text = (CurrentArmor.ToString());
     }
 }

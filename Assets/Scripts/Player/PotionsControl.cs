@@ -22,6 +22,7 @@ public class PotionsControl : MonoBehaviour
     }
     private void UsePotions(int potion)
     {
+        if(!CanDrinkAnyPotions) return;
         CantDrinkAnyPotions();
         StartCoroutine(ExecuteAfterTime1(1.8f));
         IEnumerator ExecuteAfterTime1(float timeInSec)

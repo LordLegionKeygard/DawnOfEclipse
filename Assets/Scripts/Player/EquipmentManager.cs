@@ -16,11 +16,12 @@ public class EquipmentManager : MonoBehaviour
     [SerializeField] private Animator _anim;
     [SerializeField] private Image _shieldEquipSlotImage;
     [SerializeField] private ArmorControl _armorControl;
+    [SerializeField] private MagicArmorControl _magicArmorControl;
     [SerializeField] private MeshFilter _targetMeshFilterWeapon;
     [SerializeField] private MeshFilter _targetMeshFilterShield;
     private SkinnedMeshRenderer[] _currentMeshes;
     private GameObject[] _currentGameObject;
-    private Equipment[] _currentEquipment;
+    public Equipment[] _currentEquipment;
     private WeaponTimeCooldown _weaponTimeCooldown;
     private bool _twoHandWeaponNow;
     public delegate void OnEquipmentChanged(Equipment newItem, Equipment oldItem);
@@ -89,7 +90,26 @@ public class EquipmentManager : MonoBehaviour
         {
             Equipment oldWeapon = Unequip(19);
         }
+
         int slotIndex = (int)newItem.equipSlot;
+
+        if (newItem.equipSlot == EquipmentSlot.LeftRing)
+        {
+            if (_magicArmorControl.RightRingMagicArmor == 0)
+            {
+                Unequip(slotIndex + 1);
+                _currentEquipment[slotIndex + 1] = newItem;
+
+            }
+            else
+            {
+                Unequip(slotIndex);
+                _currentEquipment[slotIndex] = newItem;
+            }
+            AttachToMesh(newItem, slotIndex);
+            return;
+        }
+
         Equipment oldItem = Unequip(slotIndex);
 
         if (_onEquipmentChanged != null)
@@ -117,11 +137,12 @@ public class EquipmentManager : MonoBehaviour
     public void UnequipTwoHandedWeaponFromShield()
     {
         ShieldButton.enabled = true;
-        _equipSlot[21].backIcon.enabled = true;
-        _equipSlot[21].icon.enabled = false;
+        _equipSlot[21].BackIcon.enabled = true;
+        _equipSlot[21].Icon.enabled = false;
     }
     public Equipment Unequip(int slotIndex)
     {
+        Debug.Log("SlotIndex" + slotIndex);
         Equipment oldItem = null;
 
         if (_currentEquipment[slotIndex] != null)
@@ -134,8 +155,8 @@ public class EquipmentManager : MonoBehaviour
                 _weaponTimeCooldown.NoWeapon();
                 if (slotIndex == 19)
                 {
-                    _equipSlot[21].backIcon.enabled = true;
-                    _equipSlot[21].icon.enabled = false;
+                    _equipSlot[21].BackIcon.enabled = true;
+                    _equipSlot[21].Icon.enabled = false;
                 }
             }
 
@@ -158,6 +179,7 @@ public class EquipmentManager : MonoBehaviour
             Unequip(i);
         }
         _armorControl.ResetArmor();
+        _magicArmorControl.ResetArmor();
         EquipDefaults();
     }
 
@@ -182,8 +204,8 @@ public class EquipmentManager : MonoBehaviour
     {
         if (equipItem.icon != null)
         {
-            _equipSlot[equipSlotNumber].icon.sprite = equipItem.icon;
-            _equipSlot[equipSlotNumber].Icon();
+            _equipSlot[equipSlotNumber].Icon.sprite = equipItem.icon;
+            _equipSlot[equipSlotNumber].EquipIcon();
         }
     }
 
@@ -194,80 +216,80 @@ public class EquipmentManager : MonoBehaviour
             case EquipmentSlot.Torso:
                 SkinnedMeshRenderer newMeshTorso = Instantiate(item.mesh);
                 BoneTransformArmor(newMeshTorso, 0, slotIndex);
-                _armorControl.torsoArmor = item.armorModifier;
+                _armorControl.TorsoArmor = item.armorModifier;
                 EquipSlotAndIcon(1, item);
                 break;
             case EquipmentSlot.HandRight:
                 SkinnedMeshRenderer newMeshHandRight = Instantiate(item.mesh);
                 BoneTransformArmor(newMeshHandRight, 1, slotIndex);
-                _armorControl.handRightArmor = item.armorModifier;
+                _armorControl.HandRightArmor = item.armorModifier;
                 EquipSlotAndIcon(5, item);
                 break;
             case EquipmentSlot.HandLeft:
                 SkinnedMeshRenderer newMeshHandLeft = Instantiate(item.mesh);
                 BoneTransformArmor(newMeshHandLeft, 2, slotIndex);
-                _armorControl.handLeftArmor = item.armorModifier;
+                _armorControl.HandLeftArmor = item.armorModifier;
                 EquipSlotAndIcon(6, item);
                 break;
             case EquipmentSlot.ArmUpperRight:
                 SkinnedMeshRenderer newMeshArmUpperRight = Instantiate(item.mesh);
                 BoneTransformArmor(newMeshArmUpperRight, 3, slotIndex);
-                _armorControl.armUpperRightArmor = item.armorModifier;
+                _armorControl.ArmUpperRightArmor = item.armorModifier;
                 EquipSlotAndIcon(7, item);
                 break;
             case EquipmentSlot.ArmUpperLeft:
                 SkinnedMeshRenderer newMeshArmUpperLeft = Instantiate(item.mesh);
                 BoneTransformArmor(newMeshArmUpperLeft, 4, slotIndex);
-                _armorControl.armUpperLeftArmor = item.armorModifier;
+                _armorControl.ArmUpperLeftArmor = item.armorModifier;
                 EquipSlotAndIcon(8, item);
                 break;
             case EquipmentSlot.ArmLowerRight:
                 SkinnedMeshRenderer newMeshArmLowerRight = Instantiate(item.mesh);
                 BoneTransformArmor(newMeshArmLowerRight, 5, slotIndex);
-                _armorControl.armLowerRightArmor = item.armorModifier;
+                _armorControl.ArmLowerRightArmor = item.armorModifier;
                 EquipSlotAndIcon(9, item);
                 break;
             case EquipmentSlot.ArmLowerLeft:
                 SkinnedMeshRenderer newMeshArmLowerLeft = Instantiate(item.mesh);
                 BoneTransformArmor(newMeshArmLowerLeft, 6, slotIndex);
-                _armorControl.armLowerLeftArmor = item.armorModifier;
+                _armorControl.ArmLowerLeftArmor = item.armorModifier;
                 EquipSlotAndIcon(10, item);
                 break;
             case EquipmentSlot.Hips:
                 SkinnedMeshRenderer newMeshHips = Instantiate(item.mesh);
                 BoneTransformArmor(newMeshHips, 7, slotIndex);
-                _armorControl.hipsArmor = item.armorModifier;
+                _armorControl.HipsArmor = item.armorModifier;
                 EquipSlotAndIcon(2, item);
                 break;
             case EquipmentSlot.LegRight:
                 SkinnedMeshRenderer newMeshLegRight = Instantiate(item.mesh);
                 BoneTransformArmor(newMeshLegRight, 8, slotIndex);
-                _armorControl.legRightArmor = item.armorModifier;
+                _armorControl.LegRightArmor = item.armorModifier;
                 EquipSlotAndIcon(3, item);
                 break;
             case EquipmentSlot.LegLeft:
                 SkinnedMeshRenderer newMeshLegLeft = Instantiate(item.mesh);
                 BoneTransformArmor(newMeshLegLeft, 9, slotIndex);
-                _armorControl.legLeftArmor = item.armorModifier;
+                _armorControl.LegLeftArmor = item.armorModifier;
                 EquipSlotAndIcon(4, item);
                 break;
 
             case EquipmentSlot.BackAttachment:
                 SkinnedMeshRenderer newMeshBackAttachment = Instantiate(item.mesh);
                 BoneTransformArmor(newMeshBackAttachment, 10, slotIndex);
-                _armorControl.backAttachmentArmor = item.armorModifier;
+                _armorControl.BackAttachmentArmor = item.armorModifier;
                 EquipSlotAndIcon(11, item);
                 break;
             case EquipmentSlot.ShoulderRight:
                 SkinnedMeshRenderer newMeshShoulderRight = Instantiate(item.mesh);
                 BoneTransformArmor(newMeshShoulderRight, 11, slotIndex);
-                _armorControl.shoulderRightArmor = item.armorModifier;
+                _armorControl.ShoulderRightArmor = item.armorModifier;
                 EquipSlotAndIcon(12, item);
                 break;
             case EquipmentSlot.ShoulderLeft:
                 SkinnedMeshRenderer newMeshShoulderLeft = Instantiate(item.mesh);
                 BoneTransformArmor(newMeshShoulderLeft, 12, slotIndex);
-                _armorControl.shoulderLeftArmor = item.armorModifier;
+                _armorControl.ShoulderLeftArmor = item.armorModifier;
                 EquipSlotAndIcon(13, item);
                 break;
 
@@ -289,18 +311,18 @@ public class EquipmentManager : MonoBehaviour
                     BoneTransformArmor(newMeshHeadNoElememts, 15, slotIndex);
                 }
                 EquipSlotAndIcon(0, item);
-                _armorControl.headSlotArmor = item.armorModifier;
+                _armorControl.HeadSlotArmor = item.armorModifier;
                 break;
             case EquipmentSlot.ElbowRight:
                 SkinnedMeshRenderer newMeshElbowRight = Instantiate(item.mesh);
                 BoneTransformArmor(newMeshElbowRight, 16, slotIndex);
-                _armorControl.elbowRightArmor = item.armorModifier;
+                _armorControl.ElbowRightArmor = item.armorModifier;
                 EquipSlotAndIcon(14, item);
                 break;
             case EquipmentSlot.ElbowLeft:
                 SkinnedMeshRenderer newMeshElbowLeft = Instantiate(item.mesh);
                 BoneTransformArmor(newMeshElbowLeft, 17, slotIndex);
-                _armorControl.elbowLeftArmor = item.armorModifier;
+                _armorControl.ElbowLeftArmor = item.armorModifier;
                 EquipSlotAndIcon(15, item);
                 break;
             case EquipmentSlot.HipsAttachment:
@@ -310,13 +332,13 @@ public class EquipmentManager : MonoBehaviour
             case EquipmentSlot.KneeRight:
                 SkinnedMeshRenderer newMeshKneeRight = Instantiate(item.mesh);
                 BoneTransformArmor(newMeshKneeRight, 19, slotIndex);
-                _armorControl.kneeRightArmor = item.armorModifier;
+                _armorControl.KneeRightArmor = item.armorModifier;
                 EquipSlotAndIcon(17, item);
                 break;
             case EquipmentSlot.KneeLeft:
                 SkinnedMeshRenderer newMeshKneeLeft = Instantiate(item.mesh);
                 BoneTransformArmor(newMeshKneeLeft, 20, slotIndex);
-                _armorControl.kneeLeftArmor = item.armorModifier;
+                _armorControl.KneeLeftArmor = item.armorModifier;
                 EquipSlotAndIcon(18, item);
                 break;
             case EquipmentSlot.WeaponTwoHand:
@@ -324,9 +346,9 @@ public class EquipmentManager : MonoBehaviour
                 _anim.runtimeAnimatorController = Resources.Load("Animation/GreatSwordController") as RuntimeAnimatorController;
                 GameObject newWeaponTwoHandPrefab = Instantiate(item.prefab);
                 BoneTransformWeapon(newWeaponTwoHandPrefab, slotIndex, _weaponsAttachPoints[0], true);
-                _armorControl.shieldBlockArmorDefault = item.shieldBlockArmorModifier;
-                _armorControl.shieldArmorPassive = 0;
-                _equipSlot[21].icon.gameObject.GetComponentInParent<Button>().enabled = false;
+                _armorControl.ShieldBlockArmorDefault = item.shieldBlockArmorModifier;
+                _armorControl.ShieldArmorPassive = 0;
+                _equipSlot[21].Icon.gameObject.GetComponentInParent<Button>().enabled = false;
                 _shieldEquipSlotImage.color = new Color(_shieldEquipSlotImage.color.r, _shieldEquipSlotImage.color.g, _shieldEquipSlotImage.color.b, 0.5f);
                 EquipSlotAndIcon(19, item);
                 EquipSlotAndIcon(21, item);
@@ -338,31 +360,44 @@ public class EquipmentManager : MonoBehaviour
                 _anim.runtimeAnimatorController = Resources.Load("Animation/SwordAndShieldController") as RuntimeAnimatorController;
                 GameObject newWeaponRightHandPrefab = Instantiate(item.prefab);
                 BoneTransformWeapon(newWeaponRightHandPrefab, slotIndex, _weaponsAttachPoints[1], true);
-                _equipSlot[19].icon.sprite = item.icon;
-                _equipSlot[21].icon.gameObject.GetComponentInParent<Button>().enabled = true;
+                _equipSlot[19].Icon.sprite = item.icon;
+                _equipSlot[21].Icon.gameObject.GetComponentInParent<Button>().enabled = true;
                 _twoHandWeaponNow = false;
-                _equipSlot[20].Icon();
+                _equipSlot[20].EquipIcon();
                 break;
             case EquipmentSlot.Shield:
                 if (_twoHandWeaponNow == true)
                 {
                     ResetAnimator();
-                    _equipSlot[19].backIcon.enabled = true;
-                    _equipSlot[19].icon.enabled = false;
+                    _equipSlot[19].BackIcon.enabled = true;
+                    _equipSlot[19].Icon.enabled = false;
                 }
                 Unequip(19);
                 GameObject newShieldPrefab = Instantiate(item.prefab);
                 BoneTransformWeapon(newShieldPrefab, slotIndex, _weaponsAttachPoints[2], false);
-                _armorControl.shieldArmorPassive = item.armorModifier;
-                _armorControl.shieldBlockArmorDefault = item.shieldBlockArmorModifier;
-                _equipSlot[21].icon.gameObject.GetComponentInParent<Button>().enabled = true;
+                _armorControl.ShieldArmorPassive = item.armorModifier;
+                _armorControl.ShieldBlockArmorDefault = item.shieldBlockArmorModifier;
+                _equipSlot[21].Icon.gameObject.GetComponentInParent<Button>().enabled = true;
                 _shieldEquipSlotImage.color = new Color(_shieldEquipSlotImage.color.r, _shieldEquipSlotImage.color.g, _shieldEquipSlotImage.color.b, 1f);
 
                 _twoHandWeaponNow = false;
                 EquipSlotAndIcon(21, item);
                 break;
+            case EquipmentSlot.LeftRing:
+                if (_magicArmorControl.RightRingMagicArmor == 0)
+                {
+                    EquipSlotAndIcon(23, item);
+                    _magicArmorControl.RightRingMagicArmor = item.MagicArmorModifier;
+                }
+                else
+                {
+                    EquipSlotAndIcon(22, item);
+                    _magicArmorControl.LeftRingMagicArmor = item.MagicArmorModifier;
+                }
+                break;
         }
         _armorControl.UpdateArmor();
+        _magicArmorControl.UpdateMagicArmor();
     }
 
     public void ResetAnimator()

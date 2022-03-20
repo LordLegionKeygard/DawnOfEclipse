@@ -14,11 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentItem: {fileID: 0}
   icon: {fileID: 0}
-  maxStack: 1
-  amount: 0
   Price: 250
-  isDefaultItem: 1
-  isUsedItem: 0
+  IsDefaultItem: 1
+  IsStackable: 0
+  IsUsedItem: 0
   Name: []
   equipSlot: 1
   armorModifier: 0
@@ -31,3 +30,5 @@ MonoBehaviour:
   twoHandedWeapon: 0
   shield: 0
   shieldBlockArmorModifier: 0
+  FirstAttachmentNumber: 0
+  SecondAttachmentNumber: 0

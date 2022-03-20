@@ -14,11 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentItem: {fileID: 0}
   icon: {fileID: 21300000, guid: 8bba4b5ee74900b4ea2ce0fef9c25afb, type: 3}
-  maxStack: 9
-  amount: 1
   Price: 250
-  isDefaultItem: 0
-  isUsedItem: 1
+  IsDefaultItem: 0
+  IsStackable: 1
+  IsUsedItem: 1
   Name:
   - Health Potion
   - "\u0417\u0435\u043B\u044C\u0435 \u0417\u0434\u043E\u0440\u043E\u0432\u044C\u044F"

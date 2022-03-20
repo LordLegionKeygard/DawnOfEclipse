@@ -14,11 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentItem: {fileID: 0}
   icon: {fileID: 21300000, guid: 4069d43ae3162514791f379d2a989b73, type: 3}
-  maxStack: 9
-  amount: 1
   Price: 250
-  isDefaultItem: 0
-  isUsedItem: 1
+  IsDefaultItem: 0
+  IsStackable: 1
+  IsUsedItem: 1
   Name:
   - Speed Potion
   - "\u0417\u0435\u043B\u044C\u0435 \u0421\u043A\u043E\u0440\u043E\u0441\u0442\u0438"

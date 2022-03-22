@@ -105,7 +105,15 @@ public class EquipSlot : MonoBehaviour
             case 23:
                 _magicArmorControl.RightRingMagicArmor = 0;
                 break;
-
+            case 24:
+                _magicArmorControl.LeftEarringMagicArmor = 0;
+                break;
+            case 25:
+                _magicArmorControl.RightEarringMagicArmor = 0;
+                break;
+            case 26:
+                _magicArmorControl.NecklaceMagicArmor = 0;
+                break;
         }
         _armorControl.UpdateArmor();
         _magicArmorControl.UpdateMagicArmor();

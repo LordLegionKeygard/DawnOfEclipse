@@ -10,20 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
-  m_Name: Ring_04_Item
+  m_Name: Earring_03_Item
   m_EditorClassIdentifier: 
   CurrentItem: {fileID: 0}
-  icon: {fileID: 21300000, guid: c708bd7cc3ccc95458a1cfc9c4cc3601, type: 3}
+  icon: {fileID: 21300000, guid: a169e6a039304384798a383b6d15601b, type: 3}
   Price: 250
   IsDefaultItem: 0
   IsStackable: 0
   IsUsedItem: 0
   Name:
-  - Ring
-  - "\u041A\u043E\u043B\u044C\u0446\u043E"
-  equipSlot: 22
+  - Earring
+  - "\u0421\u0435\u0440\u044C\u0433\u0430"
+  equipSlot: 24
   armorModifier: 0
-  MagicArmorModifier: 4
+  MagicArmorModifier: 3
   mesh: {fileID: 0}
   prefab: {fileID: 0}
   hatNumber: 0

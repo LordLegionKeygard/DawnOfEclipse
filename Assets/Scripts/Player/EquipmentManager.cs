@@ -21,7 +21,7 @@ public class EquipmentManager : MonoBehaviour
     [SerializeField] private MeshFilter _targetMeshFilterShield;
     private SkinnedMeshRenderer[] _currentMeshes;
     private GameObject[] _currentGameObject;
-    public Equipment[] _currentEquipment;
+    private Equipment[] _currentEquipment;
     private WeaponTimeCooldown _weaponTimeCooldown;
     private bool _twoHandWeaponNow;
     public delegate void OnEquipmentChanged(Equipment newItem, Equipment oldItem);
@@ -99,7 +99,22 @@ public class EquipmentManager : MonoBehaviour
             {
                 Unequip(slotIndex + 1);
                 _currentEquipment[slotIndex + 1] = newItem;
+            }
+            else
+            {
+                Unequip(slotIndex);
+                _currentEquipment[slotIndex] = newItem;
+            }
+            AttachToMesh(newItem, slotIndex);
+            return;
+        }
 
+        if (newItem.equipSlot == EquipmentSlot.LeftEarring)
+        {
+            if (_magicArmorControl.RightEarringMagicArmor == 0)
+            {
+                Unequip(slotIndex + 1);
+                _currentEquipment[slotIndex + 1] = newItem;
             }
             else
             {
@@ -142,7 +157,6 @@ public class EquipmentManager : MonoBehaviour
     }
     public Equipment Unequip(int slotIndex)
     {
-        Debug.Log("SlotIndex" + slotIndex);
         Equipment oldItem = null;
 
         if (_currentEquipment[slotIndex] != null)
@@ -394,6 +408,22 @@ public class EquipmentManager : MonoBehaviour
                     EquipSlotAndIcon(22, item);
                     _magicArmorControl.LeftRingMagicArmor = item.MagicArmorModifier;
                 }
+                break;
+            case EquipmentSlot.LeftEarring:
+                if (_magicArmorControl.RightEarringMagicArmor == 0)
+                {
+                    EquipSlotAndIcon(25, item);
+                    _magicArmorControl.RightEarringMagicArmor = item.MagicArmorModifier;
+                }
+                else
+                {
+                    EquipSlotAndIcon(24, item);
+                    _magicArmorControl.LeftEarringMagicArmor = item.MagicArmorModifier;
+                }
+                break;
+            case EquipmentSlot.Necklace:
+                EquipSlotAndIcon(26, item);
+                _magicArmorControl.NecklaceMagicArmor = item.MagicArmorModifier;
                 break;
         }
         _armorControl.UpdateArmor();

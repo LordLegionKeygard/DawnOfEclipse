@@ -23,7 +23,7 @@ MonoBehaviour:
   - "\u041A\u043E\u043B\u044C\u0446\u043E"
   equipSlot: 22
   armorModifier: 0
-  MagicArmorModifier: 11
+  MagicArmorModifier: 3
   mesh: {fileID: 0}
   prefab: {fileID: 0}
   hatNumber: 0

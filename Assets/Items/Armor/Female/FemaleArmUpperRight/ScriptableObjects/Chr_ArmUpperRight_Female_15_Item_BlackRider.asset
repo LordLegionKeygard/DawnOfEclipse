@@ -12,19 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
   m_Name: Chr_ArmUpperRight_Female_15_Item_BlackRider
   m_EditorClassIdentifier: 
-  CurrentItem: {fileID: 0}
   icon: {fileID: 21300000, guid: 6b29e9b4ad12b8e4e8867c9b689ca210, type: 3}
-  maxStack: 1
-  amount: 0
   Price: 250
-  isDefaultItem: 0
-  isUsedItem: 0
+  IsDefaultItem: 0
+  IsStackable: 0
+  IsUsedItem: 0
+  IsSetEffect: 1
   Name:
   - Black Rider Right Forearm
   - "\u041F\u0440\u0430\u0432\u044B\u0439 \u041F\u0440\u0435\u0434\u043F\u043B\u0435\u0447\u043D\u0438\u043A
     \u0427\u0435\u0440\u043D\u043E\u0433\u043E \u0412\u0441\u0430\u0434\u043D\u0438\u043A\u0430"
+  ItemType:
+  - Arm upper
+  - "\u0412\u0435\u0440\u0445. \u0447\u0430\u0441\u0442\u044C \u0440\u0443\u043A\u0438"
+  ItemInfo:
+  - 'P. Def. : 7'
+  - "\u0424\u0438\u0437. \u0417\u0430\u0449. : 7"
+  ArmorSetEnum: 19
+  AllArmorSetInfo: {fileID: 11400000, guid: 576352ffa1b746b4c872fd49153b9308, type: 2}
   equipSlot: 7
   armorModifier: 7
+  MagicArmorModifier: 0
   mesh: {fileID: 5776098924873156660, guid: 4d1dd4c03214e9c44971b4a3af888a1b, type: 3}
   prefab: {fileID: 0}
   hatNumber: 0

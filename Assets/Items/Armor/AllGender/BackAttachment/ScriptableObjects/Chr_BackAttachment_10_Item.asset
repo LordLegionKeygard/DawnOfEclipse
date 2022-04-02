@@ -12,18 +12,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
   m_Name: Chr_BackAttachment_10_Item
   m_EditorClassIdentifier: 
-  CurrentItem: {fileID: 0}
   icon: {fileID: 21300000, guid: 678c83b638073394f9d54eb46315a7ff, type: 3}
-  maxStack: 1
-  amount: 0
   Price: 250
-  isDefaultItem: 0
-  isUsedItem: 0
+  IsDefaultItem: 0
+  IsStackable: 0
+  IsUsedItem: 0
+  IsSetEffect: 0
   Name:
-  - Cloak
+  - Gladiator's Cloak
+  - "\u041F\u043B\u0430\u0449 \u0413\u043B\u0430\u0434\u0438\u0430\u0442\u043E\u0440\u0430"
+  ItemType:
+  - Cloack
   - "\u041F\u043B\u0430\u0449"
+  ItemInfo:
+  - 'P. Def. : 10'
+  - "\u0424\u0438\u0437. \u0417\u0430\u0449. : 10"
+  ArmorSetEnum: 0
+  AllArmorSetInfo: {fileID: 0}
   equipSlot: 11
   armorModifier: 10
+  MagicArmorModifier: 0
   mesh: {fileID: 653235347451027473, guid: e323fcf9a5b389b46936e90dba0bddec, type: 3}
   prefab: {fileID: 0}
   hatNumber: 0

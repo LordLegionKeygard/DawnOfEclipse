@@ -12,18 +12,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
   m_Name: Chr_Hips_Female_24_Item_FullPlate
   m_EditorClassIdentifier: 
-  CurrentItem: {fileID: 0}
   icon: {fileID: 21300000, guid: 624e58148cdce4e4498dc91ddc44bc68, type: 3}
-  maxStack: 1
-  amount: 0
   Price: 250
-  isDefaultItem: 0
-  isUsedItem: 0
+  IsDefaultItem: 0
+  IsStackable: 0
+  IsUsedItem: 0
+  IsSetEffect: 1
   Name:
   - Full Plate Gaiters
   - "\u041F\u043E\u043B\u043D\u044B\u0435 \u041B\u0430\u0442\u043D\u044B\u0435 \u041D\u0430\u0431\u0435\u0434\u0440\u0435\u043D\u043D\u0438\u043A\u0438"
+  ItemType:
+  - Lower body
+  - "\u041D\u0438\u0436.  \u0434\u043E\u0441\u043F\u0435\u0445"
+  ItemInfo:
+  - 'P. Def. : 43'
+  - "\u0424\u0438\u0437. \u0417\u0430\u0449. : 43"
+  ArmorSetEnum: 23
+  AllArmorSetInfo: {fileID: 11400000, guid: 576352ffa1b746b4c872fd49153b9308, type: 2}
   equipSlot: 2
   armorModifier: 43
+  MagicArmorModifier: 0
   mesh: {fileID: 803599649953674576, guid: f3c376e98d161d943bcdacad3dbe859c, type: 3}
   prefab: {fileID: 0}
   hatNumber: 0

@@ -12,18 +12,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
   m_Name: Chr_BackAttachment_07_Item
   m_EditorClassIdentifier: 
-  CurrentItem: {fileID: 0}
   icon: {fileID: 21300000, guid: fb9fff816df2b414e888ca30ec1d4461, type: 3}
-  maxStack: 1
-  amount: 0
   Price: 250
-  isDefaultItem: 0
-  isUsedItem: 0
+  IsDefaultItem: 0
+  IsStackable: 0
+  IsUsedItem: 0
+  IsSetEffect: 0
   Name:
-  - Cloak
+  - Blood Cloak
+  - "\u041A\u0440\u043E\u0432\u0430\u0432\u044B\u0439 \u041F\u043B\u0430\u0449"
+  ItemType:
+  - Cloack
   - "\u041F\u043B\u0430\u0449"
+  ItemInfo:
+  - 'P. Def. : 7'
+  - "\u0424\u0438\u0437. \u0417\u0430\u0449. : 7"
+  ArmorSetEnum: 0
+  AllArmorSetInfo: {fileID: 0}
   equipSlot: 11
   armorModifier: 7
+  MagicArmorModifier: 0
   mesh: {fileID: 3722796814754744873, guid: 28fb301b14da08b41a294d96e1db9528, type: 3}
   prefab: {fileID: 0}
   hatNumber: 0

@@ -12,19 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
   m_Name: Chr_HeadCoverings_No_Hair_04_Memorable
   m_EditorClassIdentifier: 
-  CurrentItem: {fileID: 0}
   icon: {fileID: 21300000, guid: 4bd912e950b597742aefd3fa12315419, type: 3}
-  maxStack: 1
-  amount: 0
   Price: 250
-  isDefaultItem: 0
-  isUsedItem: 0
+  IsDefaultItem: 0
+  IsStackable: 0
+  IsUsedItem: 0
+  IsSetEffect: 1
   Name:
   - Memorable Plate Helmet
   - "\u041D\u0435\u0437\u0430\u0431\u0432\u0435\u043D\u043D\u044B\u0439 \u041B\u0430\u0442\u043D\u044B\u0439
     \u0428\u043B\u0435\u043C"
+  ItemType:
+  - Headgear
+  - "\u0413\u043E\u043B\u043E\u0432\u043D\u043E\u0439 \u0423\u0431\u043E\u0440"
+  ItemInfo:
+  - 'P. Def. : 25'
+  - "\u0424\u0438\u0437. \u0417\u0430\u0449. : 25"
+  ArmorSetEnum: 22
+  AllArmorSetInfo: {fileID: 11400000, guid: 576352ffa1b746b4c872fd49153b9308, type: 2}
   equipSlot: 0
   armorModifier: 25
+  MagicArmorModifier: 0
   mesh: {fileID: 1150069071056333178, guid: 0c8d79b07bea8f44ba41698a9855eff1, type: 3}
   prefab: {fileID: 0}
   hatNumber: 1

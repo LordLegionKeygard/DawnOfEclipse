@@ -12,19 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
   m_Name: Chr_KneeAttachLeft_06_Legionary
   m_EditorClassIdentifier: 
-  CurrentItem: {fileID: 0}
   icon: {fileID: 21300000, guid: a42ac36e3ae955742b18d837f726eb94, type: 3}
-  maxStack: 1
-  amount: 0
   Price: 250
-  isDefaultItem: 0
-  isUsedItem: 0
+  IsDefaultItem: 0
+  IsStackable: 0
+  IsUsedItem: 0
+  IsSetEffect: 1
   Name:
   - Legionary Left Knee
   - "\u041B\u0435\u0432\u044B\u0439 \u041D\u0430\u043A\u043E\u043B\u0435\u043D\u043D\u0438\u043A
     \u041B\u0435\u0433\u0438\u043E\u043D\u0435\u0440\u0430"
+  ItemType:
+  - Knees
+  - "\u041D\u0430\u043A\u043E\u043B\u0435\u043D\u043D\u0438\u043A\u0438"
+  ItemInfo:
+  - 'P. Def. : 15'
+  - "\u0424\u0438\u0437. \u0417\u0430\u0449. : 15"
+  ArmorSetEnum: 15
+  AllArmorSetInfo: {fileID: 11400000, guid: 576352ffa1b746b4c872fd49153b9308, type: 2}
   equipSlot: 18
   armorModifier: 15
+  MagicArmorModifier: 0
   mesh: {fileID: 4169224461939567706, guid: c9f255f5ba845bf45996d83ed37b38e2, type: 3}
   prefab: {fileID: 0}
   hatNumber: 0

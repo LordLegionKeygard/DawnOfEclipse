@@ -11,19 +11,35 @@ public class EquipSlot : MonoBehaviour
     [SerializeField] private ArmorControl _armorControl;
     [SerializeField] private MagicArmorControl _magicArmorControl;
     [SerializeField] private EquipmentManager _equipmentManager;
+    [SerializeField] private SelectItemInfo _selectItemInfo;
+    [SerializeField] private Image _itemFrame;
+    public bool IsItemSelect = false;
+    public Item Item;
+
+    private void OnEnable()
+    {
+        CustomEvents.OnSelectItem += SelectSlot;
+        CustomEvents.OnCheckEquipItemSetNumber += CheckEquipItemSetEffect;
+    }
 
     public void EquipIcon()
     {
+        IsItemSelect = false;
+        _itemFrame.color = new Color(0.3301887f, 0.3283905f, 0.1759968f, 0.454902f);
         Icon.enabled = true;
         BackIcon.enabled = false;
     }
     public void Unequip()
     {
+        IsItemSelect = false;
+        CustomEvents.FireTooltipToggle(false);
+        SelectSlot(false);
         if (Inventory.InventoryStatic.FullInventory)
         {
             Debug.Log("Can't unequip item, because Inventory is Full");
             return;
         }
+        Item = null;
         BackIcon.enabled = true;
         Icon.enabled = false;
         _equipmentManager.Unequip((int)_equipmentSlot);
@@ -118,5 +134,80 @@ public class EquipSlot : MonoBehaviour
         _armorControl.UpdateArmor();
         _magicArmorControl.UpdateMagicArmor();
         CustomEvents.FireCheckFullInventory();
+    }
+
+    public void SelectSlot(bool state)
+    {
+        if (Item == null && state == true) return;
+
+        IsItemSelect = state;
+
+        if (state)
+        {
+            _itemFrame.color = new Color(0.8980392f, 0.7450981f, 0.1803922f, 1);
+            _selectItemInfo.UpdateItemInfoText(Item.Name[Language.LanguageNumber], Item.ItemType[Language.LanguageNumber], Item.ItemInfo[Language.LanguageNumber]);
+            if (Item.IsSetEffect)
+            {
+                _selectItemInfo.UpdateItemSetEffectInfoText
+               (Item.AllArmorSetInfo.intArray[Language.LanguageNumber].HelmetInfo[(int)Item.ArmorSetEnum],
+                Item.AllArmorSetInfo.intArray[Language.LanguageNumber].ShouldersInfo[(int)Item.ArmorSetEnum],
+                Item.AllArmorSetInfo.intArray[Language.LanguageNumber].TorsoInfo[(int)Item.ArmorSetEnum],
+                Item.AllArmorSetInfo.intArray[Language.LanguageNumber].ForearmsInfo[(int)Item.ArmorSetEnum],
+                Item.AllArmorSetInfo.intArray[Language.LanguageNumber].ElbowsInfo[(int)Item.ArmorSetEnum],
+                Item.AllArmorSetInfo.intArray[Language.LanguageNumber].BracersInfo[(int)Item.ArmorSetEnum],
+                Item.AllArmorSetInfo.intArray[Language.LanguageNumber].GlovesInfo[(int)Item.ArmorSetEnum],
+                Item.AllArmorSetInfo.intArray[Language.LanguageNumber].HipsInfo[(int)Item.ArmorSetEnum],
+                Item.AllArmorSetInfo.intArray[Language.LanguageNumber].KneesInfo[(int)Item.ArmorSetEnum],
+                Item.AllArmorSetInfo.intArray[Language.LanguageNumber].BootsInfo[(int)Item.ArmorSetEnum],
+                Item.AllArmorSetInfo.intArray[Language.LanguageNumber].ThreePiecesInfo[(int)Item.ArmorSetEnum],
+                Item.AllArmorSetInfo.intArray[Language.LanguageNumber].SixPiecesInfo[(int)Item.ArmorSetEnum],
+                Item.AllArmorSetInfo.intArray[Language.LanguageNumber].EightPiecesInfo[(int)Item.ArmorSetEnum],
+                Item.AllArmorSetInfo.intArray[Language.LanguageNumber].TenPiecesInfo[(int)Item.ArmorSetEnum]);
+            }
+            else
+            {
+                _selectItemInfo.ToggleSetEffect(false);
+            }
+            UpdateSelectItemInfoTransform();
+            CustomEvents.FireCheckEquipItemSetNumber((int)Item.ArmorSetEnum);
+            CustomEvents.FireTooltipToggle(true);
+        }
+
+        else
+            _itemFrame.color = new Color(0.3301887f, 0.3283905f, 0.1759968f, 0.454902f);
+    }
+
+    private void UpdateSelectItemInfoTransform()
+    {
+        if (!IsItemSelect) return;
+        _selectItemInfo.UpdateTransform(new Vector2(transform.position.x, transform.position.y));
+    }
+
+    private void CheckEquipItemSetEffect(int setEnum)
+    {
+        if (Item == null) return;
+        if ((int)Item.ArmorSetEnum == setEnum)
+        {
+            switch (_equipmentSlot)
+            {
+                case EquipmentSlot.HeadSlot:
+                    _selectItemInfo._itemText[4].color = new Color(0.8352941f, 0.8196079f, 0.5294118f, 1);
+                    break;
+                case EquipmentSlot.Torso:
+                    _selectItemInfo._itemText[6].color = new Color(0.8352941f, 0.8196079f, 0.5294118f, 1);
+                    break;
+            }
+        }
+        else
+        {
+            _selectItemInfo._itemText[4].color = Color.green;
+        }
+    }
+
+    private void OnDisable()
+    {
+        CustomEvents.OnSelectItem -= SelectSlot;
+        CustomEvents.OnCheckEquipItemSetNumber -= CheckEquipItemSetEffect;
+        SelectSlot(false);
     }
 }

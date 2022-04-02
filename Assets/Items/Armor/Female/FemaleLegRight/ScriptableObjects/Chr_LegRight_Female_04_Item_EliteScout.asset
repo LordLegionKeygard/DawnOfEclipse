@@ -12,19 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
   m_Name: Chr_LegRight_Female_04_Item_EliteScout
   m_EditorClassIdentifier: 
-  CurrentItem: {fileID: 0}
   icon: {fileID: 21300000, guid: d22774dc8818d7743a42151b99d1d84e, type: 3}
-  maxStack: 1
-  amount: 0
   Price: 250
-  isDefaultItem: 0
-  isUsedItem: 0
+  IsDefaultItem: 0
+  IsStackable: 0
+  IsUsedItem: 0
+  IsSetEffect: 1
   Name:
   - Elite Scout Right Boot
   - "\u041F\u0440\u0430\u0432\u044B\u0439 \u0421\u0430\u043F\u043E\u0433 \u042D\u043B\u0438\u0442\u043D\u043E\u0433\u043E
     \u0420\u0430\u0437\u0432\u0435\u0434\u0447\u0438\u043A\u0430"
+  ItemType:
+  - Boots
+  - "\u0421\u0430\u043F\u043E\u0433\u0438"
+  ItemInfo:
+  - 'P. Def. : 5'
+  - "\u0424\u0438\u0437. \u0417\u0430\u0449. : 5"
+  ArmorSetEnum: 3
+  AllArmorSetInfo: {fileID: 11400000, guid: 576352ffa1b746b4c872fd49153b9308, type: 2}
   equipSlot: 3
   armorModifier: 5
+  MagicArmorModifier: 0
   mesh: {fileID: 4980438202139524164, guid: 3b5b10c2cc09ad848baa164855f0fb98, type: 3}
   prefab: {fileID: 0}
   hatNumber: 0

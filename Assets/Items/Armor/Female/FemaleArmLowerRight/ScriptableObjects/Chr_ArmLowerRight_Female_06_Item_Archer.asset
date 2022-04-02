@@ -12,18 +12,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
   m_Name: Chr_ArmLowerRight_Female_06_Item_Archer
   m_EditorClassIdentifier: 
-  CurrentItem: {fileID: 0}
   icon: {fileID: 21300000, guid: 091d07b0a19f5cd4ebd197c4f8ae2598, type: 3}
-  maxStack: 1
-  amount: 0
   Price: 250
-  isDefaultItem: 0
-  isUsedItem: 0
+  IsDefaultItem: 0
+  IsStackable: 0
+  IsUsedItem: 0
+  IsSetEffect: 1
   Name:
   - Archer Right Bracer
   - "\u041F\u0440\u0430\u0432\u044B\u0439 \u041D\u0430\u0440\u0443\u0447 \u041B\u0443\u0447\u043D\u0438\u043A\u0430"
+  ItemType:
+  - Arm lower
+  - "\u041D\u0438\u0436. \u0447\u0430\u0441\u0442\u044C \u0440\u0443\u043A\u0438"
+  ItemInfo:
+  - 'P. Def. : 18'
+  - "\u0424\u0438\u0437. \u0417\u0430\u0449. : 18"
+  ArmorSetEnum: 10
+  AllArmorSetInfo: {fileID: 11400000, guid: 576352ffa1b746b4c872fd49153b9308, type: 2}
   equipSlot: 9
   armorModifier: 18
+  MagicArmorModifier: 0
   mesh: {fileID: 7096201983626785685, guid: 920b0727d5e0b9a48a8a352b97b410ca, type: 3}
   prefab: {fileID: 0}
   hatNumber: 0

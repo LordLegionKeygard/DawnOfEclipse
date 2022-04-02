@@ -12,18 +12,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
   m_Name: Chr_Hips_Female_10_Item_Mithril
   m_EditorClassIdentifier: 
-  CurrentItem: {fileID: 0}
   icon: {fileID: 21300000, guid: 3592edff4cd2cea4d9746fc1990fd46d, type: 3}
-  maxStack: 1
-  amount: 0
   Price: 250
-  isDefaultItem: 0
-  isUsedItem: 0
+  IsDefaultItem: 0
+  IsStackable: 0
+  IsUsedItem: 0
+  IsSetEffect: 1
   Name:
   - Mithril Gaiters
   - "\u041C\u0438\u0444\u0440\u0438\u043B\u043E\u0432\u044B\u0435 \u041D\u0430\u0431\u0435\u0434\u0440\u0435\u043D\u043D\u0438\u043A\u0438"
+  ItemType:
+  - Lower body
+  - "\u041D\u0438\u0436.  \u0434\u043E\u0441\u043F\u0435\u0445"
+  ItemInfo:
+  - 'P. Def. : 20'
+  - "\u0424\u0438\u0437. \u0417\u0430\u0449. : 20"
+  ArmorSetEnum: 9
+  AllArmorSetInfo: {fileID: 11400000, guid: 576352ffa1b746b4c872fd49153b9308, type: 2}
   equipSlot: 2
   armorModifier: 20
+  MagicArmorModifier: 0
   mesh: {fileID: 4086802755299925313, guid: 1bcd047e5c0ff3e42b03ef4023d7e7d2, type: 3}
   prefab: {fileID: 0}
   hatNumber: 0

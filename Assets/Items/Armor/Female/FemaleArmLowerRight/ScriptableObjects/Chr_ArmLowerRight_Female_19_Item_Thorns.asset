@@ -12,19 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
   m_Name: Chr_ArmLowerRight_Female_19_Item_Thorns
   m_EditorClassIdentifier: 
-  CurrentItem: {fileID: 0}
   icon: {fileID: 21300000, guid: e814c8047d476d745820b6412808ac19, type: 3}
-  maxStack: 1
-  amount: 0
   Price: 250
-  isDefaultItem: 0
-  isUsedItem: 0
+  IsDefaultItem: 0
+  IsStackable: 0
+  IsUsedItem: 0
+  IsSetEffect: 1
   Name:
   - Thorns Right Bracer
   - "\u041F\u0440\u0430\u0432\u044B\u0439 \u0428\u0438\u043F\u0430\u0441\u0442\u044B\u0439
     \u041D\u0430\u0440\u0443\u0447"
+  ItemType:
+  - Arm lower
+  - "\u041D\u0438\u0436. \u0447\u0430\u0441\u0442\u044C \u0440\u0443\u043A\u0438"
+  ItemInfo:
+  - 'P. Def. : 8'
+  - "\u0424\u0438\u0437. \u0417\u0430\u0449. : 8"
+  ArmorSetEnum: 11
+  AllArmorSetInfo: {fileID: 11400000, guid: 576352ffa1b746b4c872fd49153b9308, type: 2}
   equipSlot: 9
   armorModifier: 8
+  MagicArmorModifier: 0
   mesh: {fileID: 2113960732093653211, guid: 2100fc3fce270194cbc42cc3964e38d2, type: 3}
   prefab: {fileID: 0}
   hatNumber: 0

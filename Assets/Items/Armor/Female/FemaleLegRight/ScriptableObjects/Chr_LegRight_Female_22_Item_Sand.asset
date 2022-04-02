@@ -12,19 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
   m_Name: Chr_LegRight_Female_22_Item_Sand
   m_EditorClassIdentifier: 
-  CurrentItem: {fileID: 0}
   icon: {fileID: 21300000, guid: 43e17313a0aed344b8c1b085b0db5132, type: 3}
-  maxStack: 1
-  amount: 0
   Price: 250
-  isDefaultItem: 0
-  isUsedItem: 0
+  IsDefaultItem: 0
+  IsStackable: 0
+  IsUsedItem: 0
+  IsSetEffect: 1
   Name:
-  - Sand Right Boot
+  - Sand Golem Right Boot
   - "\u041F\u0440\u0430\u0432\u044B\u0439 \u0421\u0430\u043F\u043E\u0433 \u041F\u0435\u0441\u0447\u0430\u043D\u043E\u0433\u043E
     \u0413\u043E\u043B\u0435\u043C\u0430"
+  ItemType:
+  - Boots
+  - "\u0421\u0430\u043F\u043E\u0433\u0438"
+  ItemInfo:
+  - 'P. Def. : 11'
+  - "\u0424\u0438\u0437. \u0417\u0430\u0449. : 11"
+  ArmorSetEnum: 17
+  AllArmorSetInfo: {fileID: 11400000, guid: 576352ffa1b746b4c872fd49153b9308, type: 2}
   equipSlot: 3
-  armorModifier: 4
+  armorModifier: 11
+  MagicArmorModifier: 0
   mesh: {fileID: 4432370051416134097, guid: 7f8f51840a84c944c964cecb316187b6, type: 3}
   prefab: {fileID: 0}
   hatNumber: 0

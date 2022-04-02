@@ -12,19 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
   m_Name: Chr_LeftHand_Female_16_Item_Savage
   m_EditorClassIdentifier: 
-  CurrentItem: {fileID: 0}
   icon: {fileID: 21300000, guid: c0aae4cf5ea25d746ac506893cb002e4, type: 3}
-  maxStack: 1
-  amount: 0
   Price: 250
-  isDefaultItem: 0
-  isUsedItem: 0
+  IsDefaultItem: 0
+  IsStackable: 0
+  IsUsedItem: 0
+  IsSetEffect: 1
   Name:
   - Savage Right Glove
   - "\u041B\u0435\u0432\u0430\u044F \u041F\u0435\u0440\u0447\u0430\u0442\u043A\u0430
     \u0414\u0438\u043A\u0430\u0440\u044F"
+  ItemType:
+  - Gloves
+  - "\u041F\u0435\u0440\u0447\u0430\u0442\u043A\u0438"
+  ItemInfo:
+  - 'P. Def. : 2'
+  - "\u0424\u0438\u0437. \u0417\u0430\u0449. : 2"
+  ArmorSetEnum: 0
+  AllArmorSetInfo: {fileID: 11400000, guid: 576352ffa1b746b4c872fd49153b9308, type: 2}
   equipSlot: 6
   armorModifier: 2
+  MagicArmorModifier: 0
   mesh: {fileID: 2249434364663307367, guid: 13b0f03e77b5b534bb9943f57a0c90ff, type: 3}
   prefab: {fileID: 0}
   hatNumber: 0

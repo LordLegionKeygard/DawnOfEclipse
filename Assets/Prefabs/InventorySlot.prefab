@@ -146,6 +146,7 @@ GameObject:
   - component: {fileID: 9093510801582282785}
   - component: {fileID: 9093510801582282784}
   - component: {fileID: 9093510801582282786}
+  - component: {fileID: 655979949}
   m_Layer: 5
   m_Name: ItemButton
   m_TagString: UIItemSlot
@@ -255,19 +256,20 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 9093510801582282784}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8124582139886906428}
-        m_TargetAssemblyTypeName: InventorySlot, Assembly-CSharp
-        m_MethodName: UseItem
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+--- !u!114 &655979949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9093510801582282790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb63a55f7cf334c45a6911d606aa4763, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _inventorySlot: {fileID: 8124582139886906428}
 --- !u!1 &9093510802239042107
 GameObject:
   m_ObjectHideFlags: 0
@@ -354,6 +356,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9093510802500407519}
   - component: {fileID: 8124582139886906428}
+  - component: {fileID: 1172954716074304993}
   m_Layer: 5
   m_Name: InventorySlot
   m_TagString: Untagged
@@ -397,11 +400,25 @@ MonoBehaviour:
   IsCursor: 0
   _numberSlot: 0
   _amount: 1
-  icon: {fileID: 9093510803503705627}
+  _icon: {fileID: 9093510803503705627}
+  _itemFrame: {fileID: 9093510801582282784}
   _amountText: {fileID: 5863171851336365641}
-  _removeButton: {fileID: 9093510803215905771}
-  _ringFromBtn: {fileID: 9093510802239042107}
+  _dropItemButton: {fileID: 9093510803215905775}
+  _selectItemInfo: {fileID: 0}
   Item: {fileID: 11400000, guid: 63753bdbbcf3e734289031a30d77b118, type: 2}
+--- !u!114 &1172954716074304993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9093510802500407518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96eeb959b375ed34c99bd1a4921a7b95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _tooltipSystem: {fileID: 0}
 --- !u!1 &9093510802508346510
 GameObject:
   m_ObjectHideFlags: 0
@@ -487,10 +504,10 @@ GameObject:
   m_Component:
   - component: {fileID: 9093510803215905768}
   - component: {fileID: 9093510803215905770}
-  - component: {fileID: 9093510803215905769}
-  - component: {fileID: 9093510803215905771}
+  - component: {fileID: 6149228100026814593}
+  - component: {fileID: 488077597369869074}
   m_Layer: 5
-  m_Name: RemoveButton
+  m_Name: DropItemButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -513,7 +530,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 26.6, y: 62.4}
+  m_AnchoredPosition: {x: 46.6, y: 47.9}
   m_SizeDelta: {x: 35, y: 35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &9093510803215905770
@@ -524,7 +541,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9093510803215905775}
   m_CullTransparentMesh: 0
---- !u!114 &9093510803215905769
+--- !u!114 &6149228100026814593
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -537,7 +554,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9716981, g: 0.9716981, b: 0.70127267, a: 1}
+  m_Color: {r: 0.518327, g: 0.5471698, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -554,7 +571,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &9093510803215905771
+--- !u!114 &488077597369869074
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -567,7 +584,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 0
+    m_Mode: 3
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -579,7 +596,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -593,14 +610,14 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
-  m_TargetGraphic: {fileID: 9093510803215905769}
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 6149228100026814593}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 8124582139886906428}
         m_TargetAssemblyTypeName: InventorySlot, Assembly-CSharp
-        m_MethodName: OnRemoveButton
+        m_MethodName: DropItem
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

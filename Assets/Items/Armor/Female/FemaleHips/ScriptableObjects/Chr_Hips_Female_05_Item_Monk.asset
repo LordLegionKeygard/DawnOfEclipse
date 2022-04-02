@@ -12,18 +12,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
   m_Name: Chr_Hips_Female_05_Item_Monk
   m_EditorClassIdentifier: 
-  CurrentItem: {fileID: 0}
   icon: {fileID: 21300000, guid: b6deb2689098124469c9501ecafc706b, type: 3}
-  maxStack: 1
-  amount: 0
   Price: 250
-  isDefaultItem: 0
-  isUsedItem: 0
+  IsDefaultItem: 0
+  IsStackable: 0
+  IsUsedItem: 0
+  IsSetEffect: 1
   Name:
   - Monk Stockings
   - "\u0428\u0442\u0430\u043D\u044B \u041C\u043E\u043D\u0430\u0445\u0430"
+  ItemType:
+  - Lower body
+  - "\u041D\u0438\u0436.  \u0434\u043E\u0441\u043F\u0435\u0445"
+  ItemInfo:
+  - 'P. Def. : 6'
+  - "\u0424\u0438\u0437. \u0417\u0430\u0449. : 6"
+  ArmorSetEnum: 4
+  AllArmorSetInfo: {fileID: 11400000, guid: 576352ffa1b746b4c872fd49153b9308, type: 2}
   equipSlot: 2
   armorModifier: 6
+  MagicArmorModifier: 0
   mesh: {fileID: 5666690611144954519, guid: 510b3d1885c75494b982fee319b5cdbb, type: 3}
   prefab: {fileID: 0}
   hatNumber: 0

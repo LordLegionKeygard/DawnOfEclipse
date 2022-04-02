@@ -12,15 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
   m_Name: Earring_05_Item
   m_EditorClassIdentifier: 
-  CurrentItem: {fileID: 0}
   icon: {fileID: 21300000, guid: df632bda0914cf34da37d0599cbc6ff7, type: 3}
   Price: 250
   IsDefaultItem: 0
   IsStackable: 0
   IsUsedItem: 0
   Name:
-  - Earring
-  - "\u0421\u0435\u0440\u044C\u0433\u0430"
+  - Bloody Earring
+  - "\u041A\u0440\u043E\u0432\u0430\u0432\u0430\u044F \u0421\u0435\u0440\u044C\u0433\u0430"
+  ItemType:
+  - Accessories
+  - "\u0410\u043A\u0441\u0435\u0441\u0441\u0443\u0430\u0440\u044B"
+  ItemInfo:
+  - 'M. Def. : 5'
+  - "\u041C. \u0417\u0430\u0449. : 5"
   equipSlot: 24
   armorModifier: 0
   MagicArmorModifier: 5

@@ -12,18 +12,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
   m_Name: Chr_ArmLowerRight_Female_29_Item_Fanatic
   m_EditorClassIdentifier: 
-  CurrentItem: {fileID: 0}
   icon: {fileID: 21300000, guid: 077bc1546ed0cf544b90e251be55a57f, type: 3}
-  maxStack: 1
-  amount: 0
   Price: 250
-  isDefaultItem: 0
-  isUsedItem: 0
+  IsDefaultItem: 0
+  IsStackable: 0
+  IsUsedItem: 0
+  IsSetEffect: 1
   Name:
   - Fanatic Right Bracer
   - "\u041F\u0440\u0430\u0432\u044B\u0439 \u041D\u0430\u0440\u0443\u0447 \u0424\u0430\u043D\u0430\u0442\u0438\u043A\u0430"
+  ItemType:
+  - Arm lower
+  - "\u041D\u0438\u0436. \u0447\u0430\u0441\u0442\u044C \u0440\u0443\u043A\u0438"
+  ItemInfo:
+  - 'P. Def. : 4'
+  - "\u0424\u0438\u0437. \u0417\u0430\u0449. : 4"
+  ArmorSetEnum: 7
+  AllArmorSetInfo: {fileID: 11400000, guid: 576352ffa1b746b4c872fd49153b9308, type: 2}
   equipSlot: 9
   armorModifier: 4
+  MagicArmorModifier: 0
   mesh: {fileID: 6721717856534091156, guid: 45d9807cc37f7c44c9ac8b2dd50ca95e, type: 3}
   prefab: {fileID: 0}
   hatNumber: 0

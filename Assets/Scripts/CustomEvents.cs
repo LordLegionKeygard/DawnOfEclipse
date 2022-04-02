@@ -25,4 +25,28 @@ public class CustomEvents
     {
         OnCheckFullInventory?.Invoke();
     }
+
+    public static Action<bool> OnSelectItem;
+    public static void FireSelectItem(bool state)
+    {
+        OnSelectItem?.Invoke(state);
+    }
+
+    public static Action<bool> OnTooltipToggle;
+    public static void FireTooltipToggle(bool state)
+    {
+        OnTooltipToggle?.Invoke(state);
+    }
+
+    public static Action OnUpdateSelectItemTransform;
+    public static void FireUpdateSelectItemTransform()
+    {
+        OnUpdateSelectItemTransform?.Invoke();
+    }
+
+    public static Action<int> OnCheckEquipItemSetNumber;
+    public static void FireCheckEquipItemSetNumber(int number)
+    {
+        OnCheckEquipItemSetNumber?.Invoke(number);
+    }
 }

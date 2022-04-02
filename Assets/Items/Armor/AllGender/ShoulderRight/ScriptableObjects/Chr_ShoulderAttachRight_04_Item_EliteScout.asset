@@ -12,19 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
   m_Name: Chr_ShoulderAttachRight_04_Item_EliteScout
   m_EditorClassIdentifier: 
-  CurrentItem: {fileID: 0}
   icon: {fileID: 21300000, guid: 05f756a9df26da9409f5c0871a878f62, type: 3}
-  maxStack: 1
-  amount: 0
   Price: 250
-  isDefaultItem: 0
-  isUsedItem: 0
+  IsDefaultItem: 0
+  IsStackable: 0
+  IsUsedItem: 0
+  IsSetEffect: 1
   Name:
   - Elite Scout Right Shoulder
   - "\u041F\u0440\u0430\u0432\u044B\u0439 \u041D\u0430\u043F\u043B\u0435\u0447\u043D\u0438\u043A
     \u042D\u043B\u0438\u0442\u043D\u043E\u0433\u043E \u0420\u0430\u0437\u0432\u0435\u0434\u0447\u0438\u043A\u0430"
+  ItemType:
+  - Shoulders
+  - "\u041D\u0430\u043F\u043B\u0435\u0447\u043D\u0438\u043A\u0438"
+  ItemInfo:
+  - 'P. Def. : 13'
+  - "\u0424\u0438\u0437. \u0417\u0430\u0449. : 13"
+  ArmorSetEnum: 3
+  AllArmorSetInfo: {fileID: 11400000, guid: 576352ffa1b746b4c872fd49153b9308, type: 2}
   equipSlot: 12
   armorModifier: 13
+  MagicArmorModifier: 0
   mesh: {fileID: 8809431084470582300, guid: b7146e1fad88d94439527b80317127ea, type: 3}
   prefab: {fileID: 0}
   hatNumber: 0

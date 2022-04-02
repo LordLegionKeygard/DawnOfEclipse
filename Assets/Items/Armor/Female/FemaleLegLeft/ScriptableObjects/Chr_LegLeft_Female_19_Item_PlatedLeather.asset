@@ -12,19 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
   m_Name: Chr_LegLeft_Female_19_Item_PlatedLeather
   m_EditorClassIdentifier: 
-  CurrentItem: {fileID: 0}
   icon: {fileID: 21300000, guid: 3b3db282421e9f746a22cf5b4f6ba1d3, type: 3}
-  maxStack: 1
-  amount: 0
   Price: 250
-  isDefaultItem: 0
-  isUsedItem: 0
+  IsDefaultItem: 0
+  IsStackable: 0
+  IsUsedItem: 0
+  IsSetEffect: 1
   Name:
   - Plated Leather Left Boot
   - "\u041B\u0435\u0432\u044B\u0439 \u041B\u0430\u0442\u043D\u044B\u0439 \u041A\u043E\u0436\u0430\u043D\u044B\u0439
     \u0421\u0430\u043F\u043E\u0433"
+  ItemType:
+  - Boots
+  - "\u0421\u0430\u043F\u043E\u0433\u0438"
+  ItemInfo:
+  - 'P. Def. : 4'
+  - "\u0424\u0438\u0437. \u0417\u0430\u0449. : 4"
+  ArmorSetEnum: 12
+  AllArmorSetInfo: {fileID: 11400000, guid: 576352ffa1b746b4c872fd49153b9308, type: 2}
   equipSlot: 4
   armorModifier: 4
+  MagicArmorModifier: 0
   mesh: {fileID: 5162142188130540641, guid: 486af0412f1529c4ca8cd431e49d0453, type: 3}
   prefab: {fileID: 0}
   hatNumber: 0

@@ -12,19 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
   m_Name: Chr_ArmUpperLeft_Female_12_Item_Memorable
   m_EditorClassIdentifier: 
-  CurrentItem: {fileID: 0}
   icon: {fileID: 21300000, guid: abe701cc38326424e89f260a3842aa61, type: 3}
-  maxStack: 1
-  amount: 0
   Price: 250
-  isDefaultItem: 0
-  isUsedItem: 0
+  IsDefaultItem: 0
+  IsStackable: 0
+  IsUsedItem: 0
+  IsSetEffect: 1
   Name:
   - Memorable Left Forearm
   - "\u041B\u0435\u0432\u044B\u0439 \u041D\u0435\u0437\u0430\u0431\u0432\u0435\u043D\u043D\u044B\u0439
     \u041F\u0440\u0435\u0434\u043F\u043B\u0435\u0447\u043D\u0438\u043A"
+  ItemType:
+  - Arm upper
+  - "\u0412\u0435\u0440\u0445. \u0447\u0430\u0441\u0442\u044C \u0440\u0443\u043A\u0438"
+  ItemInfo:
+  - 'P. Def. : 17'
+  - "\u0424\u0438\u0437. \u0417\u0430\u0449. : 17"
+  ArmorSetEnum: 22
+  AllArmorSetInfo: {fileID: 11400000, guid: 576352ffa1b746b4c872fd49153b9308, type: 2}
   equipSlot: 8
   armorModifier: 17
+  MagicArmorModifier: 0
   mesh: {fileID: 1211000274048310731, guid: 74ded69b65f17b348a92e5b0f19825d9, type: 3}
   prefab: {fileID: 0}
   hatNumber: 0

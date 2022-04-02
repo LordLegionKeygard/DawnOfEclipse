@@ -12,19 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
   m_Name: Chr_ArmLowerRight_Female_23_Item_Reinforced
   m_EditorClassIdentifier: 
-  CurrentItem: {fileID: 0}
   icon: {fileID: 21300000, guid: 2d5920651b26bf447842e61a41a96c9c, type: 3}
-  maxStack: 1
-  amount: 0
   Price: 250
-  isDefaultItem: 0
-  isUsedItem: 0
+  IsDefaultItem: 0
+  IsStackable: 0
+  IsUsedItem: 0
+  IsSetEffect: 1
   Name:
   - Reinforced Leather Right Bracer
   - "\u041F\u0440\u0430\u0432\u044B\u0439 \u0423\u043A\u0440\u0435\u043F\u043B\u0435\u043D\u043D\u044B\u0439
     \u041A\u043E\u0436\u0430\u043D\u044B\u0439 \u041D\u0430\u0440\u0443\u0447"
+  ItemType:
+  - Arm lower
+  - "\u041D\u0438\u0436. \u0447\u0430\u0441\u0442\u044C \u0440\u0443\u043A\u0438"
+  ItemInfo:
+  - 'P. Def. : 8'
+  - "\u0424\u0438\u0437. \u0417\u0430\u0449. : 8"
+  ArmorSetEnum: 27
+  AllArmorSetInfo: {fileID: 11400000, guid: 576352ffa1b746b4c872fd49153b9308, type: 2}
   equipSlot: 9
   armorModifier: 8
+  MagicArmorModifier: 0
   mesh: {fileID: 5787243198863453222, guid: bf956c3cc1711c740b46697db3d47fa1, type: 3}
   prefab: {fileID: 0}
   hatNumber: 0

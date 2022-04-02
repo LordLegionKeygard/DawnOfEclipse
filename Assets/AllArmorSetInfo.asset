@@ -1,0 +1,885 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7a90e6df0f237348be728f5c3f52686, type: 3}
+  m_Name: AllArmorSetInfo
+  m_EditorClassIdentifier: 
+  ArmorSetEnum: 0
+  intArray:
+  - HelmetInfo:
+    - 
+    - Wolf Skin Hood
+    - Hunter Hood
+    - Elite Scout Hat
+    - 
+    - Manticore Skin Hood
+    - Plague Doctor Mask
+    - Fanatic Hood
+    - Destiny Hat
+    - Mithril Helmet
+    - Archer Hat
+    - Thorns Hood
+    - 
+    - Bandit Leather Hat
+    - Ancient Helmet
+    - Legionary Helmet
+    - Horned Helmet
+    - Sand Golem Helmet
+    - Dark Elven Helmet
+    - Black Rider Helmet
+    - Carapace Helmet
+    - Demon Helmet
+    - Memorable Plate Helmet
+    - Full Plate Helmet
+    - Lion Helmet
+    - Desert Hat
+    - Wanderer Hat
+    - Reinforced Leather Hat
+    - Swamp Helmet
+    - Pharaoh Chain Hood
+    ShouldersInfo:
+    - 
+    - Wolf Skin Shoulders
+    - 
+    - Elite Scout Shoulders
+    - 
+    - 
+    - Plague Doctor Shoulders
+    - 
+    - 
+    - Mithril Shoulders
+    - Archer Shoulders
+    - Thorns Shoulders
+    - Plated Leather Shoulders
+    - Bandit Leather Shoulders
+    - Ancient Shoulders
+    - Legionary Shoulders
+    - Horned Shoulders
+    - Sand Golem Shoulders
+    - Dark Elven Shoulders
+    - Black Rider Shoulders
+    - Carapace Shoulders
+    - Demon Shoulders
+    - Memorable Shoulders
+    - Full Plate Shoulders
+    - Lion Shoulders
+    - 
+    - 
+    - Reinforced Leather Shoulders
+    - Swamp Shoulders
+    - Pharaoh Shoulders
+    TorsoInfo:
+    - Savage Leather Armor
+    - Wolf Skin Shirt
+    - Hunter Armor
+    - Elite Scout Armor
+    - Monk Tunic
+    - Manticore Skin Shirt
+    - Plague Doctor Leather Armor
+    - Fanatic Tunic
+    - Destiny Tunic
+    - Mithril Breatplate
+    - Archer Plate Shirt
+    - Thorns Breastplate
+    - Plated Leather Armor
+    - Bandit Leather Shirt
+    - Ancient Breastplate
+    - Legionary Plate Armor
+    - Horned Breastplate
+    - Sand Golem Breastplate
+    - Dark Elven Breastplate
+    - Black Rider Breastplate
+    - Carapace Armor
+    - Demon Plate Armor
+    - Memorable Plate Armor
+    - Full Plate Armor
+    - Lion Breastplate
+    - Desert Tunic
+    - Wanderer Coat
+    - Reinforced Leather Shirt
+    - Swamp Breastplate
+    - Pharaoh Breastplate Armor
+    ForearmsInfo:
+    - Savage Forearms
+    - Wolf Skin Forearms
+    - Hunter Forearms
+    - Elite Scout Forearms
+    - 
+    - Manticore Skin Forearms
+    - Plague Doctor Forearms
+    - Fanatic Forearms
+    - Destiny Forearms
+    - Mithril Forearms
+    - Archer Forearms
+    - Thorns Forearms
+    - Plated Leather Forearms
+    - Bandit Forearms
+    - Ancient Forearms
+    - Legionary Forearms
+    - Horned Forearms
+    - Sand Golem Forearms
+    - Dark Elven Forearms
+    - Black Rider Forearms
+    - Carapace Forearms
+    - Demon Forearms
+    - Memorable Forearms
+    - Full Plate Forearms
+    - Lion Forearms
+    - Desert Forearms
+    - Wanderer Forearms
+    - Reinforced Leather Forearms
+    - Swamp Forearms
+    - Pharaoh Forearms
+    ElbowsInfo:
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - Mithril Elbows
+    - 
+    - Thorns Elbows
+    - 
+    - 
+    - Ancient Elbows
+    - Legionary Elbows
+    - Horned Elbows
+    - Sand Golem Elbows
+    - Dark Elven Elbows
+    - Black Rider Elbows
+    - 
+    - Demon Elbows
+    - Memorable Elbows
+    - Full Plate Elbows
+    - Lion Elbows
+    - 
+    - 
+    - 
+    - Swamp Elbows
+    - Pharaoh Elbows
+    BracersInfo:
+    - Savage Bracers
+    - Wolf Skin Bracers
+    - Hunter Bracers
+    - Elite Scout Bracers
+    - Monk Bracers
+    - Manticore Skin Bracers
+    - Plague Doctor Bracers
+    - Fanatic Bracers
+    - Destiny Bracers
+    - Mithril Bracers
+    - Archer Bracers
+    - Thorns Bracers
+    - Plated Leather Bracers
+    - Bandit Bracers
+    - Ancient Bracers
+    - Legionary Bracers
+    - Horned Bracers
+    - Sand Golem Bracers
+    - Dark Elven Bracers
+    - Black Rider Bracers
+    - Carapace Bracers
+    - Demon Bracers
+    - Memorable Bracers
+    - Full Plate Bracers
+    - Lion Bracers
+    - Desert Bracers
+    - Wanderer Bracers
+    - Reinforced Leather Bracers
+    - Swamp Bracers
+    - Pharaoh Chainmail Bracers
+    GlovesInfo:
+    - Savage Gloves
+    - Wolf Skin Gloves
+    - Hunter Gloves
+    - Elite Scout Gloves
+    - Monk Gloves
+    - Manticore Skin Gloves
+    - Plague Doctor Gloves
+    - Fanatic Gloves
+    - Destiny Gloves
+    - Mithril Gloves
+    - Archer Gloves
+    - Thorns Gloves
+    - Plated Leather Gloves
+    - Bandit Gloves
+    - Ancient Gloves
+    - Legionary Gloves
+    - Horned Gloves
+    - Sand Golem Gloves
+    - Dark Elven Gloves
+    - Black Rider Gloves
+    - Carapace Gloves
+    - Demon Gloves
+    - Memorable Gloves
+    - Full Plate Gloves
+    - Lion Gloves
+    - Desert Gloves
+    - Wanderer Gloves
+    - Reinforced Leather Gloves
+    - Swamp Gloves
+    - Pharaoh Gloves
+    HipsInfo:
+    - Savage Gaiters
+    - Wolf Skin Gaiters
+    - Hunter Stockings
+    - Elite Scout Gaiters
+    - Monk Stockings
+    - Manticore Skin Gaiters
+    - Plague Doctor Stockings
+    - Fanatic Skirt
+    - Destiny Stockings
+    - Mithril Gaiters
+    - Archer Gaiters
+    - Thorns Gaiters
+    - Plated Leather Gaiters
+    - Bandit Leather Stockings
+    - Ancient Gaiters
+    - Legionary Gaiters
+    - Horned Gaiters
+    - Sand Golem Gaiters
+    - Dark Elven Gaiters
+    - Black Rider Gaiters
+    - Carapace Gaiters
+    - Demon Gaiters
+    - Memorable Gaiters
+    - Full Plate Gaiters
+    - Lion Gaiters
+    - Desert Skirt
+    - Wanderer Stockings
+    - Reinforced Leather Gaiters
+    - Swamp Gaiters
+    - Pharaoh Gaiters
+    KneesInfo:
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - Mithril Knees
+    - 
+    - Thorns Knees
+    - 
+    - 
+    - Ancient Knees
+    - Legionary Knees
+    - Horned Knees
+    - Sand Golem Knees
+    - 
+    - Black Rider Knees
+    - 
+    - Demon Knees
+    - Memorable Knees
+    - Full Plate Knees
+    - Lion Knees
+    - 
+    - 
+    - 
+    - Swamp Knees
+    - Pharaoh Knees
+    BootsInfo:
+    - Savage Boots
+    - Wolf Skin Boots
+    - Hunter Boots
+    - Elite Scout Boots
+    - Monk Boots
+    - Manticore Skin Boots
+    - Plague Doctor Boots
+    - Fanatic Boots
+    - Destiny Boots
+    - Mithril Boots
+    - Archer Boots
+    - Thorns Boots
+    - Plated Leather Boots
+    - Bandit Boots
+    - Ancient Boots
+    - Legionary Boots
+    - Horned Boots
+    - Sand Golem Boots
+    - Dark Elven Boots
+    - Black Rider Boots
+    - Carapace Boots
+    - Demon Boots
+    - Memorable Boots
+    - Full Plate Boots
+    - Lion Boots
+    - Desert Boots
+    - Wanderer Boots
+    - Reinforced Leather Boots
+    - Swamp Boots
+    - Pharaoh Boots
+    ThreePiecesInfo:
+    - '3 Pieces : ?'
+    - '3 Pieces : ?'
+    - '3 Pieces : ?'
+    - '3 Pieces : ?'
+    - '3 Pieces : ?'
+    - '3 Pieces : ?'
+    - '3 Pieces : ?'
+    - '3 Pieces : ?'
+    - '3 Pieces : ?'
+    - '3 Pieces : ?'
+    - '3 Pieces : ?'
+    - '3 Pieces : ?'
+    - '3 Pieces : ?'
+    - '3 Pieces : ?'
+    - '3 Pieces : ?'
+    - '3 Pieces : ?'
+    - '3 Pieces : ?'
+    - '3 Pieces : ?'
+    - '3 Pieces : ?'
+    - '3 Pieces : ?'
+    - '3 Pieces : ?'
+    - '3 Pieces : ?'
+    - '3 Pieces : ?'
+    - '3 Pieces : ?'
+    - '3 Pieces : ?'
+    - '3 Pieces : ?'
+    - '3 Pieces : ?'
+    - '3 Pieces : ?'
+    - '3 Pieces : ?'
+    - '3 Pieces : ?'
+    SixPiecesInfo:
+    - '6 Pieces : ?'
+    - '6 Pieces : ?'
+    - '6 Pieces : ?'
+    - '6 Pieces : ?'
+    - '6 Pieces : ?'
+    - '6 Pieces : ?'
+    - '6 Pieces : ?'
+    - '6 Pieces : ?'
+    - '6 Pieces : ?'
+    - '6 Pieces : ?'
+    - '6 Pieces : ?'
+    - '6 Pieces : ?'
+    - '6 Pieces : ?'
+    - '6 Pieces : ?'
+    - '6 Pieces : ?'
+    - '6 Pieces : ?'
+    - '6 Pieces : ?'
+    - '6 Pieces : ?'
+    - '6 Pieces : ?'
+    - '6 Pieces : ?'
+    - '6 Pieces : ?'
+    - '6 Pieces : ?'
+    - '6 Pieces : ?'
+    - '6 Pieces : ?'
+    - '6 Pieces : ?'
+    - '6 Pieces : ?'
+    - '6 Pieces : ?'
+    - '6 Pieces : ?'
+    - '6 Pieces : ?'
+    - '6 Pieces : ?'
+    EightPiecesInfo:
+    - '8 Pieces : ?'
+    - '8 Pieces : ?'
+    - '8 Pieces : ?'
+    - '8 Pieces : ?'
+    - '8 Pieces : ?'
+    - '8 Pieces : ?'
+    - '8 Pieces : ?'
+    - '8 Pieces : ?'
+    - '8 Pieces : ?'
+    - '8 Pieces : ?'
+    - '8 Pieces : ?'
+    - '8 Pieces : ?'
+    - '8 Pieces : ?'
+    - '8 Pieces : ?'
+    - '8 Pieces : ?'
+    - '8 Pieces : ?'
+    - '8 Pieces : ?'
+    - '8 Pieces : ?'
+    - '8 Pieces : ?'
+    - '8 Pieces : ?'
+    - '8 Pieces : ?'
+    - '8 Pieces : ?'
+    - '8 Pieces : ?'
+    - '8 Pieces : ?'
+    - '8 Pieces : ?'
+    - '8 Pieces : ?'
+    - '8 Pieces : ?'
+    - '8 Pieces : ?'
+    - '8 Pieces : ?'
+    - '8 Pieces : ?'
+    TenPiecesInfo:
+    - '10 Pieces : ?'
+    - '10 Pieces : ?'
+    - '10 Pieces : ?'
+    - '10 Pieces : ?'
+    - '10 Pieces : ?'
+    - '10 Pieces : ?'
+    - '10 Pieces : ?'
+    - '10 Pieces : ?'
+    - '10 Pieces : ?'
+    - '10 Pieces : ?'
+    - '10 Pieces : ?'
+    - '10 Pieces : ?'
+    - '10 Pieces : ?'
+    - '10 Pieces : ?'
+    - '10 Pieces : ?'
+    - '10 Pieces : ?'
+    - '10 Pieces : ?'
+    - '10 Pieces : ?'
+    - '10 Pieces : ?'
+    - '10 Pieces : ?'
+    - '10 Pieces : ?'
+    - '10 Pieces : ?'
+    - '10 Pieces : ?'
+    - '10 Pieces : ?'
+    - '10 Pieces : ?'
+    - '10 Pieces : ?'
+    - '10 Pieces : ?'
+    - '10 Pieces : ?'
+    - '10 Pieces : ?'
+    - '10 Pieces : ?'
+  - HelmetInfo:
+    - Savage
+    - Wolf
+    - Hunter
+    - Elite
+    - Monk
+    - Manticore
+    - Plague
+    - Fanatic
+    - Destiny
+    - Mithril
+    - Archer
+    - Thorns
+    - Plated
+    - Bandit
+    - Ancient
+    - Legionary
+    - Horned
+    - SandGolem
+    - DarkElves
+    - BlackRider
+    - Carapace
+    - Demon
+    - Memorable
+    - Full Plate
+    - Lion
+    - Desert
+    - Wanderer
+    - Reinforced
+    - Swamp
+    - Pharaoh
+    ShouldersInfo:
+    - Savage
+    - Wolf
+    - Hunter
+    - Elite
+    - Monk
+    - Manticore
+    - Plague
+    - Fanatic
+    - Destiny
+    - Mithril
+    - Archer
+    - Thorns
+    - Plated
+    - Bandit
+    - Ancient
+    - Legionary
+    - Horned
+    - SandGolem
+    - DarkElves
+    - BlackRider
+    - Carapace
+    - Demon
+    - Memorable
+    - Full Plate
+    - Lion
+    - Desert
+    - Wanderer
+    - Reinforced
+    - Swamp
+    - Pharaoh
+    TorsoInfo:
+    - "\u041A\u043E\u0436\u0430\u043D\u0430\u044F \u0411\u0440\u043E\u043D\u044F
+      \u0414\u0438\u043A\u0430\u0440\u044F"
+    - Wolf
+    - Hunter
+    - Elite
+    - Monk
+    - Manticore
+    - Plague
+    - Fanatic
+    - Destiny
+    - Mithril
+    - Archer
+    - Thorns
+    - Plated
+    - Bandit
+    - Ancient
+    - Legionary
+    - Horned
+    - SandGolem
+    - DarkElves
+    - BlackRider
+    - Carapace
+    - Demon
+    - Memorable
+    - Full Plate
+    - Lion
+    - Desert
+    - Wanderer
+    - Reinforced
+    - Swamp
+    - Pharaoh
+    ForearmsInfo:
+    - Savage
+    - Wolf
+    - Hunter
+    - Elite
+    - Monk
+    - Manticore
+    - Plague
+    - Fanatic
+    - Destiny
+    - Mithril
+    - Archer
+    - Thorns
+    - Plated
+    - Bandit
+    - Ancient
+    - Legionary
+    - Horned
+    - SandGolem
+    - DarkElves
+    - BlackRider
+    - Carapace
+    - Demon
+    - Memorable
+    - Full Plate
+    - Lion
+    - Desert
+    - Wanderer
+    - Reinforced
+    - Swamp
+    - Pharaoh
+    ElbowsInfo:
+    - Savage
+    - Wolf
+    - Hunter
+    - Elite
+    - Monk
+    - Manticore
+    - Plague
+    - Fanatic
+    - Destiny
+    - Mithril
+    - Archer
+    - Thorns
+    - Plated
+    - Bandit
+    - Ancient
+    - Legionary
+    - Horned
+    - SandGolem
+    - DarkElves
+    - BlackRider
+    - Carapace
+    - Demon
+    - Memorable
+    - Full Plate
+    - Lion
+    - Desert
+    - Wanderer
+    - Reinforced
+    - Swamp
+    - Pharaoh
+    BracersInfo:
+    - Savage
+    - Wolf
+    - Hunter
+    - Elite
+    - Monk
+    - Manticore
+    - Plague
+    - Fanatic
+    - Destiny
+    - Mithril
+    - Archer
+    - Thorns
+    - Plated
+    - Bandit
+    - Ancient
+    - Legionary
+    - Horned
+    - SandGolem
+    - DarkElves
+    - BlackRider
+    - Carapace
+    - Demon
+    - Memorable
+    - Full Plate
+    - Lion
+    - Desert
+    - Wanderer
+    - Reinforced
+    - Swamp
+    - Pharaoh
+    GlovesInfo:
+    - Savage
+    - Wolf
+    - Hunter
+    - Elite
+    - Monk
+    - Manticore
+    - Plague
+    - Fanatic
+    - Destiny
+    - Mithril
+    - Archer
+    - Thorns
+    - Plated
+    - Bandit
+    - Ancient
+    - Legionary
+    - Horned
+    - SandGolem
+    - DarkElves
+    - BlackRider
+    - Carapace
+    - Demon
+    - Memorable
+    - Full Plate
+    - Lion
+    - Desert
+    - Wanderer
+    - Reinforced
+    - Swamp
+    - Pharaoh
+    HipsInfo:
+    - Savage
+    - Wolf
+    - Hunter
+    - Elite
+    - Monk
+    - Manticore
+    - Plague
+    - Fanatic
+    - Destiny
+    - Mithril
+    - Archer
+    - Thorns
+    - Plated
+    - Bandit
+    - Ancient
+    - Legionary
+    - Horned
+    - SandGolem
+    - DarkElves
+    - BlackRider
+    - Carapace
+    - Demon
+    - Memorable
+    - Full Plate
+    - Lion
+    - Desert
+    - Wanderer
+    - Reinforced
+    - Swamp
+    - Pharaoh
+    KneesInfo:
+    - Savage
+    - Wolf
+    - Hunter
+    - Elite
+    - Monk
+    - Manticore
+    - Plague
+    - Fanatic
+    - Destiny
+    - Mithril
+    - Archer
+    - Thorns
+    - Plated
+    - Bandit
+    - Ancient
+    - Legionary
+    - Horned
+    - SandGolem
+    - DarkElves
+    - BlackRider
+    - Carapace
+    - Demon
+    - Memorable
+    - Full Plate
+    - Lion
+    - Desert
+    - Wanderer
+    - Reinforced
+    - Swamp
+    - Pharaoh
+    BootsInfo:
+    - Savage
+    - Wolf
+    - Hunter
+    - Elite
+    - Monk
+    - Manticore
+    - Plague
+    - Fanatic
+    - Destiny
+    - Mithril
+    - Archer
+    - Thorns
+    - Plated
+    - Bandit
+    - Ancient
+    - Legionary
+    - Horned
+    - SandGolem
+    - DarkElves
+    - BlackRider
+    - Carapace
+    - Demon
+    - Memorable
+    - Full Plate
+    - Lion
+    - Desert
+    - Wanderer
+    - Reinforced
+    - Swamp
+    - Pharaoh
+    ThreePiecesInfo:
+    - Savage
+    - Wolf
+    - Hunter
+    - Elite
+    - Monk
+    - Manticore
+    - Plague
+    - Fanatic
+    - Destiny
+    - Mithril
+    - Archer
+    - Thorns
+    - Plated
+    - Bandit
+    - Ancient
+    - Legionary
+    - Horned
+    - SandGolem
+    - DarkElves
+    - BlackRider
+    - Carapace
+    - Demon
+    - Memorable
+    - Full Plate
+    - Lion
+    - Desert
+    - Wanderer
+    - Reinforced
+    - Swamp
+    - Pharaoh
+    SixPiecesInfo:
+    - Savage
+    - Wolf
+    - Hunter
+    - Elite
+    - Monk
+    - Manticore
+    - Plague
+    - Fanatic
+    - Destiny
+    - Mithril
+    - Archer
+    - Thorns
+    - Plated
+    - Bandit
+    - Ancient
+    - Legionary
+    - Horned
+    - SandGolem
+    - DarkElves
+    - BlackRider
+    - Carapace
+    - Demon
+    - Memorable
+    - Full Plate
+    - Lion
+    - Desert
+    - Wanderer
+    - Reinforced
+    - Swamp
+    - Pharaoh
+    EightPiecesInfo:
+    - Savage
+    - Wolf
+    - Hunter
+    - Elite
+    - Monk
+    - Manticore
+    - Plague
+    - Fanatic
+    - Destiny
+    - Mithril
+    - Archer
+    - Thorns
+    - Plated
+    - Bandit
+    - Ancient
+    - Legionary
+    - Horned
+    - SandGolem
+    - DarkElves
+    - BlackRider
+    - Carapace
+    - Demon
+    - Memorable
+    - Full Plate
+    - Lion
+    - Desert
+    - Wanderer
+    - Reinforced
+    - Swamp
+    - Pharaoh
+    TenPiecesInfo:
+    - Savage
+    - Wolf
+    - Hunter
+    - Elite
+    - Monk
+    - Manticore
+    - Plague
+    - Fanatic
+    - Destiny
+    - Mithril
+    - Archer
+    - Thorns
+    - Plated
+    - Bandit
+    - Ancient
+    - Legionary
+    - Horned
+    - SandGolem
+    - DarkElves
+    - BlackRider
+    - Carapace
+    - Demon
+    - Memorable
+    - Full Plate
+    - Lion
+    - Desert
+    - Wanderer
+    - Reinforced
+    - Swamp
+    - Pharaoh

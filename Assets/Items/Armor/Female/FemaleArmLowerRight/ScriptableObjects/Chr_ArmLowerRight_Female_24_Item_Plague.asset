@@ -12,19 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
   m_Name: Chr_ArmLowerRight_Female_24_Item_Plague
   m_EditorClassIdentifier: 
-  CurrentItem: {fileID: 0}
   icon: {fileID: 21300000, guid: 36a28d9b58d3a7b479cf2ea16e534ba3, type: 3}
-  maxStack: 1
-  amount: 0
   Price: 250
-  isDefaultItem: 0
-  isUsedItem: 0
+  IsDefaultItem: 0
+  IsStackable: 0
+  IsUsedItem: 0
+  IsSetEffect: 1
   Name:
   - Plague Doctor Right Bracer
   - "\u041F\u0440\u0430\u0432\u044B\u0439 \u041D\u0430\u0440\u0443\u0447 \u0427\u0443\u043C\u043D\u043E\u0433\u043E
     \u0414\u043E\u043A\u0442\u043E\u0440\u0430"
+  ItemType:
+  - Arm lower
+  - "\u041D\u0438\u0436. \u0447\u0430\u0441\u0442\u044C \u0440\u0443\u043A\u0438"
+  ItemInfo:
+  - 'P. Def. : 8'
+  - "\u0424\u0438\u0437. \u0417\u0430\u0449. : 8"
+  ArmorSetEnum: 6
+  AllArmorSetInfo: {fileID: 11400000, guid: 576352ffa1b746b4c872fd49153b9308, type: 2}
   equipSlot: 9
   armorModifier: 8
+  MagicArmorModifier: 0
   mesh: {fileID: 6721717856534091156, guid: 23e499bdad2f76448aac1177ec81a99a, type: 3}
   prefab: {fileID: 0}
   hatNumber: 0

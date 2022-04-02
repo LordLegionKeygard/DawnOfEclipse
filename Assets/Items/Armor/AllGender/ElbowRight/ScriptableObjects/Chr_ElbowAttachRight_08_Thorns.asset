@@ -12,19 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
   m_Name: Chr_ElbowAttachRight_08_Thorns
   m_EditorClassIdentifier: 
-  CurrentItem: {fileID: 0}
   icon: {fileID: 21300000, guid: 389121b277ddf6b4dbfb3457d58cd347, type: 3}
-  maxStack: 1
-  amount: 0
   Price: 250
-  isDefaultItem: 0
-  isUsedItem: 0
+  IsDefaultItem: 0
+  IsStackable: 0
+  IsUsedItem: 0
+  IsSetEffect: 1
   Name:
   - Thorns Right Elbow
   - "\u041F\u0440\u0430\u0432\u044B\u0439 \u0428\u0438\u043F\u0430\u0441\u0442\u044B\u0439
     \u041D\u0430\u043B\u043E\u043A\u043E\u0442\u043D\u0438\u043A"
+  ItemType:
+  - Elbows
+  - "\u041D\u0430\u043B\u043E\u043A\u043E\u0442\u043D\u0438\u043A\u0438"
+  ItemInfo:
+  - 'P. Def. : 8'
+  - "\u0424\u0438\u0437. \u0417\u0430\u0449. : 8"
+  ArmorSetEnum: 11
+  AllArmorSetInfo: {fileID: 11400000, guid: 576352ffa1b746b4c872fd49153b9308, type: 2}
   equipSlot: 14
   armorModifier: 8
+  MagicArmorModifier: 0
   mesh: {fileID: 2539052970779474988, guid: 664d73bfeb0469a4f8e4c2bd23fb14e9, type: 3}
   prefab: {fileID: 0}
   hatNumber: 0

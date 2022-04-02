@@ -12,19 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
   m_Name: Chr_Hips_Female_18_Item_SandGolem
   m_EditorClassIdentifier: 
-  CurrentItem: {fileID: 0}
   icon: {fileID: 21300000, guid: f659fb2f73fca574e97ccdc8f3f4db75, type: 3}
-  maxStack: 1
-  amount: 0
   Price: 250
-  isDefaultItem: 0
-  isUsedItem: 0
+  IsDefaultItem: 0
+  IsStackable: 0
+  IsUsedItem: 0
+  IsSetEffect: 1
   Name:
   - Sand Golem Gaiters
   - "\u041D\u0430\u0431\u0435\u0434\u0440\u0435\u043D\u043D\u0438\u043A\u0438 \u041F\u0435\u0441\u0447\u0430\u043D\u043E\u0433\u043E
     \u0413\u043E\u043B\u0435\u043C\u0430"
+  ItemType:
+  - Lower body
+  - "\u041D\u0438\u0436.  \u0434\u043E\u0441\u043F\u0435\u0445"
+  ItemInfo:
+  - 'P. Def. : 23'
+  - "\u0424\u0438\u0437. \u0417\u0430\u0449. : "
+  ArmorSetEnum: 17
+  AllArmorSetInfo: {fileID: 11400000, guid: 576352ffa1b746b4c872fd49153b9308, type: 2}
   equipSlot: 2
   armorModifier: 23
+  MagicArmorModifier: 0
   mesh: {fileID: 5226150575387816002, guid: a7abbf7a69ceed549833eb892f96a2a2, type: 3}
   prefab: {fileID: 0}
   hatNumber: 0

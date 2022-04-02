@@ -12,18 +12,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
   m_Name: Chr_BackAttachment_11_Item
   m_EditorClassIdentifier: 
-  CurrentItem: {fileID: 0}
   icon: {fileID: 21300000, guid: fd33f19d40d69244ea81318c74353d7b, type: 3}
-  maxStack: 1
-  amount: 0
   Price: 250
-  isDefaultItem: 0
-  isUsedItem: 0
+  IsDefaultItem: 0
+  IsStackable: 0
+  IsUsedItem: 0
+  IsSetEffect: 0
   Name:
-  - Cloak
+  - Cloak of the Sage
+  - "\u041F\u043B\u0430\u0449 \u041C\u0443\u0434\u0440\u0435\u0446\u0430"
+  ItemType:
+  - Cloack
   - "\u041F\u043B\u0430\u0449"
+  ItemInfo:
+  - 'P. Def. : 11'
+  - "\u0424\u0438\u0437. \u0417\u0430\u0449. : 11"
+  ArmorSetEnum: 0
+  AllArmorSetInfo: {fileID: 0}
   equipSlot: 11
   armorModifier: 11
+  MagicArmorModifier: 0
   mesh: {fileID: 8862163601089597004, guid: 74f4da75ef54d7f448516ba3c6cc06ce, type: 3}
   prefab: {fileID: 0}
   hatNumber: 0

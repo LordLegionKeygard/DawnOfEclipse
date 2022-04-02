@@ -12,18 +12,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
   m_Name: Chr_Torso_Female_25_Item_Lion
   m_EditorClassIdentifier: 
-  CurrentItem: {fileID: 0}
   icon: {fileID: 21300000, guid: 629f57a89b27c6c4e825a0a7310efff4, type: 3}
-  maxStack: 1
-  amount: 0
   Price: 250
-  isDefaultItem: 0
-  isUsedItem: 0
+  IsDefaultItem: 0
+  IsStackable: 0
+  IsUsedItem: 0
+  IsSetEffect: 1
   Name:
   - Lion Breastplate
   - "\u041B\u044C\u0432\u0438\u043D\u0430\u044F \u041A\u0438\u0440\u0430\u0441\u0430"
+  ItemType:
+  - Upper body
+  - "\u0412\u0435\u0440\u0445. \u0434\u043E\u0441\u043F\u0435\u0445"
+  ItemInfo:
+  - 'P. Def. : 91'
+  - "\u0424\u0438\u0437. \u0417\u0430\u0449. : 91"
+  ArmorSetEnum: 24
+  AllArmorSetInfo: {fileID: 11400000, guid: 576352ffa1b746b4c872fd49153b9308, type: 2}
   equipSlot: 1
   armorModifier: 91
+  MagicArmorModifier: 0
   mesh: {fileID: 7524671477108179907, guid: df5125bdac060d94e8d6ed6940615c94, type: 3}
   prefab: {fileID: 0}
   hatNumber: 0
@@ -33,3 +41,5 @@ MonoBehaviour:
   twoHandedWeapon: 0
   shield: 0
   shieldBlockArmorModifier: 0
+  FirstAttachmentNumber: 0
+  SecondAttachmentNumber: 0

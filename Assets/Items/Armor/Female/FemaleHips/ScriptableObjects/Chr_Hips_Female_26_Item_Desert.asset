@@ -12,18 +12,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
   m_Name: Chr_Hips_Female_26_Item_Desert
   m_EditorClassIdentifier: 
-  CurrentItem: {fileID: 0}
   icon: {fileID: 21300000, guid: b3f3bd494dc8a5e409d345fce5df4878, type: 3}
-  maxStack: 1
-  amount: 0
   Price: 250
-  isDefaultItem: 0
-  isUsedItem: 0
+  IsDefaultItem: 0
+  IsStackable: 0
+  IsUsedItem: 0
+  IsSetEffect: 1
   Name:
   - Desert Skirt
   - "\u041F\u0443\u0441\u0442\u044B\u043D\u043D\u0430\u044F \u042E\u0431\u043A\u0430"
+  ItemType:
+  - Lower body
+  - "\u041D\u0438\u0436.  \u0434\u043E\u0441\u043F\u0435\u0445"
+  ItemInfo:
+  - 'P. Def. : 16'
+  - "\u0424\u0438\u0437. \u0417\u0430\u0449. : 16"
+  ArmorSetEnum: 25
+  AllArmorSetInfo: {fileID: 11400000, guid: 576352ffa1b746b4c872fd49153b9308, type: 2}
   equipSlot: 2
   armorModifier: 16
+  MagicArmorModifier: 0
   mesh: {fileID: 6366524778589711079, guid: 3eb660599acb5894ea3a83c3ae2d992c, type: 3}
   prefab: {fileID: 0}
   hatNumber: 0

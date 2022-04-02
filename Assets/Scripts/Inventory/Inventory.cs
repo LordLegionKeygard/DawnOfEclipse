@@ -48,7 +48,7 @@ public class Inventory : MonoBehaviour
                 if (items[i].name == "Empty_Item")
                 {
                     items[i] = item;
-                    UpdateUI(item.Name[Language.Number]);
+                    UpdateUI(item.Name[Language.LanguageNumber]);
                     CheckFullInventory();
                     break;
                 }
@@ -89,7 +89,7 @@ public class Inventory : MonoBehaviour
     public void RemoveItemFromInventoryList(Item item, int number)
     {
         items[number] = _emptySlot;
-        UpdateUI(item.Name[Language.Number]);
+        UpdateUI(item.Name[Language.LanguageNumber]);
         CheckFullInventory();
     }
 

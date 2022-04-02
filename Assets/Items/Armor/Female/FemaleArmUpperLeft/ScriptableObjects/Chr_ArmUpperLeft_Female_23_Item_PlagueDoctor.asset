@@ -12,19 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
   m_Name: Chr_ArmUpperLeft_Female_23_Item_PlagueDoctor
   m_EditorClassIdentifier: 
-  CurrentItem: {fileID: 0}
   icon: {fileID: 21300000, guid: 359295bd470730c488fe84919a33e11c, type: 3}
-  maxStack: 1
-  amount: 0
   Price: 250
-  isDefaultItem: 0
-  isUsedItem: 0
+  IsDefaultItem: 0
+  IsStackable: 0
+  IsUsedItem: 0
+  IsSetEffect: 1
   Name:
   - Plague Doctor Left Forearm
   - "\u041B\u0435\u0432\u044B\u0439 \u041F\u0440\u0435\u0434\u043F\u043B\u0435\u0447\u043D\u0438\u043A
     \u0427\u0443\u043C\u043D\u043E\u0433\u043E \u0414\u043E\u043A\u0442\u043E\u0440\u0430"
+  ItemType:
+  - Arm upper
+  - "\u0412\u0435\u0440\u0445. \u0447\u0430\u0441\u0442\u044C \u0440\u0443\u043A\u0438"
+  ItemInfo:
+  - 'P. Def. : 4'
+  - "\u0424\u0438\u0437. \u0417\u0430\u0449. : 4"
+  ArmorSetEnum: 6
+  AllArmorSetInfo: {fileID: 11400000, guid: 576352ffa1b746b4c872fd49153b9308, type: 2}
   equipSlot: 8
   armorModifier: 4
+  MagicArmorModifier: 0
   mesh: {fileID: 2049716478299212711, guid: 38e8083383c60c748baf1f9646107491, type: 3}
   prefab: {fileID: 0}
   hatNumber: 0

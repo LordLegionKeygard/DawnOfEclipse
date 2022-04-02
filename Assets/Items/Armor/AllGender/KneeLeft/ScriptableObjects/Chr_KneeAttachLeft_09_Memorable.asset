@@ -12,19 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
   m_Name: Chr_KneeAttachLeft_09_Memorable
   m_EditorClassIdentifier: 
-  CurrentItem: {fileID: 0}
   icon: {fileID: 21300000, guid: e96e0d679dc6b4e478b89a31b89b2593, type: 3}
-  maxStack: 1
-  amount: 0
   Price: 250
-  isDefaultItem: 0
-  isUsedItem: 0
+  IsDefaultItem: 0
+  IsStackable: 0
+  IsUsedItem: 0
+  IsSetEffect: 1
   Name:
   - Memorable Left Knee
   - "\u041B\u0435\u0432\u044B\u0439 \u041D\u0435\u0437\u0430\u0431\u0432\u0435\u043D\u043D\u044B\u0439
     \u041D\u0430\u043A\u043E\u043B\u0435\u043D\u043D\u0438\u043A"
+  ItemType:
+  - Knees
+  - "\u041D\u0430\u043A\u043E\u043B\u0435\u043D\u043D\u0438\u043A\u0438"
+  ItemInfo:
+  - 'P. Def. : 13'
+  - "\u0424\u0438\u0437. \u0417\u0430\u0449. : 13"
+  ArmorSetEnum: 22
+  AllArmorSetInfo: {fileID: 11400000, guid: 576352ffa1b746b4c872fd49153b9308, type: 2}
   equipSlot: 18
   armorModifier: 13
+  MagicArmorModifier: 0
   mesh: {fileID: 447038246835768470, guid: b039e361b2b11d846bd9966942e31301, type: 3}
   prefab: {fileID: 0}
   hatNumber: 0

@@ -12,19 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
   m_Name: Chr_LegRight_Female_23_Item_Carapace
   m_EditorClassIdentifier: 
-  CurrentItem: {fileID: 0}
   icon: {fileID: 21300000, guid: 0aaf5db12bc595843addc75d993ce188, type: 3}
-  maxStack: 1
-  amount: 0
   Price: 250
-  isDefaultItem: 0
-  isUsedItem: 0
+  IsDefaultItem: 0
+  IsStackable: 0
+  IsUsedItem: 0
+  IsSetEffect: 1
   Name:
   - Carapace Right Boot
   - "\u041F\u0440\u0430\u0432\u044B\u0439 \u041F\u0430\u043D\u0446\u0438\u0440\u043D\u044B\u0439
     \u0421\u0430\u043F\u043E\u0433"
+  ItemType:
+  - Boots
+  - "\u0421\u0430\u043F\u043E\u0433\u0438"
+  ItemInfo:
+  - 'P. Def. : 8'
+  - "\u0424\u0438\u0437. \u0417\u0430\u0449. : 8"
+  ArmorSetEnum: 20
+  AllArmorSetInfo: {fileID: 11400000, guid: 576352ffa1b746b4c872fd49153b9308, type: 2}
   equipSlot: 3
-  armorModifier: 4
+  armorModifier: 8
+  MagicArmorModifier: 0
   mesh: {fileID: 7708342437340708067, guid: a3d7b4bfb84bc6e4888d7008e8c2227f, type: 3}
   prefab: {fileID: 0}
   hatNumber: 0

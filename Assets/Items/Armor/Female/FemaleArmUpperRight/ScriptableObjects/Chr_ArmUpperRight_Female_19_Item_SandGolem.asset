@@ -12,19 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
   m_Name: Chr_ArmUpperRight_Female_19_Item_SandGolem
   m_EditorClassIdentifier: 
-  CurrentItem: {fileID: 0}
   icon: {fileID: 21300000, guid: 9ed840d4ecae6ea439699658b0583d3c, type: 3}
-  maxStack: 1
-  amount: 0
   Price: 250
-  isDefaultItem: 0
-  isUsedItem: 0
+  IsDefaultItem: 0
+  IsStackable: 0
+  IsUsedItem: 0
+  IsSetEffect: 1
   Name:
   - Sand Golem Right Forearm
   - "\u041F\u0440\u0430\u0432\u044B\u0439 \u041F\u0440\u0435\u0434\u043F\u043B\u0435\u0447\u043D\u0438\u043A
     \u041F\u0435\u0441\u0447\u0430\u043D\u043E\u0433\u043E \u0413\u043E\u043B\u0435\u043C\u0430"
+  ItemType:
+  - Arm upper
+  - "\u0412\u0435\u0440\u0445. \u0447\u0430\u0441\u0442\u044C \u0440\u0443\u043A\u0438"
+  ItemInfo:
+  - 'P. Def. : 10'
+  - "\u0424\u0438\u0437. \u0417\u0430\u0449. : 10"
+  ArmorSetEnum: 17
+  AllArmorSetInfo: {fileID: 11400000, guid: 576352ffa1b746b4c872fd49153b9308, type: 2}
   equipSlot: 7
   armorModifier: 10
+  MagicArmorModifier: 0
   mesh: {fileID: 5026213166947642463, guid: ecc88937d1894514b9e8bd1c5a768a98, type: 3}
   prefab: {fileID: 0}
   hatNumber: 0

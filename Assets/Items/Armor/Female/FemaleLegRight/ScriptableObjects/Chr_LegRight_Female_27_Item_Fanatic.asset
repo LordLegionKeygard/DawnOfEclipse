@@ -12,18 +12,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
   m_Name: Chr_LegRight_Female_27_Item_Fanatic
   m_EditorClassIdentifier: 
-  CurrentItem: {fileID: 0}
   icon: {fileID: 21300000, guid: a077f8d729ea4fb458e33662325a4006, type: 3}
-  maxStack: 1
-  amount: 0
   Price: 250
-  isDefaultItem: 0
-  isUsedItem: 0
+  IsDefaultItem: 0
+  IsStackable: 0
+  IsUsedItem: 0
+  IsSetEffect: 1
   Name:
   - Fanatic Right Boot
   - "\u041F\u0440\u0430\u0432\u044B\u0439 \u0421\u0430\u043F\u043E\u0433 \u0424\u0430\u043D\u0430\u0442\u0438\u043A\u0430"
+  ItemType:
+  - Boots
+  - "\u0421\u0430\u043F\u043E\u0433\u0438"
+  ItemInfo:
+  - 'P. Def. : 2'
+  - "\u0424\u0438\u0437. \u0417\u0430\u0449. : 2"
+  ArmorSetEnum: 7
+  AllArmorSetInfo: {fileID: 11400000, guid: 576352ffa1b746b4c872fd49153b9308, type: 2}
   equipSlot: 3
-  armorModifier: 4
+  armorModifier: 2
+  MagicArmorModifier: 0
   mesh: {fileID: 1211717142593408948, guid: 7ddb3e638375e33499ce3cdf2d69e01d, type: 3}
   prefab: {fileID: 0}
   hatNumber: 0

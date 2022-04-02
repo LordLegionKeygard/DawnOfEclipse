@@ -12,18 +12,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
   m_Name: Chr_Head_No_Elements_Female_12_Swamp
   m_EditorClassIdentifier: 
-  CurrentItem: {fileID: 0}
   icon: {fileID: 21300000, guid: d4b4b98c32ff119469eeccbdec7c1323, type: 3}
-  maxStack: 1
-  amount: 0
   Price: 250
-  isDefaultItem: 0
-  isUsedItem: 0
+  IsDefaultItem: 0
+  IsStackable: 0
+  IsUsedItem: 0
+  IsSetEffect: 1
   Name:
   - Swamp Helmet
   - "\u0411\u043E\u043B\u043E\u0442\u043D\u044B\u0439 \u0428\u043B\u0435\u043C"
+  ItemType:
+  - Headgear
+  - "\u0413\u043E\u043B\u043E\u0432\u043D\u043E\u0439 \u0423\u0431\u043E\u0440"
+  ItemInfo:
+  - 'P. Def. : 37'
+  - "\u0424\u0438\u0437. \u0417\u0430\u0449. : 37"
+  ArmorSetEnum: 28
+  AllArmorSetInfo: {fileID: 11400000, guid: 576352ffa1b746b4c872fd49153b9308, type: 2}
   equipSlot: 0
   armorModifier: 37
+  MagicArmorModifier: 0
   mesh: {fileID: 6070032566346882289, guid: d0cdcb2c3eda09d45959aeae3c728064, type: 3}
   prefab: {fileID: 0}
   hatNumber: 2

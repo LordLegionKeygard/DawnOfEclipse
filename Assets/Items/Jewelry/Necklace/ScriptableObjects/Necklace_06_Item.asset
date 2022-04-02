@@ -12,15 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
   m_Name: Necklace_06_Item
   m_EditorClassIdentifier: 
-  CurrentItem: {fileID: 0}
   icon: {fileID: 21300000, guid: 4b3eae4f1101b4847b9e0310f03ae64a, type: 3}
   Price: 250
   IsDefaultItem: 0
   IsStackable: 0
   IsUsedItem: 0
   Name:
-  - Necklace
-  - "\u041E\u0436\u0435\u0440\u0435\u043B\u044C\u0435"
+  - Necklace of Faith
+  - "\u041E\u0436\u0435\u0440\u0435\u043B\u044C\u0435 \u0412\u0435\u0440\u044B"
+  ItemType:
+  - Accessories
+  - "\u0410\u043A\u0441\u0435\u0441\u0441\u0443\u0430\u0440\u044B"
+  ItemInfo:
+  - 'M. Def. : 6'
+  - "\u041C. \u0417\u0430\u0449. : 6"
   equipSlot: 26
   armorModifier: 0
   MagicArmorModifier: 6

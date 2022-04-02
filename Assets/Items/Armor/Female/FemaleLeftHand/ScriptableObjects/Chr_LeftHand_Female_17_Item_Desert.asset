@@ -12,19 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
   m_Name: Chr_LeftHand_Female_17_Item_Desert
   m_EditorClassIdentifier: 
-  CurrentItem: {fileID: 0}
   icon: {fileID: 21300000, guid: 69e9b40026e467147863226c7d8ee1f3, type: 3}
-  maxStack: 1
-  amount: 0
   Price: 250
-  isDefaultItem: 0
-  isUsedItem: 0
+  IsDefaultItem: 0
+  IsStackable: 0
+  IsUsedItem: 0
+  IsSetEffect: 1
   Name:
   - Deset Right Glove
   - "\u041B\u0435\u0432\u0430\u044F \u041F\u0443\u0441\u0442\u044B\u043D\u043D\u0430\u044F
     \u041F\u0435\u0440\u0447\u0430\u0442\u043A\u0430"
+  ItemType:
+  - Gloves
+  - "\u041F\u0435\u0440\u0447\u0430\u0442\u043A\u0438"
+  ItemInfo:
+  - 'P. Def. : 6'
+  - "\u0424\u0438\u0437. \u0417\u0430\u0449. : 6"
+  ArmorSetEnum: 25
+  AllArmorSetInfo: {fileID: 11400000, guid: 576352ffa1b746b4c872fd49153b9308, type: 2}
   equipSlot: 6
   armorModifier: 6
+  MagicArmorModifier: 0
   mesh: {fileID: 7231094564551782470, guid: dac4030aaa028094aa04e9b1c89ef7ca, type: 3}
   prefab: {fileID: 0}
   hatNumber: 0

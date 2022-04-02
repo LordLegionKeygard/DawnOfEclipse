@@ -12,19 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
   m_Name: Chr_KneeAttachRight_05_Lion
   m_EditorClassIdentifier: 
-  CurrentItem: {fileID: 0}
   icon: {fileID: 21300000, guid: e3f23598d801bb641b87990a2acf2bd2, type: 3}
-  maxStack: 1
-  amount: 0
   Price: 250
-  isDefaultItem: 0
-  isUsedItem: 0
+  IsDefaultItem: 0
+  IsStackable: 0
+  IsUsedItem: 0
+  IsSetEffect: 1
   Name:
   - Lion Right Knee
   - "\u041F\u0440\u0430\u0432\u044B\u0439 \u041B\u044C\u0432\u0438\u043D\u044B\u0439
     \u041D\u0430\u043A\u043E\u043B\u0435\u043D\u043D\u0438\u043A"
+  ItemType:
+  - Knees
+  - "\u041D\u0430\u043A\u043E\u043B\u0435\u043D\u043D\u0438\u043A\u0438"
+  ItemInfo:
+  - 'P. Def. : 5'
+  - "\u0424\u0438\u0437. \u0417\u0430\u0449. : 5"
+  ArmorSetEnum: 24
+  AllArmorSetInfo: {fileID: 11400000, guid: 576352ffa1b746b4c872fd49153b9308, type: 2}
   equipSlot: 17
   armorModifier: 5
+  MagicArmorModifier: 0
   mesh: {fileID: 4912079236781236594, guid: 2137a08427ab6b6488a781dc54c346b0, type: 3}
   prefab: {fileID: 0}
   hatNumber: 0

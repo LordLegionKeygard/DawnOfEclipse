@@ -12,18 +12,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
   m_Name: Chr_HeadCoverings_No_Hair_06
   m_EditorClassIdentifier: 
-  CurrentItem: {fileID: 0}
   icon: {fileID: 21300000, guid: d1f40e54b8f6efd41acbbb6e83cbd120, type: 3}
-  maxStack: 1
-  amount: 0
   Price: 250
-  isDefaultItem: 0
-  isUsedItem: 0
+  IsDefaultItem: 0
+  IsStackable: 0
+  IsUsedItem: 0
+  IsSetEffect: 0
   Name:
   - Leather Hood
   - "\u041A\u043E\u0436\u0430\u043D\u044B\u0439 \u041A\u0430\u043F\u044E\u0448\u043E\u043D"
+  ItemType:
+  - Headgear
+  - "\u0413\u043E\u043B\u043E\u0432\u043D\u043E\u0439 \u0423\u0431\u043E\u0440"
+  ItemInfo:
+  - 'P. Def. : 19'
+  - "\u0424\u0438\u0437. \u0417\u0430\u0449. : 19"
+  ArmorSetEnum: 0
+  AllArmorSetInfo: {fileID: 11400000, guid: 576352ffa1b746b4c872fd49153b9308, type: 2}
   equipSlot: 0
   armorModifier: 19
+  MagicArmorModifier: 0
   mesh: {fileID: 3652202759864538764, guid: dc82895c2610f0645829b7c3fb83ce4b, type: 3}
   prefab: {fileID: 0}
   hatNumber: 1

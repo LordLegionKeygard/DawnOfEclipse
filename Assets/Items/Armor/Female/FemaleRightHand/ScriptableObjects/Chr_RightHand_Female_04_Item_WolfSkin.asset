@@ -12,19 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
   m_Name: Chr_RightHand_Female_04_Item_WolfSkin
   m_EditorClassIdentifier: 
-  CurrentItem: {fileID: 0}
   icon: {fileID: 21300000, guid: b58c7c50fdf0b7f448a77b9c2e5e3d23, type: 3}
-  maxStack: 1
-  amount: 0
   Price: 250
-  isDefaultItem: 0
-  isUsedItem: 0
+  IsDefaultItem: 0
+  IsStackable: 0
+  IsUsedItem: 0
+  IsSetEffect: 1
   Name:
   - Wolf Skin Right Glove
   - "\u041F\u0440\u0430\u0432\u0430\u044F \u041F\u0435\u0440\u0447\u0430\u0442\u043A\u0430
     \u0438\u0437 \u0428\u043A\u0443\u0440\u044B \u0412\u043E\u043B\u043A\u0430"
+  ItemType:
+  - Gloves
+  - "\u041F\u0435\u0440\u0447\u0430\u0442\u043A\u0438"
+  ItemInfo:
+  - 'P. Def. : 7'
+  - "\u0424\u0438\u0437. \u0417\u0430\u0449. : 7"
+  ArmorSetEnum: 1
+  AllArmorSetInfo: {fileID: 11400000, guid: 576352ffa1b746b4c872fd49153b9308, type: 2}
   equipSlot: 5
   armorModifier: 7
+  MagicArmorModifier: 0
   mesh: {fileID: 4859634541951432127, guid: 5ecd7463201a947409a23ff0f42fefe5, type: 3}
   prefab: {fileID: 0}
   hatNumber: 0

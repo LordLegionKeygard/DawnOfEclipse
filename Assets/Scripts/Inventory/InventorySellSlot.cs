@@ -43,7 +43,7 @@ public class InventorySellSlot : MonoBehaviour
         if (Item != null)
         {
             _selectSlot.AddBuySlotItem(Item, Item.Price, _slotNumber);
-            _itemNameText.text = Item.Name[Language.Number];
+            _itemNameText.text = Item.Name[Language.LanguageNumber];
         }
     }
 }

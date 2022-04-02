@@ -12,19 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
   m_Name: Chr_ElbowAttachRight_12_SandGolem
   m_EditorClassIdentifier: 
-  CurrentItem: {fileID: 0}
   icon: {fileID: 21300000, guid: 627d9d4fa607bbb4eb42b53fae963709, type: 3}
-  maxStack: 1
-  amount: 0
   Price: 250
-  isDefaultItem: 0
-  isUsedItem: 0
+  IsDefaultItem: 0
+  IsStackable: 0
+  IsUsedItem: 0
+  IsSetEffect: 1
   Name:
   - Sand Golem Right Elbow
   - "\u041F\u0440\u0430\u0432\u044B\u0439 \u041D\u0430\u043B\u043E\u043A\u043E\u0442\u043D\u0438\u043A
     \u041F\u0435\u0441\u0447\u0430\u043D\u043E\u0433\u043E \u0413\u043E\u043B\u0435\u043C\u0430"
+  ItemType:
+  - Elbows
+  - "\u041D\u0430\u043B\u043E\u043A\u043E\u0442\u043D\u0438\u043A\u0438"
+  ItemInfo:
+  - 'P. Def. : 12'
+  - "\u0424\u0438\u0437. \u0417\u0430\u0449. : 12"
+  ArmorSetEnum: 17
+  AllArmorSetInfo: {fileID: 11400000, guid: 576352ffa1b746b4c872fd49153b9308, type: 2}
   equipSlot: 14
-  armorModifier: 8
+  armorModifier: 12
+  MagicArmorModifier: 0
   mesh: {fileID: 6216005752614216364, guid: 4de2862c84511fc4ab28b72a3b7a1f6f, type: 3}
   prefab: {fileID: 0}
   hatNumber: 0

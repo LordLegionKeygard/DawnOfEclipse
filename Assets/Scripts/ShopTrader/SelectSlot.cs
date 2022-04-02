@@ -82,7 +82,7 @@ public class SelectSlot : MonoBehaviour
         _itemNameText.text = "Select item";
         Inventory.InventoryStatic.RemoveItemFromInventoryList(_inventorySellSlot[_slotNumber].Item, _slotNumber);
         _inventorySellSlot[_slotNumber].Item = _inventorySlot[_slotNumber].Item;
-        _inventorySlot[_slotNumber].OnRemoveButton();
+        _inventorySlot[_slotNumber].OnRemoveItem();
         ClearSlot();
         ButtonsFalse();
         UpdateAllSellSlots();

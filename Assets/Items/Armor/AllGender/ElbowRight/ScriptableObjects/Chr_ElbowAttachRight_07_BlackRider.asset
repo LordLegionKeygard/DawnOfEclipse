@@ -12,19 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
   m_Name: Chr_ElbowAttachRight_07_BlackRider
   m_EditorClassIdentifier: 
-  CurrentItem: {fileID: 0}
   icon: {fileID: 21300000, guid: 5345223644b595f4aaea0e7f2cdd9cf5, type: 3}
-  maxStack: 1
-  amount: 0
   Price: 250
-  isDefaultItem: 0
-  isUsedItem: 0
+  IsDefaultItem: 0
+  IsStackable: 0
+  IsUsedItem: 0
+  IsSetEffect: 1
   Name:
   - Black Rider Right Elbow
   - "\u041F\u0440\u0430\u0432\u044B\u0439 \u041D\u0430\u043B\u043E\u043A\u043E\u0442\u043D\u0438\u043A
     \u0427\u0435\u0440\u043D\u043E\u0433\u043E \u0412\u0441\u0430\u0434\u043D\u0438\u043A\u0430"
+  ItemType:
+  - Elbows
+  - "\u041D\u0430\u043B\u043E\u043A\u043E\u0442\u043D\u0438\u043A\u0438"
+  ItemInfo:
+  - 'P. Def. : 7'
+  - "\u0424\u0438\u0437. \u0417\u0430\u0449. : 7"
+  ArmorSetEnum: 19
+  AllArmorSetInfo: {fileID: 11400000, guid: 576352ffa1b746b4c872fd49153b9308, type: 2}
   equipSlot: 14
-  armorModifier: 8
+  armorModifier: 7
+  MagicArmorModifier: 0
   mesh: {fileID: 6216005752614216364, guid: 5df483fc3224b0b49bdbed2382b1b72a, type: 3}
   prefab: {fileID: 0}
   hatNumber: 0

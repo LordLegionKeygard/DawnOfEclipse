@@ -220,6 +220,7 @@ public class EquipmentManager : MonoBehaviour
         {
             _equipSlot[equipSlotNumber].Icon.sprite = equipItem.icon;
             _equipSlot[equipSlotNumber].EquipIcon();
+            _equipSlot[equipSlotNumber].Item = equipItem;
         }
     }
 

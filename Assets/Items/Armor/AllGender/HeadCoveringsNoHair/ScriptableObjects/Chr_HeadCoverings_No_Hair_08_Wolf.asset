@@ -12,19 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
   m_Name: Chr_HeadCoverings_No_Hair_08_Wolf
   m_EditorClassIdentifier: 
-  CurrentItem: {fileID: 0}
   icon: {fileID: 21300000, guid: 1a50b221a846ff64cbe70dedc1a3aed8, type: 3}
-  maxStack: 1
-  amount: 0
   Price: 250
-  isDefaultItem: 0
-  isUsedItem: 0
+  IsDefaultItem: 0
+  IsStackable: 0
+  IsUsedItem: 0
+  IsSetEffect: 1
   Name:
   - Wolf Skin Hood
   - "\u041A\u0430\u043F\u044E\u0448\u043E\u043D \u0438\u0437 \u0428\u043A\u0443\u0440\u044B
     \u0412\u043E\u043B\u043A\u0430"
+  ItemType:
+  - Headgear
+  - "\u0413\u043E\u043B\u043E\u0432\u043D\u043E\u0439 \u0423\u0431\u043E\u0440"
+  ItemInfo:
+  - 'P. Def. : 21'
+  - "\u0424\u0438\u0437. \u0417\u0430\u0449. : 21"
+  ArmorSetEnum: 1
+  AllArmorSetInfo: {fileID: 11400000, guid: 576352ffa1b746b4c872fd49153b9308, type: 2}
   equipSlot: 0
   armorModifier: 21
+  MagicArmorModifier: 0
   mesh: {fileID: 4476356558496408693, guid: f0289bf78d379a846847969644992f3d, type: 3}
   prefab: {fileID: 0}
   hatNumber: 1

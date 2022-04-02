@@ -12,19 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
   m_Name: Chr_LeftHand_Female_29_Item_Manticore
   m_EditorClassIdentifier: 
-  CurrentItem: {fileID: 0}
   icon: {fileID: 21300000, guid: c33fdfb28e0a4474d87d467ab3ec2c38, type: 3}
-  maxStack: 1
-  amount: 0
   Price: 250
-  isDefaultItem: 0
-  isUsedItem: 0
+  IsDefaultItem: 0
+  IsStackable: 0
+  IsUsedItem: 0
+  IsSetEffect: 1
   Name:
   - Manticore Skin Right Glove
   - "\u041B\u0435\u0432\u0430\u044F \u041F\u0435\u0440\u0447\u0430\u0442\u043A\u0430
     \u0438\u0437 \u0428\u043A\u0443\u0440\u044B \u041C\u0430\u043D\u0442\u0438\u043A\u043E\u0440\u044B"
+  ItemType:
+  - Gloves
+  - "\u041F\u0435\u0440\u0447\u0430\u0442\u043A\u0438"
+  ItemInfo:
+  - 'P. Def. : 4'
+  - "\u0424\u0438\u0437. \u0417\u0430\u0449. : 4"
+  ArmorSetEnum: 5
+  AllArmorSetInfo: {fileID: 11400000, guid: 576352ffa1b746b4c872fd49153b9308, type: 2}
   equipSlot: 6
-  armorModifier: 12
+  armorModifier: 4
+  MagicArmorModifier: 0
   mesh: {fileID: 7737027158091597231, guid: 75775d977adbb9e48bbb0c69fb17928a, type: 3}
   prefab: {fileID: 0}
   hatNumber: 0

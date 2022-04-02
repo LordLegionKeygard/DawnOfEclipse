@@ -12,18 +12,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
   m_Name: Chr_Torso_Female_30_Item_Pharaoh
   m_EditorClassIdentifier: 
-  CurrentItem: {fileID: 0}
   icon: {fileID: 21300000, guid: f2d08624c5d25804e8a88a514d10752e, type: 3}
-  maxStack: 1
-  amount: 0
   Price: 250
-  isDefaultItem: 0
-  isUsedItem: 0
+  IsDefaultItem: 0
+  IsStackable: 0
+  IsUsedItem: 0
+  IsSetEffect: 1
   Name:
-  - Pharaon Breastplate Armor
+  - Pharaoh Breastplate Armor
   - "\u041A\u0438\u0440\u0430\u0441\u0430 \u0424\u0430\u0440\u0430\u043E\u043D\u0430"
+  ItemType:
+  - Upper body
+  - "\u0412\u0435\u0440\u0445. \u0434\u043E\u0441\u043F\u0435\u0445"
+  ItemInfo:
+  - 'P. Def. : 80'
+  - "\u0424\u0438\u0437. \u0417\u0430\u0449. : 80"
+  ArmorSetEnum: 29
+  AllArmorSetInfo: {fileID: 11400000, guid: 576352ffa1b746b4c872fd49153b9308, type: 2}
   equipSlot: 1
   armorModifier: 80
+  MagicArmorModifier: 0
   mesh: {fileID: 244204137268829597, guid: 88af3431e51808248be8481a84caac5c, type: 3}
   prefab: {fileID: 0}
   hatNumber: 0

@@ -12,19 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
   m_Name: Chr_Torso_Female_22_Item_Demon
   m_EditorClassIdentifier: 
-  CurrentItem: {fileID: 0}
   icon: {fileID: 21300000, guid: 1d19e7816a65cd141bb8ec15bbe07375, type: 3}
-  maxStack: 1
-  amount: 0
   Price: 250
-  isDefaultItem: 0
-  isUsedItem: 0
+  IsDefaultItem: 0
+  IsStackable: 0
+  IsUsedItem: 0
+  IsSetEffect: 1
   Name:
   - Demon Plate Armor
   - "\u0414\u0435\u043C\u043E\u043D\u0438\u0447\u0435\u0441\u043A\u0438\u0439 \u041B\u0430\u0442\u043D\u044B\u0439
     \u0414\u043E\u0441\u043F\u0435\u0445"
+  ItemType:
+  - Upper body
+  - "\u0412\u0435\u0440\u0445. \u0434\u043E\u0441\u043F\u0435\u0445"
+  ItemInfo:
+  - 'P. Def. : 46'
+  - "\u0424\u0438\u0437. \u0417\u0430\u0449. : 46"
+  ArmorSetEnum: 21
+  AllArmorSetInfo: {fileID: 11400000, guid: 576352ffa1b746b4c872fd49153b9308, type: 2}
   equipSlot: 1
   armorModifier: 46
+  MagicArmorModifier: 0
   mesh: {fileID: 7231149437509089296, guid: a3a45749f57cb6144952623b7b0f3446, type: 3}
   prefab: {fileID: 0}
   hatNumber: 0
@@ -34,3 +42,5 @@ MonoBehaviour:
   twoHandedWeapon: 0
   shield: 0
   shieldBlockArmorModifier: 0
+  FirstAttachmentNumber: 0
+  SecondAttachmentNumber: 0

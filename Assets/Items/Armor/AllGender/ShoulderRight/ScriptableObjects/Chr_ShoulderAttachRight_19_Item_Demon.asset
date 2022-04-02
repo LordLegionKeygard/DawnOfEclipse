@@ -12,19 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
   m_Name: Chr_ShoulderAttachRight_19_Item_Demon
   m_EditorClassIdentifier: 
-  CurrentItem: {fileID: 0}
   icon: {fileID: 21300000, guid: a45400b268f23fd46b63e756653e37af, type: 3}
-  maxStack: 1
-  amount: 0
   Price: 250
-  isDefaultItem: 0
-  isUsedItem: 0
+  IsDefaultItem: 0
+  IsStackable: 0
+  IsUsedItem: 0
+  IsSetEffect: 1
   Name:
   - Demon Right Shoulder
   - "\u041F\u0440\u0430\u0432\u044B\u0439 \u0414\u0435\u043C\u043E\u043D\u0438\u0447\u0435\u0441\u043A\u0438\u0439
     \u041D\u0430\u043F\u043B\u0435\u0447\u043D\u0438\u043A"
+  ItemType:
+  - Shoulders
+  - "\u041D\u0430\u043F\u043B\u0435\u0447\u043D\u0438\u043A\u0438"
+  ItemInfo:
+  - 'P. Def. : 22'
+  - "\u0424\u0438\u0437. \u0417\u0430\u0449. : 22"
+  ArmorSetEnum: 21
+  AllArmorSetInfo: {fileID: 11400000, guid: 576352ffa1b746b4c872fd49153b9308, type: 2}
   equipSlot: 12
   armorModifier: 22
+  MagicArmorModifier: 0
   mesh: {fileID: 7293196140622317013, guid: 7ae28fcd1fbbd364cab2b15f88b88169, type: 3}
   prefab: {fileID: 0}
   hatNumber: 0

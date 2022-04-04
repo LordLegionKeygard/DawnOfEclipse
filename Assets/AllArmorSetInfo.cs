@@ -5,7 +5,6 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "AllArmorSetInfo", menuName = "Info/Armor")]
 public class AllArmorSetInfo : ScriptableObject
 {
-    public ArmorSetEnum ArmorSetEnum;
     public IntArray[] intArray;
 }
 
@@ -57,7 +56,18 @@ public class IntArray
     public string[] KneesInfo;
     public string[] BootsInfo;
     public string[] ThreePiecesInfo;
+    public string[] FivePiecesInfo;
     public string[] SixPiecesInfo;
+    public string[] SevenPiecesInfo;
     public string[] EightPiecesInfo;
+    public string[] NinePiecesInfo;
     public string[] TenPiecesInfo;
 }
+
+// Set Pieces
+// 5)3,5
+// 6)3,6
+// 7)4,7
+// 8)3,5,8
+// 9)3,6,9
+// 10)3,6,10

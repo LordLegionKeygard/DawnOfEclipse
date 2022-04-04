@@ -9,6 +9,8 @@
 /Assets/AssetStoreTools*
 /Assets/_TerrainData*
 /Assets/AssetStore*
+/Assets/Scenes/Forest.unity
+/Assets/Scenes/*
 /GriffinBackup/*
 /Packages/*
 */Examples/
@@ -55,3 +57,6 @@ sysinfo.txt
 /*.gif
 /*.bmp
 /*.psd
+Assets/Scenes/Forest.unity
+Assets/Scenes/Forest.unity
+Assets/Scenes/Forest.unity

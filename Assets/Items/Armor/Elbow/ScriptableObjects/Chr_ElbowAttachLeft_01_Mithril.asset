@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
+  m_Name: Chr_ElbowAttachLeft_01_Mithril
+  m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: 0b2c4e919396ed74b961f3f0d5ccea6e, type: 3}
+  Price: 250
+  IsDefaultItem: 0
+  IsStackable: 0
+  IsUsedItem: 0
+  IsSetEffect: 1
+  Name:
+  - Mithril Elbows
+  - "\u041C\u0438\u0444\u0440\u0438\u043B\u043E\u0432\u044B\u0435 \u041D\u0430\u043B\u043E\u043A\u043E\u0442\u043D\u0438\u043A\u0438"
+  ItemType:
+  - Elbows
+  - "\u041D\u0430\u043B\u043E\u043A\u043E\u0442\u043D\u0438\u043A\u0438"
+  ItemInfo:
+  - 'P. Def. : 1'
+  - "\u0424\u0438\u0437. \u0417\u0430\u0449. : 1"
+  ArmorSetEnum: 9
+  AllArmorSetInfo: {fileID: 11400000, guid: 576352ffa1b746b4c872fd49153b9308, type: 2}
+  equipSlot: 15
+  armorModifier: 1
+  MagicArmorModifier: 0
+  Meshes:
+  - {fileID: 3772691677458288468, guid: 9ab80346bc20e484fa75cd491fcc3900, type: 3}
+  - {fileID: 2539052970779474988, guid: 256d1be9d7bc9fd41b26bc66dc36c463, type: 3}
+  prefab: {fileID: 0}
+  hatNumber: 0
+  noHair: 0
+  canChangehead: 0
+  weapon: 0
+  twoHandedWeapon: 0
+  shield: 0
+  shieldBlockArmorModifier: 0
+  FirstAttachmentNumber: 0
+  SecondAttachmentNumber: 0

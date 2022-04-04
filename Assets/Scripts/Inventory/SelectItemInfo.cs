@@ -15,7 +15,9 @@ public class SelectItemInfo : MonoBehaviour
         _itemText[2].text = info;
     }
 
-    public void UpdateItemSetEffectInfoText(string helmet, string shoulders, string torso, string forearms, string elbows, string bracers, string gloves, string hips, string knees, string boots, string threePieces, string sixPieces, string eightPieces, string tenPieces)
+    public void UpdateItemSetEffectInfoText(string helmet, string shoulders, string torso, string forearms, string elbows, string bracers, string gloves,
+    string hips, string knees, string boots, string threePieces, string fivePieces, string sixPieces, string sevenPieces, string eightPieces, string ninePieces,
+    string tenPieces)
     {
         ToggleSetEffect(true);
         _itemText[4].text = helmet;
@@ -29,27 +31,27 @@ public class SelectItemInfo : MonoBehaviour
         _itemText[12].text = knees;
         _itemText[13].text = boots;
         _itemText[14].text = threePieces;
-        _itemText[15].text = sixPieces;
-        _itemText[16].text = eightPieces;
-        _itemText[17].text = tenPieces;
+        _itemText[15].text = fivePieces;
+        _itemText[16].text = sixPieces;
+        _itemText[17].text = sevenPieces;
+        _itemText[18].text = eightPieces;
+        _itemText[19].text = ninePieces;
+        _itemText[20].text = tenPieces;
 
         CheckEmptyInfoText();
     }
 
     private void CheckEmptyInfoText()
     {
-        Debug.Log("Check");
         for (int i = 0; i < _itemText.Length; i++)
         {
             if (_itemText[i].text == "")
             {
                 _itemText[i].gameObject.SetActive(false);
-                Debug.Log("false");
             }
             else
             {
                 _itemText[i].gameObject.SetActive(true);
-                Debug.Log("true");
             }
         }
     }
@@ -64,6 +66,6 @@ public class SelectItemInfo : MonoBehaviour
 
     public void UpdateTransform(Vector2 vec)
     {
-        transform.position = new Vector2(vec.x - 50, vec.y - 50);
+        transform.position = new Vector2(vec.x, vec.y);
     }
 }

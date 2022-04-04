@@ -19,8 +19,8 @@ public class EquipmentManager : MonoBehaviour
     [SerializeField] private MagicArmorControl _magicArmorControl;
     [SerializeField] private MeshFilter _targetMeshFilterWeapon;
     [SerializeField] private MeshFilter _targetMeshFilterShield;
-    private SkinnedMeshRenderer[] _currentMeshes;
-    private GameObject[] _currentGameObject;
+    public SkinnedMeshRenderer[] _currentMeshes;
+    public GameObject[] _currentGameObject;
     private Equipment[] _currentEquipment;
     private WeaponTimeCooldown _weaponTimeCooldown;
     private bool _twoHandWeaponNow;
@@ -127,6 +127,11 @@ public class EquipmentManager : MonoBehaviour
 
         Equipment oldItem = Unequip(slotIndex);
 
+        // if (newItem.Meshes[1]!= null && !newItem.IsDefaultItem)
+        // {
+        //     Destroy(_currentMeshes[slotIndex - 1].gameObject);
+        // }
+
         if (_onEquipmentChanged != null)
         {
             _onEquipmentChanged.Invoke(newItem, oldItem);
@@ -174,7 +179,14 @@ public class EquipmentManager : MonoBehaviour
                 }
             }
 
-            if (_currentMeshes[slotIndex] != null) { Destroy(_currentMeshes[slotIndex].gameObject); }
+            if (_currentMeshes[slotIndex] != null)
+            {
+                Destroy(_currentMeshes[slotIndex].gameObject);
+                if (slotIndex == 6 || slotIndex == 4 || slotIndex == 8 || slotIndex == 10 || slotIndex == 13 || slotIndex == 15|| slotIndex ==  18)
+                {
+                    Destroy(_currentMeshes[slotIndex - 1].gameObject);
+                }
+            }
             if (_currentGameObject[slotIndex] != null) { Destroy(_currentGameObject[slotIndex].gameObject); }
 
             _currentEquipment[slotIndex] = null;
@@ -197,12 +209,15 @@ public class EquipmentManager : MonoBehaviour
         EquipDefaults();
     }
 
-    private void BoneTransformArmor(SkinnedMeshRenderer skin, int targetMeshNumber, int slot)
+    private void BoneTransformArmor(SkinnedMeshRenderer skin, int targetMeshNumber, int slot, bool doubleItem)
     {
         skin.transform.parent = _targetsMesh[targetMeshNumber].transform.parent;
         skin.rootBone = _targetsMesh[targetMeshNumber].rootBone;
         skin.bones = _targetsMesh[targetMeshNumber].bones;
-        _currentMeshes[slot] = skin;
+        if (!doubleItem)
+            _currentMeshes[slot] = skin;
+        else
+            _currentMeshes[slot - 1] = skin;
     }
 
     private void BoneTransformWeapon(GameObject weapon, int slot, Transform weaponPoint, bool rightHand)
@@ -229,81 +244,61 @@ public class EquipmentManager : MonoBehaviour
         switch (item.equipSlot)
         {
             case EquipmentSlot.Torso:
-                SkinnedMeshRenderer newMeshTorso = Instantiate(item.mesh);
-                BoneTransformArmor(newMeshTorso, 0, slotIndex);
+                SkinnedMeshRenderer newMeshTorso = Instantiate(item.Meshes[0]);
+                BoneTransformArmor(newMeshTorso, 0, slotIndex, false);
                 _armorControl.TorsoArmor = item.armorModifier;
                 EquipSlotAndIcon(1, item);
                 break;
-            case EquipmentSlot.HandRight:
-                SkinnedMeshRenderer newMeshHandRight = Instantiate(item.mesh);
-                BoneTransformArmor(newMeshHandRight, 1, slotIndex);
-                _armorControl.HandRightArmor = item.armorModifier;
-                EquipSlotAndIcon(5, item);
-                break;
             case EquipmentSlot.HandLeft:
-                SkinnedMeshRenderer newMeshHandLeft = Instantiate(item.mesh);
-                BoneTransformArmor(newMeshHandLeft, 2, slotIndex);
+                SkinnedMeshRenderer newMeshHandLeft = Instantiate(item.Meshes[0]);
+                BoneTransformArmor(newMeshHandLeft, 2, slotIndex, false);
+                SkinnedMeshRenderer newMeshHandRight = Instantiate(item.Meshes[1]);
+                BoneTransformArmor(newMeshHandRight, 1, slotIndex, true);
                 _armorControl.HandLeftArmor = item.armorModifier;
                 EquipSlotAndIcon(6, item);
                 break;
-            case EquipmentSlot.ArmUpperRight:
-                SkinnedMeshRenderer newMeshArmUpperRight = Instantiate(item.mesh);
-                BoneTransformArmor(newMeshArmUpperRight, 3, slotIndex);
-                _armorControl.ArmUpperRightArmor = item.armorModifier;
-                EquipSlotAndIcon(7, item);
-                break;
             case EquipmentSlot.ArmUpperLeft:
-                SkinnedMeshRenderer newMeshArmUpperLeft = Instantiate(item.mesh);
-                BoneTransformArmor(newMeshArmUpperLeft, 4, slotIndex);
+                SkinnedMeshRenderer newMeshArmUpperLeft = Instantiate(item.Meshes[0]);
+                BoneTransformArmor(newMeshArmUpperLeft, 4, slotIndex, false);
+                SkinnedMeshRenderer newMeshArmUpperRight = Instantiate(item.Meshes[1]);
+                BoneTransformArmor(newMeshArmUpperRight, 3, slotIndex, true);
                 _armorControl.ArmUpperLeftArmor = item.armorModifier;
                 EquipSlotAndIcon(8, item);
                 break;
-            case EquipmentSlot.ArmLowerRight:
-                SkinnedMeshRenderer newMeshArmLowerRight = Instantiate(item.mesh);
-                BoneTransformArmor(newMeshArmLowerRight, 5, slotIndex);
-                _armorControl.ArmLowerRightArmor = item.armorModifier;
-                EquipSlotAndIcon(9, item);
-                break;
             case EquipmentSlot.ArmLowerLeft:
-                SkinnedMeshRenderer newMeshArmLowerLeft = Instantiate(item.mesh);
-                BoneTransformArmor(newMeshArmLowerLeft, 6, slotIndex);
+                SkinnedMeshRenderer newMeshArmLowerLeft = Instantiate(item.Meshes[0]);
+                BoneTransformArmor(newMeshArmLowerLeft, 6, slotIndex, false);
+                SkinnedMeshRenderer newMeshArmLowerRight = Instantiate(item.Meshes[1]);
+                BoneTransformArmor(newMeshArmLowerRight, 5, slotIndex, true);
                 _armorControl.ArmLowerLeftArmor = item.armorModifier;
                 EquipSlotAndIcon(10, item);
                 break;
             case EquipmentSlot.Hips:
-                SkinnedMeshRenderer newMeshHips = Instantiate(item.mesh);
-                BoneTransformArmor(newMeshHips, 7, slotIndex);
+                SkinnedMeshRenderer newMeshHips = Instantiate(item.Meshes[0]);
+                BoneTransformArmor(newMeshHips, 7, slotIndex, false);
                 _armorControl.HipsArmor = item.armorModifier;
                 EquipSlotAndIcon(2, item);
                 break;
-            case EquipmentSlot.LegRight:
-                SkinnedMeshRenderer newMeshLegRight = Instantiate(item.mesh);
-                BoneTransformArmor(newMeshLegRight, 8, slotIndex);
-                _armorControl.LegRightArmor = item.armorModifier;
-                EquipSlotAndIcon(3, item);
-                break;
             case EquipmentSlot.LegLeft:
-                SkinnedMeshRenderer newMeshLegLeft = Instantiate(item.mesh);
-                BoneTransformArmor(newMeshLegLeft, 9, slotIndex);
+                SkinnedMeshRenderer newMeshLegLeft = Instantiate(item.Meshes[0]);
+                BoneTransformArmor(newMeshLegLeft, 9, slotIndex, false);
+                SkinnedMeshRenderer newMeshLegRight = Instantiate(item.Meshes[1]);
+                BoneTransformArmor(newMeshLegRight, 8, slotIndex, true);
                 _armorControl.LegLeftArmor = item.armorModifier;
                 EquipSlotAndIcon(4, item);
                 break;
 
             case EquipmentSlot.BackAttachment:
-                SkinnedMeshRenderer newMeshBackAttachment = Instantiate(item.mesh);
-                BoneTransformArmor(newMeshBackAttachment, 10, slotIndex);
+                SkinnedMeshRenderer newMeshBackAttachment = Instantiate(item.Meshes[0]);
+                BoneTransformArmor(newMeshBackAttachment, 10, slotIndex, false);
                 _armorControl.BackAttachmentArmor = item.armorModifier;
                 EquipSlotAndIcon(11, item);
                 break;
-            case EquipmentSlot.ShoulderRight:
-                SkinnedMeshRenderer newMeshShoulderRight = Instantiate(item.mesh);
-                BoneTransformArmor(newMeshShoulderRight, 11, slotIndex);
-                _armorControl.ShoulderRightArmor = item.armorModifier;
-                EquipSlotAndIcon(12, item);
-                break;
             case EquipmentSlot.ShoulderLeft:
-                SkinnedMeshRenderer newMeshShoulderLeft = Instantiate(item.mesh);
-                BoneTransformArmor(newMeshShoulderLeft, 12, slotIndex);
+                SkinnedMeshRenderer newMeshShoulderLeft = Instantiate(item.Meshes[0]);
+                BoneTransformArmor(newMeshShoulderLeft, 12, slotIndex, false);
+                SkinnedMeshRenderer newMeshShoulderRight = Instantiate(item.Meshes[1]);
+                BoneTransformArmor(newMeshShoulderRight, 11, slotIndex, true);
                 _armorControl.ShoulderLeftArmor = item.armorModifier;
                 EquipSlotAndIcon(13, item);
                 break;
@@ -312,47 +307,39 @@ public class EquipmentManager : MonoBehaviour
 
                 if (item.hatNumber == 0)
                 {
-                    SkinnedMeshRenderer newMeshHeadCoveringsBaseHair = Instantiate(item.mesh);
-                    BoneTransformArmor(newMeshHeadCoveringsBaseHair, 13, slotIndex);
+                    SkinnedMeshRenderer newMeshHeadCoveringsBaseHair = Instantiate(item.Meshes[0]);
+                    BoneTransformArmor(newMeshHeadCoveringsBaseHair, 13, slotIndex, false);
                 }
                 if (item.hatNumber == 1)
                 {
-                    SkinnedMeshRenderer newMeshHeadCoveringNoHair = Instantiate(item.mesh);
-                    BoneTransformArmor(newMeshHeadCoveringNoHair, 14, slotIndex);
+                    SkinnedMeshRenderer newMeshHeadCoveringNoHair = Instantiate(item.Meshes[0]);
+                    BoneTransformArmor(newMeshHeadCoveringNoHair, 14, slotIndex, false);
                 }
                 if (item.hatNumber == 2)
                 {
-                    SkinnedMeshRenderer newMeshHeadNoElememts = Instantiate(item.mesh);
-                    BoneTransformArmor(newMeshHeadNoElememts, 15, slotIndex);
+                    SkinnedMeshRenderer newMeshHeadNoElememts = Instantiate(item.Meshes[0]);
+                    BoneTransformArmor(newMeshHeadNoElememts, 15, slotIndex, false);
                 }
                 EquipSlotAndIcon(0, item);
                 _armorControl.HeadSlotArmor = item.armorModifier;
                 break;
-            case EquipmentSlot.ElbowRight:
-                SkinnedMeshRenderer newMeshElbowRight = Instantiate(item.mesh);
-                BoneTransformArmor(newMeshElbowRight, 16, slotIndex);
-                _armorControl.ElbowRightArmor = item.armorModifier;
-                EquipSlotAndIcon(14, item);
-                break;
             case EquipmentSlot.ElbowLeft:
-                SkinnedMeshRenderer newMeshElbowLeft = Instantiate(item.mesh);
-                BoneTransformArmor(newMeshElbowLeft, 17, slotIndex);
+                SkinnedMeshRenderer newMeshElbowLeft = Instantiate(item.Meshes[0]);
+                BoneTransformArmor(newMeshElbowLeft, 17, slotIndex, false);
+                SkinnedMeshRenderer newMeshElbowRight = Instantiate(item.Meshes[1]);
+                BoneTransformArmor(newMeshElbowRight, 16, slotIndex, true);
                 _armorControl.ElbowLeftArmor = item.armorModifier;
                 EquipSlotAndIcon(15, item);
                 break;
             case EquipmentSlot.HipsAttachment:
-                SkinnedMeshRenderer newMeshHipsAttachment = Instantiate(item.mesh);
-                BoneTransformArmor(newMeshHipsAttachment, 18, slotIndex);
-                break;
-            case EquipmentSlot.KneeRight:
-                SkinnedMeshRenderer newMeshKneeRight = Instantiate(item.mesh);
-                BoneTransformArmor(newMeshKneeRight, 19, slotIndex);
-                _armorControl.KneeRightArmor = item.armorModifier;
-                EquipSlotAndIcon(17, item);
+                SkinnedMeshRenderer newMeshHipsAttachment = Instantiate(item.Meshes[0]);
+                BoneTransformArmor(newMeshHipsAttachment, 18, slotIndex, false);
                 break;
             case EquipmentSlot.KneeLeft:
-                SkinnedMeshRenderer newMeshKneeLeft = Instantiate(item.mesh);
-                BoneTransformArmor(newMeshKneeLeft, 20, slotIndex);
+                SkinnedMeshRenderer newMeshKneeLeft = Instantiate(item.Meshes[0]);
+                BoneTransformArmor(newMeshKneeLeft, 20, slotIndex, false);
+                SkinnedMeshRenderer newMeshKneeRight = Instantiate(item.Meshes[1]);
+                BoneTransformArmor(newMeshKneeRight, 19, slotIndex, true);
                 _armorControl.KneeLeftArmor = item.armorModifier;
                 EquipSlotAndIcon(18, item);
                 break;

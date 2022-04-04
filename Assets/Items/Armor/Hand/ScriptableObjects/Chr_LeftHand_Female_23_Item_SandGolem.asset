@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
+  m_Name: Chr_LeftHand_Female_23_Item_SandGolem
+  m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: ca4b50197133b6e4f9e336bd82853b8d, type: 3}
+  Price: 250
+  IsDefaultItem: 0
+  IsStackable: 0
+  IsUsedItem: 0
+  IsSetEffect: 1
+  Name:
+  - Sand Golem Gloves
+  - "\u041F\u0435\u0440\u0447\u0430\u0442\u043A\u0438 \u041F\u0435\u0441\u0447\u0430\u043D\u043E\u0433\u043E
+    \u0413\u043E\u043B\u0435\u043C\u0430"
+  ItemType:
+  - Gloves
+  - "\u041F\u0435\u0440\u0447\u0430\u0442\u043A\u0438"
+  ItemInfo:
+  - 'P. Def. : 12'
+  - "\u0424\u0438\u0437. \u0417\u0430\u0449. : 12"
+  ArmorSetEnum: 17
+  AllArmorSetInfo: {fileID: 11400000, guid: 576352ffa1b746b4c872fd49153b9308, type: 2}
+  equipSlot: 6
+  armorModifier: 12
+  MagicArmorModifier: 0
+  Meshes:
+  - {fileID: 3935021125678446923, guid: 42901a80f923e354a81e6eaa75e7f035, type: 3}
+  - {fileID: 6559774524234236839, guid: b2229be76a64aa5458785f9a46a88b23, type: 3}
+  prefab: {fileID: 0}
+  hatNumber: 0
+  noHair: 0
+  canChangehead: 0
+  weapon: 0
+  twoHandedWeapon: 0
+  shield: 0
+  shieldBlockArmorModifier: 0
+  FirstAttachmentNumber: 0
+  SecondAttachmentNumber: 0

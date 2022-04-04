@@ -8,7 +8,7 @@ public class Equipment : Item
     public EquipmentSlot equipSlot;
     public int armorModifier;
     public int MagicArmorModifier;
-    public SkinnedMeshRenderer mesh;
+    public SkinnedMeshRenderer[] Meshes;
     public GameObject prefab;
     public int hatNumber;
     public int noHair; // 0 = withHair, 1 = noHair & noEars, 2 = fullHelmet(noAll)

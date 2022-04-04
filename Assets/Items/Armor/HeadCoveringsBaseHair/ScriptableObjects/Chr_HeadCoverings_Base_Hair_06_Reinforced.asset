@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
+  m_Name: Chr_HeadCoverings_Base_Hair_06_Reinforced
+  m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: e35f4c5e121c1ab4da60fc4838677f29, type: 3}
+  Price: 250
+  IsDefaultItem: 0
+  IsStackable: 0
+  IsUsedItem: 0
+  IsSetEffect: 1
+  Name:
+  - Reinforced Leather Hat
+  - "\u0423\u043A\u0440\u0435\u043F\u043B\u0435\u043D\u043D\u0430\u044F \u041A\u043E\u0436\u0430\u043D\u0430\u044F
+    \u0428\u043B\u044F\u043F\u0430"
+  ItemType:
+  - Headgear
+  - "\u0413\u043E\u043B\u043E\u0432\u043D\u043E\u0439 \u0423\u0431\u043E\u0440"
+  ItemInfo:
+  - 'P. Def. : 10'
+  - "\u0424\u0438\u0437. \u0417\u0430\u0449. : 10"
+  ArmorSetEnum: 27
+  AllArmorSetInfo: {fileID: 11400000, guid: 576352ffa1b746b4c872fd49153b9308, type: 2}
+  equipSlot: 0
+  armorModifier: 10
+  MagicArmorModifier: 0
+  Meshes:
+  - {fileID: 4226335580011830259, guid: f2af9a79ea4ae1e46b8692f43a5fbaab, type: 3}
+  prefab: {fileID: 0}
+  hatNumber: 0
+  noHair: 0
+  canChangehead: 1
+  weapon: 0
+  twoHandedWeapon: 0
+  shield: 0
+  shieldBlockArmorModifier: 0
+  FirstAttachmentNumber: 0
+  SecondAttachmentNumber: 0

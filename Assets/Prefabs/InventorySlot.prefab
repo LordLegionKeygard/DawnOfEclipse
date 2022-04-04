@@ -405,6 +405,7 @@ MonoBehaviour:
   _amountText: {fileID: 5863171851336365641}
   _dropItemButton: {fileID: 9093510803215905775}
   _selectItemInfo: {fileID: 0}
+  IsItemSelect: 0
   Item: {fileID: 11400000, guid: 63753bdbbcf3e734289031a30d77b118, type: 2}
 --- !u!114 &1172954716074304993
 MonoBehaviour:
@@ -418,6 +419,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96eeb959b375ed34c99bd1a4921a7b95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsEquipSlot: 0
   _tooltipSystem: {fileID: 0}
 --- !u!1 &9093510802508346510
 GameObject:

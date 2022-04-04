@@ -68,7 +68,7 @@ Material:
     - _BodyArt_Amount: 0
     - _Emission: 0
     - _Emmision: 0
-    - _Metallic: 0.314
+    - _Metallic: 0
     - _Smoothness: 0
     - __dirty: 1
     m_Colors:

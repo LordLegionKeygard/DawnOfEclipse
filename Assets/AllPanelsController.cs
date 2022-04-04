@@ -4,13 +4,18 @@ using UnityEngine;
 
 public class AllPanelsController : MonoBehaviour
 {
-    [SerializeField] private GameObject inventoryUI;
+    [SerializeField] private GameObject[] panels;
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.JoystickButton9) || Input.GetKeyDown(KeyCode.Tab))
         {
-            inventoryUI.SetActive(!inventoryUI.activeSelf);
+            PanelsToggle(0);
         }
+    }
+
+    public void PanelsToggle(int number)
+    {
+        panels[number].SetActive(!panels[number].activeSelf);
     }
 }

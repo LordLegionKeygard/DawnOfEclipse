@@ -56,6 +56,7 @@ public class IntArray
     public string[] KneesInfo;
     public string[] BootsInfo;
     public string[] ThreePiecesInfo;
+    public string[] FourPiecesInfo;
     public string[] FivePiecesInfo;
     public string[] SixPiecesInfo;
     public string[] SevenPiecesInfo;

@@ -397,16 +397,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bf21e778dc85d349b2b86ab2dcfa9d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Icon: {fileID: 9093510803503705627}
+  ItemFrame: {fileID: 9093510801582282784}
+  SelectItemInfo: {fileID: 0}
+  IsItemSelect: 0
+  Item: {fileID: 11400000, guid: 63753bdbbcf3e734289031a30d77b118, type: 2}
   IsCursor: 0
   _numberSlot: 0
   _amount: 1
-  _icon: {fileID: 9093510803503705627}
-  _itemFrame: {fileID: 9093510801582282784}
   _amountText: {fileID: 5863171851336365641}
   _dropItemButton: {fileID: 9093510803215905775}
-  _selectItemInfo: {fileID: 0}
-  IsItemSelect: 0
-  Item: {fileID: 11400000, guid: 63753bdbbcf3e734289031a30d77b118, type: 2}
 --- !u!114 &1172954716074304993
 MonoBehaviour:
   m_ObjectHideFlags: 0

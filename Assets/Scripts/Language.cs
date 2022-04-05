@@ -8,8 +8,8 @@ using UnityEngine;
 public class Language : MonoBehaviour
 {
     public static int LanguageNumber = 1;
-    public static string[,] Menu_text_previes = new string[100, 2];
-    public static string[] Menu_text = new string[100];
+    public static string[,] TextPreviesStatic = new string[100, 2];
+    public static string[] TextStatic = new string[100];
     private string _langChange;
 
     private void Awake()
@@ -19,20 +19,26 @@ public class Language : MonoBehaviour
 
     public void SetLanguage()
     {
-        Menu_text_previes[1, 0] = "Moon";
-        Menu_text_previes[1, 1] = "Лун";
+        TextPreviesStatic[1, 0] = "Moon";
+        TextPreviesStatic[1, 1] = "Лун";
 
-        Menu_text_previes[2, 0] = "P. Def.";
-        Menu_text_previes[2, 1] = "Физ. Защ.";
+        TextPreviesStatic[2, 0] = "P. Def.";
+        TextPreviesStatic[2, 1] = "Физ. Защ.";
 
-        Menu_text_previes[3, 0] = "M. Def.";
-        Menu_text_previes[3, 1] = "Маг. Защ.";
+        TextPreviesStatic[3, 0] = "M. Def.";
+        TextPreviesStatic[3, 1] = "Маг. Защ.";
 
-        Menu_text_previes[4, 0] = "P. Atk.";
-        Menu_text_previes[4, 1] = "Физ. Атк.";
+        TextPreviesStatic[4, 0] = "P. Atk.";
+        TextPreviesStatic[4, 1] = "Физ. Атк.";
 
-        Menu_text_previes[5, 0] = "M. Atk.";
-        Menu_text_previes[5, 1] = "Маг. Атк.";
+        TextPreviesStatic[5, 0] = "M. Atk.";
+        TextPreviesStatic[5, 1] = "Маг. Атк.";
+
+        TextPreviesStatic[6, 0] = "Character Stats";
+        TextPreviesStatic[6, 1] = "Характеристики";
+
+        TextPreviesStatic[7, 0] = "Inventory";
+        TextPreviesStatic[7, 1] = "Инвентарь";
 
         // _langChange = PlayerPrefs.GetString("Language");
 
@@ -56,7 +62,7 @@ public class Language : MonoBehaviour
         //     PlayerPrefs.Save();
         // }
 
-        for (int x = 0; x < 99; x++) { Menu_text[x] = Menu_text_previes[x, LanguageNumber]; }
+        for (int x = 0; x < 99; x++) { TextStatic[x] = TextPreviesStatic[x, LanguageNumber]; }
     }
 
     // public static void ChangeLanguage(int _language)

@@ -12,6 +12,10 @@ public class AllPanelsController : MonoBehaviour
         {
             PanelsToggle(0);
         }
+        else if(Input.GetKeyDown(KeyCode.C))
+        {
+            PanelsToggle(1);
+        }
     }
 
     public void PanelsToggle(int number)

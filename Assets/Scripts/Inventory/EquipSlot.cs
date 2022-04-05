@@ -3,30 +3,25 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class EquipSlot : MonoBehaviour
+public class EquipSlot : Slots
 {
-    public Image Icon;
     public Image BackIcon;
     [SerializeField] private EquipmentSlot _equipmentSlot;
     [SerializeField] private ArmorControl _armorControl;
     [SerializeField] private MagicArmorControl _magicArmorControl;
     [SerializeField] private EquipmentManager _equipmentManager;
-    [SerializeField] private SelectItemInfo _selectItemInfo;
-    [SerializeField] private Image _itemFrame;
-    public bool IsItemSelect = false;
-    public Item Item;
 
-    private void OnEnable()
+    public void OnEnable()
     {
         CustomEvents.OnSelectItem += SelectSlot;
-        CustomEvents.OnCheckEquipItemSetNumber += CheckEquipItemSetEffect;
         CustomEvents.OnUpdateSelectItemTransform += UpdateSelectItemInfoTransform;
+        CustomEvents.OnCheckEquipItemSetNumber += CheckEquipItemSetEffect;
     }
 
     public void EquipIcon()
     {
         IsItemSelect = false;
-        _itemFrame.color = new Color(0.3301887f, 0.3283905f, 0.1759968f, 0.454902f);
+        ItemFrame.color = new Color(0.3301887f, 0.3283905f, 0.1759968f, 0.454902f);
         Icon.enabled = true;
         BackIcon.enabled = false;
     }
@@ -126,11 +121,11 @@ public class EquipSlot : MonoBehaviour
 
         if (state)
         {
-            _itemFrame.color = new Color(0.8980392f, 0.7450981f, 0.1803922f, 1);
-            _selectItemInfo.UpdateItemInfoText(Item.Name[Language.LanguageNumber], Item.ItemType[Language.LanguageNumber], Item.ItemInfo[Language.LanguageNumber]);
+            ItemFrame.color = new Color(0.8980392f, 0.7450981f, 0.1803922f, 1);
+            SelectItemInfo.UpdateItemInfoText(Item.Name[Language.LanguageNumber], Item.ItemType[Language.LanguageNumber], Item.ItemInfo[Language.LanguageNumber]);
             if (Item.IsSetEffect)
             {
-                _selectItemInfo.UpdateItemSetEffectInfoText
+                SelectItemInfo.UpdateItemSetEffectInfoText
                (Item.AllArmorSetInfo.intArray[Language.LanguageNumber].HelmetInfo[(int)Item.ArmorSetEnum],
                 Item.AllArmorSetInfo.intArray[Language.LanguageNumber].ShouldersInfo[(int)Item.ArmorSetEnum],
                 Item.AllArmorSetInfo.intArray[Language.LanguageNumber].TorsoInfo[(int)Item.ArmorSetEnum],
@@ -142,6 +137,7 @@ public class EquipSlot : MonoBehaviour
                 Item.AllArmorSetInfo.intArray[Language.LanguageNumber].KneesInfo[(int)Item.ArmorSetEnum],
                 Item.AllArmorSetInfo.intArray[Language.LanguageNumber].BootsInfo[(int)Item.ArmorSetEnum],
                 Item.AllArmorSetInfo.intArray[Language.LanguageNumber].ThreePiecesInfo[(int)Item.ArmorSetEnum],
+                Item.AllArmorSetInfo.intArray[Language.LanguageNumber].FourPiecesInfo[(int)Item.ArmorSetEnum],
                 Item.AllArmorSetInfo.intArray[Language.LanguageNumber].FivePiecesInfo[(int)Item.ArmorSetEnum],
                 Item.AllArmorSetInfo.intArray[Language.LanguageNumber].SixPiecesInfo[(int)Item.ArmorSetEnum],
                 Item.AllArmorSetInfo.intArray[Language.LanguageNumber].SevenPiecesInfo[(int)Item.ArmorSetEnum],
@@ -151,7 +147,7 @@ public class EquipSlot : MonoBehaviour
             }
             else
             {
-                _selectItemInfo.ToggleSetEffect(false);
+                SelectItemInfo.ToggleSetEffect(false);
             }
             UpdateSelectItemInfoTransform();
             CustomEvents.FireCheckEquipItemSetNumber((int)Item.ArmorSetEnum);
@@ -159,15 +155,8 @@ public class EquipSlot : MonoBehaviour
         }
 
         else
-            _itemFrame.color = new Color(0.3301887f, 0.3283905f, 0.1759968f, 0.454902f);
+            ItemFrame.color = new Color(0.3301887f, 0.3283905f, 0.1759968f, 0.454902f);
     }
-
-    private void UpdateSelectItemInfoTransform()
-    {
-        if (!IsItemSelect) return;
-        _selectItemInfo.UpdateTransform(new Vector2(transform.position.x, transform.position.y));
-    }
-
     private void CheckEquipItemSetEffect(int setEnum)
     {
         ChangeSetEffectTextColor(new Color(0.3882353f, 0.2705882f, 0, 1));
@@ -180,68 +169,28 @@ public class EquipSlot : MonoBehaviour
 
     private void CheckHowMuchPiecesSetEffect()
     {
-        _selectItemInfo._itemText[14].color = new Color(0.254902f, 0.254902f, 0.2509804f, 1);
-        _selectItemInfo._itemText[15].color = new Color(0.254902f, 0.254902f, 0.2509804f, 1);
-        _selectItemInfo._itemText[16].color = new Color(0.254902f, 0.254902f, 0.2509804f, 1);
-        _selectItemInfo._itemText[17].color = new Color(0.254902f, 0.254902f, 0.2509804f, 1);
-        _selectItemInfo._itemText[18].color = new Color(0.254902f, 0.254902f, 0.2509804f, 1);
-        _selectItemInfo._itemText[19].color = new Color(0.254902f, 0.254902f, 0.2509804f, 1);
-        _selectItemInfo._itemText[20].color = new Color(0.254902f, 0.254902f, 0.2509804f, 1);
+        ResetPiecesSetEffectTextColor();
         var setPieces = 0;
-        for (int i = 0; i < _selectItemInfo._itemText.Length; i++)
+        for (int i = 0; i < SelectItemInfo._itemText.Length; i++)
         {
-            if (_selectItemInfo._itemText[i].color == new Color(0.8352941f, 0.8196079f, 0.5294118f, 1))
+            if (SelectItemInfo._itemText[i].color == new Color(0.8352941f, 0.8196079f, 0.5294118f, 1))
             {
                 setPieces++;
             }
         }
-        switch (setPieces)
+
+        for (int i = 14; i < SelectItemInfo._itemText.Length; i++)
         {
-            case 3:
-                _selectItemInfo._itemText[14].color = new Color(0.8274511f, 0.5882353f, 0.01568628f, 1);
-                break;
-            case 4:
-                _selectItemInfo._itemText[14].color = new Color(0.8274511f, 0.5882353f, 0.01568628f, 1);
-                break;
-            case 5:
-                _selectItemInfo._itemText[14].color = new Color(0.8274511f, 0.5882353f, 0.01568628f, 1);
-                _selectItemInfo._itemText[15].color = new Color(0.8274511f, 0.5882353f, 0.01568628f, 1);
-                break;
-            case 6:
-                _selectItemInfo._itemText[14].color = new Color(0.8274511f, 0.5882353f, 0.01568628f, 1);
-                _selectItemInfo._itemText[15].color = new Color(0.8274511f, 0.5882353f, 0.01568628f, 1);
-                _selectItemInfo._itemText[16].color = new Color(0.8274511f, 0.5882353f, 0.01568628f, 1);
-                break;
-            case 7:
-                _selectItemInfo._itemText[14].color = new Color(0.8274511f, 0.5882353f, 0.01568628f, 1);
-                _selectItemInfo._itemText[15].color = new Color(0.8274511f, 0.5882353f, 0.01568628f, 1);
-                _selectItemInfo._itemText[16].color = new Color(0.8274511f, 0.5882353f, 0.01568628f, 1);
-                _selectItemInfo._itemText[17].color = new Color(0.8274511f, 0.5882353f, 0.01568628f, 1);
-                break;
-            case 8:
-                _selectItemInfo._itemText[14].color = new Color(0.8274511f, 0.5882353f, 0.01568628f, 1);
-                _selectItemInfo._itemText[15].color = new Color(0.8274511f, 0.5882353f, 0.01568628f, 1);
-                _selectItemInfo._itemText[16].color = new Color(0.8274511f, 0.5882353f, 0.01568628f, 1);
-                _selectItemInfo._itemText[17].color = new Color(0.8274511f, 0.5882353f, 0.01568628f, 1);
-                _selectItemInfo._itemText[18].color = new Color(0.8274511f, 0.5882353f, 0.01568628f, 1);
-                break;
-            case 9:
-                _selectItemInfo._itemText[14].color = new Color(0.8274511f, 0.5882353f, 0.01568628f, 1);
-                _selectItemInfo._itemText[15].color = new Color(0.8274511f, 0.5882353f, 0.01568628f, 1);
-                _selectItemInfo._itemText[16].color = new Color(0.8274511f, 0.5882353f, 0.01568628f, 1);
-                _selectItemInfo._itemText[17].color = new Color(0.8274511f, 0.5882353f, 0.01568628f, 1);
-                _selectItemInfo._itemText[18].color = new Color(0.8274511f, 0.5882353f, 0.01568628f, 1);
-                _selectItemInfo._itemText[19].color = new Color(0.8274511f, 0.5882353f, 0.01568628f, 1);
-                break;
-            case 10:
-                _selectItemInfo._itemText[14].color = new Color(0.8274511f, 0.5882353f, 0.01568628f, 1);
-                _selectItemInfo._itemText[15].color = new Color(0.8274511f, 0.5882353f, 0.01568628f, 1);
-                _selectItemInfo._itemText[16].color = new Color(0.8274511f, 0.5882353f, 0.01568628f, 1);
-                _selectItemInfo._itemText[17].color = new Color(0.8274511f, 0.5882353f, 0.01568628f, 1);
-                _selectItemInfo._itemText[18].color = new Color(0.8274511f, 0.5882353f, 0.01568628f, 1);
-                _selectItemInfo._itemText[19].color = new Color(0.8274511f, 0.5882353f, 0.01568628f, 1);
-                _selectItemInfo._itemText[20].color = new Color(0.8274511f, 0.5882353f, 0.01568628f, 1);
-                break;
+            if (i < 12 + setPieces)
+                SelectItemInfo._itemText[i].color = new Color(0.8274511f, 0.5882353f, 0.01568628f, 1);
+        }
+    }
+
+    private void ResetPiecesSetEffectTextColor()
+    {
+        for (int i = 14; i < SelectItemInfo._itemText.Length; i++)
+        {
+            SelectItemInfo._itemText[i].color = new Color(0.254902f, 0.254902f, 0.2509804f, 1);
         }
     }
 
@@ -250,34 +199,34 @@ public class EquipSlot : MonoBehaviour
         switch (_equipmentSlot)
         {
             case EquipmentSlot.HeadSlot:
-                _selectItemInfo._itemText[4].color = color;
+                SelectItemInfo._itemText[4].color = color;
                 break;
             case EquipmentSlot.Torso:
-                _selectItemInfo._itemText[6].color = color;
+                SelectItemInfo._itemText[6].color = color;
                 break;
             case EquipmentSlot.Hips:
-                _selectItemInfo._itemText[11].color = color;
+                SelectItemInfo._itemText[11].color = color;
                 break;
             case EquipmentSlot.LegLeft:
-                _selectItemInfo._itemText[13].color = color;
+                SelectItemInfo._itemText[13].color = color;
                 break;
             case EquipmentSlot.ShoulderLeft:
-                _selectItemInfo._itemText[5].color = color;
+                SelectItemInfo._itemText[5].color = color;
                 break;
             case EquipmentSlot.ArmUpperLeft:
-                _selectItemInfo._itemText[7].color = color;
+                SelectItemInfo._itemText[7].color = color;
                 break;
             case EquipmentSlot.ArmLowerLeft:
-                _selectItemInfo._itemText[9].color = color;
+                SelectItemInfo._itemText[9].color = color;
                 break;
             case EquipmentSlot.ElbowLeft:
-                _selectItemInfo._itemText[8].color = color;
+                SelectItemInfo._itemText[8].color = color;
                 break;
             case EquipmentSlot.HandLeft:
-                _selectItemInfo._itemText[10].color = color;
+                SelectItemInfo._itemText[10].color = color;
                 break;
             case EquipmentSlot.KneeLeft:
-                _selectItemInfo._itemText[12].color = color;
+                SelectItemInfo._itemText[12].color = color;
                 break;
         }
         CheckHowMuchPiecesSetEffect();

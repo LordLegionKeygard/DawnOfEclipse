@@ -4,20 +4,15 @@ using System.Collections;
 using UnityEngine.UI;
 using TMPro;
 
-public class InventorySlot : MonoBehaviour
+public class InventorySlot : Slots
 {
     public bool IsCursor;
     [SerializeField] private int _numberSlot;
     [SerializeField] private int _amount;
-    [SerializeField] private Image _icon;
-    [SerializeField] private Image _itemFrame;
     [SerializeField] private TextMeshProUGUI _amountText;
     [SerializeField] private GameObject _dropItemButton;
-    [SerializeField] private SelectItemInfo _selectItemInfo;
-    public bool IsItemSelect = false;
-    public Item Item;
 
-    private void OnEnable()
+    public void OnEnable()
     {
         CustomEvents.OnSelectItem += SelectSlot;
         CustomEvents.OnUpdateSelectItemTransform += UpdateSelectItemInfoTransform;
@@ -33,9 +28,9 @@ public class InventorySlot : MonoBehaviour
     public void AddItem(Item newItem, string name)
     {
         Item = newItem;
-        _icon.sprite = Item.icon;
+        Icon.sprite = Item.icon;
         if (newItem.name != "Empty_Item")
-            _icon.enabled = true;
+            Icon.enabled = true;
         if (Item.IsStackable)
         {
             _amountText.enabled = true;
@@ -47,8 +42,8 @@ public class InventorySlot : MonoBehaviour
 
     public void ClearSlot()
     {
-        _icon.sprite = null;
-        _icon.enabled = false;
+        Icon.sprite = null;
+        Icon.enabled = false;
         _amountText.enabled = false;
         _amount = 1;
     }
@@ -57,7 +52,7 @@ public class InventorySlot : MonoBehaviour
         CustomEvents.FireTooltipToggle(false);
         IsItemSelect = false;
         _dropItemButton.SetActive(false);
-        _itemFrame.color = new Color(0.3301887f, 0.3283905f, 0.1759968f, 0.454902f);
+        ItemFrame.color = new Color(0.3301887f, 0.3283905f, 0.1759968f, 0.454902f);
         Inventory.InventoryStatic.RemoveItemFromInventoryList(Item, _numberSlot);
         ClearSlot();
     }
@@ -104,18 +99,19 @@ public class InventorySlot : MonoBehaviour
 
     public void SelectSlot(bool state)
     {
-        if (Item.name == "Empty_Item" && state == true) return;
 
+        if (Item.name == "Empty_Item" && state == true) return;
+        ResetSetEffectTextColor();
         _dropItemButton.SetActive(state);
-        IsItemSelect = (state);
+        IsItemSelect = state;
 
         if (state)
         {
-            _itemFrame.color = new Color(0.8980392f, 0.7450981f, 0.1803922f, 1);
-            _selectItemInfo.UpdateItemInfoText(Item.Name[Language.LanguageNumber], Item.ItemType[Language.LanguageNumber], Item.ItemInfo[Language.LanguageNumber]);
+            ItemFrame.color = new Color(0.8980392f, 0.7450981f, 0.1803922f, 1);
+            SelectItemInfo.UpdateItemInfoText(Item.Name[Language.LanguageNumber], Item.ItemType[Language.LanguageNumber], Item.ItemInfo[Language.LanguageNumber]);
             if (Item.IsSetEffect)
             {
-                _selectItemInfo.UpdateItemSetEffectInfoText
+                SelectItemInfo.UpdateItemSetEffectInfoText
                (Item.AllArmorSetInfo.intArray[Language.LanguageNumber].HelmetInfo[(int)Item.ArmorSetEnum],
                 Item.AllArmorSetInfo.intArray[Language.LanguageNumber].ShouldersInfo[(int)Item.ArmorSetEnum],
                 Item.AllArmorSetInfo.intArray[Language.LanguageNumber].TorsoInfo[(int)Item.ArmorSetEnum],
@@ -127,6 +123,7 @@ public class InventorySlot : MonoBehaviour
                 Item.AllArmorSetInfo.intArray[Language.LanguageNumber].KneesInfo[(int)Item.ArmorSetEnum],
                 Item.AllArmorSetInfo.intArray[Language.LanguageNumber].BootsInfo[(int)Item.ArmorSetEnum],
                 Item.AllArmorSetInfo.intArray[Language.LanguageNumber].ThreePiecesInfo[(int)Item.ArmorSetEnum],
+                Item.AllArmorSetInfo.intArray[Language.LanguageNumber].FourPiecesInfo[(int)Item.ArmorSetEnum],
                 Item.AllArmorSetInfo.intArray[Language.LanguageNumber].FivePiecesInfo[(int)Item.ArmorSetEnum],
                 Item.AllArmorSetInfo.intArray[Language.LanguageNumber].SixPiecesInfo[(int)Item.ArmorSetEnum],
                 Item.AllArmorSetInfo.intArray[Language.LanguageNumber].SevenPiecesInfo[(int)Item.ArmorSetEnum],
@@ -136,20 +133,23 @@ public class InventorySlot : MonoBehaviour
             }
             else
             {
-                _selectItemInfo.ToggleSetEffect(false);
+                SelectItemInfo.ToggleSetEffect(false);
             }
             UpdateSelectItemInfoTransform();
             CustomEvents.FireTooltipToggle(true);
         }
 
         else
-            _itemFrame.color = new Color(0.3301887f, 0.3283905f, 0.1759968f, 0.454902f);
+            ItemFrame.color = new Color(0.3301887f, 0.3283905f, 0.1759968f, 0.454902f);
     }
 
-    private void UpdateSelectItemInfoTransform()
+    private void ResetSetEffectTextColor()
     {
-        if (!IsItemSelect) return;
-        _selectItemInfo.UpdateTransform(new Vector2(transform.position.x, transform.position.y));
+        Debug.Log("ResetColor");
+        for (int i = 4; i < SelectItemInfo._itemText.Length; i++)
+        {
+            SelectItemInfo._itemText[i].color = new Color(0.254902f, 0.254902f, 0.2509804f, 1);
+        }
     }
 
     public void DropItem()

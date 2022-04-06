@@ -8,9 +8,9 @@ public class ItemPickup : MonoBehaviour
     {
         if (_item.IsStackable)
         {
-            for (int i = 0; i < Inventory.InventoryStatic.items.Count; i++)
+            for (int i = 0; i < Inventory.InventoryStatic.InventorySlots.Length; i++)
             {
-                if (Inventory.InventoryStatic.items[i].name == _item.name)
+                if (Inventory.InventoryStatic.InventorySlots[i].Item.name == _item.name)
                 {
                     Inventory.InventoryStatic.UpdateUI(_item.name);
                     Destroy(gameObject);

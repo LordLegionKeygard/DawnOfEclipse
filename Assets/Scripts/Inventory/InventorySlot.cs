@@ -8,8 +8,8 @@ public class InventorySlot : Slots
 {
     public bool IsCursor;
     [SerializeField] private int _numberSlot;
-    [SerializeField] private int _amount;
-    [SerializeField] private TextMeshProUGUI _amountText;
+    public int _amount;
+    public TextMeshProUGUI _amountText;
     [SerializeField] private GameObject _dropItemButton;
 
     public void OnEnable()

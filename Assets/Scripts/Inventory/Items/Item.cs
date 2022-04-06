@@ -13,6 +13,7 @@ public class Item : ScriptableObject
     public bool IsSetEffect;
     public string[] Name; //0 eng, 1 rus
     public string[] ItemType;
+    public int Amount;
 
     [TextArea(1, 3)]
     public string[] ItemInfo;

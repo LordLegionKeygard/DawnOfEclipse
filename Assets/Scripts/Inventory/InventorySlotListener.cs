@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class InventorySlotListener : MonoBehaviour, IPointerClickHandler
+public class InventorySlotListener : MonoBehaviour, IPointerUpHandler
 {
     [SerializeField] private InventorySlot _inventorySlot;
-    public void OnPointerClick(PointerEventData eventData)
+    public void OnPointerUp(PointerEventData eventData)
     {
         if (eventData.button == PointerEventData.InputButton.Left)
         {

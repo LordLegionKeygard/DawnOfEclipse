@@ -30,10 +30,9 @@ public class Inventory : MonoBehaviour
 
     public int _space;
     [SerializeField] private Item _emptySlot;
-    [SerializeField] private InventorySlot[] _slots;
-    public List<Item> items = new List<Item>();
-
+    public InventorySlot[] InventorySlots;
     public bool FullInventory;
+
 
     public void Add(Item item)
     {
@@ -43,11 +42,11 @@ public class Inventory : MonoBehaviour
         IEnumerator ExecuteAfterTime(float timeInSec)
         {
             yield return new WaitForSeconds(timeInSec);
-            for (int i = 0; i < items.Count; i++)
+            for (int i = 0; i < InventorySlots.Length; i++)
             {
-                if (items[i].name == "Empty_Item")
+                if (InventorySlots[i].Item.name == "Empty_Item")
                 {
-                    items[i] = item;
+                    InventorySlots[i].Item = item;
                     UpdateUI(item.Name[Language.LanguageNumber]);
                     CheckFullInventory();
                     break;
@@ -58,23 +57,23 @@ public class Inventory : MonoBehaviour
 
     public void UpdateUI(string name)
     {
-        for (int i = 0; i < _slots.Length; i++)
+        for (int i = 0; i < InventorySlots.Length; i++)
         {
-            if (i < InventoryStatic.items.Count)
+            if (i < InventoryStatic.InventorySlots.Length)
             {
-                _slots[i].AddItem(InventoryStatic.items[i], name);
+                InventorySlots[i].AddItem(InventoryStatic.InventorySlots[i].Item, name);
             }
 
             else
-                _slots[i].ClearSlot();
+                InventorySlots[i].ClearSlot();
         }
     }
 
     private void CheckFullInventory()
     {
-        for (int i = 0; i < items.Count; i++)
+        for (int i = 0; i < InventorySlots.Length; i++)
         {
-            if (items[i].name == "Empty_Item")
+            if (InventorySlots[i].Item.name == "Empty_Item")
             {
                 FullInventory = false;
                 return;
@@ -88,7 +87,7 @@ public class Inventory : MonoBehaviour
 
     public void RemoveItemFromInventoryList(Item item, int number)
     {
-        items[number] = _emptySlot;
+        InventorySlots[number].Item = _emptySlot;
         UpdateUI(item.Name[Language.LanguageNumber]);
         CheckFullInventory();
     }

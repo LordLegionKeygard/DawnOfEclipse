@@ -18,7 +18,6 @@ public class ArmorControl : MonoBehaviour
     public int HipsArmor;
     public int LegLeftArmor;
     public int LegRightArmor;
-    public int BackAttachmentArmor;
     public int ShoulderLeftArmor;
     public int ShoulderRightArmor;
     public int HeadSlotArmor;
@@ -32,7 +31,6 @@ public class ArmorControl : MonoBehaviour
 
     public void ResetArmor()
     {
-        BackAttachmentArmor = 0;
         ShoulderLeftArmor = 0;
         ShoulderRightArmor = 0;
         HeadSlotArmor = 0;
@@ -70,7 +68,6 @@ public class ArmorControl : MonoBehaviour
         HipsArmor +
         LegLeftArmor +
         LegRightArmor +
-        BackAttachmentArmor +
         ShoulderLeftArmor +
         ShoulderRightArmor +
         HeadSlotArmor +

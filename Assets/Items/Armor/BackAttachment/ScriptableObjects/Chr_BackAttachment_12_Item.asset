@@ -24,14 +24,15 @@ MonoBehaviour:
   ItemType:
   - Cloack
   - "\u041F\u043B\u0430\u0449"
+  Amount: 0
   ItemInfo:
-  - 'P. Def. : 12'
-  - "\u0424\u0438\u0437. \u0417\u0430\u0449. : 12"
+  - 'M. Def. : 12'
+  - "\u041C\u0430\u0433. \u0417\u0430\u0449. : 12"
   ArmorSetEnum: 0
   AllArmorSetInfo: {fileID: 0}
   equipSlot: 11
-  armorModifier: 12
-  MagicArmorModifier: 0
+  armorModifier: 0
+  MagicArmorModifier: 12
   Meshes:
   - {fileID: 2726209042425438175, guid: 54bb9d40196110042b4e489f1b0633aa, type: 3}
   prefab: {fileID: 0}

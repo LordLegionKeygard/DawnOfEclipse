@@ -12,9 +12,11 @@ public class MagicArmorControl : MonoBehaviour
     public int LeftEarringMagicArmor;
     public int RightEarringMagicArmor;
     public int NecklaceMagicArmor;
+    public int BackAttachmentMagicArmor;
 
     public void ResetArmor()
     {
+        BackAttachmentMagicArmor = 0;
         LeftRingMagicArmor = 0;
         RightRingMagicArmor = 0;
         LeftEarringMagicArmor = 0;
@@ -29,7 +31,8 @@ public class MagicArmorControl : MonoBehaviour
         RightRingMagicArmor +
         LeftEarringMagicArmor +
         RightEarringMagicArmor +
-        NecklaceMagicArmor;
+        NecklaceMagicArmor +
+        BackAttachmentMagicArmor;
 
         _magicArmorText.text = (CurrentMagicArmor.ToString());
     }

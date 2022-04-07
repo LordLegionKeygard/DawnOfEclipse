@@ -68,7 +68,7 @@ public class EquipSlot : Slots
                 _equipmentManager.Equip(_equipmentManager.DefaultEquipment[3]);
                 break;
             case 11:
-                _armorControl.BackAttachmentArmor = 0;
+                _magicArmorControl.BackAttachmentMagicArmor = 0;
                 break;
             case 13:
                 _armorControl.ShoulderLeftArmor = 0;

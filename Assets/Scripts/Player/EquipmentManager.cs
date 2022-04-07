@@ -291,7 +291,7 @@ public class EquipmentManager : MonoBehaviour
             case EquipmentSlot.BackAttachment:
                 SkinnedMeshRenderer newMeshBackAttachment = Instantiate(item.Meshes[0]);
                 BoneTransformArmor(newMeshBackAttachment, 10, slotIndex, false);
-                _armorControl.BackAttachmentArmor = item.armorModifier;
+                _magicArmorControl.BackAttachmentMagicArmor = item.MagicArmorModifier;
                 EquipSlotAndIcon(11, item);
                 break;
             case EquipmentSlot.ShoulderLeft:

@@ -7,6 +7,7 @@ public class ChangeLanguage : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI[] _inventoryText;
     [SerializeField] private TextMeshProUGUI[] _characterStatsText;
+    [SerializeField] private TextMeshProUGUI _setEffectText;
 
     private void Start()
     {
@@ -17,5 +18,6 @@ public class ChangeLanguage : MonoBehaviour
         _characterStatsText[2].text = Language.TextStatic[4];
         _characterStatsText[3].text = Language.TextStatic[5];
         _characterStatsText[4].text = Language.TextStatic[6];
+        _setEffectText.text = Language.TextStatic[8];
     }
 }

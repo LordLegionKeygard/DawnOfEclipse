@@ -8,7 +8,7 @@ using UnityEngine;
 public class Language : MonoBehaviour
 {
     public static int LanguageNumber = 1;
-    public static string[,] TextPreviesStatic = new string[100, 2];
+    private string[,] _textPreviesStatic = new string[100, 2];
     public static string[] TextStatic = new string[100];
     private string _langChange;
 
@@ -19,26 +19,29 @@ public class Language : MonoBehaviour
 
     public void SetLanguage()
     {
-        TextPreviesStatic[1, 0] = "Moon";
-        TextPreviesStatic[1, 1] = "Лун";
+        _textPreviesStatic[1, 0] = "Moon";
+        _textPreviesStatic[1, 1] = "Лун";
 
-        TextPreviesStatic[2, 0] = "P. Def.";
-        TextPreviesStatic[2, 1] = "Физ. Защ.";
+        _textPreviesStatic[2, 0] = "P. Def.";
+        _textPreviesStatic[2, 1] = "Физ. Защ.";
 
-        TextPreviesStatic[3, 0] = "M. Def.";
-        TextPreviesStatic[3, 1] = "Маг. Защ.";
+        _textPreviesStatic[3, 0] = "M. Def.";
+        _textPreviesStatic[3, 1] = "Маг. Защ.";
 
-        TextPreviesStatic[4, 0] = "P. Atk.";
-        TextPreviesStatic[4, 1] = "Физ. Атк.";
+        _textPreviesStatic[4, 0] = "P. Atk.";
+        _textPreviesStatic[4, 1] = "Физ. Атк.";
 
-        TextPreviesStatic[5, 0] = "M. Atk.";
-        TextPreviesStatic[5, 1] = "Маг. Атк.";
+        _textPreviesStatic[5, 0] = "M. Atk.";
+        _textPreviesStatic[5, 1] = "Маг. Атк.";
 
-        TextPreviesStatic[6, 0] = "Character Stats";
-        TextPreviesStatic[6, 1] = "Характеристики";
+        _textPreviesStatic[6, 0] = "Character Stats";
+        _textPreviesStatic[6, 1] = "Характеристики";
 
-        TextPreviesStatic[7, 0] = "Inventory";
-        TextPreviesStatic[7, 1] = "Инвентарь";
+        _textPreviesStatic[7, 0] = "Inventory";
+        _textPreviesStatic[7, 1] = "Инвентарь";
+
+        _textPreviesStatic[8, 0] = "<Set Effect>";
+        _textPreviesStatic[8, 1] = "<Эффект Комплекта>";
 
         // _langChange = PlayerPrefs.GetString("Language");
 
@@ -62,7 +65,7 @@ public class Language : MonoBehaviour
         //     PlayerPrefs.Save();
         // }
 
-        for (int x = 0; x < 99; x++) { TextStatic[x] = TextPreviesStatic[x, LanguageNumber]; }
+        for (int x = 0; x < 99; x++) { TextStatic[x] = _textPreviesStatic[x, LanguageNumber]; }
     }
 
     // public static void ChangeLanguage(int _language)

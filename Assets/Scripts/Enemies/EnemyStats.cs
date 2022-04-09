@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyStats : CharacterStats
 {
-    [SerializeField] private UIEnemyHealthBar enemyHealthBar;
+    // [SerializeField] private UIEnemyHealthBar enemyHealthBar;
     private Collider col;
     private EnemyAnimatorManager enemyAnimatorManager;  
     private CameraLockOnTarget cameraLockOnTarget;
@@ -25,7 +25,7 @@ public class EnemyStats : CharacterStats
     {
         maxHealth = SetMaxHealthFromHealthLevel();
         currentHealth = maxHealth;
-        enemyHealthBar.SetMaxHealth(maxHealth);
+        // enemyHealthBar.SetMaxHealth(maxHealth);
         mobSpawner = GetComponentInParent<MobSpawner>();
     }
 
@@ -39,7 +39,7 @@ public class EnemyStats : CharacterStats
     {
         currentHealth -= damage;
 
-        enemyHealthBar.SetHealth(currentHealth);
+        // enemyHealthBar.SetHealth(currentHealth);
 
         RandomTakeDamage();
 

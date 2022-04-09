@@ -6,7 +6,6 @@ public class PursueTargetState : State
 {
     public CombatStanceState combatStanceState;
     public IdleState idleState;
-
     public RotateTowardTargetState rotateTowardTargetState;
     public override State Tick(EnemyManager enemyManager, EnemyStats enemyStats, EnemyAnimatorManager enemyAnimatorManager)
     {

@@ -17,7 +17,6 @@ public class EnemyManager : CharacterManager
     public bool isInteracting;
     public float rotationSpeed;
     public bool isChasingPlayer = false;
-    public float maximumAttackRange;
     public State currentState;
     public GameObject currentTarget;
 

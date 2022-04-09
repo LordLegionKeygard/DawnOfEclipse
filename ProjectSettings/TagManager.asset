@@ -10,6 +10,7 @@ TagManager:
   - NotCollideWithCamera
   - CoinPurse
   - NPC
+  - Collide
   layers:
   - Default
   - TransparentFX
@@ -21,7 +22,7 @@ TagManager:
   - Player
   - Enemy
   - Character Collision Blocker
-  - GroundOnlyForPlayer
+  - GroundAndWall
   - Drop
   - 
   - 

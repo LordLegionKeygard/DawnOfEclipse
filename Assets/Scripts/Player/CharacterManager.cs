@@ -16,4 +16,5 @@ public class CharacterManager : MonoBehaviour
     public static float maximumDetectionAngle = 180;
     public static float minimumDetectionAngle = -180;
     [HideInInspector] public float currentRecoveryTime = 0;
+    public float maximumAttackRange;
 }

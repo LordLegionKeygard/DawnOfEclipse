@@ -14,23 +14,24 @@ public class NewAttackState : NewState
     {
         float distanceFromTarget = Vector3.Distance(_aiDestinationSetter.CurrentTarget.transform.position, newEnemyManager.transform.position);
 
-        if (!newEnemyManager.isCanAttack)
+        if (!newEnemyManager.IsCanAttack)
             return _newCombatStanceState;
 
         if (currentAttack != null)
         {
-            if (distanceFromTarget < currentAttack.minimumDistanceNeededToAttack)
+            if (distanceFromTarget < currentAttack.MinimumDistanceNeededToAttack)
             {
                 return this;
             }
-            else if (distanceFromTarget < currentAttack.maximumDistanceNeededToAttack)
+            else if (distanceFromTarget < currentAttack.MaximumDistanceNeededToAttack)
             {
                 {
-                    if (newEnemyManager.currentRecoveryTime <= 0 && newEnemyManager.isCanAttack)
+                    if (newEnemyManager.currentRecoveryTime <= 0 && newEnemyManager.IsCanAttack)
                     {
-                        //остановить персонажа
-                        newEnemyManager.isCanAttack = false;
-                        newEnemyManager.currentRecoveryTime = currentAttack.recoveryTime;
+                        newEnemyAnimatorManager.PlayerTargetAnimation(currentAttack.actionAnimation);
+                        _aiDestinationSetter.CantWalk();
+                        newEnemyManager.IsCanAttack = false;
+                        newEnemyManager.currentRecoveryTime = currentAttack.RecoveryTime;
                         currentAttack = null;
                         return _newCombatStanceState;
                     }
@@ -55,11 +56,11 @@ public class NewAttackState : NewState
         {
             EnemyAttackAction enemyAttackAction = enemyAttacks[i];
 
-            if (distanceFromTarget <= enemyAttackAction.maximumDistanceNeededToAttack
-                && distanceFromTarget >= enemyAttackAction.minimumDistanceNeededToAttack)
+            if (distanceFromTarget <= enemyAttackAction.MaximumDistanceNeededToAttack
+                && distanceFromTarget >= enemyAttackAction.MinimumDistanceNeededToAttack)
             {
                 {
-                    maxScore += enemyAttackAction.attackScore;
+                    maxScore += enemyAttackAction.AttackScore;
                 }
             }
         }
@@ -69,16 +70,17 @@ public class NewAttackState : NewState
 
         for (int i = 0; i < enemyAttacks.Length; i++)
         {
+            Debug.Log("6");
             EnemyAttackAction enemyAttackAction = enemyAttacks[i];
 
-            if (distanceFromTarget <= enemyAttackAction.maximumDistanceNeededToAttack
-                && distanceFromTarget >= enemyAttackAction.minimumDistanceNeededToAttack)
+            if (distanceFromTarget <= enemyAttackAction.MaximumDistanceNeededToAttack
+                && distanceFromTarget >= enemyAttackAction.MinimumDistanceNeededToAttack)
             {
                 {
                     if (currentAttack != null)
                         return;
 
-                    temporaryScore += enemyAttackAction.attackScore;
+                    temporaryScore += enemyAttackAction.AttackScore;
 
                     if (temporaryScore > randomValue)
                     {

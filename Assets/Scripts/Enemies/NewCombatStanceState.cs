@@ -6,7 +6,6 @@ using Pathfinding;
 public class NewCombatStanceState : NewState
 {
     [SerializeField] private AIDestinationSetter _aiDestinationSetter;
-
     [SerializeField] private NewAttackState _newAttackState;
     [SerializeField] private NewPursueTargetState _newPursueTargetState;
     public NewIdleState NewIdleState;
@@ -15,9 +14,9 @@ public class NewCombatStanceState : NewState
     {
         if (_aiDestinationSetter.CurrentTarget != null)
         {
-            float distanceFromTarget = Vector3.Distance(_aiDestinationSetter.CurrentTarget.transform.position, _aiDestinationSetter.CurrentTarget.transform.position);
+            float distanceFromTarget = Vector3.Distance(_aiDestinationSetter.CurrentTarget.transform.position, newEnemyAnimatorManager.transform.position);
 
-            if(newEnemyManager.currentRecoveryTime <= 0 && distanceFromTarget <= newEnemyManager.maximumAttackRange)
+            if (newEnemyManager.currentRecoveryTime <= 0 && distanceFromTarget <= newEnemyManager.maximumAttackRange)
             {
                 return _newAttackState;
             }

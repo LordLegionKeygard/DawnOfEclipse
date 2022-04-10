@@ -4,25 +4,21 @@ using UnityEngine;
 
 public class EnemyDamageCollider : MonoBehaviour
 {
-    PlayerController playerController;
-    public float currentWeaponDamage;
-
-    private BoxCollider col;
+    [SerializeField] private float _weaponDamage;
+    private BoxCollider _col;
     private void Awake()
     {
-        playerController = FindObjectOfType<PlayerController>();
-        col = GetComponent<BoxCollider>();
+        _col = GetComponent<BoxCollider>();
     }
 
     private void OnTriggerEnter(Collider collision)
     {
-        if (collision.tag == "Player")
+        if (collision.TryGetComponent(out HealthControl healthControl))
         {
-            HealthControl playerHealth = collision.GetComponent<HealthControl>();
-            if (playerHealth != null)
+            if (healthControl != null)
             {
-                playerHealth.TakeDamage(currentWeaponDamage);
-                col.enabled = false;
+                healthControl.TakeDamage(_weaponDamage);
+                _col.enabled = false;
             }
         }
     }

@@ -5,19 +5,21 @@ using Pathfinding;
 
 public class NewEnemyManager : CharacterManager
 {
+    public float maximumAttackRange;
     [SerializeField] private AIDestinationSetter _aiDestinationSetter;
     private EnemyStats _enemyStats;
-    [SerializeField] private NewEnemyAnimatorManager _newEnemyAnimatorManager;
+    private NewEnemyAnimatorManager _newEnemyAnimatorManager;
     [SerializeField] private MobSpawner _spawnPoint;
-    public NewState CurrentState;
-    private float _timeToChase = 15f;
+    [SerializeField] private NewState _currentState;
+    [SerializeField] private float _timeToChase = 15f;
     private float _chaseTime;
     public bool IsChasingPlayer = false;
-    public bool isCanAttack = true;
+    public bool IsCanAttack = true;
 
     private void Awake()
     {
         _enemyStats = GetComponent<EnemyStats>();
+        _newEnemyAnimatorManager = GetComponent<NewEnemyAnimatorManager>();
     }
 
     private void Start()
@@ -45,16 +47,15 @@ public class NewEnemyManager : CharacterManager
             if (_aiDestinationSetter.CurrentTarget == _spawnPoint.gameObject.transform && distanceFromTarget < 3)
             {
                 _aiDestinationSetter.CurrentTarget = null;
-                _newEnemyAnimatorManager.IsAtDestination = false;
             }
         }
     }
 
     private void HandleStateMachine()
     {
-        if (CurrentState != null)
+        if (_currentState != null)
         {
-            NewState nextState = CurrentState.Tick(this, _enemyStats, _newEnemyAnimatorManager);
+            NewState nextState = _currentState.Tick(this, _enemyStats, _newEnemyAnimatorManager);
 
             if (nextState != null)
             {
@@ -65,7 +66,7 @@ public class NewEnemyManager : CharacterManager
 
     private void SwitchToNextState(NewState state)
     {
-        CurrentState = state;
+        _currentState = state;
     }
 
     private void HandleRecoveryTime()
@@ -75,11 +76,11 @@ public class NewEnemyManager : CharacterManager
             currentRecoveryTime -= Time.deltaTime;
         }
 
-        if (isCanAttack)
+        if (!IsCanAttack)
         {
             if (currentRecoveryTime <= 0)
             {
-                isCanAttack = false;
+                IsCanAttack = true;
             }
         }
     }

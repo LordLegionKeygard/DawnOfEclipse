@@ -11,7 +11,7 @@ public class NewIdleState : NewState
     public override NewState Tick(NewEnemyManager newEnemyManager, EnemyStats enemyStats, NewEnemyAnimatorManager newEnemyAnimatorManager)
     {
         #region Handle Enemy Target Detection
-        Collider[] colliders = Physics.OverlapSphere(transform.position, EnemyManager.detectionRadius, detectionLayer);
+        Collider[] colliders = Physics.OverlapSphere(transform.position, CharacterManager.detectionRadius, detectionLayer);
 
         for (int i = 0; i < colliders.Length; i++)
         {
@@ -22,7 +22,7 @@ public class NewIdleState : NewState
                 Vector3 targetDirection = playerHealthControl.transform.position - transform.position;
                 float viewableAngle = Vector3.Angle(targetDirection, transform.forward);
 
-                if (viewableAngle > EnemyManager.minimumDetectionAngle && viewableAngle < EnemyManager.maximumDetectionAngle)
+                if (viewableAngle > CharacterManager.minimumDetectionAngle && viewableAngle < CharacterManager.maximumDetectionAngle)
                 {
                     _aiDestinationSetter.CurrentTarget = playerHealthControl.gameObject.transform;
                 }

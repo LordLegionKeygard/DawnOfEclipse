@@ -6,17 +6,14 @@ public class EnemyStats : CharacterStats
 {
     // [SerializeField] private UIEnemyHealthBar enemyHealthBar;
     private Collider col;
-    private EnemyAnimatorManager enemyAnimatorManager;  
+    private NewEnemyAnimatorManager _newEnemyAnimatorManager;  
     private CameraLockOnTarget cameraLockOnTarget;
-    private EnemyManager enemyManager;
     private Rigidbody rb;
     private MobSpawner mobSpawner;
 
     private void Awake()
     {
-        enemyAnimatorManager = GetComponentInChildren<EnemyAnimatorManager>();
         rb = GetComponent<Rigidbody>();
-        enemyManager = GetComponent<EnemyManager>();
         cameraLockOnTarget = FindObjectOfType<CameraLockOnTarget>();
         col = GetComponent<Collider>();       
     }
@@ -51,10 +48,10 @@ public class EnemyStats : CharacterStats
 
     private void Death()
     {
-        enemyAnimatorManager.PlayerTargetAnimation("Falling Back Death", true);
+        _newEnemyAnimatorManager.PlayerTargetAnimation("death");
         col.enabled = false;       
         rb.isKinematic = true;
-        enemyManager.enabled = false;
+        // enemyManager.enabled = false;
         cameraLockOnTarget.TargetDeath();
         Respawn();
         Destroy(gameObject, 8f);
@@ -70,7 +67,7 @@ public class EnemyStats : CharacterStats
         int randomState = Random.Range(0, 3);
         if (randomState == 0)
         {
-            enemyAnimatorManager.PlayerTargetAnimation("SwordTakeDamage", true);
+            // _newEnemyAnimatorManager.PlayerTargetAnimation("SwordTakeDamage", true);
         }
         if (randomState == 1){}
         else if (randomState == 2){}

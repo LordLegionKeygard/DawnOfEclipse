@@ -11,8 +11,7 @@
                     "id": "6bf9b8f5-5b28-4b9a-8986-191f2df77637",
                     "expectedControlType": "Vector2",
                     "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": true
+                    "interactions": ""
                 },
                 {
                     "name": "AttackR1",
@@ -20,8 +19,7 @@
                     "id": "9938b65a-d5e3-4cfd-a460-1339ee0ffa4b",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
+                    "interactions": ""
                 },
                 {
                     "name": "AttackR2",
@@ -29,8 +27,7 @@
                     "id": "271c031e-9c87-4584-a72a-c6e672108744",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
+                    "interactions": ""
                 },
                 {
                     "name": "TargetLock",
@@ -38,8 +35,7 @@
                     "id": "e4558aa6-8c6d-4630-89b1-e3765b20134d",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
+                    "interactions": ""
                 },
                 {
                     "name": "See",
@@ -47,8 +43,7 @@
                     "id": "43446aba-603f-4e07-b424-1d29dbf7f512",
                     "expectedControlType": "Vector2",
                     "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": true
+                    "interactions": ""
                 },
                 {
                     "name": "Sneak",
@@ -56,8 +51,7 @@
                     "id": "8b3a67d1-cd74-4f00-8eac-9af342561898",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -311,17 +305,6 @@
                     "processors": "",
                     "groups": "Gamepad",
                     "action": "TargetLock",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "34f9e8a6-1dca-4b65-a3c6-2fa47f208fc2",
-                    "path": "<Gamepad>/leftTrigger",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Gamepad",
-                    "action": "Sneak",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

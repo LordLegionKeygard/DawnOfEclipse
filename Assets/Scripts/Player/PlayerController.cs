@@ -45,18 +45,17 @@ public class PlayerController : CharacterManager
     [Header("Stamina")]
     public float staminaForR1 = 100f;
     public float staminaForR2 = 100f;
-    private CameraLockOnTarget cameraLockOnTarget;
-    private PlayerInput input;
+    private CameraLockOnTarget _cameraLockOnTarget;
+    private PlayerInput _input;
     private HealthControl healthControl;
     [SerializeField] private Inventory inventory;
-    [SerializeField] private Image[] iconImage;
     Vector2 inputStrafe;
     private bool canDrink = true;
     private void Awake()
     {
-        input = new PlayerInput();
-        input.Player.TargetLock.performed += context => cameraLockOnTarget.TargetLock(); // wait new input system for last dualshock joysick
-        input.Player.Sneak.performed += context => Sneaking();
+        _input = new PlayerInput();
+        _input.Player.TargetLock.performed += context => _cameraLockOnTarget.TargetLock(); // wait new input system for last dualshock joysick
+        _input.Player.Sneak.performed += context => Sneaking();
     }
     private void Start()
     {
@@ -65,7 +64,7 @@ public class PlayerController : CharacterManager
         playerAnimatorManager = GetComponent<PlayerAnimatorManager>();
         anim = GetComponent<Animator>();
         staminaControl = GetComponent<StaminaControl>();
-        cameraLockOnTarget = GetComponent<CameraLockOnTarget>();
+        _cameraLockOnTarget = GetComponent<CameraLockOnTarget>();
         healthControl = GetComponent<HealthControl>();
 
     }
@@ -114,20 +113,6 @@ public class PlayerController : CharacterManager
         bool canJump = isGround && NotSneak && NotRoll && NotAttack;
 
         if ((Input.GetKeyDown(KeyCode.JoystickButton0) || Input.GetKeyDown(KeyCode.Space)) && canJump && staminaControl.CurrentStamina > 50 && !attack) Jump(); //square
-
-        if (Input.GetKey(KeyCode.Q))
-        {
-            for (int i = 0; i < iconImage.Length; i++)
-            {
-                if (iconImage[i].sprite.name == "Health_Potion_Icon" && canDrink == true)
-                {
-                    var potion = iconImage[i].GetComponentInParent<InventorySlot>();
-                    potion.UseItem();
-                    canDrink = false;
-                    StartCoroutine(ExecuteAfterTime(2, CanDrink));
-                }
-            }
-        }
 
         if (Input.GetKey(KeyCode.JoystickButton7) && staminaControl.CurrentStamina > staminaForR2 && canNewMoveR1) // R2
         {
@@ -252,10 +237,10 @@ public class PlayerController : CharacterManager
     }
     private void OnEnable()
     {
-        input.Enable();
+        _input.Enable();
     }
     private void OnDisable()
     {
-        input.Disable();
+        _input.Disable();
     }
 }

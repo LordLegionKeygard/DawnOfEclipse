@@ -5,9 +5,9 @@ using Pathfinding;
 
 public class NewPursueTargetState : NewState
 {
-    [SerializeField] private NewCombatStanceState _NewCombatStanceState;
+    [SerializeField] private NewCombatStanceState _newCombatStanceState;
     [SerializeField] private AIDestinationSetter _aiDestinationSetter;
-    [SerializeField] private NewIdleState NewIdleState;
+    [SerializeField] private NewIdleState _newIdleState;
     public override NewState Tick(NewEnemyManager newEnemyManager, EnemyStats enemyStats, NewEnemyAnimatorManager newEnemyAnimatorManager)
     {
         if (_aiDestinationSetter.CurrentTarget != null)
@@ -29,7 +29,7 @@ public class NewPursueTargetState : NewState
             if (distanceFromTarget <= newEnemyManager.maximumAttackRange)
             {
                 newEnemyManager.IsChasingPlayer = false;
-                return NewIdleState;
+                return _newCombatStanceState;
             }
             else
             {
@@ -38,7 +38,7 @@ public class NewPursueTargetState : NewState
         }
         else
         {
-            return NewIdleState;
+            return _newIdleState;
         }
     }
 }

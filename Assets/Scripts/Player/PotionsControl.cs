@@ -22,45 +22,42 @@ public class PotionsControl : MonoBehaviour
     }
     private void UsePotions(int potion)
     {
-        if(!CanDrinkAnyPotions) return;
+        if (!CanDrinkAnyPotions) return;
         CantDrinkAnyPotions();
-        StartCoroutine(ExecuteAfterTime1(1.8f));
-        IEnumerator ExecuteAfterTime1(float timeInSec)
+
+        switch (potion)
         {
-            yield return new WaitForSeconds(timeInSec);
-            switch (potion)
-            {
-                case (0):
-                    if (_healthControl.CurrentHealth > _healthControl.MaxHealth - 50)
-                    {
-                        _healthControl.CurrentHealth = _healthControl.MaxHealth;
-                    }
-                    else
-                    {
-                        _healthControl.CurrentHealth += 50;
-                    }
-                    _healthControl.UpdateHealthColorBar();
-                    break;
+            case (0):
+                if (_healthControl.CurrentHealth > _healthControl.MaxHealth - 50)
+                {
+                    _healthControl.CurrentHealth = _healthControl.MaxHealth;
+                }
+                else
+                {
+                    _healthControl.CurrentHealth += 50;
+                }
+                _healthControl.UpdateHealthColorBar();
+                break;
 
-                case (1):
-                    StopCoroutine(ExecuteAfterTime(0f));
-                    _speedPotionParticle.Play();
-                    PotionSpeed = 5;
-                    SpeedPotion = true;
+            case (1):
+                StopCoroutine(ExecuteAfterTime(0f));
+                _speedPotionParticle.Play();
+                PotionSpeed = 5;
+                SpeedPotion = true;
 
-                    StartCoroutine(ExecuteAfterTime(20f));
-                    IEnumerator ExecuteAfterTime(float timeInSec)
-                    {
-                        yield return new WaitForSeconds(timeInSec);
-                        _speedPotionParticle.Stop();
-                        PotionSpeed = 0;
-                        SpeedPotion = false;
-                    }
-                    break;
-                case (2):
-                    break;
-            }
+                StartCoroutine(ExecuteAfterTime(20f));
+                IEnumerator ExecuteAfterTime(float timeInSec)
+                {
+                    yield return new WaitForSeconds(timeInSec);
+                    _speedPotionParticle.Stop();
+                    PotionSpeed = 0;
+                    SpeedPotion = false;
+                }
+                break;
+            case (2):
+                break;
         }
+
     }
 
     private void CantDrinkAnyPotions()

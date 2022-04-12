@@ -11,28 +11,28 @@ public class DamageCollider : MonoBehaviour
     private void Awake()
     {
         damageCollider = GetComponent<Collider>();
+        CustomEvents.OnEnabledDamageCollider += Damage;
     }
 
-    public void EnableDamageCollider()
+    public void Damage(bool isDamage)
     {
-        damageCollider.enabled = true;
-    }
-
-    public void DisableDamageCollider()
-    {
-        damageCollider.enabled = false;
+        if (isDamage)
+            damageCollider.enabled = true;
+        else
+            damageCollider.enabled = false;
     }
 
     private void OnTriggerEnter(Collider collision)
     {
-        if (collision.tag == "Enemy")
+        if (collision.TryGetComponent(out EnemyStats enemyStats))
         {
-            EnemyStats enemyStats = collision.GetComponent<EnemyStats>();
-
-            if (enemyStats != null)
-            {
-                enemyStats.TakeDamage(currentWeaponDamage);
-            }
+            enemyStats.TakeDamage(currentWeaponDamage);
+            Damage(false);
         }
+    }
+
+    private void OnDestroy()
+    {
+        CustomEvents.OnEnabledDamageCollider -= Damage;
     }
 }

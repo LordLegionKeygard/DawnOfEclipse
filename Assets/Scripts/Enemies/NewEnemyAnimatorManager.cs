@@ -10,7 +10,6 @@ public class NewEnemyAnimatorManager : VersionedMonoBehaviour
     private IAstarAI _ai;
     private Transform _transform;
 
-
     protected override void Awake()
     {
         base.Awake();

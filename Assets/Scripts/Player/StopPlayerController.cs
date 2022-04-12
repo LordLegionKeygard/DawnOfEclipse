@@ -30,12 +30,12 @@ public class StopPlayerController : MonoBehaviour
     }
     public void StopWalk()
     {
-        _playerMovement.IsWalk = false;
+        _playerMovement.CanWalk = false;
     }
 
     public void CanWalk()
     {
-        _playerMovement.IsWalk = true;
+        _playerMovement.CanWalk = true;
     }
 
     public void CanJump()

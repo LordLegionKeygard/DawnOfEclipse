@@ -5,8 +5,6 @@ using UnityEngine;
 public class PlayerAnimatorManager : MonoBehaviour
 {
     private Animator _animator;
-    [SerializeField] private GameObject[] _potions;
-    [SerializeField] private GameObject _leftHand;
     public float VelocityMove;
     private PlayerMovement _playerMovement;
     private PlayerInputController _playerInputController;
@@ -21,11 +19,6 @@ public class PlayerAnimatorManager : MonoBehaviour
     private static readonly int Block_L1_Trigger = Animator.StringToHash("Block(L1)");
     private static readonly int Block_L1_React_Trigger = Animator.StringToHash("Block_React(L1)");
     private static readonly int Drink = Animator.StringToHash("drink");
-
-    private void OnEnable()
-    {
-        CustomEvents.OnUsePotion += Drinking;
-    }
 
     private void Start()
     {
@@ -60,34 +53,29 @@ public class PlayerAnimatorManager : MonoBehaviour
 
     public void AttackR2()
     {
-        _playerMovement.IsWalk = false;
         _playerInputController.IsAttack = true;
         _animator.SetBool(Attack_R2_Trigger, true);
     }
 
     public void AttackR1()
     {
-        _playerMovement.IsWalk = false;
         _playerInputController.IsAttack = true;
         _animator.SetBool(Attack_R1_Trigger, true);
     }
     public void AttackR1FastRun()
     {
-        _playerMovement.IsWalk = false;
         _playerInputController.IsAttack = true;
         _animator.SetBool(Attack_R1_Trigger, true);
     }
 
     public void BlockL1()
     {
-        _playerMovement.IsWalk = false;
         _playerInputController.IsBlock = true;
         _animator.SetBool(Block_L1_Trigger, true);
     }
 
     public void BlockReact()
     {
-        _playerMovement.IsWalk = false;
         _playerInputController.IsBlock = true;
         _animator.SetBool(Block_L1_React_Trigger, true);
     }
@@ -121,26 +109,6 @@ public class PlayerAnimatorManager : MonoBehaviour
         _animator.SetBool(Roll, false);
         _playerInputController.IsRoll = false;
     }
-
-    public void Drinking(int potionNumber)
-    {
-        _leftHand.SetActive(false);
-
-        _potions[potionNumber].SetActive(true);
-
-        _animator.SetTrigger(Drink);
-        StartCoroutine(ExecuteAfterTime(2.5f));
-        IEnumerator ExecuteAfterTime(float timeInSec)
-        {
-            yield return new WaitForSeconds(timeInSec);
-            foreach (var allPot in _potions)
-            {
-                allPot.SetActive(false);
-                _leftHand.SetActive(true);
-            }
-        }
-    }
-
     public void InAir()
     {
         _animator.SetBool(IsInAir, true);
@@ -160,8 +128,13 @@ public class PlayerAnimatorManager : MonoBehaviour
         _animator.SetBool(Run, false);
     }
 
-    private void OnDisable()
+    public void EnableDamageCollider()
     {
-        CustomEvents.OnUsePotion -= Drinking;
+        CustomEvents.FireEnabledDamageCollider(true);
+    }
+
+    public void DisableDamageCollider()
+    {
+        CustomEvents.FireEnabledDamageCollider(false);
     }
 }

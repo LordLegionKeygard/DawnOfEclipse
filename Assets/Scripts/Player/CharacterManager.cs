@@ -5,7 +5,7 @@ using UnityEngine;
 public class CharacterManager : MonoBehaviour
 {
     [Header("Lock on Transform")]
-    [HideInInspector] public Transform lockOnTransform;
+    public Transform LockOnTransform;
 
     [Header("A.I Settings")]
     public static float detectionRadius = 10;

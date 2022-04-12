@@ -70,7 +70,6 @@ public class NewAttackState : NewState
 
         for (int i = 0; i < enemyAttacks.Length; i++)
         {
-            Debug.Log("6");
             EnemyAttackAction enemyAttackAction = enemyAttacks[i];
 
             if (distanceFromTarget <= enemyAttackAction.MaximumDistanceNeededToAttack

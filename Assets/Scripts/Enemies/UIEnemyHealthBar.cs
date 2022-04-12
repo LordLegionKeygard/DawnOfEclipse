@@ -5,49 +5,36 @@ using UnityEngine.UI;
 
 public class UIEnemyHealthBar : MonoBehaviour
 {
-    Slider slider;
-    float timeUntilBarIsHidde = 0;
-
-    private void Awake()
-    {
-        slider = GetComponentInChildren<Slider>();
-    }
+    [SerializeField] private Slider _slider;
+    private float _timeUntilBarIsHidde = 3;
 
     public void SetHealth(int health)
     {
-        slider.value = health;
-        timeUntilBarIsHidde = 3;
+        _slider.value = health;
+        _timeUntilBarIsHidde = 3;
+        _slider.gameObject.SetActive(true);
     }
 
     public void SetMaxHealth(int maxHealth)
     {
-        slider.maxValue = maxHealth;
-        slider.value = maxHealth;
+        _slider.maxValue = maxHealth;
+        _slider.value = maxHealth;
     }
 
     private void Update()
     {
-        timeUntilBarIsHidde = timeUntilBarIsHidde - Time.deltaTime;
+        if(_slider == null) return;
+        _timeUntilBarIsHidde -= Time.deltaTime;
 
-        if (slider != null)
+        if (_timeUntilBarIsHidde <= 0)
         {
-            if (timeUntilBarIsHidde <= 0)
-            {
-                timeUntilBarIsHidde = 0;
-                slider.gameObject.SetActive(false);
-            }
-            else
-            {
-                if (!slider.gameObject.activeInHierarchy)
-                {
-                    slider.gameObject.SetActive(true);
-                }
-            }
+            _timeUntilBarIsHidde = 0;
+            _slider.gameObject.SetActive(false);
+        }
 
-            if (slider.value <= 0)
-            {
-                Destroy(slider.gameObject);
-            }
+        if (_slider.value <= 0)
+        {
+            Destroy(_slider.gameObject);
         }
     }
 

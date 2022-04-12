@@ -4,51 +4,48 @@ using UnityEngine;
 
 public class MobSpawner : MonoBehaviour
 {
-    [SerializeField] private GameObject spawnObject;
-
-    [SerializeField] private float detectionRadius = 10f;
-    [SerializeField] private LayerMask detectionLayer;
-
-    public bool spawn = true;
+    [SerializeField] private float _spawnTime;
+    [SerializeField] private GameObject _spawnObject;
+    [SerializeField] private float _detectionRadius = 180f;
+    [SerializeField] private LayerMask _detectionLayer;
+    public bool CanSpawn = true;
 
     private void FixedUpdate()
     {
-        if (spawn)
-        {
-            SpawnRadius();
-        }
+        if (!CanSpawn) return;
+        SpawnRadius();
     }
 
     private void SpawnRadius()
     {
-            Collider[] colliders = Physics.OverlapSphere(transform.position, detectionRadius, detectionLayer);
-            for (int i = 0; i < colliders.Length; i++)
-            {
-                CharacterStats characterStats = colliders[i].transform.GetComponent<CharacterStats>();
+        Collider[] colliders = Physics.OverlapSphere(transform.position, _detectionRadius, _detectionLayer);
+        for (int i = 0; i < colliders.Length; i++)
+        {
+            CharacterStats characterStats = colliders[i].transform.GetComponent<CharacterStats>();
 
-                if (characterStats != null)
-                {
-                    SpawnObject();
-                    spawn = false;
-                }
+            if (characterStats != null)
+            {
+                SpawnObject();
+                CanSpawn = false;
             }
+        }
     }
 
     public void SpawnObject()
     {
-        float spawnTime = Random.Range(10, 25);
+        float spawnTime = Random.Range(_spawnTime, _spawnTime + 10);
         StartCoroutine(ExecuteAfterTime(spawnTime));
         IEnumerator ExecuteAfterTime(float timeInSec)
         {
             yield return new WaitForSeconds(timeInSec);
-            var mySpawnObject = Instantiate(spawnObject, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.localRotation);
+            var mySpawnObject = Instantiate(_spawnObject, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.localRotation);
             mySpawnObject.transform.parent = gameObject.transform;
         }
     }
 
-    void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawSphere(transform.position, detectionRadius);
-    }
+    // private void OnDrawGizmosSelected()
+    // {
+    //     Gizmos.color = Color.yellow;
+    //     Gizmos.DrawSphere(transform.position, detectionRadius);
+    // }
 }

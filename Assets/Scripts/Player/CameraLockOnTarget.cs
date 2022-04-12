@@ -17,6 +17,7 @@ public class CameraLockOnTarget : MonoBehaviour
     private void Start()
     {
         CustomEvents.OnCameraLockOnTarget += TargetLock;
+        CustomEvents.OnCameraLockOnTargetDeath += TargetDeath;
         _myTransform = this.transform;
         _animator = GetComponent<Animator>();
     }
@@ -104,7 +105,7 @@ public class CameraLockOnTarget : MonoBehaviour
             if (distanceFromTarget < shortestDistance)
             {
                 shortestDistance = distanceFromTarget;
-                _nearestLockOnTarget = _avilableTargets[k].lockOnTransform;
+                _nearestLockOnTarget = _avilableTargets[k].LockOnTransform;
             }
         }
     }
@@ -112,5 +113,6 @@ public class CameraLockOnTarget : MonoBehaviour
     private void OnDisable()
     {
         CustomEvents.OnCameraLockOnTarget -= TargetLock;
+        CustomEvents.OnCameraLockOnTargetDeath -= TargetDeath;
     }
 }

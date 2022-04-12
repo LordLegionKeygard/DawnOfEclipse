@@ -55,4 +55,16 @@ public class CustomEvents
     {
         OnCameraLockOnTarget?.Invoke();
     }
+
+    public static Action OnCameraLockOnTargetDeath;
+    public static void FireCameraLockOnTargetDeath()
+    {
+        OnCameraLockOnTargetDeath?.Invoke();
+    }
+
+    public static Action<bool> OnEnabledDamageCollider;
+    public static void FireEnabledDamageCollider(bool state)
+    {
+        OnEnabledDamageCollider?.Invoke(state);
+    }
 }

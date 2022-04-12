@@ -28,17 +28,10 @@ public class HealthControl : CharacterStats
     }
     private void Start()
     {
-        MaxHealth = SetMaxHealthFromHealthLevel();
         CurrentHealth = MaxHealth;
         CurrentHealth = MaxHealth;
         healthBar.maxValue = MaxHealth;
         healthBar.value = MaxHealth;
-    }
-
-    private int SetMaxHealthFromHealthLevel()
-    {
-        MaxHealth = HealthLevel * 10;
-        return MaxHealth;
     }
 
     public void TakeDamage(float damage)

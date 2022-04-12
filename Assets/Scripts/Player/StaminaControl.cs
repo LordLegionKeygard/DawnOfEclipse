@@ -8,7 +8,7 @@ public class StaminaControl : MonoBehaviour
     [SerializeField] private Slider _staminaBar;
     private int _maxStamina = 1000;
     private int _currentStamina;
-    private WaitForSeconds _regenTick = new WaitForSeconds(0.0002f);
+    private WaitForSeconds _regenTick = new WaitForSeconds(0.002f);
     private Coroutine _regen;
     public int CurrentStamina => _currentStamina;
     [HideInInspector] public bool StaminaRun = false;

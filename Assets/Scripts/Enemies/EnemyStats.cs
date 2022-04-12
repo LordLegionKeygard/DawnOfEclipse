@@ -4,62 +4,47 @@ using UnityEngine;
 
 public class EnemyStats : CharacterStats
 {
-    // [SerializeField] private UIEnemyHealthBar enemyHealthBar;
-    private Collider col;
-    private NewEnemyAnimatorManager _newEnemyAnimatorManager;  
-    private CameraLockOnTarget cameraLockOnTarget;
-    private Rigidbody rb;
-    private MobSpawner mobSpawner;
+    [SerializeField] private UIEnemyHealthBar _enemyHealthBar;
+    private  NewEnemyAnimatorManager _newEnemyAnimatorManager;
+    private  CharacterController _characterController;
+    private  MobSpawner _mobSpawner;
 
     private void Awake()
     {
-        rb = GetComponent<Rigidbody>();
-        cameraLockOnTarget = FindObjectOfType<CameraLockOnTarget>();
-        col = GetComponent<Collider>();       
+        _newEnemyAnimatorManager = GetComponent<NewEnemyAnimatorManager>();
+        _characterController = GetComponent<CharacterController>();
     }
 
     private void Start()
     {
-        MaxHealth = SetMaxHealthFromHealthLevel();
         CurrentHealth = MaxHealth;
-        // enemyHealthBar.SetMaxHealth(maxHealth);
-        mobSpawner = GetComponentInParent<MobSpawner>();
-    }
-
-    private int SetMaxHealthFromHealthLevel()
-    {
-        MaxHealth = HealthLevel * 10;
-        return MaxHealth;
+        _enemyHealthBar.SetMaxHealth(MaxHealth);
+        _mobSpawner = GetComponentInParent<MobSpawner>();
     }
 
     public void TakeDamage(int damage)
     {
         CurrentHealth -= damage;
 
-        // enemyHealthBar.SetHealth(currentHealth);
+        _enemyHealthBar.SetHealth(CurrentHealth);
 
         RandomTakeDamage();
 
-        if (CurrentHealth <= 0)
-        {
-            Death();
-        }
+        if (CurrentHealth <= 0) { Death(); }
     }
 
     private void Death()
     {
         _newEnemyAnimatorManager.PlayerTargetAnimation("death");
-        col.enabled = false;       
-        rb.isKinematic = true;
-        // enemyManager.enabled = false;
-        cameraLockOnTarget.TargetDeath();
+        _characterController.enabled = false;
+        CustomEvents.FireCameraLockOnTargetDeath();
         Respawn();
         Destroy(gameObject, 8f);
     }
 
     private void Respawn()
     {
-        mobSpawner.spawn = true;
+        _mobSpawner.CanSpawn = true;
     }
 
     private void RandomTakeDamage()
@@ -67,9 +52,7 @@ public class EnemyStats : CharacterStats
         int randomState = Random.Range(0, 3);
         if (randomState == 0)
         {
-            // _newEnemyAnimatorManager.PlayerTargetAnimation("SwordTakeDamage", true);
+            // _newEnemyAnimatorManager.PlayerTargetAnimation("SwordTakeDamage");
         }
-        if (randomState == 1){}
-        else if (randomState == 2){}
     }
 }

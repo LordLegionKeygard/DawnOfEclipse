@@ -16,7 +16,7 @@ public class PlayerInputController : MonoBehaviour
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundMask;
     private float _gravity = -20f;
-    private float _groundDistance = 1;
+    private float _groundDistance = 1.2f;
     private Vector3 _velocity;
     private float _velocityUpdateY = -10;
     private float _jumpHeight = 1.5f;
@@ -86,7 +86,7 @@ public class PlayerInputController : MonoBehaviour
             _playerMovement.CurrentSpeed = _playerMovement.DefaultSpeed;
             _potionsControl.PotionSpeed = 0;
         }
-        
+
         _isGround = Physics.CheckSphere(groundCheck.position, _groundDistance, groundMask);
         if (_isGround && _velocity.y < 0) _velocity.y = _velocityUpdateY;
         {
@@ -98,7 +98,7 @@ public class PlayerInputController : MonoBehaviour
     }
     private void Block(bool isPressed)
     {
-        if (_staminaControl.CurrentStamina > 50 && isPressed) { _playerAnimatorManager.BlockL1(); }
+        if (_staminaControl.CurrentStamina > 50 && isPressed && !IsRoll) { _playerAnimatorManager.BlockL1(); }
         else { _playerAnimatorManager.DisableBlockL1(); }
     }
 
@@ -115,7 +115,7 @@ public class PlayerInputController : MonoBehaviour
 
     private void Attack(float stamina, int attackNumber)
     {
-        if (_staminaControl.CurrentStamina > stamina && !IsAttack && _isGround && !_isSneak)
+        if (_staminaControl.CurrentStamina > stamina && !IsAttack && _isGround && !IsRoll)
         {
             switch (attackNumber)
             {
@@ -134,7 +134,7 @@ public class PlayerInputController : MonoBehaviour
 
     private void Run(bool isPressed)
     {
-        bool _canNewMove = !IsAttack && _isGround && _playerMovement.IsWalk && !_isSneak && !IsBlock;
+        bool _canNewMove = !IsAttack && _isGround && !_isSneak && !IsBlock;
         if (_staminaControl.CurrentStamina > 50 && _canNewMove && isPressed)
         {
             if (!_potionsControl.SpeedPotion)
@@ -155,7 +155,7 @@ public class PlayerInputController : MonoBehaviour
 
     private void Roll()
     {
-        bool _canNewMove = !IsAttack && _isGround && _playerMovement.IsWalk && !_isSneak && !IsBlock;
+        bool _canNewMove = !IsAttack && _isGround && !_isSneak && !IsBlock;
         if (!IsFastRun && _staminaControl.CurrentStamina > 100 && _canNewMove)
         {
             _playerAnimatorManager.EnableRoll();

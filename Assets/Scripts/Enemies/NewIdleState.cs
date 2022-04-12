@@ -10,7 +10,6 @@ public class NewIdleState : NewState
     public LayerMask detectionLayer;
     public override NewState Tick(NewEnemyManager newEnemyManager, EnemyStats enemyStats, NewEnemyAnimatorManager newEnemyAnimatorManager)
     {
-        #region Handle Enemy Target Detection
         Collider[] colliders = Physics.OverlapSphere(transform.position, CharacterManager.detectionRadius, detectionLayer);
 
         for (int i = 0; i < colliders.Length; i++)
@@ -28,9 +27,7 @@ public class NewIdleState : NewState
                 }
             }
         }
-        #endregion
 
-        #region Handle Switching To Next State
         if (_aiDestinationSetter.CurrentTarget != null)
         {
             return _newPursueTargetState;
@@ -39,6 +36,5 @@ public class NewIdleState : NewState
         {
             return this;
         }
-        #endregion
     }
 }

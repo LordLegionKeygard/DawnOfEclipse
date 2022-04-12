@@ -49,4 +49,10 @@ public class CustomEvents
     {
         OnCheckEquipItemSetNumber?.Invoke(number);
     }
+
+    public static Action OnCameraLockOnTarget;
+    public static void FireCameraLockOnTarget()
+    {
+        OnCameraLockOnTarget?.Invoke();
+    }
 }

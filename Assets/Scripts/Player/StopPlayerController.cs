@@ -4,31 +4,53 @@ using UnityEngine;
 
 public class StopPlayerController : MonoBehaviour
 {
-    private PlayerController controller;
-    private StaminaControl staminaControl;
+    private PlayerMovement _playerMovement;
+    private PlayerInputController _playerInputController;
+    private StaminaControl _staminaControl;
+
+    private float _nextJumpTime = 1.5f;
     private void Start()
     {
-        controller = GetComponent<PlayerController>();
-        staminaControl = GetComponent<StaminaControl>();
+        _playerInputController = GetComponent<PlayerInputController>();
+        _staminaControl = GetComponent<StaminaControl>();
+        _playerMovement = GetComponent<PlayerMovement>();
+    }
+
+    private void Update()
+    {
+        if(!_playerInputController.IsCanJump)
+        {
+            _nextJumpTime -= Time.deltaTime;
+            if(_nextJumpTime < 0)
+            {
+                _playerInputController.IsCanJump = true;
+                _nextJumpTime = 1.5f;
+            }
+        }
     }
     public void StopWalk()
     {
-        controller.walk = false;
+        _playerMovement.IsWalk = false;
     }
 
     public void CanWalk()
     {
-        controller.walk = true;
+        _playerMovement.IsWalk = true;
+    }
+
+    public void CanJump()
+    {
+        _playerInputController.IsCanJump = true;
     }
 
     public void Roll()
     {
-        controller.block = true;
+        _playerInputController.IsBlock = true;
         StartCoroutine(ExecuteAfterTime(1f));
         IEnumerator ExecuteAfterTime(float timeInSec)
         {
             yield return new WaitForSeconds(timeInSec);
-            controller.block = false;
+            _playerInputController.IsBlock = false;
         }
     }
 }

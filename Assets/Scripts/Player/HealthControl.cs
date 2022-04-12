@@ -9,13 +9,13 @@ public class HealthControl : CharacterStats
     public static event Action PlayerDeathEvent;
     [SerializeField] private Slider healthBar;
     [SerializeField] private Image healthBarImage;
-    [SerializeField] private GameObject combatCollider;
     private Animator animator;
-    private PlayerController playerController;
+    private PlayerInputController _playerInputController;
     private PlayerAnimatorManager playerAnimatorManager;
     private ArmorControl armorControl;
     private StaminaControl staminaControl;
     private CharacterController characterController;
+    public static bool IsDeath;
 
     private void Awake()
     {
@@ -23,22 +23,22 @@ public class HealthControl : CharacterStats
         playerAnimatorManager = GetComponent<PlayerAnimatorManager>();
         staminaControl = GetComponent<StaminaControl>();
         animator = GetComponent<Animator>();
-        playerController = GetComponent<PlayerController>();
+        _playerInputController = GetComponent<PlayerInputController>();
         armorControl = GetComponent<ArmorControl>();
     }
     private void Start()
     {
-        maxHealth = SetMaxHealthFromHealthLevel();
-        currentHealth = maxHealth;
-        currentHealth = maxHealth;
-        healthBar.maxValue = maxHealth;
-        healthBar.value = maxHealth;
+        MaxHealth = SetMaxHealthFromHealthLevel();
+        CurrentHealth = MaxHealth;
+        CurrentHealth = MaxHealth;
+        healthBar.maxValue = MaxHealth;
+        healthBar.value = MaxHealth;
     }
 
     private int SetMaxHealthFromHealthLevel()
     {
-        maxHealth = healthLevel * 10;
-        return maxHealth;
+        MaxHealth = HealthLevel * 10;
+        return MaxHealth;
     }
 
     public void TakeDamage(float damage)
@@ -47,14 +47,14 @@ public class HealthControl : CharacterStats
         Debug.Log(enemyDamage);
         if (enemyDamage >= 0)
         {
-            currentHealth = currentHealth - (int)enemyDamage;
+            CurrentHealth = CurrentHealth - (int)enemyDamage;
         }
-        else if (playerController.block == false && enemyDamage < 0)
+        else if (_playerInputController.IsBlock == false && enemyDamage < 0)
         {
-            currentHealth = currentHealth - (int)(damage * 0.05f);
+            CurrentHealth = CurrentHealth - (int)(damage * 0.05f);
             RandomTakeDamage();
         }
-        else if (playerController.block == true)
+        else if (_playerInputController.IsBlock == true)
         {
             staminaControl.UseStamina((int)damage * 10);
             playerAnimatorManager.BlockReact();
@@ -65,15 +65,15 @@ public class HealthControl : CharacterStats
 
     private void Update()
     {
-        if (healthBar.value == currentHealth)
+        if (healthBar.value == CurrentHealth)
         {
             return;
         }
-        if (healthBar.value > currentHealth)
+        if (healthBar.value > CurrentHealth)
         {
             healthBar.value -= Time.deltaTime * 50;
         }
-        if (healthBar.value < currentHealth)
+        if (healthBar.value < CurrentHealth)
         {
             healthBar.value += Time.deltaTime * 50;
         }
@@ -81,7 +81,7 @@ public class HealthControl : CharacterStats
 
     private void CheckDeath()
     {
-        if (currentHealth <= 0)
+        if (CurrentHealth <= 0)
         {
             RandomDeath();
         }
@@ -90,7 +90,7 @@ public class HealthControl : CharacterStats
     public void UpdateHealthColorBar()
     {
         Color healthGreenColor = new Color(0.01176471f, 0.8117647f, 0.1607843f);
-        float healthBarPercent = (float)currentHealth / (float)maxHealth;
+        float healthBarPercent = (float)CurrentHealth / (float)MaxHealth;
         healthBarImage.color = Color.Lerp(Color.red, healthGreenColor, healthBarPercent);
     }
 
@@ -119,7 +119,6 @@ public class HealthControl : CharacterStats
             animator.SetTrigger("death1");
         }
         characterController.enabled = false;
-        combatCollider.SetActive(false);
         PlayerDeathEvent?.Invoke();
     }
 }

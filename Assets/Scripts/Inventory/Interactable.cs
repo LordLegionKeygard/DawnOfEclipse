@@ -9,7 +9,7 @@ public class Interactable : MonoBehaviour
 
     private void Start()
     {
-        player = FindObjectOfType<PlayerController>().GetComponent<Transform>();
+        player = FindObjectOfType<PlayerMovement>().GetComponent<Transform>();
     }
 
     public virtual void Interact()

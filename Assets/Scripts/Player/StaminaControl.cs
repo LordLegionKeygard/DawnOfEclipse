@@ -32,10 +32,7 @@ public class StaminaControl : MonoBehaviour
 
     private void Update()
     {
-        if (_staminaBar.value == _currentStamina)
-        {
-            return;
-        }
+        if (_staminaBar.value == _currentStamina) { return; }
         if (_staminaBar.value > _currentStamina)
         {
             _staminaBar.value -= Time.deltaTime * 400;

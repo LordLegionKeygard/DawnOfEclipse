@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class PlayerAnimatorManager : MonoBehaviour
 {
-    private Animator anim;
-    [SerializeField] private GameObject[] potions;
-    [SerializeField] private GameObject leftHand;
-    public float velocityMove;
-    private PlayerController playerController;
+    private Animator _animator;
+    [SerializeField] private GameObject[] _potions;
+    [SerializeField] private GameObject _leftHand;
+    public float VelocityMove;
+    private PlayerMovement _playerMovement;
+    private PlayerInputController _playerInputController;
     private static readonly int Speed = Animator.StringToHash("speed");
     private static readonly int IsInAir = Animator.StringToHash("isInAir");
     private static readonly int Attack_R2_Trigger = Animator.StringToHash("AttackR2");
@@ -28,134 +29,135 @@ public class PlayerAnimatorManager : MonoBehaviour
 
     private void Start()
     {
-        anim = GetComponent<Animator>();
-        playerController = GetComponent<PlayerController>();
+        _animator = GetComponent<Animator>();
+        _playerMovement = GetComponent<PlayerMovement>();
+        _playerInputController = GetComponent<PlayerInputController>();
     }
 
     public void Sneaking()
     {
-        anim.SetBool(Sneak, true);
+        _animator.SetBool(Sneak, true);
     }
 
     public void NotSneaking()
     {
-        anim.SetBool(Sneak, false);
+        _animator.SetBool(Sneak, false);
     }
 
     public void Speeding()
     {
-        anim.SetFloat(Speed, velocityMove);
+        _animator.SetFloat(Speed, VelocityMove);
     }
 
     public void JumpTrigger()
     {
-        anim.SetTrigger(Jump_Trigger);
+        _animator.SetTrigger(Jump_Trigger);
     }
 
-    public void EnableFastRun() => playerController.fastRun = true;
+    public void EnableFastRun() => _playerInputController.IsFastRun = true;
 
-    public void DisableFastRun() => playerController.fastRun = false;
+    public void DisableFastRun() => _playerInputController.IsFastRun = false;
 
     public void AttackR2()
     {
-        playerController.walk = false;
-        playerController.attack = true;
-        anim.SetBool(Attack_R2_Trigger, true);
+        _playerMovement.IsWalk = false;
+        _playerInputController.IsAttack = true;
+        _animator.SetBool(Attack_R2_Trigger, true);
     }
 
     public void AttackR1()
     {
-        playerController.walk = false;
-        playerController.attack = true;
-        anim.SetBool(Attack_R1_Trigger, true);
+        _playerMovement.IsWalk = false;
+        _playerInputController.IsAttack = true;
+        _animator.SetBool(Attack_R1_Trigger, true);
     }
     public void AttackR1FastRun()
     {
-        playerController.walk = false;
-        playerController.attack = true;
-        anim.SetBool(Attack_R1_Trigger, true);
+        _playerMovement.IsWalk = false;
+        _playerInputController.IsAttack = true;
+        _animator.SetBool(Attack_R1_Trigger, true);
     }
 
     public void BlockL1()
     {
-        playerController.walk = false;
-        playerController.block = true;
-        anim.SetBool(Block_L1_Trigger, true);
+        _playerMovement.IsWalk = false;
+        _playerInputController.IsBlock = true;
+        _animator.SetBool(Block_L1_Trigger, true);
     }
 
     public void BlockReact()
     {
-        playerController.walk = false;
-        playerController.block = true;
-        anim.SetBool(Block_L1_React_Trigger, true);
+        _playerMovement.IsWalk = false;
+        _playerInputController.IsBlock = true;
+        _animator.SetBool(Block_L1_React_Trigger, true);
     }
 
     public void DisableBlockL1()
     {
-        playerController.attack = false;
-        playerController.block = false;
-        anim.SetBool(Block_L1_Trigger, false);
+        _playerInputController.IsAttack = false;
+        _playerInputController.IsBlock = false;
+        _animator.SetBool(Block_L1_Trigger, false);
     }
     public void DisableAttackR2()
     {
-        playerController.attack = false;
-        anim.SetBool(Attack_R2_Trigger, false);
+        _playerInputController.IsAttack = false;
+        _animator.SetBool(Attack_R2_Trigger, false);
     }
 
     public void DisableAttackR1()
     {
-        playerController.attack = false;
-        anim.SetBool(Attack_R1_Trigger, false);
+        _playerInputController.IsAttack = false;
+        _animator.SetBool(Attack_R1_Trigger, false);
     }
 
     public void EnableRoll()
     {
-        playerController.roll = true;
-        anim.SetBool(Roll, true);
+        _playerInputController.IsRoll = true;
+        _animator.SetBool(Roll, true);
     }
 
     public void DisableRoll()
     {
-        anim.SetBool(Roll, false);
-        playerController.roll = false;
+        _animator.SetBool(Roll, false);
+        _playerInputController.IsRoll = false;
     }
 
     public void Drinking(int potionNumber)
     {
-        leftHand.SetActive(false);
+        _leftHand.SetActive(false);
 
-        potions[potionNumber].SetActive(true);
+        _potions[potionNumber].SetActive(true);
 
-        anim.SetTrigger(Drink);
+        _animator.SetTrigger(Drink);
         StartCoroutine(ExecuteAfterTime(2.5f));
         IEnumerator ExecuteAfterTime(float timeInSec)
         {
             yield return new WaitForSeconds(timeInSec);
-            foreach (var allPot in potions)
+            foreach (var allPot in _potions)
             {
                 allPot.SetActive(false);
-                leftHand.SetActive(true);
+                _leftHand.SetActive(true);
             }
         }
     }
 
     public void InAir()
     {
-        anim.SetBool(IsInAir, true);
+        _animator.SetBool(IsInAir, true);
     }
     public void OnGround()
     {
-        anim.SetBool(IsInAir, false);
+        _animator.SetBool(IsInAir, false);
     }
 
     public void Running()
     {
-        anim.SetBool(Run, true);
+        _animator.SetBool(Run, true);
     }
 
     public void NotRunning()
     {
-        anim.SetBool(Run, false);
+        _animator.SetBool(Run, false);
     }
 
     private void OnDisable()

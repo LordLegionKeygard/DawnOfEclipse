@@ -4,33 +4,33 @@ using UnityEngine;
 
 public class WeaponTimeCooldown : MonoBehaviour
 {
-    [SerializeField] private PlayerController playerController;
+    [SerializeField] private PlayerInputController _playerInputController;
 
     public void NoWeapon()
     {
-        playerController.timeR1 = 0.5f;
-        playerController.timeR2 = 1f;
-        playerController.timeL1 = 1.6f;
-        playerController.timeR1FastRun = 1f;
-        playerController.staminaForR1 = 100f;
-        playerController.staminaForR2 = 100f;
+        _playerInputController.TimeR1 = 0.5f;
+        _playerInputController.TimeR2 = 1f;
+        _playerInputController.TimeL1 = 1.6f;
+        _playerInputController.TimeR1FastRun = 1f;
+        _playerInputController.StaminaForR1 = 50f;
+        _playerInputController.StaminaForR2 = 50f;
     }
     public void GreatSword()
     {
-        playerController.timeR1 = 0.8f;
-        playerController.timeR2 = 3.5f;
-        playerController.timeL1 = 0.7f;
-        playerController.timeR1FastRun = 1.5f;
-        playerController.staminaForR1 = 150f;
-        playerController.staminaForR2 = 300f;
+        _playerInputController.TimeR1 = 0.8f;
+        _playerInputController.TimeR2 = 3.5f;
+        _playerInputController.TimeL1 = 0.7f;
+        _playerInputController.TimeR1FastRun = 1.5f;
+        _playerInputController.StaminaForR1 = 150f;
+        _playerInputController.StaminaForR2 = 300f;
     }
     public void LongSword()
     {
-        playerController.timeR1 = 0.3f;
-        playerController.timeR2 = 1.5f;
-        playerController.timeL1 = 0.7f;
-        playerController.timeR1FastRun = 1.5f;
-        playerController.staminaForR1 = 100f;
-        playerController.staminaForR2 = 100f;
+        _playerInputController.TimeR1 = 0.3f;
+        _playerInputController.TimeR2 = 1.5f;
+        _playerInputController.TimeL1 = 0.7f;
+        _playerInputController.TimeR1FastRun = 1.5f;
+        _playerInputController.StaminaForR1 = 100f;
+        _playerInputController.StaminaForR2 = 100f;
     }
 }

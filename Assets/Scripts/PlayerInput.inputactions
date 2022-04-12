@@ -11,7 +11,8 @@
                     "id": "6bf9b8f5-5b28-4b9a-8986-191f2df77637",
                     "expectedControlType": "Vector2",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": true
                 },
                 {
                     "name": "AttackR1",
@@ -19,7 +20,8 @@
                     "id": "9938b65a-d5e3-4cfd-a460-1339ee0ffa4b",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "AttackR2",
@@ -27,7 +29,8 @@
                     "id": "271c031e-9c87-4584-a72a-c6e672108744",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "TargetLock",
@@ -35,7 +38,8 @@
                     "id": "e4558aa6-8c6d-4630-89b1-e3765b20134d",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "See",
@@ -43,7 +47,8 @@
                     "id": "43446aba-603f-4e07-b424-1d29dbf7f512",
                     "expectedControlType": "Vector2",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Sneak",
@@ -51,7 +56,44 @@
                     "id": "8b3a67d1-cd74-4f00-8eac-9af342561898",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "BlockL1",
+                    "type": "Button",
+                    "id": "7b1cbf35-2f3e-49d7-98c2-393f4dabcda5",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Jump",
+                    "type": "Button",
+                    "id": "344587ba-d781-4f95-900a-448171a0e6ff",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Run",
+                    "type": "Button",
+                    "id": "842d8b52-ca8a-4111-9fc8-577b0bb8ce30",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Roll",
+                    "type": "Button",
+                    "id": "69db9a4b-c629-431f-ba43-f4bdec45d8fc",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -62,6 +104,17 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Mouse & Keyboard",
+                    "action": "AttackR1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "36ae77cf-172a-49c9-9fbb-633393969499",
+                    "path": "<DualSenseGamepadHID>/rightShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
                     "action": "AttackR1",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -190,7 +243,7 @@
                 {
                     "name": "up",
                     "id": "6ed95d6b-c5a1-4418-a7fe-b3398dcfdb24",
-                    "path": "<Gamepad>/leftStick/up",
+                    "path": "<DualSenseGamepadHID>/leftStick/up",
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
@@ -201,7 +254,7 @@
                 {
                     "name": "down",
                     "id": "fc05d86d-a4ed-40c8-a098-b65d3e03f8c2",
-                    "path": "<Gamepad>/leftStick/down",
+                    "path": "<DualSenseGamepadHID>/leftStick/down",
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
@@ -212,7 +265,7 @@
                 {
                     "name": "left",
                     "id": "1f79fd5b-8367-4d41-b411-d5b950e40bbc",
-                    "path": "<Gamepad>/leftStick/left",
+                    "path": "<DualSenseGamepadHID>/leftStick/left",
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
@@ -223,7 +276,7 @@
                 {
                     "name": "right",
                     "id": "859d7b48-96f2-403b-8189-45a15557826a",
-                    "path": "<Gamepad>/leftStick/right",
+                    "path": "<DualSenseGamepadHID>/leftStick/right",
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
@@ -243,6 +296,17 @@
                     "isPartOfComposite": false
                 },
                 {
+                    "name": "",
+                    "id": "5b35ce7c-28ea-4562-bc1c-c84badd0cced",
+                    "path": "<DualSenseGamepadHID>/rightTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "AttackR2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
                     "name": "Right Stick",
                     "id": "9e68bf1c-58de-4b90-bef3-2d364b2d1ba5",
                     "path": "2DVector",
@@ -256,7 +320,7 @@
                 {
                     "name": "up",
                     "id": "9eb1d52b-75c7-4134-a418-7d11daad5fa1",
-                    "path": "<Gamepad>/rightStick/up",
+                    "path": "<DualSenseGamepadHID>/rightStick/up",
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
@@ -267,7 +331,7 @@
                 {
                     "name": "down",
                     "id": "16d0fa99-9dbe-43cd-99c0-64f82b67ec67",
-                    "path": "<Gamepad>/rightStick/down",
+                    "path": "<DualSenseGamepadHID>/rightStick/down",
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
@@ -278,7 +342,7 @@
                 {
                     "name": "left",
                     "id": "d531f0a3-03d3-49a0-a412-8fed605464de",
-                    "path": "<Gamepad>/rightStick/left",
+                    "path": "<DualSenseGamepadHID>/rightStick/left",
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
@@ -289,7 +353,7 @@
                 {
                     "name": "right",
                     "id": "192460c5-6a7d-42ec-8bf4-29ebb5d8bb4a",
-                    "path": "<Gamepad>/rightStick/right",
+                    "path": "<DualSenseGamepadHID>/rightStick/right",
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
@@ -300,11 +364,66 @@
                 {
                     "name": "",
                     "id": "3d3f55ae-51f2-4baf-90b1-229107cd0deb",
-                    "path": "<Gamepad>/rightTrigger",
+                    "path": "<DualSenseGamepadHID>/rightStickPress",
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
                     "action": "TargetLock",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "778496a4-93a9-4c66-a5e5-f871b121098f",
+                    "path": "<DualSenseGamepadHID>/leftStickPress",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Sneak",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "543a3ff9-a6a5-439b-aa36-4fc00e14b970",
+                    "path": "<DualSenseGamepadHID>/leftShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "BlockL1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1be9e911-c032-477c-bed1-496aa4899d26",
+                    "path": "<DualSenseGamepadHID>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "abe82e72-bc9d-42a3-a753-985c5d077449",
+                    "path": "<DualSenseGamepadHID>/buttonEast",
+                    "interactions": "Hold(duration=0.3)",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Run",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6ab5bcf8-64ef-41ca-882e-eb38e935654d",
+                    "path": "<DualSenseGamepadHID>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Roll",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

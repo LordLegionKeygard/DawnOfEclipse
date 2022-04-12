@@ -5,11 +5,11 @@ using UnityEngine;
 public class PotionsControl : MonoBehaviour
 {
     public static bool CanDrinkAnyPotions = true;
-    [SerializeField] private ParticleSystem speedPotionParticle;
-    private HealthControl healthControl;
-    private PlayerAnimatorManager playerAnimatorManager;
-    public float potionSpeed;
-    public bool speedPotion = false;
+    [SerializeField] private ParticleSystem _speedPotionParticle;
+    private HealthControl _healthControl;
+    private PlayerAnimatorManager _playerAnimatorManager;
+    public float PotionSpeed;
+    public bool SpeedPotion = false;
 
     private void OnEnable()
     {
@@ -17,8 +17,8 @@ public class PotionsControl : MonoBehaviour
     }
     private void Start()
     {
-        playerAnimatorManager = GetComponent<PlayerAnimatorManager>();
-        healthControl = GetComponent<HealthControl>();
+        _playerAnimatorManager = GetComponent<PlayerAnimatorManager>();
+        _healthControl = GetComponent<HealthControl>();
     }
     private void UsePotions(int potion)
     {
@@ -31,30 +31,30 @@ public class PotionsControl : MonoBehaviour
             switch (potion)
             {
                 case (0):
-                    if (healthControl.currentHealth > healthControl.maxHealth - 50)
+                    if (_healthControl.CurrentHealth > _healthControl.MaxHealth - 50)
                     {
-                        healthControl.currentHealth = healthControl.maxHealth;
+                        _healthControl.CurrentHealth = _healthControl.MaxHealth;
                     }
                     else
                     {
-                        healthControl.currentHealth += 50;
+                        _healthControl.CurrentHealth += 50;
                     }
-                    healthControl.UpdateHealthColorBar();
+                    _healthControl.UpdateHealthColorBar();
                     break;
 
                 case (1):
                     StopCoroutine(ExecuteAfterTime(0f));
-                    speedPotionParticle.Play();
-                    potionSpeed = 5;
-                    speedPotion = true;
+                    _speedPotionParticle.Play();
+                    PotionSpeed = 5;
+                    SpeedPotion = true;
 
                     StartCoroutine(ExecuteAfterTime(20f));
                     IEnumerator ExecuteAfterTime(float timeInSec)
                     {
                         yield return new WaitForSeconds(timeInSec);
-                        speedPotionParticle.Stop();
-                        potionSpeed = 0;
-                        speedPotion = false;
+                        _speedPotionParticle.Stop();
+                        PotionSpeed = 0;
+                        SpeedPotion = false;
                     }
                     break;
                 case (2):

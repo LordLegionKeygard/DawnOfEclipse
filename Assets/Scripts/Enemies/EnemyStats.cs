@@ -20,27 +20,27 @@ public class EnemyStats : CharacterStats
 
     private void Start()
     {
-        maxHealth = SetMaxHealthFromHealthLevel();
-        currentHealth = maxHealth;
+        MaxHealth = SetMaxHealthFromHealthLevel();
+        CurrentHealth = MaxHealth;
         // enemyHealthBar.SetMaxHealth(maxHealth);
         mobSpawner = GetComponentInParent<MobSpawner>();
     }
 
     private int SetMaxHealthFromHealthLevel()
     {
-        maxHealth = healthLevel * 10;
-        return maxHealth;
+        MaxHealth = HealthLevel * 10;
+        return MaxHealth;
     }
 
     public void TakeDamage(int damage)
     {
-        currentHealth -= damage;
+        CurrentHealth -= damage;
 
         // enemyHealthBar.SetHealth(currentHealth);
 
         RandomTakeDamage();
 
-        if (currentHealth <= 0)
+        if (CurrentHealth <= 0)
         {
             Death();
         }

@@ -9,4 +9,4 @@ EditorBuildSettings:
     path: Assets/Scenes/Forest.unity
     guid: d5673b812d5fa6d4abc53777e9b3fa6b
   m_configObjects:
-    com.unity.input.settings: {fileID: 11400000, guid: 02f39e94b2bec7c44a42c14fadca6d07, type: 2}
+    com.unity.input.settings: {fileID: 11400000, guid: 97070a2dbcd7fbb47bcaa96a4560f307, type: 2}

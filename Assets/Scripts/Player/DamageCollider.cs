@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class DamageCollider : MonoBehaviour
 {
-    PlayerController playerController;
     private Collider damageCollider;
 
     public int currentWeaponDamage;
@@ -12,19 +11,6 @@ public class DamageCollider : MonoBehaviour
     private void Awake()
     {
         damageCollider = GetComponent<Collider>();
-        playerController = FindObjectOfType<PlayerController>();
-    }
-
-    private void FixedUpdate()
-    {
-        if(playerController.attack)
-        {
-            EnableDamageCollider();
-        }
-        else
-        {
-            DisableDamageCollider();
-        }
     }
 
     public void EnableDamageCollider()

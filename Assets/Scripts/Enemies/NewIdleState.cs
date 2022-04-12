@@ -17,7 +17,7 @@ public class NewIdleState : NewState
         {
             HealthControl playerHealthControl = colliders[i].transform.GetComponent<HealthControl>();
 
-            if (playerHealthControl != null && playerHealthControl.currentHealth > 0)
+            if (playerHealthControl != null && playerHealthControl.CurrentHealth > 0)
             {
                 Vector3 targetDirection = playerHealthControl.transform.position - transform.position;
                 float viewableAngle = Vector3.Angle(targetDirection, transform.forward);

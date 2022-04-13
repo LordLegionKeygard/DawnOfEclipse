@@ -41,7 +41,7 @@ public class CameraLockOnTarget : MonoBehaviour
         {
             _currentLockOnTarget = null;
             _nearestLockOnTarget = null;
-            _lockCamera.Priority = 0;
+            _lockCamera.m_BindingMode = CinemachineTransposer.BindingMode.SimpleFollowWithWorldUp;
             _lockOnFlag = false;
             _animator.SetBool("strafe", false);
         }
@@ -57,7 +57,7 @@ public class CameraLockOnTarget : MonoBehaviour
     public void TargetDeath()
     {
         ClearLockOnTargets();
-        _lockCamera.Priority = 0;
+        _lockCamera.m_BindingMode = CinemachineTransposer.BindingMode.SimpleFollowWithWorldUp;
         _lockOnFlag = false;
         _animator.SetBool("strafe", false);
     }
@@ -66,7 +66,7 @@ public class CameraLockOnTarget : MonoBehaviour
         if (_currentLockOnTarget != null)
         {
             _animator.SetBool("strafe", true);
-            _lockCamera.Priority = 11;
+            _lockCamera.m_BindingMode = CinemachineTransposer.BindingMode.LockToTargetWithWorldUp;
             Vector3 dir = _currentLockOnTarget.position - _myTransform.position;
             dir.Normalize();
             dir.y = 0;

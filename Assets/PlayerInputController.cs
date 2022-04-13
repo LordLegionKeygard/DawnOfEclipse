@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using System;
 
 public class PlayerInputController : MonoBehaviour
@@ -115,7 +116,7 @@ public class PlayerInputController : MonoBehaviour
 
     private void Attack(float stamina, int attackNumber)
     {
-        if (_staminaControl.CurrentStamina > stamina && !IsAttack && _isGround && !IsRoll)
+        if (_staminaControl.CurrentStamina > stamina && !IsAttack && _isGround && !IsRoll && ! EventSystem.current.IsPointerOverGameObject())
         {
             switch (attackNumber)
             {

@@ -8,11 +8,13 @@ public class EnemyStats : CharacterStats
     private  NewEnemyAnimatorManager _newEnemyAnimatorManager;
     private  CharacterController _characterController;
     private  MobSpawner _mobSpawner;
+    private EnemyVFXController _enemyVFXController;
 
     private void Awake()
     {
         _newEnemyAnimatorManager = GetComponent<NewEnemyAnimatorManager>();
         _characterController = GetComponent<CharacterController>();
+        _enemyVFXController = GetComponent<EnemyVFXController>();
     }
 
     private void Start()
@@ -24,12 +26,10 @@ public class EnemyStats : CharacterStats
 
     public void TakeDamage(int damage)
     {
+        _enemyVFXController.TakeDamageVFX();
         CurrentHealth -= damage;
-
         _enemyHealthBar.SetHealth(CurrentHealth);
-
         RandomTakeDamage();
-
         if (CurrentHealth <= 0) { Death(); }
     }
 

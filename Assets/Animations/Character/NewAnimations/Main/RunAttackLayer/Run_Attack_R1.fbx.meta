@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: 6a9920c45355f8f4b8e4e6e4bf0edfb1
+guid: 909745c5180271d4e858199102685e1b
 ModelImporter:
   serializedVersion: 21100
   internalIDToNameTable:
   - first:
       74: -203655887218126122
-    second: Sword And Shield Block Idle
+    second: Run Attack R1
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -35,21 +35,21 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Sword And Shield Block Idle
+      name: Run Attack R1
       takeName: mixamo.com
       internalID: 0
       firstFrame: 0
-      lastFrame: 42
+      lastFrame: 32
       wrapMode: 0
-      orientationOffsetY: 31.9
+      orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 1
-      loopBlendPositionY: 0
+      loopBlendPositionY: 1
       loopBlendPositionXZ: 1
       keepOriginalOrientation: 1
       keepOriginalPositionY: 1
@@ -59,15 +59,8 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0.0831975
-        functionName: StopWalk
-        data: 
-        objectReferenceParameter: {instanceID: 0}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
-      - time: 0.10712682
-        functionName: ShieldBlock
+      - time: 0.5
+        functionName: Use100Stamina
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0

@@ -67,4 +67,10 @@ public class CustomEvents
     {
         OnEnabledDamageCollider?.Invoke(state);
     }
+
+    public static Action<int> OnChangeIKHands;
+    public static void FireChangeIKHands(int number)
+    {
+        OnChangeIKHands?.Invoke(number);
+    }
 }

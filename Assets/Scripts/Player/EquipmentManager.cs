@@ -127,11 +127,6 @@ public class EquipmentManager : MonoBehaviour
 
         Equipment oldItem = Unequip(slotIndex);
 
-        // if (newItem.Meshes[1]!= null && !newItem.IsDefaultItem)
-        // {
-        //     Destroy(_currentMeshes[slotIndex - 1].gameObject);
-        // }
-
         if (_onEquipmentChanged != null)
         {
             _onEquipmentChanged.Invoke(newItem, oldItem);
@@ -174,6 +169,7 @@ public class EquipmentManager : MonoBehaviour
                 _weaponTimeCooldown.NoWeapon();
                 if (slotIndex == 19)
                 {
+                    CustomEvents.FireChangeIKHands(0);
                     _equipSlot[21].BackIcon.enabled = true;
                     _equipSlot[21].Icon.enabled = false;
                 }
@@ -182,7 +178,7 @@ public class EquipmentManager : MonoBehaviour
             if (_currentMeshes[slotIndex] != null)
             {
                 Destroy(_currentMeshes[slotIndex].gameObject);
-                if (slotIndex == 6 || slotIndex == 4 || slotIndex == 8 || slotIndex == 10 || slotIndex == 13 || slotIndex == 15|| slotIndex ==  18)
+                if (slotIndex == 6 || slotIndex == 4 || slotIndex == 8 || slotIndex == 10 || slotIndex == 13 || slotIndex == 15 || slotIndex == 18)
                 {
                     Destroy(_currentMeshes[slotIndex - 1].gameObject);
                 }
@@ -204,6 +200,7 @@ public class EquipmentManager : MonoBehaviour
             ActiveAllHeadElements(0);
             Unequip(i);
         }
+        CustomEvents.FireChangeIKHands(0);
         _armorControl.ResetArmor();
         _magicArmorControl.ResetArmor();
         EquipDefaults();
@@ -344,6 +341,7 @@ public class EquipmentManager : MonoBehaviour
                 EquipSlotAndIcon(18, item);
                 break;
             case EquipmentSlot.WeaponTwoHand:
+                CustomEvents.FireChangeIKHands(1);
                 _weaponTimeCooldown.GreatSword();
                 _anim.runtimeAnimatorController = Resources.Load("Animation/GreatSwordController") as RuntimeAnimatorController;
                 GameObject newWeaponTwoHandPrefab = Instantiate(item.prefab);

@@ -137,4 +137,14 @@ public class PlayerAnimatorManager : MonoBehaviour
     {
         CustomEvents.FireEnabledDamageCollider(false);
     }
+
+    public void CanWalk()
+    {
+        _playerMovement.CanWalk = true;
+    }
+
+    public void StopWalk()
+    {
+        _playerMovement.CanWalk = false;
+    }
 }

@@ -17,7 +17,7 @@ public class WeaponTimeCooldown : MonoBehaviour
     public void GreatSword()
     {
         _playerInputController.TimeR1 = 0.3f;
-        _playerInputController.TimeR2 = 1f;
+        _playerInputController.TimeR2 = 0.5f;
         _playerInputController.TimeL1 = 0.7f;
         _playerInputController.StaminaForR1 = 150f;
         _playerInputController.StaminaForR2 = 300f;

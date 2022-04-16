@@ -12,7 +12,7 @@ public class PlayerAnimatorManager : MonoBehaviour
     private static readonly int Attack_R2_Trigger = Animator.StringToHash("AttackR2");
     private static readonly int Run = Animator.StringToHash("run");
     private static readonly int Sneak = Animator.StringToHash("sneak");
-    private static readonly int Jump_Trigger = Animator.StringToHash("jump");
+    private static readonly int Jump = Animator.StringToHash("jump");
     private static readonly int Roll = Animator.StringToHash("roll");
     private static readonly int Attack_R1_Trigger = Animator.StringToHash("AttackR1");
     private static readonly int Block_L1_Trigger = Animator.StringToHash("Block(L1)");
@@ -37,9 +37,14 @@ public class PlayerAnimatorManager : MonoBehaviour
         _animator.SetBool(Sneak, false);
     }
 
-    public void JumpTrigger()
+    public void EnableJump()
     {
-        _animator.SetTrigger(Jump_Trigger);
+        _animator.SetBool(Jump, true);
+    }
+
+    public void DisableJump()
+    {
+        _animator.SetBool(Jump, false);
     }
 
     public void EnableFastRun() => _playerInputController.IsFastRun = true;

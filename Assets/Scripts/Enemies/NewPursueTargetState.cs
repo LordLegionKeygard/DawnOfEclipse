@@ -16,7 +16,7 @@ public class NewPursueTargetState : NewState
 
             newEnemyManager.IsChasingPlayer = true;
 
-            if (distanceFromTarget > 20f)
+            if (distanceFromTarget > 50f)
             {
                 newEnemyManager.ReturnToSpawn();
             }

@@ -26,6 +26,7 @@ public class PlayerInputController : MonoBehaviour
     private bool _inputAttackR1;
     private bool _inputAttackR2;
     public bool IsRoll;
+    public bool CanNewAction;
     private bool _isSneak;
     public bool IsFastRun;
     public bool IsAttack;
@@ -104,9 +105,10 @@ public class PlayerInputController : MonoBehaviour
 
     private void Jump()
     {
-        if (_isGround && !_isSneak && !IsRoll && !IsAttack && IsCanJump && _staminaControl.CurrentStamina > 50)
+        if (_isGround && !_isSneak && !IsRoll && !IsAttack && IsCanJump && CanNewAction && _staminaControl.CurrentStamina > 50)
         {
-            _playerAnimatorManager.JumpTrigger();
+            _playerAnimatorManager.EnableJump();
+            StartCoroutine(ExecuteAfterTime(1, _playerAnimatorManager.DisableJump));
             _velocity.y = Mathf.Sqrt(_jumpHeight * -2f * _gravity);
             IsCanJump = false;
             _staminaControl.UseStamina(50);
@@ -115,7 +117,7 @@ public class PlayerInputController : MonoBehaviour
 
     private void Attack(float stamina, int attackNumber)
     {
-        if (_staminaControl.CurrentStamina > stamina && !IsAttack && _isGround && !IsRoll && ! EventSystem.current.IsPointerOverGameObject())
+        if (_staminaControl.CurrentStamina > stamina && !IsAttack && _isGround && !IsRoll && !EventSystem.current.IsPointerOverGameObject())
         {
             switch (attackNumber)
             {
@@ -158,9 +160,16 @@ public class PlayerInputController : MonoBehaviour
         bool _canNewMove = !IsAttack && _isGround && !_isSneak && !IsBlock;
         if (!IsFastRun && _staminaControl.CurrentStamina > 100 && _canNewMove)
         {
+            CanNewAction = false;
             _playerAnimatorManager.EnableRoll();
-            StartCoroutine(ExecuteAfterTime(0.4f, _playerAnimatorManager.DisableRoll));
+            StartCoroutine(ExecuteAfterTime(0.5f, _playerAnimatorManager.DisableRoll));
+            StartCoroutine(ExecuteAfterTime(1f, CanNewActionAfterRoll));
         }
+    }
+
+    private void CanNewActionAfterRoll()
+    {
+        CanNewAction = true;
     }
 
     private void Sneaking()

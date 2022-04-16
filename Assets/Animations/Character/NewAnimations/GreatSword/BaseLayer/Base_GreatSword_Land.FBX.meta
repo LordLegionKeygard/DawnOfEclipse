@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 81a9c79604022454d98ac418c9579871
+guid: b762a686b15169348bc9b1d595486966
 ModelImporter:
   serializedVersion: 21100
   internalIDToNameTable:
@@ -317,6 +317,9 @@ ModelImporter:
     second: RPG-Character-Mesh
   - first:
       1: 100208
+    second: Box001
+  - first:
+      1: 100210
     second: Exporter
   - first:
       4: 400000
@@ -632,6 +635,9 @@ ModelImporter:
     second: RPG-Character-Mesh
   - first:
       4: 400208
+    second: Box001
+  - first:
+      4: 400210
     second: Exporter
   - first:
       23: 2300000
@@ -649,6 +655,9 @@ ModelImporter:
       23: 2300008
     second: USP
   - first:
+      23: 2300010
+    second: Box001
+  - first:
       33: 3300000
     second: Mesh_Soldier_A
   - first:
@@ -663,6 +672,9 @@ ModelImporter:
   - first:
       33: 3300008
     second: USP
+  - first:
+      33: 3300010
+    second: Box001
   - first:
       43: 4300000
     second: Mesh_Soldier_A
@@ -685,8 +697,14 @@ ModelImporter:
       43: 4300012
     second: RPG-Character-Mesh
   - first:
+      43: 4300014
+    second: Box001
+  - first:
       74: 7400000
-    second: Base_GreatSword_Idle_Prepare_To_Action
+    second: Base_GreatSword_Land
+  - first:
+      74: 7400002
+    second: 2Hand-Sword-Jump
   - first:
       95: 9500000
     second: //RootNode
@@ -717,7 +735,10 @@ ModelImporter:
     rigImportErrors: 
     rigImportWarnings: 
     animationImportErrors: 
-    animationImportWarnings: 
+    animationImportWarnings: "\nClip 'Take 001' has import animation warnings that
+      might lower retargeting quality:\nNote: Activate translation DOF on avatar
+      to improve retargeting quality.\n\t'B_Spine' has translation animation that
+      will be discarded.\n"
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
@@ -731,26 +752,26 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Base_GreatSword_Idle_Prepare_To_Action
+      name: Base_GreatSword_Land
       takeName: Take 001
       internalID: 7400000
-      firstFrame: 0
-      lastFrame: 60
+      firstFrame: 21
+      lastFrame: 34
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 1
+      loopTime: 0
+      loopBlend: 0
       loopBlendOrientation: 1
       loopBlendPositionY: 1
       loopBlendPositionXZ: 0
       keepOriginalOrientation: 1
-      keepOriginalPositionY: 0
+      keepOriginalPositionY: 1
       keepOriginalPositionXZ: 1
-      heightFromFeet: 1
+      heightFromFeet: 0
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
@@ -787,7 +808,7 @@ ModelImporter:
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
-    secondaryUVMarginMethod: 0
+    secondaryUVMarginMethod: 1
     secondaryUVMinLightmapResolution: 40
     secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4

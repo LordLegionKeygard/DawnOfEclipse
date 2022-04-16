@@ -73,8 +73,11 @@ public class HealthControl : CharacterStats
 
     private void CheckDeath()
     {
-        if (CurrentHealth <= 0){RandomDeath();}
-        CustomEvents.FirePlayerDeath();
+        if (CurrentHealth <= 0)
+        {
+            RandomDeath();
+            CustomEvents.FirePlayerDeath();
+        }
     }
 
     // public void UpdateHealthColorBar()

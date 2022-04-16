@@ -12,7 +12,7 @@ public class NewEnemyManager : CharacterManager
     [SerializeField] private MobSpawner _spawnPoint;
     [SerializeField] private NewState _currentState;
     [SerializeField] private float _timeToChase = 15f;
-    private float _chaseTime;
+    public float _chaseTime;
     public bool IsChasingPlayer = false;
     public bool IsCanAttack = true;
 
@@ -24,6 +24,7 @@ public class NewEnemyManager : CharacterManager
 
     private void Start()
     {
+        _chaseTime = _timeToChase;
         CustomEvents.OnPlayerDeath += ReturnToSpawn;
         _spawnPoint = GetComponentInParent<MobSpawner>();
     }
@@ -96,7 +97,7 @@ public class NewEnemyManager : CharacterManager
     {
         _chaseTime -= Time.deltaTime;
 
-        if (_chaseTime < 0f)
+        if (_chaseTime < 0)
         {
             ReturnToSpawn();
         }

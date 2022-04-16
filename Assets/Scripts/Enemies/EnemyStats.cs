@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Pathfinding;
 
 public class EnemyStats : CharacterStats
 {
+    private AIPath _aiPath;
     [SerializeField] private UIEnemyHealthBar _enemyHealthBar;
     private  NewEnemyAnimatorManager _newEnemyAnimatorManager;
     private  CharacterController _characterController;
@@ -15,6 +17,7 @@ public class EnemyStats : CharacterStats
         _newEnemyAnimatorManager = GetComponent<NewEnemyAnimatorManager>();
         _characterController = GetComponent<CharacterController>();
         _enemyVFXController = GetComponent<EnemyVFXController>();
+        _aiPath = GetComponent<AIPath>();
     }
 
     private void Start()
@@ -38,6 +41,7 @@ public class EnemyStats : CharacterStats
         _newEnemyAnimatorManager.PlayerTargetAnimation("death");
         _characterController.enabled = false;
         CustomEvents.FireCameraLockOnTargetDeath();
+        _aiPath.enabled = false;
         Respawn();
         Destroy(gameObject, 8f);
     }

@@ -19,6 +19,8 @@ public class EquipmentManager : MonoBehaviour
     [SerializeField] private MagicArmorControl _magicArmorControl;
     [SerializeField] private MeshFilter _targetMeshFilterWeapon;
     [SerializeField] private MeshFilter _targetMeshFilterShield;
+
+    [SerializeField] private DamageCollider[] _fistDamageCollider;
     public SkinnedMeshRenderer[] _currentMeshes;
     public GameObject[] _currentGameObject;
     private Equipment[] _currentEquipment;
@@ -284,7 +286,6 @@ public class EquipmentManager : MonoBehaviour
                 _armorControl.LegLeftArmor = item.armorModifier;
                 EquipSlotAndIcon(4, item);
                 break;
-
             case EquipmentSlot.BackAttachment:
                 SkinnedMeshRenderer newMeshBackAttachment = Instantiate(item.Meshes[0]);
                 BoneTransformArmor(newMeshBackAttachment, 10, slotIndex, false);
@@ -299,7 +300,6 @@ public class EquipmentManager : MonoBehaviour
                 _armorControl.ShoulderLeftArmor = item.armorModifier;
                 EquipSlotAndIcon(13, item);
                 break;
-
             case EquipmentSlot.HeadSlot:
 
                 if (item.hatNumber == 0)
@@ -341,6 +341,8 @@ public class EquipmentManager : MonoBehaviour
                 EquipSlotAndIcon(18, item);
                 break;
             case EquipmentSlot.WeaponTwoHand:
+                _fistDamageCollider[0].WeaponDamage = 0;
+                _fistDamageCollider[1].WeaponDamage = 0;
                 CustomEvents.FireChangeIKHands(1);
                 _weaponTimeCooldown.GreatSword();
                 _anim.runtimeAnimatorController = Resources.Load("Animation/GreatSwordController") as RuntimeAnimatorController;

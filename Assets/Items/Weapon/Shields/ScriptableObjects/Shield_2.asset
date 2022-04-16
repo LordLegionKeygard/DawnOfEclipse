@@ -12,19 +12,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
   m_Name: Shield_2
   m_EditorClassIdentifier: 
-  CurrentItem: {fileID: 0}
   icon: {fileID: 21300000, guid: a087a8303c51f2746a32ee5044ac2441, type: 3}
-  maxStack: 0
-  amount: 0
   Price: 250
-  isDefaultItem: 0
-  isUsedItem: 0
+  IsDefaultItem: 0
+  IsStackable: 0
+  IsUsedItem: 0
+  IsSetEffect: 0
   Name:
   - Shield
   - "\u0429\u0438\u0442"
+  ItemType:
+  - Shield
+  - "\u0429\u0438\u0442"
+  ItemInfo:
+  - 'P. Def. : 9
+
+    Block P. Def. : 28'
+  - "\u0424\u0438\u0437. \u0417\u0430\u0449. : 9\n\u0411\u043B\u043E\u043A. \u0424\u0438\u0437.
+    \u0417\u0430\u0449. : 28"
+  ArmorSetEnum: 0
+  AllArmorSetInfo: {fileID: 0}
   equipSlot: 21
   armorModifier: 9
-  mesh: {fileID: 0}
+  MagicArmorModifier: 0
+  Meshes: []
   prefab: {fileID: 1549616696357083177, guid: 2b94663f44f48fc4f8442009166e88cc, type: 3}
   hatNumber: 0
   noHair: 0

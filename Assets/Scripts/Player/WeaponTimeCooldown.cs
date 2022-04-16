@@ -8,10 +8,9 @@ public class WeaponTimeCooldown : MonoBehaviour
 
     public void NoWeapon()
     {
-        _playerInputController.TimeR1 = 0.5f;
+        _playerInputController.TimeR1 = 0.4f;
         _playerInputController.TimeR2 = 0.5f;
         _playerInputController.TimeL1 = 1.6f;
-        _playerInputController.TimeR1FastRun = 1f;
         _playerInputController.StaminaForR1 = 50f;
         _playerInputController.StaminaForR2 = 50f;
     }
@@ -20,7 +19,6 @@ public class WeaponTimeCooldown : MonoBehaviour
         _playerInputController.TimeR1 = 0.3f;
         _playerInputController.TimeR2 = 1f;
         _playerInputController.TimeL1 = 0.7f;
-        _playerInputController.TimeR1FastRun = 1.5f;
         _playerInputController.StaminaForR1 = 150f;
         _playerInputController.StaminaForR2 = 300f;
     }
@@ -29,7 +27,6 @@ public class WeaponTimeCooldown : MonoBehaviour
         _playerInputController.TimeR1 = 0.3f;
         _playerInputController.TimeR2 = 1.5f;
         _playerInputController.TimeL1 = 0.7f;
-        _playerInputController.TimeR1FastRun = 1.5f;
         _playerInputController.StaminaForR1 = 100f;
         _playerInputController.StaminaForR2 = 100f;
     }

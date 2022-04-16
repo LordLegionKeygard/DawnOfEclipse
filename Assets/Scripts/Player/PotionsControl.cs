@@ -36,7 +36,7 @@ public class PotionsControl : MonoBehaviour
                 {
                     _healthControl.CurrentHealth += 50;
                 }
-                _healthControl.UpdateHealthColorBar();
+                // _healthControl.UpdateHealthColorBar();
                 break;
 
             case (1):

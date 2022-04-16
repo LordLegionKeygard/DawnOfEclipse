@@ -6,25 +6,24 @@ using UnityEngine.UI;
 
 public class HealthControl : CharacterStats
 {
-    public static event Action PlayerDeathEvent;
     [SerializeField] private Slider healthBar;
     [SerializeField] private Image healthBarImage;
-    private Animator animator;
+    private Animator _animator;
     private PlayerInputController _playerInputController;
-    private PlayerAnimatorManager playerAnimatorManager;
-    private ArmorControl armorControl;
-    private StaminaControl staminaControl;
-    private CharacterController characterController;
+    private PlayerAnimatorManager _playerAnimatorManager;
+    private ArmorControl _armorControl;
+    private StaminaControl _staminaControl;
+    private CharacterController _characterController;
     public static bool IsDeath;
 
     private void Awake()
     {
-        characterController = GetComponent<CharacterController>();
-        playerAnimatorManager = GetComponent<PlayerAnimatorManager>();
-        staminaControl = GetComponent<StaminaControl>();
-        animator = GetComponent<Animator>();
+        _characterController = GetComponent<CharacterController>();
+        _playerAnimatorManager = GetComponent<PlayerAnimatorManager>();
+        _staminaControl = GetComponent<StaminaControl>();
+        _animator = GetComponent<Animator>();
         _playerInputController = GetComponent<PlayerInputController>();
-        armorControl = GetComponent<ArmorControl>();
+        _armorControl = GetComponent<ArmorControl>();
     }
     private void Start()
     {
@@ -36,9 +35,9 @@ public class HealthControl : CharacterStats
 
     public void TakeDamage(float damage)
     {
-        var enemyDamage = (1 - (armorControl.CurrentArmor / damage)) * damage;
+        var enemyDamage = (1 - (_armorControl.CurrentArmor / damage)) * damage;
         Debug.Log(enemyDamage);
-        if (enemyDamage >= 0)
+        if (enemyDamage >= 0 && !_playerInputController.IsBlock)
         {
             CurrentHealth = CurrentHealth - (int)enemyDamage;
         }
@@ -49,11 +48,11 @@ public class HealthControl : CharacterStats
         }
         else if (_playerInputController.IsBlock == true)
         {
-            staminaControl.UseStamina((int)damage * 10);
-            playerAnimatorManager.BlockReact();
+            _staminaControl.UseStamina((int)damage * 10);
+            _playerAnimatorManager.BlockReact();
         }
         CheckDeath();
-        UpdateHealthColorBar();
+        // UpdateHealthColorBar();
     }
 
     private void Update()
@@ -74,29 +73,27 @@ public class HealthControl : CharacterStats
 
     private void CheckDeath()
     {
-        if (CurrentHealth <= 0)
-        {
-            RandomDeath();
-        }
+        if (CurrentHealth <= 0){RandomDeath();}
+        CustomEvents.FirePlayerDeath();
     }
 
-    public void UpdateHealthColorBar()
-    {
-        Color healthGreenColor = new Color(0.01176471f, 0.8117647f, 0.1607843f);
-        float healthBarPercent = (float)CurrentHealth / (float)MaxHealth;
-        healthBarImage.color = Color.Lerp(Color.red, healthGreenColor, healthBarPercent);
-    }
+    // public void UpdateHealthColorBar()
+    // {
+    //     Color healthGreenColor = new Color(0.01176471f, 0.8117647f, 0.1607843f);
+    //     float healthBarPercent = (float)CurrentHealth / (float)MaxHealth;
+    //     healthBarImage.color = Color.Lerp(Color.red, healthGreenColor, healthBarPercent);
+    // }
 
     private void RandomTakeDamage()
     {
         int randomState = UnityEngine.Random.Range(0, 4);
         if (randomState == 0)
         {
-            animator.SetTrigger("takeDamage");
+            _animator.SetTrigger("takeDamage");
         }
         else if (randomState == 1)
         {
-            animator.SetTrigger("takeDamage1");
+            _animator.SetTrigger("takeDamage1");
         }
     }
 
@@ -105,13 +102,12 @@ public class HealthControl : CharacterStats
         int randomState = UnityEngine.Random.Range(0, 2);
         if (randomState == 0)
         {
-            animator.SetTrigger("death");
+            _animator.SetTrigger("death");
         }
         else if (randomState == 1)
         {
-            animator.SetTrigger("death1");
+            _animator.SetTrigger("death1");
         }
-        characterController.enabled = false;
-        PlayerDeathEvent?.Invoke();
+        _characterController.enabled = false;
     }
 }

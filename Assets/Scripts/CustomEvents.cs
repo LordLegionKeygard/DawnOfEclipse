@@ -73,4 +73,28 @@ public class CustomEvents
     {
         OnChangeIKHands?.Invoke(number);
     }
+
+    public static Action<bool> OnCanWalk;
+    public static void FireCanWalk(bool state)
+    {
+        OnCanWalk?.Invoke(state);
+    }
+
+    public static Action<bool> OnCanRoot;
+    public static void FireCanRoot(bool state)
+    {
+        OnCanRoot?.Invoke(state);
+    }
+
+    public static Action<bool> OnBlock;
+    public static void FireBlock(bool state)
+    {
+        OnBlock?.Invoke(state);
+    }
+
+    public static Action OnPlayerDeath;
+    public static void FirePlayerDeath()
+    {
+        OnPlayerDeath?.Invoke();
+    }
 }

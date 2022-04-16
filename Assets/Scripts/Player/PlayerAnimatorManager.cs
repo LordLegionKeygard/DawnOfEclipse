@@ -5,10 +5,9 @@ using UnityEngine;
 public class PlayerAnimatorManager : MonoBehaviour
 {
     private Animator _animator;
-    public float VelocityMove;
     private PlayerMovement _playerMovement;
     private PlayerInputController _playerInputController;
-    private static readonly int Speed = Animator.StringToHash("speed");
+    public static readonly int Speed = Animator.StringToHash("speed");
     private static readonly int IsInAir = Animator.StringToHash("isInAir");
     private static readonly int Attack_R2_Trigger = Animator.StringToHash("AttackR2");
     private static readonly int Run = Animator.StringToHash("run");
@@ -17,7 +16,8 @@ public class PlayerAnimatorManager : MonoBehaviour
     private static readonly int Roll = Animator.StringToHash("roll");
     private static readonly int Attack_R1_Trigger = Animator.StringToHash("AttackR1");
     private static readonly int Block_L1_Trigger = Animator.StringToHash("Block(L1)");
-    private static readonly int Block_L1_React_Trigger = Animator.StringToHash("Block_React(L1)");
+    private static readonly int Block_React_1 = Animator.StringToHash("Block_React_1");
+    private static readonly int Block_React_2 = Animator.StringToHash("Block_React_2");
     private static readonly int Drink = Animator.StringToHash("drink");
 
     private void Start()
@@ -35,11 +35,6 @@ public class PlayerAnimatorManager : MonoBehaviour
     public void NotSneaking()
     {
         _animator.SetBool(Sneak, false);
-    }
-
-    public void Speeding()
-    {
-        _animator.SetFloat(Speed, VelocityMove);
     }
 
     public void JumpTrigger()
@@ -76,8 +71,17 @@ public class PlayerAnimatorManager : MonoBehaviour
 
     public void BlockReact()
     {
+        var rnd = Random.Range(0, 2);
         _playerInputController.IsBlock = true;
-        _animator.SetBool(Block_L1_React_Trigger, true);
+        switch (rnd)
+        {
+            case 0:
+                _animator.SetTrigger(Block_React_1);
+                break;
+            case 1:
+                _animator.SetTrigger(Block_React_2);
+                break;
+        }
     }
 
     public void DisableBlockL1()
@@ -136,15 +140,5 @@ public class PlayerAnimatorManager : MonoBehaviour
     public void DisableDamageCollider()
     {
         CustomEvents.FireEnabledDamageCollider(false);
-    }
-
-    public void CanWalk()
-    {
-        _playerMovement.CanWalk = true;
-    }
-
-    public void StopWalk()
-    {
-        _playerMovement.CanWalk = false;
     }
 }

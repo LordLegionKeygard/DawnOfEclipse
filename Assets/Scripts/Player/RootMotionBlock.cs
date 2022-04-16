@@ -4,29 +4,30 @@ using UnityEngine;
 
 public class RootMotionBlock : MonoBehaviour
 {
-    Animator anim;
-    AnimatorStateInfo _stateInfo;
+    private Animator _animator;
+    private bool _rootMotion;
 
-    public bool rootMotion = false;
-    void Awake()
+    private void OnEnable()
     {
-        anim = GetComponent<Animator>();
+        CustomEvents.OnCanRoot += RootToggle;
+    }
+
+    private void Awake()
+    {
+        _animator = GetComponent<Animator>();
     }
     private void OnAnimatorMove()
     {
-        if(rootMotion == true)
-        {
-            anim.ApplyBuiltinRootMotion();
-        }       
+        if (_rootMotion == true) { _animator.ApplyBuiltinRootMotion(); }
     }
 
-    public void CanRoot()
+    private void RootToggle(bool state)
     {
-        rootMotion = true;
+        _rootMotion = state;
     }
 
-    public void StopRoot()
+    private void OnDisable()
     {
-        rootMotion = false;
+        CustomEvents.OnCanRoot -= RootToggle;
     }
 }

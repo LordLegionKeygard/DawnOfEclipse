@@ -39,7 +39,6 @@ public class PlayerInputController : MonoBehaviour
 
     [Header("Time")]
     public float TimeR1;
-    public float TimeR1FastRun;
     public float TimeR2;
     public float TimeL1;
 
@@ -160,7 +159,7 @@ public class PlayerInputController : MonoBehaviour
         if (!IsFastRun && _staminaControl.CurrentStamina > 100 && _canNewMove)
         {
             _playerAnimatorManager.EnableRoll();
-            StartCoroutine(ExecuteAfterTime(1.1f, _playerAnimatorManager.DisableRoll));
+            StartCoroutine(ExecuteAfterTime(0.4f, _playerAnimatorManager.DisableRoll));
         }
     }
 

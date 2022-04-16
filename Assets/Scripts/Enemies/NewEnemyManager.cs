@@ -24,7 +24,7 @@ public class NewEnemyManager : CharacterManager
 
     private void Start()
     {
-        HealthControl.PlayerDeathEvent += ReturnToSpawn;
+        CustomEvents.OnPlayerDeath += ReturnToSpawn;
         _spawnPoint = GetComponentInParent<MobSpawner>();
     }
 
@@ -108,6 +108,6 @@ public class NewEnemyManager : CharacterManager
 
     private void OnDisable()
     {
-        HealthControl.PlayerDeathEvent -= ReturnToSpawn;
+        CustomEvents.OnPlayerDeath -= ReturnToSpawn;
     }
 }

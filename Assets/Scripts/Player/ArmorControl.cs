@@ -29,6 +29,11 @@ public class ArmorControl : MonoBehaviour
     public int ShieldBlockArmor;
     public int ShieldBlockArmorDefault;
 
+    private void OnEnable()
+    {
+        CustomEvents.OnBlock += BlockToggle;
+    }
+
     public void ResetArmor()
     {
         ShoulderLeftArmor = 0;
@@ -44,15 +49,13 @@ public class ArmorControl : MonoBehaviour
         UpdateArmor();
     }
 
-    public void ShieldBlock()
+    private void BlockToggle(bool block)
     {
-        ShieldBlockArmor = ShieldBlockArmorDefault;
-        UpdateArmor();
-    }
+        if (block)
+            ShieldBlockArmor = ShieldBlockArmorDefault;
+        else
+            ShieldBlockArmor = 0;
 
-    public void ShieldUnBlock()
-    {
-        ShieldBlockArmor = 0;
         UpdateArmor();
     }
 
@@ -79,5 +82,10 @@ public class ArmorControl : MonoBehaviour
         ShieldBlockArmor;
 
         _armorText.text = (CurrentArmor.ToString());
+    }
+
+    private void OnDisable()
+    {
+        CustomEvents.OnBlock -= BlockToggle;
     }
 }

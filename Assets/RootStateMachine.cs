@@ -7,9 +7,6 @@ public class RootStateMachine : StateMachineBehaviour
     [SerializeField] private bool _canRoot;
     public override void OnStateEnter(Animator animator, AnimatorStateInfo animatorStateInfo, int layerIndex)
     {
-        if (_canRoot)
-            CustomEvents.FireCanRoot(true);
-        else
-            CustomEvents.FireCanRoot(false);
+        CustomEvents.FireCanRoot(_canRoot);
     }
 }

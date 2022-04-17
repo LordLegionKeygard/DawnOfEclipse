@@ -58,7 +58,7 @@ GameObject:
   - component: {fileID: 3281344214709573303}
   - component: {fileID: 3281344214709573300}
   m_Layer: 0
-  m_Name: SM_Tree_Pine_02
+  m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -106,8 +106,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e1f54bdf015ca854499e28adf35f2de1, type: 2}
-  - {fileID: 2100000, guid: 32a7d9275f65e894c84e0dcdcf05e4e0, type: 2}
+  - {fileID: 2100000, guid: adf6519d21747f54a848cc96dd15a429, type: 2}
+  - {fileID: 2100000, guid: 1748e399f1cdd2c49a5ed4fb118ae556, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

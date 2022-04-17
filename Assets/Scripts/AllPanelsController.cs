@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AllPanelsController : MonoBehaviour
 {
-    [SerializeField] private GameObject[] panels;
+    [SerializeField] private GameObject[] _panels;
 
     private void Update()
     {
@@ -12,7 +13,7 @@ public class AllPanelsController : MonoBehaviour
         {
             PanelsToggle(0);
         }
-        else if(Input.GetKeyDown(KeyCode.C))
+        else if (Input.GetKeyDown(KeyCode.C))
         {
             PanelsToggle(1);
         }
@@ -20,6 +21,11 @@ public class AllPanelsController : MonoBehaviour
 
     public void PanelsToggle(int number)
     {
-        panels[number].SetActive(!panels[number].activeSelf);
+        _panels[number].SetActive(!_panels[number].activeSelf);
+    }
+
+    public void LoadScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

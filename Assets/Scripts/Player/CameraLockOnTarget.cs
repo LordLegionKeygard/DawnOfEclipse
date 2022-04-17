@@ -5,6 +5,8 @@ using Cinemachine;
 
 public class CameraLockOnTarget : MonoBehaviour
 {
+    [SerializeField] private CinemachineInputProvider _cinemachineInputProvider;
+    [SerializeField] private GameObject _cameraPivot;
     [SerializeField] private CinemachineFreeLook _lockCamera;
     private List<CharacterManager> _avilableTargets = new List<CharacterManager>();
     private Transform _myTransform;
@@ -42,6 +44,8 @@ public class CameraLockOnTarget : MonoBehaviour
             _currentLockOnTarget = null;
             _nearestLockOnTarget = null;
             _lockCamera.m_BindingMode = CinemachineTransposer.BindingMode.SimpleFollowWithWorldUp;
+            _cinemachineInputProvider.enabled = true;
+            _cameraPivot.transform.parent = null;
             _lockOnFlag = false;
             _animator.SetBool("strafe", false);
         }
@@ -58,6 +62,8 @@ public class CameraLockOnTarget : MonoBehaviour
     {
         ClearLockOnTargets();
         _lockCamera.m_BindingMode = CinemachineTransposer.BindingMode.SimpleFollowWithWorldUp;
+        _cinemachineInputProvider.enabled = true;
+        _cameraPivot.transform.parent = null;
         _lockOnFlag = false;
         _animator.SetBool("strafe", false);
     }
@@ -71,6 +77,7 @@ public class CameraLockOnTarget : MonoBehaviour
             dir.Normalize();
             dir.y = 0;
             _myTransform.rotation = Quaternion.LookRotation(dir);
+            _cameraPivot.transform.rotation = Quaternion.Lerp(_myTransform.rotation, transform.rotation, Time.deltaTime / 10);
         }
     }
 
@@ -106,6 +113,8 @@ public class CameraLockOnTarget : MonoBehaviour
             {
                 shortestDistance = distanceFromTarget;
                 _nearestLockOnTarget = _avilableTargets[k].LockOnTransform;
+                _cameraPivot.transform.SetParent(this.gameObject.transform);
+                _cinemachineInputProvider.enabled = false;
             }
         }
     }

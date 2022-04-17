@@ -20,6 +20,8 @@ public class PlayerMovement : CharacterManager
     private Vector2 _inputStrafe;
     public bool CanWalk = true;
 
+    private bool _isDeath;
+
     private void OnEnable()
     {
         CustomEvents.OnCanWalk += CanWalkToggle;
@@ -45,7 +47,6 @@ public class PlayerMovement : CharacterManager
         _animator.SetFloat("inputY", _inputStrafe.y);
 
         Walk();
-
     }
 
     private void Walk()

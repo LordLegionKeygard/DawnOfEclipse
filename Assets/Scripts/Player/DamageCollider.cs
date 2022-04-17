@@ -6,7 +6,7 @@ public class DamageCollider : MonoBehaviour
 {
     private Collider _damageCollider;
 
-    public int WeaponDamage;
+    [SerializeField] private int _weaponDamage;
 
     private void Awake()
     {
@@ -23,7 +23,7 @@ public class DamageCollider : MonoBehaviour
     {
         if (collision.TryGetComponent(out EnemyStats enemyStats))
         {
-            enemyStats.TakeDamage(WeaponDamage);
+            enemyStats.TakeDamage(_weaponDamage);
             Damage(false);
         }
     }

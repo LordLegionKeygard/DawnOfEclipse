@@ -97,4 +97,10 @@ public class CustomEvents
     {
         OnPlayerDeath?.Invoke();
     }
+
+    public static Action<bool> OnCameraCanMove;
+    public static void FireCameraCanMove(bool state)
+    {
+        OnCameraCanMove?.Invoke(state);
+    }
 }

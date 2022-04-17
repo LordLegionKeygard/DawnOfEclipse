@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5985072628287667781}
   - component: {fileID: 5985072628287667782}
   m_Layer: 0
-  m_Name: SM_Tree_Pine_Large_01_LOD_01
+  m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -60,7 +60,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 32a7d9275f65e894c84e0dcdcf05e4e0, type: 2}
+  - {fileID: 2100000, guid: adf6519d21747f54a848cc96dd15a429, type: 2}
   - {fileID: 2100000, guid: 32a7d9275f65e894c84e0dcdcf05e4e0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -109,7 +109,7 @@ Transform:
   m_GameObject: {fileID: 5985072628791391342}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.7463372, y: 0.8648721, z: 0.7463372}
   m_Children:
   - {fileID: 5985072628287667783}
   m_Father: {fileID: 0}

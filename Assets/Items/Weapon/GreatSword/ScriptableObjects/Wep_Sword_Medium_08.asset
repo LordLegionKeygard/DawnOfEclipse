@@ -12,19 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
   m_Name: Wep_Sword_Medium_08
   m_EditorClassIdentifier: 
-  CurrentItem: {fileID: 0}
   icon: {fileID: 21300000, guid: 2c93d1559a535c247b728dfcca1c39ca, type: 3}
-  maxStack: 1
-  amount: 0
   Price: 250
-  isDefaultItem: 0
-  isUsedItem: 0
+  IsDefaultItem: 0
+  IsStackable: 0
+  IsUsedItem: 0
+  IsSetEffect: 0
   Name:
   - Great Sword
   - "\u0411\u043E\u043B\u044C\u0448\u043E\u0439 \u041C\u0435\u0447"
+  ItemType:
+  - Sword / Two Handed
+  - "\u041C\u0435\u0447 / \u0414\u0432\u0443\u0440\u0443\u0447\u043D\u044B\u0439"
+  ItemInfo:
+  - 'P. Atk.: 25'
+  - "\u0424\u0438\u0437. \u0410\u0442\u043A.: 25"
+  ArmorSetEnum: 0
+  AllArmorSetInfo: {fileID: 0}
   equipSlot: 19
   armorModifier: 0
-  mesh: {fileID: 0}
+  MagicArmorModifier: 0
+  Meshes: []
   prefab: {fileID: 4985664811504258620, guid: 8944688b11eea3c4bb3f344453e96bed, type: 3}
   hatNumber: 0
   noHair: 0

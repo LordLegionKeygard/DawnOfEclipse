@@ -58,7 +58,7 @@ GameObject:
   - component: {fileID: 9138306198584594051}
   - component: {fileID: 9138306198584594052}
   m_Layer: 0
-  m_Name: SM_Tree_Pine_Small_02_LOD_01
+  m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

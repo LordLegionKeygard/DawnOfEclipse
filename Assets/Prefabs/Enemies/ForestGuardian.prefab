@@ -404,6 +404,7 @@ MonoBehaviour:
   _spawnPoint: {fileID: 0}
   _currentState: {fileID: 718960566346653028}
   _timeToChase: 15
+  _chaseTime: 0
   IsChasingPlayer: 0
   IsCanAttack: 1
 --- !u!114 &5287157489827275853
@@ -434,9 +435,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _leftHand: {fileID: 377092929899326496}
-  _weaponAttachPoint: {fileID: 6288370960043596480}
+  _rightHand: {fileID: 0}
   _leftHandPositionWeight: 0.091
   _leftHandRotationWeight: 0
+  _rightHandPositionWeight: 0
+  _rightHandRotationWeight: 0
 --- !u!114 &6547861182434213347
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2761,7 +2764,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e01edfc254722244884a29b4e61dd98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _weaponDamage: 5
+  _weaponDamage: 100
 --- !u!1 &8806310221505904381
 GameObject:
   m_ObjectHideFlags: 0

@@ -7,9 +7,6 @@ public class WalkStateMachine : StateMachineBehaviour
     [SerializeField] private bool _canWalk;
     public override void OnStateEnter(Animator animator, AnimatorStateInfo animatorStateInfo, int layerIndex)
     {
-        if (_canWalk)
-            CustomEvents.FireCanWalk(true);
-        else
-            CustomEvents.FireCanWalk(false);
+        CustomEvents.FireCanWalk(_canWalk);
     }
 }

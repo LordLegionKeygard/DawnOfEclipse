@@ -12,11 +12,11 @@ GameObject:
   - component: {fileID: 5848940794299453342}
   - component: {fileID: 5838736062176985220}
   m_Layer: 0
-  m_Name: SM_Tree_Generic_Dead_01
+  m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &5862938908015582136
 Transform:
@@ -98,7 +98,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &5863047319510893054
 Transform:
@@ -109,7 +109,7 @@ Transform:
   m_GameObject: {fileID: 5861135171930835596}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.77871007, y: 0.91019416, z: 0.77871007}
   m_Children:
   - {fileID: 5862938908015582136}
   m_Father: {fileID: 0}

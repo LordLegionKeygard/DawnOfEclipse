@@ -168,6 +168,7 @@ public class EquipmentManager : MonoBehaviour
 
             if (slotIndex == 19 || slotIndex == 20)
             {
+                FistDamageColliderToggle(true);
                 _weaponTimeCooldown.NoWeapon();
                 if (slotIndex == 19)
                 {
@@ -341,8 +342,7 @@ public class EquipmentManager : MonoBehaviour
                 EquipSlotAndIcon(18, item);
                 break;
             case EquipmentSlot.WeaponTwoHand:
-                _fistDamageCollider[0].WeaponDamage = 0;
-                _fistDamageCollider[1].WeaponDamage = 0;
+                FistDamageColliderToggle(false);
                 CustomEvents.FireChangeIKHands(1);
                 _weaponTimeCooldown.GreatSword();
                 _anim.runtimeAnimatorController = Resources.Load("Animation/GreatSwordController") as RuntimeAnimatorController;
@@ -432,5 +432,11 @@ public class EquipmentManager : MonoBehaviour
             _weaponTimeCooldown.NoWeapon();
             ResetAnimator();
         }
+    }
+
+    private void FistDamageColliderToggle(bool state)
+    {
+        _fistDamageCollider[0].enabled = state;
+        _fistDamageCollider[1].enabled = state;
     }
 }

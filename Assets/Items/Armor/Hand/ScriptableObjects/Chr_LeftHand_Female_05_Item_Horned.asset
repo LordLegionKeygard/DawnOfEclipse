@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
   m_Name: Chr_LeftHand_Female_05_Item_Horned
   m_EditorClassIdentifier: 
-  icon: {fileID: 21300000, guid: c059dbd076811744890dba71086101fc, type: 3}
+  icon: {fileID: 21300000, guid: 65e907f7d551175408a402c359ea32da, type: 3}
   Price: 250
   IsDefaultItem: 0
   IsStackable: 0

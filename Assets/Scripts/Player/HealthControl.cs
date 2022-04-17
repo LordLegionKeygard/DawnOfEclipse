@@ -48,7 +48,7 @@ public class HealthControl : CharacterStats
         }
         else if (_playerInputController.IsBlock == true)
         {
-            _staminaControl.UseStamina((int)damage * 10);
+            _staminaControl.UseStamina((int)damage);
             _playerAnimatorManager.BlockReact();
         }
         CheckDeath();
@@ -57,10 +57,8 @@ public class HealthControl : CharacterStats
 
     private void Update()
     {
-        if (healthBar.value == CurrentHealth)
-        {
-            return;
-        }
+        if (healthBar.value == CurrentHealth) return;
+
         if (healthBar.value > CurrentHealth)
         {
             healthBar.value -= Time.deltaTime * 50;
@@ -75,6 +73,7 @@ public class HealthControl : CharacterStats
     {
         if (CurrentHealth <= 0)
         {
+            IsDeath = true;
             RandomDeath();
             CustomEvents.FirePlayerDeath();
         }

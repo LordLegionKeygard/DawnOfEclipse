@@ -188,7 +188,7 @@ Material:
     - _ColorTint: {r: 1, g: 1, b: 1, a: 0}
     - _Emission: {r: 0, g: 0, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 0}
-    - _FadeParams: {r: 0, g: 199.09912, b: 1, a: 0}
+    - _FadeParams: {r: 0, g: 500, b: 0, a: 0}
     - _HueVariation: {r: 1, g: 0.9947836, b: 0.9858491, a: 0.15}
     - _HueVariationColor: {r: 1, g: 0.5, b: 0, a: 0.2}
     - _LODDebugColor: {r: 1, g: 1, b: 1, a: 1}

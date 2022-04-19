@@ -37,7 +37,7 @@ public class HealthControl : CharacterStats
     {
         var enemyDamage = (1 - (_armorControl.CurrentArmor / damage)) * damage;
         Debug.Log(enemyDamage);
-        if (enemyDamage >= 0 && !_playerInputController.IsBlock)
+        if (enemyDamage >= 0)
         {
             CurrentHealth = CurrentHealth - (int)enemyDamage;
         }

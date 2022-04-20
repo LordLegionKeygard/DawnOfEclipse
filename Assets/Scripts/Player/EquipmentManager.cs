@@ -19,8 +19,6 @@ public class EquipmentManager : MonoBehaviour
     [SerializeField] private MagicArmorControl _magicArmorControl;
     [SerializeField] private MeshFilter _targetMeshFilterWeapon;
     [SerializeField] private MeshFilter _targetMeshFilterShield;
-
-    [SerializeField] private DamageCollider[] _fistDamageCollider;
     public SkinnedMeshRenderer[] _currentMeshes;
     public GameObject[] _currentGameObject;
     private Equipment[] _currentEquipment;
@@ -168,7 +166,6 @@ public class EquipmentManager : MonoBehaviour
 
             if (slotIndex == 19 || slotIndex == 20)
             {
-                FistDamageColliderToggle(true);
                 _weaponTimeCooldown.NoWeapon();
                 if (slotIndex == 19)
                 {
@@ -342,7 +339,6 @@ public class EquipmentManager : MonoBehaviour
                 EquipSlotAndIcon(18, item);
                 break;
             case EquipmentSlot.WeaponTwoHand:
-                FistDamageColliderToggle(false);
                 CustomEvents.FireChangeIKHands(1);
                 _weaponTimeCooldown.GreatSword();
                 _anim.runtimeAnimatorController = Resources.Load("Animation/GreatSwordController") as RuntimeAnimatorController;
@@ -358,8 +354,8 @@ public class EquipmentManager : MonoBehaviour
                 break;
             case EquipmentSlot.WeaponRightHand:
                 _twoHandWeaponNow = false;
-                _weaponTimeCooldown.LongSword();
-                _anim.runtimeAnimatorController = Resources.Load("Animation/SwordAndShieldController") as RuntimeAnimatorController;
+                _weaponTimeCooldown.Sword();
+                _anim.runtimeAnimatorController = Resources.Load("Animation/SwordController") as RuntimeAnimatorController;
                 GameObject newWeaponRightHandPrefab = Instantiate(item.prefab);
                 BoneTransformWeapon(newWeaponRightHandPrefab, slotIndex, _weaponsAttachPoints[1], true);
                 _equipSlot[19].Icon.sprite = item.icon;
@@ -421,7 +417,6 @@ public class EquipmentManager : MonoBehaviour
     public void ResetAnimator()
     {
         _anim.runtimeAnimatorController = Resources.Load("Animation/MainController") as RuntimeAnimatorController;
-        Debug.Log("ResetAnimator");
     }
 
     private void EquipDefaults()
@@ -432,11 +427,5 @@ public class EquipmentManager : MonoBehaviour
             _weaponTimeCooldown.NoWeapon();
             ResetAnimator();
         }
-    }
-
-    private void FistDamageColliderToggle(bool state)
-    {
-        _fistDamageCollider[0].enabled = state;
-        _fistDamageCollider[1].enabled = state;
     }
 }

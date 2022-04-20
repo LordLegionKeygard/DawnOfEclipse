@@ -4,10 +4,19 @@ using UnityEngine;
 
 public class WeaponTimeCooldown : MonoBehaviour
 {
-    [SerializeField] private PlayerInputController _playerInputController;
+    private PlayerInputController _playerInputController;
+    private FistDamageColliderController _fistDamageColliderController;
+
+
+    private void Awake()
+    {
+        _playerInputController = GetComponent<PlayerInputController>();
+        _fistDamageColliderController = GetComponent<FistDamageColliderController>();
+    }
 
     public void NoWeapon()
     {
+        _fistDamageColliderController.FistDamageColliderToggle(true);
         _playerInputController.TimeR1 = 0.4f;
         _playerInputController.TimeR2 = 0.5f;
         _playerInputController.TimeL1 = 1.6f;
@@ -16,14 +25,16 @@ public class WeaponTimeCooldown : MonoBehaviour
     }
     public void GreatSword()
     {
+        _fistDamageColliderController.FistDamageColliderToggle(false);
         _playerInputController.TimeR1 = 0.3f;
         _playerInputController.TimeR2 = 0.5f;
         _playerInputController.TimeL1 = 0.7f;
         _playerInputController.StaminaForR1 = 150f;
         _playerInputController.StaminaForR2 = 300f;
     }
-    public void LongSword()
+    public void Sword()
     {
+        _fistDamageColliderController.FistDamageColliderToggle(false);
         _playerInputController.TimeR1 = 0.3f;
         _playerInputController.TimeR2 = 1.5f;
         _playerInputController.TimeL1 = 0.7f;

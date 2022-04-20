@@ -333,13 +333,13 @@ MonoBehaviour:
     visualizeSensitivity: 0
   targetCompatibility: {fileID: 0}
   maxAcceleration: -2.5
-  rotationSpeed: 810
+  rotationSpeed: 2000
   slowdownDistance: 5
   pickNextWaypointDist: 2
   endReachedDistance: 1.7
   alwaysDrawGizmos: 1
-  slowWhenNotFacingTarget: 0
-  whenCloseToDestination: 0
+  slowWhenNotFacingTarget: 1
+  whenCloseToDestination: 1
   constrainInsideGraph: 0
 --- !u!114 &373840078995077300
 MonoBehaviour:

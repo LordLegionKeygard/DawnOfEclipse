@@ -10,4 +10,7 @@ public class EnemyAttackAction : EnemyAction
 
     public float MinimumDistanceNeededToAttack = 0;
     public float MaximumDistanceNeededToAttack = 1.5f;
+
+    public float MaximumAttackAngle = 35;
+    public float MinimumAttackAngle = -35;
 }

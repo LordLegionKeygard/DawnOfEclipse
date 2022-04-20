@@ -41,9 +41,15 @@ public class EnemyStats : CharacterStats
         _newEnemyAnimatorManager.PlayerTargetAnimation("death");
         _characterController.enabled = false;
         CustomEvents.FireCameraLockOnTargetDeath();
+        RotateBodyAfterDeath();
         _aiPath.enabled = false;
         Respawn();
         Destroy(gameObject, 8f);
+    }
+
+    private void RotateBodyAfterDeath()
+    {
+        transform.Rotate(new Vector3(-8.11f,transform.rotation.y,1.61f), Space.World);
     }
 
     private void Respawn()

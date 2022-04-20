@@ -47,6 +47,17 @@ public class PlayerInputController : MonoBehaviour
     private void Awake()
     {
         _input = new PlayerInput();
+
+        _playerAnimatorManager = GetComponent<PlayerAnimatorManager>();
+        _playerMovement = GetComponent<PlayerMovement>();
+        _characterController = GetComponent<CharacterController>();
+        _potionsControl = GetComponent<PotionsControl>();
+        _staminaControl = GetComponent<StaminaControl>();
+    }
+
+    private void OnEnable()
+    {
+        _input.Enable();
         _input.Player.TargetLock.performed += ctx => CustomEvents.FireCameraLockOnTarget();
         _input.Player.Sneak.performed += ctx => Sneaking();
         _input.Player.BlockL1.performed += ctx => Block(true);
@@ -59,17 +70,10 @@ public class PlayerInputController : MonoBehaviour
         _input.Player.Run.performed += ctx => Run(true);
         _input.Player.Run.canceled += ctx => Run(false);
         _input.Player.Roll.canceled += ctx => Roll();
+        _input.Player.PickUp.performed += ctx => CustomEvents.FirePickUp(true);
+        _input.Player.PickUp.canceled += ctx => CustomEvents.FirePickUp(false);
     }
 
-    private void Start()
-    {
-        _playerAnimatorManager = GetComponent<PlayerAnimatorManager>();
-        _playerMovement = GetComponent<PlayerMovement>();
-        _characterController = GetComponent<CharacterController>();
-        _potionsControl = GetComponent<PotionsControl>();
-        _staminaControl = GetComponent<StaminaControl>();
-
-    }
     private void Update()
     {
         if (HealthControl.IsDeath) return;
@@ -79,36 +83,35 @@ public class PlayerInputController : MonoBehaviour
 
         if (_staminaControl.CurrentStamina <= 50)
         {
-            _playerAnimatorManager.DisableBlockL1();
+            { _playerAnimatorManager.PlayerTargetAnimation(false, _playerAnimatorManager.Block_L1, 0, 2); }
         }
-        if (!_isSneak && !_potionsControl.SpeedPotion && !IsFastRun)
-        {
-            _staminaControl.StaminaRun = false;
-            _playerMovement.CurrentSpeed = _playerMovement.DefaultSpeed;
-            _potionsControl.PotionSpeed = 0;
-        }
+        CheckGround();
+    }
 
+    private void CheckGround()
+    {
         _isGround = Physics.CheckSphere(groundCheck.position, _groundDistance, groundMask);
         if (_isGround && _velocity.y < 0) _velocity.y = _velocityUpdateY;
         {
             _velocity.y += _gravity * Time.deltaTime;
             _characterController.Move(_velocity * Time.deltaTime);
         }
-        if (_isGround == false) { _playerAnimatorManager.InAir(); }
-        if (_isGround) { _playerAnimatorManager.OnGround(); }
+        if (!_isGround) { _playerAnimatorManager.PlayerTargetAnimation(true, _playerAnimatorManager.IsInAir, 0, 0); }
+        if (_isGround) { _playerAnimatorManager.PlayerTargetAnimation(false, _playerAnimatorManager.IsInAir, 0, 0); }
     }
+
     private void Block(bool isPressed)
     {
-        if (_staminaControl.CurrentStamina > 50 && isPressed && !IsRoll) { _playerAnimatorManager.BlockL1(); }
-        else { _playerAnimatorManager.DisableBlockL1(); }
+        if (_staminaControl.CurrentStamina > 50 && isPressed && !IsRoll) { _playerAnimatorManager.PlayerTargetAnimation(true, _playerAnimatorManager.Block_L1, 0, 2); }
+        else { _playerAnimatorManager.PlayerTargetAnimation(false, _playerAnimatorManager.Block_L1, 0, 2); }
     }
 
     private void Jump()
     {
         if (_isGround && !_isSneak && !IsRoll && !IsAttack && IsCanJump && CanNewAction && _staminaControl.CurrentStamina > 50)
         {
-            _playerAnimatorManager.EnableJump();
-            StartCoroutine(ExecuteAfterTime(1, _playerAnimatorManager.DisableJump));
+            _playerAnimatorManager.PlayerTargetAnimation(true, _playerAnimatorManager.Jump, 0, 0);
+            _playerAnimatorManager.PlayerTargetAnimation(false, _playerAnimatorManager.Jump, 1, 0);
             _velocity.y = Mathf.Sqrt(_jumpHeight * -2f * _gravity);
             IsCanJump = false;
             _staminaControl.UseStamina(50);
@@ -122,13 +125,12 @@ public class PlayerInputController : MonoBehaviour
             switch (attackNumber)
             {
                 case 1:
-                    if (!IsFastRun) { _playerAnimatorManager.AttackR1(); }
-                    else { _playerAnimatorManager.AttackR1FastRun(); }
-                    StartCoroutine(ExecuteAfterTime(TimeR1, _playerAnimatorManager.DisableAttackR1));
+                    _playerAnimatorManager.PlayerTargetAnimation(true, _playerAnimatorManager.Attack_R1, 0, 1);
+                    _playerAnimatorManager.PlayerTargetAnimation(false, _playerAnimatorManager.Attack_R1, TimeR1, 1);
                     break;
                 case 2:
-                    _playerAnimatorManager.AttackR2();
-                    StartCoroutine(ExecuteAfterTime(TimeR2, _playerAnimatorManager.DisableAttackR2));
+                    _playerAnimatorManager.PlayerTargetAnimation(true, _playerAnimatorManager.Attack_R2, 0, 1);
+                    _playerAnimatorManager.PlayerTargetAnimation(false, _playerAnimatorManager.Attack_R2, TimeR2, 1);
                     break;
             }
         }
@@ -139,19 +141,20 @@ public class PlayerInputController : MonoBehaviour
         bool _canNewMove = !IsAttack && _isGround && !_isSneak && !IsBlock;
         if (_staminaControl.CurrentStamina > 50 && _canNewMove && isPressed)
         {
+            _playerAnimatorManager.PlayerTargetAnimation(true, _playerAnimatorManager.Run, 0, 4);
             if (!_potionsControl.SpeedPotion)
             {
                 _staminaControl.StaminaRun = true;
                 _playerMovement.CurrentSpeed = 7;
             }
             else { _potionsControl.PotionSpeed = 5; }
-            _playerAnimatorManager.Running();
-            _playerAnimatorManager.EnableFastRun();
         }
         if (!isPressed)
         {
-            _playerAnimatorManager.NotRunning();
-            StartCoroutine(ExecuteAfterTime(0.3f, _playerAnimatorManager.DisableFastRun));
+            _playerAnimatorManager.PlayerTargetAnimation(false, _playerAnimatorManager.Run, 0.3f, 4);
+            _staminaControl.StaminaRun = false;
+            _playerMovement.CurrentSpeed = _playerMovement.DefaultSpeed;
+            _potionsControl.PotionSpeed = 0;
         }
     }
 
@@ -161,9 +164,9 @@ public class PlayerInputController : MonoBehaviour
         if (!IsFastRun && _staminaControl.CurrentStamina > 100 && _canNewMove)
         {
             CanNewAction = false;
-            _playerAnimatorManager.EnableRoll();
-            StartCoroutine(ExecuteAfterTime(0.5f, _playerAnimatorManager.DisableRoll));
-            StartCoroutine(ExecuteAfterTime(1f, CanNewActionAfterRoll));
+            _playerAnimatorManager.PlayerTargetAnimation(true, _playerAnimatorManager.Roll, 0, 3);
+            _playerAnimatorManager.PlayerTargetAnimation(false, _playerAnimatorManager.Roll, 0.5f, 3);
+            Invoke("CanNewActionAfterRoll", 1);
         }
     }
 
@@ -181,7 +184,7 @@ public class PlayerInputController : MonoBehaviour
             Vector3 tempCenter = _characterController.center;
             tempCenter.y = _characterController.height / 2;
             _characterController.center = tempCenter;
-            _playerAnimatorManager.Sneaking();
+            _playerAnimatorManager.PlayerTargetAnimation(true, _playerAnimatorManager.Sneak, 0, 0);
             _playerMovement.CurrentSpeed = 2;
             _isSneak = true;
             CharacterManager.maximumDetectionAngle = 50f;
@@ -190,7 +193,7 @@ public class PlayerInputController : MonoBehaviour
         else
         {
             _characterController.height = 1.7f;
-            _playerAnimatorManager.NotSneaking();
+            _playerAnimatorManager.PlayerTargetAnimation(false, _playerAnimatorManager.Sneak, 0, 0);
             _isSneak = false;
             _playerMovement.CurrentSpeed = 5;
             CharacterManager.maximumDetectionAngle = 180f;
@@ -198,17 +201,22 @@ public class PlayerInputController : MonoBehaviour
         }
     }
 
-    private IEnumerator ExecuteAfterTime(float timeInSec, Action action)
-    {
-        yield return new WaitForSeconds(timeInSec);
-        action?.Invoke();
-    }
-    private void OnEnable()
-    {
-        _input.Enable();
-    }
     private void OnDisable()
     {
         _input.Disable();
+        _input.Player.TargetLock.performed -= ctx => CustomEvents.FireCameraLockOnTarget();
+        _input.Player.Sneak.performed -= ctx => Sneaking();
+        _input.Player.BlockL1.performed -= ctx => Block(true);
+        _input.Player.BlockL1.canceled -= ctx => Block(false);
+        _input.Player.Jump.performed -= ctx => Jump();
+        _input.Player.AttackR1.performed -= ctx => _inputAttackR1 = true;
+        _input.Player.AttackR1.canceled -= ctx => _inputAttackR1 = false;
+        _input.Player.AttackR2.performed -= ctx => _inputAttackR2 = true;
+        _input.Player.AttackR2.canceled -= ctx => _inputAttackR2 = false;
+        _input.Player.Run.performed -= ctx => Run(true);
+        _input.Player.Run.canceled -= ctx => Run(false);
+        _input.Player.Roll.canceled -= ctx => Roll();
+        _input.Player.PickUp.performed -= ctx => CustomEvents.FirePickUp(true);
+        _input.Player.PickUp.canceled -= ctx => CustomEvents.FirePickUp(false);
     }
 }

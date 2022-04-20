@@ -145,7 +145,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: 2Hand-Axe-Attack4
+  m_Name: Hand-Axe-Attack4
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -172,7 +172,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: 2Hand-Axe-Death1
+  m_Name: Hand-Axe-Death
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -368,7 +368,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: 2Hand-Axe-Attack1
+  m_Name: Hand-Axe-Attack1
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -449,7 +449,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: 2Hand-Axe-Attack5
+  m_Name: Hand-Axe-Attack5
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -498,7 +498,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: 2Hand-Axe-Attack6
+  m_Name: Hand-Axe-Attack6
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -525,7 +525,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: 2Hand-Axe-Attack2
+  m_Name: Hand-Axe-Attack2
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -602,7 +602,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: 2Hand-Axe-Attack3
+  m_Name: Hand-Axe-Attack3
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:

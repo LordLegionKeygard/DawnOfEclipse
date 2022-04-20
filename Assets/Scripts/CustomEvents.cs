@@ -103,4 +103,10 @@ public class CustomEvents
     {
         OnCameraCanMove?.Invoke(state);
     }
+
+    public static Action<bool> OnPickUp;
+    public static void FirePickUp(bool state)
+    {
+        OnPickUp?.Invoke(state);
+    }
 }

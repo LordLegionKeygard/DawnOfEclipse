@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class PlayerMovement : CharacterManager
 {
+    private PlayerAnimatorManager _playerAnimatorManager;
     private PlayerInputController _playerInputController;
     private PotionsControl _potionsControl;
     private Animator _animator;
@@ -27,8 +28,9 @@ public class PlayerMovement : CharacterManager
         CustomEvents.OnCanWalk += CanWalkToggle;
     }
 
-    private void Start()
+    private void Awake()
     {
+        _playerAnimatorManager = GetComponent<PlayerAnimatorManager>();
         _characterController = GetComponent<CharacterController>();
         _potionsControl = GetComponent<PotionsControl>();
         _playerInputController = GetComponent<PlayerInputController>();
@@ -77,12 +79,7 @@ public class PlayerMovement : CharacterManager
                 _velocityMove -= Time.deltaTime * deceleration;
             }
         }
-        Speeding();
-    }
-
-    public void Speeding()
-    {
-        _animator.SetFloat(PlayerAnimatorManager.Speed, _velocityMove);
+        _animator.SetFloat(_playerAnimatorManager.Speed, _velocityMove);
     }
 
     private void CanWalkToggle(bool state)

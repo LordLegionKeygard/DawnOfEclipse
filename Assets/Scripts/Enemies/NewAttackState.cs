@@ -12,6 +12,8 @@ public class NewAttackState : NewState
     public EnemyAttackAction[] enemyAttacks;
     public override NewState Tick(NewEnemyManager newEnemyManager, EnemyStats enemyStats, NewEnemyAnimatorManager newEnemyAnimatorManager)
     {
+        Vector3 targetDirection = _aiDestinationSetter.CurrentTarget.transform.position - transform.position;
+        float viewableAngle = Vector3.Angle(targetDirection, transform.forward);
         float distanceFromTarget = Vector3.Distance(_aiDestinationSetter.CurrentTarget.transform.position, newEnemyManager.transform.position);
 
         if (!newEnemyManager.IsCanAttack)
@@ -25,7 +27,10 @@ public class NewAttackState : NewState
             }
             else if (distanceFromTarget < currentAttack.MaximumDistanceNeededToAttack)
             {
+                if (viewableAngle <= currentAttack.MaximumAttackAngle &&
+                    viewableAngle >= currentAttack.MinimumAttackAngle)
                 {
+
                     if (newEnemyManager.currentRecoveryTime <= 0 && newEnemyManager.IsCanAttack)
                     {
                         newEnemyAnimatorManager.PlayerTargetAnimation(currentAttack.actionAnimation);
@@ -35,6 +40,7 @@ public class NewAttackState : NewState
                         currentAttack = null;
                         return _newCombatStanceState;
                     }
+
                 }
             }
         }
@@ -48,6 +54,8 @@ public class NewAttackState : NewState
     private void GetNewAttack(NewEnemyManager newEnemyManager)
     {
         newEnemyManager.ResetChaseTimer();
+        Vector3 targetsDirection = _aiDestinationSetter.CurrentTarget.transform.position - transform.position;
+        float viewableAngle = Vector3.Angle(targetsDirection, transform.forward);
         float distanceFromTarget = Vector3.Distance(_aiDestinationSetter.CurrentTarget.transform.position, transform.position);
 
         int maxScore = 0;
@@ -59,6 +67,8 @@ public class NewAttackState : NewState
             if (distanceFromTarget <= enemyAttackAction.MaximumDistanceNeededToAttack
                 && distanceFromTarget >= enemyAttackAction.MinimumDistanceNeededToAttack)
             {
+                if (viewableAngle <= enemyAttackAction.MaximumAttackAngle
+                    && viewableAngle >= enemyAttackAction.MinimumAttackAngle)
                 {
                     maxScore += enemyAttackAction.AttackScore;
                 }
@@ -75,6 +85,8 @@ public class NewAttackState : NewState
             if (distanceFromTarget <= enemyAttackAction.MaximumDistanceNeededToAttack
                 && distanceFromTarget >= enemyAttackAction.MinimumDistanceNeededToAttack)
             {
+                if (viewableAngle <= enemyAttackAction.MaximumAttackAngle
+                    && viewableAngle >= enemyAttackAction.MinimumAttackAngle)
                 {
                     if (currentAttack != null)
                         return;

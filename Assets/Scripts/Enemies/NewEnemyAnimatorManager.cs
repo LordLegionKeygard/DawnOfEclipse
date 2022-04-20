@@ -6,6 +6,8 @@ using Pathfinding;
 public class NewEnemyAnimatorManager : VersionedMonoBehaviour
 {
     [SerializeField] private Collider _damageCollider;
+
+    private AIDestinationSetter _aiDestionationSetter;
     private Animator _animator;
     private IAstarAI _ai;
     private Transform _transform;
@@ -16,11 +18,13 @@ public class NewEnemyAnimatorManager : VersionedMonoBehaviour
         _ai = GetComponent<IAstarAI>();
         _animator = GetComponent<Animator>();
         _transform = GetComponent<Transform>();
+        _aiDestionationSetter = GetComponent<AIDestinationSetter>();
     }
 
     public void PlayerTargetAnimation(string targetAnim)
     {
         _animator.SetTrigger(targetAnim.ToString());
+        _aiDestionationSetter._canWalk = false;
     }
     protected void Update()
     {

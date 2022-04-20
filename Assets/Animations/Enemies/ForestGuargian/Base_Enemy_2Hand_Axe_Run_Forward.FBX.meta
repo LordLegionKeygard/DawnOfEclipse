@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 39c1e8b66fab3ba418b191caaf714f42
+guid: 81ab5976dd7b302458e91569714fd735
 ModelImporter:
   serializedVersion: 21100
   internalIDToNameTable:
@@ -317,6 +317,9 @@ ModelImporter:
     second: RPG-Character-Mesh
   - first:
       1: 100208
+    second: 2Hand-Axe
+  - first:
+      1: 100210
     second: Exporter
   - first:
       4: 400000
@@ -632,6 +635,9 @@ ModelImporter:
     second: RPG-Character-Mesh
   - first:
       4: 400208
+    second: 2Hand-Axe
+  - first:
+      4: 400210
     second: Exporter
   - first:
       23: 2300000
@@ -649,6 +655,9 @@ ModelImporter:
       23: 2300008
     second: USP
   - first:
+      23: 2300010
+    second: 2Hand-Axe
+  - first:
       33: 3300000
     second: Mesh_Soldier_A
   - first:
@@ -663,6 +672,9 @@ ModelImporter:
   - first:
       33: 3300008
     second: USP
+  - first:
+      33: 3300010
+    second: 2Hand-Axe
   - first:
       43: 4300000
     second: Mesh_Soldier_A
@@ -685,11 +697,11 @@ ModelImporter:
       43: 4300012
     second: RPG-Character-Mesh
   - first:
-      74: 7400000
-    second: Base_Jump
+      43: 4300014
+    second: 2Hand-Axe
   - first:
-      74: 7400002
-    second: Base_Land
+      74: 7400000
+    second: 2Hand-Axe-Run-Forward
   - first:
       95: 9500000
     second: //RootNode
@@ -716,7 +728,7 @@ ModelImporter:
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
-    motionNodeName: 
+    motionNodeName: Motion
     rigImportErrors: 
     rigImportWarnings: 
     animationImportErrors: 
@@ -724,8 +736,19 @@ ModelImporter:
       might lower retargeting quality:\nNote: Activate translation DOF on avatar
       to improve retargeting quality.\n\t'B_Spine' has translation animation that
       will be discarded.\n"
-    animationRetargetingWarnings: 
-    animationDoRetargetingWarnings: 0
+    animationRetargetingWarnings: "\nRetargeting quality report for clip 'Take 001':\n\tLeftLowerLeg
+      average position error 0.9 mm and maximum position error 10.9 mm at time 0:
+      1 (4.2%) Frame 1\n\tLeftUpperArm average position error 5.4 mm and maximum
+      position error 15.5 mm at time 0: 9 (37.5%) Frame 9\n\tLeftLowerArm average
+      position error 5.4 mm and maximum position error 15.5 mm at time 0: 9 (37.5%)
+      Frame 9\n\tLeftHand average position error 5.4 mm and maximum position error
+      15.5 mm at time 0: 9 (37.5%) Frame 9\n\tRightUpperArm average position error
+      5.4 mm and maximum position error 15.5 mm at time 0: 9 (37.5%) Frame 9\n\tRightLowerArm
+      average position error 5.4 mm and maximum position error 15.6 mm at time 0:
+      9 (37.5%) Frame 9\n\tRightHand average position error 5.4 mm and maximum position
+      error 15.5 mm at time 0: 9 (37.5%) Frame 9\n\tHead average position error 5.4
+      mm and maximum position error 15.5 mm at time 0: 9 (37.5%) Frame 9\n"
+    animationDoRetargetingWarnings: 1
     importAnimatedCustomProperties: 0
     importConstraints: 0
     animationCompression: 3
@@ -737,51 +760,22 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Base_Jump
+      name: 2Hand-Axe-Run-Forward
       takeName: Take 001
       internalID: 7400000
-      firstFrame: 1
-      lastFrame: 20
+      firstFrame: 0
+      lastFrame: 24
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
+      loopTime: 1
+      loopBlend: 1
       loopBlendOrientation: 1
       loopBlendPositionY: 1
       loopBlendPositionXZ: 0
-      keepOriginalOrientation: 1
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 1
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {fileID: 101100000, guid: 3e4e408fdcc93ee468a1275b69104d63, type: 2}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
-      name: Base_Land
-      takeName: Take 001
-      internalID: 7400002
-      firstFrame: 21
-      lastFrame: 30.1
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 1
-      loopBlendPositionY: 1
-      loopBlendPositionXZ: 1
       keepOriginalOrientation: 1
       keepOriginalPositionY: 1
       keepOriginalPositionXZ: 1
@@ -822,7 +816,7 @@ ModelImporter:
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
-    secondaryUVMarginMethod: 1
+    secondaryUVMarginMethod: 0
     secondaryUVMinLightmapResolution: 40
     secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
@@ -832,7 +826,7 @@ ModelImporter:
     normalImportMode: 2
     tangentImportMode: 2
     normalCalculationMode: 0
-    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
     blendShapeNormalImportMode: 2
     normalSmoothingSource: 0
   referencedClips: []

@@ -4,15 +4,8 @@ using UnityEngine;
 
 public class WeaponTimeCooldown : MonoBehaviour
 {
-    private PlayerInputController _playerInputController;
-    private FistDamageColliderController _fistDamageColliderController;
-
-
-    private void Awake()
-    {
-        _playerInputController = GetComponent<PlayerInputController>();
-        _fistDamageColliderController = GetComponent<FistDamageColliderController>();
-    }
+    [SerializeField] private PlayerInputController _playerInputController;
+    [SerializeField] private FistDamageColliderController _fistDamageColliderController;
 
     public void NoWeapon()
     {

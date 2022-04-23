@@ -43,9 +43,9 @@ public class MobSpawner : MonoBehaviour
         }
     }
 
-    // private void OnDrawGizmosSelected()
-    // {
-    //     Gizmos.color = Color.yellow;
-    //     Gizmos.DrawSphere(transform.position, detectionRadius);
-    // }
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawSphere(transform.position, _detectionRadius);
+    }
 }

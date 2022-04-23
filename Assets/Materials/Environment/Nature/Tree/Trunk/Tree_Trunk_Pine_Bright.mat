@@ -209,7 +209,7 @@ Material:
     m_Colors:
     - Color_369F793F: {r: 1, g: 1, b: 1, a: 0}
     - Color_FA85148A: {r: 0, g: 0, b: 0, a: 0}
-    - _BaseColor: {r: 0.4056604, g: 0.35941768, b: 0.23918656, a: 1}
+    - _BaseColor: {r: 0.31132078, g: 0.27555245, b: 0.17475082, a: 1}
     - _BendTint: {r: 0, g: 0, b: 0, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _ColorTint: {r: 1, g: 1, b: 1, a: 0}

@@ -11,6 +11,7 @@ TagManager:
   - CoinPurse
   - NPC
   - Collide
+  - Animation
   layers:
   - Default
   - TransparentFX

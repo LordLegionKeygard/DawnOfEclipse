@@ -56,8 +56,21 @@ public class InventorySlot : Slots
         Inventory.InventoryStatic.RemoveItemFromInventoryList(Item, _numberSlot);
         ClearSlot();
     }
+
+    private bool CheckRace()
+    {
+        if(CharacterInformation.Race == 0 && Item.ItemType[0] == "Headgear" || Item.ItemType[0] == "Boots")
+        {
+            Debug.Log("Satyr can't use helmets or boots");
+            return false;
+        } 
+        Debug.Log("fuck");
+        return true;
+    }
     public void UseItem()
     {
+        if(!CheckRace()) return;
+
         CustomEvents.FireSelectItem(false);
         CustomEvents.FireTooltipToggle(false);
         _dropItemButton.SetActive(false);

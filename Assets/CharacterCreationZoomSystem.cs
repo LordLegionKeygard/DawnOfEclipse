@@ -9,12 +9,21 @@ public class CharacterCreationZoomSystem : MonoBehaviour
     [SerializeField] private GameObject _plus;
     private bool _zoomIn;
 
+    private float _zoomTime = 2f;
+
     private void Update()
     {
         if (_zoomIn)
-            _camera.transform.position = Vector3.Lerp(_camera.transform.position, _markers[1], Time.deltaTime * 2f);
+            _camera.transform.position = Vector3.Lerp(_camera.transform.position, _markers[1], Time.deltaTime * _zoomTime);
         else
-            _camera.transform.position = Vector3.Lerp(_camera.transform.position, _markers[0], Time.deltaTime * 2f);
+            _camera.transform.position = Vector3.Lerp(_camera.transform.position, _markers[0], Time.deltaTime * _zoomTime);
+    }
+
+    public void CameraBack()
+    {
+        _zoomIn = true;
+        _markers[1] = _markers[2];
+        _zoomTime = 0.5f;
     }
 
     public void ZoomToggle()

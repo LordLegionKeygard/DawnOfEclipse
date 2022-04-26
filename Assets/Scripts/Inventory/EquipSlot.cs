@@ -46,7 +46,7 @@ public class EquipSlot : Slots
         {
             case 0:
                 _armorControl.HeadSlotArmor = 0;
-                _equipmentManager.ActiveAllHeadElements(0);
+                _equipmentManager.AllHeadElementsToggle(true);
                 _equipmentManager.InActiveAllHeadAttachment();
                 break;
             case 1:
@@ -207,25 +207,25 @@ public class EquipSlot : Slots
             case EquipmentSlot.Hips:
                 SelectItemInfo._itemText[11].color = color;
                 break;
-            case EquipmentSlot.LegLeft:
+            case EquipmentSlot.Legs:
                 SelectItemInfo._itemText[13].color = color;
                 break;
-            case EquipmentSlot.ShoulderLeft:
+            case EquipmentSlot.Shoulders:
                 SelectItemInfo._itemText[5].color = color;
                 break;
-            case EquipmentSlot.ArmUpperLeft:
+            case EquipmentSlot.ArmUppers:
                 SelectItemInfo._itemText[7].color = color;
                 break;
-            case EquipmentSlot.ArmLowerLeft:
+            case EquipmentSlot.ArmLowers:
                 SelectItemInfo._itemText[9].color = color;
                 break;
-            case EquipmentSlot.ElbowLeft:
+            case EquipmentSlot.Elbows:
                 SelectItemInfo._itemText[8].color = color;
                 break;
-            case EquipmentSlot.HandLeft:
+            case EquipmentSlot.Hands:
                 SelectItemInfo._itemText[10].color = color;
                 break;
-            case EquipmentSlot.KneeLeft:
+            case EquipmentSlot.Knees:
                 SelectItemInfo._itemText[12].color = color;
                 break;
         }

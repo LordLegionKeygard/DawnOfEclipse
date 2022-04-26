@@ -34,8 +34,10 @@ MonoBehaviour:
   armorModifier: 4
   MagicArmorModifier: 0
   Meshes:
-  - {fileID: 7737027158091597231, guid: 55aa92f56b85ffc499e719d40a74db5e, type: 3}
-  - {fileID: 8124857637002063396, guid: 0cb9a90caca86b340862ea1a5f59c686, type: 3}
+  - {fileID: 7737027158091597231, guid: d90827760fcb3e4469b2eb5e5630af80, type: 3}
+  - {fileID: 8124857637002063396, guid: 025f2dfd574a8724a9e0ec38ffc116c5, type: 3}
+  - {fileID: 7737027158091597231, guid: d90827760fcb3e4469b2eb5e5630af80, type: 3}
+  - {fileID: 8124857637002063396, guid: 025f2dfd574a8724a9e0ec38ffc116c5, type: 3}
   prefab: {fileID: 0}
   hatNumber: 0
   noHair: 0

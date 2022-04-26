@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
+  m_Name: Chr_Legs_19_Item_PlatedLeather
+  m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: 3b3db282421e9f746a22cf5b4f6ba1d3, type: 3}
+  Price: 250
+  IsDefaultItem: 0
+  IsStackable: 0
+  IsUsedItem: 0
+  IsSetEffect: 1
+  Name:
+  - Plated Leather Boots
+  - "\u041B\u0430\u0442\u043D\u044B\u0435 \u041A\u043E\u0436\u0430\u043D\u044B\u0435
+    \u0421\u0430\u043F\u043E\u0433\u0438"
+  ItemType:
+  - Boots
+  - "\u0421\u0430\u043F\u043E\u0433\u0438"
+  ItemInfo:
+  - 'P. Def. : 4'
+  - "\u0424\u0438\u0437. \u0417\u0430\u0449. : 4"
+  ArmorSetEnum: 12
+  AllArmorSetInfo: {fileID: 11400000, guid: 576352ffa1b746b4c872fd49153b9308, type: 2}
+  equipSlot: 4
+  armorModifier: 4
+  MagicArmorModifier: 0
+  Meshes:
+  - {fileID: 5162142188130540641, guid: 486af0412f1529c4ca8cd431e49d0453, type: 3}
+  - {fileID: 3092929759128288430, guid: 9fa93b3fe20274d4794cdc95d1ad790f, type: 3}
+  - {fileID: 5162142188130540641, guid: 8f7dc819fc939f0419d3c0b2853ca709, type: 3}
+  - {fileID: 3092929759128288430, guid: 8c902bd96848cb648860a8c6ad24ad24, type: 3}
+  prefab: {fileID: 0}
+  hatNumber: 0
+  noHair: 0
+  canChangehead: 0
+  weapon: 0
+  twoHandedWeapon: 0
+  shield: 0
+  shieldBlockArmorModifier: 0
+  FirstAttachmentNumber: 0
+  SecondAttachmentNumber: 0

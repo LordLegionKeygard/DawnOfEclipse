@@ -10,13 +10,13 @@ public class ArmorControl : MonoBehaviour
     public int CurrentArmor = 0;
     public int TorsoArmor;
     public int HandRightArmor;
-    public int HandLeftArmor;
+    public int HandsArmor;
     public int ArmUpperRightArmor;
     public int ArmUpperLeftArmor;
     public int ArmLowerRightArmor;
     public int ArmLowerLeftArmor;
     public int HipsArmor;
-    public int LegLeftArmor;
+    public int LegsArmor;
     public int LegRightArmor;
     public int ShoulderLeftArmor;
     public int ShoulderRightArmor;
@@ -63,13 +63,13 @@ public class ArmorControl : MonoBehaviour
     {
         CurrentArmor = TorsoArmor +
         HandRightArmor +
-        HandLeftArmor +
+        HandsArmor +
         ArmUpperRightArmor +
         ArmUpperLeftArmor +
         ArmLowerRightArmor +
         ArmLowerLeftArmor +
         HipsArmor +
-        LegLeftArmor +
+        LegsArmor +
         LegRightArmor +
         ShoulderLeftArmor +
         ShoulderRightArmor +

@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
+  m_Name: Chr_Legs_20_Item_Archer
+  m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: 17af24948ddaf544dbfefd1f0a374278, type: 3}
+  Price: 250
+  IsDefaultItem: 0
+  IsStackable: 0
+  IsUsedItem: 0
+  IsSetEffect: 1
+  Name:
+  - Archer Boots
+  - "\u0421\u0430\u043F\u043E\u0433\u0438 \u041B\u0443\u0447\u043D\u0438\u043A\u0430"
+  ItemType:
+  - Boots
+  - "\u0421\u0430\u043F\u043E\u0433\u0438"
+  ItemInfo:
+  - 'P. Def. : 3'
+  - "\u0424\u0438\u0437. \u0417\u0430\u0449. : 3"
+  ArmorSetEnum: 10
+  AllArmorSetInfo: {fileID: 11400000, guid: 576352ffa1b746b4c872fd49153b9308, type: 2}
+  equipSlot: 4
+  armorModifier: 3
+  MagicArmorModifier: 0
+  Meshes:
+  - {fileID: 3744370270508535933, guid: 16f858f5bbd2b05458e01823cdfaa19a, type: 3}
+  - {fileID: 5011324708549398636, guid: 703d9fe15d1f60f49bb39e523c04e710, type: 3}
+  - {fileID: 3744370270508535933, guid: e7819dc8339fc3847b254629f0463ec9, type: 3}
+  - {fileID: 5011324708549398636, guid: 24f77ff0aa6066f4c9f4fd543056dd51, type: 3}
+  prefab: {fileID: 0}
+  hatNumber: 0
+  noHair: 0
+  canChangehead: 0
+  weapon: 0
+  twoHandedWeapon: 0
+  shield: 0
+  shieldBlockArmorModifier: 0
+  FirstAttachmentNumber: 0
+  SecondAttachmentNumber: 0

@@ -35,6 +35,8 @@ MonoBehaviour:
   Meshes:
   - {fileID: 2345786233353256310, guid: 62707e485bfc7e143b48571367ac65bd, type: 3}
   - {fileID: 4861645037279885888, guid: e01599f6ec7cbe64b95b99919a99ee7a, type: 3}
+  - {fileID: 2345786233353256310, guid: ba8dbc7551d3f2c44a6ddf3b541a1a48, type: 3}
+  - {fileID: 4861645037279885888, guid: 8390e0584adc139448b9610d0a89d83a, type: 3}
   prefab: {fileID: 0}
   hatNumber: 0
   noHair: 0

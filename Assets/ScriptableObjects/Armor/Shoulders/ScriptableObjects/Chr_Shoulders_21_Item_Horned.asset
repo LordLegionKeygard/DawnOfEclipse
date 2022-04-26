@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
+  m_Name: Chr_Shoulders_21_Item_Horned
+  m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: 3f2d6d3ebe4e6dd42958a16a1e34ec4b, type: 3}
+  Price: 250
+  IsDefaultItem: 0
+  IsStackable: 0
+  IsUsedItem: 0
+  IsSetEffect: 1
+  Name:
+  - Horned Shoulders
+  - "\u0420\u043E\u0433\u0430\u0442\u044B\u0435 \u041D\u0430\u043F\u043B\u0435\u0447\u043D\u0438\u043A\u0438"
+  ItemType:
+  - Shoulders
+  - "\u041D\u0430\u043F\u043B\u0435\u0447\u043D\u0438\u043A\u0438"
+  ItemInfo:
+  - 'P. Def. : 10'
+  - "\u0424\u0438\u0437. \u0417\u0430\u0449. : 10"
+  ArmorSetEnum: 16
+  AllArmorSetInfo: {fileID: 11400000, guid: 576352ffa1b746b4c872fd49153b9308, type: 2}
+  equipSlot: 13
+  armorModifier: 10
+  MagicArmorModifier: 0
+  Meshes:
+  - {fileID: 8145132933299515497, guid: 637aa9814ad3fff4ba2c97cc0927c6c3, type: 3}
+  - {fileID: 8957802575627189696, guid: 6ffdbb7cc43908449b0bc95fa37bfe3e, type: 3}
+  prefab: {fileID: 0}
+  hatNumber: 0
+  noHair: 0
+  canChangehead: 0
+  weapon: 0
+  twoHandedWeapon: 0
+  shield: 0
+  shieldBlockArmorModifier: 0
+  FirstAttachmentNumber: 0
+  SecondAttachmentNumber: 0

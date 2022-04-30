@@ -19,8 +19,8 @@ MonoBehaviour:
   IsUsedItem: 0
   IsSetEffect: 0
   Name:
-  - Shield
-  - "\u0429\u0438\u0442"
+  - Name
+  - "\u041D\u0430\u0437\u0432\u0430\u043D\u0438\u0435"
   ItemType:
   - Shield
   - "\u0429\u0438\u0442"

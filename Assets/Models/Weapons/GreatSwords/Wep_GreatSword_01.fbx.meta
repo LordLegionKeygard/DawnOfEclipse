@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 2221a18cfc36ca7448f6f50bc66b151b
-timeCreated: 1505961317
+guid: e2f77c2fb4cfd2d448dfde6939fd0c05
+timeCreated: 1505961319
 licenseType: Store
 ModelImporter:
   serializedVersion: 18
@@ -9,7 +9,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: SM_Wep_GreatSword_01
+    4300000: SM_Wep_Crystal_DoubleSword_01
     9500000: //RootNode
   materials:
     importMaterials: 0

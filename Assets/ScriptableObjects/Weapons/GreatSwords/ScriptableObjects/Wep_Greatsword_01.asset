@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
-  m_Name: Wep_Greatsword_01
+  m_Name: Wep_GreatSword_01
   m_EditorClassIdentifier: 
-  icon: {fileID: 21300000, guid: bd009f68082bf7c41ac0031276ea43e6, type: 3}
+  icon: {fileID: 21300000, guid: 0f7d3e95da40d0b4b93a02d943685f47, type: 3}
   Price: 250
   IsDefaultItem: 0
   IsStackable: 0
@@ -33,7 +33,7 @@ MonoBehaviour:
   armorModifier: 0
   MagicArmorModifier: 0
   Meshes: []
-  prefab: {fileID: 3647335524913097383, guid: 44372e2ee17f9e64db797ff233472040, type: 3}
+  prefab: {fileID: 735520581708882361, guid: d2018ad0d63990b4380415474c28c0c2, type: 3}
   hatNumber: 0
   noHair: 0
   canChangehead: 0

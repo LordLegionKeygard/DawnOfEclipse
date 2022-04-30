@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3843043522579905449
+--- !u!1 &4186728577871829182
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,12 +8,12 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3838012331164344459}
-  - component: {fileID: 3829202215957978289}
-  - component: {fileID: 3821295181362370293}
-  - component: {fileID: 3843043522579905450}
-  - component: {fileID: 3843043522579905451}
-  - component: {fileID: 3843043522579905448}
+  - component: {fileID: 4182869299261692842}
+  - component: {fileID: 4209255228661324162}
+  - component: {fileID: 4201405562814681016}
+  - component: {fileID: 4186728577871829181}
+  - component: {fileID: 4186728577871829180}
+  - component: {fileID: 4186728577871829183}
   m_Layer: 11
   m_Name: Shield_19_Drop
   m_TagString: DropItem
@@ -21,35 +21,35 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3838012331164344459
+--- !u!4 &4182869299261692842
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3843043522579905449}
+  m_GameObject: {fileID: 4186728577871829182}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -22.31, y: -3.07, z: 24.17}
+  m_LocalPosition: {x: -16.71, y: -3.07, z: 25.45}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
---- !u!33 &3829202215957978289
+--- !u!33 &4209255228661324162
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3843043522579905449}
-  m_Mesh: {fileID: 4300000, guid: 3ebdc9c6e2e76184fb7714a222a4faf6, type: 3}
---- !u!23 &3821295181362370293
+  m_GameObject: {fileID: 4186728577871829182}
+  m_Mesh: {fileID: 4300000, guid: 774a945d41bcda04a96d11fbdad34d8a, type: 3}
+--- !u!23 &4201405562814681016
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3843043522579905449}
+  m_GameObject: {fileID: 4186728577871829182}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -85,26 +85,26 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &3843043522579905450
+--- !u!65 &4186728577871829181
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3843043522579905449}
+  m_GameObject: {fileID: 4186728577871829182}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.6684103, y: 1.1027027, z: 0.2198332}
-  m_Center: {x: 0.00000008940697, y: -0.15663779, z: 0.009552393}
---- !u!54 &3843043522579905451
+  m_Size: {x: 0.67971253, y: 0.67971253, z: 0.22309938}
+  m_Center: {x: 0, y: 0, z: 0.03973748}
+--- !u!54 &4186728577871829180
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3843043522579905449}
+  m_GameObject: {fileID: 4186728577871829182}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -114,16 +114,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &3843043522579905448
+--- !u!114 &4186728577871829183
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3843043522579905449}
+  m_GameObject: {fileID: 4186728577871829182}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b18e0cc9fc8e9ce4889e0e7fced1cd6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _item: {fileID: 11400000, guid: e228733ca32b5134094843baf1232698, type: 2}
+  _item: {fileID: 11400000, guid: 91d3d5f809d900c4f959fb92774cf5e2, type: 2}

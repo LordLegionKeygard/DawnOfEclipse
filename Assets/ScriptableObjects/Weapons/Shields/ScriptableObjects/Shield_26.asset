@@ -12,37 +12,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
   m_Name: Shield_26
   m_EditorClassIdentifier: 
-  icon: {fileID: 21300000, guid: beb1de72d7fd142469945aa79b4eb48b, type: 3}
+  icon: {fileID: 21300000, guid: 16543acf823a3ba498c8fa78bb9671de, type: 3}
   Price: 250
   IsDefaultItem: 0
   IsStackable: 0
   IsUsedItem: 0
   IsSetEffect: 0
   Name:
-  - Shield
-  - "\u0429\u0438\u0442"
+  - Name
+  - "\u041D\u0430\u0437\u0432\u0430\u043D\u0438\u0435"
   ItemType:
   - Shield
   - "\u0429\u0438\u0442"
   ItemInfo:
-  - 'P. Def. : 26
+  - 'P. Def. : 7
 
-    Block P. Def. : 80'
-  - "\u0424\u0438\u0437. \u0417\u0430\u0449. : 26\n\u0411\u043B\u043E\u043A. \u0424\u0438\u0437.
-    \u0417\u0430\u0449. : 80"
+    Block P. Def. : 20'
+  - "\u0424\u0438\u0437. \u0417\u0430\u0449. : 7\n\u0411\u043B\u043E\u043A. \u0424\u0438\u0437.
+    \u0417\u0430\u0449. : 20"
   ArmorSetEnum: 0
   AllArmorSetInfo: {fileID: 0}
   equipSlot: 21
-  armorModifier: 26
+  armorModifier: 7
   MagicArmorModifier: 0
   Meshes: []
-  prefab: {fileID: 7590110628063695654, guid: ee92315e9b6d18942b912a1f9d193150, type: 3}
+  prefab: {fileID: 4810094060622563414, guid: 79c11ff1d0ab41a4cab2f17fe88be797, type: 3}
   hatNumber: 0
   noHair: 0
   canChangehead: 0
   weapon: 0
   twoHandedWeapon: 0
   shield: 1
-  shieldBlockArmorModifier: 80
+  shieldBlockArmorModifier: 20
   FirstAttachmentNumber: 0
   SecondAttachmentNumber: 0

@@ -26,7 +26,7 @@ public class PlayerInputController : MonoBehaviour
     private bool _inputAttackR1;
     private bool _inputAttackR2;
     public bool IsRoll;
-    public bool CanNewAction;
+    private bool CanNewAction = true;
     private bool _isSneak;
     public bool IsFastRun;
     public bool IsAttack;
@@ -149,7 +149,7 @@ public class PlayerInputController : MonoBehaviour
             }
             else { _potionsControl.PotionSpeed = 5; }
         }
-        if (!isPressed)
+        if (!isPressed && !_isSneak)
         {
             _playerAnimatorManager.PlayerTargetAnimation(false, _playerAnimatorManager.Run, 0.3f, 4);
             _staminaControl.StaminaRun = false;
@@ -160,13 +160,14 @@ public class PlayerInputController : MonoBehaviour
 
     private void Roll()
     {
-        bool _canNewMove = !IsAttack && _isGround && !_isSneak && !IsBlock;
+        Debug.Log(CanNewAction);
+        bool _canNewMove = !IsAttack && _isGround && !IsBlock && CanNewAction;
         if (!IsFastRun && _staminaControl.CurrentStamina > 100 && _canNewMove)
         {
             CanNewAction = false;
             _playerAnimatorManager.PlayerTargetAnimation(true, _playerAnimatorManager.Roll, 0, 3);
             _playerAnimatorManager.PlayerTargetAnimation(false, _playerAnimatorManager.Roll, 0.5f, 3);
-            Invoke("CanNewActionAfterRoll", 1);
+            Invoke("CanNewActionAfterRoll", 1.3f);
         }
     }
 

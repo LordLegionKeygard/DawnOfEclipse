@@ -10,28 +10,30 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
-  m_Name: Wep_Straightsword_01
+  m_Name: Wep_StraightSword_01
   m_EditorClassIdentifier: 
-  icon: {fileID: 21300000, guid: 421c3af55486c5d45a4cca053722883d, type: 3}
+  icon: {fileID: 21300000, guid: 54163246dea03f74688384128eafd295, type: 3}
   Price: 250
   IsDefaultItem: 0
   IsStackable: 0
   IsUsedItem: 0
   IsSetEffect: 0
   Name:
-  - Sword
-  - "\u041C\u0435\u0447"
+  - Name
+  - "\u041D\u0430\u0437\u0432\u0430\u043D\u0438\u0435"
   ItemType:
   - Sword / One Handed
-  - "\u041C\u0435\u0447 / \u041E\u0434\u043D\u043E\u0440\u0443\u0447\u043D\u044B\u0439"
-  ItemInfo: []
+  - "\u041C\u0435\u0447 / \u041E\u0434\u043D\u043E\u0440\u0443\u0447\u043D\u043E\u0435"
+  ItemInfo:
+  - 'P. Atk.: 0'
+  - "\u0424\u0438\u0437. \u0410\u0442\u043A.: 0"
   ArmorSetEnum: 0
   AllArmorSetInfo: {fileID: 0}
   equipSlot: 20
   armorModifier: 0
   MagicArmorModifier: 0
   Meshes: []
-  prefab: {fileID: 7599926426883675731, guid: 0fe43250c0a17c448aa81abd8180306f, type: 3}
+  prefab: {fileID: 7498386525218404020, guid: cf2362c9ba0041241a0efc2569fc0eb6, type: 3}
   hatNumber: 0
   noHair: 0
   canChangehead: 0

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6204339728635892303
+--- !u!1 &7764172372515078967
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,12 +8,12 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6201618537052522645}
-  - component: {fileID: 6226459528755300707}
-  - component: {fileID: 6218408848149558089}
-  - component: {fileID: 6204339728635892300}
-  - component: {fileID: 6204339728635892301}
-  - component: {fileID: 6204339728635892302}
+  - component: {fileID: 7761894368486673949}
+  - component: {fileID: 7764612745355616569}
+  - component: {fileID: 7776956423318896945}
+  - component: {fileID: 7764172372515078952}
+  - component: {fileID: 7764172372515078953}
+  - component: {fileID: 7764172372515078966}
   m_Layer: 11
   m_Name: Shield_10_Drop
   m_TagString: DropItem
@@ -21,35 +21,35 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6201618537052522645
+--- !u!4 &7761894368486673949
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6204339728635892303}
+  m_GameObject: {fileID: 7764172372515078967}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -18.8, y: -3.07, z: 21.56}
+  m_LocalPosition: {x: -16.71, y: -3.07, z: 24.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
---- !u!33 &6226459528755300707
+--- !u!33 &7764612745355616569
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6204339728635892303}
-  m_Mesh: {fileID: 4300000, guid: 8daf1a3289f665e4e94eb97d005f8625, type: 3}
---- !u!23 &6218408848149558089
+  m_GameObject: {fileID: 7764172372515078967}
+  m_Mesh: {fileID: 4300000, guid: d5082547f74c00748ad796694496f30b, type: 3}
+--- !u!23 &7776956423318896945
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6204339728635892303}
+  m_GameObject: {fileID: 7764172372515078967}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -85,26 +85,26 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &6204339728635892300
+--- !u!65 &7764172372515078952
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6204339728635892303}
+  m_GameObject: {fileID: 7764172372515078967}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.694248, y: 0.6942482, z: 0.20668101}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &6204339728635892301
+  m_Size: {x: 0.90560746, y: 0.90560687, z: 0.17196605}
+  m_Center: {x: 0, y: 0.000000074505806, z: 0}
+--- !u!54 &7764172372515078953
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6204339728635892303}
+  m_GameObject: {fileID: 7764172372515078967}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -114,16 +114,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &6204339728635892302
+--- !u!114 &7764172372515078966
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6204339728635892303}
+  m_GameObject: {fileID: 7764172372515078967}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b18e0cc9fc8e9ce4889e0e7fced1cd6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _item: {fileID: 11400000, guid: 2a15aac4d66abc04bbd28ae60b897975, type: 2}
+  _item: {fileID: 11400000, guid: 7cefd71e080b2804ba358f3876fea6f1, type: 2}

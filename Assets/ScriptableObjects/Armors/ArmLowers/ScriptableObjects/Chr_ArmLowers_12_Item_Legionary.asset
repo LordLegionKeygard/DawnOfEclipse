@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
+  m_Name: Chr_ArmLowers_12_Item_Legionary
+  m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: d98d2de51e6017f4a8139b9f53ca5adb, type: 3}
+  Price: 250
+  IsDefaultItem: 0
+  IsStackable: 0
+  IsUsedItem: 0
+  IsSetEffect: 1
+  Name:
+  - Legionary Bracers
+  - "\u041D\u0430\u0440\u0443\u0447\u0438 \u041B\u0435\u0433\u0438\u043E\u043D\u0435\u0440\u0430"
+  ItemType:
+  - Arm lower
+  - "\u041D\u0438\u0436. \u0447\u0430\u0441\u0442\u044C \u0440\u0443\u043A\u0438"
+  ItemInfo:
+  - 'P. Def. : 16'
+  - "\u0424\u0438\u0437. \u0417\u0430\u0449. : 16"
+  ArmorSetEnum: 15
+  AllArmorSetInfo: {fileID: 11400000, guid: 576352ffa1b746b4c872fd49153b9308, type: 2}
+  equipSlot: 10
+  armorModifier: 16
+  MagicArmorModifier: 0
+  Meshes:
+  - {fileID: 6675679227122350928, guid: 21bfc377f845e3f4d9d62220994264be, type: 3}
+  - {fileID: 5450358085679144852, guid: 2489436a6d95774468ed26e6110160c5, type: 3}
+  - {fileID: 6675679227122350928, guid: b4a46a4bb8a8f2d49bdd1314d0fd75d4, type: 3}
+  - {fileID: 5450358085679144852, guid: 3ce346d3d2f382f4ba9f933fcacd1865, type: 3}
+  prefab: {fileID: 0}
+  hatNumber: 0
+  noHair: 0
+  canChangehead: 0
+  weapon: 0
+  twoHandedWeapon: 0
+  shield: 0
+  shieldBlockArmorModifier: 0
+  FirstAttachmentNumber: 0
+  SecondAttachmentNumber: 0

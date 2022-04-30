@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
+  m_Name: Chr_ArmLowers_10_Item_Demon
+  m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: c8ccbaae4b9af6f44bc0ce04507a9c68, type: 3}
+  Price: 250
+  IsDefaultItem: 0
+  IsStackable: 0
+  IsUsedItem: 0
+  IsSetEffect: 1
+  Name:
+  - Demon Bracers
+  - "\u0414\u0435\u043C\u043E\u043D\u0438\u0447\u0435\u0441\u043A\u0438\u0435 \u041D\u0430\u0440\u0443\u0447\u0438"
+  ItemType:
+  - Arm lower
+  - "\u041D\u0438\u0436. \u0447\u0430\u0441\u0442\u044C \u0440\u0443\u043A\u0438"
+  ItemInfo:
+  - 'P. Def. : 9'
+  - "\u0424\u0438\u0437. \u0417\u0430\u0449. : 9"
+  ArmorSetEnum: 21
+  AllArmorSetInfo: {fileID: 11400000, guid: 576352ffa1b746b4c872fd49153b9308, type: 2}
+  equipSlot: 10
+  armorModifier: 9
+  MagicArmorModifier: 0
+  Meshes:
+  - {fileID: 7883216210068741216, guid: d36f97d751f2fa147a9bd5455c69e708, type: 3}
+  - {fileID: 5787243198863453222, guid: 187137b83ca00c145997fb5824c26651, type: 3}
+  - {fileID: 7883216210068741216, guid: 7c6deb50a7da4b9428e036148f1333cd, type: 3}
+  - {fileID: 5787243198863453222, guid: 2ca4baf2bc324404e8b1d237487c1b2e, type: 3}
+  prefab: {fileID: 0}
+  hatNumber: 0
+  noHair: 0
+  canChangehead: 0
+  weapon: 0
+  twoHandedWeapon: 0
+  shield: 0
+  shieldBlockArmorModifier: 0
+  FirstAttachmentNumber: 0
+  SecondAttachmentNumber: 0

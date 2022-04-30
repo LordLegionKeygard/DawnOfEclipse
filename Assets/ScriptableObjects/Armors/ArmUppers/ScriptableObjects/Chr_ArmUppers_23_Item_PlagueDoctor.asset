@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
+  m_Name: Chr_ArmUppers_23_Item_PlagueDoctor
+  m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: 359295bd470730c488fe84919a33e11c, type: 3}
+  Price: 250
+  IsDefaultItem: 0
+  IsStackable: 0
+  IsUsedItem: 0
+  IsSetEffect: 1
+  Name:
+  - Plague Doctor Forearms
+  - "\u041F\u0440\u0435\u0434\u043F\u043B\u0435\u0447\u043D\u0438\u043A\u0438 \u0427\u0443\u043C\u043D\u043E\u0433\u043E
+    \u0414\u043E\u043A\u0442\u043E\u0440\u0430"
+  ItemType:
+  - Arm upper
+  - "\u0412\u0435\u0440\u0445. \u0447\u0430\u0441\u0442\u044C \u0440\u0443\u043A\u0438"
+  ItemInfo:
+  - 'P. Def. : 4'
+  - "\u0424\u0438\u0437. \u0417\u0430\u0449. : 4"
+  ArmorSetEnum: 6
+  AllArmorSetInfo: {fileID: 11400000, guid: 576352ffa1b746b4c872fd49153b9308, type: 2}
+  equipSlot: 8
+  armorModifier: 4
+  MagicArmorModifier: 0
+  Meshes:
+  - {fileID: 2049716478299212711, guid: 38e8083383c60c748baf1f9646107491, type: 3}
+  - {fileID: 8794781658331071199, guid: dfeb6b7f68e4dbc4d8009434cc59e3ff, type: 3}
+  - {fileID: 2049716478299212711, guid: 4f2264aefe16b2348a9499254d696b83, type: 3}
+  - {fileID: 8794781658331071199, guid: bae1050edfb774044a237859ed26b1a3, type: 3}
+  prefab: {fileID: 0}
+  hatNumber: 0
+  noHair: 0
+  canChangehead: 0
+  weapon: 0
+  twoHandedWeapon: 0
+  shield: 0
+  shieldBlockArmorModifier: 0
+  FirstAttachmentNumber: 0
+  SecondAttachmentNumber: 0

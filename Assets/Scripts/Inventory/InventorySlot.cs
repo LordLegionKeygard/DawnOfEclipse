@@ -64,7 +64,11 @@ public class InventorySlot : Slots
             Debug.Log("Satyr can't use helmets or boots");
             return false;
         } 
-        Debug.Log("fuck");
+        if(CharacterInformation.Race == 1 && Item.ItemType[0] == "Headgear" || Item.ItemType[0] == "Boots")
+        {
+            Debug.Log("Mushroom can't use helmets or boots");
+            return false;
+        } 
         return true;
     }
     public void UseItem()
@@ -158,7 +162,6 @@ public class InventorySlot : Slots
 
     private void ResetSetEffectTextColor()
     {
-        Debug.Log("ResetColor");
         for (int i = 4; i < SelectItemInfo._itemText.Length; i++)
         {
             SelectItemInfo._itemText[i].color = new Color(0.254902f, 0.254902f, 0.2509804f, 1);

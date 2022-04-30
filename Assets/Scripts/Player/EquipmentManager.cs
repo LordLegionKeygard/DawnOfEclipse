@@ -231,6 +231,7 @@ public class EquipmentManager : MonoBehaviour
             _equipSlot[equipSlotNumber].Icon.sprite = equipItem.icon;
             _equipSlot[equipSlotNumber].EquipIcon();
             _equipSlot[equipSlotNumber].Item = equipItem;
+            Debug.Log("EquipSlotNumber = " + equipSlotNumber,_equipSlot[equipSlotNumber].Item);
         }
     }
 
@@ -376,7 +377,7 @@ public class EquipmentManager : MonoBehaviour
                 _equipSlot[19].Icon.sprite = item.icon;
                 _equipSlot[21].Icon.gameObject.GetComponentInParent<Button>().enabled = true;
                 _twoHandWeaponNow = false;
-                _equipSlot[20].EquipIcon();
+                EquipSlotAndIcon(20, item);
                 break;
             case EquipmentSlot.Shield:
                 if (_twoHandWeaponNow == true)

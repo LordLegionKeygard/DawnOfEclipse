@@ -109,4 +109,10 @@ public class CustomEvents
     {
         OnPickUp?.Invoke(state);
     }
+
+    public static Action OnCharacterCreate;
+    public static void FireCharacterCreate()
+    {
+        OnCharacterCreate?.Invoke();
+    }
 }

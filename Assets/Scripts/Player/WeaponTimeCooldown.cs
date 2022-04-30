@@ -29,7 +29,7 @@ public class WeaponTimeCooldown : MonoBehaviour
     {
         _fistDamageColliderController.FistDamageColliderToggle(false);
         _playerInputController.TimeR1 = 0.3f;
-        _playerInputController.TimeR2 = 1.5f;
+        _playerInputController.TimeR2 = 0.8f;
         _playerInputController.TimeL1 = 0.7f;
         _playerInputController.StaminaForR1 = 100f;
         _playerInputController.StaminaForR2 = 100f;

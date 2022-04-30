@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
+  m_Name: Chr_Hands_22_Item_FullPlate
+  m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: 05576b45d57d81a4ea4fe1ca96e2e723, type: 3}
+  Price: 250
+  IsDefaultItem: 0
+  IsStackable: 0
+  IsUsedItem: 0
+  IsSetEffect: 1
+  Name:
+  - Full Plate Gloves
+  - "\u041F\u043E\u043B\u043D\u044B\u0435 \u041B\u0430\u0442\u043D\u044B\u0435 \u041F\u0435\u0440\u0447\u0430\u0442\u043A\u0438"
+  ItemType:
+  - Gloves
+  - "\u041F\u0435\u0440\u0447\u0430\u0442\u043A\u0438"
+  ItemInfo:
+  - 'P. Def. : 16'
+  - "\u0424\u0438\u0437. \u0417\u0430\u0449. : 16"
+  ArmorSetEnum: 23
+  AllArmorSetInfo: {fileID: 11400000, guid: 576352ffa1b746b4c872fd49153b9308, type: 2}
+  equipSlot: 6
+  armorModifier: 16
+  MagicArmorModifier: 0
+  Meshes:
+  - {fileID: 5018162780653598824, guid: b251b97abcf78e241973306e1d334511, type: 3}
+  - {fileID: 2794806018567257747, guid: 3ed163d2de5a2ab42a951bd0e454fcde, type: 3}
+  - {fileID: 5018162780653598824, guid: b251b97abcf78e241973306e1d334511, type: 3}
+  - {fileID: 2794806018567257747, guid: 3ed163d2de5a2ab42a951bd0e454fcde, type: 3}
+  prefab: {fileID: 0}
+  hatNumber: 0
+  noHair: 0
+  canChangehead: 0
+  weapon: 0
+  twoHandedWeapon: 0
+  shield: 0
+  shieldBlockArmorModifier: 0
+  FirstAttachmentNumber: 0
+  SecondAttachmentNumber: 0

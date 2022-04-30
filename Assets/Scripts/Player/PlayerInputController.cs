@@ -41,8 +41,6 @@ public class PlayerInputController : MonoBehaviour
     [Header("Time")]
     public float TimeR1;
     public float TimeR2;
-    public float TimeL1;
-
 
     private void Awake()
     {

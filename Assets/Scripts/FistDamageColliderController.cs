@@ -8,7 +8,7 @@ public class FistDamageColliderController : MonoBehaviour
 
     public void FistDamageColliderToggle(bool state)
     {
-        _fistDamageCollider[0].enabled = state;
-        _fistDamageCollider[1].enabled = state;
+        _fistDamageCollider[0].CanDamage = state;
+        _fistDamageCollider[1].CanDamage = state;
     }
 }

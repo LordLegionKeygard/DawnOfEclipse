@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 52215702936293256}
   - component: {fileID: 58010699110132936}
   - component: {fileID: 64274519383642870}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Tree_Twig_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 49575773825519406}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.0020286, y: 1.1535499, z: 1.0020286}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7893719287669398605}
   - component: {fileID: 7918998179054817725}
   - component: {fileID: 7912522033432308393}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SM_Tree_Dead_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,7 +93,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7895810372933738259}
   - component: {fileID: 3947896084516479141}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Tree_Dead_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,7 +109,7 @@ Transform:
   m_GameObject: {fileID: 7898000706194051549}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.013, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.1634573, y: 1.4360502, z: 1.1634573}
   m_Children:
   - {fileID: 7893719287669398605}
   m_Father: {fileID: 0}

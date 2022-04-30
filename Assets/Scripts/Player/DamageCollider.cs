@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class DamageCollider : MonoBehaviour
 {
-    private Collider _damageCollider;
-
     [SerializeField] private int _weaponDamage;
+    private Collider _damageCollider;
+    public bool CanDamage = true;
 
-    private void Awake()
+    private void OnEnable()
     {
         _damageCollider = GetComponent<Collider>();
         CustomEvents.OnEnabledDamageCollider += Damage;
@@ -19,16 +19,16 @@ public class DamageCollider : MonoBehaviour
         _damageCollider.enabled = state;
     }
 
-    private void OnTriggerEnter(Collider collision)
+    private void OnTriggerStay(Collider collision)
     {
-        if (collision.TryGetComponent(out EnemyStats enemyStats))
+        if (collision.TryGetComponent(out EnemyStats enemyStats) && CanDamage)
         {
             enemyStats.TakeDamage(_weaponDamage);
             Damage(false);
         }
     }
 
-    private void OnDestroy()
+    private void OnDisable()
     {
         CustomEvents.OnEnabledDamageCollider -= Damage;
     }

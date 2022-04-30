@@ -6,12 +6,12 @@ using UnityEngine.UI;
 public class UIEnemyHealthBar : MonoBehaviour
 {
     [SerializeField] private Slider _slider;
-    private float _timeUntilBarIsHidde = 3;
+    private float _timeUntilBarIsHidde = 7;
 
     public void SetHealth(int health)
     {
         _slider.value = health;
-        _timeUntilBarIsHidde = 3;
+        _timeUntilBarIsHidde = 7;
         _slider.gameObject.SetActive(true);
     }
 
@@ -34,7 +34,7 @@ public class UIEnemyHealthBar : MonoBehaviour
 
         if (_slider.value <= 0)
         {
-            Destroy(_slider.gameObject);
+            _slider.gameObject.SetActive(false);
         }
     }
 

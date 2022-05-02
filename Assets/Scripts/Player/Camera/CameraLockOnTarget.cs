@@ -26,7 +26,7 @@ public class CameraLockOnTarget : MonoBehaviour
 
     public void TargetLock()
     {
-        if (_lockOnFlag == false)
+        if (!_lockOnFlag)
         {
             ClearLockOnTargets();
             _lockOnFlag = true;
@@ -39,7 +39,7 @@ public class CameraLockOnTarget : MonoBehaviour
                 _lockOnFlag = true;
             }
         }
-        else if (_lockOnFlag)
+        else
         {
             _currentLockOnTarget = null;
             _nearestLockOnTarget = null;
@@ -53,13 +53,14 @@ public class CameraLockOnTarget : MonoBehaviour
 
     private void ClearLockOnTargets()
     {
+        CustomEvents.FireCameraCanMove(true);
         _avilableTargets.Clear();
         _nearestLockOnTarget = null;
         _currentLockOnTarget = null;
     }
 
     public void TargetDeath()
-    {
+    {       
         ClearLockOnTargets();
         _lockCamera.m_BindingMode = CinemachineTransposer.BindingMode.SimpleFollowWithWorldUp;
         _cinemachineInputProvider.enabled = true;

@@ -7,10 +7,12 @@ public class EnemyStats : CharacterStats
 {
     private AIPath _aiPath;
     [SerializeField] private UIEnemyHealthBar _enemyHealthBar;
-    private  NewEnemyAnimatorManager _newEnemyAnimatorManager;
-    private  CharacterController _characterController;
-    private  MobSpawner _mobSpawner;
+    private NewEnemyAnimatorManager _newEnemyAnimatorManager;
+    private CharacterController _characterController;
+    private MobSpawner _mobSpawner;
     private EnemyVFXController _enemyVFXController;
+
+    private bool _death;
 
     private void Awake()
     {
@@ -31,9 +33,24 @@ public class EnemyStats : CharacterStats
     {
         _enemyVFXController.TakeDamageVFX();
         CurrentHealth -= damage;
-        _enemyHealthBar.SetHealth(CurrentHealth);
+        UpdateSlider();
         RandomTakeDamage();
-        if (CurrentHealth <= 0) { Death(); }
+    }
+
+    public void UpdateSlider()
+    {
+        if(_death) return;
+        _enemyHealthBar.SetHealth(CurrentHealth);
+        CheckDeath();
+    }
+
+    private void CheckDeath()
+    {
+        if (CurrentHealth <= 0 && !_death)
+        {
+            _death = true;
+            Death();
+        }
     }
 
     private void Death()
@@ -41,16 +58,16 @@ public class EnemyStats : CharacterStats
         _newEnemyAnimatorManager.PlayerTargetAnimation("death");
         _characterController.enabled = false;
         CustomEvents.FireCameraLockOnTargetDeath();
-        RotateBodyAfterDeath();
+        // RotateBodyAfterDeath();
         _aiPath.enabled = false;
         Respawn();
         Destroy(gameObject, 8f);
     }
 
-    private void RotateBodyAfterDeath()
-    {
-        transform.Rotate(new Vector3(-8.11f,transform.rotation.y,1.61f), Space.World);
-    }
+    // private void RotateBodyAfterDeath()
+    // {
+    //     transform.Rotate(new Vector3(-8.11f, transform.rotation.y, 1.61f), Space.World);
+    // }
 
     private void Respawn()
     {

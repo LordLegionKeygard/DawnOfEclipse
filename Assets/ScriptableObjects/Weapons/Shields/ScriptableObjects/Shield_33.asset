@@ -19,8 +19,8 @@ MonoBehaviour:
   IsUsedItem: 0
   IsSetEffect: 0
   Name:
-  - Name
-  - "\u041D\u0430\u0437\u0432\u0430\u043D\u0438\u0435"
+  - Mushroom Shield
+  - "\u0413\u0440\u0438\u0431\u043D\u043E\u0439 \u0429\u0438\u0442"
   ItemType:
   - Shield
   - "\u0429\u0438\u0442"

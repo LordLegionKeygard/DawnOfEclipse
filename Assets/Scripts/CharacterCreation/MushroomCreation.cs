@@ -24,6 +24,8 @@ public class MushroomCreation : MonoBehaviour
     [SerializeField] private Material _characterMaterial;
     [SerializeField] private TextMeshProUGUI[] _allText;
     [SerializeField] private Button[] _buttons;
+    [SerializeField] private Image _loadingScreen;
+    [SerializeField] private Sprite _screen;
 
     public void ChangeSkinColor(string turn)
     {
@@ -100,11 +102,14 @@ public class MushroomCreation : MonoBehaviour
 
     public void CreateCharacter()
     {
+        _loadingScreen.sprite = _screen;
+
         CharacterInformation.Race = 1;
         CharacterInformation.Gender = _gender;
         CharacterInformation.SkinColor = _skinColor;
         CharacterInformation.Cap = _cap;
         CharacterInformation.EyeColor = _eyeColor;
+
         CustomEvents.FireCharacterCreate();
     }
 

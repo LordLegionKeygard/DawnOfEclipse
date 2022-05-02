@@ -37,6 +37,8 @@ public class SatyrCreation : MonoBehaviour
     [SerializeField] private Material _maskEyesMaterial;
     [SerializeField] private TextMeshProUGUI[] _allText;
     [SerializeField] private Button[] _buttons;
+    [SerializeField] private Image _loadingScreen;
+    [SerializeField] private Sprite _screen;
 
     private void GendersToggle(GameObject[] gender, GameObject[] opposite, bool state)
     {
@@ -213,6 +215,8 @@ public class SatyrCreation : MonoBehaviour
 
     public void CreateCharacter()
     {
+        _loadingScreen.sprite = _screen;
+
         CharacterInformation.Race = 0;
         CharacterInformation.Gender = _gender;
         CharacterInformation.Hairstyle = _hairStyle;

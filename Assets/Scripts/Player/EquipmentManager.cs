@@ -81,6 +81,7 @@ public class EquipmentManager : MonoBehaviour
         {
             Equipment oldWeapon = Unequip(19);
             Equipment oldWeapon1 = Unequip(20);
+            Equipment oldWeapon2 = Unequip(27);
             if (newItem.twoHandedWeapon == true)
             {
                 _twoHandWeaponNow = true;
@@ -231,7 +232,7 @@ public class EquipmentManager : MonoBehaviour
             _equipSlot[equipSlotNumber].Icon.sprite = equipItem.icon;
             _equipSlot[equipSlotNumber].EquipIcon();
             _equipSlot[equipSlotNumber].Item = equipItem;
-            Debug.Log("EquipSlotNumber = " + equipSlotNumber,_equipSlot[equipSlotNumber].Item);
+            Debug.Log("EquipSlotNumber = " + equipSlotNumber, _equipSlot[equipSlotNumber].Item);
         }
     }
 
@@ -354,12 +355,12 @@ public class EquipmentManager : MonoBehaviour
                 _armorControl.KneeLeftArmor = item.armorModifier;
                 EquipSlotAndIcon(18, item);
                 break;
-            case EquipmentSlot.WeaponTwoHand:
+            case EquipmentSlot.GreatSword:
                 CustomEvents.FireChangeIKHands(1);
                 _weaponTimeCooldown.GreatSword();
                 _anim.runtimeAnimatorController = Resources.Load("Animation/GreatSwordController") as RuntimeAnimatorController;
-                GameObject newWeaponTwoHandPrefab = Instantiate(item.prefab);
-                BoneTransformWeapon(newWeaponTwoHandPrefab, slotIndex, _weaponsAttachPoints[0], true);
+                GameObject newWeaponGreatSwordPrefab = Instantiate(item.prefab);
+                BoneTransformWeapon(newWeaponGreatSwordPrefab, slotIndex, _weaponsAttachPoints[0], true);
                 _armorControl.ShieldBlockArmorDefault = item.shieldBlockArmorModifier;
                 _armorControl.ShieldArmorPassive = 0;
                 _equipSlot[21].Icon.gameObject.GetComponentInParent<Button>().enabled = false;
@@ -368,16 +369,25 @@ public class EquipmentManager : MonoBehaviour
                 EquipSlotAndIcon(21, item);
                 _twoHandWeaponNow = true;
                 break;
-            case EquipmentSlot.WeaponRightHand:
-                _twoHandWeaponNow = false;
-                _weaponTimeCooldown.Sword();
+            case EquipmentSlot.StraightSword:
+                _weaponTimeCooldown.StraightSword();
                 _anim.runtimeAnimatorController = Resources.Load("Animation/SwordController") as RuntimeAnimatorController;
-                GameObject newWeaponRightHandPrefab = Instantiate(item.prefab);
-                BoneTransformWeapon(newWeaponRightHandPrefab, slotIndex, _weaponsAttachPoints[1], true);
+                GameObject newWeaponStraightSwordPrefab = Instantiate(item.prefab);
+                BoneTransformWeapon(newWeaponStraightSwordPrefab, slotIndex, _weaponsAttachPoints[1], true);
                 _equipSlot[19].Icon.sprite = item.icon;
                 _equipSlot[21].Icon.gameObject.GetComponentInParent<Button>().enabled = true;
-                _twoHandWeaponNow = false;
                 EquipSlotAndIcon(20, item);
+                _twoHandWeaponNow = false;
+                break;
+            case EquipmentSlot.Hammer:
+                _weaponTimeCooldown.Hammer();
+                _anim.runtimeAnimatorController = Resources.Load("Animation/HammerController") as RuntimeAnimatorController;
+                GameObject newWeaponHammerPrefab = Instantiate(item.prefab);
+                BoneTransformWeapon(newWeaponHammerPrefab, slotIndex, _weaponsAttachPoints[1], true);
+                _equipSlot[19].Icon.sprite = item.icon;
+                _equipSlot[21].Icon.gameObject.GetComponentInParent<Button>().enabled = true;
+                EquipSlotAndIcon(20, item);
+                _twoHandWeaponNow = false;
                 break;
             case EquipmentSlot.Shield:
                 if (_twoHandWeaponNow == true)
@@ -393,7 +403,6 @@ public class EquipmentManager : MonoBehaviour
                 _armorControl.ShieldBlockArmorDefault = item.shieldBlockArmorModifier;
                 _equipSlot[21].Icon.gameObject.GetComponentInParent<Button>().enabled = true;
                 _shieldEquipSlotImage.color = new Color(_shieldEquipSlotImage.color.r, _shieldEquipSlotImage.color.g, _shieldEquipSlotImage.color.b, 1f);
-
                 _twoHandWeaponNow = false;
                 EquipSlotAndIcon(21, item);
                 break;

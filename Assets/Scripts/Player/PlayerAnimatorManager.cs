@@ -20,15 +20,18 @@ public class PlayerAnimatorManager : MonoBehaviour
     public readonly int Block_React_1 = Animator.StringToHash("Block_React_1");
     public readonly int Block_React_2 = Animator.StringToHash("Block_React_2");
     public readonly int Drink = Animator.StringToHash("drink");
+    public readonly int RaceSkill = Animator.StringToHash("raceSkill");
+    public readonly int StartGame = Animator.StringToHash("start");
 
     private void Start()
     {
         _animator = GetComponent<Animator>();
         _playerMovement = GetComponent<PlayerMovement>();
         _playerInputController = GetComponent<PlayerInputController>();
+        _animator.SetTrigger(StartGame);
     }
 
-    public void PlayerTargetAnimation(bool state, int animation, float time, int boolNumber)
+    public void PlayTargetBoolAnimation(bool state, int animation, float time, int boolNumber)
     {
         StartCoroutine(ExecuteAfterTime(time));
         IEnumerator ExecuteAfterTime(float timeInSec)
@@ -55,7 +58,9 @@ public class PlayerAnimatorManager : MonoBehaviour
         }
     }
 
-    public void AnimatorPickUpToggle() => _animator.SetTrigger(PickUp);
+    public void AnimatorPickUpTrigger() => _animator.SetTrigger(PickUp);
+
+    public void AnimatorRaceSkillTrigger() => _animator.SetTrigger(RaceSkill);
 
     public void BlockReact()
     {

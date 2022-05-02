@@ -103,6 +103,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "RaceSkill",
+                    "type": "Button",
+                    "id": "a3cfb599-cd43-49f4-853f-79f22d480bfb",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -416,6 +425,17 @@
                 },
                 {
                     "name": "",
+                    "id": "b4083c71-9317-4ee4-b6f1-e1f1fd0924fe",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Mouse & Keyboard",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "abe82e72-bc9d-42a3-a753-985c5d077449",
                     "path": "<DualSenseGamepadHID>/buttonEast",
                     "interactions": "Hold(duration=0.3)",
@@ -444,6 +464,28 @@
                     "processors": "",
                     "groups": "Gamepad",
                     "action": "PickUp",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d0a7da6c-f0a4-4054-a588-558999576ea1",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Mouse & Keyboard",
+                    "action": "PickUp",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a665b444-aa7b-4757-89df-646d1b183202",
+                    "path": "<DualSenseGamepadHID>/leftTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "RaceSkill",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

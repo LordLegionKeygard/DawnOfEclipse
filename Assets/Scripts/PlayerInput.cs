@@ -125,6 +125,15 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""RaceSkill"",
+                    ""type"": ""Button"",
+                    ""id"": ""a3cfb599-cd43-49f4-853f-79f22d480bfb"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -438,6 +447,17 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""b4083c71-9317-4ee4-b6f1-e1f1fd0924fe"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Mouse & Keyboard"",
+                    ""action"": ""Jump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""abe82e72-bc9d-42a3-a753-985c5d077449"",
                     ""path"": ""<DualSenseGamepadHID>/buttonEast"",
                     ""interactions"": ""Hold(duration=0.3)"",
@@ -466,6 +486,28 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
                     ""action"": ""PickUp"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d0a7da6c-f0a4-4054-a588-558999576ea1"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Mouse & Keyboard"",
+                    ""action"": ""PickUp"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a665b444-aa7b-4757-89df-646d1b183202"",
+                    ""path"": ""<DualSenseGamepadHID>/leftTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""RaceSkill"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -515,6 +557,7 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
         m_Player_Run = m_Player.FindAction("Run", throwIfNotFound: true);
         m_Player_Roll = m_Player.FindAction("Roll", throwIfNotFound: true);
         m_Player_PickUp = m_Player.FindAction("PickUp", throwIfNotFound: true);
+        m_Player_RaceSkill = m_Player.FindAction("RaceSkill", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -585,6 +628,7 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Run;
     private readonly InputAction m_Player_Roll;
     private readonly InputAction m_Player_PickUp;
+    private readonly InputAction m_Player_RaceSkill;
     public struct PlayerActions
     {
         private @PlayerInput m_Wrapper;
@@ -600,6 +644,7 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
         public InputAction @Run => m_Wrapper.m_Player_Run;
         public InputAction @Roll => m_Wrapper.m_Player_Roll;
         public InputAction @PickUp => m_Wrapper.m_Player_PickUp;
+        public InputAction @RaceSkill => m_Wrapper.m_Player_RaceSkill;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -642,6 +687,9 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                 @PickUp.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPickUp;
                 @PickUp.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPickUp;
                 @PickUp.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPickUp;
+                @RaceSkill.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRaceSkill;
+                @RaceSkill.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRaceSkill;
+                @RaceSkill.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRaceSkill;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -679,6 +727,9 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                 @PickUp.started += instance.OnPickUp;
                 @PickUp.performed += instance.OnPickUp;
                 @PickUp.canceled += instance.OnPickUp;
+                @RaceSkill.started += instance.OnRaceSkill;
+                @RaceSkill.performed += instance.OnRaceSkill;
+                @RaceSkill.canceled += instance.OnRaceSkill;
             }
         }
     }
@@ -714,5 +765,6 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
         void OnRun(InputAction.CallbackContext context);
         void OnRoll(InputAction.CallbackContext context);
         void OnPickUp(InputAction.CallbackContext context);
+        void OnRaceSkill(InputAction.CallbackContext context);
     }
 }

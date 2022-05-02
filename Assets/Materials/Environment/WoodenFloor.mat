@@ -230,7 +230,7 @@ Material:
     - _ZWrite: 1
     - __dirty: 1
     m_Colors:
-    - _BaseColor: {r: 0.7735849, g: 0.7735849, b: 0.7735849, a: 1}
+    - _BaseColor: {r: 0.99958277, g: 1, b: 0.9481132, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Color_BodyArt: {r: 0.2283196, g: 0.5822246, b: 0.7573529, a: 1}
     - _Color_Eyes: {r: 0.5660378, g: 0.37515774, b: 0.06674973, a: 1}

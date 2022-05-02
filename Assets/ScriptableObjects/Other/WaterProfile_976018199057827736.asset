@@ -19,30 +19,30 @@ MonoBehaviour:
   specColor: {r: 0, g: 0, b: 0, a: 1}
   smoothness: 0.7
   enableLightAbsorption: 1
-  depthColor: {r: 0.18634684, g: 0.2830189, b: 0.18289427, a: 0.85}
+  depthColor: {r: 0.21753405, g: 0.3207547, b: 0.21635813, a: 0.85}
   maxDepth: 4.68
   enableFoam: 1
-  foamColor: {r: 0.060236078, g: 0.13207549, b: 0.055446785, a: 1}
+  foamColor: {r: 0.008786696, g: 0.05660379, b: 0.0040049846, a: 1}
   foamDistance: 15
   enableFoamHQ: 1
-  foamNoiseScaleHQ: 1.37
-  foamNoiseSpeedHQ: 1.25
-  shorelineFoamStrength: 0.453
+  foamNoiseScaleHQ: -0.46
+  foamNoiseSpeedHQ: 0.37
+  shorelineFoamStrength: 1
   crestFoamStrength: 0.1
   crestMaxDepth: 10
   slopeFoamStrength: 0.5
   slopeFoamFlowSpeed: 20
   slopeFoamDistance: 50
   rippleHeight: 0.7
-  rippleSpeed: 0.11
+  rippleSpeed: 1
   rippleNoiseScale: 1
-  enableWave: 0
+  enableWave: 1
   waveDirection: 45
-  waveSpeed: 0.47
-  waveHeight: 0.36
-  waveLength: 19.65
-  waveSteepness: 0.322
-  waveDeform: 0.099
+  waveSpeed: 0.34
+  waveHeight: 0
+  waveLength: 192.7
+  waveSteepness: 0
+  waveDeform: 1
   fresnelStrength: 6.83
   fresnelBias: 0.457
   enableReflection: 1
@@ -53,9 +53,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   reflectCustomSkybox: 1
-  reflectionDistortionStrength: 1.58
+  reflectionDistortionStrength: 1.52
   enableRefraction: 0
-  refractionDistortionStrength: 5.49
+  refractionDistortionStrength: 0
   enableCaustic: 0
   causticTexture: {fileID: 2800000, guid: eeacbffe8eb46d343b0d7a9189130772, type: 3}
   causticSize: 43.5

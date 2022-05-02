@@ -115,4 +115,21 @@ public class CustomEvents
     {
         OnCharacterCreate?.Invoke();
     }
+    public static Action OnUseRaceSkill;
+    public static void FireUseRaceSkill()
+    {
+        OnUseRaceSkill?.Invoke();
+    }
+
+    public static Action<bool> OnPoisonHandsParticle;
+    public static void FirePoisonHandsParticle(bool state)
+    {
+        OnPoisonHandsParticle?.Invoke(state);
+    }
+
+    public static Action<bool> OnPlayerInWaterVFX;
+    public static void FirePlayerInWaterVFX(bool state)
+    {
+        OnPlayerInWaterVFX?.Invoke(state);
+    }
 }

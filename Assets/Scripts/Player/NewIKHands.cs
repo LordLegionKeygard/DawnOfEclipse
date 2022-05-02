@@ -35,7 +35,7 @@ public class NewIKHands : MonoBehaviour
             case 1: //GreatSword
                 _leftHandPositionWeight = 1;
                 _leftHandRotationWeight = 1;
-                _rightHandPositionWeight = 1;
+                _rightHandPositionWeight = 0;
                 _rightHandRotationWeight = 0;
                 break;
         }

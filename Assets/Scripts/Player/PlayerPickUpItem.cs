@@ -45,7 +45,7 @@ public class PlayerPickUpItem : MonoBehaviour
         if (other.gameObject.TryGetComponent(out ItemPickup pickUp))
         {
             pickUp.PickUp();
-            _playerAnimatorManager.AnimatorPickUpToggle();
+            _playerAnimatorManager.AnimatorPickUpTrigger();
         }
         if (other.gameObject.TryGetComponent(out CoinPurse coinPurse))
         {

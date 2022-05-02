@@ -23,10 +23,18 @@ public class WeaponTimeCooldown : MonoBehaviour
         _playerInputController.StaminaForR1 = 150f;
         _playerInputController.StaminaForR2 = 300f;
     }
-    public void Sword()
+    public void StraightSword()
     {
         _fistDamageColliderController.FistDamageColliderToggle(false);
         _playerInputController.TimeR1 = 0.35f;
+        _playerInputController.TimeR2 = 0.5f;
+        _playerInputController.StaminaForR1 = 100f;
+        _playerInputController.StaminaForR2 = 100f;
+    }
+    public void Hammer()
+    {
+        _fistDamageColliderController.FistDamageColliderToggle(false);
+        _playerInputController.TimeR1 = 0.5f;
         _playerInputController.TimeR2 = 0.5f;
         _playerInputController.StaminaForR1 = 100f;
         _playerInputController.StaminaForR2 = 100f;

@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class Language : MonoBehaviour
 {
-    public static int LanguageNumber = 1;
+    public static int LanguageNumber = 0;
     private string[,] _textPreviesStatic = new string[100, 2];
     public static string[] TextStatic = new string[100];
     private string _langChange;

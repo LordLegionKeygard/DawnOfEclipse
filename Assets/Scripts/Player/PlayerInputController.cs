@@ -26,7 +26,7 @@ public class PlayerInputController : MonoBehaviour
     private bool _inputAttackR1;
     private bool _inputAttackR2;
     public bool IsRoll;
-    private bool CanNewAction = true;
+    private bool _canNewAction = true;
     private bool _isSneak;
     public bool IsFastRun;
     public bool IsAttack;
@@ -65,11 +65,17 @@ public class PlayerInputController : MonoBehaviour
         _input.Player.AttackR1.canceled += ctx => _inputAttackR1 = false;
         _input.Player.AttackR2.performed += ctx => _inputAttackR2 = true;
         _input.Player.AttackR2.canceled += ctx => _inputAttackR2 = false;
+        _input.Player.AttackR1.performed += ctx => CustomEvents.FirePoisonHandsParticle(true);
+        _input.Player.AttackR2.performed += ctx => CustomEvents.FirePoisonHandsParticle(true);
+        _input.Player.AttackR1.canceled += ctx => CustomEvents.FirePoisonHandsParticle(false);
+        _input.Player.AttackR2.canceled += ctx => CustomEvents.FirePoisonHandsParticle(false);
         _input.Player.Run.performed += ctx => Run(true);
         _input.Player.Run.canceled += ctx => Run(false);
         _input.Player.Roll.canceled += ctx => Roll();
         _input.Player.PickUp.performed += ctx => CustomEvents.FirePickUp(true);
         _input.Player.PickUp.canceled += ctx => CustomEvents.FirePickUp(false);
+        _input.Player.RaceSkill.performed += ctx => OnUseRaceSkill();
+        _input.Player.RaceSkill.canceled += ctx => CustomEvents.OnPoisonHandsParticle(false);
     }
 
     private void Update()
@@ -81,9 +87,15 @@ public class PlayerInputController : MonoBehaviour
 
         if (_staminaControl.CurrentStamina <= 50)
         {
-            { _playerAnimatorManager.PlayerTargetAnimation(false, _playerAnimatorManager.Block_L1, 0, 2); }
+            { _playerAnimatorManager.PlayTargetBoolAnimation(false, _playerAnimatorManager.Block_L1, 0, 2); }
         }
         CheckGround();
+    }
+
+    private void OnUseRaceSkill()
+    {
+        if(!_canNewAction) return;
+        CustomEvents.OnUseRaceSkill();
     }
 
     private void CheckGround()
@@ -94,22 +106,22 @@ public class PlayerInputController : MonoBehaviour
             _velocity.y += _gravity * Time.deltaTime;
             _characterController.Move(_velocity * Time.deltaTime);
         }
-        if (!_isGround) { _playerAnimatorManager.PlayerTargetAnimation(true, _playerAnimatorManager.IsInAir, 0, 0); }
-        if (_isGround) { _playerAnimatorManager.PlayerTargetAnimation(false, _playerAnimatorManager.IsInAir, 0, 0); }
+        if (!_isGround) { _playerAnimatorManager.PlayTargetBoolAnimation(true, _playerAnimatorManager.IsInAir, 0, 0); }
+        if (_isGround) { _playerAnimatorManager.PlayTargetBoolAnimation(false, _playerAnimatorManager.IsInAir, 0, 0); }
     }
 
     private void Block(bool isPressed)
     {
-        if (_staminaControl.CurrentStamina > 50 && isPressed && !IsRoll) { _playerAnimatorManager.PlayerTargetAnimation(true, _playerAnimatorManager.Block_L1, 0, 2); }
-        else { _playerAnimatorManager.PlayerTargetAnimation(false, _playerAnimatorManager.Block_L1, 0, 2); }
+        if (_staminaControl.CurrentStamina > 50 && isPressed && !IsRoll) { _playerAnimatorManager.PlayTargetBoolAnimation(true, _playerAnimatorManager.Block_L1, 0, 2); }
+        else { _playerAnimatorManager.PlayTargetBoolAnimation(false, _playerAnimatorManager.Block_L1, 0, 2); }
     }
 
     private void Jump()
     {
-        if (_isGround && !_isSneak && !IsRoll && !IsAttack && IsCanJump && CanNewAction && _staminaControl.CurrentStamina > 50)
+        if (_isGround && !_isSneak && !IsRoll && !IsAttack && IsCanJump && _canNewAction && _staminaControl.CurrentStamina > 50)
         {
-            _playerAnimatorManager.PlayerTargetAnimation(true, _playerAnimatorManager.Jump, 0, 0);
-            _playerAnimatorManager.PlayerTargetAnimation(false, _playerAnimatorManager.Jump, 1, 0);
+            _playerAnimatorManager.PlayTargetBoolAnimation(true, _playerAnimatorManager.Jump, 0, 0);
+            _playerAnimatorManager.PlayTargetBoolAnimation(false, _playerAnimatorManager.Jump, 1, 0);
             _velocity.y = Mathf.Sqrt(_jumpHeight * -2f * _gravity);
             IsCanJump = false;
             _staminaControl.UseStamina(50);
@@ -123,12 +135,12 @@ public class PlayerInputController : MonoBehaviour
             switch (attackNumber)
             {
                 case 1:
-                    _playerAnimatorManager.PlayerTargetAnimation(true, _playerAnimatorManager.Attack_R1, 0, 1);
-                    _playerAnimatorManager.PlayerTargetAnimation(false, _playerAnimatorManager.Attack_R1, TimeR1, 1);
+                    _playerAnimatorManager.PlayTargetBoolAnimation(true, _playerAnimatorManager.Attack_R1, 0, 1);
+                    _playerAnimatorManager.PlayTargetBoolAnimation(false, _playerAnimatorManager.Attack_R1, TimeR1, 1);
                     break;
                 case 2:
-                    _playerAnimatorManager.PlayerTargetAnimation(true, _playerAnimatorManager.Attack_R2, 0, 1);
-                    _playerAnimatorManager.PlayerTargetAnimation(false, _playerAnimatorManager.Attack_R2, TimeR2, 1);
+                    _playerAnimatorManager.PlayTargetBoolAnimation(true, _playerAnimatorManager.Attack_R2, 0, 1);
+                    _playerAnimatorManager.PlayTargetBoolAnimation(false, _playerAnimatorManager.Attack_R2, TimeR2, 1);
                     break;
             }
         }
@@ -139,7 +151,7 @@ public class PlayerInputController : MonoBehaviour
         bool _canNewMove = !IsAttack && _isGround && !_isSneak && !IsBlock;
         if (_staminaControl.CurrentStamina > 50 && _canNewMove && isPressed)
         {
-            _playerAnimatorManager.PlayerTargetAnimation(true, _playerAnimatorManager.Run, 0, 4);
+            _playerAnimatorManager.PlayTargetBoolAnimation(true, _playerAnimatorManager.Run, 0, 4);
             if (!_potionsControl.SpeedPotion)
             {
                 _staminaControl.StaminaRun = true;
@@ -149,7 +161,7 @@ public class PlayerInputController : MonoBehaviour
         }
         if (!isPressed && !_isSneak)
         {
-            _playerAnimatorManager.PlayerTargetAnimation(false, _playerAnimatorManager.Run, 0.3f, 4);
+            _playerAnimatorManager.PlayTargetBoolAnimation(false, _playerAnimatorManager.Run, 0.3f, 4);
             _staminaControl.StaminaRun = false;
             _playerMovement.CurrentSpeed = _playerMovement.DefaultSpeed;
             _potionsControl.PotionSpeed = 0;
@@ -158,20 +170,19 @@ public class PlayerInputController : MonoBehaviour
 
     private void Roll()
     {
-        Debug.Log(CanNewAction);
-        bool _canNewMove = !IsAttack && _isGround && !IsBlock && CanNewAction;
+        bool _canNewMove = !IsAttack && _isGround && !IsBlock && _canNewAction;
         if (!IsFastRun && _staminaControl.CurrentStamina > 100 && _canNewMove)
         {
-            CanNewAction = false;
-            _playerAnimatorManager.PlayerTargetAnimation(true, _playerAnimatorManager.Roll, 0, 3);
-            _playerAnimatorManager.PlayerTargetAnimation(false, _playerAnimatorManager.Roll, 0.5f, 3);
-            Invoke("CanNewActionAfterRoll", 1.3f);
+            _canNewAction = false;
+            _playerAnimatorManager.PlayTargetBoolAnimation(true, _playerAnimatorManager.Roll, 0, 3);
+            _playerAnimatorManager.PlayTargetBoolAnimation(false, _playerAnimatorManager.Roll, 0.5f, 3);
+            Invoke("CanNewActionAfterRoll", 1f);
         }
     }
 
     private void CanNewActionAfterRoll()
     {
-        CanNewAction = true;
+        _canNewAction = true;
     }
 
     private void Sneaking()
@@ -183,7 +194,7 @@ public class PlayerInputController : MonoBehaviour
             Vector3 tempCenter = _characterController.center;
             tempCenter.y = _characterController.height / 2;
             _characterController.center = tempCenter;
-            _playerAnimatorManager.PlayerTargetAnimation(true, _playerAnimatorManager.Sneak, 0, 0);
+            _playerAnimatorManager.PlayTargetBoolAnimation(true, _playerAnimatorManager.Sneak, 0, 0);
             _playerMovement.CurrentSpeed = 2;
             _isSneak = true;
             CharacterManager.maximumDetectionAngle = 50f;
@@ -192,7 +203,7 @@ public class PlayerInputController : MonoBehaviour
         else
         {
             _characterController.height = 1.7f;
-            _playerAnimatorManager.PlayerTargetAnimation(false, _playerAnimatorManager.Sneak, 0, 0);
+            _playerAnimatorManager.PlayTargetBoolAnimation(false, _playerAnimatorManager.Sneak, 0, 0);
             _isSneak = false;
             _playerMovement.CurrentSpeed = 5;
             CharacterManager.maximumDetectionAngle = 180f;
@@ -212,10 +223,16 @@ public class PlayerInputController : MonoBehaviour
         _input.Player.AttackR1.canceled -= ctx => _inputAttackR1 = false;
         _input.Player.AttackR2.performed -= ctx => _inputAttackR2 = true;
         _input.Player.AttackR2.canceled -= ctx => _inputAttackR2 = false;
+        _input.Player.AttackR1.performed -= ctx => CustomEvents.FirePoisonHandsParticle(true);
+        _input.Player.AttackR2.performed -= ctx => CustomEvents.FirePoisonHandsParticle(true);
+        _input.Player.AttackR1.canceled -= ctx => CustomEvents.FirePoisonHandsParticle(false);
+        _input.Player.AttackR2.canceled -= ctx => CustomEvents.FirePoisonHandsParticle(false);
         _input.Player.Run.performed -= ctx => Run(true);
         _input.Player.Run.canceled -= ctx => Run(false);
         _input.Player.Roll.canceled -= ctx => Roll();
         _input.Player.PickUp.performed -= ctx => CustomEvents.FirePickUp(true);
         _input.Player.PickUp.canceled -= ctx => CustomEvents.FirePickUp(false);
+        _input.Player.RaceSkill.performed -= ctx => CustomEvents.OnUseRaceSkill();
+        _input.Player.RaceSkill.canceled -= ctx => CustomEvents.OnPoisonHandsParticle(false);
     }
 }

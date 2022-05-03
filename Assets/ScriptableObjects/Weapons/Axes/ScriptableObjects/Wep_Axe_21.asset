@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
   m_Name: Wep_Axe_21
   m_EditorClassIdentifier: 
-  icon: {fileID: 21300000, guid: 5a39078a942f2bb43a1316a78bffebbf, type: 3}
+  icon: {fileID: 21300000, guid: e5f635179bfe77c4abc0e7d03172724e, type: 3}
   Price: 250
   IsDefaultItem: 0
   IsStackable: 0
@@ -25,15 +25,15 @@ MonoBehaviour:
   - Axe
   - "\u0422\u043E\u043F\u043E\u0440"
   ItemInfo:
-  - 'P. Atk.: 0'
-  - "\u0424\u0438\u0437. \u0410\u0442\u043A.: 0"
+  - 'P. Atk.: 25'
+  - "\u0424\u0438\u0437. \u0410\u0442\u043A.: 25"
   ArmorSetEnum: 0
   AllArmorSetInfo: {fileID: 0}
   equipSlot: 20
   armorModifier: 0
   MagicArmorModifier: 0
   Meshes: []
-  prefab: {fileID: 5622883486637553720, guid: 6af5aece33e1e3f4e9a1b1107d2dc538, type: 3}
+  prefab: {fileID: 6756370007557667150, guid: f6d0c617fe0a9264fab60df78d01e35b, type: 3}
   hatNumber: 0
   noHair: 0
   canChangehead: 0

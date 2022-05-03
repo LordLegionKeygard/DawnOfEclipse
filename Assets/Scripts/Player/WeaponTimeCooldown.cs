@@ -42,7 +42,7 @@ public class WeaponTimeCooldown : MonoBehaviour
     public void Daggers()
     {
         _fistDamageColliderController.FistDamageColliderToggle(false);
-        _playerInputController.TimeR1 = 0.3f;
+        _playerInputController.TimeR1 = 0.45f;
         _playerInputController.TimeR2 = 0.5f;
         _playerInputController.StaminaForR1 = 50f;
         _playerInputController.StaminaForR2 = 50f;

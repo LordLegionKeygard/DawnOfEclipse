@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 744d21ad2d5e28a47ada8788bb7f4dbc
-timeCreated: 1606271673
+guid: 9065892a006068a45994761bdc497eda
+timeCreated: 1606271670
 licenseType: Store
 ModelImporter:
   serializedVersion: 21
@@ -9,7 +9,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: SM_Wep_Mace_Large_02
+    4300000: SM_Wep_Mace_Medium_03
   materials:
     importMaterials: 0
     materialName: 1

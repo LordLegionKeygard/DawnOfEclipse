@@ -25,8 +25,8 @@ MonoBehaviour:
   - Axe
   - "\u0422\u043E\u043F\u043E\u0440"
   ItemInfo:
-  - 'P. Atk.: 0'
-  - "\u0424\u0438\u0437. \u0410\u0442\u043A.: 0"
+  - 'P. Atk.: 25'
+  - "\u0424\u0438\u0437. \u0410\u0442\u043A.: 25"
   ArmorSetEnum: 0
   AllArmorSetInfo: {fileID: 0}
   equipSlot: 20

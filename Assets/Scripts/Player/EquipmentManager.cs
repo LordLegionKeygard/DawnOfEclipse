@@ -154,6 +154,7 @@ public class EquipmentManager : MonoBehaviour
     }
     public Equipment Unequip(int slotIndex)
     {
+        Debug.Log("SlotIndex" + slotIndex);
         Equipment oldItem = null;
 
         if (_currentEquipment[slotIndex] != null)
@@ -172,6 +173,11 @@ public class EquipmentManager : MonoBehaviour
                 {
                     Destroy(_currentGameObject[19].gameObject);
                 }
+                Destroy(_currentGameObject[slotIndex].gameObject);
+            }
+
+            if (slotIndex == 21)
+            {
                 Destroy(_currentGameObject[slotIndex].gameObject);
             }
 

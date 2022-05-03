@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 4a9eda17d509dc64cbf32dd5e5e2d664
-timeCreated: 1505961317
+guid: e4d829b94ac67a044bde654231eb8cb4
+timeCreated: 1505961319
 licenseType: Store
 ModelImporter:
   serializedVersion: 18
@@ -9,7 +9,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: SM_Wep_Ornate_Axe_01
+    4300000: SM_Wep_Ornate_GreatAxe_01
     9500000: //RootNode
   materials:
     importMaterials: 0

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3202882798734912716
+--- !u!1 &3786623999724478814
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,48 +8,48 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3202882798734658114}
-  - component: {fileID: 3202882798737988400}
-  - component: {fileID: 3202882798736956980}
-  - component: {fileID: 5824753069817165690}
-  - component: {fileID: 5337174889231210611}
-  - component: {fileID: 4439066798455091669}
+  - component: {fileID: 3786623999724573252}
+  - component: {fileID: 3786623999727452944}
+  - component: {fileID: 3786623999726734224}
+  - component: {fileID: 5430562540521870182}
+  - component: {fileID: 62954972675400136}
+  - component: {fileID: 7856556028718396593}
   m_Layer: 11
   m_Name: Wep_Axe_22_Drop
-  m_TagString: DropItem
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3202882798734658114
+--- !u!4 &3786623999724573252
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3202882798734912716}
-  m_LocalRotation: {x: 0.5, y: 0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: 6, y: -1.75, z: 0}
+  m_GameObject: {fileID: 3786623999724478814}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 90}
---- !u!33 &3202882798737988400
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!33 &3786623999727452944
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3202882798734912716}
-  m_Mesh: {fileID: 4300000, guid: 4a9eda17d509dc64cbf32dd5e5e2d664, type: 3}
---- !u!23 &3202882798736956980
+  m_GameObject: {fileID: 3786623999724478814}
+  m_Mesh: {fileID: 4300000, guid: e4d829b94ac67a044bde654231eb8cb4, type: 3}
+--- !u!23 &3786623999726734224
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3202882798734912716}
+  m_GameObject: {fileID: 3786623999724478814}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -85,26 +85,26 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &5824753069817165690
+--- !u!65 &5430562540521870182
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3202882798734912716}
+  m_GameObject: {fileID: 3786623999724478814}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.0713501, y: 0.84193677, z: 0.27917236}
-  m_Center: {x: 0, y: 0.28782907, z: 0.10391101}
---- !u!54 &5337174889231210611
+  m_Size: {x: 0.0930444, y: 1.046304, z: 0.61594737}
+  m_Center: {x: 0.00000017881393, y: 0.15431178, z: -0.032981455}
+--- !u!54 &62954972675400136
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3202882798734912716}
+  m_GameObject: {fileID: 3786623999724478814}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -114,16 +114,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &4439066798455091669
+--- !u!114 &7856556028718396593
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3202882798734912716}
+  m_GameObject: {fileID: 3786623999724478814}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b18e0cc9fc8e9ce4889e0e7fced1cd6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _item: {fileID: 11400000, guid: dd7386e642337fc47882a4cba44d5514, type: 2}
+  _item: {fileID: 11400000, guid: 8d5c14a9b0bad494c8aeec725654bcc2, type: 2}

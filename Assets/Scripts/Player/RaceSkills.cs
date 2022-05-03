@@ -5,11 +5,8 @@ using UnityEngine;
 public class RaceSkills : MonoBehaviour
 {
     private PlayerAnimatorManager _playerAnimatorManager;
-
-    [SerializeField] private ParticleSystem[] _mushroomParticles;
-
     private bool _canUseSkill = true;
-
+    [SerializeField] private ParticleSystem[] _mushroomParticles; 
     [SerializeField] private float _skillCooldown;
     [SerializeField] private float _skillCooldownConstant;
 

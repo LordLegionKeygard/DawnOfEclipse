@@ -79,16 +79,18 @@ public class EquipSlot : Slots
             case 18:
                 _armorControl.KneeLeftArmor = 0;
                 break;
-            case 19:
+            case 19: //AllWeaponSlot
                 _equipmentManager.Unequip(19);
                 _equipmentManager.Unequip(20);
-                if (_equipmentManager.ShieldButton.enabled == false)
+                _equipmentManager.Unequip(27);
+                _equipmentManager.Unequip(28);
+                if (_equipmentManager._leftHandSlotListener.enabled == false)
                 {
                     _equipmentManager.UnequipTwoHandedWeaponFromShield();
                 }
                 _equipmentManager.ResetAnimator();
                 break;
-            case 21:
+            case 21: //ShieldSlot
                 _equipmentManager.Unequip(21);
                 _armorControl.ShieldArmorPassive = 0;
                 break;

@@ -5,8 +5,8 @@ using Pathfinding;
 
 public class NewEnemyAnimatorManager : VersionedMonoBehaviour
 {
+    private EnemySpeedController _enemySpeedController;
     [SerializeField] private Collider _damageCollider;
-
     private AIDestinationSetter _aiDestionationSetter;
     private Animator _animator;
     private IAstarAI _ai;
@@ -19,12 +19,14 @@ public class NewEnemyAnimatorManager : VersionedMonoBehaviour
         _animator = GetComponent<Animator>();
         _transform = GetComponent<Transform>();
         _aiDestionationSetter = GetComponent<AIDestinationSetter>();
+        _enemySpeedController = GetComponent<EnemySpeedController>();
     }
 
     public void PlayerTargetAnimation(string targetAnim)
     {
         _animator.SetTrigger(targetAnim.ToString());
-        _aiDestionationSetter._canWalk = false;
+        _enemySpeedController.CantWalk();
+
     }
     protected void Update()
     {

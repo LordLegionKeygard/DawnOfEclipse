@@ -437,7 +437,7 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0.074309975
+      - time: 0
         functionName: CantWalk
         data: 
         objectReferenceParameter: {instanceID: 0}

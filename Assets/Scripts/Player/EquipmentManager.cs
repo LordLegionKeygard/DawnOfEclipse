@@ -154,7 +154,6 @@ public class EquipmentManager : MonoBehaviour
     }
     public Equipment Unequip(int slotIndex)
     {
-        Debug.Log("SlotIndex" + slotIndex);
         Equipment oldItem = null;
 
         if (_currentEquipment[slotIndex] != null)

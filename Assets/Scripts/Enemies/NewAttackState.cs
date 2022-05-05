@@ -34,7 +34,6 @@ public class NewAttackState : NewState
                     if (newEnemyManager.currentRecoveryTime <= 0 && newEnemyManager.IsCanAttack)
                     {
                         newEnemyAnimatorManager.PlayerTargetAnimation(currentAttack.actionAnimation);
-                        _aiDestinationSetter._canWalk = false;
                         newEnemyManager.IsCanAttack = false;
                         newEnemyManager.currentRecoveryTime = currentAttack.RecoveryTime;
                         currentAttack = null;

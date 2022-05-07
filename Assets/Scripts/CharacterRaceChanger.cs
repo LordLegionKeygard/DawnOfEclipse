@@ -26,8 +26,7 @@ public class CharacterRaceChanger : MonoBehaviour
     [Header("MushroomRace___________________________________________")]
 
     [SerializeField] private GameObject[] _mushroomParts;
-    [SerializeField] private MeshFilter[] _mushroomHeads;
-    [SerializeField] private MeshFilter _mushroomHead;
+    [SerializeField] private GameObject[] _mushroomHeads;
     [SerializeField] private Color[] _skinMushroomColorPalletes;
     [SerializeField] private Color[] _eyeMushroomColorPalletes;
     [SerializeField] private Material _mushroomRaceMaterial;
@@ -73,7 +72,7 @@ public class CharacterRaceChanger : MonoBehaviour
                 _mushroomParts[0].SetActive(true);
                 _mushroomParts[1].SetActive(true);
                 _mushroomParts[2].SetActive(true);
-                _mushroomHead.sharedMesh = _mushroomHeads[CharacterInformation.Cap].sharedMesh;
+                _mushroomHeads[CharacterInformation.Cap].SetActive(true);
                 _characterMaterial.SetColor("_Color_Skin", _skinMushroomColorPalletes[CharacterInformation.SkinColor]);
                 _mushroomRaceMaterial.SetColor("_Color_Skin", _skinMushroomColorPalletes[CharacterInformation.SkinColor]);
                 _mushroomRaceMaterial.SetColor("_Color_Eyes", _eyeMushroomColorPalletes[CharacterInformation.EyeColor]);

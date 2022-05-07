@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Plague_Doctor_Leather_Armor_Set
+  m_Name: Plague_Doctor_Armor_Set
   m_Shader: {fileID: 4800000, guid: 4a31887e3b64b2d4bbc64351abe099e2, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -83,6 +83,6 @@ Material:
     - _Color_Primary: {r: 0.3679245, g: 0.078097194, b: 0.078097194, a: 0}
     - _Color_Scar: {r: 0.2419281, g: 0.1448469, b: 0.2924528, a: 1}
     - _Color_Secondary: {r: 0.047169805, g: 0.038937338, b: 0.03975753, a: 0}
-    - _Color_Skin: {r: 0.7058824, g: 0.7058824, b: 0.7058824, a: 1}
+    - _Color_Skin: {r: 0.38431373, g: 0.34901962, b: 0.50980395, a: 1}
     - _Color_Stubble: {r: 0.30588236, g: 0.40392157, b: 0.43529412, a: 1}
   m_BuildTextureStacks: []

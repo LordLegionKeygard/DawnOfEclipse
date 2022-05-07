@@ -78,25 +78,25 @@ SkinnedMeshRenderer:
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
   m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 4301410, guid: 038320a534bd8b444b43734860d1a211, type: 3}
+  m_Mesh: {fileID: 5554923798920146127, guid: 463136f8dd904184a9d1af3d7f67c631, type: 3}
   m_Bones:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1368025366940166931, guid: 463136f8dd904184a9d1af3d7f67c631, type: 3}
+  - {fileID: 2913165453734758206, guid: 463136f8dd904184a9d1af3d7f67c631, type: 3}
+  - {fileID: 6306684606141509829, guid: 463136f8dd904184a9d1af3d7f67c631, type: 3}
+  - {fileID: -1264386144543161698, guid: 463136f8dd904184a9d1af3d7f67c631, type: 3}
+  - {fileID: -4744043595305881647, guid: 463136f8dd904184a9d1af3d7f67c631, type: 3}
+  - {fileID: 8340932839045357637, guid: 463136f8dd904184a9d1af3d7f67c631, type: 3}
+  - {fileID: 4025074147675279436, guid: 463136f8dd904184a9d1af3d7f67c631, type: 3}
+  - {fileID: -1945309919447152427, guid: 463136f8dd904184a9d1af3d7f67c631, type: 3}
+  - {fileID: -5458696377161663035, guid: 463136f8dd904184a9d1af3d7f67c631, type: 3}
+  - {fileID: -1132879487417497349, guid: 463136f8dd904184a9d1af3d7f67c631, type: 3}
+  - {fileID: 3780837713738550241, guid: 463136f8dd904184a9d1af3d7f67c631, type: 3}
+  - {fileID: -2011652838530992569, guid: 463136f8dd904184a9d1af3d7f67c631, type: 3}
   m_BlendShapeWeights: []
-  m_RootBone: {fileID: 0}
+  m_RootBone: {fileID: 3780837713738550241, guid: 463136f8dd904184a9d1af3d7f67c631, type: 3}
   m_AABB:
-    m_Center: {x: -10.231024, y: -2.7794342, z: 1.8416524}
-    m_Extent: {x: 12.261961, y: 6.450363, z: 10.37781}
+    m_Center: {x: 0.009235557, y: 0.109818675, z: -0.026526727}
+    m_Extent: {x: 0.10863535, y: 0.120975845, z: 0.08425747}
   m_DirtyAABB: 0
 --- !u!65 &4854576987331217478
 BoxCollider:
@@ -123,4 +123,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d431cf3ab31754469dc39b89b600778, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentWeaponDamage: 5
+  _weaponDamage: 0
+  CanDamage: 1

@@ -76,12 +76,12 @@ SkinnedMeshRenderer:
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
   m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 4300332, guid: 038320a534bd8b444b43734860d1a211, type: 3}
+  m_Mesh: {fileID: 8019538738363601536, guid: 463136f8dd904184a9d1af3d7f67c631, type: 3}
   m_Bones:
-  - {fileID: 0}
+  - {fileID: 536044275903953192, guid: 463136f8dd904184a9d1af3d7f67c631, type: 3}
   m_BlendShapeWeights: []
-  m_RootBone: {fileID: 0}
+  m_RootBone: {fileID: 536044275903953192, guid: 463136f8dd904184a9d1af3d7f67c631, type: 3}
   m_AABB:
-    m_Center: {x: 0.18647957, y: -0.5495796, z: -1.8439136}
-    m_Extent: {x: 8.235944, y: 8.677767, z: 6.3097606}
+    m_Center: {x: -0.0018647984, y: -0.018439144, z: -0.0054954886}
+    m_Extent: {x: 0.08235941, y: 0.06309755, z: 0.08677767}
   m_DirtyAABB: 0

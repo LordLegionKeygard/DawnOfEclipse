@@ -13,14 +13,13 @@ public class MushroomCreation : MonoBehaviour
     [SerializeField] private int _eyeColor = 1;
 
     [Header("Objects")]
-    [SerializeField] private MeshFilter[] _caps;
+    [SerializeField] private GameObject[] _heads;
 
     [Header("Colors")]
     [SerializeField] private Color[] _skinColorPalletes;
     [SerializeField] private Color[] _eyeColorPalletes;
 
     [Header("Other")]
-    [SerializeField] private MeshFilter _characterCap;
     [SerializeField] private Material _characterMaterial;
     [SerializeField] private TextMeshProUGUI[] _allText;
     [SerializeField] private Button[] _buttons;
@@ -54,11 +53,12 @@ public class MushroomCreation : MonoBehaviour
 
     public void ChangeCap(string turn)
     {
+        _heads[_cap].SetActive(false);
         switch (turn)
         {
             case "Right":
                 _cap++;
-                if (_cap == _caps.Length - 1)
+                if (_cap == _heads.Length - 1)
                     _buttons[2].interactable = false;
                 break;
 
@@ -68,11 +68,11 @@ public class MushroomCreation : MonoBehaviour
                     _buttons[3].interactable = false;
                 break;
         }
-        _characterCap.sharedMesh = _caps[_cap].sharedMesh;
+        _heads[_cap].SetActive(true);
         _allText[1].text = _cap.ToString();
         if (_cap != 1)
             _buttons[3].interactable = true;
-        if (_cap != _caps.Length - 1)
+        if (_cap != _heads.Length - 1)
             _buttons[2].interactable = true;
     }
 

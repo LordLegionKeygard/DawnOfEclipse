@@ -8,7 +8,6 @@ public class PoisonDamageCollider : MonoBehaviour
     [SerializeField] private int _poisonStack;
     private Collider _damageCollider;
     public bool CanDamage = true;
-
     private bool _poisonParticle;
 
     private void OnEnable()
@@ -20,7 +19,7 @@ public class PoisonDamageCollider : MonoBehaviour
 
     private void PoisonPsToggle(bool state)
     {
-        if (!CanDamage) return;
+        if (!CanDamage || CharacterInformation.Race != 1) return;
 
         if (state)
         {

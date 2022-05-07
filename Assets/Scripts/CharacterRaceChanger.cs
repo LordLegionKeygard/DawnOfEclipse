@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class CharacterRaceChanger : MonoBehaviour
 {
-    [SerializeField] private Transform _playerTransform;
-    [SerializeField] private Vector3[] _raceSpawnPoints;
     [SerializeField] private Material _characterMaterial;
     [SerializeField] private GameObject[] _heads;
     [SerializeField] private GameObject[] _defaultLegs;
@@ -30,6 +28,7 @@ public class CharacterRaceChanger : MonoBehaviour
     [SerializeField] private Color[] _skinMushroomColorPalletes;
     [SerializeField] private Color[] _eyeMushroomColorPalletes;
     [SerializeField] private Material _mushroomRaceMaterial;
+    [SerializeField] private PoisonDamageCollider[] _poisonDamageColliders;
 
     private void Start()
     {
@@ -41,7 +40,6 @@ public class CharacterRaceChanger : MonoBehaviour
         switch (CharacterInformation.Race)
         {
             case 0:
-                _playerTransform.position = new Vector3(_raceSpawnPoints[0].x, _raceSpawnPoints[0].y, _raceSpawnPoints[0].z);
                 _satyrParts[0].SetActive(true);
                 _satyrParts[1].SetActive(true);
                 _satyrParts[2].SetActive(true);
@@ -68,14 +66,14 @@ public class CharacterRaceChanger : MonoBehaviour
                 }
                 break;
             case 1:
-                _playerTransform.position = new Vector3(_raceSpawnPoints[1].x, _raceSpawnPoints[1].y, _raceSpawnPoints[1].z);
                 _mushroomParts[0].SetActive(true);
                 _mushroomParts[1].SetActive(true);
-                _mushroomParts[2].SetActive(true);
                 _mushroomHeads[CharacterInformation.Cap].SetActive(true);
                 _characterMaterial.SetColor("_Color_Skin", _skinMushroomColorPalletes[CharacterInformation.SkinColor]);
                 _mushroomRaceMaterial.SetColor("_Color_Skin", _skinMushroomColorPalletes[CharacterInformation.SkinColor]);
                 _mushroomRaceMaterial.SetColor("_Color_Eyes", _eyeMushroomColorPalletes[CharacterInformation.EyeColor]);
+
+                foreach (var item in _poisonDamageColliders) { item.enabled = true; }
                 break;
         }
     }

@@ -75,7 +75,7 @@ public class PlayerInputController : MonoBehaviour
         _input.Player.PickUp.performed += ctx => CustomEvents.FirePickUp(true);
         _input.Player.PickUp.canceled += ctx => CustomEvents.FirePickUp(false);
         _input.Player.RaceSkill.performed += ctx => OnUseRaceSkill();
-        _input.Player.RaceSkill.canceled += ctx => CustomEvents.OnPoisonHandsParticle(false);
+        _input.Player.RaceSkill.canceled += ctx => CustomEvents.FirePoisonHandsParticle(false);
     }
 
     private void Update()

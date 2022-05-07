@@ -17,8 +17,7 @@ public class SatyrCreation : MonoBehaviour
 
 
     [Header("Objects")]
-    [SerializeField] private GameObject[] _maleGenders;
-    [SerializeField] private GameObject[] _femaleGenders;
+    [SerializeField] private GameObject[] _genders;
     [SerializeField] private GameObject[] _hairStyles;
     [SerializeField] private MeshFilter[] _masks;
     [SerializeField] private MeshFilter[] _horns;
@@ -40,28 +39,24 @@ public class SatyrCreation : MonoBehaviour
     [SerializeField] private Image _loadingScreen;
     [SerializeField] private Sprite _screen;
 
-    private void GendersToggle(GameObject[] gender, GameObject[] opposite, bool state)
-    {
-        foreach (var obj in gender) { obj.SetActive(state); }
-        foreach (var oppo in opposite) { oppo.SetActive(!state); }
-    }
-
     public void ChangeGender(string turn)
     {
         switch (turn)
         {
             case "Right":
-                _allText[0].text = "Female";
+                _allText[0].text = Language.TextStatic[20];
                 _buttons[0].interactable = false;
                 _buttons[1].interactable = true;
-                GendersToggle(_maleGenders, _femaleGenders, false);
+                _genders[1].SetActive(false);
+                _genders[0].SetActive(true);
                 _gender = 0;
                 break;
             case "Left":
-                _allText[0].text = "Male";
+                _allText[0].text = Language.TextStatic[19];
                 _buttons[0].interactable = true;
                 _buttons[1].interactable = false;
-                GendersToggle(_maleGenders, _femaleGenders, true);
+                _genders[0].SetActive(false);
+                _genders[1].SetActive(true);
                 _gender = 2;
                 break;
         }

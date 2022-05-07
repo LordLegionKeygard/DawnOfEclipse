@@ -18,8 +18,8 @@ public class WeaponTimeCooldown : MonoBehaviour
     public void GreatSword()
     {
         _fistDamageColliderController.FistDamageColliderToggle(false);
-        _playerInputController.TimeR1 = 0.3f;
-        _playerInputController.TimeR2 = 0.5f;
+        _playerInputController.TimeR1 = 0.7f;
+        _playerInputController.TimeR2 = 0.8f;
         _playerInputController.StaminaForR1 = 150f;
         _playerInputController.StaminaForR2 = 300f;
     }

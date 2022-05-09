@@ -27,11 +27,16 @@ public class HealthControl : MonoBehaviour
         _playerInputController = GetComponent<PlayerInputController>();
         _armorControl = GetComponent<ArmorControl>();
     }
+
     private void Start()
     {
         CurrentHealth = MaxHealth;
-        healthBar.maxValue = MaxHealth;
+        UpdateMaxHealth();
         healthBar.value = MaxHealth;
+    }
+    public void UpdateMaxHealth()
+    {
+        healthBar.maxValue = MaxHealth;
     }
 
     public void TakeDamage(float damage)

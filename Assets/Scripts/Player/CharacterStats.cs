@@ -12,6 +12,24 @@ public class CharacterStats : MonoBehaviour
     public int Wisdom;
     public int Mind;
 
+    [SerializeField] private LevelUpStats _levelUpStats;
+
+    private void Awake()
+    {
+        Strength = CharacterInformation.StrengthS;
+        Dexterity = CharacterInformation.DexterityS;
+        Constitution = CharacterInformation.ConstitutionS;
+        Vigor = CharacterInformation.VigorS;
+        Intelligence = CharacterInformation.IntelligenceS;
+        Wisdom = CharacterInformation.WisdomS;
+        Mind = CharacterInformation.MindS;
+    }
+
+    private void Start()
+    {
+        _levelUpStats.UpdateAllStats();
+    }
+
     // STR (STRENGTH)
     // affects P.Atk.
 

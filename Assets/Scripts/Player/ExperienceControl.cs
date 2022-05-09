@@ -9,14 +9,14 @@ public class ExperienceControl : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _currentExpText;
     [SerializeField] private TextMeshProUGUI _textLevel;
     [SerializeField] private Slider _expSlider;
-    [SerializeField] private int _currentLevel = 1;
+    public int CurrentLevel = 1;
     [SerializeField] private ExperienceInfo _experienceInfo;
     [SerializeField] private LevelUpStats _levelUpStats;
 
     private void Start()
     {
-        _textLevel.text = _currentLevel.ToString();
-        _expSlider.maxValue = _experienceInfo.NeedExperienceForNextLevel[_currentLevel];
+        _textLevel.text = CurrentLevel.ToString();
+        _expSlider.maxValue = _experienceInfo.NeedExperienceForNextLevel[CurrentLevel];
         UpdateText();
     }
 
@@ -43,15 +43,15 @@ public class ExperienceControl : MonoBehaviour
 
     private void NewLevel()
     {
-        _currentLevel++;
-        _textLevel.text = _currentLevel.ToString();
-        _expSlider.maxValue = _experienceInfo.NeedExperienceForNextLevel[_currentLevel];
+        CurrentLevel++;
+        _textLevel.text = CurrentLevel.ToString();
+        _expSlider.maxValue = _experienceInfo.NeedExperienceForNextLevel[CurrentLevel];
         _levelUpStats.NewLevel();
     }
 
     private void UpdateText()
     {
-        _currentExpText.text = _expSlider.value.ToString() + " / " + _experienceInfo.NeedExperienceForNextLevel[_currentLevel].ToString();
+        _currentExpText.text = _expSlider.value.ToString() + " / " + _experienceInfo.NeedExperienceForNextLevel[CurrentLevel].ToString();
     }
 
     private void OnDisable()

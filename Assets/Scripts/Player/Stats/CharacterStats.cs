@@ -12,8 +12,6 @@ public class CharacterStats : MonoBehaviour
     public int Wisdom;
     public int Mind;
 
-    [SerializeField] private LevelUpStats _levelUpStats;
-
     private void Awake()
     {
         Strength = CharacterInformation.StrengthS;
@@ -23,11 +21,6 @@ public class CharacterStats : MonoBehaviour
         Intelligence = CharacterInformation.IntelligenceS;
         Wisdom = CharacterInformation.WisdomS;
         Mind = CharacterInformation.MindS;
-    }
-
-    private void Start()
-    {
-        _levelUpStats.UpdateAllStats();
     }
 
     // STR (STRENGTH)
@@ -55,6 +48,7 @@ public class CharacterStats : MonoBehaviour
     // affects resistance to Hold (aka Roots) and Sleep
 
     // MIN (MIND)
+    // affects maximum MP
     // affects MP recovery speed
     // affects poison resistance
     // affects curse resistance

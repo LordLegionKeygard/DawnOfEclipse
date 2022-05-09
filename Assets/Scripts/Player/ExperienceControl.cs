@@ -9,7 +9,7 @@ public class ExperienceControl : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _currentExpText;
     [SerializeField] private TextMeshProUGUI _textLevel;
     [SerializeField] private Slider _expSlider;
-    public int CurrentLevel = 1;
+    public static int CurrentLevel = 1;
     [SerializeField] private ExperienceInfo _experienceInfo;
     [SerializeField] private LevelUpStats _levelUpStats;
 
@@ -46,6 +46,8 @@ public class ExperienceControl : MonoBehaviour
         CurrentLevel++;
         _textLevel.text = CurrentLevel.ToString();
         _expSlider.maxValue = _experienceInfo.NeedExperienceForNextLevel[CurrentLevel];
+        CustomEvents.FireCalculateAllStats();
+        CustomEvents.FireUpdateEnemyNameColorText();
         _levelUpStats.NewLevel();
     }
 

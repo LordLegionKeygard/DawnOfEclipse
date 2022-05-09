@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b25ce3faebdef14b88072b6daac1d55, type: 3}
+  m_Name: BaseHPInfo
+  m_EditorClassIdentifier: 
+  Class:
+  - Fighter: 0
+    Mage: 0
+  - Fighter: 101
+    Mage: 80
+  - Fighter: 116
+    Mage: 92
+  - Fighter: 132
+    Mage: 104
+  - Fighter: 148
+    Mage: 116
+  - Fighter: 164
+    Mage: 128
+  - Fighter: 180
+    Mage: 140
+  - Fighter: 196
+    Mage: 153
+  - Fighter: 213
+    Mage: 166
+  - Fighter: 230
+    Mage: 178
+  - Fighter: 246
+    Mage: 191
+  - Fighter: 263
+    Mage: 204
+  - Fighter: 281
+    Mage: 217
+  - Fighter: 298
+    Mage: 231
+  - Fighter: 315
+    Mage: 244
+  - Fighter: 333
+    Mage: 257
+  - Fighter: 351
+    Mage: 271
+  - Fighter: 369
+    Mage: 285
+  - Fighter: 387
+    Mage: 299
+  - Fighter: 405
+    Mage: 313
+  - Fighter: 424
+    Mage: 327

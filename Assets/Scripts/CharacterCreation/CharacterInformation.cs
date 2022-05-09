@@ -16,11 +16,11 @@ public class CharacterInformation : MonoBehaviour
     public static int Cap;
 
 
-    public static int StrengthS = 41;
-    public static int DexterityS = 34;
-    public static int ConstitutionS = 32;
-    public static int VigorS = 30;
-    public static int IntelligenceS = 25;
-    public static int WisdomS = 12;
-    public static int MindS = 26;
+    public static int StrengthS = 1;
+    public static int DexterityS = 1;
+    public static int ConstitutionS = 1;
+    public static int VigorS = 1;
+    public static int IntelligenceS = 1;
+    public static int WisdomS = 1;
+    public static int MindS = 1;
 }

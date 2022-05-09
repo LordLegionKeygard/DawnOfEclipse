@@ -22,10 +22,9 @@ public class LevelUpStats : MonoBehaviour
     [SerializeField] private Button _acceptButton;
     [SerializeField] private CharacterStats _characterStats;
 
-    private void Start()
+    private void OnEnable()
     {
-        // NewLevel();
-        // NewLevel();
+        CustomEvents.OnUpdateAllStats += UpdateAllStats;
     }
 
     public void AddStat(int serialNumber)
@@ -129,7 +128,7 @@ public class LevelUpStats : MonoBehaviour
         _characterStats.Wisdom += Stats[5];
         _characterStats.Mind += Stats[6];
 
-        UpdateAllStats();
+        CustomEvents.FireCalculateAllStats();
 
         for (int i = 0; i < Stats.Length; i++)
         {
@@ -139,7 +138,7 @@ public class LevelUpStats : MonoBehaviour
         _acceptButton.interactable = false;
 
         foreach (var item in _statMinusButtons) { item.interactable = false; }
-        
+
         if (SkillPoint == 0)
         {
             foreach (var item in _statPlusButtons) { item.interactable = false; }
@@ -155,5 +154,10 @@ public class LevelUpStats : MonoBehaviour
         _statsText[4].text = _characterStats.Intelligence.ToString();
         _statsText[5].text = _characterStats.Wisdom.ToString();
         _statsText[6].text = _characterStats.Mind.ToString();
+    }
+
+    private void OnDisable()
+    {
+        CustomEvents.OnUpdateAllStats -= UpdateAllStats;
     }
 }

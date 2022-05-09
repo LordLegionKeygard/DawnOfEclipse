@@ -6,25 +6,26 @@ using UnityEngine.UI;
 public class StaminaControl : MonoBehaviour
 {
     [SerializeField] private Slider _staminaBar;
-    private int _maxStamina = 1000;
-    private int _currentStamina;
+    public int MaxStamina;
+    [SerializeField] private float _currentStamina;
     private WaitForSeconds _regenTick = new WaitForSeconds(0.002f);
+    [SerializeField] private float _regenNumber;
     private Coroutine _regen;
-    public int CurrentStamina => _currentStamina;
+    public float CurrentStamina => _currentStamina;
     [HideInInspector] public bool StaminaRun = false;
 
-    private void Start()
+    public void CalculateStamina()
     {
-        _currentStamina = _maxStamina;
-        _staminaBar.maxValue = _maxStamina;
-        _staminaBar.value = _maxStamina;
+        _currentStamina = MaxStamina;
+        _staminaBar.maxValue = MaxStamina;
+        _staminaBar.value = MaxStamina;
     }
 
     private void FixedUpdate()
     {
-        if (_currentStamina > 10 && StaminaRun)
+        if (_currentStamina > 0 && StaminaRun)
         {
-            _currentStamina -= 2;
+            _currentStamina -= 0.2f;
             _staminaBar.value = _currentStamina;
             RegenTimer();
         }
@@ -32,16 +33,9 @@ public class StaminaControl : MonoBehaviour
 
     private void Update()
     {
-        if (_staminaBar.value == _currentStamina) { return; }
-        if (_staminaBar.value > _currentStamina)
-        {
-            _staminaBar.value -= Time.deltaTime * 400;
-        }
-        if (_staminaBar.value < _currentStamina)
-        {
-            _staminaBar.value += Time.deltaTime * 400;
-        }
-
+        if (_staminaBar.value == _currentStamina) return;
+        if (_staminaBar.value > _currentStamina) _staminaBar.value -= Time.deltaTime * 50;
+        if (_staminaBar.value < _currentStamina) _staminaBar.value += Time.deltaTime * 50;
     }
 
     public void UseStamina(int amount)
@@ -55,9 +49,7 @@ public class StaminaControl : MonoBehaviour
 
     private void RegenTimer()
     {
-        if (_regen != null)
-            StopCoroutine(_regen);
-
+        if (_regen != null) StopCoroutine(_regen);
         _regen = StartCoroutine(RegenStamina());
     }
 
@@ -65,9 +57,9 @@ public class StaminaControl : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
 
-        while (_currentStamina < _maxStamina)
+        while (_currentStamina < MaxStamina)
         {
-            _currentStamina += _maxStamina / 1000;
+            _currentStamina += _regenNumber;
             _staminaBar.value = _currentStamina;
             yield return _regenTick;
         }

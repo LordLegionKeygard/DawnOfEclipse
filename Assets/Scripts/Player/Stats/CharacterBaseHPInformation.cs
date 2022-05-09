@@ -11,6 +11,6 @@ public class CharacterBaseHPInformation : ScriptableObject
 [System.Serializable]
 public class Class
 {
-    public int FighterBaseHealth;
-    public int MageBaseHealth;
+    public int Fighter;
+    public int Mage;
 }

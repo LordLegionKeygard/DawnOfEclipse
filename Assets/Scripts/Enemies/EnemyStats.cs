@@ -72,6 +72,7 @@ public class EnemyStats : MonoBehaviour
 
     private void Death()
     {
+        _enemyHealthBar.gameObject.SetActive(false);
         _newEnemyAnimatorManager.PlayerTargetAnimation("death");
         _characterController.enabled = false;
         CustomEvents.FireCameraLockOnTargetDeath();

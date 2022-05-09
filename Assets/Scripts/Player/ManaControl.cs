@@ -6,18 +6,18 @@ using UnityEngine.UI;
 public class ManaControl : MonoBehaviour
 {
     [SerializeField] private Slider _manaBar;
-    private int _maxMana = 100;
+    public int MaxMana;
     private int _currentMana;
     private WaitForSeconds _regenTick = new WaitForSeconds(2f);
     private Coroutine _regen;
     public int CurrentMana => _currentMana;
     [HideInInspector] public bool ManaRun = false;
 
-    private void Start()
+    public void CalculateMana()
     {
-        _currentMana = _maxMana;
-        _manaBar.maxValue = _maxMana;
-        _manaBar.value = _maxMana;
+        _currentMana = MaxMana;
+        _manaBar.maxValue = MaxMana;
+        _manaBar.value = MaxMana;
     }
 
     private void FixedUpdate()
@@ -65,9 +65,9 @@ public class ManaControl : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
 
-        while (_currentMana < _maxMana)
+        while (_currentMana < MaxMana)
         {
-            _currentMana += _maxMana / 1000;
+            _currentMana += MaxMana / 1000;
             _manaBar.value = _currentMana;
             yield return _regenTick;
         }

@@ -138,4 +138,21 @@ public class CustomEvents
     {
         OnChangeExperience?.Invoke(number);
     }
+    public static Action OnUpdateAllStats;
+    public static void FireUpdateAllStats()
+    {
+        OnUpdateAllStats?.Invoke();
+    }
+
+    public static Action OnCalculateAllStats;
+    public static void FireCalculateAllStats()
+    {
+        OnCalculateAllStats?.Invoke();
+    }
+
+    public static Action OnUpdateEnemyNameColorText;
+    public static void FireUpdateEnemyNameColorText()
+    {
+        OnUpdateEnemyNameColorText?.Invoke();
+    }
 }

@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dffe7113d3bbe844bbda49e92748249d, type: 3}
+  m_Name: BaseStaminaInfo
+  m_EditorClassIdentifier: 
+  Class:
+  - Fighter: 0
+    Mage: 0
+  - Fighter: 100
+    Mage: 90
+  - Fighter: 105
+    Mage: 93
+  - Fighter: 110
+    Mage: 96
+  - Fighter: 115
+    Mage: 99
+  - Fighter: 120
+    Mage: 102
+  - Fighter: 125
+    Mage: 105
+  - Fighter: 130
+    Mage: 108
+  - Fighter: 135
+    Mage: 111
+  - Fighter: 140
+    Mage: 114
+  - Fighter: 145
+    Mage: 117
+  - Fighter: 150
+    Mage: 120
+  - Fighter: 155
+    Mage: 123
+  - Fighter: 160
+    Mage: 126
+  - Fighter: 165
+    Mage: 129
+  - Fighter: 170
+    Mage: 132
+  - Fighter: 175
+    Mage: 135
+  - Fighter: 180
+    Mage: 138
+  - Fighter: 185
+    Mage: 141
+  - Fighter: 190
+    Mage: 144
+  - Fighter: 195
+    Mage: 147

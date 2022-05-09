@@ -125,13 +125,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _icon: {fileID: 5419139310048999167}
-  _buySlot: {fileID: 0}
+  _selectSlot: {fileID: 0}
   _inventorySlot: {fileID: 0}
   _playerBank: {fileID: 0}
   _priceText: {fileID: 7230579929873231533}
   _itemNameText: {fileID: 0}
   _slotNumber: 0
-  Item: {fileID: 0}
+  Item: {fileID: 11400000, guid: 63753bdbbcf3e734289031a30d77b118, type: 2}
 --- !u!1 &5419139311439036610
 GameObject:
   m_ObjectHideFlags: 0
@@ -335,7 +335,7 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1433f584b40f67a49b0434d5cefecff9, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 9302439a419323940b2e7f2f55382344, type: 2}
   m_sharedMaterial: {fileID: -42549177917257996, guid: 1433f584b40f67a49b0434d5cefecff9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}

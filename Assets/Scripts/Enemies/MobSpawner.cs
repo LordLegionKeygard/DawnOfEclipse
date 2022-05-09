@@ -21,7 +21,7 @@ public class MobSpawner : MonoBehaviour
         Collider[] colliders = Physics.OverlapSphere(transform.position, _detectionRadius, _detectionLayer);
         for (int i = 0; i < colliders.Length; i++)
         {
-            CharacterStats characterStats = colliders[i].transform.GetComponent<CharacterStats>();
+            HealthControl characterStats = colliders[i].transform.GetComponent<HealthControl>();
 
             if (characterStats != null)
             {

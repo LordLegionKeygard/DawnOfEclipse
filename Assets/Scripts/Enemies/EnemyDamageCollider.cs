@@ -4,11 +4,17 @@ using UnityEngine;
 
 public class EnemyDamageCollider : MonoBehaviour
 {
-    [SerializeField] private float _weaponDamage;
+    [SerializeField] private EnemyLevel _enemyLevel;
+    public float WeaponDamage;
     private BoxCollider _col;
     private void Awake()
     {
         _col = GetComponent<BoxCollider>();
+    }
+
+    private void Start()
+    {
+        WeaponDamage = _enemyLevel.EnemyInformation.physAttack[_enemyLevel.Level];
     }
 
     private void OnTriggerEnter(Collider collision)
@@ -17,7 +23,7 @@ public class EnemyDamageCollider : MonoBehaviour
         {
             if (healthControl != null)
             {
-                healthControl.TakeDamage(_weaponDamage);
+                healthControl.TakeDamage(WeaponDamage);
                 _col.enabled = false;
             }
         }

@@ -4,8 +4,10 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HealthControl : CharacterStats
+public class HealthControl : MonoBehaviour
 {
+    public int MaxHealth;
+    public int CurrentHealth;
     [SerializeField] private Slider healthBar;
     [SerializeField] private Image healthBarImage;
     private Animator _animator;
@@ -27,7 +29,6 @@ public class HealthControl : CharacterStats
     }
     private void Start()
     {
-        CurrentHealth = MaxHealth;
         CurrentHealth = MaxHealth;
         healthBar.maxValue = MaxHealth;
         healthBar.value = MaxHealth;

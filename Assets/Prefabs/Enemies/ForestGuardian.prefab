@@ -5179,6 +5179,8 @@ GameObject:
   - component: {fileID: 6547861182434213347}
   - component: {fileID: 4584595537539598593}
   - component: {fileID: -9213015339193323112}
+  - component: {fileID: 7721091357279585641}
+  - component: {fileID: 1312810529313283439}
   m_Layer: 0
   m_Name: ForestGuardian
   m_TagString: Untagged
@@ -5194,7 +5196,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 373840078995077302}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1425.08, y: 0.146, z: -1044.3}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7618381106315588375}
@@ -5387,7 +5389,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6eb039774620aac48943006fd934d970, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHealth: 100
+  MaxHealth: 0
   CurrentHealth: 0
   _enemyHealthBar: {fileID: 632814481094459719}
 --- !u!114 &2981638188418932510
@@ -5449,6 +5451,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _normalSpeed: 5
   _aiPath: {fileID: 373840078995077306}
+--- !u!114 &7721091357279585641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 373840078995077302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2074672797288c04b871a6c8ca25061e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Level: 1
+  EnemyInformation: {fileID: 11400000, guid: 0778ec36ccd8bfd4f9729093a3d832f5, type: 2}
+--- !u!114 &1312810529313283439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 373840078995077302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3a6fe4826c756d45a81579b85a54171, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &373886296371538138
 GameObject:
   m_ObjectHideFlags: 0
@@ -12639,7 +12667,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e01edfc254722244884a29b4e61dd98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _weaponDamage: 10
+  _enemyLevel: {fileID: 7721091357279585641}
+  WeaponDamage: 0
 --- !u!1 &8806310221505904381
 GameObject:
   m_ObjectHideFlags: 0
@@ -12777,13 +12806,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b1c665e0b97c2ac4aa0f5adbc5a4e731, type: 3}
---- !u!198 &4446405742837373333 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 5053544363130517402, guid: b1c665e0b97c2ac4aa0f5adbc5a4e731, type: 3}
-  m_PrefabInstance: {fileID: 8905030047644413455}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4446405743199978080 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5053544363493649519, guid: b1c665e0b97c2ac4aa0f5adbc5a4e731, type: 3}
+  m_PrefabInstance: {fileID: 8905030047644413455}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &4446405742837373333 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 5053544363130517402, guid: b1c665e0b97c2ac4aa0f5adbc5a4e731, type: 3}
   m_PrefabInstance: {fileID: 8905030047644413455}
   m_PrefabAsset: {fileID: 0}

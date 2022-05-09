@@ -74,7 +74,7 @@ Material:
     m_Colors:
     - _Color_BodyArt: {r: 0.2283196, g: 0.5822246, b: 0.7573529, a: 1}
     - _Color_Eyes: {r: 0.38431373, g: 0.34901962, b: 0.50980395, a: 1}
-    - _Color_Hair: {r: 0.14117648, g: 0.36862746, b: 0.3764706, a: 1}
+    - _Color_Hair: {r: 0.7411765, g: 0.72156864, b: 0.6745098, a: 1}
     - _Color_Leather_Primary: {r: 0.282353, g: 0.2078432, b: 0.1647059, a: 0}
     - _Color_Leather_Secondary: {r: 0.372549, g: 0.3294118, b: 0.2784314, a: 0}
     - _Color_Metal_Dark: {r: 0.1764706, g: 0.1960784, b: 0.2156863, a: 0}
@@ -83,6 +83,6 @@ Material:
     - _Color_Primary: {r: 0.2431373, g: 0.4196079, b: 0.6196079, a: 0}
     - _Color_Scar: {r: 0.38431373, g: 0.34901962, b: 0.50980395, a: 1}
     - _Color_Secondary: {r: 0.8196079, g: 0.6431373, b: 0.2980392, a: 0}
-    - _Color_Skin: {r: 0.70980394, g: 0.627451, b: 1, a: 1}
-    - _Color_Stubble: {r: 0.70980394, g: 0.627451, b: 1, a: 1}
+    - _Color_Skin: {r: 0.7058824, g: 0.7058824, b: 0.7058824, a: 1}
+    - _Color_Stubble: {r: 0.38431373, g: 0.34901962, b: 0.50980395, a: 1}
   m_BuildTextureStacks: []

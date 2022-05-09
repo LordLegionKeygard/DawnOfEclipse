@@ -132,4 +132,10 @@ public class CustomEvents
     {
         OnPlayerInWaterVFX?.Invoke(state);
     }
+
+    public static Action<int> OnChangeExperience;
+    public static void FireChangeExperience(int number)
+    {
+        OnChangeExperience?.Invoke(number);
+    }
 }

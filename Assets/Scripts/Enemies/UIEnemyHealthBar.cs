@@ -23,7 +23,7 @@ public class UIEnemyHealthBar : MonoBehaviour
 
     private void Update()
     {
-        if(_slider == null) return;
+        if(_slider == null || !_slider.gameObject.activeInHierarchy) return;
         _timeUntilBarIsHidde -= Time.deltaTime;
 
         if (_timeUntilBarIsHidde <= 0)

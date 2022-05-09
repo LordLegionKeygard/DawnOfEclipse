@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62fc5adde5a60ee48a463666b5302765, type: 3}
+  m_Name: ExperienceInfo
+  m_EditorClassIdentifier: 
+  NeedExperienceForNextLevel: 00000000440000006b01000090040000440b000096170000172c0000df4b0000927a000065bc0000221601002d8d010089270200deeb02007ae103005b10050030810600603d08000c4f0a0016c10c00

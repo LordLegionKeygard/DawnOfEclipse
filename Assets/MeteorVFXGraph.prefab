@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 2402348752055938872}
   - component: {fileID: 7943916193872924393}
   - component: {fileID: 1900019160362502464}
+  - component: {fileID: 3696058856584219378}
+  - component: {fileID: 672477124437094897}
   m_Layer: 0
   m_Name: MeteorVFXGraph
   m_TagString: Untagged
@@ -30,6 +32,7 @@ Transform:
   m_LocalRotation: {x: -0, y: 0.76130736, z: -0, w: -0.6483912}
   m_LocalPosition: {x: 1703.2, y: -5.44, z: -996.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -51,16 +54,19 @@ VisualEffect:
   m_PropertySheet:
     m_Float:
       m_Array:
-      - m_Value: 5
+      - m_Value: 15
         m_Name: Rate
         m_Overridden: 1
-      - m_Value: 5
+      - m_Value: 3
         m_Name: Radius
-        m_Overridden: 0
+        m_Overridden: 1
     m_Vector2f:
       m_Array: []
     m_Vector3f:
-      m_Array: []
+      m_Array:
+      - m_Value: {x: 0, y: 10, z: -6}
+        m_Name: InitialPosition
+        m_Overridden: 1
     m_Vector4f:
       m_Array: []
     m_Uint:
@@ -82,6 +88,7 @@ VisualEffect:
       m_Array: []
 --- !u!73398921 &2402348752055938872
 VFXRenderer:
+  serializedVersion: 1
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -99,12 +106,6 @@ VFXRenderer:
   m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -150,4 +151,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41e46d782ec76f54c832693d801c2554, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _collider: {fileID: 672477124437094897}
   _visualEffect: {fileID: 2994876453794920225}
+--- !u!114 &3696058856584219378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4630033682574836454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78f10a07ef4f2ea4eadb1f93ad8d84f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _magicDamage: 3
+--- !u!135 &672477124437094897
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4630033682574836454}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Radius: 3.38
+  m_Center: {x: 0.08, y: -2.75, z: -1.02}

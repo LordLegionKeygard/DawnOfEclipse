@@ -115,11 +115,17 @@ public class CustomEvents
     {
         OnCharacterCreate?.Invoke();
     }
-    // public static Action OnUseRaceSkill;
-    // public static void FireUseRaceSkill()
-    // {
-    //     OnUseRaceSkill?.Invoke();
-    // }
+    public static Action<bool> OnActiveTargetSkill;
+    public static void FireActiveTargetSkill(bool state)
+    {
+        OnActiveTargetSkill?.Invoke(state);
+    }
+
+    public static Action OnUseTargetSkill;
+    public static void FireUseTargetSkill()
+    {
+        OnUseTargetSkill?.Invoke();
+    }
 
     public static Action<bool> OnPoisonHandsParticle;
     public static void FirePoisonHandsParticle(bool state)

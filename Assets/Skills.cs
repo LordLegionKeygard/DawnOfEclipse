@@ -7,7 +7,7 @@ using TMPro;
 public class Skills : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI _manaCostText;
-    [SerializeField] private ManaControl _manaControl;
+    public ManaControl ManaControl;
     public int ManaCost;
     public KeyCode _keyCode;
     public Transform TargetTransform;
@@ -41,11 +41,11 @@ public class Skills : MonoBehaviour
     }
     public virtual void SkillTurnOn()
     {
-        if(ManaCost > _manaControl.CurrentMana || HealthControl.IsDeath) return;
+        if(ManaCost > ManaControl.CurrentMana || HealthControl.IsDeath) return;
         if (SkillImage.fillAmount == 1)
         {
             DoSkill(true);
-            _manaControl.UseMana(ManaCost);
+            ManaControl.UseMana(ManaCost);
             SkillToggle = true;
             SkillImage.fillAmount = 0;
         }
@@ -56,6 +56,10 @@ public class Skills : MonoBehaviour
         if (Input.GetKeyDown(_keyCode))
         {
             SkillTurnOn();
+        }
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            CustomEvents.FireActiveTargetSkill(false);
         }
         if (SkillImage.fillAmount != 1) SkillImage.fillAmount += Time.deltaTime / _timeFillAmount;
 

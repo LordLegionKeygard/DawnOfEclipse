@@ -13,6 +13,7 @@ TagManager:
   - Collide
   - Animation
   - UI
+  - Effect
   layers:
   - Default
   - TransparentFX
@@ -44,8 +45,8 @@ TagManager:
   - 
   - 
   - 
-  - POLARIS RAYCAST
-  - POLARIS SPLINE
+  - 
+  - 
   m_SortingLayers:
   - name: Default
     uniqueID: 0

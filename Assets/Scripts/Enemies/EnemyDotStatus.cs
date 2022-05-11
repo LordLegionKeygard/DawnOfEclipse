@@ -31,7 +31,7 @@ public class EnemyDotStatus : MonoBehaviour
 
     private void DotUpdate()
     {
-        _enemyStats.CurrentHealth -= 5;
+        _enemyStats.CurrentHealth -= 50;
         _enemyStats.UpdateSlider();
         Invoke("DotUpdate", 1f);
     }

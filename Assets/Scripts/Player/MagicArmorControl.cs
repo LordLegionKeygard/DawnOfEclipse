@@ -27,12 +27,9 @@ public class MagicArmorControl : MonoBehaviour
 
     public void UpdateMagicArmor()
     {
-        CurrentMagicArmor = LeftRingMagicArmor +
-        RightRingMagicArmor +
-        LeftEarringMagicArmor +
-        RightEarringMagicArmor +
-        NecklaceMagicArmor +
-        BackAttachmentMagicArmor;
+        var magicArmor = LeftRingMagicArmor +RightRingMagicArmor +LeftEarringMagicArmor +RightEarringMagicArmor +NecklaceMagicArmor +BackAttachmentMagicArmor;
+        
+        CurrentMagicArmor = (int)((magicArmor * (float)(ExperienceControl.CurrentLevel + 89) / 100));
 
         _magicArmorText.text = (CurrentMagicArmor.ToString());
     }

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3643347767580300256}
   - component: {fileID: 7467048899661783503}
   - component: {fileID: 8401888081996569307}
+  - component: {fileID: 3863724645693881269}
   m_Layer: 7
   m_Name: Wep_Axe_01
   m_TagString: Untagged
@@ -109,5 +110,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d431cf3ab31754469dc39b89b600778, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _weaponDamage: 25
-  CanDamage: 1
+  BaseWeaponDamage: 24
+  _weaponDamage: 0
+--- !u!114 &3863724645693881269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3663807302891448404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3941aa3b0f26335419c8c0725d7e5887, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BaseWeaponMagicDamage: 12
+  _weaponMagicDamage: 0

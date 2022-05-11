@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class StaminaControl : MonoBehaviour
 {
     [SerializeField] private Slider _staminaBar;
+    [SerializeField] private Slider _staminaBarBack;
     public int MaxStamina;
     [SerializeField] private float _currentStamina;
     private WaitForSeconds _regenTick = new WaitForSeconds(0.002f);
@@ -19,30 +21,34 @@ public class StaminaControl : MonoBehaviour
         _currentStamina = MaxStamina;
         _staminaBar.maxValue = MaxStamina;
         _staminaBar.value = MaxStamina;
+
+        _staminaBarBack.maxValue = MaxStamina;
+        _staminaBarBack.value = MaxStamina;
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         if (_currentStamina > 0 && StaminaRun)
         {
             _currentStamina -= 0.2f;
             _staminaBar.value = _currentStamina;
+            _staminaBarBack.value = _currentStamina;
             RegenTimer();
         }
     }
 
-    private void Update()
+    private void UpdateBackSlider()
     {
-        if (_staminaBar.value == _currentStamina) return;
-        if (_staminaBar.value > _currentStamina) _staminaBar.value -= Time.deltaTime * 50;
-        if (_staminaBar.value < _currentStamina) _staminaBar.value += Time.deltaTime * 50;
+        _staminaBarBack.DOValue(_currentStamina, 1f,false);
     }
 
     public void UseStamina(int amount)
     {
         if (_currentStamina - amount >= 0)
-        {
+        {        
             _currentStamina -= amount;
+            UpdateBackSlider();
+            _staminaBar.value = _currentStamina;
             RegenTimer();
         }
     }
@@ -61,6 +67,7 @@ public class StaminaControl : MonoBehaviour
         {
             _currentStamina += _regenNumber;
             _staminaBar.value = _currentStamina;
+            _staminaBarBack.value = _currentStamina;
             yield return _regenTick;
         }
         _regen = null;

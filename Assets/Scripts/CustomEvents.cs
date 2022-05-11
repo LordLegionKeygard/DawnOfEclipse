@@ -115,11 +115,11 @@ public class CustomEvents
     {
         OnCharacterCreate?.Invoke();
     }
-    public static Action OnUseRaceSkill;
-    public static void FireUseRaceSkill()
-    {
-        OnUseRaceSkill?.Invoke();
-    }
+    // public static Action OnUseRaceSkill;
+    // public static void FireUseRaceSkill()
+    // {
+    //     OnUseRaceSkill?.Invoke();
+    // }
 
     public static Action<bool> OnPoisonHandsParticle;
     public static void FirePoisonHandsParticle(bool state)
@@ -154,5 +154,35 @@ public class CustomEvents
     public static void FireUpdateEnemyNameColorText()
     {
         OnUpdateEnemyNameColorText?.Invoke();
+    }
+
+    public static Action<int> OnUpdateWeaponPhysDamage;
+    public static void FireUpdateWeaponPhysDamage(int number)
+    {
+        OnUpdateWeaponPhysDamage?.Invoke(number);
+    }
+
+    public static Action<int> OnUpdateWeaponMageDamage;
+    public static void FireUpdateWeaponMageDamage(int number)
+    {
+        OnUpdateWeaponMageDamage?.Invoke(number);
+    }
+
+    public static Action<float> OnUpdateWeaponPhysCritChance;
+    public static void FireUpdateWeaponPhysCritChance(float number)
+    {
+        OnUpdateWeaponPhysCritChance?.Invoke(number);
+    }
+
+    public static Action<float> OnUpdateWeaponMageCritChance;
+    public static void FireUpdateWeaponMageCritChance(float number)
+    {
+        OnUpdateWeaponMageCritChance?.Invoke(number);
+    }
+
+    public static Action OnUpdateBaseWeaponDamage;
+    public static void FireUpdateBaseWeaponDamage()
+    {
+        OnUpdateBaseWeaponDamage?.Invoke();
     }
 }

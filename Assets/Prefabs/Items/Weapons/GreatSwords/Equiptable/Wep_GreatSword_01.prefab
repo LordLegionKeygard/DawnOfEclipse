@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 735520581706733141}
   - component: {fileID: 752542573230668251}
   - component: {fileID: 1947726111628715951}
+  - component: {fileID: -5658823412245668214}
   m_Layer: 7
   m_Name: Wep_GreatSword_01
   m_TagString: Untagged
@@ -109,5 +110,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d431cf3ab31754469dc39b89b600778, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _weaponDamage: 25
-  CanDamage: 1
+  _weaponDamage: 0
+  _physCritChance: 0
+  _basePhysCritChance: 8
+  BaseWeaponDamage: 50
+--- !u!114 &-5658823412245668214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 735520581708882361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3941aa3b0f26335419c8c0725d7e5887, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _weaponMagicDamage: 0
+  _magCritChance: 0
+  _baseMagCritChance: 4
+  BaseWeaponMagicDamage: 25

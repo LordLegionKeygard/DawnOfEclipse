@@ -41,16 +41,28 @@ public class EnemyStats : MonoBehaviour
         _mobSpawner = GetComponentInParent<MobSpawner>();
     }
 
-    public void TakeDamage(int damage)
+    public void CalculateDamage(float damage, DamageType damageType)
     {
-        var playerDamage = (1 - (_enemyPhysDefence / damage)) * damage;
+        switch (damageType)
+        {
+            case DamageType.PhysDamage:
+                var playerDamage = damage * 70 / _enemyPhysDefence;
+                TakeDamage(playerDamage);
+                break;
+            case DamageType.MageDamage:
+                playerDamage = damage * 70 / _enemyMagDefence;
+                TakeDamage(playerDamage);
+                break;
+        }
+    }
 
-        if (playerDamage <= 0) return;
+    private void TakeDamage(float damage)
+    {
+        if (damage <= 0) return;
 
         _enemyVFXController.TakeDamageVFX();
-        CurrentHealth -= playerDamage;
+        CurrentHealth -= (int)damage;
         UpdateSlider();
-
     }
 
     public void UpdateSlider()

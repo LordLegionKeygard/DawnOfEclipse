@@ -71,13 +71,13 @@ public class EquipSlot : Slots
                 _magicArmorControl.BackAttachmentMagicArmor = 0;
                 break;
             case 13:
-                _armorControl.ShoulderLeftArmor = 0;
+                _armorControl.Shoulders = 0;
                 break;
             case 15:
-                _armorControl.ElbowLeftArmor = 0;
+                _armorControl.Elbows = 0;
                 break;
             case 18:
-                _armorControl.KneeLeftArmor = 0;
+                _armorControl.Knees = 0;
                 break;
             case 19: //AllWeaponSlot
                 _equipmentManager.Unequip(19);

@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class StatsFormulesCalculator : MonoBehaviour
 {
-    [SerializeField] private CharacterStats _characterStats;
-
     [Header("Constitution")]
     [SerializeField] private HealthControl _healthControl;
     [SerializeField] private CharacterBaseHPInformation _baseHPInfo;
@@ -21,6 +19,14 @@ public class StatsFormulesCalculator : MonoBehaviour
 
     [SerializeField] private StaminaControl _staminaControl;
     [SerializeField] private CharacterBaseStaminaInformation _baseStaminaInfo;
+
+    [Header("Dexterity")]
+    [SerializeField] private PlayerMovement _playerMovement;
+
+
+    [Header("Other")]
+
+    [SerializeField] private PotionsControl _potionControl;
 
 
     private void OnEnable()
@@ -47,34 +53,44 @@ public class StatsFormulesCalculator : MonoBehaviour
 
     private void CalculateStrength()
     {
-
+        
     }
     private void CalculateDexterity()
     {
-
+        switch (CharacterInformation.Class)
+        {
+            case 0:
+                _playerMovement.DefaultSpeed = 4.95f + (0.01f * CharacterStats.Dexterity);
+                break;
+            case 1:
+                _staminaControl.MaxStamina = (int)((float)_baseStaminaInfo.Class[ExperienceControl.CurrentLevel].Mage * (1 + 0.02f * CharacterStats.Vigor));
+                break;
+        }
+        _playerMovement.CalculateSpeed();
     }
     private void CalculateConstitution()
     {
         switch (CharacterInformation.Class)
         {
             case 0:
-                _healthControl.MaxHealth = (int)((float)_baseHPInfo.Class[ExperienceControl.CurrentLevel].Fighter * (1 + 0.04f * _characterStats.Constitution));
+                _healthControl.MaxHealth = (int)((float)_baseHPInfo.Class[ExperienceControl.CurrentLevel].Fighter * (1 + 0.04f * CharacterStats.Constitution));
                 break;
             case 1:
-                _healthControl.MaxHealth = (int)((float)_baseHPInfo.Class[ExperienceControl.CurrentLevel].Mage * (1 + 0.04f * _characterStats.Constitution));
+                _healthControl.MaxHealth = (int)((float)_baseHPInfo.Class[ExperienceControl.CurrentLevel].Mage * (1 + 0.04f * CharacterStats.Constitution));
                 break;
         }
         _healthControl.CalculateHealth();
+        _potionControl.CalculateHealFromPotion();
     }
     private void CalculateVigor()
     {
         switch (CharacterInformation.Class)
         {
             case 0:
-                _staminaControl.MaxStamina = (int)((float)_baseStaminaInfo.Class[ExperienceControl.CurrentLevel].Fighter * (1 + 0.02f * _characterStats.Vigor));
+                _staminaControl.MaxStamina = (int)((float)_baseStaminaInfo.Class[ExperienceControl.CurrentLevel].Fighter * (1 + 0.02f * CharacterStats.Vigor));
                 break;
             case 1:
-                _staminaControl.MaxStamina = (int)((float)_baseStaminaInfo.Class[ExperienceControl.CurrentLevel].Mage * (1 + 0.02f * _characterStats.Vigor));
+                _staminaControl.MaxStamina = (int)((float)_baseStaminaInfo.Class[ExperienceControl.CurrentLevel].Mage * (1 + 0.02f * CharacterStats.Vigor));
                 break;
         }
         _staminaControl.CalculateStamina();
@@ -92,10 +108,10 @@ public class StatsFormulesCalculator : MonoBehaviour
         switch (CharacterInformation.Class)
         {
             case 0:
-                _manaControl.MaxMana = (int)((float)_cbaseMPInfo.Class[ExperienceControl.CurrentLevel].Fighter * (1 + 0.04f * _characterStats.Mind));
+                _manaControl.MaxMana = (int)((float)_cbaseMPInfo.Class[ExperienceControl.CurrentLevel].Fighter * (1 + 0.04f * CharacterStats.Mind));
                 break;
             case 1:
-                _manaControl.MaxMana = (int)((float)_cbaseMPInfo.Class[ExperienceControl.CurrentLevel].Mage * (1 + 0.04f * _characterStats.Mind));
+                _manaControl.MaxMana = (int)((float)_cbaseMPInfo.Class[ExperienceControl.CurrentLevel].Mage * (1 + 0.04f * CharacterStats.Mind));
                 break;
         }
         _manaControl.CalculateMana();

@@ -74,7 +74,7 @@ public class PlayerInputController : MonoBehaviour
         _input.Player.Roll.canceled += ctx => Roll();
         _input.Player.PickUp.performed += ctx => CustomEvents.FirePickUp(true);
         _input.Player.PickUp.canceled += ctx => CustomEvents.FirePickUp(false);
-        _input.Player.RaceSkill.performed += ctx => OnUseRaceSkill();
+        // _input.Player.RaceSkill.performed += ctx => OnUseRaceSkill();
         _input.Player.RaceSkill.canceled += ctx => CustomEvents.FirePoisonHandsParticle(false);
     }
 
@@ -93,11 +93,11 @@ public class PlayerInputController : MonoBehaviour
         CheckGround();
     }
 
-    private void OnUseRaceSkill()
-    {
-        if (!_canNewAction) return;
-        CustomEvents.OnUseRaceSkill();
-    }
+    // private void OnUseRaceSkill()
+    // {
+    //     if (!_canNewAction) return;
+    //     CustomEvents.OnUseRaceSkill();
+    // }
 
     private void CheckGround()
     {
@@ -156,16 +156,18 @@ public class PlayerInputController : MonoBehaviour
             if (!_potionsControl.SpeedPotion)
             {
                 _staminaControl.StaminaRun = true;
-                _playerMovement.CurrentSpeed = 7;
+                _playerMovement.CurrentSpeed = _playerMovement.DefaultSpeed + 3;
             }
             else { _potionsControl.PotionSpeed = 5; }
+            CustomEvents.FireUpdateAllStats();
         }
         if (!isPressed && !_isSneak)
         {
-            _playerAnimatorManager.PlayTargetBoolAnimation(false, _playerAnimatorManager.Run, 0.3f, 4);
+            _playerAnimatorManager.PlayTargetBoolAnimation(false, _playerAnimatorManager.Run, 0f, 4);
             _staminaControl.StaminaRun = false;
             _playerMovement.CurrentSpeed = _playerMovement.DefaultSpeed;
             _potionsControl.PotionSpeed = 0;
+            CustomEvents.FireUpdateAllStats();
         }
     }
 
@@ -197,7 +199,7 @@ public class PlayerInputController : MonoBehaviour
             tempCenter.y = _characterController.height / 2;
             _characterController.center = tempCenter;
             _playerAnimatorManager.PlayTargetBoolAnimation(true, _playerAnimatorManager.Sneak, 0, 0);
-            _playerMovement.CurrentSpeed = 2;
+            _playerMovement.CurrentSpeed = _playerMovement.DefaultSpeed - 3;
             _isSneak = true;
             CharacterManager.maximumDetectionAngle = 50f;
             CharacterManager.minimumDetectionAngle = -50f;
@@ -207,10 +209,11 @@ public class PlayerInputController : MonoBehaviour
             _characterController.height = 1.7f;
             _playerAnimatorManager.PlayTargetBoolAnimation(false, _playerAnimatorManager.Sneak, 0, 0);
             _isSneak = false;
-            _playerMovement.CurrentSpeed = 5;
+            _playerMovement.CurrentSpeed = _playerMovement.DefaultSpeed;
             CharacterManager.maximumDetectionAngle = 180f;
             CharacterManager.minimumDetectionAngle = -180f;
         }
+        CustomEvents.FireUpdateAllStats();
     }
 
     private void OnDisable()
@@ -234,7 +237,7 @@ public class PlayerInputController : MonoBehaviour
         _input.Player.Roll.canceled -= ctx => Roll();
         _input.Player.PickUp.performed -= ctx => CustomEvents.FirePickUp(true);
         _input.Player.PickUp.canceled -= ctx => CustomEvents.FirePickUp(false);
-        _input.Player.RaceSkill.performed -= ctx => CustomEvents.OnUseRaceSkill();
+        // _input.Player.RaceSkill.performed -= ctx => CustomEvents.OnUseRaceSkill();
         _input.Player.RaceSkill.canceled -= ctx => CustomEvents.OnPoisonHandsParticle(false);
     }
 }

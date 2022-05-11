@@ -9,22 +9,15 @@ public class ArmorControl : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _armorText;
     public int CurrentArmor = 0;
     public int TorsoArmor;
-    public int HandRightArmor;
     public int HandsArmor;
-    public int ArmUpperRightArmor;
-    public int ArmUpperLeftArmor;
-    public int ArmLowerRightArmor;
-    public int ArmLowerLeftArmor;
+    public int ArmUppers;
+    public int ArmLowers;
     public int HipsArmor;
     public int LegsArmor;
-    public int LegRightArmor;
-    public int ShoulderLeftArmor;
-    public int ShoulderRightArmor;
+    public int Shoulders;
     public int HeadSlotArmor;
-    public int ElbowRightArmor;
-    public int ElbowLeftArmor;
-    public int KneeRightArmor;
-    public int KneeLeftArmor;
+    public int Elbows;
+    public int Knees;
     public int ShieldArmorPassive;
     public int ShieldBlockArmor;
     public int ShieldBlockArmorDefault;
@@ -36,13 +29,10 @@ public class ArmorControl : MonoBehaviour
 
     public void ResetArmor()
     {
-        ShoulderLeftArmor = 0;
-        ShoulderRightArmor = 0;
+        Shoulders = 0;
         HeadSlotArmor = 0;
-        ElbowRightArmor = 0;
-        ElbowLeftArmor = 0;
-        KneeRightArmor = 0;
-        KneeLeftArmor = 0;
+        Elbows = 0;
+        Knees = 0;
         ShieldArmorPassive = 0;
         ShieldBlockArmor = 0;
         ShieldBlockArmorDefault = 0;
@@ -61,27 +51,9 @@ public class ArmorControl : MonoBehaviour
 
     public void UpdateArmor()
     {
-        CurrentArmor = TorsoArmor +
-        HandRightArmor +
-        HandsArmor +
-        ArmUpperRightArmor +
-        ArmUpperLeftArmor +
-        ArmLowerRightArmor +
-        ArmLowerLeftArmor +
-        HipsArmor +
-        LegsArmor +
-        LegRightArmor +
-        ShoulderLeftArmor +
-        ShoulderRightArmor +
-        HeadSlotArmor +
-        ElbowLeftArmor +
-        ElbowRightArmor +
-        KneeRightArmor +
-        KneeLeftArmor +
-        ShieldArmorPassive +
-        ShieldBlockArmor;
-
-        _armorText.text = (CurrentArmor.ToString());
+        var armor = TorsoArmor + HandsArmor + ArmUppers + ArmLowers + HipsArmor + LegsArmor + Shoulders + HeadSlotArmor + Elbows + Knees + ShieldArmorPassive + ShieldBlockArmor;
+        CurrentArmor = (int)(((4 + armor) * (float)(ExperienceControl.CurrentLevel + 89) / 100));
+        _armorText.text = CurrentArmor.ToString();
     }
 
     private void OnDisable()

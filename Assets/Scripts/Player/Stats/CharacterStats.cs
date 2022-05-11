@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class CharacterStats : MonoBehaviour
 {
-    public int Strength;
-    public int Dexterity;
-    public int Constitution;
-    public int Vigor;
-    public int Intelligence;
-    public int Wisdom;
-    public int Mind;
+    public static int Strength;
+    public static int Dexterity;
+    public static int Constitution;
+    public static int Vigor;
+    public static int Intelligence;
+    public static int Wisdom;
+    public static int Mind;
 
     private void Awake()
     {
@@ -26,11 +26,11 @@ public class CharacterStats : MonoBehaviour
     // STR (STRENGTH)
     // affects P.Atk.
 
-    // VIG (VIGOR)
+    // VIG (VIGOR) +
     // affects maximum Stamina
     // affects Stamina recovery speed
 
-    // CON (CONSTITUTION)
+    // CON (CONSTITUTION) +
     // affects maximum Health
     // affects Health recovery speed
     // affects underwater breath gauge
@@ -47,7 +47,7 @@ public class CharacterStats : MonoBehaviour
     // affects chance of magic critical hits
     // affects resistance to Hold (aka Roots) and Sleep
 
-    // MIN (MIND)
+    // MIN (MIND) +
     // affects maximum MP
     // affects MP recovery speed
     // affects poison resistance

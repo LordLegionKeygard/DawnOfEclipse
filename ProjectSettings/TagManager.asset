@@ -12,6 +12,7 @@ TagManager:
   - NPC
   - Collide
   - Animation
+  - UI
   layers:
   - Default
   - TransparentFX

@@ -36,7 +36,7 @@ public class NewIKHands : MonoBehaviour
                 _leftHandPositionWeight = 1;
                 _leftHandRotationWeight = 1;
                 _rightHandPositionWeight = 1;
-                _rightHandRotationWeight = 1;
+                _rightHandRotationWeight = 0;
                 break;
         }
     }

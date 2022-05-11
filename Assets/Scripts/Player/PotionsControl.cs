@@ -6,19 +6,26 @@ public class PotionsControl : MonoBehaviour
 {
     public static bool CanDrinkAnyPotions = true;
     [SerializeField] private ParticleSystem _speedPotionParticle;
-    private HealthControl _healthControl;
+    [SerializeField] private HealthControl _healthControl;
     private PlayerAnimatorManager _playerAnimatorManager;
     public float PotionSpeed;
     public bool SpeedPotion = false;
+    [SerializeField] private int _healPointfromPotion;
+
+    [SerializeField] private PlayerMovement _playerMovement;
 
     private void OnEnable()
     {
         CustomEvents.OnUsePotion += UsePotions;
     }
-    private void Start()
+    private void Awake()
     {
         _playerAnimatorManager = GetComponent<PlayerAnimatorManager>();
-        _healthControl = GetComponent<HealthControl>();
+    }
+
+    public void CalculateHealFromPotion()
+    {
+        _healPointfromPotion = _healthControl.MaxHealth / 3;
     }
     private void UsePotions(int potion)
     {
@@ -28,21 +35,19 @@ public class PotionsControl : MonoBehaviour
         switch (potion)
         {
             case (0):
-                if (_healthControl.CurrentHealth > _healthControl.MaxHealth - 50)
+                if (_healthControl.CurrentHealth > _healthControl.MaxHealth - _healPointfromPotion)
                 {
                     _healthControl.CurrentHealth = _healthControl.MaxHealth;
                 }
                 else
                 {
-                    _healthControl.CurrentHealth += 50;
+                    _healthControl.CurrentHealth += _healPointfromPotion;
                 }
-                // _healthControl.UpdateHealthColorBar();
                 break;
 
             case (1):
                 StopCoroutine(ExecuteAfterTime(0f));
                 _speedPotionParticle.Play();
-                PotionSpeed = 5;
                 SpeedPotion = true;
 
                 StartCoroutine(ExecuteAfterTime(20f));

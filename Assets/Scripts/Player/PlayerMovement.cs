@@ -28,6 +28,11 @@ public class PlayerMovement : CharacterManager
         CustomEvents.OnCanWalk += CanWalkToggle;
     }
 
+    public void CalculateSpeed()
+    {
+        CurrentSpeed = DefaultSpeed;
+    }
+
     private void Awake()
     {
         _playerAnimatorManager = GetComponent<PlayerAnimatorManager>();
@@ -45,8 +50,8 @@ public class PlayerMovement : CharacterManager
         _inputStrafe.x = Input.GetAxis("Horizontal");
         _inputStrafe.y = Input.GetAxis("Vertical");
 
-        _animator.SetFloat("inputX", _inputStrafe.x);
-        _animator.SetFloat("inputY", _inputStrafe.y);
+        _animator.SetFloat("inputX", _inputStrafe.x, 0.3f, Time.deltaTime * 10f);
+        _animator.SetFloat("inputY", _inputStrafe.y, 0.3f, Time.deltaTime * 10f);
 
         Walk();
     }

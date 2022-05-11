@@ -380,6 +380,61 @@
                     "isPartOfComposite": true
                 },
                 {
+                    "name": "2D Vector",
+                    "id": "c5e4a955-5826-4bb1-a2ab-449253b6966d",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "See",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "Up",
+                    "id": "1d73f41d-4e92-4a3c-b363-7d1efa67fd02",
+                    "path": "<Mouse>/delta/y",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Mouse & Keyboard",
+                    "action": "See",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Down",
+                    "id": "3f81e8a1-d23f-4b51-b77b-4c3e3edd4b4c",
+                    "path": "<Mouse>/delta/y",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "See",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Left",
+                    "id": "3682ddcc-9486-4b13-9870-e2230afb3a23",
+                    "path": "<Mouse>/delta/x",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Mouse & Keyboard",
+                    "action": "See",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Right",
+                    "id": "06326a36-44d3-4a10-9d33-f71a9b1caf3d",
+                    "path": "<Mouse>/delta/x",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Mouse & Keyboard",
+                    "action": "See",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
                     "name": "",
                     "id": "3d3f55ae-51f2-4baf-90b1-229107cd0deb",
                     "path": "<DualSenseGamepadHID>/rightStickPress",
@@ -397,6 +452,17 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
+                    "action": "Sneak",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "88932b22-ff5e-4ce2-a2e4-cf710af39f75",
+                    "path": "<Keyboard>/leftCtrl",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Mouse & Keyboard",
                     "action": "Sneak",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -447,11 +513,33 @@
                 },
                 {
                     "name": "",
+                    "id": "8ece98f5-9926-49b6-951d-1e2616b325c6",
+                    "path": "<Keyboard>/leftShift",
+                    "interactions": "Hold(duration=0.3)",
+                    "processors": "",
+                    "groups": "Mouse & Keyboard",
+                    "action": "Run",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "6ab5bcf8-64ef-41ca-882e-eb38e935654d",
                     "path": "<DualSenseGamepadHID>/buttonEast",
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
+                    "action": "Roll",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c5884adc-73dc-4a30-b072-94a51e99adca",
+                    "path": "<Keyboard>/leftShift",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Mouse & Keyboard",
                     "action": "Roll",
                     "isComposite": false,
                     "isPartOfComposite": false

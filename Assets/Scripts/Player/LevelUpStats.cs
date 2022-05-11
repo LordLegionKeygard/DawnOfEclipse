@@ -20,7 +20,6 @@ public class LevelUpStats : MonoBehaviour
     [SerializeField] private Button[] _statPlusButtons;
     [SerializeField] private Button[] _statMinusButtons;
     [SerializeField] private Button _acceptButton;
-    [SerializeField] private CharacterStats _characterStats;
 
     private void OnEnable()
     {
@@ -94,25 +93,25 @@ public class LevelUpStats : MonoBehaviour
         switch (serialNumber)
         {
             case 0:
-                _statsText[serialNumber].text = (Stats[serialNumber] + _characterStats.Strength).ToString();
+                _statsText[serialNumber].text = (Stats[serialNumber] + CharacterStats.Strength).ToString();
                 break;
             case 1:
-                _statsText[serialNumber].text = (Stats[serialNumber] + _characterStats.Dexterity).ToString();
+                _statsText[serialNumber].text = (Stats[serialNumber] + CharacterStats.Dexterity).ToString();
                 break;
             case 2:
-                _statsText[serialNumber].text = (Stats[serialNumber] + _characterStats.Constitution).ToString();
+                _statsText[serialNumber].text = (Stats[serialNumber] + CharacterStats.Constitution).ToString();
                 break;
             case 3:
-                _statsText[serialNumber].text = (Stats[serialNumber] + _characterStats.Vigor).ToString();
+                _statsText[serialNumber].text = (Stats[serialNumber] + CharacterStats.Vigor).ToString();
                 break;
             case 4:
-                _statsText[serialNumber].text = (Stats[serialNumber] + _characterStats.Intelligence).ToString();
+                _statsText[serialNumber].text = (Stats[serialNumber] + CharacterStats.Intelligence).ToString();
                 break;
             case 5:
-                _statsText[serialNumber].text = (Stats[serialNumber] + _characterStats.Wisdom).ToString();
+                _statsText[serialNumber].text = (Stats[serialNumber] + CharacterStats.Wisdom).ToString();
                 break;
             case 6:
-                _statsText[serialNumber].text = (Stats[serialNumber] + _characterStats.Mind).ToString();
+                _statsText[serialNumber].text = (Stats[serialNumber] + CharacterStats.Mind).ToString();
                 break;
         }
         _usablePointText.text = SkillPoint.ToString();
@@ -120,14 +119,17 @@ public class LevelUpStats : MonoBehaviour
 
     public void Accept()
     {
-        _characterStats.Strength += Stats[0];
-        _characterStats.Dexterity += Stats[1];
-        _characterStats.Constitution += Stats[2];
-        _characterStats.Vigor += Stats[3];
-        _characterStats.Intelligence += Stats[4];
-        _characterStats.Wisdom += Stats[5];
-        _characterStats.Mind += Stats[6];
+        CharacterStats.Strength += Stats[0];
+        CharacterStats.Dexterity += Stats[1];
+        CharacterStats.Constitution += Stats[2];
+        CharacterStats.Vigor += Stats[3];
+        CharacterStats.Intelligence += Stats[4];
+        CharacterStats.Wisdom += Stats[5];
+        CharacterStats.Mind += Stats[6];
 
+
+        CustomEvents.FireUpdateBaseWeaponDamage();
+        Debug.Log("1");
         CustomEvents.FireCalculateAllStats();
 
         for (int i = 0; i < Stats.Length; i++)
@@ -147,13 +149,13 @@ public class LevelUpStats : MonoBehaviour
 
     public void UpdateAllStats()
     {
-        _statsText[0].text = _characterStats.Strength.ToString();
-        _statsText[1].text = _characterStats.Dexterity.ToString();
-        _statsText[2].text = _characterStats.Constitution.ToString();
-        _statsText[3].text = _characterStats.Vigor.ToString();
-        _statsText[4].text = _characterStats.Intelligence.ToString();
-        _statsText[5].text = _characterStats.Wisdom.ToString();
-        _statsText[6].text = _characterStats.Mind.ToString();
+        _statsText[0].text = CharacterStats.Strength.ToString();
+        _statsText[1].text = CharacterStats.Dexterity.ToString();
+        _statsText[2].text = CharacterStats.Constitution.ToString();
+        _statsText[3].text = CharacterStats.Vigor.ToString();
+        _statsText[4].text = CharacterStats.Intelligence.ToString();
+        _statsText[5].text = CharacterStats.Wisdom.ToString();
+        _statsText[6].text = CharacterStats.Mind.ToString();
     }
 
     private void OnDisable()

@@ -23,7 +23,7 @@ public class EnemyDamageCollider : MonoBehaviour
         {
             if (healthControl != null)
             {
-                healthControl.TakeDamage(WeaponDamage);
+                healthControl.CalculateDamage(WeaponDamage,DamageType.PhysDamage);
                 _col.enabled = false;
             }
         }

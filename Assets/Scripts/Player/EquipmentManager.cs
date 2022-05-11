@@ -250,7 +250,7 @@ public class EquipmentManager : MonoBehaviour
                 SkinnedMeshRenderer newMeshArmUpperRight = Instantiate(item.Meshes[CharacterInformation.Gender + 1]);
                 BoneTransformArmor(newMeshArmUpperLeft, 4, slotIndex, false);
                 BoneTransformArmor(newMeshArmUpperRight, 3, slotIndex, true);
-                _armorControl.ArmUpperLeftArmor = item.armorModifier;
+                _armorControl.ArmUppers = item.armorModifier;
                 EquipSlotAndIcon(8, item);
                 break;
             case EquipmentSlot.ArmLowers:
@@ -266,7 +266,7 @@ public class EquipmentManager : MonoBehaviour
                     BoneTransformArmor(newMeshArmLowerLeft, 24, slotIndex, false);
                     BoneTransformArmor(newMeshArmLowerRight, 25, slotIndex, true);
                 }
-                _armorControl.ArmLowerLeftArmor = item.armorModifier;
+                _armorControl.ArmLowers = item.armorModifier;
                 EquipSlotAndIcon(10, item);
                 break;
             case EquipmentSlot.Hips:
@@ -303,7 +303,7 @@ public class EquipmentManager : MonoBehaviour
                 BoneTransformArmor(newMeshShoulderLeft, 12, slotIndex, false);
                 SkinnedMeshRenderer newMeshShoulderRight = Instantiate(item.Meshes[1]);
                 BoneTransformArmor(newMeshShoulderRight, 11, slotIndex, true);
-                _armorControl.ShoulderLeftArmor = item.armorModifier;
+                _armorControl.Shoulders = item.armorModifier;
                 EquipSlotAndIcon(13, item);
                 break;
             case EquipmentSlot.HeadSlot:
@@ -331,7 +331,7 @@ public class EquipmentManager : MonoBehaviour
                 BoneTransformArmor(newMeshElbowLeft, 17, slotIndex, false);
                 SkinnedMeshRenderer newMeshElbowRight = Instantiate(item.Meshes[1]);
                 BoneTransformArmor(newMeshElbowRight, 16, slotIndex, true);
-                _armorControl.ElbowLeftArmor = item.armorModifier;
+                _armorControl.Elbows = item.armorModifier;
                 EquipSlotAndIcon(15, item);
                 break;
             case EquipmentSlot.HipsAttachment:
@@ -343,7 +343,7 @@ public class EquipmentManager : MonoBehaviour
                 BoneTransformArmor(newMeshKneeLeft, 20, slotIndex, false);
                 SkinnedMeshRenderer newMeshKneeRight = Instantiate(item.Meshes[1]);
                 BoneTransformArmor(newMeshKneeRight, 19, slotIndex, true);
-                _armorControl.KneeLeftArmor = item.armorModifier;
+                _armorControl.Knees = item.armorModifier;
                 EquipSlotAndIcon(18, item);
                 break;
             case EquipmentSlot.GreatSword:

@@ -24,7 +24,7 @@ MonoBehaviour:
   ArmorSetEnum: 0
   AllArmorSetInfo: {fileID: 0}
   equipSlot: 4
-  armorModifier: 0
+  armorModifier: 7
   MagicArmorModifier: 0
   Meshes:
   - {fileID: 4638573734102370560, guid: 8cbe0aac9e4545d45a46a343037630fd, type: 3}

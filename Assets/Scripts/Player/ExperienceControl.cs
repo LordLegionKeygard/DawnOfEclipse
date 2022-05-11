@@ -46,6 +46,7 @@ public class ExperienceControl : MonoBehaviour
         CurrentLevel++;
         _textLevel.text = CurrentLevel.ToString();
         _expSlider.maxValue = _experienceInfo.NeedExperienceForNextLevel[CurrentLevel];
+        CustomEvents.FireUpdateBaseWeaponDamage();
         CustomEvents.FireCalculateAllStats();
         CustomEvents.FireUpdateEnemyNameColorText();
         _levelUpStats.NewLevel();

@@ -4,22 +4,15 @@ using UnityEngine;
 
 public class StaminaUseManager : MonoBehaviour
 {
-    private StaminaControl staminaControl;
-    void Start()
-    {
-        staminaControl = GetComponent<StaminaControl>();
-    }
-    public void Use50Stamina()
-    {
-        staminaControl.UseStamina(50);
-    }
+    [SerializeField] private WeaponsInfo _weaponsInfo;
+    private StaminaControl _staminaControl;
 
-    public void Use100Stamina()
+    private void Start()
     {
-        staminaControl.UseStamina(100);
+        _staminaControl = GetComponent<StaminaControl>();
     }
-    public void Use150Stamina()
+    public void UseStamina()
     {
-        staminaControl.UseStamina(150);
+        _staminaControl.UseStamina(_weaponsInfo.StaminaAttack);
     }
 }

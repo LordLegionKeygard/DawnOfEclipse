@@ -66,9 +66,7 @@ public class PlayerAnimatorManager : MonoBehaviour
 
     public void BlockReact()
     {
-        var rnd = Random.Range(0, 2);
-        _playerInputController.IsBlock = true;
-        switch (rnd)
+        switch (Random.Range(0, 2))
         {
             case 0:
                 _animator.SetTrigger(Block_React_1);

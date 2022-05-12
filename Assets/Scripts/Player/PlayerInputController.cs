@@ -6,6 +6,7 @@ using System;
 
 public class PlayerInputController : MonoBehaviour
 {
+    [SerializeField] private WeaponsInfo _weaponsInfo;
     private PlayerMovement _playerMovement;
     private CharacterController _characterController;
     private PotionsControl _potionsControl;
@@ -33,14 +34,6 @@ public class PlayerInputController : MonoBehaviour
     public bool IsBlock;
     public bool IsCanJump = true;
     private bool _isGround;
-
-    [Header("Stamina")]
-    public float StaminaForR1 = 5f;
-    public float StaminaForR2 = 5f;
-
-    [Header("Time")]
-    public float TimeR1;
-    public float TimeR2;
 
     private void Awake()
     {
@@ -82,24 +75,18 @@ public class PlayerInputController : MonoBehaviour
     {
         if (HealthControl.IsDeath) return;
 
-        if (_inputAttackR1) Attack(StaminaForR1, 1);
-        if (_inputAttackR2) Attack(StaminaForR2, 2);
+        if (_inputAttackR1) Attack(1);
+        if (_inputAttackR2) Attack(2);
 
         if (_staminaControl.CurrentStamina <= 5)
         {
-            _playerAnimatorManager.PlayTargetBoolAnimation(false, _playerAnimatorManager.Block_L1, 0, 2);
             Run(false);
+            Block(false);
         }
-        CheckGround();
+        GroundCheck();
     }
 
-    // private void OnUseRaceSkill()
-    // {
-    //     if (!_canNewAction) return;
-    //     CustomEvents.OnUseRaceSkill();
-    // }
-
-    private void CheckGround()
+    private void GroundCheck()
     {
         _isGround = Physics.CheckSphere(groundCheck.position, _groundDistance, groundMask);
         if (_isGround && _velocity.y < 0) _velocity.y = _velocityUpdateY;
@@ -113,35 +100,41 @@ public class PlayerInputController : MonoBehaviour
 
     private void Block(bool isPressed)
     {
-        if (_staminaControl.CurrentStamina > 5 && isPressed && !IsRoll) { _playerAnimatorManager.PlayTargetBoolAnimation(true, _playerAnimatorManager.Block_L1, 0, 2); }
-        else { _playerAnimatorManager.PlayTargetBoolAnimation(false, _playerAnimatorManager.Block_L1, 0, 2); }
+        if (_staminaControl.CurrentStamina > 5 && isPressed && !IsRoll)
+        {
+            _playerAnimatorManager.PlayTargetBoolAnimation(true, _playerAnimatorManager.Block_L1, 0, 2);
+        }
+        else
+        {
+            _playerAnimatorManager.PlayTargetBoolAnimation(false, _playerAnimatorManager.Block_L1, 0, 2);
+        }
     }
 
     private void Jump()
     {
-        if (_isGround && !_isSneak && !IsRoll && !IsAttack && IsCanJump && _canNewAction && _staminaControl.CurrentStamina > 20)
+        if (_isGround && !_isSneak && !IsRoll && !IsAttack && IsCanJump && !IsBlock && _canNewAction && _staminaControl.CurrentStamina > _weaponsInfo.StaminaJump)
         {
             _playerAnimatorManager.PlayTargetBoolAnimation(true, _playerAnimatorManager.Jump, 0, 0);
             _playerAnimatorManager.PlayTargetBoolAnimation(false, _playerAnimatorManager.Jump, 1, 0);
             _velocity.y = Mathf.Sqrt(_jumpHeight * -2f * _gravity);
             IsCanJump = false;
-            _staminaControl.UseStamina(20);
+            _staminaControl.UseStamina(_weaponsInfo.StaminaJump);
         }
     }
 
-    private void Attack(float stamina, int attackNumber)
+    private void Attack(int attackNumber)
     {
-        if (_staminaControl.CurrentStamina > stamina && !IsAttack && _isGround && !IsRoll && !EventSystem.current.IsPointerOverGameObject())
+        if (_staminaControl.CurrentStamina > _weaponsInfo.StaminaAttack && !IsAttack && _isGround && !IsRoll && !EventSystem.current.IsPointerOverGameObject())
         {
             switch (attackNumber)
             {
                 case 1:
                     _playerAnimatorManager.PlayTargetBoolAnimation(true, _playerAnimatorManager.Attack_R1, 0, 1);
-                    _playerAnimatorManager.PlayTargetBoolAnimation(false, _playerAnimatorManager.Attack_R1, TimeR1, 1);
+                    _playerAnimatorManager.PlayTargetBoolAnimation(false, _playerAnimatorManager.Attack_R1, _weaponsInfo.TimeR1, 1);
                     break;
                 case 2:
                     _playerAnimatorManager.PlayTargetBoolAnimation(true, _playerAnimatorManager.Attack_R2, 0, 1);
-                    _playerAnimatorManager.PlayTargetBoolAnimation(false, _playerAnimatorManager.Attack_R2, TimeR2, 1);
+                    _playerAnimatorManager.PlayTargetBoolAnimation(false, _playerAnimatorManager.Attack_R2, _weaponsInfo.TimeR2, 1);
                     break;
             }
         }
@@ -149,7 +142,7 @@ public class PlayerInputController : MonoBehaviour
 
     private void Run(bool isPressed)
     {
-        bool _canNewMove = !IsAttack && _isGround && !_isSneak && !IsBlock;
+        bool _canNewMove = !IsAttack && _isGround && !_isSneak && !IsBlock && !IsRoll;
         if (_staminaControl.CurrentStamina > 5 && _canNewMove && isPressed)
         {
             _playerAnimatorManager.PlayTargetBoolAnimation(true, _playerAnimatorManager.Run, 0, 4);
@@ -174,12 +167,12 @@ public class PlayerInputController : MonoBehaviour
     private void Roll()
     {
         bool _canNewMove = !IsAttack && _isGround && !IsBlock && _canNewAction;
-        if (!IsFastRun && _staminaControl.CurrentStamina > 10 && _canNewMove)
+        if (!IsFastRun && _staminaControl.CurrentStamina > _weaponsInfo.StaminaRoll && _canNewMove)
         {
             _canNewAction = false;
             _playerAnimatorManager.PlayTargetBoolAnimation(true, _playerAnimatorManager.Roll, 0, 3);
             _playerAnimatorManager.PlayTargetBoolAnimation(false, _playerAnimatorManager.Roll, 0.5f, 3);
-            _staminaControl.UseStamina(10);
+            _staminaControl.UseStamina(_weaponsInfo.StaminaRoll);
             Invoke("CanNewActionAfterRoll", 1f);
         }
     }

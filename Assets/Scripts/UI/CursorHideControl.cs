@@ -17,6 +17,7 @@ public class CursorHideControl : MonoBehaviour
 
     private void Hide(bool state)
     {
+        if(_cinemachineInputProvider == null) return;
         if (state) _activeUIwindow++;
         else _activeUIwindow--;
 
@@ -28,9 +29,9 @@ public class CursorHideControl : MonoBehaviour
         }
         else
         {
-           Cursor.visible = false;
+            Cursor.visible = false;
             _cinemachineInputProvider.enabled = true;
-            Cursor.lockState = CursorLockMode.Locked; 
+            Cursor.lockState = CursorLockMode.Locked;
         }
     }
 

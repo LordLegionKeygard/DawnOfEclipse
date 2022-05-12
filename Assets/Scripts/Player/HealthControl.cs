@@ -59,17 +59,9 @@ public class HealthControl : MonoBehaviour
     private void TakeDamage(float damage)
     {
         Debug.Log("Enemy" + " dealt " + damage + " damage");
-        if (damage >= 0)
-        {
-            CurrentHealth = CurrentHealth - (int)damage;
-        }
-        else if (_playerInputController.IsBlock == false && damage < 0)
-        {
-            CurrentHealth = CurrentHealth - (int)(damage * 0.05f);
-            RandomTakeDamage();
-        }
-        else if (_playerInputController.IsBlock == true)
-        {
+        CurrentHealth = CurrentHealth - (int)damage;
+        if(_playerInputController.IsBlock)
+        {           
             _staminaControl.UseStamina((int)damage);
             _playerAnimatorManager.BlockReact();
         }

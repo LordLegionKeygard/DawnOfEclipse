@@ -21,7 +21,7 @@ public class EquipmentManager : MonoBehaviour
     public SkinnedMeshRenderer[] _currentMeshes;
     public GameObject[] _currentGameObject;
     private Equipment[] _currentEquipment;
-    private WeaponTimeCooldown _weaponTimeCooldown;
+    private WeaponsInfo _weaponsInfo;
     private bool _twoHandWeaponNow;
     public delegate void OnEquipmentChanged(Equipment newItem, Equipment oldItem);
     private OnEquipmentChanged _onEquipmentChanged;
@@ -30,7 +30,7 @@ public class EquipmentManager : MonoBehaviour
     private void Awake()
     {
         Instance = this;
-        _weaponTimeCooldown = GetComponent<WeaponTimeCooldown>();
+        _weaponsInfo = GetComponent<WeaponsInfo>();
     }
 
     private void Start()
@@ -163,7 +163,7 @@ public class EquipmentManager : MonoBehaviour
 
             if (slotIndex == 19 || slotIndex == 20 || slotIndex == 27 || slotIndex == 28)
             {
-                _weaponTimeCooldown.NoWeapon();
+                _weaponsInfo.NoWeapon();
 
                 CustomEvents.FireChangeIKHands(0);
                 _equipSlot[21].BackIcon.enabled = true;
@@ -348,7 +348,7 @@ public class EquipmentManager : MonoBehaviour
                 break;
             case EquipmentSlot.GreatSword:
                 CustomEvents.FireChangeIKHands(1);
-                _weaponTimeCooldown.GreatSword();
+                _weaponsInfo.GreatSword();
                 _anim.runtimeAnimatorController = Resources.Load("Animation/GreatSwordController") as RuntimeAnimatorController;
                 GameObject newWeaponGreatSwordPrefab = Instantiate(item.prefab);
                 BoneTransformWeapon(newWeaponGreatSwordPrefab, slotIndex, _weaponsAttachPoints[0], 2);
@@ -362,7 +362,7 @@ public class EquipmentManager : MonoBehaviour
                 break;
             case EquipmentSlot.DualDaggers:
                 CustomEvents.FireChangeIKHands(0);
-                _weaponTimeCooldown.Daggers();
+                _weaponsInfo.Daggers();
                 _anim.runtimeAnimatorController = Resources.Load("Animation/DualDaggersController") as RuntimeAnimatorController;
                 GameObject newDualDaggersRightPrefab = Instantiate(item.prefab);
                 BoneTransformWeapon(newDualDaggersRightPrefab, 19, _weaponsAttachPoints[1], 1);
@@ -378,7 +378,7 @@ public class EquipmentManager : MonoBehaviour
                 break;
             case EquipmentSlot.StraightSword:
                 CustomEvents.FireChangeIKHands(0);
-                _weaponTimeCooldown.StraightSword();
+                _weaponsInfo.StraightSword();
                 _anim.runtimeAnimatorController = Resources.Load("Animation/SwordController") as RuntimeAnimatorController;
                 GameObject newWeaponStraightSwordPrefab = Instantiate(item.prefab);
                 BoneTransformWeapon(newWeaponStraightSwordPrefab, slotIndex, _weaponsAttachPoints[1], 1);
@@ -389,7 +389,7 @@ public class EquipmentManager : MonoBehaviour
                 break;
             case EquipmentSlot.Hammer:
                 CustomEvents.FireChangeIKHands(0);
-                _weaponTimeCooldown.Hammer();
+                _weaponsInfo.Hammer();
                 _anim.runtimeAnimatorController = Resources.Load("Animation/HammerController") as RuntimeAnimatorController;
                 GameObject newWeaponHammerPrefab = Instantiate(item.prefab);
                 BoneTransformWeapon(newWeaponHammerPrefab, slotIndex, _weaponsAttachPoints[1], 1);
@@ -459,7 +459,7 @@ public class EquipmentManager : MonoBehaviour
         foreach (Equipment e in DefaultEquipment)
         {
             Equip(e);
-            _weaponTimeCooldown.NoWeapon();
+            _weaponsInfo.NoWeapon();
             ResetAnimator();
         }
     }

@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "AllArmorSetInfo", menuName = "Info/Armor")]
 public class AllArmorSetInfo : ScriptableObject
 {
-    public IntArray[] intArray;
+    public Stats[] intArray;
 }
 
 public enum ArmorSetEnum
@@ -43,7 +43,7 @@ public enum ArmorSetEnum
 }
 
 [System.Serializable]
-public class IntArray
+public class Stats
 {
     public string[] HelmetInfo;
     public string[] ShouldersInfo;

@@ -9,7 +9,7 @@ public class LevelUpStats : MonoBehaviour
     //  _strength;
     //  _dexterity;
     //  _constitution;
-    //  _vigor;
+    //  _endurance;
     //  _intelligence;
     //  _wisdom;
     //  _mind;
@@ -102,7 +102,7 @@ public class LevelUpStats : MonoBehaviour
                 _statsText[serialNumber].text = (Stats[serialNumber] + CharacterStats.Constitution).ToString();
                 break;
             case 3:
-                _statsText[serialNumber].text = (Stats[serialNumber] + CharacterStats.Vigor).ToString();
+                _statsText[serialNumber].text = (Stats[serialNumber] + CharacterStats.Endurance).ToString();
                 break;
             case 4:
                 _statsText[serialNumber].text = (Stats[serialNumber] + CharacterStats.Intelligence).ToString();
@@ -122,7 +122,7 @@ public class LevelUpStats : MonoBehaviour
         CharacterStats.Strength += Stats[0];
         CharacterStats.Dexterity += Stats[1];
         CharacterStats.Constitution += Stats[2];
-        CharacterStats.Vigor += Stats[3];
+        CharacterStats.Endurance += Stats[3];
         CharacterStats.Intelligence += Stats[4];
         CharacterStats.Wisdom += Stats[5];
         CharacterStats.Mind += Stats[6];
@@ -152,7 +152,7 @@ public class LevelUpStats : MonoBehaviour
         _statsText[0].text = CharacterStats.Strength.ToString();
         _statsText[1].text = CharacterStats.Dexterity.ToString();
         _statsText[2].text = CharacterStats.Constitution.ToString();
-        _statsText[3].text = CharacterStats.Vigor.ToString();
+        _statsText[3].text = CharacterStats.Endurance.ToString();
         _statsText[4].text = CharacterStats.Intelligence.ToString();
         _statsText[5].text = CharacterStats.Wisdom.ToString();
         _statsText[6].text = CharacterStats.Mind.ToString();

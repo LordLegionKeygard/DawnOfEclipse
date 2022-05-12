@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 993872552f1c5d04c8411e220f5d14ac, type: 3}
+  m_Name: AllCharacterStatsInfo
+  m_EditorClassIdentifier: 
+  intArray:
+  - Race: Satyr
+    Strength: 0300000001000000
+    Dexterity: 0400000002000000
+    Constitution: 0200000001000000
+    Endurance: 0300000002000000
+    Intelligence: 0100000002000000
+    Wisdom: 0000000002000000
+    Mind: 0100000004000000
+    Luck: 0000000000000000
+  - Race: Mushroom
+    Strength: 0500000002000000
+    Dexterity: 0200000001000000
+    Constitution: 0400000004000000
+    Endurance: 0200000001000000
+    Intelligence: 0000000001000000
+    Wisdom: 0100000004000000
+    Mind: 0000000001000000
+    Luck: 0000000000000000

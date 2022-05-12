@@ -7,26 +7,28 @@ public class CharacterStats : MonoBehaviour
     public static int Strength;
     public static int Dexterity;
     public static int Constitution;
-    public static int Vigor;
+    public static int Endurance;
     public static int Intelligence;
     public static int Wisdom;
     public static int Mind;
 
+    [SerializeField] private CharacterStatsInfo _characterStatsInfo;
+
     private void Awake()
     {
-        Strength = CharacterInformation.StrengthS;
-        Dexterity = CharacterInformation.DexterityS;
-        Constitution = CharacterInformation.ConstitutionS;
-        Vigor = CharacterInformation.VigorS;
-        Intelligence = CharacterInformation.IntelligenceS;
-        Wisdom = CharacterInformation.WisdomS;
-        Mind = CharacterInformation.MindS;
+        Strength = _characterStatsInfo.intArray[CharacterInformation.Race].Strength[CharacterInformation.Class];
+        Dexterity = _characterStatsInfo.intArray[CharacterInformation.Race].Dexterity[CharacterInformation.Class];
+        Constitution = _characterStatsInfo.intArray[CharacterInformation.Race].Constitution[CharacterInformation.Class];
+        Endurance = _characterStatsInfo.intArray[CharacterInformation.Race].Endurance[CharacterInformation.Class];
+        Intelligence = _characterStatsInfo.intArray[CharacterInformation.Race].Intelligence[CharacterInformation.Class];
+        Wisdom = _characterStatsInfo.intArray[CharacterInformation.Race].Wisdom[CharacterInformation.Class];
+        Mind = _characterStatsInfo.intArray[CharacterInformation.Race].Mind[CharacterInformation.Class];
     }
 
     // STR (STRENGTH)
     // affects P.Atk.
 
-    // VIG (VIGOR) +
+    // END (ENDURANCE) +
     // affects maximum Stamina
     // affects Stamina recovery speed
 

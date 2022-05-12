@@ -6,6 +6,7 @@ using TMPro;
 
 public class Skills : MonoBehaviour
 {
+    public bool IsCooldownAfterUse;
     [SerializeField] private TextMeshProUGUI _manaCostText;
     public ManaControl ManaControl;
     public int ManaCost;
@@ -45,6 +46,7 @@ public class Skills : MonoBehaviour
         if (SkillImage.fillAmount == 1)
         {
             DoSkill(true);
+            if(IsCooldownAfterUse) return;
             ManaControl.UseMana(ManaCost);
             SkillToggle = true;
             SkillImage.fillAmount = 0;

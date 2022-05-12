@@ -10,6 +10,9 @@ public class CharacterCreationRaceChanger : MonoBehaviour
     [SerializeField] private GameObject[] _terrainsAndCharacters;
     [SerializeField] private GameObject[] _racePanels;
     [SerializeField] private Button[] _buttons;
+    [SerializeField] private SatyrCreation _satyrCreation;
+    [SerializeField] private MushroomCreation _mushroomCreation;
+
     public void ChangeRace(string turn)
     {
         _terrainsAndCharacters[Race].SetActive(false);
@@ -19,13 +22,19 @@ public class CharacterCreationRaceChanger : MonoBehaviour
             case "Right":
                 Race++;
                 if (Race == _racePanels.Length - 1)
+                {
                     _buttons[_buttons.Length - 1].interactable = false;
+                    _mushroomCreation.UpdateStats();
+                }
                 break;
 
             case "Left":
                 Race--;
                 if (Race == 0)
+                {
                     _buttons[0].interactable = false;
+                    _satyrCreation.UpdateStats();
+                }
                 break;
         }
         _terrainsAndCharacters[Race].SetActive(true);

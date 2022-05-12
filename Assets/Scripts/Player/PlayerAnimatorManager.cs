@@ -20,7 +20,6 @@ public class PlayerAnimatorManager : MonoBehaviour
     public readonly int Block_React_1 = Animator.StringToHash("Block_React_1");
     public readonly int Block_React_2 = Animator.StringToHash("Block_React_2");
     public readonly int Drink = Animator.StringToHash("drink");
-    public readonly int RaceSkill = Animator.StringToHash("raceSkill");
     public readonly int StartGame = Animator.StringToHash("start");
 
     private void Start()
@@ -60,7 +59,10 @@ public class PlayerAnimatorManager : MonoBehaviour
 
     public void AnimatorPickUpTrigger() => _animator.SetTrigger(PickUp);
 
-    public void AnimatorRaceSkillTrigger() => _animator.SetTrigger(RaceSkill);
+    public void AnimatorSkillTrigger(string triggerName, int number)
+    {
+        _animator.SetInteger(triggerName, number );
+    }
 
     public void BlockReact()
     {

@@ -16,6 +16,7 @@ public class AllPanelsController : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.C))
         {
             PanelsToggle(1);
+            CustomEvents.FireUpdateAllStats();
         }
     }
 

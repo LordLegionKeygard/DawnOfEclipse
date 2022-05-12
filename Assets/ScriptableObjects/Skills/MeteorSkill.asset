@@ -15,6 +15,6 @@ MonoBehaviour:
   ManaCost: 10
   SkillName: Meteor
   SkillSound: {fileID: 0}
-  SkillIcon: {fileID: 21300000, guid: 36f7be4219c177b4a8d9a3b51cde9893, type: 3}
+  SkillIcon: {fileID: 21300000, guid: 88b116243f5b12f4cb65b81eba5890a1, type: 3}
   DefaultSkillTime: 10
   Cooldown: 15

@@ -7,7 +7,9 @@ using TMPro;
 public class MushroomCreation : MonoBehaviour
 {
     [Header("Characteristicks")]
-    [SerializeField] private int _gender = 2;
+
+    [SerializeField] private int _class;
+    [SerializeField] private int _gender = 2; //always
     [SerializeField] private int _cap = 1;
     [SerializeField] private int _skinColor = 1;
     [SerializeField] private int _eyeColor = 1;
@@ -20,11 +22,38 @@ public class MushroomCreation : MonoBehaviour
     [SerializeField] private Color[] _eyeColorPalletes;
 
     [Header("Other")]
+    [SerializeField] private CharacterCreationStatsChanger _characterCreationStatsChanger;
     [SerializeField] private Material _characterMaterial;
     [SerializeField] private TextMeshProUGUI[] _allText;
     [SerializeField] private Button[] _buttons;
     [SerializeField] private Image _loadingScreen;
     [SerializeField] private Sprite _screen;
+
+    public void UpdateStats()
+    {
+        _characterCreationStatsChanger.ChangeStats(1, _class);
+    }
+
+    public void ChangeClass(string turn)
+    {
+        switch (turn)
+        {
+            case "Right":
+                _allText[3].text = Language.TextStatic[28];
+                _buttons[6].interactable = false;
+                _buttons[7].interactable = true;
+                _class = 1;
+                UpdateStats();
+                break;
+            case "Left":
+                _allText[3].text = Language.TextStatic[27];
+                _buttons[6].interactable = true;
+                _buttons[7].interactable = false;
+                _class = 0;
+                UpdateStats();
+                break;
+        }
+    }
 
     public void ChangeSkinColor(string turn)
     {
@@ -104,6 +133,7 @@ public class MushroomCreation : MonoBehaviour
     {
         _loadingScreen.sprite = _screen;
 
+        CharacterInformation.Class = _class;
         CharacterInformation.Race = 1;
         CharacterInformation.Gender = _gender;
         CharacterInformation.SkinColor = _skinColor;

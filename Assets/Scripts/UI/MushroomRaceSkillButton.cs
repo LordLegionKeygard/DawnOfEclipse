@@ -11,7 +11,7 @@ public class MushroomRaceSkillButton : Skills
     {
         if (state)
         {
-            _playerAnimatorManager.AnimatorRaceSkillTrigger();
+            _playerAnimatorManager.AnimatorSkillTrigger("Skills", 1);
 
             _mushroomParticles[0].Play();
             _mushroomParticles[1].Play();
@@ -23,6 +23,12 @@ public class MushroomRaceSkillButton : Skills
                 _mushroomParticles[0].Stop();
                 _mushroomParticles[1].Stop();
             }
+            Invoke("ResetAnimation", 0.5f);
         }
+    }
+
+    private void ResetAnimation()
+    {
+        _playerAnimatorManager.AnimatorSkillTrigger("Skills", 0);
     }
 }

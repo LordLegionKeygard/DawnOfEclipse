@@ -16,7 +16,7 @@ public class MainStats : MonoBehaviour
     [SerializeField] private float _currentWeaponPhysCritChance;
     [SerializeField] private float _currentWeaponMageCritChance;
 
-    private void OnEnable()
+    private void Awake()
     {
         CustomEvents.OnUpdateAllStats += UpdateAllMainStats;
         CustomEvents.OnUpdateWeaponPhysDamage += UpdateWeaponPhysDamage;
@@ -61,7 +61,7 @@ public class MainStats : MonoBehaviour
         UpdateAllMainStats();
     }
 
-    private void OnDisable()
+    private void OnDestroy()
     {
         CustomEvents.OnUpdateAllStats -= UpdateAllMainStats;
         CustomEvents.OnUpdateWeaponPhysDamage -= UpdateWeaponPhysDamage;

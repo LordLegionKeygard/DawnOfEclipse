@@ -8,6 +8,7 @@ public class SatyrCreation : MonoBehaviour
 {
     [Header("Characteristicks")]
     [SerializeField] private int _gender = 2;
+    [SerializeField] private int _class = 0;
     [SerializeField] private int _hairStyle = 1;
     [SerializeField] private int _hairColor = 1;
     [SerializeField] private int _skinColor = 1;
@@ -30,6 +31,7 @@ public class SatyrCreation : MonoBehaviour
 
     [Header("Other")]
 
+    [SerializeField] private CharacterCreationStatsChanger _characterCreationStatsChanger;
     [SerializeField] private MeshFilter _characterMask;
     [SerializeField] private MeshFilter _characterHorns;
     [SerializeField] private Material _characterMaterial;
@@ -38,6 +40,11 @@ public class SatyrCreation : MonoBehaviour
     [SerializeField] private Button[] _buttons;
     [SerializeField] private Image _loadingScreen;
     [SerializeField] private Sprite _screen;
+
+    public void UpdateStats()
+    {
+        _characterCreationStatsChanger.ChangeStats(0, _class);
+    }
 
     public void ChangeGender(string turn)
     {
@@ -58,6 +65,27 @@ public class SatyrCreation : MonoBehaviour
                 _genders[0].SetActive(false);
                 _genders[1].SetActive(true);
                 _gender = 2;
+                break;
+        }
+    }
+
+    public void ChangeClass(string turn)
+    {
+        switch (turn)
+        {
+            case "Right":
+                _allText[7].text = Language.TextStatic[28];
+                _buttons[14].interactable = false;
+                _buttons[15].interactable = true;
+                _class = 1;
+                UpdateStats();
+                break;
+            case "Left":
+                _allText[7].text = Language.TextStatic[27];
+                _buttons[14].interactable = true;
+                _buttons[15].interactable = false;
+                _class = 0;
+                UpdateStats();
                 break;
         }
     }
@@ -213,6 +241,7 @@ public class SatyrCreation : MonoBehaviour
         _loadingScreen.sprite = _screen;
 
         CharacterInformation.Race = 0;
+        CharacterInformation.Class = _class;
         CharacterInformation.Gender = _gender;
         CharacterInformation.Hairstyle = _hairStyle;
         CharacterInformation.HairColor = _hairColor;

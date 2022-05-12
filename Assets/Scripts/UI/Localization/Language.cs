@@ -96,6 +96,39 @@ public class Language : MonoBehaviour
 
         _textPreviesStatic[26, 0] = "                    - no one knows where they came from, but some of them can wake up from eternal sleep";
         _textPreviesStatic[26, 1] = "            - никто не знает, откуда они появились. Говорят они проснулись от вечного сна.";
+
+        _textPreviesStatic[27, 0] = "Fighter";
+        _textPreviesStatic[27, 1] = "Воитель";
+
+        _textPreviesStatic[28, 0] = "Mystic";
+        _textPreviesStatic[28, 1] = "Мистик";
+
+        _textPreviesStatic[29, 0] = "Strength";
+        _textPreviesStatic[29, 1] = "Сила";
+
+        _textPreviesStatic[30, 0] = "Dexterity";
+        _textPreviesStatic[30, 1] = "Ловкость";
+
+        _textPreviesStatic[31, 0] = "Constitution";
+        _textPreviesStatic[31, 1] = "Телосложение";
+
+        _textPreviesStatic[32, 0] = "Endurance";
+        _textPreviesStatic[32, 1] = "Выносливость";
+
+        _textPreviesStatic[33, 0] = "Intelligence";
+        _textPreviesStatic[33, 1] = "Интелект";
+
+        _textPreviesStatic[34, 0] = "Wisdom";
+        _textPreviesStatic[34, 1] = "Мудрость";
+
+        _textPreviesStatic[35, 0] = "Mind";
+        _textPreviesStatic[35, 1] = "Дух";
+
+        _textPreviesStatic[36, 0] = "Luck";
+        _textPreviesStatic[36, 1] = "Удача";
+
+        _textPreviesStatic[37, 0] = "Class";
+        _textPreviesStatic[37, 1] = "Класс";
         // _langChange = PlayerPrefs.GetString("Language");
 
         // if (_langChange != "")

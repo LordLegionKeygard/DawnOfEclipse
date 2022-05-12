@@ -6,6 +6,7 @@ using TMPro;
 
 public class ExperienceControl : MonoBehaviour
 {
+    [SerializeField] private ParticleSystem _lvlvUpParticle;
     [SerializeField] private TextMeshProUGUI _currentExpText;
     [SerializeField] private TextMeshProUGUI _textLevel;
     [SerializeField] private Slider _expSlider;
@@ -43,6 +44,7 @@ public class ExperienceControl : MonoBehaviour
 
     private void NewLevel()
     {
+        _lvlvUpParticle.Play();
         CurrentLevel++;
         _textLevel.text = CurrentLevel.ToString();
         _expSlider.maxValue = _experienceInfo.NeedExperienceForNextLevel[CurrentLevel];

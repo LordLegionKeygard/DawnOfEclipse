@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class PlayerMovement : CharacterManager
 {
+    [SerializeField] private float _rotationSpeed = 280f;
     private PlayerAnimatorManager _playerAnimatorManager;
     private PlayerInputController _playerInputController;
     private PotionsControl _potionsControl;
@@ -12,7 +13,7 @@ public class PlayerMovement : CharacterManager
     private CharacterController _characterController;
     [SerializeField] private Transform _camera;
     public float CurrentSpeed;
-    public float DefaultSpeed = 5f;
+    public float DefaultSpeed;
     private float _velocityMove;
     [SerializeField] private float turnSmothTime;
     [SerializeField] private float turnSmoothVelocity;
@@ -65,12 +66,18 @@ public class PlayerMovement : CharacterManager
 
         if (direction.magnitude >= 0.5f)
         {
-            float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + _camera.eulerAngles.y;
-            float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmothTime);
-            transform.rotation = Quaternion.Euler(0f, angle, 0f);
+            // float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + _camera.eulerAngles.y;
+            // float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmothTime);
+            Vector3 projectedCameraForward = Vector3.ProjectOnPlane(Camera.main.transform.forward, Vector3.up);
+            Quaternion rotationToCamera = Quaternion.LookRotation(projectedCameraForward, Vector3.up);
+            // transform.rotation = Quaternion.Euler(0f, angle, 0f);
+
+            Vector3 moveDirection = rotationToCamera * direction;
+            Quaternion rotationToMoveDirection = Quaternion.LookRotation(moveDirection, Vector3.up);
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, rotationToMoveDirection, _rotationSpeed * Time.deltaTime);
             if (!CanWalk) return;
-            Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
-            _characterController.Move(moveDir.normalized * (CurrentSpeed + _potionsControl.PotionSpeed) * Time.deltaTime);
+
+            _characterController.Move(moveDirection.normalized * (CurrentSpeed + _potionsControl.PotionSpeed) * Time.deltaTime);
 
             if (_velocityMove < 1.0f)
             {

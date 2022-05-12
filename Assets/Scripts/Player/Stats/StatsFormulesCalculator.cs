@@ -32,38 +32,28 @@ public class StatsFormulesCalculator : MonoBehaviour
     private void OnEnable()
     {
         CustomEvents.OnCalculateAllStats += CalculateAll;
-    }
-
-    private void Awake()
-    {
         CalculateAll();
     }
 
     private void CalculateAll()
     {
-        CalculateStrength();
         CalculateDexterity();
         CalculateConstitution();
-        CalculateVigor();
-        CalculateIntelligence();
-        CalculateWisdom();
+        CalculateEndurance();
         CalculateMind();
         CustomEvents.FireUpdateAllStats();
     }
 
-    private void CalculateStrength()
-    {
-        
-    }
     private void CalculateDexterity()
     {
+        _playerMovement.DefaultSpeed = 4.95f + (0.01f * CharacterStats.Dexterity);
         switch (CharacterInformation.Class)
         {
             case 0:
-                _playerMovement.DefaultSpeed = 4.95f + (0.01f * CharacterStats.Dexterity);
+                _staminaControl.MaxStamina = (int)((float)_baseStaminaInfo.Class[ExperienceControl.CurrentLevel].Fighter * (1 + 0.02f * CharacterStats.Endurance));
                 break;
             case 1:
-                _staminaControl.MaxStamina = (int)((float)_baseStaminaInfo.Class[ExperienceControl.CurrentLevel].Mage * (1 + 0.02f * CharacterStats.Vigor));
+                _staminaControl.MaxStamina = (int)((float)_baseStaminaInfo.Class[ExperienceControl.CurrentLevel].Mage * (1 + 0.02f * CharacterStats.Endurance));
                 break;
         }
         _playerMovement.CalculateSpeed();
@@ -82,27 +72,20 @@ public class StatsFormulesCalculator : MonoBehaviour
         _healthControl.CalculateHealth();
         _potionControl.CalculateHealFromPotion();
     }
-    private void CalculateVigor()
+    private void CalculateEndurance()
     {
         switch (CharacterInformation.Class)
         {
             case 0:
-                _staminaControl.MaxStamina = (int)((float)_baseStaminaInfo.Class[ExperienceControl.CurrentLevel].Fighter * (1 + 0.02f * CharacterStats.Vigor));
+                _staminaControl.MaxStamina = (int)((float)_baseStaminaInfo.Class[ExperienceControl.CurrentLevel].Fighter * (1 + 0.02f * CharacterStats.Endurance));
                 break;
             case 1:
-                _staminaControl.MaxStamina = (int)((float)_baseStaminaInfo.Class[ExperienceControl.CurrentLevel].Mage * (1 + 0.02f * CharacterStats.Vigor));
+                _staminaControl.MaxStamina = (int)((float)_baseStaminaInfo.Class[ExperienceControl.CurrentLevel].Mage * (1 + 0.02f * CharacterStats.Endurance));
                 break;
         }
         _staminaControl.CalculateStamina();
     }
-    private void CalculateIntelligence()
-    {
 
-    }
-    private void CalculateWisdom()
-    {
-
-    }
     private void CalculateMind()
     {
         switch (CharacterInformation.Class)

@@ -20,9 +20,6 @@ public class MeteorSkillButton : Skills
         if (SkillImage.fillAmount == 1)
         {
             DoSkill(true);
-            ManaControl.UseMana(ManaCost);
-            SkillToggle = true;
-            SkillImage.fillAmount = 0;
         }
     }
 
@@ -37,12 +34,21 @@ public class MeteorSkillButton : Skills
 
     private void UseSKill()
     {
-        if (!_skillActive || _distanceToTarget.Distance > 16) return;
+        if (!_skillActive || _distanceToTarget.Distance > 16 || ManaCost > ManaControl.CurrentMana || HealthControl.IsDeath) return;
+        ManaControl.UseMana(ManaCost);
+        SkillToggle = true;
+        SkillImage.fillAmount = 0;
         _skillActive = false;
-        _playerAnimatorManager.AnimatorRaceSkillTrigger();
+        _playerAnimatorManager.AnimatorSkillTrigger("Skills", 2);
+        Invoke("ResetAnimation", 0.5f);
 
         Instantiate(_meteorPrefab, new Vector3(TargetTransform.transform.position.x, TargetTransform.transform.position.y + 2, TargetTransform.transform.position.z), Quaternion.identity);
         CustomEvents.FireActiveTargetSkill(false);
+    }
+
+    private void ResetAnimation()
+    {
+        _playerAnimatorManager.AnimatorSkillTrigger("Skills", 0);
     }
 
     private void OnDisable()

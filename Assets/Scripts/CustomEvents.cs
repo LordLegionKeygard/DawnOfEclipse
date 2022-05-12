@@ -191,4 +191,15 @@ public class CustomEvents
     {
         OnUpdateBaseWeaponDamage?.Invoke();
     }
+
+    public static Action<bool> OnHideCursor;
+    public static void FireHideCursor(bool state)
+    {
+        OnHideCursor?.Invoke(state);
+    }
+    public static Action OnMenuToggle;
+    public static void FireMenuToggle()
+    {
+        OnMenuToggle?.Invoke();
+    }
 }

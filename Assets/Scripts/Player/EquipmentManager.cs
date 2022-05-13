@@ -161,14 +161,14 @@ public class EquipmentManager : MonoBehaviour
             oldItem = _currentEquipment[slotIndex];
             _inventory.Add(oldItem);
 
-            if (slotIndex == 19 || slotIndex == 20 || slotIndex == 27 || slotIndex == 28)
+            if (slotIndex == 19 || slotIndex == 20 || slotIndex == 27 || slotIndex == 28 || slotIndex == 29)
             {
                 _weaponsInfo.NoWeapon();
 
                 CustomEvents.FireChangeIKHands(0);
                 _equipSlot[21].BackIcon.enabled = true;
                 _equipSlot[21].Icon.enabled = false;
-                if (slotIndex == 28)
+                if (slotIndex == 28 || slotIndex == 29) //?
                 {
                     Destroy(_currentGameObject[19].gameObject);
                 }
@@ -210,7 +210,7 @@ public class EquipmentManager : MonoBehaviour
 
     private void BoneTransformWeapon(GameObject weapon, int slot, Transform weaponPoint, int number)
     {
-        weapon.transform.parent = _targetMeshFilters[number].transform.parent;
+        weapon.transform.parent = _weaponsAttachPoints[number].transform.parent;
         weapon.transform.position = weaponPoint.transform.position;
         weapon.transform.rotation = weaponPoint.transform.rotation;
         _currentGameObject[slot] = weapon;
@@ -393,6 +393,17 @@ public class EquipmentManager : MonoBehaviour
                 _anim.runtimeAnimatorController = Resources.Load("Animation/HammerController") as RuntimeAnimatorController;
                 GameObject newWeaponHammerPrefab = Instantiate(item.prefab);
                 BoneTransformWeapon(newWeaponHammerPrefab, slotIndex, _weaponsAttachPoints[1], 1);
+                _equipSlot[19].Icon.sprite = item.icon;
+                _equipSlot[21].Icon.gameObject.GetComponentInParent<Button>().enabled = true;
+                EquipSlotAndIcon(20, item);
+                _twoHandWeaponNow = false;
+                break;
+            case EquipmentSlot.Staff:
+                CustomEvents.FireChangeIKHands(0);
+                _weaponsInfo.Staff();
+                _anim.runtimeAnimatorController = Resources.Load("Animation/StaffController") as RuntimeAnimatorController;
+                GameObject newWeaponStaffPrefab = Instantiate(item.prefab);
+                BoneTransformWeapon(newWeaponStaffPrefab, slotIndex, _weaponsAttachPoints[4], 4);
                 _equipSlot[19].Icon.sprite = item.icon;
                 _equipSlot[21].Icon.gameObject.GetComponentInParent<Button>().enabled = true;
                 EquipSlotAndIcon(20, item);

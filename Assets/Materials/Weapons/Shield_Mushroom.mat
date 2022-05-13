@@ -83,6 +83,8 @@ Material:
     - _Emission: 0
     - _Emmision: 0
     - _Metallic: 0
+    - _QueueControl: 0
+    - _QueueOffset: 0
     - _Smoothness: 0
     - __dirty: 1
     m_Colors:

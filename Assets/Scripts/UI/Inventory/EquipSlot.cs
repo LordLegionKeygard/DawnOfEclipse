@@ -84,6 +84,7 @@ public class EquipSlot : Slots
                 _equipmentManager.Unequip(20);
                 _equipmentManager.Unequip(27);
                 _equipmentManager.Unequip(28);
+                _equipmentManager.Unequip(29);
                 if (_equipmentManager._leftHandSlotListener.enabled == false)
                 {
                     _equipmentManager.UnequipTwoHandedWeaponFromShield();

@@ -57,4 +57,5 @@ public enum EquipmentSlot
     Necklace = 26,
     Hammer = 27,
     DualDaggers = 28,
+    Staff = 29,
 }

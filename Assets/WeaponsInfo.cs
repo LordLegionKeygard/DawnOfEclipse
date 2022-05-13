@@ -171,4 +171,14 @@ public class WeaponsInfo : MonoBehaviour
         StaminaJump = 90;
         StaminaRoll = 45;
     }
+
+    public void Staff()
+    {
+        _fistDamageColliderController.FistDamageColliderToggle(false);
+        TimeR1 = 0.4f;
+        TimeR2 = 0.5f;
+        StaminaAttack = 20;
+        StaminaJump = 30;
+        StaminaRoll = 14;
+    }
 }

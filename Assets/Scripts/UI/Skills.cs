@@ -21,10 +21,21 @@ public class Skills : MonoBehaviour
     private float _timeFillAmount;
     private float _skillTime;
     public SkillInfo SkillInfo;
+    public bool IsCanUseSkill = true;
+
+    private void OnEnable()
+    {
+        CustomEvents.OnCanUseSkill += CanUseSkillToggle;
+    }
+
+    private void CanUseSkillToggle(bool state)
+    {
+        IsCanUseSkill = state;
+    }
 
     private void Start()
     {
-        if(SkillInfo == null) return;
+        if (SkillInfo == null) return;
         _skillTime = SkillInfo.DefaultSkillTime;
         _timeFillAmount = SkillInfo.Cooldown;
         ManaCost = SkillInfo.ManaCost;
@@ -42,11 +53,11 @@ public class Skills : MonoBehaviour
     }
     public virtual void SkillTurnOn()
     {
-        if(ManaCost > ManaControl.CurrentMana || HealthControl.IsDeath) return;
+        if (ManaCost > ManaControl.CurrentMana || HealthControl.IsDeath || !IsCanUseSkill) return;
         if (SkillImage.fillAmount == 1)
         {
             DoSkill(true);
-            if(IsCooldownAfterUse) return;
+            if (IsCooldownAfterUse) return;
             ManaControl.UseMana(ManaCost);
             SkillToggle = true;
             SkillImage.fillAmount = 0;
@@ -59,7 +70,7 @@ public class Skills : MonoBehaviour
         {
             SkillTurnOn();
         }
-        if(Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             CustomEvents.FireActiveTargetSkill(false);
         }
@@ -80,5 +91,10 @@ public class Skills : MonoBehaviour
     public virtual void DoSkill(bool toggle)
     {
 
+    }
+
+    private void OnDisable()
+    {
+        CustomEvents.OnCanUseSkill -= CanUseSkillToggle;
     }
 }

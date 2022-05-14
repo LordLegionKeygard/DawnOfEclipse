@@ -202,4 +202,10 @@ public class CustomEvents
     {
         OnMenuToggle?.Invoke();
     }
+
+    public static Action<bool> OnCanUseSkill;
+    public static void FireCanUseSkill(bool state)
+    {
+        OnCanUseSkill?.Invoke(state);
+    }
 }

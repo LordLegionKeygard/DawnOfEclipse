@@ -208,4 +208,15 @@ public class CustomEvents
     {
         OnCanUseSkill?.Invoke(state);
     }
+
+    public static Action<bool> OnUseSkillR1;
+    public static void FireUseSkillR1(bool state)
+    {
+        OnUseSkillR1?.Invoke(state);
+    }
+    public static Action<bool> OnUseSkillR2;
+    public static void FireUseSkillR2(bool state)
+    {
+        OnUseSkillR2?.Invoke(state);
+    }
 }

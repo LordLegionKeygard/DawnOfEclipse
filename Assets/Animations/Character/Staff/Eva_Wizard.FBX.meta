@@ -1007,7 +1007,7 @@ ModelImporter:
     second: Stuff03
   - first:
       74: 7400000
-    second: R1
+    second: Cast-R1
   - first:
       74: 7400002
     second: MECANIM
@@ -1088,13 +1088,13 @@ ModelImporter:
     second: M_Hit_from_front
   - first:
       74: 7400054
-    second: M_magic_helix_spell
+    second: Skill - R2
   - first:
       74: 7400056
     second: M_staff_block
   - first:
       74: 7400058
-    second: M_staff_earthquake_spell
+    second: Cast - R2
   - first:
       74: 7400060
     second: M_staff_Hit_stright_down
@@ -1265,7 +1265,10 @@ ModelImporter:
     second: Eva
   - first:
       74: 1827226128182048838
-    second: R1C
+    second: Skill - R1
+  - first:
+      74: 3517831496198865307
+    second: Cast - R1
   externalObjects: {}
   materials:
     materialImportMode: 1
@@ -1416,7 +1419,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: M_magic_helix_spell
+      name: Skill - R2
       takeName: 
       internalID: 0
       firstFrame: 1065
@@ -1439,7 +1442,14 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: 0.13238245
+        functionName: SkillR2
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask: []
       maskType: 0
       maskSource: {instanceID: 0}
@@ -1474,7 +1484,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: M_staff_earthquake_spell
+      name: Cast - R2
       takeName: 
       internalID: 0
       firstFrame: 1172
@@ -1497,7 +1507,14 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: 0.3890006
+        functionName: CastSkillR2
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask: []
       maskType: 0
       maskSource: {instanceID: 0}
@@ -2228,7 +2245,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: R1
+      name: Cast - R1
       takeName: Take 001
       internalID: 0
       firstFrame: 1624
@@ -2251,13 +2268,20 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: 0.24439867
+        functionName: CastSkillR1
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: R1C
+      name: Skill - R1
       takeName: Take 001
       internalID: 0
       firstFrame: 1665
@@ -2280,7 +2304,14 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: 0.32790214
+        functionName: SkillR1
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}

@@ -61,7 +61,7 @@ public class PlayerAnimatorManager : MonoBehaviour
 
     public void AnimatorSkillTrigger(string triggerName, int number)
     {
-        _animator.SetInteger(triggerName, number );
+        _animator.SetInteger(triggerName, number);
     }
 
     public void BlockReact()
@@ -85,5 +85,25 @@ public class PlayerAnimatorManager : MonoBehaviour
     public void DisableDamageCollider()
     {
         CustomEvents.FireEnabledDamageCollider(false);
+    }
+
+    public void CastSkillR1()
+    {
+        CustomEvents.FireUseSkillR1(true);
+    }
+
+    public void CastSkillR2()
+    {
+        CustomEvents.FireUseSkillR2(true);
+    }
+
+    public void SkillR1()
+    {
+        CustomEvents.FireUseSkillR1(false);
+    }
+
+    public void SkillR2()
+    {
+        CustomEvents.FireUseSkillR2(false);
     }
 }

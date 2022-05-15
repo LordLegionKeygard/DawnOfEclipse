@@ -79,6 +79,7 @@ public class EquipmentManager : MonoBehaviour
             Equipment oldStraightSword = Unequip(20);
             Equipment oldHammer = Unequip(27);
             Equipment oldDaggers = Unequip(28);
+            Equipment oldStaff = Unequip(29);
             if (newItem.twoHandedWeapon == true)
             {
                 _twoHandWeaponNow = true;
@@ -89,6 +90,7 @@ public class EquipmentManager : MonoBehaviour
         {
             Equipment oldWeapon = Unequip(19);
             Equipment oldDaggers = Unequip(28);
+            
         }
 
         int slotIndex = (int)newItem.equipSlot;
@@ -166,11 +168,17 @@ public class EquipmentManager : MonoBehaviour
                 _weaponsInfo.NoWeapon();
 
                 CustomEvents.FireChangeIKHands(0);
-                _equipSlot[21].BackIcon.enabled = true;
-                _equipSlot[21].Icon.enabled = false;
-                if (slotIndex == 28 || slotIndex == 29) //?
+                if (slotIndex == 19)
+                {
+                    _equipSlot[21].BackIcon.enabled = true;
+                    _equipSlot[21].Icon.enabled = false;
+                }
+
+                if (slotIndex == 28) //Dual Daggers
                 {
                     Destroy(_currentGameObject[19].gameObject);
+                    _equipSlot[21].BackIcon.enabled = true;
+                    _equipSlot[21].Icon.enabled = false;
                 }
                 Destroy(_currentGameObject[slotIndex].gameObject);
             }
@@ -351,7 +359,7 @@ public class EquipmentManager : MonoBehaviour
                 _weaponsInfo.GreatSword();
                 _anim.runtimeAnimatorController = Resources.Load("Animation/GreatSwordController") as RuntimeAnimatorController;
                 GameObject newWeaponGreatSwordPrefab = Instantiate(item.prefab);
-                BoneTransformWeapon(newWeaponGreatSwordPrefab, slotIndex, _weaponsAttachPoints[0], 2);
+                BoneTransformWeapon(newWeaponGreatSwordPrefab, slotIndex, _weaponsAttachPoints[0], 0);
                 _armorControl.ShieldBlockArmorDefault = item.shieldBlockArmorModifier;
                 _armorControl.ShieldArmorPassive = 0;
                 _leftHandSlotListener.enabled = false;
@@ -418,8 +426,9 @@ public class EquipmentManager : MonoBehaviour
                     _equipSlot[19].Icon.enabled = false;
                 }
                 Unequip(19);
+                _leftHandSlotListener.enabled = true;
                 GameObject newShieldPrefab = Instantiate(item.prefab);
-                BoneTransformWeapon(newShieldPrefab, slotIndex, _weaponsAttachPoints[2], 0);
+                BoneTransformWeapon(newShieldPrefab, slotIndex, _weaponsAttachPoints[2], 2);
                 _armorControl.ShieldArmorPassive = item.armorModifier;
                 _armorControl.ShieldBlockArmorDefault = item.shieldBlockArmorModifier;
                 _equipSlot[21].Icon.gameObject.GetComponentInParent<Button>().enabled = true;

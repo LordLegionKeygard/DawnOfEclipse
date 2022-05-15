@@ -4,23 +4,20 @@ using UnityEngine;
 
 public class MagicDamagePerSecond : MonoBehaviour
 {
-    [SerializeField] private float _magicDamage;
-
-
-
     private void OnTriggerStay(Collider collision)
     {
+        var rnd = Random.Range(1, 100);
         if (collision.TryGetComponent(out EnemyStats enemyStats))
         {
-            // if (rnd < _physCritChance)
-            // {
-                enemyStats.CalculateDamage(_magicDamage, DamageType.MageDamage);
-                Debug.Log("Crit");
-            // }
-            // else
-            // {
-            //     enemyStats.CalculateDamage(_weaponDamage, DamageType.PhysDamage);
-            // }
+            if (rnd < MagicDamage.MagCritChance)
+            {
+                enemyStats.CalculateDamage(MagicDamage.WeaponMagicDamage * 0.1f, DamageType.PhysDamage);
+                Debug.Log("MagicCrit");
+            }
+            else
+            {
+                enemyStats.CalculateDamage(MagicDamage.WeaponMagicDamage * 0.05f, DamageType.PhysDamage);
+            }
         }
     }
 }

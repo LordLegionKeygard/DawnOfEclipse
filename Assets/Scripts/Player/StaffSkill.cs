@@ -19,10 +19,12 @@ public class StaffSkill : MonoBehaviour
     [Header("Other")]
 
     [SerializeField] private SkillFirePoints _skillFirePoints;
+
     private void OnEnable()
     {
         CustomEvents.OnUseSkillR1 += SkillR1;
         CustomEvents.OnUseSkillR2 += SkillR2;
+        CustomEvents.FireAimImageToggle(true);
     }
 
     private void Start()
@@ -31,20 +33,20 @@ public class StaffSkill : MonoBehaviour
         _castR2Point = _skillFirePoints.FirePoints[0];
         _skillR2Point = _skillFirePoints.FirePoints[1];
         _castR1Point = _skillFirePoints.FirePoints[2];
-        // _skillR1Point = _skillFirePoints.FirePoints[3];
+        _skillR1Point = _skillFirePoints.FirePoints[3];
     }
 
     private void SkillR1(bool cast)
     {
         if (cast)
         {
-            var puk = Instantiate(_skillR1CastPrefab, _castR1Point.transform.position, Quaternion.identity);
+            var puk = Instantiate(_skillR1CastPrefab, _castR1Point.position, Quaternion.identity);
             puk.transform.SetParent(_castR1Point.transform);
         }
         else
         {
-            Instantiate(_skillR1Prefab, _skillR1Point.transform.position, Quaternion.identity);
-
+            Vector3 aimDir = (StaffTargetAim.MouseWorldPoisition - _skillR1Point.position).normalized;
+            Instantiate(_skillR1Prefab, _skillR1Point.position, Quaternion.LookRotation(aimDir, Vector3.up));
         }
     }
 
@@ -58,5 +60,6 @@ public class StaffSkill : MonoBehaviour
     {
         CustomEvents.OnUseSkillR1 -= SkillR1;
         CustomEvents.OnUseSkillR2 -= SkillR2;
+        CustomEvents.FireAimImageToggle(false);
     }
 }

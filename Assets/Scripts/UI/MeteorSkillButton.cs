@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class MeteorSkillButton : Skills
 {
-    [SerializeField] private DistanceToTarget _distanceToTarget;
     [SerializeField] private PlayerAnimatorManager _playerAnimatorManager;
     [SerializeField] private GameObject _meteorPrefab;
     private bool _skillActive;
@@ -34,7 +33,7 @@ public class MeteorSkillButton : Skills
 
     private void UseSKill()
     {
-        if (!_skillActive || _distanceToTarget.Distance > 16 || ManaCost > ManaControl.CurrentMana || HealthControl.IsDeath) return;
+        if (!_skillActive || ManaCost > ManaControl.CurrentMana || HealthControl.IsDeath) return;
         ManaControl.UseMana(ManaCost);
         SkillToggle = true;
         SkillImage.fillAmount = 0;

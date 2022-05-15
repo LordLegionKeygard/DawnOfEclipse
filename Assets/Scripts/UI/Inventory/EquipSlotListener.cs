@@ -17,6 +17,4 @@ public class EquipSlotListener : MonoBehaviour, IPointerClickHandler
         else if (eventData.button == PointerEventData.InputButton.Right)
             _equipSlot.Unequip();
     }
-
-
 }

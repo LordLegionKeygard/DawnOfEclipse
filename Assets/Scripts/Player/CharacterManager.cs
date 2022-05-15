@@ -8,9 +8,9 @@ public class CharacterManager : MonoBehaviour
     public Transform LockOnTransform;
 
     [Header("A.I Settings")]
-    public static float detectionRadius = 10;
-    public static float maximumDetectionAngle = 180;
-    public static float minimumDetectionAngle = -180;
+    public static float DefaultDetectionRadius = 10;
+    public static float MaximumDetectionAngle = 180;
+    public static float MinimumDetectionAngle = -180;
     [HideInInspector] public float currentRecoveryTime = 0;
     
 }

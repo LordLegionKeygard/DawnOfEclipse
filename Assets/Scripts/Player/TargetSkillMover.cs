@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TargetSkillMover : MonoBehaviour
 {
+    [SerializeField] private float _maxDistance;
     [SerializeField] private GameObject _skillRound;
     [SerializeField] private LayerMask _mask;
     [SerializeField] private Transform _target;
@@ -23,6 +24,7 @@ public class TargetSkillMover : MonoBehaviour
 
     private void LateUpdate()
     {
+
         if (!_isActive) return;
         UpdateTargetPosition();
     }
@@ -33,26 +35,24 @@ public class TargetSkillMover : MonoBehaviour
         _isActive = state;
     }
 
-    public void UpdateTargetPosition()
+    private void UpdateTargetPosition()
     {
         Vector3 newPosition = Vector3.zero;
-
         RaycastHit hit;
-        if (Physics.Raycast(cam.ScreenPointToRay(Input.mousePosition), out hit, Mathf.Infinity, _mask))
+
+        if (Physics.Raycast(cam.ScreenPointToRay(Input.mousePosition), out hit, _maxDistance, _mask))
         {
-
-
             _target.position = Vector3.Lerp(_target.position, hit.point, 10f * Time.deltaTime);
-            if (Input.GetMouseButtonDown(0))
-            {
-                CustomEvents.FireUseTargetSkill();
-            }
+        }
+        if (Input.GetMouseButtonDown(0))
+        {
+            CustomEvents.FireUseTargetSkill();
         }
     }
 
     private void OnDisable()
     {
-        CustomEvents.OnActiveTargetSkill += ActiveTargetSkill;
+        CustomEvents.OnActiveTargetSkill -= ActiveTargetSkill;
     }
 }
 

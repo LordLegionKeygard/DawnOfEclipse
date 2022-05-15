@@ -20,13 +20,14 @@ public class PlayerMovement : CharacterManager
     [SerializeField] private float acceleration = 0.1f;
     [SerializeField] private float deceleration = 0.5f;
     private Vector2 _inputStrafe;
-    public bool CanWalk = true;
-
+    private bool _canWalk = true;
+    private bool _canRotate = true;
     private bool _isDeath;
 
     private void OnEnable()
     {
         CustomEvents.OnCanWalk += CanWalkToggle;
+        CustomEvents.OnCanRotate += CanRotateToggle;
     }
 
     public void CalculateSpeed()
@@ -66,16 +67,17 @@ public class PlayerMovement : CharacterManager
 
         if (direction.magnitude >= 0.5f)
         {
-            // float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + _camera.eulerAngles.y;
-            // float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmothTime);
             Vector3 projectedCameraForward = Vector3.ProjectOnPlane(Camera.main.transform.forward, Vector3.up);
             Quaternion rotationToCamera = Quaternion.LookRotation(projectedCameraForward, Vector3.up);
-            // transform.rotation = Quaternion.Euler(0f, angle, 0f);
 
             Vector3 moveDirection = rotationToCamera * direction;
             Quaternion rotationToMoveDirection = Quaternion.LookRotation(moveDirection, Vector3.up);
+
+            if(!_canRotate) return;
+
             transform.rotation = Quaternion.RotateTowards(transform.rotation, rotationToMoveDirection, _rotationSpeed * Time.deltaTime);
-            if (!CanWalk) return;
+
+            if (!_canWalk) return;
 
             _characterController.Move(moveDirection.normalized * (CurrentSpeed + _potionsControl.PotionSpeed) * Time.deltaTime);
 
@@ -96,11 +98,17 @@ public class PlayerMovement : CharacterManager
 
     private void CanWalkToggle(bool state)
     {
-        CanWalk = state;
+        _canWalk = state;
+    }
+
+    private void CanRotateToggle(bool state)
+    {
+        _canRotate = state;
     }
 
     private void OnDisable()
     {
         CustomEvents.OnCanWalk -= CanWalkToggle;
+        CustomEvents.OnCanRotate -= CanRotateToggle;
     }
 }

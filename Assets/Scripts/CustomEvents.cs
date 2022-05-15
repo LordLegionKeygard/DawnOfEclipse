@@ -219,4 +219,21 @@ public class CustomEvents
     {
         OnUseSkillR2?.Invoke(state);
     }
+
+    public static Action<bool> OnAim;
+    public static void FireAim(bool state)
+    {
+        OnAim?.Invoke(state);
+    }
+    public static Action<bool> OnAimImageToggle;
+    public static void FireAimImageToggle(bool state)
+    {
+        OnAimImageToggle?.Invoke(state);
+    }
+
+    public static Action<bool> OnCanRotate;
+    public static void FireCanRotate(bool state)
+    {
+        OnCanRotate?.Invoke(state);
+    }
 }

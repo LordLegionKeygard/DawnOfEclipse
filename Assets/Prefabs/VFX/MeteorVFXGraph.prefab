@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1900019160362502464}
   - component: {fileID: 3696058856584219378}
   - component: {fileID: 672477124437094897}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: MeteorVFXGraph
   m_TagString: Untagged
   m_Icon: {fileID: 0}

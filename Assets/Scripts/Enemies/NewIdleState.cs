@@ -8,9 +8,16 @@ public class NewIdleState : NewState
     [SerializeField] private AIDestinationSetter _aiDestinationSetter;
     [SerializeField] private NewPursueTargetState _newPursueTargetState;
     public LayerMask detectionLayer;
+    public float DetectionRadius;
+
     public override NewState Tick(NewEnemyManager newEnemyManager, EnemyStats enemyStats, NewEnemyAnimatorManager newEnemyAnimatorManager)
     {
-        Collider[] colliders = Physics.OverlapSphere(transform.position, CharacterManager.detectionRadius, detectionLayer);
+        if (!enemyStats.Aggression) DetectionRadius = CharacterManager.DefaultDetectionRadius;
+        if (enemyStats.Aggression)
+        {
+            DetectionRadius = 100;
+        }
+        Collider[] colliders = Physics.OverlapSphere(transform.position, DetectionRadius, detectionLayer);
 
         for (int i = 0; i < colliders.Length; i++)
         {
@@ -21,7 +28,7 @@ public class NewIdleState : NewState
                 Vector3 targetDirection = playerHealthControl.transform.position - transform.position;
                 float viewableAngle = Vector3.Angle(targetDirection, transform.forward);
 
-                if (viewableAngle > CharacterManager.minimumDetectionAngle && viewableAngle < CharacterManager.maximumDetectionAngle)
+                if (viewableAngle > CharacterManager.MinimumDetectionAngle && viewableAngle < CharacterManager.MaximumDetectionAngle)
                 {
                     _aiDestinationSetter.CurrentTarget = playerHealthControl.gameObject.transform;
                 }

@@ -106,4 +106,15 @@ public class PlayerAnimatorManager : MonoBehaviour
     {
         CustomEvents.FireUseSkillR2(false);
     }
+
+    public void Aim()
+    {
+        CustomEvents.FireAim(true);
+        CustomEvents.FireCanRotate(false);
+    }
+    public void NotAim()
+    {
+        CustomEvents.FireAim(false);
+        CustomEvents.FireCanRotate(true);
+    }
 }

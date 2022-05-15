@@ -88,6 +88,7 @@ public class NewEnemyManager : CharacterManager
 
     public void ReturnToSpawn()
     {
+        _enemyStats.Aggression = false;
         IsChasingPlayer = false;
         ResetChaseTimer();
         _aiDestinationSetter.CurrentTarget = _spawnPoint.gameObject.transform;

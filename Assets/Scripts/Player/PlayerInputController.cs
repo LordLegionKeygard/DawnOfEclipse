@@ -194,8 +194,8 @@ public class PlayerInputController : MonoBehaviour
             _playerAnimatorManager.PlayTargetBoolAnimation(true, _playerAnimatorManager.Sneak, 0, 0);
             _playerMovement.CurrentSpeed = _playerMovement.DefaultSpeed - 3;
             _isSneak = true;
-            CharacterManager.maximumDetectionAngle = 50f;
-            CharacterManager.minimumDetectionAngle = -50f;
+            CharacterManager.MaximumDetectionAngle = 50f;
+            CharacterManager.MinimumDetectionAngle = -50f;
         }
         else
         {
@@ -203,8 +203,8 @@ public class PlayerInputController : MonoBehaviour
             _playerAnimatorManager.PlayTargetBoolAnimation(false, _playerAnimatorManager.Sneak, 0, 0);
             _isSneak = false;
             _playerMovement.CurrentSpeed = _playerMovement.DefaultSpeed;
-            CharacterManager.maximumDetectionAngle = 180f;
-            CharacterManager.minimumDetectionAngle = -180f;
+            CharacterManager.MaximumDetectionAngle = 180f;
+            CharacterManager.MinimumDetectionAngle = -180f;
         }
         CustomEvents.FireUpdateAllStats();
     }

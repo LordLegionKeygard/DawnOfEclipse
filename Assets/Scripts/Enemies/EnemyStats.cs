@@ -15,6 +15,7 @@ public class EnemyStats : MonoBehaviour
     private EnemyVFXController _enemyVFXController;
     private EnemyLoot _enemyLoot;
     private EnemyLevel _enemyLevel;
+    public bool Aggression;
     private bool _death;
 
     [Header("Defence")]
@@ -60,6 +61,7 @@ public class EnemyStats : MonoBehaviour
     {
         if (damage <= 0) return;
 
+        Aggression = true;
         _enemyVFXController.TakeDamageVFX();
         CurrentHealth -= (int)damage;
         UpdateSlider();

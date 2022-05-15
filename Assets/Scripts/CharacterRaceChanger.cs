@@ -43,6 +43,8 @@ public class CharacterRaceChanger : MonoBehaviour
                 _satyrParts[0].SetActive(true);
                 _satyrParts[1].SetActive(true);
                 _satyrParts[2].SetActive(true);
+                _defaultLegs[0].SetActive(false);
+                _defaultLegs[1].SetActive(false);
 
                 _satyrHairStyles[CharacterInformation.Hairstyle].SetActive(true);
                 _satyrMask.sharedMesh = _satyrMasks[CharacterInformation.Mask].sharedMesh;

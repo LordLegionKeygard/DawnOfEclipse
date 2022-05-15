@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2994039376290032718}
   - component: {fileID: 3124793005113244948}
   - component: {fileID: 3123692397706966490}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: GroundDust
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28,6 +28,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2993994796729848250}
   m_RootOrder: 0
@@ -4852,6 +4853,7 @@ ParticleSystemRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_RenderMode: 0
+  m_MeshDistribution: 0
   m_SortMode: 0
   m_MinParticleSize: 0
   m_MaxParticleSize: 32
@@ -4875,6 +4877,10 @@ ParticleSystemRenderer:
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
+  m_MeshWeighting: 1
+  m_MeshWeighting1: 1
+  m_MeshWeighting2: 1
+  m_MeshWeighting3: 1
   m_MaskInteraction: 0
 --- !u!1 &2997466146043949266
 GameObject:
@@ -4887,7 +4893,7 @@ GameObject:
   - component: {fileID: 2995535835840630250}
   - component: {fileID: 3124376630819887176}
   - component: {fileID: 3123776782037857028}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Bubbles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4904,6 +4910,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2993994796729848250}
   m_RootOrder: 4
@@ -9737,6 +9744,7 @@ ParticleSystemRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_RenderMode: 0
+  m_MeshDistribution: 0
   m_SortMode: 0
   m_MinParticleSize: 0
   m_MaxParticleSize: 0.5
@@ -9760,6 +9768,10 @@ ParticleSystemRenderer:
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
+  m_MeshWeighting: 1
+  m_MeshWeighting1: 1
+  m_MeshWeighting2: 1
+  m_MeshWeighting3: 1
   m_MaskInteraction: 0
 --- !u!1 &2997492165751126588
 GameObject:
@@ -9772,7 +9784,7 @@ GameObject:
   - component: {fileID: 2995632504727726190}
   - component: {fileID: 3125496912692598108}
   - component: {fileID: 3123355883183908258}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Flash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9789,6 +9801,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2993994796729848250}
   m_RootOrder: 8
@@ -14622,6 +14635,7 @@ ParticleSystemRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_RenderMode: 0
+  m_MeshDistribution: 0
   m_SortMode: 0
   m_MinParticleSize: 0
   m_MaxParticleSize: 32
@@ -14645,6 +14659,10 @@ ParticleSystemRenderer:
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
+  m_MeshWeighting: 1
+  m_MeshWeighting1: 1
+  m_MeshWeighting2: 1
+  m_MeshWeighting3: 1
   m_MaskInteraction: 0
 --- !u!1 &2997813181982878258
 GameObject:
@@ -14657,7 +14675,7 @@ GameObject:
   - component: {fileID: 2995758503778375886}
   - component: {fileID: 3125327765481855494}
   - component: {fileID: 3123339415262074788}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: GroundDust2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14674,6 +14692,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2993994796729848250}
   m_RootOrder: 1
@@ -19498,6 +19517,7 @@ ParticleSystemRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_RenderMode: 0
+  m_MeshDistribution: 0
   m_SortMode: 0
   m_MinParticleSize: 0
   m_MaxParticleSize: 32
@@ -19521,6 +19541,10 @@ ParticleSystemRenderer:
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
+  m_MeshWeighting: 1
+  m_MeshWeighting1: 1
+  m_MeshWeighting2: 1
+  m_MeshWeighting3: 1
   m_MaskInteraction: 0
 --- !u!1 &2998025520336330150
 GameObject:
@@ -19533,7 +19557,7 @@ GameObject:
   - component: {fileID: 2994131054018017644}
   - component: {fileID: 3108202473383638744}
   - component: {fileID: 3124988563919925126}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: SmokeBurst
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19550,6 +19574,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2993994796729848250}
   m_RootOrder: 9
@@ -24374,6 +24399,7 @@ ParticleSystemRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_RenderMode: 0
+  m_MeshDistribution: 0
   m_SortMode: 1
   m_MinParticleSize: 0
   m_MaxParticleSize: 2
@@ -24397,6 +24423,10 @@ ParticleSystemRenderer:
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
+  m_MeshWeighting: 1
+  m_MeshWeighting1: 1
+  m_MeshWeighting2: 1
+  m_MeshWeighting3: 1
   m_MaskInteraction: 0
 --- !u!1 &2998158816730532814
 GameObject:
@@ -24412,7 +24442,7 @@ GameObject:
   - component: {fileID: 1639242869441191472}
   - component: {fileID: -2653920610975603880}
   - component: {fileID: 3610146556518502200}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: MushroomRaceSkillPoison
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24429,6 +24459,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 3.4840088, y: -0.4500003, z: 6.8470154}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2994039376290032718}
   - {fileID: 2995758503778375886}
@@ -29263,6 +29294,7 @@ ParticleSystemRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_RenderMode: 0
+  m_MeshDistribution: 0
   m_SortMode: 0
   m_MinParticleSize: 0
   m_MaxParticleSize: 32
@@ -29286,6 +29318,10 @@ ParticleSystemRenderer:
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
+  m_MeshWeighting: 1
+  m_MeshWeighting1: 1
+  m_MeshWeighting2: 1
+  m_MeshWeighting3: 1
   m_MaskInteraction: 0
 --- !u!114 &1639242869441191472
 MonoBehaviour:
@@ -29338,7 +29374,7 @@ GameObject:
   - component: {fileID: 2994220735166921682}
   - component: {fileID: 3125401256892652864}
   - component: {fileID: 3125107496128465464}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: DustSide
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29355,6 +29391,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2993994796729848250}
   m_RootOrder: 2
@@ -34237,6 +34274,7 @@ ParticleSystemRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_RenderMode: 0
+  m_MeshDistribution: 0
   m_SortMode: 0
   m_MinParticleSize: 0
   m_MaxParticleSize: 8
@@ -34260,6 +34298,10 @@ ParticleSystemRenderer:
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
+  m_MeshWeighting: 1
+  m_MeshWeighting1: 1
+  m_MeshWeighting2: 1
+  m_MeshWeighting3: 1
   m_MaskInteraction: 0
 --- !u!1 &2998206663899619524
 GameObject:
@@ -34272,7 +34314,7 @@ GameObject:
   - component: {fileID: 2994069742478256794}
   - component: {fileID: 3125389125626489152}
   - component: {fileID: 3124957178097676732}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Particles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34289,6 +34331,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.10000001, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2993994796729848250}
   m_RootOrder: 5
@@ -39329,6 +39372,7 @@ ParticleSystemRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_RenderMode: 0
+  m_MeshDistribution: 0
   m_SortMode: 0
   m_MinParticleSize: 0
   m_MaxParticleSize: 0.5
@@ -39352,6 +39396,10 @@ ParticleSystemRenderer:
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
+  m_MeshWeighting: 1
+  m_MeshWeighting1: 1
+  m_MeshWeighting2: 1
+  m_MeshWeighting3: 1
   m_MaskInteraction: 0
 --- !u!1 &2998244891469277168
 GameObject:
@@ -39364,7 +39412,7 @@ GameObject:
   - component: {fileID: 2995726196764796078}
   - component: {fileID: 3124761741868851014}
   - component: {fileID: 3123700071866443800}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: DustMiggle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39381,6 +39429,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2993994796729848250}
   m_RootOrder: 3
@@ -44263,6 +44312,7 @@ ParticleSystemRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_RenderMode: 0
+  m_MeshDistribution: 0
   m_SortMode: 0
   m_MinParticleSize: 0
   m_MaxParticleSize: 8
@@ -44286,6 +44336,10 @@ ParticleSystemRenderer:
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
+  m_MeshWeighting: 1
+  m_MeshWeighting1: 1
+  m_MeshWeighting2: 1
+  m_MeshWeighting3: 1
   m_MaskInteraction: 0
 --- !u!1 &2999037433602333948
 GameObject:
@@ -44298,7 +44352,7 @@ GameObject:
   - component: {fileID: 2993802192826529066}
   - component: {fileID: 3108289715259969542}
   - component: {fileID: 3125049060644638402}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44315,6 +44369,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2993994796729848250}
   m_RootOrder: 7
@@ -49139,6 +49194,7 @@ ParticleSystemRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_RenderMode: 1
+  m_MeshDistribution: 0
   m_SortMode: 1
   m_MinParticleSize: 0
   m_MaxParticleSize: 2
@@ -49162,6 +49218,10 @@ ParticleSystemRenderer:
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
+  m_MeshWeighting: 1
+  m_MeshWeighting1: 1
+  m_MeshWeighting2: 1
+  m_MeshWeighting3: 1
   m_MaskInteraction: 0
 --- !u!1 &2999109907353526684
 GameObject:
@@ -49174,7 +49234,7 @@ GameObject:
   - component: {fileID: 2995965633073233432}
   - component: {fileID: 3124770015249395912}
   - component: {fileID: 3125108896998026816}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Noise
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49191,6 +49251,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2993994796729848250}
   m_RootOrder: 6
@@ -54073,6 +54134,7 @@ ParticleSystemRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_RenderMode: 0
+  m_MeshDistribution: 0
   m_SortMode: 0
   m_MinParticleSize: 0
   m_MaxParticleSize: 4
@@ -54096,4 +54158,8 @@ ParticleSystemRenderer:
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
+  m_MeshWeighting: 1
+  m_MeshWeighting1: 1
+  m_MeshWeighting2: 1
+  m_MeshWeighting3: 1
   m_MaskInteraction: 0

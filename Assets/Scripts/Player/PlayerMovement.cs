@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerMovement : CharacterManager
+public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float _rotationSpeed = 280f;
     private PlayerAnimatorManager _playerAnimatorManager;
@@ -11,12 +11,9 @@ public class PlayerMovement : CharacterManager
     private PotionsControl _potionsControl;
     private Animator _animator;
     private CharacterController _characterController;
-    [SerializeField] private Transform _camera;
     public float CurrentSpeed;
     public float DefaultSpeed;
     private float _velocityMove;
-    [SerializeField] private float turnSmothTime;
-    [SerializeField] private float turnSmoothVelocity;
     [SerializeField] private float acceleration = 0.1f;
     [SerializeField] private float deceleration = 0.5f;
     private Vector2 _inputStrafe;

@@ -6,7 +6,7 @@ using Pathfinding;
 public class NewEnemyManager : CharacterManager
 {
     public float maximumAttackRange;
-    [SerializeField] private AIDestinationSetter _aiDestinationSetter;
+    private AIDestinationSetter _aiDestinationSetter;
     private EnemyStats _enemyStats;
     private NewEnemyAnimatorManager _newEnemyAnimatorManager;
     [SerializeField] private MobSpawner _spawnPoint;
@@ -20,6 +20,7 @@ public class NewEnemyManager : CharacterManager
     {
         _enemyStats = GetComponent<EnemyStats>();
         _newEnemyAnimatorManager = GetComponent<NewEnemyAnimatorManager>();
+        _aiDestinationSetter = GetComponent<AIDestinationSetter>();
     }
 
     private void Start()

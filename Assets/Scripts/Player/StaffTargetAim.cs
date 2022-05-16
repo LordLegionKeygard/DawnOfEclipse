@@ -8,7 +8,7 @@ public class StaffTargetAim : MonoBehaviour
     [SerializeField] private Transform _prefabBulletProjectile;
     [SerializeField] private Transform _spawnBulletPosition;
     [SerializeField] private LayerMask _aimColliderLayerMask = new LayerMask();
-    public static Vector3 MouseWorldPoisition;
+    public static Vector3 MouseWorldPosition;
 
     public bool _isAim;
 
@@ -24,21 +24,22 @@ public class StaffTargetAim : MonoBehaviour
         if (Physics.Raycast(ray, out RaycastHit raycastHit, 999f, _aimColliderLayerMask))
         {
             _debugTransform.position = Vector3.Lerp(_debugTransform.position, raycastHit.point, 10f * Time.deltaTime);
-            MouseWorldPoisition = raycastHit.point;
+            MouseWorldPosition = raycastHit.point;
         }
 
         if (_isAim)
         {
-            Vector3 worldAimTarget = MouseWorldPoisition;
+            Vector3 worldAimTarget = MouseWorldPosition;
             worldAimTarget.y = transform.position.y;
             Vector3 aimDirection = (worldAimTarget - transform.position).normalized;
             transform.forward = Vector3.Lerp(transform.forward, aimDirection, Time.deltaTime * 20f);
         }
 
-        // if (Input.GetKeyDown(KeyCode.X))
+        // else
+
         // {
-        //     Vector3 aimDir = (MouseWorldPoisition - _spawnBulletPosition.position).normalized;
-        //     Instantiate(_prefabBulletProjectile, _spawnBulletPosition.position, Quaternion.LookRotation(aimDir, Vector3.up));
+        //     _debugTransform.position = ray.GetPoint(20);
+        //     MouseWorldPoisition = _debugTransform.transform.position;
         // }
     }
 

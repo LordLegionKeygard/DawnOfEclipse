@@ -4,6 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - Stair
+  - Climb
+  - Fly
   - Enemy
   - UIItemSlot
   - DropItem
@@ -14,6 +17,9 @@ TagManager:
   - Animation
   - UI
   - Effect
+  - Animal
+  - Water
+  - CinemachineTarget
   layers:
   - Default
   - TransparentFX
@@ -35,7 +41,7 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - Animal
   - 
   - 
   - 

@@ -45,7 +45,7 @@ public class StaffSkill : MonoBehaviour
         }
         else
         {
-            Vector3 aimDir = (StaffTargetAim.MouseWorldPoisition - _skillR1Point.position).normalized;
+            Vector3 aimDir = (StaffTargetAim.MouseWorldPosition - _skillR1Point.position).normalized;
             Instantiate(_skillR1Prefab, _skillR1Point.position, Quaternion.LookRotation(aimDir, Vector3.up));
         }
     }

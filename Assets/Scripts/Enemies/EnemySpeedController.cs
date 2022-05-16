@@ -6,7 +6,12 @@ using Pathfinding;
 public class EnemySpeedController : MonoBehaviour
 {
     [SerializeField] private float _normalSpeed;
-    [SerializeField] private AIPath _aiPath;
+    private AIPath _aiPath;
+
+    private void Awake()
+    {
+        _aiPath = GetComponent<AIPath>();
+    }
 
     public void CanWalk()
     {

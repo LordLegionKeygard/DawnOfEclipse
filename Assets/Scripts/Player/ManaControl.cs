@@ -11,6 +11,11 @@ public class ManaControl : MonoBehaviour
     [SerializeField] private float _regenNumber;
     public float CurrentMana => _currentMana;
 
+    private void OnEnable()
+    {
+        CustomEvents.OnUseMana += UseMana;
+    }
+
     public void CalculateMana()
     {
         _currentMana = MaxMana;
@@ -20,7 +25,7 @@ public class ManaControl : MonoBehaviour
 
     private void Update()
     {
-        if(_currentMana < MaxMana)
+        if (_currentMana < MaxMana)
         {
             _currentMana += _regenNumber;
             _manaBar.value = _currentMana;
@@ -34,5 +39,10 @@ public class ManaControl : MonoBehaviour
             _currentMana -= amount;
             _manaBar.value = _currentMana;
         }
+    }
+
+    private void OnDisable()
+    {
+        CustomEvents.OnUseMana -= UseMana;
     }
 }

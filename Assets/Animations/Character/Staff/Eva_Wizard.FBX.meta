@@ -1515,6 +1515,13 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
+      - time: 0.44630873
+        functionName: CheckManaCostR2
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask: []
       maskType: 0
       maskSource: {instanceID: 0}
@@ -2278,6 +2285,13 @@ ModelImporter:
         messageOptions: 0
       - time: 0.24439867
         functionName: CastSkillR1
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.38926175
+        functionName: CheckManaCostR1
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0

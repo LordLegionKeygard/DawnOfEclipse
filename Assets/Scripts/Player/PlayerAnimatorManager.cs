@@ -7,6 +7,7 @@ public class PlayerAnimatorManager : MonoBehaviour
     private Animator _animator;
     private PlayerMovement _playerMovement;
     private PlayerInputController _playerInputController;
+    private ManaControl _manaControl;
     public readonly int Speed = Animator.StringToHash("speed");
     public readonly int IsInAir = Animator.StringToHash("isInAir");
     public readonly int Attack_R2 = Animator.StringToHash("AttackR2");
@@ -21,13 +22,21 @@ public class PlayerAnimatorManager : MonoBehaviour
     public readonly int Block_React_2 = Animator.StringToHash("Block_React_2");
     public readonly int Drink = Animator.StringToHash("drink");
     public readonly int StartGame = Animator.StringToHash("start");
+    public readonly int HaveMana = Animator.StringToHash("haveMana");
 
-    private void Start()
+
+    private void Awake()
     {
         _animator = GetComponent<Animator>();
         _playerMovement = GetComponent<PlayerMovement>();
         _playerInputController = GetComponent<PlayerInputController>();
+        _manaControl = GetComponent<ManaControl>();
+    }
+
+    private void Start()
+    {
         _animator.SetTrigger(StartGame);
+        CustomEvents.OnDropStaff += DropStaff;
     }
 
     public void PlayTargetBoolAnimation(bool state, int animation, float time, int boolNumber)
@@ -100,11 +109,13 @@ public class PlayerAnimatorManager : MonoBehaviour
     public void SkillR1()
     {
         CustomEvents.FireUseSkillR1(false);
+        CustomEvents.FireUseMana(StaffManaCost.ManaR1);
     }
 
     public void SkillR2()
     {
         CustomEvents.FireUseSkillR2(false);
+        CustomEvents.FireUseMana(StaffManaCost.ManaR2);
     }
 
     public void Aim()
@@ -116,5 +127,24 @@ public class PlayerAnimatorManager : MonoBehaviour
     {
         CustomEvents.FireAim(false);
         CustomEvents.FireCanRotate(true);
+    }
+
+    public void CheckManaCostR1()
+    {
+        _animator.SetBool(HaveMana, _manaControl.CurrentMana >= StaffManaCost.ManaR1);
+    }
+    public void CheckManaCostR2()
+    {
+        _animator.SetBool(HaveMana, _manaControl.CurrentMana >= StaffManaCost.ManaR2);
+    }
+
+    public void DropStaff()
+    {
+        _animator.SetBool(HaveMana, true);
+    }
+
+    private void OnDestroy()
+    {
+        CustomEvents.OnDropStaff -= DropStaff;
     }
 }

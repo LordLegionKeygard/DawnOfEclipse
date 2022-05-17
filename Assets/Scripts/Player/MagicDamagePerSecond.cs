@@ -11,12 +11,12 @@ public class MagicDamagePerSecond : MonoBehaviour
         {
             if (rnd < MagicDamage.MagCritChance)
             {
-                enemyStats.CalculateDamage(MagicDamage.WeaponMagicDamage * 0.1f, DamageType.PhysDamage);
+                enemyStats.CalculateDamage(MagicDamage.WeaponMagicDamage * 0.1f, DamageType.MageDamage);
                 Debug.Log("MagicCrit");
             }
             else
             {
-                enemyStats.CalculateDamage(MagicDamage.WeaponMagicDamage * 0.05f, DamageType.PhysDamage);
+                enemyStats.CalculateDamage(MagicDamage.WeaponMagicDamage * 0.05f, DamageType.MageDamage);
             }
         }
     }

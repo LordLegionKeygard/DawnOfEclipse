@@ -29,8 +29,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4630033682574836454}
-  m_LocalRotation: {x: -0, y: 0.76130736, z: -0, w: -0.6483912}
-  m_LocalPosition: {x: 1703.2, y: -5.44, z: -996.5}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -60,6 +60,12 @@ VisualEffect:
       - m_Value: 3
         m_Name: Radius
         m_Overridden: 1
+      - m_Value: 1
+        m_Name: TrailFrontSize
+        m_Overridden: 0
+      - m_Value: 5
+        m_Name: MeteorLifeTime
+        m_Overridden: 0
     m_Vector2f:
       m_Array: []
     m_Vector3f:
@@ -67,6 +73,9 @@ VisualEffect:
       - m_Value: {x: 0, y: 10, z: -6}
         m_Name: InitialPosition
         m_Overridden: 1
+      - m_Value: {x: 0, y: -25, z: 10}
+        m_Name: Direction
+        m_Overridden: 0
     m_Vector4f:
       m_Array: []
     m_Uint:
@@ -84,6 +93,12 @@ VisualEffect:
       - m_Value: {fileID: 2800000, guid: 7605196420d204945843c4c794c58361, type: 3}
         m_Name: TrailTexture
         m_Overridden: 0
+      - m_Value: {fileID: 2800000, guid: 7605196420d204945843c4c794c58361, type: 3}
+        m_Name: TrailBackTexture
+        m_Overridden: 1
+      - m_Value: {fileID: 2800000, guid: 25ec38fe0f93e1b449c6c9fbb3d47263, type: 3}
+        m_Name: TrailFrontTexture
+        m_Overridden: 1
     m_Bool:
       m_Array: []
 --- !u!73398921 &2402348752055938872
@@ -165,7 +180,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78f10a07ef4f2ea4eadb1f93ad8d84f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _magicDamage: 3
 --- !u!135 &672477124437094897
 SphereCollider:
   m_ObjectHideFlags: 0

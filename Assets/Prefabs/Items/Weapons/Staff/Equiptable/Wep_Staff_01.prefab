@@ -360,10 +360,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3941aa3b0f26335419c8c0725d7e5887, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _weaponMagicDamage: 0
-  _magCritChance: 0
   _baseMagCritChance: 8
-  BaseWeaponMagicDamage: 50
+  BaseWeaponMagicDamage: 10
 --- !u!114 &3495152953410447473
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -380,8 +378,10 @@ MonoBehaviour:
   _skillR1Prefab: {fileID: 8427150479695254765, guid: 6ba1ceb2b08dea44294e83de384466f2, type: 3}
   _castR1Point: {fileID: 0}
   _skillR1Point: {fileID: 0}
+  _manaCostR1: 5
   _skillR2CastPrefab: {fileID: 539356799769477859, guid: 9c42bf8dbb48d2049945401eacdb3426, type: 3}
   _skillR2Prefab: {fileID: 6741699561955832713, guid: 946c4a2815e957e4da1733de04d2fc04, type: 3}
   _castR2Point: {fileID: 0}
   _skillR2Point: {fileID: 0}
+  _manaCostR2: 10
   _skillFirePoints: {fileID: 0}

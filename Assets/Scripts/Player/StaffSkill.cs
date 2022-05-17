@@ -9,12 +9,14 @@ public class StaffSkill : MonoBehaviour
     [SerializeField] private GameObject _skillR1Prefab;
     [SerializeField] private Transform _castR1Point;
     [SerializeField] private Transform _skillR1Point;
+    [SerializeField] private int _manaCostR1;
 
     [Header("R2")]
     [SerializeField] private GameObject _skillR2CastPrefab;
     [SerializeField] private GameObject _skillR2Prefab;
     [SerializeField] private Transform _castR2Point;
     [SerializeField] private Transform _skillR2Point;
+    [SerializeField] private int _manaCostR2;
 
     [Header("Other")]
 
@@ -25,6 +27,8 @@ public class StaffSkill : MonoBehaviour
         CustomEvents.OnUseSkillR1 += SkillR1;
         CustomEvents.OnUseSkillR2 += SkillR2;
         CustomEvents.FireAimImageToggle(true);
+        StaffManaCost.ManaR1 = _manaCostR1;
+        StaffManaCost.ManaR2 = _manaCostR2;
     }
 
     private void Start()
@@ -56,10 +60,11 @@ public class StaffSkill : MonoBehaviour
         else Instantiate(_skillR2Prefab, _skillR2Point.transform.position, Quaternion.identity);
     }
 
-    private void OnDisable()
+    private void OnDestroy()
     {
         CustomEvents.OnUseSkillR1 -= SkillR1;
         CustomEvents.OnUseSkillR2 -= SkillR2;
         CustomEvents.FireAimImageToggle(false);
+        CustomEvents.FireDropStaff();
     }
 }

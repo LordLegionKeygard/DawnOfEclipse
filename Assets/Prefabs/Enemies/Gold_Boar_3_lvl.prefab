@@ -466,7 +466,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8782748951818477280
 Transform:
   m_ObjectHideFlags: 0
@@ -502,7 +502,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5578bdf27ee7bf743bd72e8e4172913c, type: 2}
+  - {fileID: 2100000, guid: e06654e42f6991548a76f7ed883c3515, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -632,7 +632,7 @@ GameObject:
   - component: {fileID: 8788037077292561072}
   - component: {fileID: 8788037077292561075}
   m_Layer: 0
-  m_Name: Boar_King_12_lvl
+  m_Name: Gold_Boar_3_lvl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -647,7 +647,7 @@ Transform:
   m_GameObject: {fileID: 8788037077292561074}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1515.77, y: 2.793, z: -1814.3}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 9088230296382871022}
@@ -667,13 +667,13 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 1
-  m_Radius: 0.3
+  m_Height: 4
+  m_Radius: 0.5
   m_SlopeLimit: 45
   m_StepOffset: 0.5
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Center: {x: 0, y: 2, z: 0}
 --- !u!95 &8692320600532668826
 Animator:
   serializedVersion: 4
@@ -735,10 +735,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 5
-  radius: 0.71
-  height: 1
+  radius: 0.5
+  height: 2
   canMove: 1
-  maxSpeed: 5
+  maxSpeed: 0
   gravity: {x: NaN, y: NaN, z: NaN}
   groundMask:
     serializedVersion: 2
@@ -759,10 +759,10 @@ MonoBehaviour:
   rotationSpeed: 2000
   slowdownDistance: 5
   pickNextWaypointDist: 10
-  endReachedDistance: 1.7
+  endReachedDistance: 0.5
   alwaysDrawGizmos: 1
   slowWhenNotFacingTarget: 1
-  whenCloseToDestination: 1
+  whenCloseToDestination: 0
   constrainInsideGraph: 0
 --- !u!114 &8788037077292561064
 MonoBehaviour:
@@ -898,7 +898,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2074672797288c04b871a6c8ca25061e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Level: 15
+  Level: 3
   EnemyInformation: {fileID: 11400000, guid: 0778ec36ccd8bfd4f9729093a3d832f5, type: 2}
 --- !u!114 &8788037077292561075
 MonoBehaviour:
@@ -1056,7 +1056,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8782913990599339426
 Transform:
   m_ObjectHideFlags: 0
@@ -1092,7 +1092,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7767ca3c4a937bc45bb483c8169d8ff4, type: 2}
+  - {fileID: 2100000, guid: 8c4edf238eef6f041bde431786dbcf2f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1670,7 +1670,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8790206978589715322
 Transform:
   m_ObjectHideFlags: 0
@@ -1706,7 +1706,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8c4edf238eef6f041bde431786dbcf2f, type: 2}
+  - {fileID: 2100000, guid: 7767ca3c4a937bc45bb483c8169d8ff4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2236,7 +2236,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ad23b3f5680a54f46a4b1d728bfac67a, type: 2}
+  - {fileID: 2100000, guid: 1d208311d74ece34082b9a6d223c9abc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2465,7 +2465,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Boar King
+  m_text: Gold Boar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9302439a419323940b2e7f2f55382344, type: 2}
   m_sharedMaterial: {fileID: 6795844295581081599, guid: 9302439a419323940b2e7f2f55382344, type: 2}

@@ -6,10 +6,10 @@ public class EnemyDamageCollider : MonoBehaviour
 {
     [SerializeField] private EnemyLevel _enemyLevel;
     public float WeaponDamage;
-    private BoxCollider _col;
+    private Collider _col;
     private void Awake()
     {
-        _col = GetComponent<BoxCollider>();
+        _col = GetComponent<Collider>();
     }
 
     private void Start()

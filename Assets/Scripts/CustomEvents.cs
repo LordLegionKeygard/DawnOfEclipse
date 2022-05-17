@@ -236,4 +236,16 @@ public class CustomEvents
     {
         OnCanRotate?.Invoke(state);
     }
+
+    public static Action<int> OnUseMana;
+    public static void FireUseMana(int number)
+    {
+        OnUseMana?.Invoke(number);
+    }
+
+    public static Action OnDropStaff;
+    public static void FireDropStaff()
+    {
+        OnDropStaff?.Invoke();
+    }
 }

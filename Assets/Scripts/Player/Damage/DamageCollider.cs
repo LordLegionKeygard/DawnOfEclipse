@@ -18,6 +18,7 @@ public class DamageCollider : MonoBehaviour
 
     private void Awake()
     {
+        if(_damageCollider == null) return;
         _damageCollider = GetComponent<Collider>();
     }
 
@@ -55,11 +56,13 @@ public class DamageCollider : MonoBehaviour
 
     public void Damage(bool state)
     {
+        if(_damageCollider == null) return;
         _damageCollider.enabled = state;
     }
 
     private void OnTriggerStay(Collider collision)
     {
+        if(_damageCollider == null) return;
         var rnd = Random.Range(1, 100);
         if (collision.TryGetComponent(out EnemyStats enemyStats) && _canDamage)
         {

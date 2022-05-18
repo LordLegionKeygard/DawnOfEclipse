@@ -15,7 +15,7 @@ public class Equipment : Item
     public bool canChangehead;
     public bool weapon;
     public bool twoHandedWeapon;
-    public bool shield;
+    public bool extraItem;
     public int shieldBlockArmorModifier;
     public int FirstAttachmentNumber;
     public int SecondAttachmentNumber;
@@ -58,4 +58,6 @@ public enum EquipmentSlot
     Hammer = 27,
     DualDaggers = 28,
     Staff = 29,
+    Bow = 30,
+    QuiverArrow = 31,
 }

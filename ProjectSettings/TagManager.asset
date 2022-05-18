@@ -20,6 +20,7 @@ TagManager:
   - Animal
   - Water
   - CinemachineTarget
+  - AimHand
   layers:
   - Default
   - TransparentFX

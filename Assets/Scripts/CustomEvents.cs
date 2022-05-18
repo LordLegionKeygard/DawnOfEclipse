@@ -248,4 +248,15 @@ public class CustomEvents
     {
         OnDropStaff?.Invoke();
     }
+    public static Action<bool> OnShootArrow;
+    public static void FireShootArrow(bool state)
+    {
+        OnShootArrow?.Invoke(state);
+    }
+
+    public static Action OnTakeArrow;
+    public static void FireTakeArrow()
+    {
+        OnTakeArrow?.Invoke();
+    }
 }

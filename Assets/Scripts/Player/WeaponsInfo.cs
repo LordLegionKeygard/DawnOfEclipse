@@ -177,8 +177,18 @@ public class WeaponsInfo : MonoBehaviour
         _fistDamageColliderController.FistDamageColliderToggle(false);
         TimeR1 = 0.7f;
         TimeR2 = 0.9f;
-        StaminaAttack = 20;
+        StaminaAttack = 10;
         StaminaJump = 30;
+        StaminaRoll = 14;
+    }
+
+    public void Bow()
+    {
+        _fistDamageColliderController.FistDamageColliderToggle(false);
+        TimeR1 = 0.4f;
+        TimeR2 = 0.5f;
+        StaminaAttack = 14;
+        StaminaJump = 40;
         StaminaRoll = 14;
     }
 }

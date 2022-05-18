@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class EquipmentManager : MonoBehaviour
 {
-    public static EquipmentManager Instance; //синглтон, не явная зависимость
+    public static EquipmentManager Instance;
     public Equipment[] DefaultEquipment;
     public EquipSlotListener _leftHandSlotListener;
     [SerializeField] private EquipSlot[] _equipSlot;
@@ -17,7 +17,6 @@ public class EquipmentManager : MonoBehaviour
     [SerializeField] private Image _shieldEquipSlotImage;
     [SerializeField] private ArmorControl _armorControl;
     [SerializeField] private MagicArmorControl _magicArmorControl;
-    [SerializeField] private MeshFilter[] _targetMeshFilters;
     public SkinnedMeshRenderer[] _currentMeshes;
     public GameObject[] _currentGameObject;
     private Equipment[] _currentEquipment;
@@ -80,17 +79,20 @@ public class EquipmentManager : MonoBehaviour
             Equipment oldHammer = Unequip(27);
             Equipment oldDaggers = Unequip(28);
             Equipment oldStaff = Unequip(29);
+            Equipment oldBow = Unequip(30);
             if (newItem.twoHandedWeapon == true)
             {
                 _twoHandWeaponNow = true;
                 Equipment oldShield = Unequip(21);
             }
         }
-        if (newItem.shield == true)
+        if (newItem.extraItem == true)
         {
             Equipment oldWeapon = Unequip(19);
             Equipment oldDaggers = Unequip(28);
-            
+            Equipment oldQuiverArrow = Unequip(30);
+            Equipment oldShield = Unequip(21);
+
         }
 
         int slotIndex = (int)newItem.equipSlot;
@@ -163,7 +165,7 @@ public class EquipmentManager : MonoBehaviour
             oldItem = _currentEquipment[slotIndex];
             _inventory.Add(oldItem);
 
-            if (slotIndex == 19 || slotIndex == 20 || slotIndex == 27 || slotIndex == 28 || slotIndex == 29)
+            if (slotIndex == 19 || slotIndex == 20 || slotIndex == 27 || slotIndex == 28 || slotIndex == 29 || slotIndex == 30)
             {
                 _weaponsInfo.NoWeapon();
 
@@ -183,7 +185,7 @@ public class EquipmentManager : MonoBehaviour
                 Destroy(_currentGameObject[slotIndex].gameObject);
             }
 
-            if (slotIndex == 21)
+            if (slotIndex == 21 || slotIndex == 31) // extraItem
             {
                 Destroy(_currentGameObject[slotIndex].gameObject);
             }
@@ -395,6 +397,17 @@ public class EquipmentManager : MonoBehaviour
                 EquipSlotAndIcon(20, item);
                 _twoHandWeaponNow = false;
                 break;
+            case EquipmentSlot.Bow:
+                CustomEvents.FireChangeIKHands(0);
+                _weaponsInfo.Bow();
+                _anim.runtimeAnimatorController = Resources.Load("Animation/BowController") as RuntimeAnimatorController;
+                GameObject newBowPrefab = Instantiate(item.prefab);
+                BoneTransformWeapon(newBowPrefab, slotIndex, _weaponsAttachPoints[5], 5);
+                _equipSlot[19].Icon.sprite = item.icon;
+                _equipSlot[21].Icon.gameObject.GetComponentInParent<Button>().enabled = true;
+                EquipSlotAndIcon(20, item);
+                _twoHandWeaponNow = false;
+                break;
             case EquipmentSlot.Hammer:
                 CustomEvents.FireChangeIKHands(0);
                 _weaponsInfo.Hammer();
@@ -431,6 +444,23 @@ public class EquipmentManager : MonoBehaviour
                 BoneTransformWeapon(newShieldPrefab, slotIndex, _weaponsAttachPoints[2], 2);
                 _armorControl.ShieldArmorPassive = item.armorModifier;
                 _armorControl.ShieldBlockArmorDefault = item.shieldBlockArmorModifier;
+                _equipSlot[21].Icon.gameObject.GetComponentInParent<Button>().enabled = true;
+                _shieldEquipSlotImage.color = new Color(_shieldEquipSlotImage.color.r, _shieldEquipSlotImage.color.g, _shieldEquipSlotImage.color.b, 1f);
+                _twoHandWeaponNow = false;
+                EquipSlotAndIcon(21, item);
+                break;
+
+            case EquipmentSlot.QuiverArrow:
+                if (_twoHandWeaponNow == true)
+                {
+                    ResetAnimator();
+                    _equipSlot[19].BackIcon.enabled = true;
+                    _equipSlot[19].Icon.enabled = false;
+                }
+                Unequip(19);
+                _leftHandSlotListener.enabled = true;
+                GameObject newQuiverArrowPrefab = Instantiate(item.prefab);
+                BoneTransformWeapon(newQuiverArrowPrefab, slotIndex, _weaponsAttachPoints[6], 6);
                 _equipSlot[21].Icon.gameObject.GetComponentInParent<Button>().enabled = true;
                 _shieldEquipSlotImage.color = new Color(_shieldEquipSlotImage.color.r, _shieldEquipSlotImage.color.g, _shieldEquipSlotImage.color.b, 1f);
                 _twoHandWeaponNow = false;

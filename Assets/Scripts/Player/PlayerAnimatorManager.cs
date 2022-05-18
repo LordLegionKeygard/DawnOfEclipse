@@ -118,9 +118,25 @@ public class PlayerAnimatorManager : MonoBehaviour
         CustomEvents.FireUseMana(StaffManaCost.ManaR2);
     }
 
+    public void AimArrow()
+    {
+        CustomEvents.FireShootArrow(false);
+    }
+
+    public void ShootArrow()
+    {
+        CustomEvents.FireShootArrow(true);
+    }
+
     public void Aim()
     {
         CustomEvents.FireAim(true);
+        CustomEvents.FireCanRotate(false);
+    }
+
+    public void TakeArrow()
+    {
+        CustomEvents.FireTakeArrow();
         CustomEvents.FireCanRotate(false);
     }
     public void NotAim()

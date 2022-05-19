@@ -9,14 +9,14 @@ public class MagicDamagePerSecond : MonoBehaviour
         var rnd = Random.Range(1, 100);
         if (collision.TryGetComponent(out EnemyStats enemyStats))
         {
-            if (rnd < MagicDamage.MagCritChance)
+            if (rnd < CurrentDamage.CurrentDamageS.CurrentMageCritChance)
             {
-                enemyStats.CalculateDamage(MagicDamage.WeaponMagicDamage * 0.1f, DamageType.MageDamage);
+                enemyStats.CalculateDamage(CurrentDamage.CurrentDamageS.CurrentWeaponMagicDamage * 0.1f, DamageType.MageDamage);
                 Debug.Log("MagicCrit");
             }
             else
             {
-                enemyStats.CalculateDamage(MagicDamage.WeaponMagicDamage * 0.05f, DamageType.MageDamage);
+                enemyStats.CalculateDamage(CurrentDamage.CurrentDamageS.CurrentWeaponMagicDamage * 0.05f, DamageType.MageDamage);
             }
         }
     }

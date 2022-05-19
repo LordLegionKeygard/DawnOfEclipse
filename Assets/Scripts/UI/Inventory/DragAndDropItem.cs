@@ -23,14 +23,12 @@ public class DragAndDropItem : MonoBehaviour, IPointerDownHandler, IPointerUpHan
     {
         // Если слот пустой, то мы не выполняем то что ниже return;
         if (oldSlot.Item.name == "Empty_Item" || eventData.button == PointerEventData.InputButton.Right) return;
-        Debug.Log("1");
         GetComponent<RectTransform>().position += new Vector3(eventData.delta.x, eventData.delta.y);
     }
 
     public void OnPointerDown(PointerEventData eventData)
     {
         if (oldSlot.Item.name == "Empty_Item" || eventData.button == PointerEventData.InputButton.Right) return;
-        Debug.Log("2");
         CustomEvents.FireTooltipToggle(false);
         CustomEvents.OnSelectItem(false);
         //Делаем картинку прозрачнее
@@ -44,7 +42,6 @@ public class DragAndDropItem : MonoBehaviour, IPointerDownHandler, IPointerUpHan
     public void OnPointerUp(PointerEventData eventData)
     {
         if (oldSlot.Item.name == "Empty_Item" || eventData.button == PointerEventData.InputButton.Right) return;
-        Debug.Log("3");
         // Делаем картинку опять не прозрачной
         // GetComponentInChildren<Image>().color = new Color(1, 1, 1, 1f);
         // И чтобы мышка опять могла ее засечь

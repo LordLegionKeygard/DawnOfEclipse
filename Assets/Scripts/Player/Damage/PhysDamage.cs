@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DamageCollider : MonoBehaviour
+public class PhysDamage : MonoBehaviour
 {
     [Header("Current")]
-    [SerializeField] private int _weaponDamage;
-    [SerializeField] private float _physCritChance;
+    public int WeaponDamage;
+    public float PhysCritChance;
 
     [Header("Base")]
-    [SerializeField] private float _basePhysCritChance;
+    [SerializeField] private float BasePhysCritChance;
     public int BaseWeaponDamage;
 
     [Header("Other")]
@@ -33,16 +33,16 @@ public class DamageCollider : MonoBehaviour
     {
         if (!_canDamage) return;
 
-        _weaponDamage = (int)(BaseWeaponDamage * ((1 + 0.05f * ExperienceControl.CurrentLevel)) * (1 + (0.05f * CharacterStats.Strength)));
+        WeaponDamage = (int)(BaseWeaponDamage * ((1 + 0.05f * ExperienceControl.CurrentLevel)) * (1 + (0.05f * CharacterStats.Strength)));
 
-        CustomEvents.FireUpdateWeaponPhysDamage(_weaponDamage);
+        CustomEvents.FireUpdateWeaponPhysDamage(WeaponDamage);
         CalculatePhysCritChance();
     }
 
     private void CalculatePhysCritChance()
     {
-        _physCritChance = _basePhysCritChance * (1 + (0.05f * CharacterStats.Dexterity));
-        CustomEvents.FireUpdateWeaponPhysCritChance(_physCritChance);
+        PhysCritChance = BasePhysCritChance * (1 + (0.05f * CharacterStats.Dexterity));
+        CustomEvents.FireUpdateWeaponPhysCritChance(PhysCritChance);
     }
 
     public void CanDamage(bool state)
@@ -66,14 +66,14 @@ public class DamageCollider : MonoBehaviour
         var rnd = Random.Range(1, 100);
         if (collision.TryGetComponent(out EnemyStats enemyStats) && _canDamage)
         {
-            if(rnd < _physCritChance)
+            if(rnd < PhysCritChance)
             {
-                enemyStats.CalculateDamage(_weaponDamage * 2, DamageType.PhysDamage);
+                enemyStats.CalculateDamage(WeaponDamage * 2, DamageType.PhysDamage);
                 Debug.Log("Crit");
             }
             else
             {
-                enemyStats.CalculateDamage(_weaponDamage, DamageType.PhysDamage);
+                enemyStats.CalculateDamage(WeaponDamage, DamageType.PhysDamage);
             }
             
             Damage(false);

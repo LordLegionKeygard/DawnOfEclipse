@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FistDamageColliderController : MonoBehaviour
 {
-    [SerializeField] private DamageCollider[] _fistDamageCollider;
+    [SerializeField] private PhysDamage[] _fistDamageCollider;
     [SerializeField] private PoisonDamageCollider[] _posionDamageCollider;
     [SerializeField] private MagicDamage _magicDamage;
 

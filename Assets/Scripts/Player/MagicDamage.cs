@@ -5,8 +5,8 @@ using UnityEngine;
 public class MagicDamage : MonoBehaviour
 {
     [Header("Current")]
-    public static int WeaponMagicDamage;
-    public static float MagCritChance;
+    public int WeaponMagicDamage;
+    public float MageCritChance;
 
     [Header("Base")]
     [SerializeField] private float _baseMagCritChance;
@@ -32,8 +32,8 @@ public class MagicDamage : MonoBehaviour
     }
     private void CalculateMagCritChance()
     {
-        MagCritChance = _baseMagCritChance * (1 + (0.05f * CharacterStats.Wisdom));
-        CustomEvents.FireUpdateWeaponMageCritChance(MagCritChance);
+        MageCritChance = _baseMagCritChance * (1 + (0.05f * CharacterStats.Wisdom));
+        CustomEvents.FireUpdateWeaponMageCritChance(MageCritChance);
     }
 
     public void CanDamage(bool state)

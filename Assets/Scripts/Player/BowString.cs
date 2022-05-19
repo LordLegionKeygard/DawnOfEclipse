@@ -18,11 +18,9 @@ public class BowString : MonoBehaviour
         this._points = points;
     }
 
-    private void Update()
+    private void LateUpdate()
     {
-        for (int i = 0; i < _points.Length; i++)
-        {
-            _lr.SetPosition(i, _points[i].position);
-        }
+        _lr.SetPosition(0, _points[0].position);
+        _lr.SetPosition(1, _points[1].position);
     }
 }

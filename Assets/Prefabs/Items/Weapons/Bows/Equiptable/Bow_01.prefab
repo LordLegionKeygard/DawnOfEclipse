@@ -636,9 +636,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d431cf3ab31754469dc39b89b600778, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _weaponDamage: 0
-  _physCritChance: 0
-  _basePhysCritChance: 12
+  WeaponDamage: 0
+  PhysCritChance: 0
+  BasePhysCritChance: 12
   BaseWeaponDamage: 20
 --- !u!114 &7040531736726557471
 MonoBehaviour:
@@ -653,4 +653,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _arrowPoint: {fileID: 1037077707547425329}
-  _arrowPrefab: {fileID: 0}
+  _arrowPrefab: {fileID: 5552693372754632410, guid: cb119fb52375d064eb8a4179a21f79c2, type: 3}

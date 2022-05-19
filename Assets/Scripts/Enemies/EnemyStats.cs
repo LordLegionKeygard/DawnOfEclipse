@@ -18,6 +18,8 @@ public class EnemyStats : MonoBehaviour
     public bool Aggression;
     private bool _death;
 
+    public GameObject EnemySpine;
+
     [Header("Defence")]
     [SerializeField] private int _enemyPhysDefence;
     [SerializeField] private int _enemyMagDefence;

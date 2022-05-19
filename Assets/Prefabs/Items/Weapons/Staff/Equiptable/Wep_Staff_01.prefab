@@ -344,10 +344,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d431cf3ab31754469dc39b89b600778, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _weaponDamage: 0
-  _physCritChance: 0
-  _basePhysCritChance: 0
-  BaseWeaponDamage: 0
+  WeaponDamage: 0
+  PhysCritChance: 0
+  BasePhysCritChance: 4
+  BaseWeaponDamage: 10
 --- !u!114 &1297623083186920951
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -360,6 +360,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3941aa3b0f26335419c8c0725d7e5887, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  WeaponMagicDamage: 0
+  MageCritChance: 0
   _baseMagCritChance: 8
   BaseWeaponMagicDamage: 10
 --- !u!114 &3495152953410447473

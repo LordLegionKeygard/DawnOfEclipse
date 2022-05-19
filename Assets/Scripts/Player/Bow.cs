@@ -21,15 +21,10 @@ public class Bow : MonoBehaviour
 
     private void ShootArrow(bool shoot)
     {
-        if (!shoot)
-        {
-            // _animator.SetTrigger("aim");
-        }
         if (shoot)
         {
-            Debug.Log("Shoot");
-            // Vector3 aimDir = (StaffTargetAim.MouseWorldPosition - _arrowPoint.position).normalized;
-            // Instantiate(_arrowPrefab, _arrowPoint.position, Quaternion.LookRotation(aimDir, Vector3.up));
+            Vector3 aimDir = (StaffTargetAim.MouseWorldPosition - _arrowPoint.position).normalized;
+            Instantiate(_arrowPrefab, _arrowPoint.position, Quaternion.LookRotation(aimDir, Vector3.up));
         }
     }
 

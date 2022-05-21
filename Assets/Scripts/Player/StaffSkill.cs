@@ -26,18 +26,20 @@ public class StaffSkill : MonoBehaviour
     {
         CustomEvents.OnUseSkillR1 += SkillR1;
         CustomEvents.OnUseSkillR2 += SkillR2;
-        CustomEvents.FireAimImageToggle(true);
         StaffManaCost.ManaR1 = _manaCostR1;
         StaffManaCost.ManaR2 = _manaCostR2;
     }
 
-    private void Start()
+    private IEnumerator Start()
     {
         _skillFirePoints = GetComponentInParent<SkillFirePoints>();
         _castR2Point = _skillFirePoints.FirePoints[0];
         _skillR2Point = _skillFirePoints.FirePoints[1];
         _castR1Point = _skillFirePoints.FirePoints[2];
         _skillR1Point = _skillFirePoints.FirePoints[3];
+
+        yield return new WaitForSeconds(0.3f);
+        CustomEvents.FireAimImageToggle(true);
     }
 
     private void SkillR1(bool cast)

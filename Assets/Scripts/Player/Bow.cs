@@ -6,7 +6,7 @@ public class Bow : MonoBehaviour
 {
     private Animator _animator;
     [SerializeField] private Transform _arrowPoint;
-    [SerializeField] private GameObject _arrowPrefab;
+    public GameObject ArrowPrefab;
 
     private void Awake()
     {
@@ -16,15 +16,21 @@ public class Bow : MonoBehaviour
     private void OnEnable()
     {
         CustomEvents.OnShootArrow += ShootArrow;
+    }
+
+    private IEnumerator Start()
+    {
+        yield return new WaitForSeconds(0.3f);
         CustomEvents.FireAimImageToggle(true);
     }
 
     private void ShootArrow(bool shoot)
     {
+        if (ArrowPrefab == null) return;
         if (shoot)
         {
             Vector3 aimDir = (StaffTargetAim.MouseWorldPosition - _arrowPoint.position).normalized;
-            Instantiate(_arrowPrefab, _arrowPoint.position, Quaternion.LookRotation(aimDir, Vector3.up));
+            Instantiate(ArrowPrefab, _arrowPoint.position, Quaternion.LookRotation(aimDir, Vector3.up));
         }
     }
 

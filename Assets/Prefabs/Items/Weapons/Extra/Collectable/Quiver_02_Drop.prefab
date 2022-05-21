@@ -413,7 +413,7 @@ GameObject:
   - component: {fileID: 3680813584802491978}
   - component: {fileID: 7278209554473826819}
   m_Layer: 11
-  m_Name: Quiver_01_Drop
+  m_Name: Quiver_02_Drop
   m_TagString: DropItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

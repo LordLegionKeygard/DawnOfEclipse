@@ -12,28 +12,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6546aaacc94b2e44e914106ed4a9c116, type: 3}
   m_Name: Quiver_01
   m_EditorClassIdentifier: 
-  icon: {fileID: 21300000, guid: 1e32b18e04d608a48859a492c8254d30, type: 3}
+  icon: {fileID: 21300000, guid: 4b82039e0be6bd64082a0ed103235e1f, type: 3}
   Price: 250
   IsDefaultItem: 0
   IsStackable: 0
   IsUsedItem: 0
   IsSetEffect: 0
   Name:
-  - Quiver
-  - "\u041A\u043E\u043B\u0447\u0430\u043D"
+  - Standard Arrows
+  - "\u041E\u0431\u044B\u0447\u043D\u044B\u0435 \u0421\u0442\u0440\u0435\u043B\u044B"
   ItemType:
   - Quiver
   - "\u041A\u043E\u043B\u0447\u0430\u043D"
   ItemInfo:
-  - Arrow
-  - "\u0425\u0440\u0430\u043D\u0438\u0442 \u0441\u0442\u0440\u0435\u043B\u044B"
+  - 'Quiver of standart arrows
+
+    + 5 bow damage'
+  - "\u041A\u043E\u043B\u0447\u0430\u043D \u043E\u0431\u044B\u0447\u043D\u044B\u0445
+    \u0441\u0442\u0440\u0435\u043B\n+ 5 \u043A \u0443\u0440\u043E\u043D\u0443 \u0438\u0437
+    \u043B\u0443\u043A\u0430"
   ArmorSetEnum: 0
   AllArmorSetInfo: {fileID: 0}
   equipSlot: 31
   armorModifier: 6
   MagicArmorModifier: 0
   Meshes: []
-  prefab: {fileID: 8824548641710861958, guid: ad592bf61d4a35b4194f808c51e5c524, type: 3}
+  prefab: {fileID: 8824548641710861958, guid: 5fbccacfc0c62d946a5f3e50eafcd02f, type: 3}
   hatNumber: 0
   noHair: 0
   canChangehead: 0

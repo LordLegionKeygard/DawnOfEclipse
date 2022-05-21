@@ -631,6 +631,7 @@ GameObject:
   - component: {fileID: 8788037077292561073}
   - component: {fileID: 8788037077292561072}
   - component: {fileID: 8788037077292561075}
+  - component: {fileID: 8420036227717571633}
   m_Layer: 0
   m_Name: Boar_King_10_lvl
   m_TagString: Untagged
@@ -667,13 +668,13 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 4
+  m_Height: 1
   m_Radius: 0.5
   m_SlopeLimit: 45
   m_StepOffset: 0.5
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0
-  m_Center: {x: 0, y: 2, z: 0}
+  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!95 &8692320600532668826
 Animator:
   serializedVersion: 4
@@ -913,6 +914,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3a6fe4826c756d45a81579b85a54171, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!136 &8420036227717571633
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8788037077292561074}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.4
+  m_Height: 1.3
+  m_Direction: 2
+  m_Center: {x: 0, y: 0.55, z: -0.2}
 --- !u!1 &8788039523423335068
 GameObject:
   m_ObjectHideFlags: 0
@@ -1137,8 +1152,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8783010054115616100}
-  - component: {fileID: 8653021942284130350}
-  - component: {fileID: 8653336471630808140}
   m_Layer: 0
   m_Name: Head
   m_TagString: Untagged
@@ -1168,34 +1181,6 @@ Transform:
   m_Father: {fileID: 8790303999718495368}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &8653021942284130350
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8788141982097698844}
-  m_Material: {fileID: 13400000, guid: 54174b87a6301064ea8788686f85bda8, type: 2}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  m_Radius: 0.1
-  m_Height: 0.2413128
-  m_Direction: 1
-  m_Center: {x: -0.00000020202867, y: 0.30065668, z: -0.000000007527898}
---- !u!136 &8653336471630808140
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8788141982097698844}
-  m_Material: {fileID: 13400000, guid: 54174b87a6301064ea8788686f85bda8, type: 2}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  m_Radius: 0.17
-  m_Height: 0.4712073
-  m_Direction: 0
-  m_Center: {x: 0.03, y: 0.08, z: 0}
 --- !u!1 &8788172569016213762
 GameObject:
   m_ObjectHideFlags: 0
@@ -1954,7 +1939,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8790301483591935746}
-  - component: {fileID: 8651469353470704064}
   m_Layer: 0
   m_Name: Spine1
   m_TagString: Untagged
@@ -1978,20 +1962,6 @@ Transform:
   m_Father: {fileID: 8782829779489429840}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &8651469353470704064
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8788462062802461790}
-  m_Material: {fileID: 13400000, guid: 54174b87a6301064ea8788686f85bda8, type: 2}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  m_Radius: 0.1966114
-  m_Height: 1.12
-  m_Direction: 0
-  m_Center: {x: -0.03, y: -0.02, z: 0}
 --- !u!1 &8788503198868029270
 GameObject:
   m_ObjectHideFlags: 0

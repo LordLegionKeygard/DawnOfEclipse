@@ -259,4 +259,10 @@ public class CustomEvents
     {
         OnTakeArrow?.Invoke();
     }
+
+    public static Action<int> OnUseArrow;
+    public static void FireUseArrow(int number)
+    {
+        OnUseArrow?.Invoke(number);
+    }
 }

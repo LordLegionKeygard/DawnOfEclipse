@@ -5404,7 +5404,7 @@ MonoBehaviour:
   CurrentHealth: 0
   _enemyHealthBar: {fileID: 632814481094459719}
   Aggression: 0
-  EnemySpine: {fileID: 375684512286760454}
+  EnemySpine: {fileID: 374281422410758282}
   _enemyPhysDefence: 0
   _enemyMagDefence: 0
 --- !u!114 &2981638188418932510

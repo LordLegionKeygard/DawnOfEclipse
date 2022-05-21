@@ -187,8 +187,8 @@ public class WeaponsInfo : MonoBehaviour
         _fistDamageColliderController.FistDamageColliderToggle(false);
         TimeR1 = 2f;
         TimeR2 = 0.5f;
-        StaminaAttack = 14;
-        StaminaJump = 40;
+        StaminaAttack = 25;
+        StaminaJump = 30;
         StaminaRoll = 14;
     }
 }

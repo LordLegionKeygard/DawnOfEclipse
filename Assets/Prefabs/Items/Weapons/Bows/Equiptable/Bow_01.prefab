@@ -599,6 +599,7 @@ GameObject:
   - component: {fileID: 7040531736726557469}
   - component: {fileID: 7040531736726557470}
   - component: {fileID: 7040531736726557471}
+  - component: {fileID: 5705660624605902916}
   m_Layer: 7
   m_Name: Bow_01
   m_TagString: Untagged
@@ -653,4 +654,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _arrowPoint: {fileID: 1037077707547425329}
-  _arrowPrefab: {fileID: 5552693372754632410, guid: cb119fb52375d064eb8a4179a21f79c2, type: 3}
+  ArrowPrefab: {fileID: 0}
+--- !u!114 &5705660624605902916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7709932641583303079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf46e1dedf68c5744bf4c7a70744a421, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bow: {fileID: 7040531736726557471}
+  _allArrows:
+  - {fileID: 0}
+  - {fileID: 5552693372754632410, guid: 4036f268b7b61604b98fb76b3b1c1aa1, type: 3}
+  - {fileID: 5552693372754632410, guid: cb119fb52375d064eb8a4179a21f79c2, type: 3}

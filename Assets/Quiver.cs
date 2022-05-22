@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class Quiver : MonoBehaviour
 {
-    [SerializeField] private int _quiverArrow;
+    public int QuiverArrow;
 
     private IEnumerator Start()
     {
         yield return new WaitForSeconds(0.3f);
-        CustomEvents.FireUseArrow(_quiverArrow);
+        CustomEvents.FireUseArrow(QuiverArrow);
     }
 
     private void OnDestroy()

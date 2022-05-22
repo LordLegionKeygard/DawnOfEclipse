@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 8208700968805321669}
   - component: {fileID: 6201418495152570127}
   - component: {fileID: 8208700968805321672}
-  - component: {fileID: 8208700968805321675}
   - component: {fileID: 8208700968805321674}
+  - component: {fileID: 2077435521835312553}
   m_Layer: 12
   m_Name: Arrow_02
   m_TagString: Untagged
@@ -102,19 +102,6 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 2
---- !u!135 &8208700968805321675
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5552693372754632410}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.06
-  m_Center: {x: 0, y: 0, z: 0.44}
 --- !u!114 &8208700968805321674
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128,5 +115,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _arrowExtraDamage: 15
-  _lifeTime: 100
+  _lifeTime: 3
   _bulletSpeed: 30
+--- !u!136 &2077435521835312553
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5552693372754632410}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.03
+  m_Height: 1.2
+  m_Direction: 2
+  m_Center: {x: 0.0001997836, y: 0.00020589307, z: -0.114177346}

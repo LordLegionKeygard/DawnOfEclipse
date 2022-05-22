@@ -31,10 +31,10 @@ TagManager:
   - Wall
   - Player
   - Enemy
-  - Character Collision Blocker
+  - EnemyTakeDamage
   - GroundAndWall
   - Drop
-  - Bullet
+  - PlayerBullet
   - 
   - 
   - 

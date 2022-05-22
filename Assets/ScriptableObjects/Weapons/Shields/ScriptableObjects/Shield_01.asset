@@ -42,7 +42,7 @@ MonoBehaviour:
   canChangehead: 0
   weapon: 0
   twoHandedWeapon: 0
-  shield: 1
+  extraItem: 1
   shieldBlockArmorModifier: 20
   FirstAttachmentNumber: 0
   SecondAttachmentNumber: 0

@@ -13,7 +13,6 @@ public class PoisonDamageCollider : MonoBehaviour
     private void OnEnable()
     {
         _damageCollider = GetComponent<Collider>();
-        CustomEvents.OnEnabledDamageCollider += StackPoison;
         CustomEvents.OnPoisonHandsParticle += PoisonPsToggle;
     }
 
@@ -38,23 +37,17 @@ public class PoisonDamageCollider : MonoBehaviour
         }
     }
 
-    public void StackPoison(bool state)
-    {
-        _damageCollider.enabled = state;
-    }
-
     private void OnTriggerStay(Collider collision)
     {
         if (collision.TryGetComponent(out EnemyDotStatus enemyDotStatus) && CanDamage)
         {
+            if (CharacterInformation.Race != 1) return;
             enemyDotStatus.TakePosionDamage(_poisonStack);
-            StackPoison(false);
         }
     }
 
     private void OnDisable()
     {
-        CustomEvents.OnEnabledDamageCollider -= StackPoison;
         CustomEvents.OnPoisonHandsParticle -= PoisonPsToggle;
     }
 }

@@ -88,9 +88,9 @@ public class EquipmentManager : MonoBehaviour
         }
         if (newItem.extraItem == true)
         {
-            Equipment oldWeapon = Unequip(19);
+            Equipment oldGreatSword = Unequip(19);
             Equipment oldDaggers = Unequip(28);
-            Equipment oldQuiverArrow = Unequip(30);
+            Equipment oldQuiverArrow = Unequip(31);
             Equipment oldShield = Unequip(21);
 
         }
@@ -182,12 +182,20 @@ public class EquipmentManager : MonoBehaviour
                     _equipSlot[21].BackIcon.enabled = true;
                     _equipSlot[21].Icon.enabled = false;
                 }
+                if (slotIndex == 30)
+                {
+                    _equipSlot[19].BackIcon.enabled = true;
+                    _equipSlot[19].Icon.enabled = false;
+                    ResetAnimator();
+                }
                 Destroy(_currentGameObject[slotIndex].gameObject);
             }
 
             if (slotIndex == 21 || slotIndex == 31) // extraItem
             {
                 Destroy(_currentGameObject[slotIndex].gameObject);
+                _equipSlot[21].BackIcon.enabled = true;
+                _equipSlot[21].Icon.enabled = false;
             }
 
             if (_currentMeshes[slotIndex] != null)
@@ -359,6 +367,7 @@ public class EquipmentManager : MonoBehaviour
             case EquipmentSlot.GreatSword:
                 CustomEvents.FireChangeIKHands(1);
                 _weaponsInfo.GreatSword();
+                Unequip(31);
                 _anim.runtimeAnimatorController = Resources.Load("Animation/GreatSwordController") as RuntimeAnimatorController;
                 GameObject newWeaponGreatSwordPrefab = Instantiate(item.prefab);
                 BoneTransformWeapon(newWeaponGreatSwordPrefab, slotIndex, _weaponsAttachPoints[0], 0);
@@ -373,6 +382,7 @@ public class EquipmentManager : MonoBehaviour
             case EquipmentSlot.DualDaggers:
                 CustomEvents.FireChangeIKHands(0);
                 _weaponsInfo.Daggers();
+                Unequip(31);
                 _anim.runtimeAnimatorController = Resources.Load("Animation/DualDaggersController") as RuntimeAnimatorController;
                 GameObject newDualDaggersRightPrefab = Instantiate(item.prefab);
                 BoneTransformWeapon(newDualDaggersRightPrefab, 19, _weaponsAttachPoints[1], 1);
@@ -400,6 +410,7 @@ public class EquipmentManager : MonoBehaviour
             case EquipmentSlot.Bow:
                 CustomEvents.FireChangeIKHands(0);
                 _weaponsInfo.Bow();
+                Unequip(21);
                 _anim.runtimeAnimatorController = Resources.Load("Animation/BowController") as RuntimeAnimatorController;
                 GameObject newBowPrefab = Instantiate(item.prefab);
                 BoneTransformWeapon(newBowPrefab, slotIndex, _weaponsAttachPoints[5], 5);
@@ -439,6 +450,8 @@ public class EquipmentManager : MonoBehaviour
                     _equipSlot[19].Icon.enabled = false;
                 }
                 Unequip(19);
+                Unequip(30);
+                Unequip(31);
                 _leftHandSlotListener.enabled = true;
                 GameObject newShieldPrefab = Instantiate(item.prefab);
                 BoneTransformWeapon(newShieldPrefab, slotIndex, _weaponsAttachPoints[2], 2);
@@ -458,6 +471,7 @@ public class EquipmentManager : MonoBehaviour
                     _equipSlot[19].Icon.enabled = false;
                 }
                 Unequip(19);
+                Unequip(21);
                 _leftHandSlotListener.enabled = true;
                 GameObject newQuiverArrowPrefab = Instantiate(item.prefab);
                 BoneTransformWeapon(newQuiverArrowPrefab, slotIndex, _weaponsAttachPoints[6], 6);

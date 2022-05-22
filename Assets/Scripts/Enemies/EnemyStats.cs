@@ -17,8 +17,8 @@ public class EnemyStats : MonoBehaviour
     private EnemyLevel _enemyLevel;
     public bool Aggression;
     private bool _death;
-
     public GameObject EnemySpine;
+    [SerializeField] private Collider[] _collider;
 
     [Header("Defence")]
     [SerializeField] private int _enemyPhysDefence;
@@ -88,6 +88,8 @@ public class EnemyStats : MonoBehaviour
 
     private void Death()
     {
+        foreach (var item in _collider) item.enabled = false;
+              
         _enemyHealthBar.gameObject.SetActive(false);
         _newEnemyAnimatorManager.PlayerTargetAnimation("death");
         _characterController.enabled = false;

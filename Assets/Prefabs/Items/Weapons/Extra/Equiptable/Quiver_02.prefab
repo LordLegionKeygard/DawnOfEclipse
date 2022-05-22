@@ -846,7 +846,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38d6d972a92c880438f8568fb70fc54c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _quiverArrow: 2
+  QuiverArrow: 2
 --- !u!1 &8877706100478900323
 GameObject:
   m_ObjectHideFlags: 0

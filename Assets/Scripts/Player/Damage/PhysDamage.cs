@@ -18,7 +18,6 @@ public class PhysDamage : MonoBehaviour
 
     private void Awake()
     {
-        if(_damageCollider == null) return;
         _damageCollider = GetComponent<Collider>();
     }
 
@@ -56,7 +55,6 @@ public class PhysDamage : MonoBehaviour
 
     public void Damage(bool state)
     {
-        if(_damageCollider == null) return;
         _damageCollider.enabled = state;
     }
 
@@ -64,16 +62,16 @@ public class PhysDamage : MonoBehaviour
     {
         if(_damageCollider == null) return;
         var rnd = Random.Range(1, 100);
-        if (collision.TryGetComponent(out EnemyStats enemyStats) && _canDamage)
+        if (collision.TryGetComponent(out EnemyStats enemyTakeDamage) && _canDamage)
         {
             if(rnd < PhysCritChance)
             {
-                enemyStats.CalculateDamage(WeaponDamage * 2, DamageType.PhysDamage);
+                enemyTakeDamage.CalculateDamage(WeaponDamage * 2, DamageType.PhysDamage);
                 Debug.Log("Crit");
             }
             else
             {
-                enemyStats.CalculateDamage(WeaponDamage, DamageType.PhysDamage);
+                enemyTakeDamage.CalculateDamage(WeaponDamage, DamageType.PhysDamage);
             }
             
             Damage(false);

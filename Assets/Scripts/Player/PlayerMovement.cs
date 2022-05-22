@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float acceleration = 0.1f;
     [SerializeField] private float deceleration = 0.5f;
     private Vector2 _inputStrafe;
-    private bool _canWalk = true;
+    private bool _canWalk;
     private bool _canRotate = true;
     private bool _isDeath;
 

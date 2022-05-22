@@ -8,7 +8,6 @@ public class DestroyShards : MonoBehaviour
 
     public void ShardsDestroy()
     {
-        Debug.Log("1");
         _objectDestroy.Destroy();
     }
 }

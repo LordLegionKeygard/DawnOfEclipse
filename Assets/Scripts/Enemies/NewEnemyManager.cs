@@ -46,7 +46,7 @@ public class NewEnemyManager : CharacterManager
         if (_aiDestinationSetter.CurrentTarget != null)
         {
             float distanceFromTarget = Vector3.Distance(_aiDestinationSetter.CurrentTarget.transform.position, transform.position);
-            if (_aiDestinationSetter.CurrentTarget == _spawnPoint.gameObject.transform && distanceFromTarget < 3)
+            if (_aiDestinationSetter.CurrentTarget == _spawnPoint.gameObject.transform && distanceFromTarget < 10)
             {
                 _aiDestinationSetter.CurrentTarget = null;
             }

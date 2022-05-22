@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2994039376290032718}
   - component: {fileID: 3124793005113244948}
   - component: {fileID: 3123692397706966490}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: GroundDust
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4893,7 +4893,7 @@ GameObject:
   - component: {fileID: 2995535835840630250}
   - component: {fileID: 3124376630819887176}
   - component: {fileID: 3123776782037857028}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Bubbles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9784,7 +9784,7 @@ GameObject:
   - component: {fileID: 2995632504727726190}
   - component: {fileID: 3125496912692598108}
   - component: {fileID: 3123355883183908258}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Flash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14675,7 +14675,7 @@ GameObject:
   - component: {fileID: 2995758503778375886}
   - component: {fileID: 3125327765481855494}
   - component: {fileID: 3123339415262074788}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: GroundDust2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19557,7 +19557,7 @@ GameObject:
   - component: {fileID: 2994131054018017644}
   - component: {fileID: 3108202473383638744}
   - component: {fileID: 3124988563919925126}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: SmokeBurst
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24442,7 +24442,7 @@ GameObject:
   - component: {fileID: 1639242869441191472}
   - component: {fileID: -2653920610975603880}
   - component: {fileID: 3610146556518502200}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: MushroomRaceSkillPoison
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29374,7 +29374,7 @@ GameObject:
   - component: {fileID: 2994220735166921682}
   - component: {fileID: 3125401256892652864}
   - component: {fileID: 3125107496128465464}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: DustSide
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34314,7 +34314,7 @@ GameObject:
   - component: {fileID: 2994069742478256794}
   - component: {fileID: 3125389125626489152}
   - component: {fileID: 3124957178097676732}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Particles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39412,7 +39412,7 @@ GameObject:
   - component: {fileID: 2995726196764796078}
   - component: {fileID: 3124761741868851014}
   - component: {fileID: 3123700071866443800}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: DustMiggle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44352,7 +44352,7 @@ GameObject:
   - component: {fileID: 2993802192826529066}
   - component: {fileID: 3108289715259969542}
   - component: {fileID: 3125049060644638402}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49234,7 +49234,7 @@ GameObject:
   - component: {fileID: 2995965633073233432}
   - component: {fileID: 3124770015249395912}
   - component: {fileID: 3125108896998026816}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Noise
   m_TagString: Untagged
   m_Icon: {fileID: 0}

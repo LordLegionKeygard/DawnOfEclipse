@@ -22,6 +22,7 @@ public class ArrowProjectile : MonoBehaviour
     public void Start()
     {
         _rb.velocity = transform.forward * _bulletSpeed;
+        DestroyArrow();
     }
 
     private void Update()
@@ -33,19 +34,19 @@ public class ArrowProjectile : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {       
         var rnd = Random.Range(1, 100);
-        if (other.TryGetComponent(out EnemyStats enemyStats))
+        if (other.TryGetComponent(out EnemyTakeDamage enemyTakeDamage))
         {
             _arrowInEnemy = true;
-            _otherObject = enemyStats.EnemySpine.gameObject;
+            _otherObject = enemyTakeDamage.EnemyStats.EnemySpine.gameObject;
             transform.SetParent(_otherObject.transform);
             if (rnd < CurrentDamage.CurrentDamageS.CurrentPhysCritChance)
             {
-                enemyStats.CalculateDamage(CurrentDamage.CurrentDamageS.CurrentWeaponPhysDamage * 2 + _arrowExtraDamage, DamageType.PhysDamage);
+                enemyTakeDamage.EnemyStats.CalculateDamage(CurrentDamage.CurrentDamageS.CurrentWeaponPhysDamage * 2 + _arrowExtraDamage, DamageType.PhysDamage);
                 Debug.Log("Crit");
             }
             else
             {
-                enemyStats.CalculateDamage(CurrentDamage.CurrentDamageS.CurrentWeaponPhysDamage + _arrowExtraDamage, DamageType.PhysDamage);
+                enemyTakeDamage.EnemyStats.CalculateDamage(CurrentDamage.CurrentDamageS.CurrentWeaponPhysDamage + _arrowExtraDamage, DamageType.PhysDamage);
             }
         }
         if (other.TryGetComponent(out DestroyShards _destroyShards))
@@ -53,10 +54,17 @@ public class ArrowProjectile : MonoBehaviour
             _destroyShards.ShardsDestroy();
             transform.SetParent(other.transform);
         }
+        _lifeTime += 60f;
         _rb.velocity = Vector3.zero;
         _rb.angularVelocity = Vector3.zero;
         _rb.isKinematic = true;
         _collider.enabled = false;
         Destroy(gameObject, _lifeTime);
+    }
+
+    private IEnumerator DestroyArrow()
+    {
+        yield return new WaitForSeconds(_lifeTime);
+        Destroy(gameObject);
     }
 }

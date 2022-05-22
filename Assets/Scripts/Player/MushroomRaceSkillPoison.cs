@@ -7,14 +7,10 @@ public class MushroomRaceSkillPoison : MonoBehaviour
     [SerializeField] private int _poisonStack;
     private Collider _damageCollider;
 
-    private void OnEnable()
+    private IEnumerator Start()
     {
+        yield return new WaitForSeconds(0.5f);
         _damageCollider = GetComponent<Collider>();
-        Invoke("ColliderActive", 0.5f);
-    }
-
-    private void ColliderActive()
-    {
         _damageCollider.enabled = true;
     }
 
@@ -22,6 +18,7 @@ public class MushroomRaceSkillPoison : MonoBehaviour
     {
         if (collision.TryGetComponent(out EnemyDotStatus enemyDotStatus))
         {
+            Debug.Log("Collision");
             enemyDotStatus.TakePosionDamage(_poisonStack);
         }
     }

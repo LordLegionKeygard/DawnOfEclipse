@@ -31,11 +31,13 @@ public class PlayerAnimatorManager : MonoBehaviour
         _playerMovement = GetComponent<PlayerMovement>();
         _playerInputController = GetComponent<PlayerInputController>();
         _manaControl = GetComponent<ManaControl>();
+        _animator.SetTrigger(StartGame);
     }
 
-    private void Start()
-    {
-        _animator.SetTrigger(StartGame);
+    private IEnumerator Start()
+    {      
+        yield return new WaitForSeconds(3f);
+        _playerMovement.enabled = true;
         CustomEvents.OnDropStaff += DropStaff;
     }
 

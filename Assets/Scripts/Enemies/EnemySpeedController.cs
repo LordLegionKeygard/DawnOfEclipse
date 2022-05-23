@@ -15,6 +15,11 @@ public class EnemySpeedController : MonoBehaviour
 
     public void CanWalk()
     {
+        _aiPath.maxSpeed = _normalSpeed / 2;
+    }
+
+    public void CanRun()
+    {
         _aiPath.maxSpeed = _normalSpeed;
     }
 

@@ -8,6 +8,7 @@ public class NewEnemyManager : CharacterManager
     public float maximumAttackRange;
     private AIDestinationSetter _aiDestinationSetter;
     private EnemyStats _enemyStats;
+    [SerializeField] private PatrolState _patrolState;
     private NewEnemyAnimatorManager _newEnemyAnimatorManager;
     [SerializeField] private MobSpawner _spawnPoint;
     [SerializeField] private NewState _currentState;
@@ -46,9 +47,17 @@ public class NewEnemyManager : CharacterManager
         if (_aiDestinationSetter.CurrentTarget != null)
         {
             float distanceFromTarget = Vector3.Distance(_aiDestinationSetter.CurrentTarget.transform.position, transform.position);
-            if (_aiDestinationSetter.CurrentTarget == _spawnPoint.gameObject.transform && distanceFromTarget < 10)
+            if (_aiDestinationSetter.CurrentTarget == _spawnPoint.gameObject.transform && distanceFromTarget < 5)
             {
+                _newEnemyAnimatorManager.CombatBoolAnimation(false);
                 _aiDestinationSetter.CurrentTarget = null;
+            }
+            if(_patrolState == null) return;
+            else if (_aiDestinationSetter.CurrentTarget == _patrolState._rndPatrolTransform && distanceFromTarget < 3)
+            {
+                Debug.Log("12");
+                _patrolState.RandomAction();
+                _aiDestinationSetter.CurrentTarget = null;               
             }
         }
     }

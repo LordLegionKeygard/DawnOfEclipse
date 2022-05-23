@@ -12,6 +12,7 @@ public class NewPursueTargetState : NewState
     {
         if (_aiDestinationSetter.CurrentTarget != null)
         {
+            newEnemyAnimatorManager.CombatBoolAnimation(true);
             float distanceFromTarget = Vector3.Distance(_aiDestinationSetter.CurrentTarget.transform.position, newEnemyManager.transform.position);
 
             newEnemyManager.IsChasingPlayer = true;

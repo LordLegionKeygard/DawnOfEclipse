@@ -6,6 +6,7 @@ using Pathfinding;
 public class NewEnemyAnimatorManager : VersionedMonoBehaviour
 {
     private EnemySpeedController _enemySpeedController;
+    [SerializeField] private PatrolState _patrolState;
     [SerializeField] private Collider _damageCollider;
     private AIDestinationSetter _aiDestionationSetter;
     private Animator _animator;
@@ -27,6 +28,16 @@ public class NewEnemyAnimatorManager : VersionedMonoBehaviour
         _animator.SetTrigger(targetAnim.ToString());
         _enemySpeedController.CantWalk();
 
+    }
+
+    public void Patrol()
+    {
+        _patrolState.PatrolToRandomPosition();
+    }
+
+    public void CombatBoolAnimation(bool state)
+    {
+        _animator.SetBool("combat", state);
     }
     protected void Update()
     {

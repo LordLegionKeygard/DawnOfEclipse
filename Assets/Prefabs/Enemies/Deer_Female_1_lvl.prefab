@@ -294,6 +294,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
+  _patrolState: {fileID: 0}
   _damageCollider: {fileID: 7657007952839097367}
 --- !u!114 &2338620283554943978
 MonoBehaviour:
@@ -310,6 +311,7 @@ MonoBehaviour:
   LockOnTransform: {fileID: 2393237750493812099}
   currentRecoveryTime: 0
   maximumAttackRange: 1.8
+  _patrolState: {fileID: 0}
   _spawnPoint: {fileID: 0}
   _currentState: {fileID: 2388644597968573947}
   _timeToChase: 15
@@ -355,7 +357,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8b1615191a04d142a815428c0ee1578, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _normalSpeed: 6
+  NormalSpeed: 7
 --- !u!114 &2338620283554943990
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2713,10 +2715,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _aiDestinationSetter: {fileID: 2338620283554943980}
   _newPursueTargetState: {fileID: 2388644598940643833}
-  detectionLayer:
+  _patrolState: {fileID: 0}
+  DetectionLayer:
     serializedVersion: 2
     m_Bits: 128
   DetectionRadius: 0
+  _timeToStartPatrol: 0
+  _currentTimer: 0
+  IsPatrol: 0
+  IsAttack: 0
 --- !u!1 &2388644598190329872
 GameObject:
   m_ObjectHideFlags: 0

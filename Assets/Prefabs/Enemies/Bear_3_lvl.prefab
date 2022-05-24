@@ -159,7 +159,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1814087051443478790}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1814087050151833094
 MonoBehaviour:
@@ -243,10 +243,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Boar
+  m_text: Bear
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9302439a419323940b2e7f2f55382344, type: 2}
-  m_sharedMaterial: {fileID: 6795844295581081599, guid: 9302439a419323940b2e7f2f55382344, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b530868a55804d14982417ac70772a68, type: 2}
+  m_sharedMaterial: {fileID: 4852894821228052801, guid: b530868a55804d14982417ac70772a68, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -579,7 +579,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1814087051443478790}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1814087050912629286
 MonoBehaviour:
@@ -781,7 +781,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1814087051443478790}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1814087051190064171
 MonoBehaviour:
@@ -917,6 +917,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 3627919036266640432}
   - {fileID: 1814087051776868168}
   - {fileID: 1814087051190064168}
   - {fileID: 1814087050151833095}
@@ -1096,7 +1097,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1814087051443478790}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1814087051776868171
 MonoBehaviour:
@@ -1112,12 +1113,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _aiDestinationSetter: {fileID: 4933452758200565116}
   _newPursueTargetState: {fileID: 1814087051190064171}
-  _patrolState: {fileID: 0}
+  _patrolState: {fileID: 6111942461046125408}
   DetectionLayer:
     serializedVersion: 2
     m_Bits: 128
-  DetectionRadius: 0
-  _timeToStartPatrol: 0
+  CurrentDetectionRadius: 0
+  DefaultDetectionRadius: 10
   _currentTimer: 0
   IsPatrol: 0
   IsAttack: 0
@@ -1854,6 +1855,7 @@ Transform:
   - {fileID: 1814087051443478790}
   - {fileID: 1814087050818349962}
   - {fileID: 1814087051147174311}
+  - {fileID: 1822480110231224945}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1874,7 +1876,7 @@ CharacterController:
   m_StepOffset: 0.5
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0
-  m_Center: {x: 0, y: 2, z: 0}
+  m_Center: {x: 0, y: 2.05, z: 0}
 --- !u!95 &4982897770931587717
 Animator:
   serializedVersion: 4
@@ -2007,7 +2009,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  _patrolState: {fileID: 0}
+  _patrolState: {fileID: 6111942461046125408}
   _damageCollider: {fileID: 6042863558232207328}
 --- !u!114 &4933452758200565118
 MonoBehaviour:
@@ -2024,7 +2026,7 @@ MonoBehaviour:
   LockOnTransform: {fileID: 4934655158975624845}
   currentRecoveryTime: 0
   maximumAttackRange: 1.8
-  _patrolState: {fileID: 0}
+  _patrolState: {fileID: 6111942461046125408}
   _spawnPoint: {fileID: 0}
   _currentState: {fileID: 1814087051776868171}
   _timeToChase: 15
@@ -2070,7 +2072,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8b1615191a04d142a815428c0ee1578, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NormalSpeed: 5
+  _runSpeed: 5
+  _walkSpeed: 2
 --- !u!114 &4933452758200565106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2156,6 +2159,57 @@ Transform:
   m_Father: {fileID: 4934529995906373639}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5090453628925969901
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3627919036266640432}
+  - component: {fileID: 6111942461046125408}
+  m_Layer: 8
+  m_Name: PatrolState
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3627919036266640432
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5090453628925969901}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1814087051443478790}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6111942461046125408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5090453628925969901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da06e16285b3cfc4385407e51a975059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 4982897770931587717}
+  _aiDestinationSetter: {fileID: 4933452758200565116}
+  _newIdleState: {fileID: 1814087051776868171}
+  _rndPatrolTransform: {fileID: 1822480110231224945}
+  SpawnPosition: {fileID: 0}
+  _patrolRadius: 10
+  _patrolAnimLength: 4
 --- !u!1 &5123729086937731527
 GameObject:
   m_ObjectHideFlags: 0
@@ -2499,6 +2553,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2176131718553374819}
   m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8103613385876276611
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1822480110231224945}
+  m_Layer: 8
+  m_Name: PatrolPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1822480110231224945
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8103613385876276611}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4934655158975624845}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8380904406051957983
 GameObject:

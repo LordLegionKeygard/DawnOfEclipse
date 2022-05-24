@@ -9,8 +9,9 @@ public class NewIdleState : NewState
     [SerializeField] private NewPursueTargetState _newPursueTargetState;
     [SerializeField] private PatrolState _patrolState;
     public LayerMask DetectionLayer;
-    public float DetectionRadius;
-    [SerializeField] private float _timeToStartPatrol;
+    public float CurrentDetectionRadius;
+    public float DefaultDetectionRadius;
+    private float _timeToStartPatrol;
     [SerializeField] private float _currentTimer;
     public bool IsPatrol;
     public bool IsAttack;
@@ -18,6 +19,8 @@ public class NewIdleState : NewState
 
     private void Start()
     {
+        float rnd = Random.Range(4, 20);
+        rnd = _timeToStartPatrol;
         _currentTimer = _timeToStartPatrol;
     }
 
@@ -26,18 +29,18 @@ public class NewIdleState : NewState
         if (!enemyStats.Aggression)
         {
             IsAttack = false;
-            DetectionRadius = CharacterManager.DefaultDetectionRadius;
+            CurrentDetectionRadius = DefaultDetectionRadius;
         }
 
         if (enemyStats.Aggression)
         {
-            DetectionRadius = 100;
+            CurrentDetectionRadius = 100;
             IsAttack = true;
             IsPatrol = false;
             newEnemyAnimatorManager.CombatBoolAnimation(true);
         }
 
-        Collider[] colliders = Physics.OverlapSphere(transform.position, DetectionRadius, DetectionLayer);
+        Collider[] colliders = Physics.OverlapSphere(transform.position, CurrentDetectionRadius, DetectionLayer);
 
         for (int i = 0; i < colliders.Length; i++)
         {

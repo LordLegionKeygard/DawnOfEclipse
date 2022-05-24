@@ -34,6 +34,57 @@ Transform:
   m_Father: {fileID: 9002550494107137532}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2098917017753340293
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6821306577815255137}
+  - component: {fileID: 703349093366056218}
+  m_Layer: 8
+  m_Name: PatrolState
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6821306577815255137
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2098917017753340293}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 9002550493950078504}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &703349093366056218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2098917017753340293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da06e16285b3cfc4385407e51a975059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 9059861283570844987}
+  _aiDestinationSetter: {fileID: 9059861283570844978}
+  _newIdleState: {fileID: 9002550494805248152}
+  _rndPatrolTransform: {fileID: 6957413795730175867}
+  SpawnPosition: {fileID: 0}
+  _patrolRadius: 20
+  _patrolAnimLength: 3
 --- !u!1 &2269720210647393005
 GameObject:
   m_ObjectHideFlags: 0
@@ -170,6 +221,37 @@ CapsuleCollider:
   m_Height: 0.64
   m_Direction: 1
   m_Center: {x: 0, y: 1.44, z: 1}
+--- !u!1 &2582336483948936768
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6957413795730175867}
+  m_Layer: 8
+  m_Name: PatrolPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6957413795730175867
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2582336483948936768}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8998221001767689669}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &9000574397107616703
 GameObject:
   m_ObjectHideFlags: 0
@@ -2140,6 +2222,7 @@ Transform:
   - {fileID: 9002550493950078504}
   - {fileID: 9002550494172762134}
   - {fileID: 4049506978160776880}
+  - {fileID: 6957413795730175867}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2160,7 +2243,7 @@ CharacterController:
   m_StepOffset: 0.5
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0
-  m_Center: {x: 0, y: 2, z: 0}
+  m_Center: {x: 0, y: 2.05, z: 0}
 --- !u!95 &9059861283570844987
 Animator:
   serializedVersion: 4
@@ -2293,7 +2376,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  _patrolState: {fileID: 0}
+  _patrolState: {fileID: 703349093366056218}
   _damageCollider: {fileID: 2710031002375531598}
 --- !u!114 &9059861283570844976
 MonoBehaviour:
@@ -2310,7 +2393,7 @@ MonoBehaviour:
   LockOnTransform: {fileID: 8998221001767689669}
   currentRecoveryTime: 0
   maximumAttackRange: 1.8
-  _patrolState: {fileID: 0}
+  _patrolState: {fileID: 703349093366056218}
   _spawnPoint: {fileID: 0}
   _currentState: {fileID: 9002550494805248152}
   _timeToChase: 15
@@ -2356,7 +2439,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8b1615191a04d142a815428c0ee1578, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NormalSpeed: 7
+  _runSpeed: 7
+  _walkSpeed: 3
 --- !u!114 &9059861283570844988
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2472,6 +2556,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 6821306577815255137}
   - {fileID: 9002550494805248155}
   - {fileID: 9002550494061543705}
   - {fileID: 9002550495818093565}
@@ -2509,7 +2594,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 9002550493950078504}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &9002550494061543686
 MonoBehaviour:
@@ -2789,7 +2874,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 9002550493950078504}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &9002550494564497650
 MonoBehaviour:
@@ -2927,10 +3012,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Boar
+  m_text: Deer
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9302439a419323940b2e7f2f55382344, type: 2}
-  m_sharedMaterial: {fileID: 6795844295581081599, guid: 9302439a419323940b2e7f2f55382344, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b530868a55804d14982417ac70772a68, type: 2}
+  m_sharedMaterial: {fileID: 4852894821228052801, guid: b530868a55804d14982417ac70772a68, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3026,7 +3111,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 9002550493950078504}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &9002550494805248152
 MonoBehaviour:
@@ -3042,12 +3127,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _aiDestinationSetter: {fileID: 9059861283570844978}
   _newPursueTargetState: {fileID: 9002550494061543686}
-  _patrolState: {fileID: 0}
+  _patrolState: {fileID: 703349093366056218}
   DetectionLayer:
     serializedVersion: 2
     m_Bits: 128
-  DetectionRadius: 0
-  _timeToStartPatrol: 0
+  CurrentDetectionRadius: 0
+  DefaultDetectionRadius: 10
   _currentTimer: 0
   IsPatrol: 0
   IsAttack: 0
@@ -3324,7 +3409,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 9002550493950078504}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &9002550495818093562
 MonoBehaviour:

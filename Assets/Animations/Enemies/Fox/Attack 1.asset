@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0176e037e0d14a74f974f7be10b94f08, type: 3}
-  m_Name: Attack 3
+  m_Name: Attack 1
   m_EditorClassIdentifier: 
-  actionAnimation: 3
+  actionAnimation: 1
   AttackScore: 3
   RecoveryTime: 3
   MinimumDistanceNeededToAttack: 0
-  MaximumDistanceNeededToAttack: 3
+  MaximumDistanceNeededToAttack: 1
   MaximumAttackAngle: 35
   MinimumAttackAngle: -35

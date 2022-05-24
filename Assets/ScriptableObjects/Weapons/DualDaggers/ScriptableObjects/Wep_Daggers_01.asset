@@ -19,8 +19,8 @@ MonoBehaviour:
   IsUsedItem: 0
   IsSetEffect: 0
   Name:
-  - Name
-  - "\u041D\u0430\u0437\u0432\u0430\u043D\u0438\u0435"
+  - Shadow Daggers
+  - "\u0422\u0435\u043D\u0435\u0432\u044B\u0435 \u041A\u0438\u043D\u0436\u0430\u043B\u044B"
   ItemType:
   - Dual Daggers
   - "\u041F\u0430\u0440\u043D\u044B\u0435 \u041A\u0438\u043D\u0436\u0430\u043B\u044B"
@@ -39,7 +39,7 @@ MonoBehaviour:
   canChangehead: 0
   weapon: 1
   twoHandedWeapon: 1
-  shield: 0
+  extraItem: 0
   shieldBlockArmorModifier: 10
   FirstAttachmentNumber: 0
   SecondAttachmentNumber: 0

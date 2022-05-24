@@ -5,7 +5,8 @@ using Pathfinding;
 
 public class EnemySpeedController : MonoBehaviour
 {
-    [SerializeField] private float _normalSpeed;
+    [SerializeField] private float _runSpeed;
+    [SerializeField] private float _walkSpeed;
     private AIPath _aiPath;
 
     private void Awake()
@@ -15,12 +16,12 @@ public class EnemySpeedController : MonoBehaviour
 
     public void CanWalk()
     {
-        _aiPath.maxSpeed = _normalSpeed / 2;
+        _aiPath.maxSpeed = _walkSpeed;
     }
 
     public void CanRun()
     {
-        _aiPath.maxSpeed = _normalSpeed;
+        _aiPath.maxSpeed = _runSpeed;
     }
 
     public void CantWalk()

@@ -563,11 +563,16 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: 0
+        functionName: CanRun
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask:
       - path: 
-        weight: 1
-      - path: Boar
         weight: 1
       - path: CG
         weight: 0
@@ -640,6 +645,8 @@ ModelImporter:
       - path: CG/Pelvis/Tail01/Tail02
         weight: 1
       - path: CG/Pelvis/Tail01/Tail02/Tail03
+        weight: 1
+      - path: Root
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}

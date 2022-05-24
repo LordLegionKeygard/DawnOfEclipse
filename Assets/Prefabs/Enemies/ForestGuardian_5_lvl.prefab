@@ -5234,7 +5234,7 @@ CharacterController:
   m_StepOffset: 0.5
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Center: {x: 0, y: 1.05, z: 0}
 --- !u!95 &7127617208119570405
 Animator:
   serializedVersion: 4
@@ -5447,7 +5447,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8b1615191a04d142a815428c0ee1578, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NormalSpeed: 5
+  _runSpeed: 5
+  _walkSpeed: 2
 --- !u!114 &7721091357279585641
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7325,8 +7326,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Forest Guardian
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9302439a419323940b2e7f2f55382344, type: 2}
-  m_sharedMaterial: {fileID: 6795844295581081599, guid: 9302439a419323940b2e7f2f55382344, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b530868a55804d14982417ac70772a68, type: 2}
+  m_sharedMaterial: {fileID: 4852894821228052801, guid: b530868a55804d14982417ac70772a68, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -12673,8 +12674,8 @@ MonoBehaviour:
   DetectionLayer:
     serializedVersion: 2
     m_Bits: 128
-  DetectionRadius: 0
-  _timeToStartPatrol: 0
+  CurrentDetectionRadius: 0
+  DefaultDetectionRadius: 10
   _currentTimer: 0
   IsPatrol: 0
   IsAttack: 0

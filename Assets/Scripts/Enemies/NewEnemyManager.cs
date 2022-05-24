@@ -5,6 +5,7 @@ using Pathfinding;
 
 public class NewEnemyManager : CharacterManager
 {
+    private AIPath _aiPath;
     public float maximumAttackRange;
     private AIDestinationSetter _aiDestinationSetter;
     private EnemyStats _enemyStats;
@@ -22,6 +23,7 @@ public class NewEnemyManager : CharacterManager
         _enemyStats = GetComponent<EnemyStats>();
         _newEnemyAnimatorManager = GetComponent<NewEnemyAnimatorManager>();
         _aiDestinationSetter = GetComponent<AIDestinationSetter>();
+        _aiPath = GetComponent<AIPath>();
     }
 
     private void Start()
@@ -29,6 +31,8 @@ public class NewEnemyManager : CharacterManager
         _chaseTime = _timeToChase;
         CustomEvents.OnPlayerDeath += ReturnToSpawn;
         _spawnPoint = GetComponentInParent<MobSpawner>();
+        if(_patrolState!= null)
+        _patrolState.SpawnPosition = _spawnPoint.transform;
     }
 
     private void Update()
@@ -53,10 +57,9 @@ public class NewEnemyManager : CharacterManager
                 _aiDestinationSetter.CurrentTarget = null;
             }
             if(_patrolState == null) return;
-            else if (_aiDestinationSetter.CurrentTarget == _patrolState._rndPatrolTransform && distanceFromTarget < 3)
+            else if (_aiDestinationSetter.CurrentTarget == _patrolState._rndPatrolTransform && distanceFromTarget < _aiPath.endReachedDistance)
             {
-                Debug.Log("12");
-                _patrolState.RandomAction();
+                _patrolState.StartCoroutine("RandomAction");
                 _aiDestinationSetter.CurrentTarget = null;               
             }
         }

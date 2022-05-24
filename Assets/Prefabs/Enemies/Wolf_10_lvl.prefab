@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 372870305966761677}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -342,8 +342,8 @@ MonoBehaviour:
   DetectionLayer:
     serializedVersion: 2
     m_Bits: 128
-  DetectionRadius: 0
-  _timeToStartPatrol: 10
+  CurrentDetectionRadius: 0
+  DefaultDetectionRadius: 10
   _currentTimer: 0
   IsPatrol: 0
   IsAttack: 0
@@ -797,8 +797,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Wolf
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9302439a419323940b2e7f2f55382344, type: 2}
-  m_sharedMaterial: {fileID: 6795844295581081599, guid: 9302439a419323940b2e7f2f55382344, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b530868a55804d14982417ac70772a68, type: 2}
+  m_sharedMaterial: {fileID: 4852894821228052801, guid: b530868a55804d14982417ac70772a68, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1799,6 +1799,9 @@ MonoBehaviour:
   _aiDestinationSetter: {fileID: 8236030323050418494}
   _newIdleState: {fileID: 3251106498126123539}
   _rndPatrolTransform: {fileID: 2363122674947530067}
+  SpawnPosition: {fileID: 0}
+  _patrolRadius: 15
+  _patrolAnimLength: 5
 --- !u!1 &6834455260780396930
 GameObject:
   m_ObjectHideFlags: 0
@@ -2246,7 +2249,7 @@ CharacterController:
   m_StepOffset: 0.5
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0
-  m_Center: {x: 0, y: 2, z: 0}
+  m_Center: {x: 0, y: 2.05, z: 0}
 --- !u!95 &8294125762708563427
 Animator:
   serializedVersion: 4
@@ -2442,7 +2445,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8b1615191a04d142a815428c0ee1578, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _normalSpeed: 6
+  _runSpeed: 6
+  _walkSpeed: 2
 --- !u!114 &8236030323050418484
 MonoBehaviour:
   m_ObjectHideFlags: 0

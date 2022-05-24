@@ -30,9 +30,10 @@ public class NewEnemyAnimatorManager : VersionedMonoBehaviour
 
     }
 
-    public void Patrol()
+    public void EndRandomPatrolAnim()
     {
-        _patrolState.PatrolToRandomPosition();
+        if(_patrolState!= null)
+        _patrolState.TimerToNewPatrolAction();
     }
 
     public void CombatBoolAnimation(bool state)

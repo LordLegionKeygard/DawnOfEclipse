@@ -19,8 +19,8 @@ MonoBehaviour:
   IsUsedItem: 0
   IsSetEffect: 0
   Name:
-  - Great Sword
-  - "\u0411\u043E\u043B\u044C\u0448\u043E\u0439 \u041C\u0435\u0447"
+  - Heavy Greatblade
+  - "\u0422\u044F\u0436\u0435\u043B\u044B\u0439 \u041A\u043B\u0438\u043D\u043E\u043A"
   ItemType:
   - Sword / Two Handed
   - "\u041C\u0435\u0447 / \u0414\u0432\u0443\u0440\u0443\u0447\u043D\u044B\u0439"
@@ -42,7 +42,7 @@ MonoBehaviour:
   canChangehead: 0
   weapon: 1
   twoHandedWeapon: 1
-  shield: 0
+  extraItem: 0
   shieldBlockArmorModifier: 20
   FirstAttachmentNumber: 0
   SecondAttachmentNumber: 0

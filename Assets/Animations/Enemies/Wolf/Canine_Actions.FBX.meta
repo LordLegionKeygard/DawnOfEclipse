@@ -811,7 +811,7 @@ ModelImporter:
       curves: []
       events:
       - time: 0.95145637
-        functionName: Patrol
+        functionName: EndRandomPatrolAnim
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
@@ -923,7 +923,7 @@ ModelImporter:
       curves: []
       events:
       - time: 0.93527526
-        functionName: Patrol
+        functionName: EndRandomPatrolAnim
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0

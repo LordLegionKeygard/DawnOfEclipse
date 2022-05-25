@@ -13,16 +13,16 @@ MonoBehaviour:
   m_Name: WaterProfile_976018199057827736
   m_EditorClassIdentifier: 
   lightingModel: 2
-  useFlatLighting: 0
+  useFlatLighting: 1
   renderQueueIndex: 0
   color: {r: 0, g: 0, b: 0, a: 0.2}
-  specColor: {r: 0, g: 0, b: 0, a: 1}
-  smoothness: 0.7
+  specColor: {r: 0.0009765625, g: 0.0009765625, b: 0.0009765625, a: 1}
+  smoothness: 1
   enableLightAbsorption: 1
-  depthColor: {r: 0.21753405, g: 0.3207547, b: 0.21635813, a: 0.85}
+  depthColor: {r: 0.21568628, g: 0.32156864, b: 0.21568628, a: 0.8509804}
   maxDepth: 4.68
   enableFoam: 1
-  foamColor: {r: 0.008786696, g: 0.05660379, b: 0.0040049846, a: 1}
+  foamColor: {r: 0.007843138, g: 0.05490196, b: 0.003921569, a: 1}
   foamDistance: 15
   enableFoamHQ: 1
   foamNoiseScaleHQ: -0.46
@@ -55,7 +55,7 @@ MonoBehaviour:
   reflectCustomSkybox: 1
   reflectionDistortionStrength: 1.52
   enableRefraction: 0
-  refractionDistortionStrength: 0
+  refractionDistortionStrength: -1.65
   enableCaustic: 0
   causticTexture: {fileID: 2800000, guid: eeacbffe8eb46d343b0d7a9189130772, type: 3}
   causticSize: 43.5

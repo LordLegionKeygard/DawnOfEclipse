@@ -11,18 +11,9 @@ public class NewIdleState : NewState
     public LayerMask DetectionLayer;
     public float CurrentDetectionRadius;
     public float DefaultDetectionRadius;
-    private float _timeToStartPatrol;
-    [SerializeField] private float _currentTimer;
+    private float _currentTimer = 10;
     public bool IsPatrol;
     public bool IsAttack;
-
-
-    private void Start()
-    {
-        float rnd = Random.Range(4, 20);
-        rnd = _timeToStartPatrol;
-        _currentTimer = _timeToStartPatrol;
-    }
 
     public override NewState Tick(NewEnemyManager newEnemyManager, EnemyStats enemyStats, NewEnemyAnimatorManager newEnemyAnimatorManager)
     {
@@ -61,14 +52,14 @@ public class NewIdleState : NewState
         if (_aiDestinationSetter.CurrentTarget != null)
         {
             IsAttack = true;
-            ResetTimeToStartPatrol();
+            IsPatrol = false;
+            _currentTimer = 10;
             return _newPursueTargetState;
         }
 
         if (IsPatrol && !IsAttack)
         {
             if (_patrolState == null) { return this; }
-            ResetTimeToStartPatrol();
             _patrolState.PatrolToRandomPosition();
             return _patrolState;
         }
@@ -87,10 +78,5 @@ public class NewIdleState : NewState
         {
             IsPatrol = true;
         }
-    }
-
-    private void ResetTimeToStartPatrol()
-    {
-        _currentTimer = _timeToStartPatrol;
     }
 }

@@ -344,7 +344,7 @@ MonoBehaviour:
     m_Bits: 128
   CurrentDetectionRadius: 0
   DefaultDetectionRadius: 10
-  _currentTimer: 0
+  _currentTimer: 10
   IsPatrol: 0
   IsAttack: 0
 --- !u!1 &3251106498137447877

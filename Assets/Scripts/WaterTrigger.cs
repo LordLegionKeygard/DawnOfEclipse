@@ -17,12 +17,13 @@ public class WaterTrigger : MonoBehaviour
     {
         if (other.TryGetComponent(out PlayerMovement playerMovement))
         {
-            ParticleToggle(false);
+            ParticleToggle(false);          
         }
     }
 
     private void ParticleToggle(bool state)
     {
+        CustomEvents.FirePlayerInWaterVFX(state);
         foreach (var item in _waterParticle)
         {
             if (state) item.Play();

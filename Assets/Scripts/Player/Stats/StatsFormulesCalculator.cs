@@ -70,7 +70,7 @@ public class StatsFormulesCalculator : MonoBehaviour
                 break;
         }
         _healthControl.CalculateHealth();
-        _potionControl.CalculateHealFromPotion();
+        _potionControl.CalculatePotions();
     }
     private void CalculateEndurance()
     {

@@ -243,10 +243,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Bear
+  m_text: Grey Bear
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: b530868a55804d14982417ac70772a68, type: 2}
-  m_sharedMaterial: {fileID: 4852894821228052801, guid: b530868a55804d14982417ac70772a68, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1f2c44ed49c6f89429a62b6475b779e0, type: 2}
+  m_sharedMaterial: {fileID: -3126003919121775255, guid: 1f2c44ed49c6f89429a62b6475b779e0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1119,7 +1119,6 @@ MonoBehaviour:
     m_Bits: 128
   CurrentDetectionRadius: 0
   DefaultDetectionRadius: 10
-  _currentTimer: 0
   IsPatrol: 0
   IsAttack: 0
 --- !u!1 &1814087051987868722
@@ -1481,7 +1480,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4d62e544ebbb6344b8489f982516c270, type: 2}
+  - {fileID: 2100000, guid: c6f8feae096dda34fadc8c436d268c6e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1833,7 +1832,7 @@ GameObject:
   - component: {fileID: 4933452758200565109}
   - component: {fileID: 4933452758200565108}
   m_Layer: 8
-  m_Name: Bear_3_lvl
+  m_Name: Bear_Grey_9_lvl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2086,7 +2085,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2074672797288c04b871a6c8ca25061e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Level: 3
+  Level: 9
   EnemyInformation: {fileID: 11400000, guid: 0778ec36ccd8bfd4f9729093a3d832f5, type: 2}
 --- !u!114 &4933452758200565109
 MonoBehaviour:

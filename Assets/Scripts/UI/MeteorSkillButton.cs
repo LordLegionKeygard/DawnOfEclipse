@@ -34,7 +34,7 @@ public class MeteorSkillButton : Skills
     private void UseSKill()
     {
         if (!_skillActive || ManaCost > ManaControl.CurrentMana || HealthControl.IsDeath) return;
-        ManaControl.UseMana(ManaCost);
+        CustomEvents.FireUseMana(ManaCost);
         SkillToggle = true;
         SkillImage.fillAmount = 0;
         _skillActive = false;

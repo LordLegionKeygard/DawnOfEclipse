@@ -6,21 +6,23 @@ public class PotionsControl : MonoBehaviour
 {
     public static bool CanDrinkAnyPotions = true;
     [SerializeField] private ParticleSystem _speedPotionParticle;
+    [SerializeField] private int _healPointFromPotion;
+    [SerializeField] private int _manaPointFromPotion;
     [SerializeField] private HealthControl _healthControl;
+    [SerializeField] private ManaControl _manaControl;
+    [SerializeField] private PlayerMovement _playerMovement;
     public float PotionSpeed;
     public bool SpeedPotion = false;
-    [SerializeField] private int _healPointfromPotion;
-
-    [SerializeField] private PlayerMovement _playerMovement;
 
     private void OnEnable()
     {
         CustomEvents.OnUsePotion += UsePotions;
     }
 
-    public void CalculateHealFromPotion()
+    public void CalculatePotions()
     {
-        _healPointfromPotion = _healthControl.MaxHealth / 3;
+        _healPointFromPotion = _healthControl.MaxHealth / 3;
+        _manaPointFromPotion = _manaControl.MaxMana / 3;
     }
     private void UsePotions(int potion)
     {
@@ -30,13 +32,15 @@ public class PotionsControl : MonoBehaviour
         switch (potion)
         {
             case (0):
-                if (_healthControl.CurrentHealth > _healthControl.MaxHealth - _healPointfromPotion)
+                if (_healthControl.CurrentHealth > _healthControl.MaxHealth - _healPointFromPotion)
                 {
                     _healthControl.CurrentHealth = _healthControl.MaxHealth;
+                    _healthControl.UpdateSlider();
                 }
                 else
                 {
-                    _healthControl.CurrentHealth += _healPointfromPotion;
+                    _healthControl.CurrentHealth += _healPointFromPotion;
+                    _healthControl.UpdateSlider();
                 }
                 break;
 
@@ -55,6 +59,16 @@ public class PotionsControl : MonoBehaviour
                 }
                 break;
             case (2):
+                if (_manaControl.CurrentMana > _manaControl.MaxMana - _manaPointFromPotion)
+                {
+                    _manaControl.CurrentMana = _manaControl.MaxMana;
+                    _manaControl.UpdateSlider();
+                }
+                else
+                {
+                    _manaControl.CurrentMana += _manaPointFromPotion;
+                    _manaControl.UpdateSlider();
+                }
                 break;
         }
 

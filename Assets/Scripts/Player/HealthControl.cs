@@ -53,26 +53,26 @@ public class HealthControl : MonoBehaviour
                 enemyDamage = damage * 70 / _magicArmorControl.CurrentMagicArmor;
                 TakeDamage(enemyDamage);
                 break;
-        }      
+        }
     }
 
     private void TakeDamage(float damage)
     {
         Debug.Log("Enemy" + " dealt " + damage + " damage");
         CurrentHealth = CurrentHealth - (int)damage;
-        if(_playerInputController.IsBlock)
-        {           
+        if (_playerInputController.IsBlock)
+        {
             _staminaControl.UseStamina((int)damage);
             _playerAnimatorManager.BlockReact();
         }
-        _healthBar.value = CurrentHealth;
-        UpdateBackSlider();
-        CheckDeath();
+        UpdateSlider();
     }
 
-    private void UpdateBackSlider()
+    public void UpdateSlider()
     {
+        _healthBar.value = CurrentHealth;
         _healthBarBack.DOValue(CurrentHealth, 1f, false);
+        CheckDeath();
     }
 
     private void CheckDeath()

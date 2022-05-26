@@ -58,7 +58,7 @@ public class Skills : MonoBehaviour
         {
             DoSkill(true);
             if (IsCooldownAfterUse) return;
-            ManaControl.UseMana(ManaCost);
+            CustomEvents.FireUseMana(ManaCost);
             SkillToggle = true;
             SkillImage.fillAmount = 0;
         }

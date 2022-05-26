@@ -99,7 +99,6 @@ MonoBehaviour:
     m_Bits: 128
   CurrentDetectionRadius: 0
   DefaultDetectionRadius: 10
-  _currentTimer: 0
   IsPatrol: 0
   IsAttack: 0
 --- !u!1 &1878481971594108652
@@ -401,8 +400,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Elk
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: b530868a55804d14982417ac70772a68, type: 2}
-  m_sharedMaterial: {fileID: 4852894821228052801, guid: b530868a55804d14982417ac70772a68, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1f2c44ed49c6f89429a62b6475b779e0, type: 2}
+  m_sharedMaterial: {fileID: -3126003919121775255, guid: 1f2c44ed49c6f89429a62b6475b779e0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

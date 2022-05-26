@@ -7,42 +7,45 @@ public class ManaControl : MonoBehaviour
 {
     [SerializeField] private Slider _manaBar;
     public int MaxMana;
-    private float _currentMana;
+    public float CurrentMana;
     [SerializeField] private float _regenNumber;
-    public float CurrentMana => _currentMana;
 
     private void OnEnable()
     {
-        CustomEvents.OnUseMana += UseMana;
+        CustomEvents.OnUseMana += ChangeMana;
     }
 
     public void CalculateMana()
     {
-        _currentMana = MaxMana;
+        CurrentMana = MaxMana;
         _manaBar.maxValue = MaxMana;
         _manaBar.value = MaxMana;
     }
 
     private void Update()
     {
-        if (_currentMana < MaxMana)
+        if (CurrentMana < MaxMana)
         {
-            _currentMana += _regenNumber;
-            _manaBar.value = _currentMana;
+            CurrentMana += _regenNumber;
+            _manaBar.value = CurrentMana;
         }
     }
 
-    public void UseMana(int amount)
+    private void ChangeMana(int amount)
     {
-        if (_currentMana - amount >= 0)
+        if (CurrentMana - amount >= 0)
         {
-            _currentMana -= amount;
-            _manaBar.value = _currentMana;
+            CurrentMana -= amount;
         }
+    }
+
+    public void UpdateSlider()
+    {
+        _manaBar.value = CurrentMana;
     }
 
     private void OnDisable()
     {
-        CustomEvents.OnUseMana -= UseMana;
+        CustomEvents.OnUseMana -= ChangeMana;
     }
 }

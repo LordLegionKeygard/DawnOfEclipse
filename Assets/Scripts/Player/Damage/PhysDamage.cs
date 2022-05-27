@@ -62,16 +62,16 @@ public class PhysDamage : MonoBehaviour
     {
         if(_damageCollider == null) return;
         var rnd = Random.Range(1, 100);
-        if (collision.TryGetComponent(out EnemyStats enemyTakeDamage) && _canDamage)
+        if (collision.TryGetComponent(out EnemyTakeDamage enemyTakeDamage) && _canDamage)
         {
             if(rnd < PhysCritChance)
             {
-                enemyTakeDamage.CalculateDamage(WeaponDamage * 2, DamageType.PhysDamage);
+                enemyTakeDamage.EnemyStats.CalculateDamage(WeaponDamage * 2, DamageType.PhysDamage);
                 Debug.Log("Crit");
             }
             else
             {
-                enemyTakeDamage.CalculateDamage(WeaponDamage, DamageType.PhysDamage);
+                enemyTakeDamage.EnemyStats.CalculateDamage(WeaponDamage, DamageType.PhysDamage);
             }
             
             Damage(false);

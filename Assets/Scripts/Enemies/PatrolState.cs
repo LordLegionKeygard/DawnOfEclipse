@@ -50,6 +50,7 @@ public class PatrolState : NewState
 
     public void PatrolToRandomPosition()
     {
+        if (_newIdleState.IsAttack) return;
         var x = Random.Range(SpawnPosition.position.x - _patrolRadius, SpawnPosition.position.x + _patrolRadius);
         var y = transform.position.y;
         var z = Random.Range(SpawnPosition.position.z - _patrolRadius, SpawnPosition.position.z + _patrolRadius);

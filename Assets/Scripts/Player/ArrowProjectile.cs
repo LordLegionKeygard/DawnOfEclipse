@@ -28,7 +28,7 @@ public class ArrowProjectile : MonoBehaviour
     private void Update()
     {
         if (!_arrowInEnemy) return;
-        transform.position = new Vector3(_otherObject.transform.position.x,transform.position.y,_otherObject.transform.position.z);
+        transform.localPosition = new Vector3(0,0,0);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -37,8 +37,7 @@ public class ArrowProjectile : MonoBehaviour
         if (other.TryGetComponent(out EnemyTakeDamage enemyTakeDamage))
         {
             _arrowInEnemy = true;
-            _otherObject = enemyTakeDamage.EnemyStats.EnemySpine.gameObject;
-            transform.SetParent(_otherObject.transform);
+            transform.SetParent(enemyTakeDamage.gameObject.transform);
             if (rnd < CurrentDamage.CurrentDamageS.CurrentPhysCritChance)
             {
                 enemyTakeDamage.EnemyStats.CalculateDamage(CurrentDamage.CurrentDamageS.CurrentWeaponPhysDamage * 2 + _arrowExtraDamage, DamageType.PhysDamage);
@@ -52,7 +51,7 @@ public class ArrowProjectile : MonoBehaviour
         if (other.TryGetComponent(out DestroyShards _destroyShards))
         {
             _destroyShards.ShardsDestroy();
-            transform.SetParent(other.transform);
+            transform.SetParent(_destroyShards.gameObject.transform);
         }
         _lifeTime += 60f;
         _rb.velocity = Vector3.zero;

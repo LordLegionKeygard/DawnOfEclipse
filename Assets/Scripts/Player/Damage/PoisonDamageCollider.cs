@@ -39,10 +39,10 @@ public class PoisonDamageCollider : MonoBehaviour
 
     private void OnTriggerStay(Collider collision)
     {
-        if (collision.TryGetComponent(out EnemyDotStatus enemyDotStatus) && CanDamage)
+        if (collision.TryGetComponent(out EnemyTakeDotStatus enemyTakeDotStatus) && CanDamage)
         {
             if (CharacterInformation.Race != 1) return;
-            enemyDotStatus.TakePosionDamage(_poisonStack);
+            enemyTakeDotStatus.EnemyDot.TakePosionDamage(_poisonStack);
         }
     }
 

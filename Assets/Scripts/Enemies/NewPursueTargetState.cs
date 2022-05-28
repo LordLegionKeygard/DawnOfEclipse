@@ -19,6 +19,7 @@ public class NewPursueTargetState : NewState
 
             if (distanceFromTarget > 50f)
             {
+                Debug.Log("DISTANCE");
                 newEnemyManager.ReturnToSpawn();
             }
 

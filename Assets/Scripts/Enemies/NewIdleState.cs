@@ -21,6 +21,7 @@ public class NewIdleState : NewState
         {
             IsAttack = false;
             CurrentDetectionRadius = DefaultDetectionRadius;
+            newEnemyAnimatorManager.CombatBoolAnimation(false);
         }
 
         if (enemyStats.Aggression)

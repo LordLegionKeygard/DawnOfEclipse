@@ -6,13 +6,11 @@ public class PoisonDamageCollider : MonoBehaviour
 {
     [SerializeField] private ParticleSystem _posionHandPS;
     [SerializeField] private int _poisonStack;
-    private Collider _damageCollider;
     public bool CanDamage = true;
     private bool _poisonParticle;
 
     private void OnEnable()
     {
-        _damageCollider = GetComponent<Collider>();
         CustomEvents.OnPoisonHandsParticle += PoisonPsToggle;
     }
 
@@ -41,7 +39,7 @@ public class PoisonDamageCollider : MonoBehaviour
     {
         if (collision.TryGetComponent(out EnemyTakeDotStatus enemyTakeDotStatus) && CanDamage)
         {
-            if (CharacterInformation.Race != 1) return;
+            if (!CanDamage || CharacterInformation.Race != 1) return;
             enemyTakeDotStatus.EnemyDot.TakePosionDamage(_poisonStack);
         }
     }

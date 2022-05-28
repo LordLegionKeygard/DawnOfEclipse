@@ -57,10 +57,10 @@ public class NewEnemyManager : CharacterManager
                 _aiDestinationSetter.CurrentTarget = null;
             }
             if(_patrolState == null) return;
-            else if (_aiDestinationSetter.CurrentTarget == _patrolState._rndPatrolTransform && distanceFromTarget < _aiPath.endReachedDistance)
+            else if (_aiDestinationSetter.CurrentTarget == _patrolState._rndPatrolTransform && distanceFromTarget < _aiPath.endReachedDistance + 0.5f)
             {
                 _patrolState.StartCoroutine("RandomAction");
-                _aiDestinationSetter.CurrentTarget = null;               
+                _aiDestinationSetter.CurrentTarget = null;
             }
         }
     }

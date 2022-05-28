@@ -84,7 +84,6 @@ public class PatrolState : NewState
                 _animator.SetTrigger("p5");
                 break;
         }
-
     }
 
     public void TimerToNewPatrolAction()

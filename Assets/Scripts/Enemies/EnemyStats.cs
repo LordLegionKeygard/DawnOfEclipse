@@ -18,6 +18,8 @@ public class EnemyStats : MonoBehaviour
     public bool Aggression;
     private bool _death;
 
+    [SerializeField] private GameObject _floatingText;
+
     [Header("Defence")]
     [SerializeField] private int _enemyPhysDefence;
     [SerializeField] private int _enemyMagDefence;
@@ -42,8 +44,15 @@ public class EnemyStats : MonoBehaviour
         _mobSpawner = GetComponentInParent<MobSpawner>();
     }
 
-    public void CalculateDamage(float damage, DamageType damageType)
+    public void CalculateDamage(float damage, DamageType damageType, bool crit)
     {
+        _enemyVFXController.TakeDamageVFX();
+        
+        if(_death) return;
+    
+        var popup = Mathf.Round(damage);
+        ShowFloatingtext(popup.ToString(), damageType, crit);
+
         switch (damageType)
         {
             case DamageType.PhysDamage:
@@ -62,9 +71,27 @@ public class EnemyStats : MonoBehaviour
         if (damage <= 0) return;
 
         Aggression = true;
-        _enemyVFXController.TakeDamageVFX();
         CurrentHealth -= (int)damage;
         UpdateSlider();
+    }
+
+    private void ShowFloatingtext(string text, DamageType damageType, bool crit)
+    {
+        var t = Instantiate(_floatingText, transform.position, Quaternion.identity, transform);
+        t.GetComponent<TextMesh>().text = text;
+
+        if (crit)
+        {
+            switch (damageType)
+            {
+                case DamageType.PhysDamage:
+                    t.GetComponent<TextMesh>().color = new Color(1, 0.6745098f, 0, 1);
+                    break;
+                case DamageType.MageDamage:
+                    t.GetComponent<TextMesh>().color = new Color(0, 0.4541306f, 1, 1);
+                    break;
+            }
+        }
     }
 
     public void UpdateSlider()
@@ -85,7 +112,7 @@ public class EnemyStats : MonoBehaviour
     }
 
     private void Death()
-    {            
+    {
         _enemyHealthBar.gameObject.SetActive(false);
         _newEnemyAnimatorManager.PlayerTargetAnimation("death");
         _characterController.enabled = false;

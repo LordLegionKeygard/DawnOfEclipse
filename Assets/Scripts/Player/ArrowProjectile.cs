@@ -11,7 +11,7 @@ public class ArrowProjectile : MonoBehaviour
     private Rigidbody _rb;
     private GameObject _otherObject;
     private bool _arrowInEnemy;
-    
+
 
     private void Awake()
     {
@@ -28,11 +28,11 @@ public class ArrowProjectile : MonoBehaviour
     private void Update()
     {
         if (!_arrowInEnemy) return;
-        transform.localPosition = new Vector3(0,0,0);
+        transform.localPosition = new Vector3(0, 0, 0);
     }
 
     private void OnTriggerEnter(Collider other)
-    {       
+    {
         var rnd = Random.Range(1, 100);
         if (other.TryGetComponent(out EnemyTakeDamage enemyTakeDamage))
         {
@@ -40,12 +40,11 @@ public class ArrowProjectile : MonoBehaviour
             transform.SetParent(enemyTakeDamage.gameObject.transform);
             if (rnd < CurrentDamage.CurrentDamageS.CurrentPhysCritChance)
             {
-                enemyTakeDamage.EnemyStats.CalculateDamage(CurrentDamage.CurrentDamageS.CurrentWeaponPhysDamage * 2 + _arrowExtraDamage, DamageType.PhysDamage);
-                Debug.Log("Crit");
+                enemyTakeDamage.EnemyStats.CalculateDamage(CurrentDamage.CurrentDamageS.CurrentWeaponPhysDamage * 2 + _arrowExtraDamage, DamageType.PhysDamage, true);
             }
             else
             {
-                enemyTakeDamage.EnemyStats.CalculateDamage(CurrentDamage.CurrentDamageS.CurrentWeaponPhysDamage + _arrowExtraDamage, DamageType.PhysDamage);
+                enemyTakeDamage.EnemyStats.CalculateDamage(CurrentDamage.CurrentDamageS.CurrentWeaponPhysDamage + _arrowExtraDamage, DamageType.PhysDamage, false);
             }
         }
         if (other.TryGetComponent(out DestroyShards _destroyShards))

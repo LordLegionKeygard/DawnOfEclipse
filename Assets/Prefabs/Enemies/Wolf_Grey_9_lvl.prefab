@@ -650,7 +650,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 3251106498879767178}
   m_HandleRect: {fileID: 0}
-  m_Direction: 1
+  m_Direction: 0
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
@@ -745,7 +745,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.000000014901161, y: -0.306}
+  m_AnchoredPosition: {x: 0.000000014901161, y: -0.306}
   m_SizeDelta: {x: 0.63, y: 0.06999998}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3251106498879767176
@@ -783,7 +783,7 @@ MonoBehaviour:
   m_FillMethod: 0
   m_FillAmount: 1
   m_FillClockwise: 1
-  m_FillOrigin: 1
+  m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
 --- !u!1 &3251106498883738050
@@ -813,7 +813,7 @@ RectTransform:
   m_GameObject: {fileID: 3251106498883738050}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: -1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3251106498787203322}
@@ -2601,6 +2601,7 @@ MonoBehaviour:
   CurrentHealth: 0
   _enemyHealthBar: {fileID: 3251106498787203323}
   Aggression: 0
+  _floatingText: {fileID: 1025944281500816653, guid: 91123a5e5a7a28b429f23fd4d89728bc, type: 3}
   _enemyPhysDefence: 0
   _enemyMagDefence: 0
 --- !u!114 &6056513520629085574

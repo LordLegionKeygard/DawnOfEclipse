@@ -114,7 +114,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WeaponDamage: 0
   PhysCritChance: 0
-  BasePhysCritChance: 0
+  BasePhysCritChance: 12
   BaseWeaponDamage: 12
 --- !u!114 &576589804185611164
 MonoBehaviour:

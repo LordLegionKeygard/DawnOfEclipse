@@ -371,7 +371,7 @@ MonoBehaviour:
   m_FillMethod: 0
   m_FillAmount: 1
   m_FillClockwise: 1
-  m_FillOrigin: 1
+  m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
 --- !u!1 &8134187319021813035
@@ -704,7 +704,7 @@ RectTransform:
   m_GameObject: {fileID: 8134187319942785966}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: -1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8134187318899972648}
@@ -1643,6 +1643,7 @@ MonoBehaviour:
   CurrentHealth: 0
   _enemyHealthBar: {fileID: 8134187318899972647}
   Aggression: 0
+  _floatingText: {fileID: 1025944281500816653, guid: 91123a5e5a7a28b429f23fd4d89728bc, type: 3}
   _enemyPhysDefence: 0
   _enemyMagDefence: 0
 --- !u!114 &5760916072278898650

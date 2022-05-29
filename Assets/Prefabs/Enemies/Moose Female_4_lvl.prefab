@@ -1434,6 +1434,7 @@ MonoBehaviour:
   CurrentHealth: 0
   _enemyHealthBar: {fileID: 1688528184663967416}
   Aggression: 0
+  _floatingText: {fileID: 1025944281500816653, guid: 91123a5e5a7a28b429f23fd4d89728bc, type: 3}
   _enemyPhysDefence: 0
   _enemyMagDefence: 0
 --- !u!1 &1687344243581447196
@@ -2490,7 +2491,7 @@ RectTransform:
   m_GameObject: {fileID: 1688528184966181930}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: -1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1688528184663967417}
@@ -2816,7 +2817,7 @@ MonoBehaviour:
   m_FillMethod: 0
   m_FillAmount: 1
   m_FillClockwise: 1
-  m_FillOrigin: 1
+  m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
 --- !u!1 &1688528185423049453

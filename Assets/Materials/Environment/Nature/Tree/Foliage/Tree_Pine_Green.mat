@@ -148,15 +148,15 @@ Material:
     - _TranslucencyOffset: 0
     - _UVSec: 0
     - _VertexDarkening: 0.435
-    - _WindAmbientStrength: 0.1
+    - _WindAmbientStrength: 0.07
     - _WindGustFreq: 0
     - _WindGustStrength: 0
     - _WindGustTint: 0
-    - _WindObjectRand: 0
-    - _WindRandStrength: 0
-    - _WindSpeed: 3
-    - _WindSwinging: 0
-    - _WindVertexRand: 0
+    - _WindObjectRand: 1
+    - _WindRandStrength: 1
+    - _WindSpeed: 3.8
+    - _WindSwinging: 1
+    - _WindVertexRand: 1
     - _WorkflowMode: 0
     - _ZWrite: 0
     - __dirty: 1
@@ -173,7 +173,7 @@ Material:
     - _NormalParams: {r: 0, g: 0, b: 0, a: 0}
     - _ScalemapInfluence: {r: 0, g: 1, b: 0, a: 0}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
-    - _WindDirection: {r: 1, g: 0, b: 0, a: 0}
+    - _WindDirection: {r: 1, g: 1, b: 1, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &2381172319546865421
 MonoBehaviour:

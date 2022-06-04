@@ -60,4 +60,5 @@ public enum EquipmentSlot
     Staff = 29,
     Bow = 30,
     QuiverArrow = 31,
+    Spear = 32,
 }

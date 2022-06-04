@@ -80,6 +80,7 @@ public class EquipmentManager : MonoBehaviour
             Equipment oldDaggers = Unequip(28);
             Equipment oldStaff = Unequip(29);
             Equipment oldBow = Unequip(30);
+            Equipment oldSpear = Unequip(32);
             if (newItem.twoHandedWeapon == true)
             {
                 _twoHandWeaponNow = true;
@@ -89,6 +90,7 @@ public class EquipmentManager : MonoBehaviour
         if (newItem.extraItem == true)
         {
             Equipment oldGreatSword = Unequip(19);
+            Equipment oldSpear = Unequip(32);
             Equipment oldDaggers = Unequip(28);
             Equipment oldQuiverArrow = Unequip(31);
             Equipment oldShield = Unequip(21);
@@ -165,12 +167,12 @@ public class EquipmentManager : MonoBehaviour
             oldItem = _currentEquipment[slotIndex];
             _inventory.Add(oldItem);
 
-            if (slotIndex == 19 || slotIndex == 20 || slotIndex == 27 || slotIndex == 28 || slotIndex == 29 || slotIndex == 30)
+            if (slotIndex == 19 || slotIndex == 20 || slotIndex == 27 || slotIndex == 28 || slotIndex == 29 || slotIndex == 30 || slotIndex == 32)
             {
                 _weaponsInfo.NoWeapon();
 
                 CustomEvents.FireChangeIKHands(0);
-                if (slotIndex == 19)
+                if (slotIndex == 19 || slotIndex == 32)
                 {
                     _equipSlot[21].BackIcon.enabled = true;
                     _equipSlot[21].Icon.enabled = false;
@@ -371,6 +373,21 @@ public class EquipmentManager : MonoBehaviour
                 _anim.runtimeAnimatorController = Resources.Load("Animation/GreatSwordController") as RuntimeAnimatorController;
                 GameObject newWeaponGreatSwordPrefab = Instantiate(item.prefab);
                 BoneTransformWeapon(newWeaponGreatSwordPrefab, slotIndex, _weaponsAttachPoints[0], 0);
+                _armorControl.ShieldBlockArmorDefault = item.shieldBlockArmorModifier;
+                _armorControl.ShieldArmorPassive = 0;
+                _leftHandSlotListener.enabled = false;
+                _shieldEquipSlotImage.color = new Color(_shieldEquipSlotImage.color.r, _shieldEquipSlotImage.color.g, _shieldEquipSlotImage.color.b, 0.5f);
+                EquipSlotAndIcon(19, item);
+                EquipSlotAndIcon(21, item);
+                _twoHandWeaponNow = true;
+                break;
+            case EquipmentSlot.Spear:
+                CustomEvents.FireChangeIKHands(2);
+                _weaponsInfo.Spear();
+                Unequip(31);
+                _anim.runtimeAnimatorController = Resources.Load("Animation/SpearController") as RuntimeAnimatorController;
+                GameObject newWeaponSpearPrefab = Instantiate(item.prefab);
+                BoneTransformWeapon(newWeaponSpearPrefab, slotIndex, _weaponsAttachPoints[7], 7);
                 _armorControl.ShieldBlockArmorDefault = item.shieldBlockArmorModifier;
                 _armorControl.ShieldArmorPassive = 0;
                 _leftHandSlotListener.enabled = false;

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &735520581708882361
+--- !u!1 &1621905949789138127
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,50 +8,49 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 735520581708668033}
-  - component: {fileID: 735520581705695901}
-  - component: {fileID: 735520581706733141}
-  - component: {fileID: 752542573230668251}
-  - component: {fileID: 1947726111628715951}
-  - component: {fileID: -5658823412245668214}
-  - component: {fileID: -9039202021588797731}
-  m_Layer: 13
-  m_Name: Wep_GreatSword_01
-  m_TagString: Untagged
+  - component: {fileID: 2146522067753137781}
+  - component: {fileID: 2146522067753137787}
+  - component: {fileID: 2146522067753137786}
+  - component: {fileID: 1621905949789138114}
+  - component: {fileID: 1621905949789138125}
+  - component: {fileID: 1621905949789138124}
+  m_Layer: 11
+  m_Name: Wep_Spear_01_Drop
+  m_TagString: DropItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &735520581708668033
+--- !u!4 &2146522067753137781
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 735520581708882361}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_GameObject: {fileID: 1621905949789138127}
+  m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 1752.21, y: -8, z: -914.468}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &735520581705695901
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!33 &2146522067753137787
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 735520581708882361}
-  m_Mesh: {fileID: 6687708012848683952, guid: e0cab24f067bd244a825d62d166c1b13, type: 3}
---- !u!23 &735520581706733141
+  m_GameObject: {fileID: 1621905949789138127}
+  m_Mesh: {fileID: 9066039882888099547, guid: 84a2217bbe74e0745a29985e49205d21, type: 3}
+--- !u!23 &2146522067753137786
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 735520581708882361}
+  m_GameObject: {fileID: 1621905949789138127}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -87,58 +86,26 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &752542573230668251
+--- !u!65 &1621905949789138114
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 735520581708882361}
+  m_GameObject: {fileID: 1621905949789138127}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.08839798, y: 1.8567516, z: 0.31257772}
-  m_Center: {x: 0.0000010785184, y: 0.64846575, z: -0.00000041483142}
---- !u!114 &1947726111628715951
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 735520581708882361}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d431cf3ab31754469dc39b89b600778, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  WeaponDamage: 0
-  PhysCritChance: 0
-  BasePhysCritChance: 8
-  BaseWeaponDamage: 25
---- !u!114 &-5658823412245668214
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 735520581708882361}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3941aa3b0f26335419c8c0725d7e5887, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  WeaponMagicDamage: 0
-  MageCritChance: 0
-  _baseMagCritChance: 4
-  BaseWeaponMagicDamage: 12
---- !u!54 &-9039202021588797731
+  m_Size: {x: 0.09, y: 2.126342, z: 0.4}
+  m_Center: {x: -1.859951e-16, y: 0.07558823, z: 0}
+--- !u!54 &1621905949789138125
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 735520581708882361}
+  m_GameObject: {fileID: 1621905949789138127}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -148,3 +115,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1621905949789138124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1621905949789138127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b18e0cc9fc8e9ce4889e0e7fced1cd6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _item: {fileID: 11400000, guid: aaede67fe5be1784586ddc9a63d134b0, type: 2}

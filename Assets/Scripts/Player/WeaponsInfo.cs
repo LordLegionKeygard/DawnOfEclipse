@@ -136,8 +136,8 @@ public class WeaponsInfo : MonoBehaviour
     public void Spear()
     {
         _fistDamageColliderController.FistDamageColliderToggle(false);
-        TimeR1 = 0;
-        TimeR2 = 0;
+        TimeR1 = 0.8f;
+        TimeR2 = 0.8f;
         StaminaAttack = 12;
         StaminaJump = 32;
         StaminaRoll = 12;

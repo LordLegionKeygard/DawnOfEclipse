@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b9d0e57440a62484d87bb78aa13f0362
+guid: 36b9d7884d93ba84fb29124e4fd41dd3
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable:
@@ -701,7 +701,7 @@ ModelImporter:
     second: Spear
   - first:
       74: 7400000
-    second: 2Hand-Spear-Attack8
+    second: Base_Spear_Walk
   - first:
       95: 9500000
     second: //RootNode
@@ -729,14 +729,13 @@ ModelImporter:
     resampleCurves: 1
     optimizeGameObjects: 0
     removeConstantScaleCurves: 0
-    motionNodeName: Motion
+    motionNodeName: 
     rigImportErrors: 
     rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
-    animationRetargetingWarnings: "\nRetargeting quality report for clip 'Take 001':\n\tRetargeting
-      quality is good. No significant differences with original animation were found.\n"
-    animationDoRetargetingWarnings: 1
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
     animationCompression: 0
@@ -748,19 +747,19 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: 2Hand-Spear-Attack8
+      name: Base_Spear_Walk
       takeName: Take 001
       internalID: 7400000
       firstFrame: 0
-      lastFrame: 36
+      lastFrame: 24
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
+      loopTime: 1
+      loopBlend: 1
       loopBlendOrientation: 1
       loopBlendPositionY: 1
       loopBlendPositionXZ: 0

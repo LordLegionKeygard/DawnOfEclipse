@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 615c063e80d08a54c9149c9f4ab75391
+guid: f595a1ec3db3d3642ad7495095af94a1
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable:
@@ -701,7 +701,7 @@ ModelImporter:
     second: Spear
   - first:
       74: 7400000
-    second: 2Hand-Spear-Attack5
+    second: Base_Spear_PickUp
   - first:
       95: 9500000
     second: //RootNode
@@ -733,11 +733,7 @@ ModelImporter:
     rigImportErrors: 
     rigImportWarnings: 
     animationImportErrors: 
-    animationImportWarnings: "\nClip 'Take 001' has import animation warnings that
-      might lower retargeting quality:\nNote: Activate translation DOF on avatar
-      to improve retargeting quality.\n\t'B_Spine1' has translation animation that
-      will be discarded.\n\t'B_Spine2' has translation animation that will be discarded.\n\t'B_Neck'
-      has translation animation that will be discarded.\n"
+    animationImportWarnings: 
     animationRetargetingWarnings: "\nRetargeting quality report for clip 'Take 001':\n\tRetargeting
       quality is good. No significant differences with original animation were found.\n"
     animationDoRetargetingWarnings: 1
@@ -752,7 +748,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: 2Hand-Spear-Attack5
+      name: Base_Spear_PickUp
       takeName: Take 001
       internalID: 7400000
       firstFrame: 0
@@ -767,7 +763,7 @@ ModelImporter:
       loopBlend: 0
       loopBlendOrientation: 1
       loopBlendPositionY: 1
-      loopBlendPositionXZ: 0
+      loopBlendPositionXZ: 1
       keepOriginalOrientation: 1
       keepOriginalPositionY: 1
       keepOriginalPositionXZ: 1

@@ -37,12 +37,6 @@ public class NewIKHands : MonoBehaviour
                 _rightHandPositionWeight = 1;
                 _rightHandRotationWeight = 0.242f;
                 break;
-            case 2: //Spear
-                _leftHandPositionWeight = 1;
-                _leftHandRotationWeight = 0;
-                _rightHandPositionWeight = 0;
-                _rightHandRotationWeight = 0;
-                break;
         }
     }
 

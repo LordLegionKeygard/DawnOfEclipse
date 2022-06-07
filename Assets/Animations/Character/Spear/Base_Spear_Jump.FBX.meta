@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 94833d0b5e5d2e747b116770faacd352
+guid: 0c6ec3eb06d07a848b3e3b2edde7ffb5
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable:
@@ -716,7 +716,7 @@ ModelImporter:
     second: 2Hand-Axe
   - first:
       74: 7400000
-    second: 2Hand-Spear-Jump
+    second: Base_Spear_Jump
   - first:
       74: 7400002
     second: 2Hand-Spear-Land
@@ -783,11 +783,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: 2Hand-Spear-Land
+      name: Base_Spear_Jump
       takeName: Take 001
-      internalID: 7400002
-      firstFrame: 21
-      lastFrame: 34
+      internalID: 7400000
+      firstFrame: 1
+      lastFrame: 18
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -798,7 +798,7 @@ ModelImporter:
       loopBlend: 0
       loopBlendOrientation: 1
       loopBlendPositionY: 1
-      loopBlendPositionXZ: 1
+      loopBlendPositionXZ: 0
       keepOriginalOrientation: 1
       keepOriginalPositionY: 1
       keepOriginalPositionXZ: 1

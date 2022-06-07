@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 478dad8c0743acc4fae11e29350da109
+guid: 6205f8ba71dcb2d4884eef1bc15b7728
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable:
@@ -701,7 +701,7 @@ ModelImporter:
     second: Spear
   - first:
       74: 7400000
-    second: 2Hand-Spear-Attack3
+    second: Base_Spear_Attack_R1_Combo
   - first:
       95: 9500000
     second: //RootNode
@@ -733,9 +733,23 @@ ModelImporter:
     rigImportErrors: 
     rigImportWarnings: 
     animationImportErrors: 
-    animationImportWarnings: 
-    animationRetargetingWarnings: 
-    animationDoRetargetingWarnings: 0
+    animationImportWarnings: "\nClip 'Take 001' has import animation warnings that
+      might lower retargeting quality:\nNote: Activate translation DOF on avatar
+      to improve retargeting quality.\n\t'B_Spine' has translation animation that
+      will be discarded.\n"
+    animationRetargetingWarnings: "\nRetargeting quality report for clip 'Take 001':\n\tLeftLowerLeg
+      average position error 0.2 mm and maximum position error 1.6 mm at time 1:
+      4 (94.4%) Frame 34\n\tLeftUpperArm average position error 4.2 mm and maximum
+      position error 6.2 mm at time 0:23 (63.9%) Frame 23\n\tLeftLowerArm average
+      position error 4.3 mm and maximum position error 6.3 mm at time 0:23 (63.9%)
+      Frame 23\n\tLeftHand average position error 4.2 mm and maximum position error
+      6.2 mm at time 0:23 (63.9%) Frame 23\n\tRightUpperArm average position error
+      4.2 mm and maximum position error 6.2 mm at time 0:23 (63.9%) Frame 23\n\tRightLowerArm
+      average position error 4.2 mm and maximum position error 6.3 mm at time 0:23
+      (63.9%) Frame 23\n\tRightHand average position error 4.2 mm and maximum position
+      error 6.2 mm at time 0:23 (63.9%) Frame 23\n\tHead average position error 4.2
+      mm and maximum position error 6.2 mm at time 0:23 (63.9%) Frame 23\n"
+    animationDoRetargetingWarnings: 1
     importAnimatedCustomProperties: 0
     importConstraints: 0
     animationCompression: 0
@@ -747,7 +761,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: 2Hand-Spear-Attack3
+      name: Base_Spear_Attack_R1_Combo
       takeName: Take 001
       internalID: 7400000
       firstFrame: 0
@@ -770,7 +784,28 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: 0.37180662
+        functionName: EnableDamageCollider
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.44615385
+        functionName: UseStamina
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.63384616
+        functionName: DisableDamageCollider
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask: []
       maskType: 3
       maskSource: {fileID: 101100000, guid: 4ebc95c8618479f4d8251c7dafa10029, type: 2}

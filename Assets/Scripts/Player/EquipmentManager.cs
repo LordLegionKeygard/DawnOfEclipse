@@ -382,7 +382,7 @@ public class EquipmentManager : MonoBehaviour
                 _twoHandWeaponNow = true;
                 break;
             case EquipmentSlot.Spear:
-                CustomEvents.FireChangeIKHands(2);
+                CustomEvents.FireChangeIKHands(0);
                 _weaponsInfo.Spear();
                 Unequip(31);
                 _anim.runtimeAnimatorController = Resources.Load("Animation/SpearController") as RuntimeAnimatorController;

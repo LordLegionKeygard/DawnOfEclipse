@@ -120,12 +120,12 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - _BaseColor: {r: 0.6603774, g: 0.6603774, b: 0.6603774, a: 1}
+    - _BaseColor: {r: 0.7075472, g: 0.7075472, b: 0.7075472, a: 1}
     - _BendTint: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _FadeParams: {r: 50, g: 100, b: 0, a: 0}
-    - _HueVariation: {r: 0, g: 0.4339623, b: 0.028333593, a: 0.48235294}
+    - _HueVariation: {r: 0.4901961, g: 0.4666667, b: 0.2392157, a: 0.48235294}
     - _LODDebugColor: {r: 1, g: 1, b: 1, a: 1}
     - _NormalParams: {r: 0, g: 0, b: 0, a: 0}
     - _ScalemapInfluence: {r: 0, g: 1, b: 0, a: 0}

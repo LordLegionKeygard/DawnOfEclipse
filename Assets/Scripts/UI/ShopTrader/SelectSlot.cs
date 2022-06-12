@@ -21,6 +21,7 @@ public class SelectSlot : MonoBehaviour
     private Item _item;
     [SerializeField] private int _buySlotPrice;
     private int _slotNumber;
+    
     public void AddBuySlotItem(Item newItem, int price, int slot)
     {
         _item = newItem;

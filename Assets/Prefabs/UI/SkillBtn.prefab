@@ -29,6 +29,7 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7150577312699287413}
   - {fileID: 2327369944114809131}
@@ -163,6 +164,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2327369943729315298}
   m_RootOrder: 1
@@ -220,6 +222,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2327369944475654136}
   - component: {fileID: 930989416}
+  - component: {fileID: 1760409042}
   m_Layer: 5
   m_Name: SkillBtn
   m_TagString: Untagged
@@ -237,6 +240,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2327369943729315298}
   m_Father: {fileID: 0}
@@ -254,13 +258,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2327369944475654135}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: af083be48d0f077499b25b702633663d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsCooldownAfterUse: 0
   _manaCostText: {fileID: 4152703291509040514}
-  _manaControl: {fileID: 0}
+  ManaControl: {fileID: 0}
   ManaCost: 0
   _keyCode: 49
   TargetTransform: {fileID: 0}
@@ -271,11 +276,40 @@ MonoBehaviour:
   Cooldown: 0
   SkillToggle: 0
   SkillInfo: {fileID: 11400000, guid: 5ad1865b1af45264d9a5fa0c241bad68, type: 2}
+  IsCanUseSkill: 1
   _playerAnimatorManager: {fileID: 0}
   _mushroomParticles:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 3124501762288284568, guid: f8db885774079c842a13eef8bd383f4d, type: 3}
+--- !u!114 &1760409042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2327369944475654135}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8fde89e0d91a444bb584f7ff3a8e6d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsCooldownAfterUse: 1
+  _manaCostText: {fileID: 4152703291509040514}
+  ManaControl: {fileID: 0}
+  ManaCost: 0
+  _keyCode: 49
+  TargetTransform: {fileID: 0}
+  SkillSound: {fileID: 0}
+  SkillImage: {fileID: 2327369944114809132}
+  BackSkillImage: {fileID: 3717590969440727906}
+  DefaultSkillTime: 0
+  Cooldown: 0
+  SkillToggle: 0
+  SkillInfo: {fileID: 11400000, guid: f8365bfb4b0b77c4da4b4ed63dbbd178, type: 2}
+  IsCanUseSkill: 1
+  _playerAnimatorManager: {fileID: 0}
+  _meteorPrefab: {fileID: 4630033682574836454, guid: 32d84d8b433c6a749be0066e189bb843, type: 3}
 --- !u!1 &2727800793510971200
 GameObject:
   m_ObjectHideFlags: 0
@@ -304,6 +338,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2688162954000830430}
   m_RootOrder: 0
@@ -436,6 +471,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3691571653473124747}
   m_Father: {fileID: 2327369943729315298}
@@ -474,6 +510,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2327369943729315298}
   m_RootOrder: 0

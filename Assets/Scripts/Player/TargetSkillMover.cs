@@ -22,7 +22,7 @@ public class TargetSkillMover : MonoBehaviour
         cam = Camera.main;
     }
 
-    private void LateUpdate()
+    private void Update()
     {
 
         if (!_isActive) return;

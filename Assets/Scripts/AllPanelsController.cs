@@ -9,7 +9,7 @@ public class AllPanelsController : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.JoystickButton9) || Input.GetKeyDown(KeyCode.Tab))
+        if (Input.GetKeyDown(KeyCode.Tab))
         {
             PanelsToggle(0);
         }
@@ -17,6 +17,10 @@ public class AllPanelsController : MonoBehaviour
         {
             PanelsToggle(1);
             CustomEvents.FireUpdateAllStats();
+        }
+        else if (Input.GetKeyDown(KeyCode.T))
+        {
+            PanelsToggle(2);
         }
     }
 

@@ -16,6 +16,7 @@ public class PlayerAnimatorManager : MonoBehaviour
     public readonly int Jump = Animator.StringToHash("jump");
     public readonly int Roll = Animator.StringToHash("roll");
     public readonly int PickUp = Animator.StringToHash("pickUp");
+    public readonly int Activate = Animator.StringToHash("activate");
     public readonly int Attack_R1 = Animator.StringToHash("AttackR1");
     public readonly int Block_L1 = Animator.StringToHash("Block(L1)");
     public readonly int Block_React_1 = Animator.StringToHash("Block_React_1");
@@ -69,6 +70,7 @@ public class PlayerAnimatorManager : MonoBehaviour
     }
 
     public void AnimatorPickUpTrigger() => _animator.SetTrigger(PickUp);
+    public void AnimatorActivateTrigger() => _animator.SetTrigger(Activate);
 
     public void AnimatorSkillTrigger(string triggerName, int number)
     {

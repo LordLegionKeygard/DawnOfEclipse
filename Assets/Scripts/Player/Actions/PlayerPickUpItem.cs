@@ -53,6 +53,11 @@ public class PlayerPickUpItem : MonoBehaviour
             CustomEvents.FireChangeCoins(coins);
             Destroy(other.gameObject);
         }
+        if (other.gameObject.TryGetComponent(out TomePickUp tomePickUp))
+        {
+            tomePickUp.PickUp();
+            _playerAnimatorManager.AnimatorActivateTrigger();
+        }
         _canPickUp = false;
     }
 

@@ -4,6 +4,7 @@ using UnityEngine.UI;
 public class ItemPickup : MonoBehaviour
 {
     [SerializeField] private Item _item;
+    
     public void PickUp()
     {
         if (_item.IsStackable)

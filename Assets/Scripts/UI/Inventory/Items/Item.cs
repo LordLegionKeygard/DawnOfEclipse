@@ -10,6 +10,7 @@ public class Item : ScriptableObject
     public bool IsDefaultItem;
     public bool IsStackable;
     public bool IsUsedItem;
+    public bool IsTome;
     public bool IsSetEffect;
     public string[] Name; //0 eng, 1 rus
     public string[] ItemType;

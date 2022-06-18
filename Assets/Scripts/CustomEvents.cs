@@ -265,4 +265,10 @@ public class CustomEvents
     {
         OnUseArrow?.Invoke(number);
     }
+
+    public static Action<int> OnTakeTome;
+    public static void FireTakeTome(int number)
+    {
+        OnTakeTome?.Invoke(number);
+    }
 }

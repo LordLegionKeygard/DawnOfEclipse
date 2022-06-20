@@ -10,10 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b8cef7142827bd14a80d95ace3c3b73a, type: 3}
-  m_Name: DarkProjectile
+  m_Name: StormProjectile
   m_EditorClassIdentifier: 
-  ManaCost: 3
-  SkillName: DarkProjectile
+  ManaCost: 5
+  SkillName: StormProjectile
   SkillSound: {fileID: 0}
-  SkillIcon: {fileID: 21300000, guid: 1bef259c09f9ce4478d83f948d16ba1b, type: 3}
+  SkillIcon: {fileID: 21300000, guid: c49218b168b3bc5418530d03a2205811, type: 3}
   Cooldown: 3
+  AnimationNumber: 0
+  CastPointNumber: 0
+  SkillPointNumber: 0
+  TimeToCastSkill: 0.7

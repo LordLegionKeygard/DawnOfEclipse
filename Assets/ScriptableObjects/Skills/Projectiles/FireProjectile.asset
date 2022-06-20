@@ -10,10 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b8cef7142827bd14a80d95ace3c3b73a, type: 3}
-  m_Name: StormProjectile
+  m_Name: FireProjectile
   m_EditorClassIdentifier: 
-  ManaCost: 5
-  SkillName: StormProjectile
+  ManaCost: 6
+  SkillName: FireProjectile
   SkillSound: {fileID: 0}
-  SkillIcon: {fileID: 21300000, guid: c49218b168b3bc5418530d03a2205811, type: 3}
+  SkillIcon: {fileID: 21300000, guid: cdb610dc7ab8ddf45bb4b29ef6dd29f2, type: 3}
   Cooldown: 3
+  AnimationNumber: 0
+  CastPointNumber: 0
+  SkillPointNumber: 0
+  TimeToCastSkill: 0.7

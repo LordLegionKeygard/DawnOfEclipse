@@ -11,4 +11,9 @@ public class SkillInfo : ScriptableObject
     public AudioSource SkillSound;
     public Sprite SkillIcon;
     public float Cooldown;
+    public int AnimationNumber;
+    public int CastPointNumber;
+    public int SkillPointNumber;
+    public float TimeToCastSkill;
+    public bool IsBuff;
 }

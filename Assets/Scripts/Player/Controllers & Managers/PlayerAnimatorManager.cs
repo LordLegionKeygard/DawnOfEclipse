@@ -24,10 +24,6 @@ public class PlayerAnimatorManager : MonoBehaviour
     public readonly int Drink = Animator.StringToHash("drink");
     public readonly int StartGame = Animator.StringToHash("start");
     public readonly int HaveMana = Animator.StringToHash("haveMana");
-    public readonly int Projectile = Animator.StringToHash("projectile");
-    public readonly int Shield = Animator.StringToHash("buff");
-    public readonly int Buff = Animator.StringToHash("shield");
-
 
     private void Awake()
     {
@@ -39,7 +35,7 @@ public class PlayerAnimatorManager : MonoBehaviour
     }
 
     private IEnumerator Start()
-    {      
+    {
         yield return new WaitForSeconds(3f);
         _playerMovement.enabled = true;
         CustomEvents.OnDropStaff += DropStaff;
@@ -74,13 +70,16 @@ public class PlayerAnimatorManager : MonoBehaviour
 
     public void AnimatorPickUpTrigger() => _animator.SetTrigger(PickUp);
     public void AnimatorActivateTrigger() => _animator.SetTrigger(Activate);
-    public void AnimatorProjectileTrigger() => _animator.SetTrigger(Projectile);
-    public void AnimatorShieldTrigger() => _animator.SetTrigger(Shield);
-    public void AnimatorBuffTrigger() => _animator.SetTrigger(Buff);
 
-    public void AnimatorSkillTrigger(string triggerName, int number)
+    public void AnimatorSkillInteger(int number)
     {
-        _animator.SetInteger(triggerName, number);
+        _animator.SetInteger("skills", number);
+        Invoke("ResetAnimation", 0.5f);
+    }
+
+    private void ResetAnimation()
+    {
+        _animator.SetInteger("skills", 0);
     }
 
     public void BlockReact()

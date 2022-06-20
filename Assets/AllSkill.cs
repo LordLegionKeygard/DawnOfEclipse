@@ -14,37 +14,31 @@ public class AllSkill : Skills
     {
         Cast();
         CustomEvents.FireAimImageToggle(true);
-
-        switch (SkillInfo[SkillCount].AnimationNumber)
-        {
-            case 0:
-                _playerAnimatorManager.AnimatorProjectileTrigger();
-                break;
-            case 1:
-                _playerAnimatorManager.AnimatorShieldTrigger();
-                break;
-            case 2:
-                _playerAnimatorManager.AnimatorBuffTrigger();
-                break;
-        }
+        _playerAnimatorManager.AnimatorSkillInteger(SkillInfo[SkillCount].AnimationNumber);
     }
 
     private void Cast()
     {
-        var cast = Instantiate(_skillCastPrefab[SkillCount], _castPoint[SkillInfo[SkillCount].CastPointNumber].position, Quaternion.identity);
-        cast.transform.SetParent(_castPoint[SkillInfo[SkillCount].CastPointNumber].transform);
+        var castPoint = _castPoint[SkillInfo[SkillCount].CastPointNumber];
+
+        var cast = Instantiate(_skillCastPrefab[SkillCount], castPoint.position, Quaternion.identity);
+        cast.transform.SetParent(castPoint.transform);
         Invoke("CastSkill", SkillInfo[SkillCount].TimeToCastSkill);
     }
 
     private void CastSkill()
     {
-        Vector3 aimDir = (StaffTargetAim.MouseWorldPosition - _skillPoint[SkillInfo[SkillCount].SkillPointNumber].position).normalized;
-        Debug.Log(aimDir);
-        var castSkill = Instantiate(_skillPrefab[SkillCount], _skillPoint[SkillInfo[SkillCount].SkillPointNumber].position, Quaternion.LookRotation(aimDir, Vector3.up));
+        var skillPoint = _skillPoint[SkillInfo[SkillCount].SkillPointNumber];
 
         if (SkillInfo[SkillCount].IsBuff)
         {
-            castSkill.transform.SetParent(_skillPoint[SkillInfo[SkillCount].SkillPointNumber].transform);
+            var castSkill = Instantiate(_skillPrefab[SkillCount], skillPoint.position, skillPoint.rotation);
+            castSkill.transform.SetParent(skillPoint.transform);
+        }
+        else
+        {
+            Vector3 aimDir = (StaffTargetAim.MouseWorldPosition - skillPoint.position).normalized;
+            Instantiate(_skillPrefab[SkillCount], skillPoint.position, Quaternion.LookRotation(aimDir, Vector3.up));
         }
     }
 }

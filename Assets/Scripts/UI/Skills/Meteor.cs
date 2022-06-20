@@ -35,16 +35,10 @@ public class Meteor : Skills
         CustomEvents.FireUseMana(ManaCost);
         SkillImage.fillAmount = 0;
         _skillActive = false;
-        _playerAnimatorManager.AnimatorSkillTrigger("Skills", 2);
-        Invoke("ResetAnimation", 0.5f);
+        _playerAnimatorManager.AnimatorSkillInteger(2);
 
         Instantiate(_meteorPrefab, new Vector3(_targetTransform.transform.position.x, _targetTransform.transform.position.y + 2, _targetTransform.transform.position.z), Quaternion.identity);
         CustomEvents.FireActiveTargetSkill(false);
-    }
-
-    private void ResetAnimation()
-    {
-        _playerAnimatorManager.AnimatorSkillTrigger("Skills", 0);
     }
 
     private void OnDisable()

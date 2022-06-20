@@ -6,26 +6,24 @@ using TMPro;
 
 public class Skills : MonoBehaviour
 {
+    public int SkillCount;
     public bool IsCooldownAfterUse;
     [SerializeField] private TextMeshProUGUI _manaCostText;
     public ManaControl ManaControl;
     public int ManaCost;
     public KeyCode _keyCode;
-    public Transform TargetTransform;
     public AudioSource SkillSound;
     public Image SkillImage;
     public Image BackSkillImage;
-    public float DefaultSkillTime;
-    public float Cooldown;
-    public bool SkillToggle;
     private float _timeFillAmount;
-    private float _skillTime;
-    public SkillInfo SkillInfo;
+    public SkillInfo[] SkillInfo;
     public bool IsCanUseSkill = true;
+    public SkillManaCost SkillManaCost;
 
     private void OnEnable()
     {
         CustomEvents.OnCanUseSkill += CanUseSkillToggle;
+        SkillManaCost.ManaCost = SkillInfo[SkillCount].ManaCost;
     }
 
     private void CanUseSkillToggle(bool state)
@@ -36,11 +34,10 @@ public class Skills : MonoBehaviour
     private void Start()
     {
         if (SkillInfo == null) return;
-        _skillTime = SkillInfo.DefaultSkillTime;
-        _timeFillAmount = SkillInfo.Cooldown;
-        ManaCost = SkillInfo.ManaCost;
-        SkillImage.sprite = SkillInfo.SkillIcon;
-        BackSkillImage.sprite = SkillInfo.SkillIcon;
+        _timeFillAmount = SkillInfo[SkillCount].Cooldown;
+        ManaCost = SkillInfo[SkillCount].ManaCost;
+        SkillImage.sprite = SkillInfo[SkillCount].SkillIcon;
+        BackSkillImage.sprite = SkillInfo[SkillCount].SkillIcon;
         _manaCostText.text = ManaCost.ToString();
         Active();
     }
@@ -56,10 +53,9 @@ public class Skills : MonoBehaviour
         if (ManaCost > ManaControl.CurrentMana || HealthControl.IsDeath || !IsCanUseSkill) return;
         if (SkillImage.fillAmount == 1)
         {
-            DoSkill(true);
+            DoSkill();
             if (IsCooldownAfterUse) return;
             CustomEvents.FireUseMana(ManaCost);
-            SkillToggle = true;
             SkillImage.fillAmount = 0;
         }
     }
@@ -75,20 +71,9 @@ public class Skills : MonoBehaviour
             CustomEvents.FireActiveTargetSkill(false);
         }
         if (SkillImage.fillAmount != 1) SkillImage.fillAmount += Time.deltaTime / _timeFillAmount;
-
-        if (SkillToggle)
-        {
-            _skillTime -= Time.deltaTime;
-            if (_skillTime <= 0)
-            {
-                DoSkill(false);
-                _skillTime = DefaultSkillTime;
-                SkillToggle = false;
-            }
-        }
     }
 
-    public virtual void DoSkill(bool toggle)
+    public virtual void DoSkill()
     {
 
     }

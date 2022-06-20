@@ -24,6 +24,7 @@ public class PlayerAnimatorManager : MonoBehaviour
     public readonly int Drink = Animator.StringToHash("drink");
     public readonly int StartGame = Animator.StringToHash("start");
     public readonly int HaveMana = Animator.StringToHash("haveMana");
+    public readonly int Projectile = Animator.StringToHash("projectile");
 
 
     private void Awake()
@@ -71,6 +72,8 @@ public class PlayerAnimatorManager : MonoBehaviour
 
     public void AnimatorPickUpTrigger() => _animator.SetTrigger(PickUp);
     public void AnimatorActivateTrigger() => _animator.SetTrigger(Activate);
+
+    public void AnimatorProjectileTrigger() => _animator.SetTrigger(Projectile);
 
     public void AnimatorSkillTrigger(string triggerName, int number)
     {

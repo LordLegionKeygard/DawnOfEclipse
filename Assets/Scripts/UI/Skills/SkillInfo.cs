@@ -10,6 +10,5 @@ public class SkillInfo : ScriptableObject
     public string SkillName;
     public AudioSource SkillSound;
     public Sprite SkillIcon;
-    public float DefaultSkillTime;
     public float Cooldown;
 }

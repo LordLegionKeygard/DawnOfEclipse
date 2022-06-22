@@ -4894,6 +4894,7 @@ GameObject:
   - component: {fileID: 9095857032990713979}
   - component: {fileID: 6819273102670204158}
   - component: {fileID: 7851425371020006699}
+  - component: {fileID: 8130859791550437494}
   m_Layer: 0
   m_Name: StormBuff
   m_TagString: Untagged
@@ -9793,6 +9794,21 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &8130859791550437494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3594099513468408576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85e68e3ca43d4b848ab22c689d80e051, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _characterStat: 7
+  _amount: 8
+  _skillInfo: {fileID: 11400000, guid: 5933a3edf6b2fee4d8ed62cd78cc71a3, type: 2}
 --- !u!1 &6680037078291262912
 GameObject:
   m_ObjectHideFlags: 0

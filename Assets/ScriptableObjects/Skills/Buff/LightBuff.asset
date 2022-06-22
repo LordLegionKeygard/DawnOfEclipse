@@ -22,3 +22,4 @@ MonoBehaviour:
   SkillPointNumber: 2
   TimeToCastSkill: 0.5
   IsBuff: 1
+  BuffCooldown: 5

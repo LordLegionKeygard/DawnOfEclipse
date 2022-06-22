@@ -9,6 +9,8 @@ public class AllSkill : Skills
     [SerializeField] private Transform[] _castPoint;
     [SerializeField] private Transform[] _skillPoint;
     [SerializeField] private PlayerAnimatorManager _playerAnimatorManager;
+    [SerializeField] private GameObject _buffIconsPanel;
+    [SerializeField] private GameObject _buffIconsPrefab;
 
     public override void DoSkill()
     {
@@ -34,6 +36,10 @@ public class AllSkill : Skills
         {
             var castSkill = Instantiate(_skillPrefab[SkillCount], skillPoint.position, skillPoint.rotation);
             castSkill.transform.SetParent(skillPoint.transform);
+            var buffIcon = Instantiate(_buffIconsPrefab, new Vector3(0,0,0), Quaternion.identity);
+            buffIcon.transform.SetParent(_buffIconsPanel.transform);
+            buffIcon.GetComponent<BuffIcon>().BuffImage.sprite = SkillInfo[SkillCount].SkillIcon;
+            buffIcon.GetComponent<BuffIcon>().BuffCooldown = SkillInfo[SkillCount].BuffCooldown;
         }
         else
         {

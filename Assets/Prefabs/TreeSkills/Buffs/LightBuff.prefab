@@ -19569,6 +19569,7 @@ GameObject:
   - component: {fileID: 6476038097601970999}
   - component: {fileID: 6476038097601970997}
   - component: {fileID: 6476038097601970998}
+  - component: {fileID: 5849663316126810865}
   m_Layer: 0
   m_Name: LightBuff
   m_TagString: Untagged
@@ -24461,6 +24462,21 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &5849663316126810865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6476038097601970992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85e68e3ca43d4b848ab22c689d80e051, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _characterStat: 5
+  _amount: 6
+  _skillInfo: {fileID: 11400000, guid: ab9bf3a9d0536774db42ba399d1b1895, type: 2}
 --- !u!1 &8627214447553361816
 GameObject:
   m_ObjectHideFlags: 0

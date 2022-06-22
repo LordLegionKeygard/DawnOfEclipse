@@ -25083,6 +25083,7 @@ GameObject:
   - component: {fileID: 7812585453298936650}
   - component: {fileID: 2233609825947246534}
   - component: {fileID: 7918881740211275132}
+  - component: {fileID: -8877304491204853934}
   m_Layer: 0
   m_Name: FireBuff
   m_TagString: Untagged
@@ -29988,6 +29989,21 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!114 &-8877304491204853934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7812585453298936655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85e68e3ca43d4b848ab22c689d80e051, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _characterStat: 3
+  _amount: 4
+  _skillInfo: {fileID: 11400000, guid: f82682d5e74315c4c824e5f03997e716, type: 2}
 --- !u!1 &8412702892349050548
 GameObject:
   m_ObjectHideFlags: 0

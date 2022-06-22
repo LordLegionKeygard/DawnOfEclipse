@@ -16,4 +16,5 @@ public class SkillInfo : ScriptableObject
     public int SkillPointNumber;
     public float TimeToCastSkill;
     public bool IsBuff;
+    public float BuffCooldown;
 }

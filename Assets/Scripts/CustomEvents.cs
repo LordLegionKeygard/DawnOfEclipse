@@ -271,4 +271,9 @@ public class CustomEvents
     {
         OnTakeTome?.Invoke(number);
     }
+    public static Action<int, int> OnBuff;
+    public static void FireBuff(int statsNumber, int amount)
+    {
+        OnBuff?.Invoke(statsNumber, amount);
+    }
 }

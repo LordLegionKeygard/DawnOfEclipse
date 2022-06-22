@@ -48,9 +48,7 @@ public class PlayerInputController : MonoBehaviour
     }
 
     private void OnEnable()
-    {
-        _canNewMove = !IsAttack && _isGround && !_isSneak && !IsBlock && !IsRoll;
-        
+    {   
         _input.Enable();
         _input.Player.TargetLock.performed += ctx => CustomEvents.FireCameraLockOnTarget();
         _input.Player.Sneak.performed += ctx => Sneaking();
@@ -76,6 +74,7 @@ public class PlayerInputController : MonoBehaviour
 
     private void Update()
     {
+        _canNewMove = !IsAttack && _isGround && !_isSneak && !IsBlock && !IsRoll;
         if (HealthControl.IsDeath) return;
 
         if (_inputAttackR1) Attack(1);

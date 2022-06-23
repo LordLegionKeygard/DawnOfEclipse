@@ -43,7 +43,7 @@ ParticleSystem:
   serializedVersion: 8
   lengthInSec: 7
   simulationSpeed: 1
-  stopAction: 2
+  stopAction: 0
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
@@ -4934,7 +4934,7 @@ ParticleSystem:
   serializedVersion: 8
   lengthInSec: 7
   simulationSpeed: 1
-  stopAction: 2
+  stopAction: 0
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
@@ -9816,7 +9816,7 @@ ParticleSystem:
   serializedVersion: 8
   lengthInSec: 7
   simulationSpeed: 1
-  stopAction: 2
+  stopAction: 0
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
@@ -14705,7 +14705,7 @@ ParticleSystem:
   serializedVersion: 8
   lengthInSec: 7
   simulationSpeed: 1
-  stopAction: 2
+  stopAction: 0
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
@@ -19584,7 +19584,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _characterStat: 4
-  _amount: 5
+  _amount: 10
   _skillInfo: {fileID: 11400000, guid: e07d3e509735259409abc16df4d9be54, type: 2}
 --- !u!1 &3317504816897673795
 GameObject:
@@ -19629,7 +19629,7 @@ ParticleSystem:
   serializedVersion: 8
   lengthInSec: 7
   simulationSpeed: 1
-  stopAction: 2
+  stopAction: 0
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
@@ -24520,7 +24520,7 @@ ParticleSystem:
   serializedVersion: 8
   lengthInSec: 7
   simulationSpeed: 1
-  stopAction: 2
+  stopAction: 0
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
@@ -29403,7 +29403,7 @@ ParticleSystem:
   serializedVersion: 8
   lengthInSec: 7
   simulationSpeed: 1
-  stopAction: 2
+  stopAction: 0
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}

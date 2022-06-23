@@ -43,7 +43,7 @@ ParticleSystem:
   serializedVersion: 8
   lengthInSec: 7
   simulationSpeed: 1
-  stopAction: 2
+  stopAction: 0
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
@@ -4930,7 +4930,7 @@ ParticleSystem:
   serializedVersion: 8
   lengthInSec: 7
   simulationSpeed: 1
-  stopAction: 2
+  stopAction: 0
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
@@ -9807,7 +9807,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _characterStat: 7
-  _amount: 8
+  _amount: 10
   _skillInfo: {fileID: 11400000, guid: 5933a3edf6b2fee4d8ed62cd78cc71a3, type: 2}
 --- !u!1 &6680037078291262912
 GameObject:
@@ -9853,7 +9853,7 @@ ParticleSystem:
   serializedVersion: 8
   lengthInSec: 7
   simulationSpeed: 1
-  stopAction: 2
+  stopAction: 0
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
@@ -14744,7 +14744,7 @@ ParticleSystem:
   serializedVersion: 8
   lengthInSec: 7
   simulationSpeed: 1
-  stopAction: 2
+  stopAction: 0
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
@@ -19626,7 +19626,7 @@ ParticleSystem:
   serializedVersion: 8
   lengthInSec: 7
   simulationSpeed: 1
-  stopAction: 2
+  stopAction: 0
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
@@ -24517,7 +24517,7 @@ ParticleSystem:
   serializedVersion: 8
   lengthInSec: 7
   simulationSpeed: 1
-  stopAction: 2
+  stopAction: 0
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
@@ -29408,7 +29408,7 @@ ParticleSystem:
   serializedVersion: 8
   lengthInSec: 7
   simulationSpeed: 1
-  stopAction: 2
+  stopAction: 0
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
@@ -34310,7 +34310,7 @@ ParticleSystem:
   serializedVersion: 8
   lengthInSec: 7
   simulationSpeed: 1
-  stopAction: 2
+  stopAction: 0
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
@@ -39194,7 +39194,7 @@ ParticleSystem:
   serializedVersion: 8
   lengthInSec: 7
   simulationSpeed: 1
-  stopAction: 2
+  stopAction: 0
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}

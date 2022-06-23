@@ -129,8 +129,7 @@ public class LevelUpStats : MonoBehaviour
 
 
         CustomEvents.FireUpdateBaseWeaponDamage();
-        Debug.Log("1");
-        CustomEvents.FireCalculateAllStats();
+        CustomEvents.FireCalculateAllStats(true);
 
         for (int i = 0; i < Stats.Length; i++)
         {

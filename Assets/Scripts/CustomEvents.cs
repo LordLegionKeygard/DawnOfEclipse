@@ -150,10 +150,10 @@ public class CustomEvents
         OnUpdateAllStats?.Invoke();
     }
 
-    public static Action OnCalculateAllStats;
-    public static void FireCalculateAllStats()
+    public static Action<bool> OnCalculateAllStats; //start = true, buff = false
+    public static void FireCalculateAllStats(bool state)
     {
-        OnCalculateAllStats?.Invoke();
+        OnCalculateAllStats?.Invoke(state);
     }
 
     public static Action OnUpdateEnemyNameColorText;
@@ -275,5 +275,11 @@ public class CustomEvents
     public static void FireBuff(int statsNumber, int amount)
     {
         OnBuff?.Invoke(statsNumber, amount);
+    }
+
+    public static Action<int> OnReturnPlayerStats;
+    public static void FireReturnPlayerStats(int statsNumber)
+    {
+        OnReturnPlayerStats?.Invoke(statsNumber);
     }
 }

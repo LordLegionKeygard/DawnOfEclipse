@@ -16,10 +16,10 @@ MonoBehaviour:
   SkillName: 
   SkillSound: {fileID: 0}
   SkillIcon: {fileID: 21300000, guid: a0b3c376e5a8c024cb9fef8011aeef67, type: 3}
-  Cooldown: 0
+  Cooldown: 10
   AnimationNumber: 5
   CastPointNumber: 0
   SkillPointNumber: 2
   TimeToCastSkill: 0.5
   IsBuff: 1
-  BuffCooldown: 5
+  BuffCooldown: 30

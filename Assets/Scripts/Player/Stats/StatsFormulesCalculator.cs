@@ -32,15 +32,15 @@ public class StatsFormulesCalculator : MonoBehaviour
     private void OnEnable()
     {
         CustomEvents.OnCalculateAllStats += CalculateAll;
-        CalculateAll();
+        CalculateAll(false);
     }
 
-    private void CalculateAll()
+    private void CalculateAll(bool isBuff)
     {
         CalculateDexterity();
-        CalculateConstitution();
-        CalculateEndurance();
-        CalculateMind();
+        CalculateConstitution(isBuff);
+        CalculateEndurance(isBuff);
+        CalculateMind(isBuff);
         CustomEvents.FireUpdateAllStats();
     }
 
@@ -58,7 +58,7 @@ public class StatsFormulesCalculator : MonoBehaviour
         }
         _playerMovement.CalculateSpeed();
     }
-    private void CalculateConstitution()
+    private void CalculateConstitution(bool isBuff)
     {
         switch (CharacterInformation.Class)
         {
@@ -69,10 +69,10 @@ public class StatsFormulesCalculator : MonoBehaviour
                 _healthControl.MaxHealth = (int)((float)_baseHPInfo.Class[ExperienceControl.CurrentLevel].Mage * (1 + 0.04f * CharacterStats.Constitution));
                 break;
         }
-        _healthControl.CalculateHealth();
+        _healthControl.CalculateHealth(isBuff);
         _potionControl.CalculatePotions();
     }
-    private void CalculateEndurance()
+    private void CalculateEndurance(bool isBuff)
     {
         switch (CharacterInformation.Class)
         {
@@ -83,10 +83,10 @@ public class StatsFormulesCalculator : MonoBehaviour
                 _staminaControl.MaxStamina = (int)((float)_baseStaminaInfo.Class[ExperienceControl.CurrentLevel].Mage * (1 + 0.02f * CharacterStats.Endurance));
                 break;
         }
-        _staminaControl.CalculateStamina();
+        _staminaControl.CalculateStamina(isBuff);
     }
 
-    private void CalculateMind()
+    private void CalculateMind(bool isBuff)
     {
         switch (CharacterInformation.Class)
         {
@@ -97,7 +97,7 @@ public class StatsFormulesCalculator : MonoBehaviour
                 _manaControl.MaxMana = (int)((float)_cbaseMPInfo.Class[ExperienceControl.CurrentLevel].Mage * (1 + 0.04f * CharacterStats.Mind));
                 break;
         }
-        _manaControl.CalculateMana();
+        _manaControl.CalculateMana(isBuff);
     }
 
 

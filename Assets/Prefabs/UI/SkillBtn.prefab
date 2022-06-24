@@ -473,7 +473,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ab0a95e1c0ffd1489075cee2df4f20a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SkillCount: 8
+  SkillCount: 28
   IsCooldownAfterUse: 0
   _manaCostText: {fileID: 4152703291509040514}
   ManaControl: {fileID: 0}
@@ -507,6 +507,14 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5933a3edf6b2fee4d8ed62cd78cc71a3, type: 2}
   - {fileID: 11400000, guid: 94c643d0d1161df49b421cd125564fcc, type: 2}
   - {fileID: 11400000, guid: eda2658eb3aab9c4481faa3df45e9df4, type: 2}
+  - {fileID: 0}
+  - {fileID: 11400000, guid: ad14d83ceb6d4d4468001ae473587c13, type: 2}
+  - {fileID: 11400000, guid: af69901584ecde843a7daa493da1ee0a, type: 2}
+  - {fileID: 11400000, guid: 94de9e5ce2cc82a46b97a9b7a76f3544, type: 2}
+  - {fileID: 11400000, guid: 166baa168ab0d61499e4d8f3703af6d2, type: 2}
+  - {fileID: 11400000, guid: dfb34ef76b751e14ba7a597a20aa5e58, type: 2}
+  - {fileID: 11400000, guid: f3cdeb274c7463a40bcd3c31d3674380, type: 2}
+  - {fileID: 11400000, guid: 30f80c77613054044ba2786f009f849b, type: 2}
   IsCanUseSkill: 1
   SkillManaCost: {fileID: 1784728632}
   _skillCastPrefab:
@@ -517,7 +525,7 @@ MonoBehaviour:
   - {fileID: 5373055807955792648, guid: 17655ea300ef1b54f924a0441ff7a83e, type: 3}
   - {fileID: 7606108794216414597, guid: e205bbff0d2930e4aac480381ef05209, type: 3}
   - {fileID: 6010434030211556052, guid: 86fb4dcd3ac9b8b479b5bae451719ebd, type: 3}
-  - {fileID: 0}
+  - {fileID: 5270247380590987932, guid: 389455650b8305d4dab53a6e35b1c7a4, type: 3}
   - {fileID: 1088404570457305704, guid: 5f31568957c072f42ba889af21535cf6, type: 3}
   - {fileID: 8469585828306071224, guid: 585eda1b9901ebb46baf1b117ebf6846, type: 3}
   - {fileID: 3475472405203810721, guid: 5a0e1b878371c464485ada2b7616ddf2, type: 3}
@@ -525,7 +533,7 @@ MonoBehaviour:
   - {fileID: 5373055807955792648, guid: 17655ea300ef1b54f924a0441ff7a83e, type: 3}
   - {fileID: 7606108794216414597, guid: e205bbff0d2930e4aac480381ef05209, type: 3}
   - {fileID: 6010434030211556052, guid: 86fb4dcd3ac9b8b479b5bae451719ebd, type: 3}
-  - {fileID: 0}
+  - {fileID: 5270247380590987932, guid: 389455650b8305d4dab53a6e35b1c7a4, type: 3}
   - {fileID: 1088404570457305704, guid: 5f31568957c072f42ba889af21535cf6, type: 3}
   - {fileID: 8469585828306071224, guid: 585eda1b9901ebb46baf1b117ebf6846, type: 3}
   - {fileID: 3475472405203810721, guid: 5a0e1b878371c464485ada2b7616ddf2, type: 3}
@@ -533,7 +541,15 @@ MonoBehaviour:
   - {fileID: 5373055807955792648, guid: 17655ea300ef1b54f924a0441ff7a83e, type: 3}
   - {fileID: 7606108794216414597, guid: e205bbff0d2930e4aac480381ef05209, type: 3}
   - {fileID: 6010434030211556052, guid: 86fb4dcd3ac9b8b479b5bae451719ebd, type: 3}
-  - {fileID: 0}
+  - {fileID: 5270247380590987932, guid: 389455650b8305d4dab53a6e35b1c7a4, type: 3}
+  - {fileID: 1088404570457305704, guid: 5f31568957c072f42ba889af21535cf6, type: 3}
+  - {fileID: 8469585828306071224, guid: 585eda1b9901ebb46baf1b117ebf6846, type: 3}
+  - {fileID: 3475472405203810721, guid: 5a0e1b878371c464485ada2b7616ddf2, type: 3}
+  - {fileID: 6382894885670788804, guid: 9c1ac8fffa185fb4bb7135ec692f2c01, type: 3}
+  - {fileID: 5373055807955792648, guid: 17655ea300ef1b54f924a0441ff7a83e, type: 3}
+  - {fileID: 7606108794216414597, guid: e205bbff0d2930e4aac480381ef05209, type: 3}
+  - {fileID: 6010434030211556052, guid: 86fb4dcd3ac9b8b479b5bae451719ebd, type: 3}
+  - {fileID: 5270247380590987932, guid: 389455650b8305d4dab53a6e35b1c7a4, type: 3}
   _skillPrefab:
   - {fileID: 7603222385795505173, guid: 9a352af6199b5c14b88e87db8307953a, type: 3}
   - {fileID: 1485987801625442810, guid: 27ecca73bc94c814da0bd66e81effa5e, type: 3}
@@ -559,6 +575,14 @@ MonoBehaviour:
   - {fileID: 3594099513468408576, guid: 68df5f4680898db4a87fcead70933ca1, type: 3}
   - {fileID: 1171235918528847832, guid: 6911adf50f0ad8749aca0b6969b56e9a, type: 3}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 3036939298300616702, guid: eba75e61a6c1e7a419aff3542d04b170, type: 3}
+  - {fileID: 3317504816819617755, guid: 674133b714b5b1848b517ff3f6b067c2, type: 3}
+  - {fileID: 7812585453298936655, guid: a298e03b55aa80d40bbbc17d0f43e7b5, type: 3}
+  - {fileID: 5778512669574036082, guid: cd26b0e2bc3d9a34fbb352fca4700ed7, type: 3}
+  - {fileID: 6476038097601970992, guid: 8cc6616298f6d3041bb1442be95bf6c4, type: 3}
+  - {fileID: 3594099513468408576, guid: 45fcf02e16a6dcb428f32b2ecabb9e22, type: 3}
+  - {fileID: 1171235918528847832, guid: ee5eb2045b6563744a0958a5e876b38f, type: 3}
   _castPoint:
   - {fileID: 0}
   _skillPoint:
@@ -566,6 +590,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   _playerAnimatorManager: {fileID: 0}
+  _buffIconsPanel: {fileID: 0}
+  _buffIconsPrefab: {fileID: 853114825903121135, guid: 7e5aa78f60ad0764eb09a6c25cde4db4, type: 3}
 --- !u!1 &2727800793510971200
 GameObject:
   m_ObjectHideFlags: 0

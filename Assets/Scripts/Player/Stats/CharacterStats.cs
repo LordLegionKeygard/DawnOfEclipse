@@ -25,31 +25,31 @@ public class CharacterStats : MonoBehaviour
         Mind = _characterStatsInfo.intArray[CharacterInformation.Race].Mind[CharacterInformation.Class];
     }
 
-    // STR (STRENGTH)
+    // STR (STRENGTH) - Fire
     // affects P.Atk.
 
-    // END (ENDURANCE) +
+    // END (ENDURANCE) - Light
     // affects maximum Stamina
     // affects Stamina recovery speed
 
-    // CON (CONSTITUTION) +
+    // CON (CONSTITUTION)  - Blood
     // affects maximum Health
     // affects Health recovery speed
     // affects underwater breath gauge
     // affects shock (stun) resistance
     // affects bleeding resistance.
 
-    // DEX (DEXTERITY)
+    // DEX (DEXTERITY) - Nature
     // affects Critical Chance and Speed
 
-    // INT (INTELLIGENCE)
+    // INT (INTELLIGENCE) - Ice
     // affects M.Atk. 
 
-    // WIT (WISDOM)
+    // WIT (WISDOM) - Arcane
     // affects chance of magic critical hits
     // affects resistance to Hold (aka Roots) and Sleep
 
-    // MIN (MIND) +
+    // MIN (MIND) - Storm
     // affects maximum MP
     // affects MP recovery speed
     // affects poison resistance

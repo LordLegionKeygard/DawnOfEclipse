@@ -38,8 +38,11 @@ public class AllSkill : Skills
             castSkill.transform.SetParent(skillPoint.transform);
             var buffIcon = Instantiate(_buffIconsPrefab, new Vector3(0,0,0), Quaternion.identity);
             buffIcon.transform.SetParent(_buffIconsPanel.transform);
-            buffIcon.GetComponent<BuffIcon>().BackIcon.sprite = SkillInfo[SkillCount].SkillIcon;
-            buffIcon.GetComponent<BuffIcon>().BuffCooldown = SkillInfo[SkillCount].BuffCooldown;
+
+            var BuffIcon =  buffIcon.GetComponent<BuffIcon>();
+            BuffIcon.BackIcon.sprite = SkillInfo[SkillCount].SkillIcon;
+            BuffIcon.BuffCooldown = SkillInfo[SkillCount].BuffCooldown;
+            BuffIcon.IconBuffNumber = SkillInfo[SkillCount].BuffNumber;
         }
         else
         {

@@ -271,15 +271,27 @@ public class CustomEvents
     {
         OnTakeTome?.Invoke(number);
     }
-    public static Action<int, int> OnBuff;
-    public static void FireBuff(int statsNumber, int amount)
+    public static Action<int, int> OnStatBuff;
+    public static void FireStatBuff(int statsNumber, int amount)
     {
-        OnBuff?.Invoke(statsNumber, amount);
+        OnStatBuff?.Invoke(statsNumber, amount);
+    }
+
+    public static Action<int, int> OnElementalArmorBuff;
+    public static void FireElementalArmorBuff(int statsNumber, int amount)
+    {
+        OnElementalArmorBuff?.Invoke(statsNumber, amount);
     }
 
     public static Action<int> OnReturnPlayerStats;
     public static void FireReturnPlayerStats(int statsNumber)
     {
         OnReturnPlayerStats?.Invoke(statsNumber);
+    }
+
+    public static Action<int> OnCheckIdenticalBuff;
+    public static void FireCheckIdenticalBuff(int number)
+    {
+        OnCheckIdenticalBuff?.Invoke(number);
     }
 }

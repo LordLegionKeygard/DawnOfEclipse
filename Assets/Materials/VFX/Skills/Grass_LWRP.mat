@@ -25,6 +25,7 @@ Material:
   m_ValidKeywords:
   - _COLORCOLOR_ON
   - _FLIPBOOKBLENDING_ON
+  - _NORMALMAP
   - _SURFACE_TYPE_TRANSPARENT
   m_InvalidKeywords: []
   m_LightmapFlags: 6

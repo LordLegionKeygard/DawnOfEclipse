@@ -473,7 +473,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ab0a95e1c0ffd1489075cee2df4f20a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SkillCount: 28
+  SkillCount: 7
   IsCooldownAfterUse: 0
   _manaCostText: {fileID: 4152703291509040514}
   ManaControl: {fileID: 0}
@@ -558,7 +558,7 @@ MonoBehaviour:
   - {fileID: 6760736237921102998, guid: 0bc44095716f57d4497da81e35584d96, type: 3}
   - {fileID: 3677407660804703815, guid: a15e83fc36d4dcc4da1f4dc0644799ef, type: 3}
   - {fileID: 7928370588998662685, guid: 41a956bf937ce5943b3b18b6dc230ec5, type: 3}
-  - {fileID: 0}
+  - {fileID: 6760736237921102998, guid: 8c8bd82e16a29af41b4cfa3939858172, type: 3}
   - {fileID: 3193697957291008932, guid: ad586d9b46ad7b149812cd48f05f617d, type: 3}
   - {fileID: 5677331674781024806, guid: e3e39e65df60c454e8c6f1f166946085, type: 3}
   - {fileID: 6146425452966005824, guid: ec68d45bfa3d18847a43e937b136049e, type: 3}
@@ -574,14 +574,14 @@ MonoBehaviour:
   - {fileID: 3036939298300616702, guid: da69781804b66944c97da1ac8d69234b, type: 3}
   - {fileID: 3594099513468408576, guid: 68df5f4680898db4a87fcead70933ca1, type: 3}
   - {fileID: 1171235918528847832, guid: 6911adf50f0ad8749aca0b6969b56e9a, type: 3}
+  - {fileID: 5778512669574036082, guid: 3cff0b1de6579c644ba0bb228741362d, type: 3}
   - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 3036939298300616702, guid: eba75e61a6c1e7a419aff3542d04b170, type: 3}
-  - {fileID: 3317504816819617755, guid: 674133b714b5b1848b517ff3f6b067c2, type: 3}
   - {fileID: 7812585453298936655, guid: a298e03b55aa80d40bbbc17d0f43e7b5, type: 3}
+  - {fileID: 3317504816819617755, guid: 674133b714b5b1848b517ff3f6b067c2, type: 3}
+  - {fileID: 3036939298300616702, guid: eba75e61a6c1e7a419aff3542d04b170, type: 3}
   - {fileID: 5778512669574036082, guid: cd26b0e2bc3d9a34fbb352fca4700ed7, type: 3}
-  - {fileID: 6476038097601970992, guid: 8cc6616298f6d3041bb1442be95bf6c4, type: 3}
   - {fileID: 3594099513468408576, guid: 45fcf02e16a6dcb428f32b2ecabb9e22, type: 3}
+  - {fileID: 1171235918528847832, guid: 0257071778e036e4081d4aeadae38c08, type: 3}
   - {fileID: 1171235918528847832, guid: ee5eb2045b6563744a0958a5e876b38f, type: 3}
   _castPoint:
   - {fileID: 0}

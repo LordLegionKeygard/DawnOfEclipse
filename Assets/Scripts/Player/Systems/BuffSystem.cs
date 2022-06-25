@@ -9,7 +9,7 @@ public class BuffSystem : MonoBehaviour
 
     private void Start()
     {
-        CustomEvents.OnBuff += ChangeCharacterStats;
+        CustomEvents.OnStatBuff += ChangeCharacterStats;
     }
 
     private void ChangeCharacterStats(int statsNumber, int amount)
@@ -40,14 +40,30 @@ public class BuffSystem : MonoBehaviour
         }
         CustomEvents.FireCalculateAllStats(true);
 
-        if(amount < 0)
+        if (amount < 0)
         {
             CustomEvents.FireReturnPlayerStats(statsNumber);
-        } 
+        }
     }
 
     private void OnDestroy()
     {
-        CustomEvents.OnBuff -= ChangeCharacterStats;
+        CustomEvents.OnStatBuff -= ChangeCharacterStats;
     }
+
+    //Strength StatBuff = 0
+    //Dexterity StatBuff = 1
+    //Constitution StatBuff = 2
+    //Endurance StatBuff = 3
+    //Intelligence StatBuff = 4
+    //Wisdom StatBuff = 5
+    //Mind StatBuff = 6
+    //Dark MagicBuff = 7
+    //Fire MagicBuff = 8
+    //Ice MagicBuff = 9
+    //Light MagicBuff = 10
+    //Nature MagicBuff = 11
+    //Storm MagicBuff = 12
+    //Arcane MagicBuff = 13
+    //Blood MagicBuff = 14
 }

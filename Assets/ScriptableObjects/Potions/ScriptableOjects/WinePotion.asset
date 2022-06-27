@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d06099a2e3264046bea119e4c8637b9, type: 3}
+  m_Name: WinePotion
+  m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: 210f920f6b48abc47a32455b6d3a00a8, type: 3}
+  Price: 250
+  IsDefaultItem: 0
+  IsStackable: 1
+  IsUsedItem: 1
+  IsTome: 0
+  IsSetEffect: 0
+  Name:
+  - Wine
+  - "\u0412\u0438\u043D\u043E"
+  ItemType:
+  - Potions
+  - "\u0417\u0435\u043B\u044C\u044F"
+  ItemInfo:
+  - "A magical potion that \nincreases dexterity"
+  - "\u041C\u0430\u0433\u0438\u0447\u0435\u0441\u043A\u043E\u0435 \u043F\u043E\u0439\u043B\u043E,
+    \u0443\u0432\u0435\u043B\u0438\u0447\u0438\u0432\u0430\u044E\u0449\u0435\u0435
+    \n\u043B\u043E\u0432\u043A\u043E\u0441\u0442\u044C"
+  ArmorSetEnum: 0
+  AllArmorSetInfo: {fileID: 0}
+  PotionCooldown: 60
+  PotionType: 4

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PotionsControl : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class PotionsControl : MonoBehaviour
     [SerializeField] private HealthControl _healthControl;
     [SerializeField] private ManaControl _manaControl;
     [SerializeField] private PlayerMovement _playerMovement;
+    [SerializeField] private BuffIconSpawner _buffIconSpawner;
+    [SerializeField] private Sprite[] _potionsImage;
     public float PotionSpeed;
     public bool SpeedPotion = false;
 
@@ -31,7 +34,7 @@ public class PotionsControl : MonoBehaviour
 
         switch (potion)
         {
-            case (0):
+            case (0): //health
                 if (_healthControl.CurrentHealth > _healthControl.MaxHealth - _healPointFromPotion)
                 {
                     _healthControl.CurrentHealth = _healthControl.MaxHealth;
@@ -43,9 +46,9 @@ public class PotionsControl : MonoBehaviour
                     _healthControl.UpdateSlider();
                 }
                 break;
-
-            case (1):
+            case (1): //speed
                 StopCoroutine(ExecuteAfterTime(0f));
+                _buffIconSpawner.SpawnBuffIcon(_potionsImage[potion], 20, 16);
                 _speedPotionParticle.Play();
                 SpeedPotion = true;
 
@@ -58,7 +61,7 @@ public class PotionsControl : MonoBehaviour
                     SpeedPotion = false;
                 }
                 break;
-            case (2):
+            case (2): //mana
                 if (_manaControl.CurrentMana > _manaControl.MaxMana - _manaPointFromPotion)
                 {
                     _manaControl.CurrentMana = _manaControl.MaxMana;
@@ -69,6 +72,18 @@ public class PotionsControl : MonoBehaviour
                     _manaControl.CurrentMana += _manaPointFromPotion;
                     _manaControl.UpdateSlider();
                 }
+                break;
+            case (3): //mead
+                CustomEvents.FireStatBuff(0, 5);
+                _buffIconSpawner.SpawnBuffIcon(_potionsImage[potion], 60, 17);
+                break;
+            case (4): //wine
+                CustomEvents.FireStatBuff(1, 5);
+                _buffIconSpawner.SpawnBuffIcon(_potionsImage[potion], 60, 18);
+                break;
+            case (5): //ale
+                CustomEvents.FireStatBuff(2, 5);
+                _buffIconSpawner.SpawnBuffIcon(_potionsImage[potion], 60, 19);
                 break;
         }
 

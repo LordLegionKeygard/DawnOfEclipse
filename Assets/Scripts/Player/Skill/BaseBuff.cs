@@ -6,19 +6,25 @@ public class BaseBuff : MonoBehaviour
 {
     public int Amount;
     public SkillInfo SkillInfo;
+    public UsedItems UsedItem;
     public int BuffNumber;
 
     public virtual void Start()
     {
         CustomEvents.FireCheckIdenticalBuff(BuffNumber);
         CustomEvents.OnCheckIdenticalBuff += DestroyIdenticalBuff;
-        // CustomEvents.FireBuff(_characterStat, Amount);
-        Invoke("EndBuff", SkillInfo.BuffCooldown);
+        if (SkillInfo != null)
+        {
+            Invoke("EndBuff", SkillInfo.BuffCooldown);
+        }
+        else
+        {
+            Invoke("EndBuff", UsedItem.PotionCooldown);
+        }
     }
 
     public virtual void EndBuff()
     {
-        // CustomEvents.FireBuff(_characterStat, -Amount);
         Destroy(gameObject);
     }
 

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4822824289796313837}
   - component: {fileID: 8429116079832765918}
   - component: {fileID: 2148451579001817264}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Explosion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4893,7 +4893,7 @@ GameObject:
   - component: {fileID: 8101365027943918900}
   - component: {fileID: 1915228149881205577}
   - component: {fileID: 2033992736391877806}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: VFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9784,7 +9784,7 @@ GameObject:
   - component: {fileID: 3620308687579823008}
   - component: {fileID: 7311309880134963788}
   - component: {fileID: 7390777028672455371}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14608,7 +14608,7 @@ GameObject:
   - component: {fileID: 4269869188906533550}
   - component: {fileID: 2713187403265850723}
   - component: {fileID: 2316650117383664279}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Fire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14622,8 +14622,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6030600486511860354}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.5, y: 0, z: 1.95}
+  m_LocalRotation: {x: 0, y: 0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.5000001, y: 0, z: 1.95}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -19555,7 +19555,7 @@ GameObject:
   - component: {fileID: 7543716273660962153}
   - component: {fileID: 5874657054931665374}
   - component: {fileID: 6228917468435704363}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19569,9 +19569,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6587663289102699850}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.0000002, y: 1, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8101365027943918900}
@@ -24380,7 +24380,7 @@ GameObject:
   - component: {fileID: 5779269035327139484}
   - component: {fileID: 8684094235300427657}
   - component: {fileID: 8048638585947864575}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Staff_01_Skill_R2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24429,7 +24429,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _collider: {fileID: 5779269035327139484}
-  _activateTime: 0.5
+  _activateTime: 0.2
   _lifeTime: 3
 --- !u!114 &8048638585947864575
 MonoBehaviour:
@@ -24443,6 +24443,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78f10a07ef4f2ea4eadb1f93ad8d84f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _canDamage: 1
 --- !u!1 &8389118700158959598
 GameObject:
   m_ObjectHideFlags: 0
@@ -24454,7 +24455,7 @@ GameObject:
   - component: {fileID: 2075488667159094396}
   - component: {fileID: 3687991608190174489}
   - component: {fileID: 9154969540827960669}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Sparks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24468,9 +24469,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8389118700158959598}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.0000002, y: 1.0000002, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8101365027943918900}

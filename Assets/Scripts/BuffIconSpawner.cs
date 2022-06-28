@@ -17,7 +17,7 @@ public class BuffIconSpawner : MonoBehaviour
         BuffIcon.IconBuffNumber = skillInfo[number].BuffNumber;
     }
 
-        public void SpawnBuffIcon(Sprite sprite, int buffCooldown, int iconBuffNumber)
+    public void SpawnBuffIcon(Sprite sprite, int buffCooldown, int iconBuffNumber)
     {
         var buffIcon = Instantiate(_buffIconsPrefab, new Vector3(0, 0, 0), Quaternion.identity);
         buffIcon.transform.SetParent(_buffIconsPanel.transform);

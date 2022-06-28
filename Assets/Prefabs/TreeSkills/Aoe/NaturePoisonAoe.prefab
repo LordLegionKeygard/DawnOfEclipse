@@ -24439,7 +24439,6 @@ GameObject:
   - component: {fileID: 2993994796729848250}
   - component: {fileID: 3124501762288284568}
   - component: {fileID: 3123325582651042878}
-  - component: {fileID: 1639242869441191472}
   - component: {fileID: -2653920610975603880}
   - component: {fileID: 3610146556518502200}
   m_Layer: 0
@@ -24484,7 +24483,7 @@ ParticleSystem:
   serializedVersion: 8
   lengthInSec: 5
   simulationSpeed: 1
-  stopAction: 0
+  stopAction: 2
   cullingMode: 1
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
@@ -29323,19 +29322,6 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
---- !u!114 &1639242869441191472
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2998158816730532814}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd97ae47a71837e489cd6c5e478225be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _lifeTime: 10
 --- !u!114 &-2653920610975603880
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29349,6 +29335,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _poisonStack: 100
+  _timeToStartDamage: 0.5
 --- !u!136 &3610146556518502200
 CapsuleCollider:
   m_ObjectHideFlags: 0

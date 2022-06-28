@@ -14,6 +14,8 @@ public class PotionsControl : MonoBehaviour
     [SerializeField] private PlayerMovement _playerMovement;
     [SerializeField] private BuffIconSpawner _buffIconSpawner;
     [SerializeField] private Sprite[] _potionsImage;
+    [SerializeField] private GameObject[] _potionsVFX;
+
     public float PotionSpeed;
     public bool SpeedPotion = false;
 
@@ -31,6 +33,9 @@ public class PotionsControl : MonoBehaviour
     {
         if (!CanDrinkAnyPotions) return;
         CantDrinkAnyPotions();
+
+        var potVFX = Instantiate(_potionsVFX[potion], new Vector3(this.gameObject.transform.position.x, this.gameObject.transform.position.y + 1.4f, this.gameObject.transform.position.z), Quaternion.identity);
+        potVFX.transform.SetParent(this.gameObject.transform);
 
         switch (potion)
         {
@@ -86,7 +91,6 @@ public class PotionsControl : MonoBehaviour
                 _buffIconSpawner.SpawnBuffIcon(_potionsImage[potion], 60, 19);
                 break;
         }
-
     }
 
     private void CantDrinkAnyPotions()

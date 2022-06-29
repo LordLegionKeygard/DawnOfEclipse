@@ -16,6 +16,9 @@ public class BuffSystem : MonoBehaviour
     {
         switch (statsNumber)
         {
+            case -1:
+                //nothing
+                break;
             case 0:
                 CharacterStats.Strength += amount;
                 break;

@@ -4830,7 +4830,7 @@ MonoBehaviour:
   SkillInfo: {fileID: 0}
   UsedItem: {fileID: 11400000, guid: fee4aa44d365dda4e982ad00a7e437ec, type: 2}
   BuffNumber: 16
-  _statAttribute: 0
+  _statAttribute: -1
 --- !u!1 &8455765247892872243
 GameObject:
   m_ObjectHideFlags: 0

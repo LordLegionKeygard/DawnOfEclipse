@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b8cef7142827bd14a80d95ace3c3b73a, type: 3}
-  m_Name: NaturePoisonAoe
+  m_Name: DarkAoe
   m_EditorClassIdentifier: 
-  ManaCost: 20
-  SkillName: PoisonAoe
+  ManaCost: 1
+  SkillName: DarkAoe
   SkillSound: {fileID: 0}
-  SkillIcon: {fileID: 21300000, guid: b9e97f25d6c143a41b075669ef238182, type: 3}
-  Cooldown: 20
-  AnimationNumber: 1
+  SkillIcon: {fileID: 21300000, guid: 17a93ed9741bb9345a94a32743152c3f, type: 3}
+  Cooldown: 5
+  AnimationNumber: 7
   CastPointNumber: 0
-  SkillPointNumber: 1
-  TimeToCastSkill: 0
+  SkillPointNumber: 3
+  TimeToCastSkill: 0.2
   NotRotate: 1
   IsBuff: 0
   BuffCooldown: 0

@@ -10,8 +10,6 @@ public class AllSkill : Skills
     [SerializeField] private Transform[] _skillPoint;
     [SerializeField] private PlayerAnimatorManager _playerAnimatorManager;
     [SerializeField] private BuffIconSpawner _buffIconSpawner;
-    // [SerializeField] private GameObject _buffIconsPanel;
-    // [SerializeField] private GameObject _buffIconsPrefab;
 
     public override void DoSkill()
     {
@@ -39,18 +37,18 @@ public class AllSkill : Skills
             castSkill.transform.SetParent(skillPoint.transform);
 
             _buffIconSpawner.SpawnBuffIcon(SkillInfo, SkillCount);
-
-            // var buffIcon = Instantiate(_buffIconsPrefab, new Vector3(0,0,0), Quaternion.identity);
-            // buffIcon.transform.SetParent(_buffIconsPanel.transform);
-            // var BuffIcon =  buffIcon.GetComponent<BuffIcon>();
-            // BuffIcon.BackIcon.sprite = SkillInfo[SkillCount].SkillIcon;
-            // BuffIcon.BuffCooldown = SkillInfo[SkillCount].BuffCooldown;
-            // BuffIcon.IconBuffNumber = SkillInfo[SkillCount].BuffNumber;
         }
         else
         {
-            Vector3 aimDir = (StaffTargetAim.MouseWorldPosition - skillPoint.position).normalized;
-            Instantiate(_skillPrefab[SkillCount], skillPoint.position, Quaternion.LookRotation(aimDir, Vector3.up));
+            if (SkillInfo[SkillCount].NotRotate)
+            {
+                Instantiate(_skillPrefab[SkillCount], skillPoint.position, skillPoint.rotation);
+            }
+            else
+            {
+                Vector3 aimDir = (StaffTargetAim.MouseWorldPosition - skillPoint.position).normalized;
+                Instantiate(_skillPrefab[SkillCount], skillPoint.position, Quaternion.LookRotation(aimDir, Vector3.up));
+            }
         }
     }
 }

@@ -260,7 +260,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 930989416}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Skills, Assembly-CSharp
         m_MethodName: SkillTurnOn
         m_Mode: 1
@@ -357,7 +357,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2327369944475654136}
-  - component: {fileID: 930989416}
   - component: {fileID: 1760409042}
   - component: {fileID: 1784728632}
   - component: {fileID: 1784728636}
@@ -389,37 +388,6 @@ RectTransform:
   m_AnchoredPosition: {x: -286.5, y: 0}
   m_SizeDelta: {x: 65, y: 65}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &930989416
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2327369944475654135}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af083be48d0f077499b25b702633663d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SkillCount: 0
-  IsCooldownAfterUse: 0
-  _manaCostText: {fileID: 4152703291509040514}
-  ManaControl: {fileID: 0}
-  ManaCost: 0
-  _keyCode: 49
-  SkillSound: {fileID: 0}
-  SkillImage: {fileID: 2327369944114809132}
-  BackSkillImage: {fileID: 3717590969440727906}
-  SkillInfo:
-  - {fileID: 11400000, guid: 5ad1865b1af45264d9a5fa0c241bad68, type: 2}
-  IsCanUseSkill: 1
-  SkillManaCost: {fileID: 1784728632}
-  _playerAnimatorManager: {fileID: 0}
-  _mushroomParticles:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 3124501762288284568, guid: f8db885774079c842a13eef8bd383f4d, type: 3}
-  _targetTransform: {fileID: 0}
 --- !u!114 &1760409042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -473,7 +441,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ab0a95e1c0ffd1489075cee2df4f20a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SkillCount: 7
+  SkillCount: 25
   IsCooldownAfterUse: 0
   _manaCostText: {fileID: 4152703291509040514}
   ManaControl: {fileID: 0}
@@ -507,6 +475,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: dfb34ef76b751e14ba7a597a20aa5e58, type: 2}
   - {fileID: 11400000, guid: f3cdeb274c7463a40bcd3c31d3674380, type: 2}
   - {fileID: 11400000, guid: 30f80c77613054044ba2786f009f849b, type: 2}
+  - {fileID: 11400000, guid: 5ad1865b1af45264d9a5fa0c241bad68, type: 2}
+  - {fileID: 11400000, guid: 4aed8b00c7249d0428a9b4036d1db69f, type: 2}
   IsCanUseSkill: 1
   SkillManaCost: {fileID: 1784728632}
   _skillCastPrefab:
@@ -534,6 +504,8 @@ MonoBehaviour:
   - {fileID: 7606108794216414597, guid: e205bbff0d2930e4aac480381ef05209, type: 3}
   - {fileID: 6010434030211556052, guid: 86fb4dcd3ac9b8b479b5bae451719ebd, type: 3}
   - {fileID: 5270247380590987932, guid: 389455650b8305d4dab53a6e35b1c7a4, type: 3}
+  - {fileID: 5373055807955792648, guid: 17655ea300ef1b54f924a0441ff7a83e, type: 3}
+  - {fileID: 1088404570457305704, guid: 5f31568957c072f42ba889af21535cf6, type: 3}
   _skillPrefab:
   - {fileID: 7603222385795505173, guid: 9a352af6199b5c14b88e87db8307953a, type: 3}
   - {fileID: 1485987801625442810, guid: 27ecca73bc94c814da0bd66e81effa5e, type: 3}
@@ -559,15 +531,17 @@ MonoBehaviour:
   - {fileID: 3594099513468408576, guid: 45fcf02e16a6dcb428f32b2ecabb9e22, type: 3}
   - {fileID: 1171235918528847832, guid: 0257071778e036e4081d4aeadae38c08, type: 3}
   - {fileID: 1171235918528847832, guid: ee5eb2045b6563744a0958a5e876b38f, type: 3}
+  - {fileID: 2998158816730532814, guid: f8db885774079c842a13eef8bd383f4d, type: 3}
+  - {fileID: 6741699561955832713, guid: 946c4a2815e957e4da1733de04d2fc04, type: 3}
   _castPoint:
   - {fileID: 0}
   _skillPoint:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
   _playerAnimatorManager: {fileID: 0}
-  _buffIconsPanel: {fileID: 0}
-  _buffIconsPrefab: {fileID: 853114825903121135, guid: 7e5aa78f60ad0764eb09a6c25cde4db4, type: 3}
+  _buffIconSpawner: {fileID: 0}
 --- !u!1 &2727800793510971200
 GameObject:
   m_ObjectHideFlags: 0

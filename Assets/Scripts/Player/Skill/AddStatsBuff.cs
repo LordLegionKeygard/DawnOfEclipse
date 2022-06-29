@@ -21,6 +21,7 @@ public class AddStatsBuff : BaseBuff
     [System.Serializable]
     public enum StatAttribute
     {
+        None = -1,
         Strength = 0,
         Dexterity = 1,
         Constitution = 2,

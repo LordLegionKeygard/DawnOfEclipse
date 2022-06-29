@@ -1088,13 +1088,13 @@ ModelImporter:
     second: M_Hit_from_front
   - first:
       74: 7400054
-    second: Skill - R2
+    second: Cast - Circle
   - first:
       74: 7400056
     second: M_staff_block
   - first:
       74: 7400058
-    second: Cast - R2
+    second: Cast - Ground
   - first:
       74: 7400060
     second: M_staff_Hit_stright_down
@@ -1419,7 +1419,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Skill - R2
+      name: Cast - Circle
       takeName: 
       internalID: 0
       firstFrame: 1065
@@ -1442,14 +1442,7 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events:
-      - time: 0.13238245
-        functionName: SkillR2
-        data: 
-        objectReferenceParameter: {instanceID: 0}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
+      events: []
       transformMask: []
       maskType: 0
       maskSource: {instanceID: 0}
@@ -1484,7 +1477,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Cast - R2
+      name: Cast - Ground
       takeName: 
       internalID: 0
       firstFrame: 1172
@@ -1507,21 +1500,7 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events:
-      - time: 0.3890006
-        functionName: CastSkillR2
-        data: 
-        objectReferenceParameter: {instanceID: 0}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
-      - time: 0.44630873
-        functionName: CheckManaCostR2
-        data: 
-        objectReferenceParameter: {instanceID: 0}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
+      events: []
       transformMask: []
       maskType: 0
       maskSource: {instanceID: 0}

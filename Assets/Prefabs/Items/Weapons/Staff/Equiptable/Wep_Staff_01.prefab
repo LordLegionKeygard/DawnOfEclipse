@@ -292,7 +292,6 @@ GameObject:
   - component: {fileID: 5414112098383969141}
   - component: {fileID: 937638391945594378}
   - component: {fileID: 1297623083186920951}
-  - component: {fileID: 3495152953410447473}
   - component: {fileID: -2767657570730676386}
   m_Layer: 13
   m_Name: Wep_Staff_01
@@ -365,29 +364,6 @@ MonoBehaviour:
   MageCritChance: 0
   _baseMagCritChance: 8
   BaseWeaponMagicDamage: 10
---- !u!114 &3495152953410447473
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5883706818529115560}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a89bbfdc41b1d342881fba9c4dc5053, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _skillR1CastPrefab: {fileID: 871843360058366006, guid: bfe4ea4a2b471f54086efa63efd189ad, type: 3}
-  _skillR1Prefab: {fileID: 8427150479695254765, guid: 6ba1ceb2b08dea44294e83de384466f2, type: 3}
-  _castR1Point: {fileID: 0}
-  _skillR1Point: {fileID: 0}
-  _manaCostR1: 5
-  _skillR2CastPrefab: {fileID: 539356799769477859, guid: 9c42bf8dbb48d2049945401eacdb3426, type: 3}
-  _skillR2Prefab: {fileID: 6741699561955832713, guid: 946c4a2815e957e4da1733de04d2fc04, type: 3}
-  _castR2Point: {fileID: 0}
-  _skillR2Point: {fileID: 0}
-  _manaCostR2: 10
-  _skillFirePoints: {fileID: 0}
 --- !u!54 &-2767657570730676386
 Rigidbody:
   m_ObjectHideFlags: 0

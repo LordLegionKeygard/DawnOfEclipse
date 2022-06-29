@@ -105,28 +105,6 @@ public class PlayerAnimatorManager : MonoBehaviour
         CustomEvents.FireEnabledDamageCollider(false);
     }
 
-    public void CastSkillR1()
-    {
-        CustomEvents.FireUseSkillR1(true);
-    }
-
-    public void CastSkillR2()
-    {
-        CustomEvents.FireUseSkillR2(true);
-    }
-
-    public void SkillR1()
-    {
-        CustomEvents.FireUseSkillR1(false);
-        CustomEvents.FireUseMana(StaffManaCost.ManaR1);
-    }
-
-    public void SkillR2()
-    {
-        CustomEvents.FireUseSkillR2(false);
-        CustomEvents.FireUseMana(StaffManaCost.ManaR2);
-    }
-
     public void AimArrow()
     {
         CustomEvents.FireShootArrow(false);

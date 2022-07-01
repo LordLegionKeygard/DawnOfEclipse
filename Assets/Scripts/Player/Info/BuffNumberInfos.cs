@@ -27,4 +27,5 @@ public class BuffNumberInfos: MonoBehaviour
     // 17 MeadPotionBuff
     // 18 WinePotionBuff
     // 19 AlePotionBuff
+    // 20 RumPotionBuff
 }

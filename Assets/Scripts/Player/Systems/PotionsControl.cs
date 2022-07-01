@@ -90,6 +90,10 @@ public class PotionsControl : MonoBehaviour
                 CustomEvents.FireStatBuff(2, 5);
                 _buffIconSpawner.SpawnBuffIcon(_potionsImage[potion], 60, 19);
                 break;
+            case (6): //rum
+                CustomEvents.FireStatBuff(3, 5);
+                _buffIconSpawner.SpawnBuffIcon(_potionsImage[potion], 60, 20);
+                break;
         }
     }
 

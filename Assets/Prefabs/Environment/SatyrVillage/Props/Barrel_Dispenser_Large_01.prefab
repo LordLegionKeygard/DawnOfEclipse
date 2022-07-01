@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 33219038942632294}
   - component: {fileID: 23558622996715412}
   - component: {fileID: 64365534647900030}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Barrel_Dispenser_Large_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

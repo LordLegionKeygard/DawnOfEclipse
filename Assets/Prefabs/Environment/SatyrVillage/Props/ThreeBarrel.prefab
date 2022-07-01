@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 424975397937196588}
   - component: {fileID: 416167493575027834}
   - component: {fileID: 393171756633516210}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Dispenser_Small_Dark
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -111,7 +111,7 @@ GameObject:
   - component: {fileID: 2199934761675359362}
   - component: {fileID: 2208149187491038932}
   - component: {fileID: 2168129714021548572}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Dispenser_Small_01 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -210,7 +210,7 @@ GameObject:
   - component: {fileID: 2975646301914733447}
   - component: {fileID: 2983855161578625489}
   - component: {fileID: 3015896578677136665}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Dispenser_Small_Dark (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -306,7 +306,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2655551672385129739}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ThreeBarrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}

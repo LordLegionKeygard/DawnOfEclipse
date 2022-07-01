@@ -441,7 +441,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ab0a95e1c0ffd1489075cee2df4f20a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SkillCount: 25
+  SkillCount: 26
   IsCooldownAfterUse: 0
   _manaCostText: {fileID: 4152703291509040514}
   ManaControl: {fileID: 0}
@@ -477,6 +477,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 30f80c77613054044ba2786f009f849b, type: 2}
   - {fileID: 11400000, guid: 5ad1865b1af45264d9a5fa0c241bad68, type: 2}
   - {fileID: 11400000, guid: 4aed8b00c7249d0428a9b4036d1db69f, type: 2}
+  - {fileID: 11400000, guid: b79ac46bca9711749b349ccb718872a1, type: 2}
   IsCanUseSkill: 1
   SkillManaCost: {fileID: 1784728632}
   _skillCastPrefab:
@@ -506,6 +507,7 @@ MonoBehaviour:
   - {fileID: 5270247380590987932, guid: 389455650b8305d4dab53a6e35b1c7a4, type: 3}
   - {fileID: 5373055807955792648, guid: 17655ea300ef1b54f924a0441ff7a83e, type: 3}
   - {fileID: 1088404570457305704, guid: 5f31568957c072f42ba889af21535cf6, type: 3}
+  - {fileID: 539356799769477859, guid: 9c42bf8dbb48d2049945401eacdb3426, type: 3}
   _skillPrefab:
   - {fileID: 7603222385795505173, guid: 9a352af6199b5c14b88e87db8307953a, type: 3}
   - {fileID: 1485987801625442810, guid: 27ecca73bc94c814da0bd66e81effa5e, type: 3}
@@ -533,7 +535,9 @@ MonoBehaviour:
   - {fileID: 1171235918528847832, guid: ee5eb2045b6563744a0958a5e876b38f, type: 3}
   - {fileID: 2998158816730532814, guid: f8db885774079c842a13eef8bd383f4d, type: 3}
   - {fileID: 6741699561955832713, guid: 946c4a2815e957e4da1733de04d2fc04, type: 3}
+  - {fileID: 4590418258890067650, guid: 54c5a113036b07e4ebf2efefe385b019, type: 3}
   _castPoint:
+  - {fileID: 0}
   - {fileID: 0}
   _skillPoint:
   - {fileID: 0}

@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 4072745511115580}
   - component: {fileID: 33436403736202298}
   - component: {fileID: 23369828600160032}
-  - component: {fileID: 64518983641954468}
-  m_Layer: 0
+  - component: {fileID: 2730215024968555595}
+  m_Layer: 3
   m_Name: Bar_Tap_Preset_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -91,8 +91,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &64518983641954468
-MeshCollider:
+--- !u!65 &2730215024968555595
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -101,10 +101,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 43765243283803870, guid: 276f3590d2d65434eb249142203c25a5, type: 2}
+  serializedVersion: 2
+  m_Size: {x: 0.23464514, y: 0.45252112, z: 1.4226645}
+  m_Center: {x: 0.00012221187, y: 0.22522311, z: 0}
 --- !u!1 &1327584491156022
 GameObject:
   m_ObjectHideFlags: 0
@@ -116,7 +115,7 @@ GameObject:
   - component: {fileID: 4509707618421876}
   - component: {fileID: 33656613474243782}
   - component: {fileID: 23438449307391710}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SM_Prop_Bar_Tap_Preset_01_Handle_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -199,7 +198,7 @@ GameObject:
   - component: {fileID: 4038141208530544}
   - component: {fileID: 33380722564128386}
   - component: {fileID: 23646037673125414}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SM_Prop_Bar_Tap_Preset_01_Handle_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -282,7 +281,7 @@ GameObject:
   - component: {fileID: 4627993502505560}
   - component: {fileID: 33800377753749076}
   - component: {fileID: 23461605871035972}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SM_Prop_Bar_Tap_Preset_01_Handle_7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -365,7 +364,7 @@ GameObject:
   - component: {fileID: 4143737309935052}
   - component: {fileID: 33454140206837106}
   - component: {fileID: 23476715947279820}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SM_Prop_Bar_Tap_Preset_01_Handle_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -448,7 +447,7 @@ GameObject:
   - component: {fileID: 4178315351606908}
   - component: {fileID: 33619906433847072}
   - component: {fileID: 23985549820440230}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SM_Prop_Bar_Tap_Preset_01_Handle_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -531,7 +530,7 @@ GameObject:
   - component: {fileID: 4428106505041618}
   - component: {fileID: 33448248140784464}
   - component: {fileID: 23860149859234948}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SM_Prop_Bar_Tap_Preset_01_Handle_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -614,7 +613,7 @@ GameObject:
   - component: {fileID: 4234908285529384}
   - component: {fileID: 33864386365099012}
   - component: {fileID: 23812943612530646}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SM_Prop_Bar_Tap_Preset_01_Handle_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}

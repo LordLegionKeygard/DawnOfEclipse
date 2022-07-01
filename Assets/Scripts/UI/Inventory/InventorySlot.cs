@@ -115,6 +115,11 @@ public class InventorySlot : Slots
                         CustomEvents.FireUsePotion(5);
                         break;
                     }
+                case ("RumPotion"):
+                    {
+                        CustomEvents.FireUsePotion(6);
+                        break;
+                    }
             }
             if (_amount == 0)
             {

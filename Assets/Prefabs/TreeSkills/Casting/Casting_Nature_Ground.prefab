@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 697362107285141608}
   - component: {fileID: 3571482747576963789}
   m_Layer: 0
-  m_Name: Casting_Dark_Ground
+  m_Name: Casting_Nature_Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -57,7 +57,7 @@ ParticleSystem:
   startDelay:
     serializedVersion: 2
     minMaxState: 0
-    scalar: 0
+    scalar: 0.5
     minScalar: 0
     maxCurve:
       serializedVersion: 2
@@ -4869,7 +4869,7 @@ ParticleSystem:
   startDelay:
     serializedVersion: 2
     minMaxState: 0
-    scalar: 0
+    scalar: 0.5
     minScalar: 0
     maxCurve:
       serializedVersion: 2

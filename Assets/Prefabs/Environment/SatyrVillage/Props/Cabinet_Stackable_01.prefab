@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4997122929739782}
   - component: {fileID: 33456069222768332}
   - component: {fileID: 23050757664522884}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Door_Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,8 +94,8 @@ GameObject:
   - component: {fileID: 4896661403461494}
   - component: {fileID: 33730524444705488}
   - component: {fileID: 23824025387647000}
-  - component: {fileID: 64540368399683072}
-  m_Layer: 0
+  - component: {fileID: 658029640926716343}
+  m_Layer: 3
   m_Name: Cabinet_Stackable_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -171,8 +171,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &64540368399683072
-MeshCollider:
+--- !u!65 &658029640926716343
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -181,10 +181,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 43634224088969628, guid: dbd297f13db60ac449791c02ca9a6a55, type: 2}
+  serializedVersion: 2
+  m_Size: {x: 1.4445697, y: 0.91714567, z: 0.7205866}
+  m_Center: {x: -0.0013962392, y: 0.45857283, z: 0.023929989}
 --- !u!1 &1683926972889312
 GameObject:
   m_ObjectHideFlags: 0
@@ -196,7 +195,7 @@ GameObject:
   - component: {fileID: 4459088492702196}
   - component: {fileID: 33610219920472386}
   - component: {fileID: 23752776444284022}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Door_Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -279,7 +278,7 @@ GameObject:
   - component: {fileID: 7005605516182525958}
   - component: {fileID: 2729419110090439902}
   - component: {fileID: 1318476503872688770}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Door_Handle_Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -362,7 +361,7 @@ GameObject:
   - component: {fileID: 9185163728013715764}
   - component: {fileID: 1373570235016882128}
   - component: {fileID: 5905343194451835803}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Door_Handle_Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}

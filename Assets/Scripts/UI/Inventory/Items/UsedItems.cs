@@ -21,5 +21,5 @@ public enum PotionType
     Mead = 3, //медовуха
     Wine = 4, //вино
     Ale = 5, //Эль
-
+    Rum = 6, //Ром
 }

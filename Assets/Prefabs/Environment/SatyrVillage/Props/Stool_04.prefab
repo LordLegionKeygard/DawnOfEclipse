@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 33500462131291696}
   - component: {fileID: 23025804182569742}
   - component: {fileID: 64064425101843272}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Stool_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62,8 +62,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4b0766215d9a3304baae5e1f2883fe11, type: 2}
-  - {fileID: 2100000, guid: 317f51584b4029a4fa11492edb6c2d37, type: 2}
+  - {fileID: 2100000, guid: 6818d804e8b345642bd77b40d17b3081, type: 2}
+  - {fileID: 2100000, guid: 6818d804e8b345642bd77b40d17b3081, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

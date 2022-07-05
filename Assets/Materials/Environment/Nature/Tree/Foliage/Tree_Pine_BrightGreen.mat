@@ -132,7 +132,7 @@ Material:
     - _LightingMode: 2
     - _Metallic: 0
     - _Mode: 1
-    - _OcclusionStrength: 0.196
+    - _OcclusionStrength: 0.453
     - _Parallax: 0.02
     - _PerspectiveCorrection: 0
     - _QueueOffset: 0
@@ -162,14 +162,14 @@ Material:
     - _ZWrite: 0
     - __dirty: 1
     m_Colors:
-    - _BaseColor: {r: 0.67746305, g: 0.764151, b: 0.630785, a: 1}
+    - _BaseColor: {r: 0.28319687, g: 0.3018868, b: 0.2719829, a: 1}
     - _BendTint: {r: 0.8, g: 0.8, b: 0.8, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _ColorTint: {r: 1, g: 1, b: 1, a: 0}
     - _Emission: {r: 0, g: 0, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 0}
     - _FadeParams: {r: 0, g: 335.4627, b: 0, a: 0}
-    - _HueVariation: {r: 1, g: 1, b: 1, a: 0.15}
+    - _HueVariation: {r: 1, g: 1, b: 1, a: 1}
     - _LODDebugColor: {r: 1, g: 1, b: 1, a: 1}
     - _NormalParams: {r: 0.549, g: 0.546, b: 0.318, a: 0.275}
     - _ScalemapInfluence: {r: 0, g: -0.82, b: 0, a: 0}

@@ -16,6 +16,21 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: BandageBeige
+    second: {fileID: 2100000, guid: abdfba0e0ba205042bcc92452b71d1a5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BandageBrown
+    second: {fileID: 2100000, guid: 88c81e7f011400344b048e3a4c985404, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BootFoot
+    second: {fileID: 2100000, guid: 32655c50031bcbe428cac3051d2047a3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Hoove
     second: {fileID: 2100000, guid: 11aa6be4352cf8e488cd839291a3eac4, type: 2}
   - first:

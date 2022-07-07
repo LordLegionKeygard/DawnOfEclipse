@@ -26,8 +26,18 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Body
+    second: {fileID: 2100000, guid: e5098a2b0d7d6144994f5ed04de53c2b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: BootFoot
     second: {fileID: 2100000, guid: 32655c50031bcbe428cac3051d2047a3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hair
+    second: {fileID: 2100000, guid: c251a009aa87a0a40b50f441f53a2d06, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -58,6 +68,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: MetalLight
     second: {fileID: 2100000, guid: 877317b095d092b418fe87667a412bb1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SatyrLegsFur
+    second: {fileID: 2100000, guid: 7f0376306ee0dab45ba2a02c800e8f30, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule

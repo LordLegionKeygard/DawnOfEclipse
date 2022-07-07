@@ -17,6 +17,7 @@ MonoBehaviour:
   IsDefaultItem: 1
   IsStackable: 0
   IsUsedItem: 0
+  IsTome: 0
   IsSetEffect: 0
   Name: []
   ItemType: []
@@ -29,15 +30,15 @@ MonoBehaviour:
   Meshes:
   - {fileID: 6584968449031010591, guid: d565afb78ec82324fa3cff246294c743, type: 3}
   - {fileID: 3693705191496711654, guid: df712949420ebec409cb2ee9fb32c9ea, type: 3}
-  - {fileID: 6584968449031010591, guid: d565afb78ec82324fa3cff246294c743, type: 3}
-  - {fileID: 3693705191496711654, guid: df712949420ebec409cb2ee9fb32c9ea, type: 3}
+  - {fileID: 6584968449031010591, guid: 97d28355192428e4da6e92a0d3fd61d5, type: 3}
+  - {fileID: 3693705191496711654, guid: acfdaa1038a66eb48881750289d7e1a9, type: 3}
   prefab: {fileID: 0}
   hatNumber: 0
   noHair: 0
   canChangehead: 0
   weapon: 0
   twoHandedWeapon: 0
-  shield: 0
+  extraItem: 0
   shieldBlockArmorModifier: 0
   FirstAttachmentNumber: 0
   SecondAttachmentNumber: 0

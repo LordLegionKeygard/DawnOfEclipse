@@ -17,6 +17,7 @@ MonoBehaviour:
   IsDefaultItem: 0
   IsStackable: 0
   IsUsedItem: 0
+  IsTome: 0
   IsSetEffect: 1
   Name:
   - Demon Plate Armor
@@ -34,8 +35,8 @@ MonoBehaviour:
   armorModifier: 46
   MagicArmorModifier: 0
   Meshes:
-  - {fileID: 7231149437509089296, guid: a3a45749f57cb6144952623b7b0f3446, type: 3}
-  - {fileID: 7231149437509089296, guid: a3a45749f57cb6144952623b7b0f3446, type: 3}
+  - {fileID: 4444136083531306234, guid: a3a45749f57cb6144952623b7b0f3446, type: 3}
+  - {fileID: 4444136083531306234, guid: a3a45749f57cb6144952623b7b0f3446, type: 3}
   - {fileID: 7231149437509089296, guid: 676c5663932a8824ab415fcbb708b2c1, type: 3}
   - {fileID: 7231149437509089296, guid: 676c5663932a8824ab415fcbb708b2c1, type: 3}
   prefab: {fileID: 0}
@@ -44,7 +45,7 @@ MonoBehaviour:
   canChangehead: 0
   weapon: 0
   twoHandedWeapon: 0
-  shield: 0
+  extraItem: 0
   shieldBlockArmorModifier: 0
   FirstAttachmentNumber: 0
   SecondAttachmentNumber: 0

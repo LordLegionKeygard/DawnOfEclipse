@@ -17,6 +17,7 @@ MonoBehaviour:
   IsDefaultItem: 0
   IsStackable: 0
   IsUsedItem: 0
+  IsTome: 0
   IsSetEffect: 1
   Name:
   - Fanatic Tunic
@@ -33,8 +34,8 @@ MonoBehaviour:
   armorModifier: 14
   MagicArmorModifier: 0
   Meshes:
-  - {fileID: 3235181388991344339, guid: a4cdb8365d631ec4894fcc62940d7611, type: 3}
-  - {fileID: 3235181388991344339, guid: a4cdb8365d631ec4894fcc62940d7611, type: 3}
+  - {fileID: 3620737385623202023, guid: a4cdb8365d631ec4894fcc62940d7611, type: 3}
+  - {fileID: 3620737385623202023, guid: a4cdb8365d631ec4894fcc62940d7611, type: 3}
   - {fileID: 3235181388991344339, guid: c93d57ec3eefa9e4eaca04cd76273993, type: 3}
   - {fileID: 3235181388991344339, guid: c93d57ec3eefa9e4eaca04cd76273993, type: 3}
   prefab: {fileID: 0}
@@ -43,7 +44,7 @@ MonoBehaviour:
   canChangehead: 0
   weapon: 0
   twoHandedWeapon: 0
-  shield: 0
+  extraItem: 0
   shieldBlockArmorModifier: 0
   FirstAttachmentNumber: 0
   SecondAttachmentNumber: 0

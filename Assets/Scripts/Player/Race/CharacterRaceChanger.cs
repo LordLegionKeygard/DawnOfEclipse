@@ -4,22 +4,22 @@ using UnityEngine;
 
 public class CharacterRaceChanger : MonoBehaviour
 {
-    [SerializeField] private Material _characterMaterial;
+    [SerializeField] private Material _hair;
+    [SerializeField] private Material _satyrSkin;
+    [SerializeField] private Material _satyrMaleBody;
+    [SerializeField] private Material _mushroomSkin;
     [SerializeField] private GameObject[] _heads;
-    [SerializeField] private GameObject[] _defaultLegs;
 
     [Header("SatyrRace_____________________________________________")]
 
     [SerializeField] private GameObject[] _satyrParts;
     [SerializeField] private GameObject[] _satyrHairStyles;
-    [SerializeField] private MeshFilter[] _satyrMasks;
-    [SerializeField] private MeshFilter[] _satyrHorns;
-    [SerializeField] private MeshFilter _satyrMask;
-    [SerializeField] private MeshFilter _satyrHorn;
+    [SerializeField] private GameObject[] _satyrMasks;
+    [SerializeField] private GameObject[] _satyrHorns;
     [SerializeField] private Color[] _hairSatyrColorPalletes;
     [SerializeField] private Color[] _skinSatyrColorPalletes;
     [SerializeField] private Color[] _eyeSatyrColorPalletes;
-    [SerializeField] private Material _maskAndHornedMaterial;
+    [SerializeField] private Material _satyrMaskEyes;
 
     [Header("MushroomRace___________________________________________")]
 
@@ -41,29 +41,25 @@ public class CharacterRaceChanger : MonoBehaviour
         {
             case 0:
                 _satyrParts[0].SetActive(true);
-                _satyrParts[1].SetActive(true);
-                _satyrParts[2].SetActive(true);
-                _defaultLegs[0].SetActive(false);
-                _defaultLegs[1].SetActive(false);
 
                 _satyrHairStyles[CharacterInformation.Hairstyle].SetActive(true);
-                _satyrMask.sharedMesh = _satyrMasks[CharacterInformation.Mask].sharedMesh;
-                _satyrHorn.sharedMesh = _satyrHorns[CharacterInformation.Horns].sharedMesh;
-                _characterMaterial.SetColor("_Color_Hair", _hairSatyrColorPalletes[CharacterInformation.HairColor]);
-                _characterMaterial.SetColor("_Color_Skin", _skinSatyrColorPalletes[CharacterInformation.SkinColor]);
-                _characterMaterial.SetColor("_Color_Stubble", _skinSatyrColorPalletes[CharacterInformation.SkinColor]);
-                _maskAndHornedMaterial.SetColor("_EmissionColor", _eyeSatyrColorPalletes[CharacterInformation.EyeColor] * 10);
+                _satyrMasks[CharacterInformation.Mask].SetActive(true);
+                _satyrHorns[CharacterInformation.Horns].SetActive(true);
+                _hair.color = _hairSatyrColorPalletes[CharacterInformation.HairColor];
+                _satyrMaleBody.color = _skinSatyrColorPalletes[CharacterInformation.SkinColor];
+                _satyrSkin.color = _skinSatyrColorPalletes[CharacterInformation.SkinColor];
+                _satyrMaskEyes.SetColor("_EmissionColor", _eyeSatyrColorPalletes[CharacterInformation.EyeColor] * 10);
 
                 if (CharacterInformation.Gender == 0)
                 {
-                    _satyrParts[3].SetActive(true);
-                    _satyrParts[4].SetActive(true);
+                    _satyrParts[1].SetActive(true);
+                    _satyrParts[2].SetActive(true);
                     _heads[0].SetActive(true);
                 }
                 if (CharacterInformation.Gender == 2)
                 {
-                    _satyrParts[5].SetActive(true);
-                    _satyrParts[6].SetActive(true);
+                    _satyrParts[3].SetActive(true);
+                    _satyrParts[4].SetActive(true);
                     _heads[1].SetActive(true);
                 }
                 break;
@@ -71,7 +67,7 @@ public class CharacterRaceChanger : MonoBehaviour
                 _mushroomParts[0].SetActive(true);
                 _mushroomParts[1].SetActive(true);
                 _mushroomHeads[CharacterInformation.Cap].SetActive(true);
-                _characterMaterial.SetColor("_Color_Skin", _skinMushroomColorPalletes[CharacterInformation.SkinColor]);
+                _hair.SetColor("_Color_Skin", _skinMushroomColorPalletes[CharacterInformation.SkinColor]);
                 _mushroomRaceMaterial.SetColor("_Color_Skin", _skinMushroomColorPalletes[CharacterInformation.SkinColor]);
                 _mushroomRaceMaterial.SetColor("_Color_Eyes", _eyeMushroomColorPalletes[CharacterInformation.EyeColor]);
 

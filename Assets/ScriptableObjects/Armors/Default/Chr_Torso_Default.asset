@@ -17,6 +17,7 @@ MonoBehaviour:
   IsDefaultItem: 1
   IsStackable: 0
   IsUsedItem: 0
+  IsTome: 0
   IsSetEffect: 0
   Name: []
   ItemType: []
@@ -27,8 +28,8 @@ MonoBehaviour:
   armorModifier: 20
   MagicArmorModifier: 0
   Meshes:
-  - {fileID: 5621348592811594746, guid: e86a8b12d56d8e34db35e90e9cd3b512, type: 3}
-  - {fileID: 5621348592811594746, guid: e86a8b12d56d8e34db35e90e9cd3b512, type: 3}
+  - {fileID: 2600877417996468487, guid: e86a8b12d56d8e34db35e90e9cd3b512, type: 3}
+  - {fileID: 2600877417996468487, guid: e86a8b12d56d8e34db35e90e9cd3b512, type: 3}
   - {fileID: 5621348592811594746, guid: 272c8c0c109c43847b6e359f44a3424d, type: 3}
   - {fileID: 5621348592811594746, guid: 272c8c0c109c43847b6e359f44a3424d, type: 3}
   prefab: {fileID: 0}
@@ -37,7 +38,7 @@ MonoBehaviour:
   canChangehead: 0
   weapon: 0
   twoHandedWeapon: 0
-  shield: 0
+  extraItem: 0
   shieldBlockArmorModifier: 0
   FirstAttachmentNumber: 0
   SecondAttachmentNumber: 0

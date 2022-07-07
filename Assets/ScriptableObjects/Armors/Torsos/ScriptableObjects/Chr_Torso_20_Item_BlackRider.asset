@@ -17,6 +17,7 @@ MonoBehaviour:
   IsDefaultItem: 0
   IsStackable: 0
   IsUsedItem: 0
+  IsTome: 0
   IsSetEffect: 1
   Name:
   - Black Rider Breastplate
@@ -34,8 +35,8 @@ MonoBehaviour:
   armorModifier: 69
   MagicArmorModifier: 0
   Meshes:
-  - {fileID: 9083780626833321126, guid: fba28c4fefc0ec542874358fb71e8c38, type: 3}
-  - {fileID: 9083780626833321126, guid: fba28c4fefc0ec542874358fb71e8c38, type: 3}
+  - {fileID: 3623252395394823215, guid: fba28c4fefc0ec542874358fb71e8c38, type: 3}
+  - {fileID: 3623252395394823215, guid: fba28c4fefc0ec542874358fb71e8c38, type: 3}
   - {fileID: 9083780626833321126, guid: 7cfdcfddf17cff74bb4c4abeaf2d94c4, type: 3}
   - {fileID: 9083780626833321126, guid: 7cfdcfddf17cff74bb4c4abeaf2d94c4, type: 3}
   prefab: {fileID: 0}
@@ -44,7 +45,7 @@ MonoBehaviour:
   canChangehead: 0
   weapon: 0
   twoHandedWeapon: 0
-  shield: 0
+  extraItem: 0
   shieldBlockArmorModifier: 0
   FirstAttachmentNumber: 0
   SecondAttachmentNumber: 0

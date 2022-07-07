@@ -17,6 +17,7 @@ MonoBehaviour:
   IsDefaultItem: 0
   IsStackable: 0
   IsUsedItem: 0
+  IsTome: 0
   IsSetEffect: 1
   Name:
   - Manticore Skin Shirt
@@ -34,8 +35,8 @@ MonoBehaviour:
   armorModifier: 18
   MagicArmorModifier: 0
   Meshes:
-  - {fileID: 3832442489594104625, guid: 4de9c96b6bd60d14c90883d564914559, type: 3}
-  - {fileID: 3832442489594104625, guid: 4de9c96b6bd60d14c90883d564914559, type: 3}
+  - {fileID: 8818782243112149508, guid: 4de9c96b6bd60d14c90883d564914559, type: 3}
+  - {fileID: 8818782243112149508, guid: 4de9c96b6bd60d14c90883d564914559, type: 3}
   - {fileID: 3832442489594104625, guid: fa0d50594b5dd90429ce5b7156392f73, type: 3}
   - {fileID: 3832442489594104625, guid: fa0d50594b5dd90429ce5b7156392f73, type: 3}
   prefab: {fileID: 0}
@@ -44,7 +45,7 @@ MonoBehaviour:
   canChangehead: 0
   weapon: 0
   twoHandedWeapon: 0
-  shield: 0
+  extraItem: 0
   shieldBlockArmorModifier: 0
   FirstAttachmentNumber: 0
   SecondAttachmentNumber: 0

@@ -112,50 +112,69 @@ ModelImporter:
       has import animation warnings that might lower retargeting quality:\nNote:
       Activate translation DOF on avatar to improve retargeting quality.\n\t'Spine_01'
       has scale animation that will be discarded.\n\t'Spine_02' has scale animation
-      that will be discarded.\n\t'Spine_03' has scale animation that will be discarded.\n\t'Neck'
-      has translation animation that will be discarded.\n\t'Neck' has scale animation
-      that will be discarded.\n\t'Head' has translation animation that will be discarded.\n\t'Head'
-      has scale animation that will be discarded.\n\t'Head_Attachment' has scale
-      animation that will be discarded.\n\t'Eyes' has scale animation that will be
-      discarded.\n\t'Eyebrows' has scale animation that will be discarded.\n\t'Clavicle_L'
+      that will be discarded.\n\t'Spine_03' has scale animation that will be discarded.\n\t'Clavicle_L'
       has translation animation that will be discarded.\n\t'Clavicle_L' has scale
-      animation that will be discarded.\n\t'Shoulder_L' has scale animation that
-      will be discarded.\n\t'Elbow_L' has translation animation that will be discarded.\n\t'Elbow_L'
-      has scale animation that will be discarded.\n\t'Hand_L' has translation animation
-      that will be discarded.\n\t'Hand_L' has scale animation that will be discarded.\n\t'IndexFinger_01'
-      has scale animation that will be discarded.\n\t'IndexFinger_02' has scale animation
-      that will be discarded.\n\t'IndexFinger_03' has scale animation that will be
-      discarded.\n\t'Finger_01' is inbetween humanoid transforms and has rotation
-      animation that will be discarded.\n\t'Finger_01' has scale animation that will
-      be discarded.\n\t'Finger_02' has scale animation that will be discarded.\n\t'Finger_03'
-      has scale animation that will be discarded.\n\t'Finger_04' has scale animation
-      that will be discarded.\n\t'Thumb_01' has scale animation that will be discarded.\n\t'Thumb_02'
-      has scale animation that will be discarded.\n\t'Thumb_03' has scale animation
+      animation that will be discarded.\n\t'Shoulder_L' has translation animation
+      that will be discarded.\n\t'Shoulder_L' has scale animation that will be discarded.\n\t'Elbow_L'
+      has translation animation that will be discarded.\n\t'Elbow_L' has scale animation
+      that will be discarded.\n\t'Hand_L' has translation animation that will be
+      discarded.\n\t'Hand_L' has scale animation that will be discarded.\n\t'IndexFinger_01'
+      has translation animation that will be discarded.\n\t'IndexFinger_01' has scale
+      animation that will be discarded.\n\t'IndexFinger_02' has translation animation
+      that will be discarded.\n\t'IndexFinger_02' has scale animation that will be
+      discarded.\n\t'IndexFinger_03' has translation animation that will be discarded.\n\t'IndexFinger_03'
+      has scale animation that will be discarded.\n\t'Finger_01' has translation
+      animation that will be discarded.\n\t'Finger_01' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\t'Finger_01' has scale
+      animation that will be discarded.\n\t'Finger_02' has translation animation
+      that will be discarded.\n\t'Finger_02' has scale animation that will be discarded.\n\t'Finger_03'
+      has translation animation that will be discarded.\n\t'Finger_03' has scale
+      animation that will be discarded.\n\t'Finger_04' has translation animation
+      that will be discarded.\n\t'Finger_04' has scale animation that will be discarded.\n\t'Thumb_01'
+      has translation animation that will be discarded.\n\t'Thumb_01' has scale animation
+      that will be discarded.\n\t'Thumb_02' has translation animation that will be
+      discarded.\n\t'Thumb_02' has scale animation that will be discarded.\n\t'Thumb_03'
+      has translation animation that will be discarded.\n\t'Thumb_03' has scale animation
       that will be discarded.\n\t'Clavicle_R' has translation animation that will
       be discarded.\n\t'Clavicle_R' has scale animation that will be discarded.\n\t'Shoulder_R'
-      has scale animation that will be discarded.\n\t'Elbow_R' has translation animation
-      that will be discarded.\n\t'Elbow_R' has scale animation that will be discarded.\n\t'Hand_R'
+      has translation animation that will be discarded.\n\t'Shoulder_R' has scale
+      animation that will be discarded.\n\t'Elbow_R' has translation animation that
+      will be discarded.\n\t'Elbow_R' has scale animation that will be discarded.\n\t'Hand_R'
       has translation animation that will be discarded.\n\t'Hand_R' has scale animation
-      that will be discarded.\n\t'IndexFinger_01.001' has scale animation that will
-      be discarded.\n\t'IndexFinger_02.001' has scale animation that will be discarded.\n\t'IndexFinger_03.001'
-      has scale animation that will be discarded.\n\t'Finger_01.001' is inbetween
-      humanoid transforms and has rotation animation that will be discarded.\n\t'Finger_01.001'
-      has scale animation that will be discarded.\n\t'Finger_02.001' has scale animation
-      that will be discarded.\n\t'Finger_03.001' has scale animation that will be
-      discarded.\n\t'Finger_04.001' has scale animation that will be discarded.\n\t'Thumb_01.001'
-      has scale animation that will be discarded.\n\t'Thumb_02.001' has scale animation
-      that will be discarded.\n\t'Thumb_03.001' has scale animation that will be
-      discarded.\n\t'UpperLeg_R' has scale animation that will be discarded.\n\t'LowerLeg_R'
-      has translation animation that will be discarded.\n\t'LowerLeg_R' has scale
-      animation that will be discarded.\n\t'Ankle_R' has translation animation that
-      will be discarded.\n\t'Ankle_R' has scale animation that will be discarded.\n\t'Ball_R'
-      has translation animation that will be discarded.\n\t'Ball_R' has scale animation
-      that will be discarded.\n\t'UpperLeg_L' has scale animation that will be discarded.\n\t'LowerLeg_L'
-      has translation animation that will be discarded.\n\t'LowerLeg_L' has scale
-      animation that will be discarded.\n\t'Ankle_L' has translation animation that
-      will be discarded.\n\t'Ankle_L' has scale animation that will be discarded.\n\t'Ball_L'
-      has translation animation that will be discarded.\n\t'Ball_L' has scale animation
-      that will be discarded.\n"
+      that will be discarded.\n\t'IndexFinger_01.001' has translation animation that
+      will be discarded.\n\t'IndexFinger_01.001' has scale animation that will be
+      discarded.\n\t'IndexFinger_02.001' has translation animation that will be discarded.\n\t'IndexFinger_02.001'
+      has scale animation that will be discarded.\n\t'IndexFinger_03.001' has scale
+      animation that will be discarded.\n\t'Finger_01.001' has translation animation
+      that will be discarded.\n\t'Finger_01.001' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\t'Finger_01.001' has scale
+      animation that will be discarded.\n\t'Finger_02.001' has translation animation
+      that will be discarded.\n\t'Finger_02.001' has scale animation that will be
+      discarded.\n\t'Finger_03.001' has scale animation that will be discarded.\n\t'Finger_04.001'
+      has translation animation that will be discarded.\n\t'Finger_04.001' has scale
+      animation that will be discarded.\n\t'Thumb_01.001' has translation animation
+      that will be discarded.\n\t'Thumb_01.001' has scale animation that will be
+      discarded.\n\t'Thumb_02.001' has translation animation that will be discarded.\n\t'Thumb_02.001'
+      has scale animation that will be discarded.\n\t'Thumb_03.001' has translation
+      animation that will be discarded.\n\t'Thumb_03.001' has scale animation that
+      will be discarded.\n\t'Neck' has translation animation that will be discarded.\n\t'Neck'
+      has scale animation that will be discarded.\n\t'Head' has translation animation
+      that will be discarded.\n\t'Head' has scale animation that will be discarded.\n\t'Eyes'
+      has translation animation that will be discarded.\n\t'Eyes' has scale animation
+      that will be discarded.\n\t'Eyebrows' has translation animation that will be
+      discarded.\n\t'Eyebrows' has scale animation that will be discarded.\n\t'Head_Attachment'
+      has translation animation that will be discarded.\n\t'Head_Attachment' has
+      scale animation that will be discarded.\n\t'UpperLeg_R' has scale animation
+      that will be discarded.\n\t'LowerLeg_R' has translation animation that will
+      be discarded.\n\t'LowerLeg_R' has scale animation that will be discarded.\n\t'Ankle_R'
+      has translation animation that will be discarded.\n\t'Ankle_R' has scale animation
+      that will be discarded.\n\t'Ball_R' has translation animation that will be
+      discarded.\n\t'Ball_R' has scale animation that will be discarded.\n\t'UpperLeg_L'
+      has scale animation that will be discarded.\n\t'LowerLeg_L' has translation
+      animation that will be discarded.\n\t'LowerLeg_L' has scale animation that
+      will be discarded.\n\t'Ankle_L' has translation animation that will be discarded.\n\t'Ankle_L'
+      has scale animation that will be discarded.\n\t'Ball_L' has translation animation
+      that will be discarded.\n\t'Ball_L' has scale animation that will be discarded.\n"
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
@@ -168,7 +187,7 @@ ModelImporter:
     extraExposedTransformPaths: []
     extraUserProperties: []
     clipAnimations: []
-    isReadable: 0
+    isReadable: 1
   meshes:
     lODScreenPercentages: []
     globalScale: 1
@@ -186,7 +205,7 @@ ModelImporter:
     generateSecondaryUV: 0
     useFileUnits: 1
     keepQuads: 0
-    weldVertices: 1
+    weldVertices: 0
     bakeAxisConversion: 0
     preserveHierarchy: 0
     skinWeightsMode: 0
@@ -206,11 +225,11 @@ ModelImporter:
   tangentSpace:
     normalSmoothAngle: 180
     normalImportMode: 1
-    tangentImportMode: 3
-    normalCalculationMode: 4
-    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
-    blendShapeNormalImportMode: 0
-    normalSmoothingSource: 0
+    tangentImportMode: 2
+    normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 2
+    normalSmoothingSource: 3
   referencedClips: []
   importAnimation: 1
   humanDescription:

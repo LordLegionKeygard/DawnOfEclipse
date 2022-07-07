@@ -17,6 +17,7 @@ MonoBehaviour:
   IsDefaultItem: 0
   IsStackable: 0
   IsUsedItem: 0
+  IsTome: 0
   IsSetEffect: 1
   Name:
   - Plated Leather Armor
@@ -34,8 +35,8 @@ MonoBehaviour:
   armorModifier: 32
   MagicArmorModifier: 0
   Meshes:
-  - {fileID: 6266311641721770872, guid: c74888ef6c5fdcb4d92d0f0e51b4f193, type: 3}
-  - {fileID: 6266311641721770872, guid: c74888ef6c5fdcb4d92d0f0e51b4f193, type: 3}
+  - {fileID: 7780214833880847724, guid: c74888ef6c5fdcb4d92d0f0e51b4f193, type: 3}
+  - {fileID: 7780214833880847724, guid: c74888ef6c5fdcb4d92d0f0e51b4f193, type: 3}
   - {fileID: 6266311641721770872, guid: 22b43172fbf15404fb66c4df5af557fa, type: 3}
   - {fileID: 6266311641721770872, guid: 22b43172fbf15404fb66c4df5af557fa, type: 3}
   prefab: {fileID: 0}
@@ -44,7 +45,7 @@ MonoBehaviour:
   canChangehead: 0
   weapon: 0
   twoHandedWeapon: 0
-  shield: 0
+  extraItem: 0
   shieldBlockArmorModifier: 0
   FirstAttachmentNumber: 0
   SecondAttachmentNumber: 0

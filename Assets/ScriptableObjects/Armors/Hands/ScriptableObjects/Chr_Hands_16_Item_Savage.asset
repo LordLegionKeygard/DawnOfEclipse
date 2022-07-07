@@ -17,6 +17,7 @@ MonoBehaviour:
   IsDefaultItem: 0
   IsStackable: 0
   IsUsedItem: 0
+  IsTome: 0
   IsSetEffect: 1
   Name:
   - Savage Gloves
@@ -35,15 +36,15 @@ MonoBehaviour:
   Meshes:
   - {fileID: 2249434364663307367, guid: 16da1faf668a6f540948fa3a37159acc, type: 3}
   - {fileID: 7738966644249594549, guid: 6a83867d1da0e8e4da1b34043da7bca3, type: 3}
-  - {fileID: 2249434364663307367, guid: 16da1faf668a6f540948fa3a37159acc, type: 3}
-  - {fileID: 7738966644249594549, guid: 6a83867d1da0e8e4da1b34043da7bca3, type: 3}
+  - {fileID: 2249434364663307367, guid: b0501095fbc87114b8056f9e3809aa50, type: 3}
+  - {fileID: 7738966644249594549, guid: fbef41310fc310247a32db3725e7986d, type: 3}
   prefab: {fileID: 0}
   hatNumber: 0
   noHair: 0
   canChangehead: 0
   weapon: 0
   twoHandedWeapon: 0
-  shield: 0
+  extraItem: 0
   shieldBlockArmorModifier: 0
   FirstAttachmentNumber: 0
   SecondAttachmentNumber: 0

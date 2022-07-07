@@ -17,6 +17,7 @@ MonoBehaviour:
   IsDefaultItem: 0
   IsStackable: 0
   IsUsedItem: 0
+  IsTome: 0
   IsSetEffect: 1
   Name:
   - Legionary Plate Armor
@@ -33,8 +34,8 @@ MonoBehaviour:
   armorModifier: 90
   MagicArmorModifier: 0
   Meshes:
-  - {fileID: 3012538529602837840, guid: 349ae5e9f074dd14fa94b62027d6db3f, type: 3}
-  - {fileID: 3012538529602837840, guid: 349ae5e9f074dd14fa94b62027d6db3f, type: 3}
+  - {fileID: 7083229381965584215, guid: 349ae5e9f074dd14fa94b62027d6db3f, type: 3}
+  - {fileID: 7083229381965584215, guid: 349ae5e9f074dd14fa94b62027d6db3f, type: 3}
   - {fileID: 3012538529602837840, guid: 38343b52dd30c2349ac157ff783fb4b4, type: 3}
   - {fileID: 3012538529602837840, guid: 38343b52dd30c2349ac157ff783fb4b4, type: 3}
   prefab: {fileID: 0}
@@ -43,7 +44,7 @@ MonoBehaviour:
   canChangehead: 0
   weapon: 0
   twoHandedWeapon: 0
-  shield: 0
+  extraItem: 0
   shieldBlockArmorModifier: 0
   FirstAttachmentNumber: 0
   SecondAttachmentNumber: 0

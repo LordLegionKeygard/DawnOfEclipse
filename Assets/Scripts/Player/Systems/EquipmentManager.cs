@@ -9,7 +9,9 @@ public class EquipmentManager : MonoBehaviour
     public Equipment[] DefaultEquipment;
     public EquipSlotListener _leftHandSlotListener;
     [SerializeField] private EquipSlot[] _equipSlot;
-    [SerializeField] private GameObject[] _hairEarsHead;
+    [SerializeField] private GameObject[] _head;
+    [SerializeField] private GameObject[] _hairs;
+    [SerializeField] private GameObject[] _ears;
     [SerializeField] private GameObject[] _headAttachment;
     [SerializeField] private SkinnedMeshRenderer[] _targetsMesh;
     [SerializeField] private Transform[] _weaponsAttachPoints;
@@ -52,12 +54,11 @@ public class EquipmentManager : MonoBehaviour
                 case 0: //withAll
                     AllHeadElementsToggle(true);
                     break;
-
-                case 1:  //noHair & noEars
-                    _hairEarsHead[0].SetActive(false);
-                    _hairEarsHead[1].SetActive(false);
-                    if (CharacterInformation.Gender == 0) { _hairEarsHead[2].SetActive(true); }
-                    if (CharacterInformation.Gender == 2) { _hairEarsHead[3].SetActive(true); }
+                case 1:  //noHair & noEars               
+                    foreach (var item in _hairs) item.SetActive(false);
+                    foreach (var item in _ears) item.SetActive(false);
+                    if (CharacterInformation.Gender == 0) { _head[0].SetActive(true); }
+                    if (CharacterInformation.Gender == 2) { _head[1].SetActive(true); }
                     break;
                 case 2: //fullHelmet
                     AllHeadElementsToggle(false);
@@ -144,10 +145,10 @@ public class EquipmentManager : MonoBehaviour
 
     public void AllHeadElementsToggle(bool state)
     {
-        _hairEarsHead[0].SetActive(state);
-        _hairEarsHead[1].SetActive(state);
-        if (CharacterInformation.Gender == 0) { _hairEarsHead[2].SetActive(state); }
-        if (CharacterInformation.Gender == 2) { _hairEarsHead[3].SetActive(state); }
+        foreach (var item in _hairs) item.SetActive(state);
+        foreach (var item in _ears) item.SetActive(state);
+        if (CharacterInformation.Gender == 0) { _head[0].SetActive(state); }
+        if (CharacterInformation.Gender == 2) { _head[1].SetActive(state); }
     }
 
     public void InActiveAllHeadAttachment() { foreach (var item in _headAttachment) item.SetActive(false); }

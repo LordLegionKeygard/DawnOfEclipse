@@ -17,6 +17,7 @@ MonoBehaviour:
   IsDefaultItem: 0
   IsStackable: 0
   IsUsedItem: 0
+  IsTome: 0
   IsSetEffect: 1
   Name:
   - Plague Doctor Leather Armor
@@ -34,8 +35,8 @@ MonoBehaviour:
   armorModifier: 19
   MagicArmorModifier: 0
   Meshes:
-  - {fileID: 6783815234191668365, guid: 5de636f38b03c1448b5fb1e0223bd50b, type: 3}
-  - {fileID: 6783815234191668365, guid: 5de636f38b03c1448b5fb1e0223bd50b, type: 3}
+  - {fileID: 8717103816762588961, guid: 5de636f38b03c1448b5fb1e0223bd50b, type: 3}
+  - {fileID: 8717103816762588961, guid: 5de636f38b03c1448b5fb1e0223bd50b, type: 3}
   - {fileID: 6783815234191668365, guid: 0ea7a97e302a1ea468c0774c77db36f6, type: 3}
   - {fileID: 6783815234191668365, guid: 0ea7a97e302a1ea468c0774c77db36f6, type: 3}
   prefab: {fileID: 0}
@@ -44,7 +45,7 @@ MonoBehaviour:
   canChangehead: 0
   weapon: 0
   twoHandedWeapon: 0
-  shield: 0
+  extraItem: 0
   shieldBlockArmorModifier: 0
   FirstAttachmentNumber: 0
   SecondAttachmentNumber: 0

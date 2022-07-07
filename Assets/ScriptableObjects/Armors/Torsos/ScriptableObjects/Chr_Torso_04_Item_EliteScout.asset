@@ -17,6 +17,7 @@ MonoBehaviour:
   IsDefaultItem: 0
   IsStackable: 0
   IsUsedItem: 0
+  IsTome: 0
   IsSetEffect: 1
   Name:
   - Elite Scout Armor
@@ -34,8 +35,8 @@ MonoBehaviour:
   armorModifier: 25
   MagicArmorModifier: 0
   Meshes:
-  - {fileID: 5140695959538874459, guid: 91d9fa8295453984a8d5898157c3e6c1, type: 3}
-  - {fileID: 5140695959538874459, guid: 91d9fa8295453984a8d5898157c3e6c1, type: 3}
+  - {fileID: 6600827159087144494, guid: 91d9fa8295453984a8d5898157c3e6c1, type: 3}
+  - {fileID: 6600827159087144494, guid: 91d9fa8295453984a8d5898157c3e6c1, type: 3}
   - {fileID: 5140695959538874459, guid: aa5800cf953858c47968c1b5a122cb3e, type: 3}
   - {fileID: 5140695959538874459, guid: aa5800cf953858c47968c1b5a122cb3e, type: 3}
   prefab: {fileID: 0}
@@ -44,7 +45,7 @@ MonoBehaviour:
   canChangehead: 0
   weapon: 0
   twoHandedWeapon: 0
-  shield: 0
+  extraItem: 0
   shieldBlockArmorModifier: 0
   FirstAttachmentNumber: 0
   SecondAttachmentNumber: 0

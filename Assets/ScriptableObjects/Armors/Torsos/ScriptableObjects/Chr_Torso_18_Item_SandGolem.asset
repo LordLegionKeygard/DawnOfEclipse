@@ -17,6 +17,7 @@ MonoBehaviour:
   IsDefaultItem: 0
   IsStackable: 0
   IsUsedItem: 0
+  IsTome: 0
   IsSetEffect: 1
   Name:
   - Sand Golem Breastplate
@@ -34,8 +35,8 @@ MonoBehaviour:
   armorModifier: 46
   MagicArmorModifier: 0
   Meshes:
-  - {fileID: 1539364053319346928, guid: 0e0f4cd6f582ff747829be5d7528e825, type: 3}
-  - {fileID: 1539364053319346928, guid: 0e0f4cd6f582ff747829be5d7528e825, type: 3}
+  - {fileID: 3037561047368249211, guid: 0e0f4cd6f582ff747829be5d7528e825, type: 3}
+  - {fileID: 3037561047368249211, guid: 0e0f4cd6f582ff747829be5d7528e825, type: 3}
   - {fileID: 1539364053319346928, guid: 23ccf251c99298f44a603842fdf95b7f, type: 3}
   - {fileID: 1539364053319346928, guid: 23ccf251c99298f44a603842fdf95b7f, type: 3}
   prefab: {fileID: 0}
@@ -44,7 +45,7 @@ MonoBehaviour:
   canChangehead: 0
   weapon: 0
   twoHandedWeapon: 0
-  shield: 0
+  extraItem: 0
   shieldBlockArmorModifier: 0
   FirstAttachmentNumber: 0
   SecondAttachmentNumber: 0

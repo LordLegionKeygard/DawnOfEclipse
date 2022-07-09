@@ -8,11 +8,11 @@ public class CharacterRaceChanger : MonoBehaviour
     [SerializeField] private Material _satyrSkin;
     [SerializeField] private Material _satyrMaleBody;
     [SerializeField] private Material _mushroomSkin;
-    [SerializeField] private GameObject[] _heads;
 
     [Header("SatyrRace_____________________________________________")]
 
-    [SerializeField] private GameObject[] _satyrParts;
+    [SerializeField] private GameObject[] _satyrGender;
+    [SerializeField] private GameObject _satyrTail;
     [SerializeField] private GameObject[] _satyrHairStyles;
     [SerializeField] private GameObject[] _satyrMasks;
     [SerializeField] private GameObject[] _satyrHorns;
@@ -40,7 +40,7 @@ public class CharacterRaceChanger : MonoBehaviour
         switch (CharacterInformation.Race)
         {
             case 0:
-                _satyrParts[0].SetActive(true);
+                _satyrTail.SetActive(true);
 
                 _satyrHairStyles[CharacterInformation.Hairstyle].SetActive(true);
                 _satyrMasks[CharacterInformation.Mask].SetActive(true);
@@ -50,18 +50,8 @@ public class CharacterRaceChanger : MonoBehaviour
                 _satyrSkin.color = _skinSatyrColorPalletes[CharacterInformation.SkinColor];
                 _satyrMaskEyes.SetColor("_EmissionColor", _eyeSatyrColorPalletes[CharacterInformation.EyeColor] * 10);
 
-                if (CharacterInformation.Gender == 0)
-                {
-                    _satyrParts[1].SetActive(true);
-                    _satyrParts[2].SetActive(true);
-                    _heads[0].SetActive(true);
-                }
-                if (CharacterInformation.Gender == 2)
-                {
-                    _satyrParts[3].SetActive(true);
-                    _satyrParts[4].SetActive(true);
-                    _heads[1].SetActive(true);
-                }
+                _satyrGender[CharacterInformation.Gender].SetActive(true);
+
                 break;
             case 1:
                 _mushroomParts[0].SetActive(true);

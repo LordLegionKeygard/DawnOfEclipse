@@ -53,19 +53,20 @@ public class EquipSlot : Slots
                 _equipmentManager.Equip(_equipmentManager.DefaultEquipment[0]);
                 break;
             case 2:
-                _equipmentManager.Equip(_equipmentManager.DefaultEquipment[1]);
+                // _equipmentManager.Equip(_equipmentManager.DefaultEquipment[1]);
                 break;
             case 4:
-                _equipmentManager.Equip(_equipmentManager.DefaultEquipment[5]);
+                // _equipmentManager.Equip(_equipmentManager.DefaultEquipment[5]);
                 break;
             case 6:
-                _equipmentManager.Equip(_equipmentManager.DefaultEquipment[2]);
+                // _equipmentManager.Equip(_equipmentManager.DefaultEquipment[2]);
+                _armorControl.HandsArmor = 0;
                 break;
             case 8:
-                _equipmentManager.Equip(_equipmentManager.DefaultEquipment[4]);
+                // _equipmentManager.Equip(_equipmentManager.DefaultEquipment[4]);
                 break;
             case 10:
-                _equipmentManager.Equip(_equipmentManager.DefaultEquipment[3]);
+                // _equipmentManager.Equip(_equipmentManager.DefaultEquipment[3]);
                 break;
             case 11:
                 _magicArmorControl.BackAttachmentMagicArmor = 0;

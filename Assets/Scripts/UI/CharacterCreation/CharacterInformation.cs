@@ -9,7 +9,7 @@ public class CharacterInformation : MonoBehaviour
     public static int Gender = 0; //0 - Female, 2 - Male
     public static int Hairstyle = 1;
     public static int HairColor;
-    public static int SkinColor;
+    public static int SkinColor = 5;
     public static int EyeColor;
     public static int Mask;
     public static int Horns;

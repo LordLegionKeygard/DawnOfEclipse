@@ -132,12 +132,19 @@ public class EquipmentManager : MonoBehaviour
             return;
         }
 
-        Equipment oldItem = Unequip(slotIndex);
-
-        if (_onEquipmentChanged != null)
+        if (_currentEquipment[slotIndex] != null)
         {
-            _onEquipmentChanged.Invoke(newItem, oldItem);
+            Equipment oldItem = Unequip(slotIndex);
+
+            if (_onEquipmentChanged != null)
+            {
+                _onEquipmentChanged.Invoke(newItem, oldItem);
+            }
         }
+
+
+
+
 
         _currentEquipment[slotIndex] = newItem;
         AttachToMesh(newItem, slotIndex);

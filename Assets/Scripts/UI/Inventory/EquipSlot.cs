@@ -50,10 +50,10 @@ public class EquipSlot : Slots
                 _equipmentManager.InActiveAllHeadAttachment();
                 break;
             case 1:
-                _equipmentManager.Equip(_equipmentManager.DefaultEquipment[0]);
+                _equipmentManager.Equip(_equipmentManager.DefaultEquipment[0]); //torso
                 break;
             case 2:
-                // _equipmentManager.Equip(_equipmentManager.DefaultEquipment[1]);
+                _equipmentManager.Equip(_equipmentManager.DefaultEquipment[1]); //hips
                 break;
             case 4:
                 // _equipmentManager.Equip(_equipmentManager.DefaultEquipment[5]);

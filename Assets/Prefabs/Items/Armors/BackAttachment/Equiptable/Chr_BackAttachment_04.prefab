@@ -27,6 +27,7 @@ Transform:
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -51,7 +52,9 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2929937ae1b52db4b864c8c24e815944, type: 2}
+  - {fileID: 2100000, guid: 57f2c69b4cebe1d47b267d876c0ee729, type: 2}
+  - {fileID: 2100000, guid: 3c2d4c4bc4b11f949a0322655297235d, type: 2}
+  - {fileID: 2100000, guid: 384b5c3df7b38ed48b8b4fa60e51951c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -76,7 +79,7 @@ SkinnedMeshRenderer:
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
   m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: -6809977415319922831, guid: 463136f8dd904184a9d1af3d7f67c631, type: 3}
+  m_Mesh: {fileID: -6809977415319922831, guid: b17dde67ce99d27498c6f1fd9830d890, type: 3}
   m_Bones:
   - {fileID: 3031478626408249209, guid: 463136f8dd904184a9d1af3d7f67c631, type: 3}
   - {fileID: 6483095831748405987, guid: 463136f8dd904184a9d1af3d7f67c631, type: 3}

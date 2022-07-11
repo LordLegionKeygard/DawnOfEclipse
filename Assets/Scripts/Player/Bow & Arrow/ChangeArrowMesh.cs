@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class ChangeArrowMesh : MonoBehaviour
 {
-    [SerializeField] private MeshFilter _meshFilter;
-    [SerializeField] private Mesh[] _arrowsMesh;
+    [SerializeField] private GameObject[] _arrows;
 
     private void Start()
     {
@@ -14,7 +13,8 @@ public class ChangeArrowMesh : MonoBehaviour
 
     private void ChangeArrow(int arrowNumber)
     {
-        _meshFilter.mesh = _arrowsMesh[arrowNumber];
+        foreach (var item in _arrows) item.SetActive(false);
+        _arrows[arrowNumber].SetActive(true);
     }
 
     private void OnDestroy()

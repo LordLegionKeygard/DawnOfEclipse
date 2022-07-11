@@ -254,10 +254,10 @@ public class CustomEvents
         OnUseArrow?.Invoke(number);
     }
 
-    public static Action<int> OnTakeTome;
-    public static void FireTakeTome(int number)
+    public static Action<int, int> OnChangeSkillTreePoints;
+    public static void FireChangeSkillTreePoints(int tomeNumber, int number)
     {
-        OnTakeTome?.Invoke(number);
+        OnChangeSkillTreePoints?.Invoke(tomeNumber, number);
     }
     public static Action<int, int> OnStatBuff;
     public static void FireStatBuff(int statsNumber, int amount)
@@ -281,5 +281,11 @@ public class CustomEvents
     public static void FireCheckIdenticalBuff(int number)
     {
         OnCheckIdenticalBuff?.Invoke(number);
+    }
+
+    public static Action<bool> OnCheckSkillPointsAmount;
+    public static void FireCheckSkillPointsAmount(bool state)
+    {
+        OnCheckSkillPointsAmount.Invoke(state);
     }
 }

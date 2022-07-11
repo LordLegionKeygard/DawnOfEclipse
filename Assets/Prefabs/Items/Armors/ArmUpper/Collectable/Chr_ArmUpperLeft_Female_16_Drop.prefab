@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7488993214328760593}
   - component: {fileID: 7474218386055468538}
   - component: {fileID: 593885497864121153}
-  - component: {fileID: 4156287366656199493}
+  - component: {fileID: 6463689132461247441}
   m_Layer: 11
   m_Name: Chr_ArmUpperLeft_Female_16_Drop
   m_TagString: DropItem
@@ -30,7 +30,8 @@ Transform:
   m_GameObject: {fileID: 7474218386055468539}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -19.5, y: 0, z: -6.26}
-  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -42,7 +43,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7474218386055468539}
-  m_Mesh: {fileID: -9092652368327725350, guid: 19c7b45f8d50b8c4d9b4894da6eca178, type: 3}
+  m_Mesh: {fileID: 629945264028575093, guid: 19c7b45f8d50b8c4d9b4894da6eca178, type: 3}
 --- !u!23 &7488993214328760593
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -63,7 +64,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 74a0aeb5c815e1842941a0bb2c755d65, type: 2}
+  - {fileID: 2100000, guid: 3c2d4c4bc4b11f949a0322655297235d, type: 2}
+  - {fileID: 2100000, guid: 503888f67661aa642a4805beec10c2f5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -114,7 +116,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &4156287366656199493
+--- !u!65 &6463689132461247441
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -125,5 +127,5 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 35.358166, y: 14.640823, z: 14.746164}
-  m_Center: {x: 0.0000019073486, y: 0.0000076293945, z: 0.00000023841858}
+  m_Size: {x: 0.40184176, y: 0.6418225, z: 0.32633725}
+  m_Center: {x: 0.48, y: -1.03, z: 0.52}

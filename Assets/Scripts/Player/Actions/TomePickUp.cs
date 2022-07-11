@@ -13,7 +13,7 @@ public class TomePickUp : MonoBehaviour
         if (!_canTake) return;
 
         _canTake = false;
-        CustomEvents.FireTakeTome((int)_skillTomes);
+        CustomEvents.FireChangeSkillTreePoints((int)_skillTomes, 1);
         _animator.SetTrigger("take");
 
         Destroy(gameObject, 3f);

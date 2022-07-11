@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: DarkProjectile
   m_EditorClassIdentifier: 
   ManaCost: 3
-  SkillName: DarkProjectile
+  SkillName: Dark Projectile
   SkillSound: {fileID: 0}
   SkillIcon: {fileID: 21300000, guid: 1bef259c09f9ce4478d83f948d16ba1b, type: 3}
   Cooldown: 3
@@ -21,4 +21,8 @@ MonoBehaviour:
   CastPointNumber: 0
   SkillPointNumber: 0
   TimeToCastSkill: 0.7
+  NotRotate: 0
   IsBuff: 0
+  BuffCooldown: 0
+  BuffNumber: 0
+  SkillInformation: Fires a dark blast of energy

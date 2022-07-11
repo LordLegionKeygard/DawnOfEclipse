@@ -29,7 +29,7 @@ public class DragAndDropItem : MonoBehaviour, IPointerDownHandler, IPointerUpHan
     public void OnPointerDown(PointerEventData eventData)
     {
         if (oldSlot.Item.name == "Empty_Item" || eventData.button == PointerEventData.InputButton.Right) return;
-        CustomEvents.FireTooltipToggle(false);
+        CustomEvents.FireTooltipToggle(false,0);
         CustomEvents.OnSelectItem(false);
         //Делаем картинку прозрачнее
         // GetComponentInChildren<Image>().color = new Color(1, 1, 1, 0.75f);
@@ -76,7 +76,7 @@ public class DragAndDropItem : MonoBehaviour, IPointerDownHandler, IPointerUpHan
     }
     private void ExchangeSlotData(InventorySlot newSlot)
     {
-        CustomEvents.FireTooltipToggle(false);
+        CustomEvents.FireTooltipToggle(false,0);
         CustomEvents.OnSelectItem(false);
         // Временно храним данные newSlot в отдельных переменных
         Item item = newSlot.Item;

@@ -9,7 +9,7 @@ public class SkillTreeButton : MonoBehaviour
     [SerializeField] private bool _isLearn;
     public bool _isOpen;
 
-    [SerializeField] private SkillTreeButton _skillTreeButton;
+    [SerializeField] private SkillTreeButton[] _skillTreeButton;
 
     [Header("Icon")]
     [SerializeField] private Image[] _skillFrameAndArrows;
@@ -38,6 +38,6 @@ public class SkillTreeButton : MonoBehaviour
 
         foreach (var item in _nextSkillIcon) item.color = new Color(1, 1, 1, 1);
 
-        _skillTreeButton._isOpen = true;
+        foreach (var item in _skillTreeButton) item._isOpen = true;
     }
 }

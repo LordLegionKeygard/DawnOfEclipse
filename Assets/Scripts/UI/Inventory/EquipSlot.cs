@@ -30,7 +30,7 @@ public class EquipSlot : Slots
         ChangeSetEffectTextColor(new Color(0.3882353f, 0.2705882f, 0, 1));
         IsItemSelect = false;
         CustomEvents.FireSelectItem(false);
-        CustomEvents.FireTooltipToggle(false);
+        CustomEvents.FireTooltipToggle(false,0);
         SelectSlot(false);
         if (Inventory.InventoryStatic.FullInventory)
         {
@@ -158,7 +158,7 @@ public class EquipSlot : Slots
             }
             UpdateSelectItemInfoTransform();
             CustomEvents.FireCheckEquipItemSetNumber((int)Item.ArmorSetEnum);
-            CustomEvents.FireTooltipToggle(true);
+            CustomEvents.FireTooltipToggle(true,0);
         }
 
         else

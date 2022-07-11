@@ -32,10 +32,10 @@ public class CustomEvents
         OnSelectItem?.Invoke(state);
     }
 
-    public static Action<bool> OnTooltipToggle;
-    public static void FireTooltipToggle(bool state)
+    public static Action<bool, int> OnTooltipToggle;
+    public static void FireTooltipToggle(bool state, int toolTipNumer)
     {
-        OnTooltipToggle?.Invoke(state);
+        OnTooltipToggle?.Invoke(state, toolTipNumer);
     }
 
     public static Action OnUpdateSelectItemTransform;
@@ -287,5 +287,18 @@ public class CustomEvents
     public static void FireCheckSkillPointsAmount(bool state)
     {
         OnCheckSkillPointsAmount.Invoke(state);
+    }
+
+    public static Action<string, string, string, string> OnUpdateSkillInfoText;
+
+    public static void FireUpdateSkillInfoText(string skillName, string skillInfo, string manaCost, string cooldown)
+    {
+        OnUpdateSkillInfoText.Invoke(skillName, skillInfo, manaCost, cooldown);
+    }
+
+    public static Action<float, float> OnUpdateSkillToolTipTransform;
+    public static void FireUpdateSkillToolTipTransform(float x, float y)
+    {
+        OnUpdateSkillToolTipTransform.Invoke(x, y);
     }
 }

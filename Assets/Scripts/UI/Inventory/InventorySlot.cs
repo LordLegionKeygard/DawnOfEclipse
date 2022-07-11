@@ -49,7 +49,7 @@ public class InventorySlot : Slots
     }
     public void OnRemoveItem()
     {
-        CustomEvents.FireTooltipToggle(false);
+        CustomEvents.FireTooltipToggle(false, 0);
         IsItemSelect = false;
         _dropItemButton.SetActive(false);
         ItemFrame.color = new Color(0.3301887f, 0.3283905f, 0.1759968f, 0.454902f);
@@ -76,7 +76,7 @@ public class InventorySlot : Slots
         if (!CheckRace()) return;
 
         CustomEvents.FireSelectItem(false);
-        CustomEvents.FireTooltipToggle(false);
+        CustomEvents.FireTooltipToggle(false, 0);
         _dropItemButton.SetActive(false);
         if (Item.IsUsedItem && PotionsControl.CanDrinkAnyPotions)
         {
@@ -173,7 +173,7 @@ public class InventorySlot : Slots
                 SelectItemInfo.ToggleSetEffect(false);
             }
             UpdateSelectItemInfoTransform();
-            CustomEvents.FireTooltipToggle(true);
+            CustomEvents.FireTooltipToggle(true, 0);
         }
 
         else

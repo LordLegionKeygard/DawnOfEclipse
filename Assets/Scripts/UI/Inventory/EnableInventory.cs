@@ -13,6 +13,6 @@ public class EnableInventory : MonoBehaviour
 
     private void OnDisable()
     {
-        CustomEvents.FireTooltipToggle(false);
+        CustomEvents.FireTooltipToggle(false,0);
     }
 }

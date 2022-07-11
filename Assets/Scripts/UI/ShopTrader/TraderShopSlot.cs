@@ -103,7 +103,7 @@ public class TraderShopSlot : Slots
                 SelectItemInfo.ToggleSetEffect(false);
             }
             UpdateSelectItemInfoTransform();
-            CustomEvents.FireTooltipToggle(true);
+            CustomEvents.FireTooltipToggle(true,0);
         }
 
         else

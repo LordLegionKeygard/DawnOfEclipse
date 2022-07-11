@@ -16,12 +16,12 @@ public class TooltipTriggerShopSellSlot : MonoBehaviour, IPointerEnterHandler, I
     {
         if (_inventorySellSlot != null && !_inventorySellSlot.IsItemSelect) return;
         CustomEvents.FireUpdateSelectItemTransform();
-        _tooltipSystem.ShowToggle(true);
+        _tooltipSystem.ShowToggle(true, 0);
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        _tooltipSystem.ShowToggle(false);
+        _tooltipSystem.ShowToggle(false, 0);
     }
 }
 

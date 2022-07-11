@@ -92,7 +92,7 @@ public class InventorySellSlot : Slots
                 SelectItemInfo.ToggleSetEffect(false);
             }
             UpdateSelectItemInfoTransform();
-            CustomEvents.FireTooltipToggle(true);
+            CustomEvents.FireTooltipToggle(true, 0);
         }
 
         else

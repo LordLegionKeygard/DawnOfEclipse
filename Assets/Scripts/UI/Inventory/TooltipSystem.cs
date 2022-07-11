@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class TooltipSystem : MonoBehaviour
 {
-    [SerializeField] private GameObject _tooltip;
+    [SerializeField] private GameObject[] _tooltip;
 
     private void OnEnable()
     {
         CustomEvents.OnTooltipToggle += ShowToggle;
     }
 
-    public void ShowToggle(bool state)
+    public void ShowToggle(bool state, int toolTipNumer)
     {
-        _tooltip.SetActive(state);
+        _tooltip[toolTipNumer].SetActive(state);
     }
 
     private void OnDisable()

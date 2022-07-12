@@ -21,6 +21,10 @@ MonoBehaviour:
   CastPointNumber: 0
   SkillPointNumber: 2
   TimeToCastSkill: 0.5
+  NotRotate: 0
   IsBuff: 1
   BuffCooldown: 60
   BuffNumber: 6
+  SkillInformation: 
+  SkillCastPrefab: {fileID: 7606108794216414597, guid: e205bbff0d2930e4aac480381ef05209, type: 3}
+  SkillPrefab: {fileID: 3594099513468408576, guid: 45fcf02e16a6dcb428f32b2ecabb9e22, type: 3}

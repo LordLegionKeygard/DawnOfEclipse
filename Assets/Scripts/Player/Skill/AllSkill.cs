@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class AllSkill : Skills
 {
-    [SerializeField] private GameObject[] _skillCastPrefab;
-    [SerializeField] private GameObject[] _skillPrefab;
     [SerializeField] private Transform[] _castPoint;
     [SerializeField] private Transform[] _skillPoint;
     [SerializeField] private PlayerAnimatorManager _playerAnimatorManager;
@@ -15,39 +13,39 @@ public class AllSkill : Skills
     {
         Cast();
         CustomEvents.FireAimImageToggle(true);
-        _playerAnimatorManager.AnimatorSkillInteger(SkillInfo[SkillCount].AnimationNumber);
+        _playerAnimatorManager.AnimatorSkillInteger(SkillInfo.AnimationNumber);
     }
 
     private void Cast()
     {
-        var castPoint = _castPoint[SkillInfo[SkillCount].CastPointNumber];
+        var castPoint = _castPoint[SkillInfo.CastPointNumber];
 
-        var cast = Instantiate(_skillCastPrefab[SkillCount], castPoint.position, Quaternion.identity);
+        var cast = Instantiate(SkillInfo.SkillCastPrefab, castPoint.position, Quaternion.identity);
         cast.transform.SetParent(castPoint.transform);
-        Invoke("CastSkill", SkillInfo[SkillCount].TimeToCastSkill);
+        Invoke("CastSkill", SkillInfo.TimeToCastSkill);
     }
 
     private void CastSkill()
     {
-        var skillPoint = _skillPoint[SkillInfo[SkillCount].SkillPointNumber];
+        var skillPoint = _skillPoint[SkillInfo.SkillPointNumber];
 
-        if (SkillInfo[SkillCount].IsBuff)
+        if (SkillInfo.IsBuff)
         {
-            var castSkill = Instantiate(_skillPrefab[SkillCount], skillPoint.position, skillPoint.rotation);
+            var castSkill = Instantiate(SkillInfo.SkillPrefab, skillPoint.position, skillPoint.rotation);
             castSkill.transform.SetParent(skillPoint.transform);
 
-            _buffIconSpawner.SpawnBuffIcon(SkillInfo, SkillCount);
+            _buffIconSpawner.SpawnBuffIcon(SkillInfo);
         }
         else
         {
-            if (SkillInfo[SkillCount].NotRotate)
+            if (SkillInfo.NotRotate)
             {
-                Instantiate(_skillPrefab[SkillCount], skillPoint.position, skillPoint.rotation);
+                Instantiate(SkillInfo.SkillPrefab, skillPoint.position, skillPoint.rotation);
             }
             else
             {
                 Vector3 aimDir = (StaffTargetAim.MouseWorldPosition - skillPoint.position).normalized;
-                Instantiate(_skillPrefab[SkillCount], skillPoint.position, Quaternion.LookRotation(aimDir, Vector3.up));
+                Instantiate(SkillInfo.SkillPrefab, skillPoint.position, Quaternion.LookRotation(aimDir, Vector3.up));
             }
         }
     }

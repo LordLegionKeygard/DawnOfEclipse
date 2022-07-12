@@ -20,4 +20,9 @@ public class SkillInfo : ScriptableObject
     public float BuffCooldown;
     public int BuffNumber;
     public string SkillInformation;
+
+    [Header ("Prefabs")]
+
+    public GameObject SkillCastPrefab;
+    public GameObject SkillPrefab;
 }

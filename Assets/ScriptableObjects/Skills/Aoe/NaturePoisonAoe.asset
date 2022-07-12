@@ -25,3 +25,6 @@ MonoBehaviour:
   IsBuff: 0
   BuffCooldown: 0
   BuffNumber: 0
+  SkillInformation: 
+  SkillCastPrefab: {fileID: 5373055807955792648, guid: 17655ea300ef1b54f924a0441ff7a83e, type: 3}
+  SkillPrefab: {fileID: 2998158816730532814, guid: f8db885774079c842a13eef8bd383f4d, type: 3}

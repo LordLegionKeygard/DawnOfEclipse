@@ -6,7 +6,6 @@ using TMPro;
 
 public class Skills : MonoBehaviour
 {
-    public int SkillCount;
     public bool IsCooldownAfterUse;
     [SerializeField] private TextMeshProUGUI _manaCostText;
     public ManaControl ManaControl;
@@ -16,14 +15,14 @@ public class Skills : MonoBehaviour
     public Image SkillImage;
     public Image BackSkillImage;
     private float _timeFillAmount;
-    public SkillInfo[] SkillInfo;
+    public SkillInfo SkillInfo;
     public bool IsCanUseSkill = true;
     public SkillManaCost SkillManaCost;
 
     private void OnEnable()
     {
         CustomEvents.OnCanUseSkill += CanUseSkillToggle;
-        SkillManaCost.ManaCost = SkillInfo[SkillCount].ManaCost;
+        SkillManaCost.ManaCost = SkillInfo.ManaCost;
     }
 
     private void CanUseSkillToggle(bool state)
@@ -34,10 +33,10 @@ public class Skills : MonoBehaviour
     private void Start()
     {
         if (SkillInfo == null) return;
-        _timeFillAmount = SkillInfo[SkillCount].Cooldown;
-        ManaCost = SkillInfo[SkillCount].ManaCost;
-        SkillImage.sprite = SkillInfo[SkillCount].SkillIcon;
-        BackSkillImage.sprite = SkillInfo[SkillCount].SkillIcon;
+        _timeFillAmount = SkillInfo.Cooldown;
+        ManaCost = SkillInfo.ManaCost;
+        SkillImage.sprite = SkillInfo.SkillIcon;
+        BackSkillImage.sprite = SkillInfo.SkillIcon;
         _manaCostText.text = ManaCost.ToString();
         Active();
     }

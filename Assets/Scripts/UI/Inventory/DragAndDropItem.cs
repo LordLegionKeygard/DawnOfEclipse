@@ -23,6 +23,7 @@ public class DragAndDropItem : MonoBehaviour, IPointerDownHandler, IPointerUpHan
     {
         // Если слот пустой, то мы не выполняем то что ниже return;
         if (oldSlot.Item.name == "Empty_Item" || eventData.button == PointerEventData.InputButton.Right) return;
+        Debug.Log("OnDrag");
         GetComponent<RectTransform>().position += new Vector3(eventData.delta.x, eventData.delta.y);
     }
 
@@ -64,7 +65,6 @@ public class DragAndDropItem : MonoBehaviour, IPointerDownHandler, IPointerUpHan
         {
             //Перемещаем данные из одного слота в другой
             ExchangeSlotData(eventData.pointerCurrentRaycast.gameObject.transform.parent.GetComponent<InventorySlot>());
-            Debug.Log("4");
         }
     }
     private void NullifySlotData()

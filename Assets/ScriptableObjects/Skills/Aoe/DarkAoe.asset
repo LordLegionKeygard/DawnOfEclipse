@@ -26,3 +26,5 @@ MonoBehaviour:
   BuffCooldown: 0
   BuffNumber: 0
   SkillInformation: Darkness corrupts nearby enemies
+  SkillCastPrefab: {fileID: 1088404570457305704, guid: 5f31568957c072f42ba889af21535cf6, type: 3}
+  SkillPrefab: {fileID: 6741699561955832713, guid: 946c4a2815e957e4da1733de04d2fc04, type: 3}

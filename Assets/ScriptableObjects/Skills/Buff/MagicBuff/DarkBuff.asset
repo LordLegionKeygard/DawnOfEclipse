@@ -26,3 +26,5 @@ MonoBehaviour:
   BuffCooldown: 60
   BuffNumber: 7
   SkillInformation: Increase dark elemental armor  by 10 point
+  SkillCastPrefab: {fileID: 1088404570457305704, guid: 5f31568957c072f42ba889af21535cf6, type: 3}
+  SkillPrefab: {fileID: 5778512669574036082, guid: 9c4a250767dd5724db010a9bfa40e0c3, type: 3}

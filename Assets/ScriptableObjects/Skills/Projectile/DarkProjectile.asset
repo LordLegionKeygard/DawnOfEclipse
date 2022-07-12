@@ -26,3 +26,5 @@ MonoBehaviour:
   BuffCooldown: 0
   BuffNumber: 0
   SkillInformation: Fires a dark blast of energy
+  SkillCastPrefab: {fileID: 1088404570457305704, guid: 5f31568957c072f42ba889af21535cf6, type: 3}
+  SkillPrefab: {fileID: 7603222385795505173, guid: 9a352af6199b5c14b88e87db8307953a, type: 3}

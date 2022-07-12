@@ -5,7 +5,6 @@ using UnityEngine;
 public class StaffTargetAim : MonoBehaviour
 {
     [SerializeField] private Transform _debugTransform;
-    [SerializeField] private LayerMask _aimColliderLayerMask = new LayerMask();
     public static Vector3 MouseWorldPosition;
     public bool _isAim;
     private Transform _cameraTransform;

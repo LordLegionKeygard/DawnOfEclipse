@@ -301,4 +301,10 @@ public class CustomEvents
     {
         OnUpdateSkillToolTipTransform.Invoke(x, y);
     }
+
+    public static Action OnUpdateSkillPanels;
+    public static void FireUpdateSkillPanels()
+    {
+        OnUpdateSkillPanels?.Invoke();
+    }
 }

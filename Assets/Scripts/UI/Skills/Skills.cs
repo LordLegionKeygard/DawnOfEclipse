@@ -22,7 +22,7 @@ public class Skills : MonoBehaviour
     private void OnEnable()
     {
         CustomEvents.OnCanUseSkill += CanUseSkillToggle;
-        SkillManaCost.ManaCost = SkillInfo.ManaCost;
+        CustomEvents.OnUpdateSkillPanels += UpdateSkill;
     }
 
     private void CanUseSkillToggle(bool state)
@@ -30,18 +30,19 @@ public class Skills : MonoBehaviour
         IsCanUseSkill = state;
     }
 
-    private void Start()
+    private void UpdateSkill()
     {
         if (SkillInfo == null) return;
+        SkillManaCost.ManaCost = SkillInfo.ManaCost;
         _timeFillAmount = SkillInfo.Cooldown;
         ManaCost = SkillInfo.ManaCost;
         SkillImage.sprite = SkillInfo.SkillIcon;
         BackSkillImage.sprite = SkillInfo.SkillIcon;
         _manaCostText.text = ManaCost.ToString();
-        Active();
+        ActiveUI();
     }
 
-    private void Active()
+    private void ActiveUI()
     {
         _manaCostText.enabled = true;
         SkillImage.enabled = true;
@@ -61,14 +62,8 @@ public class Skills : MonoBehaviour
 
     public virtual void Update()
     {
-        if (Input.GetKeyDown(_keyCode))
-        {
-            SkillTurnOn();
-        }
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            CustomEvents.FireActiveTargetSkill(false);
-        }
+        if (Input.GetKeyDown(_keyCode)) SkillTurnOn();
+
         if (SkillImage.fillAmount != 1) SkillImage.fillAmount += Time.deltaTime / _timeFillAmount;
     }
 
@@ -80,5 +75,6 @@ public class Skills : MonoBehaviour
     private void OnDisable()
     {
         CustomEvents.OnCanUseSkill -= CanUseSkillToggle;
+        CustomEvents.OnUpdateSkillPanels -= UpdateSkill;
     }
 }

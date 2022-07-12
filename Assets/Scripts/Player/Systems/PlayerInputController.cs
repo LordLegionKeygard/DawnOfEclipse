@@ -69,6 +69,7 @@ public class PlayerInputController : MonoBehaviour
         _input.Player.PickUp.performed += ctx => CustomEvents.FirePickUp(true);
         _input.Player.PickUp.canceled += ctx => CustomEvents.FirePickUp(false);
 
+        _input.Player.Escape.performed += ctx => CustomEvents.FireActiveTargetSkill(false);
         _input.Player.Menu.performed += ctx => CustomEvents.FireMenuToggle();
     }
 
@@ -233,6 +234,7 @@ public class PlayerInputController : MonoBehaviour
         _input.Player.PickUp.performed -= ctx => CustomEvents.FirePickUp(true);
         _input.Player.PickUp.canceled -= ctx => CustomEvents.FirePickUp(false);
 
+        _input.Player.Escape.performed -= ctx => CustomEvents.FireActiveTargetSkill(false);
         _input.Player.Menu.performed -= ctx => CustomEvents.FireMenuToggle();
     }
 }

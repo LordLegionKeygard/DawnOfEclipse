@@ -3,49 +3,55 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
-using TMPro;
 
 public class DragAndDropSkill : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDragHandler
 {
-    [SerializeField] private SkillTreeButton _oldSlot;
+    [SerializeField] private SkillInfo _skillInfo;
+    private SkillTreeButton _skillTreeButton;
     [SerializeField] private GameObject _parent;
+    [SerializeField] private GameObject _skillBarParent;
     public RectTransform RectTransform;
 
-
+    private void Awake()
+    {
+        _skillTreeButton = GetComponent<SkillTreeButton>();
+    }
     public void OnDrag(PointerEventData eventData)
     {
+        if (!_skillTreeButton.IsLearn) return;
+
         GetComponent<RectTransform>().position += new Vector3(eventData.delta.x, eventData.delta.y);
     }
     public void OnPointerDown(PointerEventData eventData)
     {
+        if (!_skillTreeButton.IsLearn) return;
+
         CustomEvents.FireTooltipToggle(false, 1);
 
         GetComponentInChildren<Image>().raycastTarget = false;
 
-        transform.SetParent(transform.parent.parent.parent);
+        transform.SetParent(_skillBarParent.transform.parent);
     }
 
     public void OnPointerUp(PointerEventData eventData)
     {
+        if (!_skillTreeButton.IsLearn) return;
+        
         GetComponentInChildren<Image>().raycastTarget = true;
 
-        //Поставить DraggableObject обратно в свой старый слот
         transform.SetParent(_parent.transform);
         RectTransform.anchoredPosition = new Vector2(30, 30);
-        //Если мышка отпущена над объектом по имени UIPanel, то...
-        // if (eventData.pointerCurrentRaycast.gameObject.name == "Inventory")
-        // {
-        //     // Выброс объектов из инвентаря - Спавним префаб обекта перед персонажем
-        //     // GameObject itemObject = Instantiate(oldSlot.item.itemPrefab, player.position + Vector3.up + player.forward, Quaternion.identity);
-        //     // Устанавливаем количество объектов такое какое было в слоте
-        //     // itemObject.GetComponent<Item>().Amount = oldSlot._amount;
-        //     // убираем значения InventorySlot
-        //     NullifySlotData();
-        // }
-        // if (eventData.pointerCurrentRaycast.gameObject.transform.parent.GetComponent<InventorySlot>() != null)
-        // {
-        //     //Перемещаем данные из одного слота в другой
-        //     ExchangeSlotData(eventData.pointerCurrentRaycast.gameObject.transform.parent.GetComponent<InventorySlot>());
-        // }
+
+        if (eventData.pointerCurrentRaycast.gameObject.transform.parent.parent.parent.GetComponent<AllSkill>() != null)
+        {
+            //Перемещаем данные из одного слота в другой
+            ChangeSkill(eventData.pointerCurrentRaycast.gameObject.transform.parent.parent.parent.GetComponent<AllSkill>());
+        }
+    }
+
+    private void ChangeSkill(AllSkill allSkill)
+    {
+        allSkill.SkillInfo = _skillInfo;
+        CustomEvents.FireUpdateSkillPanels();
     }
 }

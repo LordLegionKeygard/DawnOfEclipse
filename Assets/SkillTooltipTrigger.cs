@@ -6,11 +6,11 @@ using UnityEngine.EventSystems;
 public class SkillTooltipTrigger : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     [SerializeField] private TooltipSystem _tooltipSystem;
-
     [SerializeField] private SkillInfo _skillInfo;
 
     public void OnPointerEnter(PointerEventData eventData)
     {
+        if(_skillInfo == null) return;
         _tooltipSystem.ShowToggle(true, 1);
         CustomEvents.FireUpdateSkillInfoText(_skillInfo.SkillName,
                                              _skillInfo.SkillInformation,

@@ -16,7 +16,8 @@ MonoBehaviour:
   Price: 250
   IsDefaultItem: 0
   IsStackable: 1
-  IsUsedItem: 1
+  UsedItemId: 1
+  IsTome: 0
   IsSetEffect: 0
   Name:
   - Health Potion
@@ -31,4 +32,5 @@ MonoBehaviour:
     \u0437\u0434\u043E\u0440\u043E\u0432\u044C\u0435"
   ArmorSetEnum: 0
   AllArmorSetInfo: {fileID: 0}
+  PotionCooldown: 0
   PotionType: 0

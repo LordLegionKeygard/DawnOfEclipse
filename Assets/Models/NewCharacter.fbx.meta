@@ -76,8 +76,28 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: MushroomEyes
+    second: {fileID: 2100000, guid: ed6f012a464973a44869cfbdcf56d504, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mushroom_01_Head
+    second: {fileID: 2100000, guid: a064dc5a5c21fe743bd08a368af0a2dd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mushroom_01_Skin
+    second: {fileID: 2100000, guid: 451ed1987cbde5c49a065ef9129cc670, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: SatyrLegsFur
     second: {fileID: 2100000, guid: 7f0376306ee0dab45ba2a02c800e8f30, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Scrunchy
+    second: {fileID: 2100000, guid: b9f2f021bd629014399510e64c803348, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule

@@ -39,7 +39,7 @@ public class PotionsControl : MonoBehaviour
 
         switch (potion)
         {
-            case (0): //health
+            case (1): //health
                 if (_healthControl.CurrentHealth > _healthControl.MaxHealth - _healPointFromPotion)
                 {
                     _healthControl.CurrentHealth = _healthControl.MaxHealth;
@@ -51,7 +51,7 @@ public class PotionsControl : MonoBehaviour
                     _healthControl.UpdateSlider();
                 }
                 break;
-            case (1): //speed
+            case (2): //speed
                 StopCoroutine(ExecuteAfterTime(0f));
                 _buffIconSpawner.SpawnBuffIcon(_potionsImage[potion], 20, 16);
                 _speedPotionParticle.Play();
@@ -66,7 +66,7 @@ public class PotionsControl : MonoBehaviour
                     SpeedPotion = false;
                 }
                 break;
-            case (2): //mana
+            case (3): //mana
                 if (_manaControl.CurrentMana > _manaControl.MaxMana - _manaPointFromPotion)
                 {
                     _manaControl.CurrentMana = _manaControl.MaxMana;
@@ -78,19 +78,19 @@ public class PotionsControl : MonoBehaviour
                     _manaControl.UpdateSlider();
                 }
                 break;
-            case (3): //mead
+            case (4): //mead
                 CustomEvents.FireStatBuff(0, 5);
                 _buffIconSpawner.SpawnBuffIcon(_potionsImage[potion], 60, 17);
                 break;
-            case (4): //wine
+            case (5): //wine
                 CustomEvents.FireStatBuff(1, 5);
                 _buffIconSpawner.SpawnBuffIcon(_potionsImage[potion], 60, 18);
                 break;
-            case (5): //ale
+            case (6): //ale
                 CustomEvents.FireStatBuff(2, 5);
                 _buffIconSpawner.SpawnBuffIcon(_potionsImage[potion], 60, 19);
                 break;
-            case (6): //rum
+            case (7): //rum
                 CustomEvents.FireStatBuff(3, 5);
                 _buffIconSpawner.SpawnBuffIcon(_potionsImage[potion], 60, 20);
                 break;

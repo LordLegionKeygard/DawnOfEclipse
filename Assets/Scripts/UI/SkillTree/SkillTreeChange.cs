@@ -33,7 +33,7 @@ public class SkillTreeChange : MonoBehaviour
                     ChangeColor(i + number);
                 }
                 return;
-            }          
+            }
         }
     }
 
@@ -43,5 +43,10 @@ public class SkillTreeChange : MonoBehaviour
         {
             images.color = _treeColors[number];
         }
+    }
+
+    private void OnDisable()
+    {
+        CustomEvents.FireTooltipToggle(false, 1);
     }
 }

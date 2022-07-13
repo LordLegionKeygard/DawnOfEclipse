@@ -59,16 +59,14 @@ public class InventorySlot : Slots
 
     private bool CheckRace()
     {
-        if (CharacterInformation.Race == 0 && Item.ItemType[0] == "Headgear" || Item.ItemType[0] == "Boots")
+        if (CharacterInformation.Race > 1) return true;
+
+        if (Item.ItemType[0] == "Headgear" || Item.ItemType[0] == "Boots")
         {
-            Debug.Log("Satyr can't use helmets or boots");
+            Debug.Log("Myshroom & Satyr can't use helmets or boots");
             return false;
         }
-        if (CharacterInformation.Race == 1 && Item.ItemType[0] == "Headgear" || Item.ItemType[0] == "Boots")
-        {
-            Debug.Log("Mushroom can't use helmets or boots");
-            return false;
-        }
+
         return true;
     }
     public void UseItem()
@@ -78,49 +76,13 @@ public class InventorySlot : Slots
         CustomEvents.FireSelectItem(false);
         CustomEvents.FireTooltipToggle(false, 0);
         _dropItemButton.SetActive(false);
-        if (Item.IsUsedItem && PotionsControl.CanDrinkAnyPotions)
+        if (Item.UsedItemId > 0 && PotionsControl.CanDrinkAnyPotions)
         {
             _amount--;
             _amountText.text = _amount.ToString();
             Item.Use();
-            switch (Item.name)
-            {
-                case ("HealthPotion"):
-                    {
-                        CustomEvents.FireUsePotion(0);
-                        break;
-                    }
-                case ("SpeedPotion"):
-                    {
-                        CustomEvents.FireUsePotion(1);
-                        break;
-                    }
-                case ("ManaPotion"):
-                    {
-                        CustomEvents.FireUsePotion(2);
-                        break;
-                    }
-                case ("MeadPotion"):
-                    {
-                        CustomEvents.FireUsePotion(3);
-                        break;
-                    }
-                case ("WinePotion"):
-                    {
-                        CustomEvents.FireUsePotion(4);
-                        break;
-                    }
-                case ("AlePotion"):
-                    {
-                        CustomEvents.FireUsePotion(5);
-                        break;
-                    }
-                case ("RumPotion"):
-                    {
-                        CustomEvents.FireUsePotion(6);
-                        break;
-                    }
-            }
+            CustomEvents.FireUsePotion(Item.UsedItemId);
+     
             if (_amount == 0)
             {
                 OnRemoveItem();

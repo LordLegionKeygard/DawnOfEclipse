@@ -16,7 +16,8 @@ MonoBehaviour:
   Price: 250
   IsDefaultItem: 0
   IsStackable: 1
-  IsUsedItem: 1
+  UsedItemId: 3
+  IsTome: 0
   IsSetEffect: 0
   Name:
   - Mana Potion
@@ -32,4 +33,5 @@ MonoBehaviour:
     \u043C\u0430\u043D\u0443"
   ArmorSetEnum: 0
   AllArmorSetInfo: {fileID: 0}
+  PotionCooldown: 0
   PotionType: 2

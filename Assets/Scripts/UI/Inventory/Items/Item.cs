@@ -9,7 +9,7 @@ public class Item : ScriptableObject
     public int Price = 250;
     public bool IsDefaultItem;
     public bool IsStackable;
-    public bool IsUsedItem;
+    public int UsedItemId;
     public bool IsTome;
     public bool IsSetEffect;
     public string[] Name; //0 eng, 1 rus

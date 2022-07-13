@@ -16,7 +16,7 @@ MonoBehaviour:
   Price: 250
   IsDefaultItem: 0
   IsStackable: 1
-  IsUsedItem: 1
+  UsedItemId: 6
   IsTome: 0
   IsSetEffect: 0
   Name:

@@ -26,6 +26,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Beard
+    second: {fileID: 2100000, guid: 82cd082440b2ebb418c6b4c84443e345, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Body
     second: {fileID: 2100000, guid: e5098a2b0d7d6144994f5ed04de53c2b, type: 2}
   - first:
@@ -103,6 +108,21 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Mushroom_02_Skin
     second: {fileID: 2100000, guid: 7d9f01e673cd2fc4c85b2e7b2735d638, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mushroom_03_Head
+    second: {fileID: 2100000, guid: 02fbfae260555c645b90e3ca79943ab9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mushroom_03_Skin
+    second: {fileID: 2100000, guid: 99244fc191bc2e845905c0c3b2fcd570, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mushroom__03_UnderCapBlue
+    second: {fileID: 2100000, guid: 832d84987e8753140ae29f3aaa635c60, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule

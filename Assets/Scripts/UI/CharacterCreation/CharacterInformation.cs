@@ -13,5 +13,5 @@ public class CharacterInformation : MonoBehaviour
     public static int EyeColor = 0;
     public static int Mask = 0;
     public static int Horns = 0;
-    public static int Cap = 0;
+    public static int Cap = 1;
 }

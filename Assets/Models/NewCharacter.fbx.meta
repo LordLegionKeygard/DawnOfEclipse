@@ -61,6 +61,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Leaves
+    second: {fileID: 2100000, guid: 8c230c6436b92f443890fd303269ec31, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Metal
     second: {fileID: 2100000, guid: 503888f67661aa642a4805beec10c2f5, type: 2}
   - first:
@@ -88,6 +93,16 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Mushroom_01_Skin
     second: {fileID: 2100000, guid: 451ed1987cbde5c49a065ef9129cc670, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mushroom_02_Head
+    second: {fileID: 2100000, guid: 0b4423df20ab4754a9ba4befd6c51a82, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mushroom_02_Skin
+    second: {fileID: 2100000, guid: 7d9f01e673cd2fc4c85b2e7b2735d638, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule

@@ -41,6 +41,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Brows
+    second: {fileID: 2100000, guid: 708bb9c9b4f57a54b95e072dce3e9842, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Empty
     second: {fileID: 2100000, guid: 1ce3205bc2437264cbcd11486fff1263, type: 2}
   - first:
@@ -118,6 +123,21 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Mushroom_03_Skin
     second: {fileID: 2100000, guid: 99244fc191bc2e845905c0c3b2fcd570, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mushroom_04_Head
+    second: {fileID: 2100000, guid: f0f8390be8eef06408fd963c9fd86d63, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mushroom_04_Head_Small
+    second: {fileID: 2100000, guid: eaad175e4f562c64ab8513ce4c31d7e1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mushroom_04_Skin
+    second: {fileID: 2100000, guid: 871a7da017382a640a49179ce485bc25, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule

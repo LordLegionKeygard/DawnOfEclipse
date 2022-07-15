@@ -23,10 +23,10 @@ public class CharacterRaceChanger : MonoBehaviour
 
     [Header("MushroomRace___________________________________________")]
     [SerializeField] private GameObject[] _mushroomCaps;
-    [SerializeField] private Color[] _skinMushroomColorPalletes;
-    [SerializeField] private Color[] _eyeMushroomColorPalletes;
-    [SerializeField] private Material[] _mushroomRaceSkinMaterials;
-    [SerializeField] private Material _mushroomEyeMaterial;
+    // [SerializeField] private Color[] _skinMushroomColorPalletes;
+    // [SerializeField] private Color[] _eyeMushroomColorPalletes;
+    // [SerializeField] private Material[] _mushroomRaceSkinMaterials;
+    // [SerializeField] private Material _mushroomEyeMaterial;
     [SerializeField] private PoisonDamageCollider[] _poisonDamageColliders;
 
     private void Start()
@@ -53,8 +53,8 @@ public class CharacterRaceChanger : MonoBehaviour
 
                 break;
             case 1:
-                foreach (var item in _mushroomRaceSkinMaterials) item.SetColor("_BaseMap", _skinMushroomColorPalletes[CharacterInformation.SkinColor]);
-                _mushroomEyeMaterial.SetColor("_BaseMap", _eyeMushroomColorPalletes[CharacterInformation.EyeColor]);
+                // foreach (var item in _mushroomRaceSkinMaterials) item.SetColor("_BaseMap", _skinMushroomColorPalletes[CharacterInformation.SkinColor]);
+                // _mushroomEyeMaterial.SetColor("_BaseMap", _eyeMushroomColorPalletes[CharacterInformation.EyeColor]);
 
                 foreach (var item in _poisonDamageColliders) { item.enabled = true; }
 

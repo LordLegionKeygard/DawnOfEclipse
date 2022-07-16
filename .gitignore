@@ -7,7 +7,7 @@
 /Logs/*
 /UserSettings/*
 /Assets/AssetStoreTools*
-/Assets/_TerrainData*
+/Assets/_TerrainData/PolarisTerrainData*
 /Assets/Resources/*
 /Assets/AssetStore*
 /Assets/Scenes/Forest.unity

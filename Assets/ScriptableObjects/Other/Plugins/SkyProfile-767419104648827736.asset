@@ -10,7 +10,6 @@ Material:
   m_Name: Jupiter/Sky
   m_Shader: {fileID: 4800000, guid: 3129e3b90193a0547900ecf4cf4e9864, type: 3}
   m_ValidKeywords:
-  - ALLOW_STEP_EFFECT
   - DETAIL_OVERLAY_ROTATION
   - HORIZON_CLOUD
   - MOON
@@ -68,10 +67,10 @@ Material:
     - _HorizonCloudEndPosition: 0.35
     - _HorizonCloudSize: 4.9601374
     - _HorizonCloudStartPosition: 0
-    - _HorizonCloudStep: 25
-    - _HorizonExponent: 4.843899
-    - _HorizonStep: 500
-    - _HorizonThickness: 0.48
+    - _HorizonCloudStep: 109
+    - _HorizonExponent: 0.9962975
+    - _HorizonStep: 125
+    - _HorizonThickness: 0.171
     - _MoonGlow: 0.161
     - _MoonLightIntensity: 0.6988438
     - _MoonSize: 0.16
@@ -105,10 +104,10 @@ Material:
     - _SunSoftEdge: 0.3
     m_Colors:
     - _DetailOverlayTintColor: {r: 0, g: 0, b: 0, a: 0}
-    - _FogColor: {r: 0.22, g: 0.22, b: 0.22, a: 1}
-    - _GroundColor: {r: 0.86787647, g: 0.94653344, b: 0.93907154, a: 1}
+    - _FogColor: {r: 0.86958, g: 0.91971433, b: 0.9053574, a: 1}
+    - _GroundColor: {r: 0.12156863, g: 0.36862746, b: 0.78431374, a: 1}
     - _HorizonCloudColor: {r: 0.29853988, g: 0.5951413, b: 0.8655759, a: 1}
-    - _HorizonColor: {r: 0.51476324, g: 0.47644547, b: 0.46292114, a: 1}
+    - _HorizonColor: {r: 0.5190982, g: 0.5045807, b: 0.48248878, a: 1}
     - _MoonColor: {r: 0.9827044, g: 0.9016712, b: 0.4403628, a: 0}
     - _MoonDirection: {r: 0, g: 0, b: 1, a: 0}
     - _MoonLightColor: {r: 0.84313726, g: 0.9843137, b: 1, a: 0}
@@ -135,12 +134,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skyColor: {r: 0.2264151, g: 0.6028122, b: 0.9056604, a: 1}
   horizonColor: {r: 1, g: 0.94944346, b: 0.839, a: 1}
-  groundColor: {r: 0.4339623, g: 0.4339623, b: 0.4339623, a: 1}
-  horizonThickness: 0.48
+  groundColor: {r: 0, g: 0, b: 0, a: 0}
+  horizonThickness: 0.171
   horizonExponent: 3
-  horizonStep: 500
-  fogSyncOption: 2
-  fogColor: {r: 0.22, g: 0.22, b: 0.22, a: 1}
+  horizonStep: 125
+  fogSyncOption: 1
+  fogColor: {r: 1, g: 1, b: 1, a: 1}
   enableStars: 1
   starsStartPosition: -0.01
   starsEndPosition: 1
@@ -190,7 +189,7 @@ MonoBehaviour:
   horizonCloudStartPosition: -0.1
   horizonCloudEndPosition: 0.65
   horizonCloudSize: 4.91
-  horizonCloudStep: 25
+  horizonCloudStep: 109
   horizonCloudAnimationSpeed: 50
   enableOverheadCloud: 1
   overheadCloudColor: {r: 1, g: 1, b: 1, a: 0.5647059}
@@ -209,7 +208,7 @@ MonoBehaviour:
   detailOverlayCubeMap: {fileID: 0}
   detailOverlayLayer: 5
   detailOverlayRotationSpeed: 6.39
-  allowStepEffect: 1
+  allowStepEffect: 0
   material: {fileID: -7897097944070104377}
   shadowMaterial: {fileID: 4190534182458853811}
 --- !u!21 &4190534182458853811
@@ -221,8 +220,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: Jupiter/SkyShadow
   m_Shader: {fileID: 4800000, guid: 561c1777fd66e5d488ef1b85ed82bbaa, type: 3}
-  m_ValidKeywords:
-  - ALLOW_STEP_EFFECT
+  m_ValidKeywords: []
   m_InvalidKeywords:
   - DETAIL_OVERLAY_ROTATION
   - HORIZON_CLOUD

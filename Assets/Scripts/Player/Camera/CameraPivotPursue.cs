@@ -22,10 +22,8 @@ public class CameraPivotPursue : MonoBehaviour
 
     private void CanPursue(bool state)
     {
-        if (state)
-        {
-            _canPursue = state;
-        }
+        if (state) _canPursue = state;
+
         else
         {
             StartCoroutine(ExecuteAfterTime(0.5f));

@@ -29,9 +29,8 @@ MonoBehaviour:
     debugReplacementPS: {fileID: 4800000, guid: cf852408f2e174538bcd9b7fda1c5ae7, type: 3}
   m_RendererFeatures:
   - {fileID: 3879962596256173976}
-  - {fileID: -6306448240250541367}
   - {fileID: 1936841451916060029}
-  m_RendererFeatureMap: 98cfa6a36c65d835c9aa7a0dbdfe7aa87d65b5e7090be11a
+  m_RendererFeatureMap: 98cfa6a36c65d8357d65b5e7090be11a
   m_UseNativeRenderPass: 0
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
   xrSystemData: {fileID: 11400000, guid: 60e1133243b97e347b653163a8c01b64, type: 2}

@@ -112,14 +112,16 @@ Shader "Terrain"
       #define _MICROSPLAT 1
       #define _MICROTERRAIN 1
       #define _HYBRIDHEIGHTBLEND 1
-      #define _SURFACENORMALS 1
       #define _USEGRADMIP 1
       #define _MAX12TEXTURES 1
       #define _PERPIXNORMAL 1
       #define _PERTEXUVSCALEOFFSET 1
       #define _PERTEXTINT 1
+      #define _PERTEXBRIGHTNESS 1
+      #define _PERTEXCOLORINTENSITY 1
       #define _CONTROLNOISEUV 1
       #define _BRANCHSAMPLES 1
+      #define _BRANCHSAMPLESAGR 1
       #define _MSRENDERLOOP_UNITYURP2021 1
 
 #pragma instancing_options assumeuniformscaling nomatrices nolightprobe nolightmap forwardadd
@@ -4218,14 +4220,16 @@ float3 GetTessFactors ()
       #define _MICROSPLAT 1
       #define _MICROTERRAIN 1
       #define _HYBRIDHEIGHTBLEND 1
-      #define _SURFACENORMALS 1
       #define _USEGRADMIP 1
       #define _MAX12TEXTURES 1
       #define _PERPIXNORMAL 1
       #define _PERTEXUVSCALEOFFSET 1
       #define _PERTEXTINT 1
+      #define _PERTEXBRIGHTNESS 1
+      #define _PERTEXCOLORINTENSITY 1
       #define _CONTROLNOISEUV 1
       #define _BRANCHSAMPLES 1
+      #define _BRANCHSAMPLESAGR 1
       #define _MSRENDERLOOP_UNITYURP2021 1
 
 #pragma instancing_options assumeuniformscaling nomatrices nolightprobe nolightmap forwardadd
@@ -8278,14 +8282,16 @@ float3 GetTessFactors ()
       #define _MICROSPLAT 1
       #define _MICROTERRAIN 1
       #define _HYBRIDHEIGHTBLEND 1
-      #define _SURFACENORMALS 1
       #define _USEGRADMIP 1
       #define _MAX12TEXTURES 1
       #define _PERPIXNORMAL 1
       #define _PERTEXUVSCALEOFFSET 1
       #define _PERTEXTINT 1
+      #define _PERTEXBRIGHTNESS 1
+      #define _PERTEXCOLORINTENSITY 1
       #define _CONTROLNOISEUV 1
       #define _BRANCHSAMPLES 1
+      #define _BRANCHSAMPLESAGR 1
       #define _MSRENDERLOOP_UNITYURP2021 1
 
 #pragma instancing_options assumeuniformscaling nomatrices nolightprobe nolightmap forwardadd
@@ -12253,14 +12259,16 @@ float3 GetTessFactors ()
       #define _MICROSPLAT 1
       #define _MICROTERRAIN 1
       #define _HYBRIDHEIGHTBLEND 1
-      #define _SURFACENORMALS 1
       #define _USEGRADMIP 1
       #define _MAX12TEXTURES 1
       #define _PERPIXNORMAL 1
       #define _PERTEXUVSCALEOFFSET 1
       #define _PERTEXTINT 1
+      #define _PERTEXBRIGHTNESS 1
+      #define _PERTEXCOLORINTENSITY 1
       #define _CONTROLNOISEUV 1
       #define _BRANCHSAMPLES 1
+      #define _BRANCHSAMPLESAGR 1
       #define _MSRENDERLOOP_UNITYURP2021 1
 
 #pragma instancing_options assumeuniformscaling nomatrices nolightprobe nolightmap forwardadd
@@ -16224,14 +16232,16 @@ float3 GetTessFactors ()
       #define _MICROSPLAT 1
       #define _MICROTERRAIN 1
       #define _HYBRIDHEIGHTBLEND 1
-      #define _SURFACENORMALS 1
       #define _USEGRADMIP 1
       #define _MAX12TEXTURES 1
       #define _PERPIXNORMAL 1
       #define _PERTEXUVSCALEOFFSET 1
       #define _PERTEXTINT 1
+      #define _PERTEXBRIGHTNESS 1
+      #define _PERTEXCOLORINTENSITY 1
       #define _CONTROLNOISEUV 1
       #define _BRANCHSAMPLES 1
+      #define _BRANCHSAMPLESAGR 1
       #define _MSRENDERLOOP_UNITYURP2021 1
 
 #pragma instancing_options assumeuniformscaling nomatrices nolightprobe nolightmap forwardadd
@@ -20199,14 +20209,16 @@ float3 GetTessFactors ()
       #define _MICROSPLAT 1
       #define _MICROTERRAIN 1
       #define _HYBRIDHEIGHTBLEND 1
-      #define _SURFACENORMALS 1
       #define _USEGRADMIP 1
       #define _MAX12TEXTURES 1
       #define _PERPIXNORMAL 1
       #define _PERTEXUVSCALEOFFSET 1
       #define _PERTEXTINT 1
+      #define _PERTEXBRIGHTNESS 1
+      #define _PERTEXCOLORINTENSITY 1
       #define _CONTROLNOISEUV 1
       #define _BRANCHSAMPLES 1
+      #define _BRANCHSAMPLESAGR 1
       #define _MSRENDERLOOP_UNITYURP2021 1
 
 #pragma instancing_options assumeuniformscaling nomatrices nolightprobe nolightmap forwardadd
@@ -24164,7 +24176,7 @@ float3 GetTessFactors ()
       
 
    }
-   Dependency "BaseMapShader" =  "Hidden/Terrain_Base769634697"
-   Fallback "Hidden/Terrain_Base769634697"
+   Dependency "BaseMapShader" =  "Hidden/Terrain_Base-10349228"
+   Fallback "Hidden/Terrain_Base-10349228"
    CustomEditor "MicroSplatShaderGUI"
 }

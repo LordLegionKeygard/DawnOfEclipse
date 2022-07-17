@@ -90,9 +90,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _AutoNormalHeightScale: 1
     - _Contrast: 1
     - _EmissiveMult: 1
-    - _HybridHeightBlendDistance: 266
+    - _HybridHeightBlendDistance: 40
     m_Colors:
     - _NoiseUVParams: {r: 1, g: 1, b: 0, a: 0}
     - _UVScale: {r: 1, g: 1, b: 0, a: 0}

@@ -46,7 +46,7 @@ public class StatsFormulesCalculator : MonoBehaviour
 
     private void CalculateDexterity()
     {
-        _playerMovement.DefaultSpeed = 9.95f + (0.01f * CharacterStats.Dexterity);
+        _playerMovement.DefaultSpeed = 4.95f + (0.01f * CharacterStats.Dexterity);
         switch (CharacterInformation.Class)
         {
             case 0:

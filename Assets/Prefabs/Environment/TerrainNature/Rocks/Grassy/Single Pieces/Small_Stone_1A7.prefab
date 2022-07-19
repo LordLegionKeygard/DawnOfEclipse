@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5883253008189364257}
   - component: {fileID: 5883253008189364259}
   - component: {fileID: 5883253008189364258}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Small_Stone_1A7_LOD_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28,6 +28,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5883253008233276933}
   m_RootOrder: 1
@@ -51,10 +52,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -79,6 +82,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &5883253008233276932
 GameObject:
   m_ObjectHideFlags: 0
@@ -90,10 +94,9 @@ GameObject:
   - component: {fileID: 5883253008233276933}
   - component: {fileID: 5883253008233276930}
   - component: {fileID: 5883253008233276929}
-  - component: {fileID: 5883253008233276928}
   - component: {fileID: 5883253008233276935}
-  - component: {fileID: 5883253008233276934}
-  m_Layer: 0
+  - component: {fileID: 5796958794941984615}
+  m_Layer: 3
   m_Name: Small_Stone_1A7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -110,6 +113,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5883253009530776141}
   - {fileID: 5883253008189364257}
@@ -135,10 +139,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -163,20 +169,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &5883253008233276928
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5883253008233276932}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 2963684726494359833, guid: 8dfbfafd7cda53a459eab1c6a145077e, type: 3}
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!205 &5883253008233276935
 LODGroup:
   m_ObjectHideFlags: 0
@@ -204,8 +197,8 @@ LODGroup:
     renderers:
     - renderer: {fileID: 5883253008189364258}
   m_Enabled: 1
---- !u!135 &5883253008233276934
-SphereCollider:
+--- !u!136 &5796958794941984615
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -214,9 +207,10 @@ SphereCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.4708503
-  m_Center: {x: -0.041822717, y: 0.09859921, z: 0.06445718}
+  m_Radius: 0.13811833
+  m_Height: 0.2825102
+  m_Direction: 2
+  m_Center: {x: -0.012546822, y: 0.026443005, z: 0.019337147}
 --- !u!1 &5883253009530776140
 GameObject:
   m_ObjectHideFlags: 0
@@ -228,7 +222,7 @@ GameObject:
   - component: {fileID: 5883253009530776141}
   - component: {fileID: 5883253009530776143}
   - component: {fileID: 5883253009530776142}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Small_Stone_1A7_LOD_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -245,6 +239,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5883253008233276933}
   m_RootOrder: 0
@@ -268,10 +263,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -296,3 +293,4 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}

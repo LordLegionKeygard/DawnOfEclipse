@@ -11,10 +11,9 @@ GameObject:
   - component: {fileID: 8680055149272885816}
   - component: {fileID: 8680055149272885955}
   - component: {fileID: 8680055149272885820}
-  - component: {fileID: 8680055149272885821}
   - component: {fileID: 8680055149272885822}
-  - component: {fileID: 8680055149272885823}
-  m_Layer: 0
+  - component: {fileID: 1468360591996763026}
+  m_Layer: 3
   m_Name: Small_Stone_1A2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31,6 +30,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8680055149821605703}
   - {fileID: 8680055149712664068}
@@ -56,10 +56,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -84,20 +86,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &8680055149272885821
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8680055149272885817}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 8048368413285766735, guid: 8dfbfafd7cda53a459eab1c6a145077e, type: 3}
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!205 &8680055149272885822
 LODGroup:
   m_ObjectHideFlags: 0
@@ -125,8 +114,8 @@ LODGroup:
     renderers:
     - renderer: {fileID: 8680055149712664075}
   m_Enabled: 1
---- !u!135 &8680055149272885823
-SphereCollider:
+--- !u!136 &1468360591996763026
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -135,9 +124,10 @@ SphereCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.41162938
-  m_Center: {x: 0.04218027, y: 0.07330462, z: -0.05503662}
+  m_Radius: 0.11897378
+  m_Height: 0.24697763
+  m_Direction: 2
+  m_Center: {x: 0.012654077, y: 0.017476358, z: -0.016510978}
 --- !u!1 &8680055149712664069
 GameObject:
   m_ObjectHideFlags: 0
@@ -149,7 +139,7 @@ GameObject:
   - component: {fileID: 8680055149712664068}
   - component: {fileID: 8680055149712664074}
   - component: {fileID: 8680055149712664075}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Small_Stone_1A2_LOD_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -166,6 +156,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -0.0000000037252903, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8680055149272885816}
   m_RootOrder: 1
@@ -189,10 +180,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -217,6 +210,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &8680055149821605696
 GameObject:
   m_ObjectHideFlags: 0
@@ -228,7 +222,7 @@ GameObject:
   - component: {fileID: 8680055149821605703}
   - component: {fileID: 8680055149821605701}
   - component: {fileID: 8680055149821605702}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Small_Stone_1A2_LOD_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -245,6 +239,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8680055149272885816}
   m_RootOrder: 0
@@ -268,10 +263,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -296,3 +293,4 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}

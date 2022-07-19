@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4207628812341030554}
   - component: {fileID: 7725880804204383459}
   - component: {fileID: 3426644541934581355}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Clusters_Medium_1A3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30,6 +30,7 @@ Transform:
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5031321846787085409}
   - {fileID: 5154004492321564237}
@@ -55,10 +56,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -83,6 +86,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!64 &7725880804204383459
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -94,7 +98,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -1760076960633178793, guid: 8bf5a96dfeb987c44a38044711d7ae9d, type: 3}
 --- !u!205 &3426644541934581355
@@ -135,7 +139,7 @@ GameObject:
   - component: {fileID: 5154004492321564237}
   - component: {fileID: 4306273258489848785}
   - component: {fileID: 6075689022785694237}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Clusters_Medium_1A3_LOD_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -152,6 +156,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -0.0000018924475, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8792432047621524224}
   m_RootOrder: 1
@@ -175,10 +180,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -203,6 +210,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &8653178639973915969
 GameObject:
   m_ObjectHideFlags: 0
@@ -214,7 +222,7 @@ GameObject:
   - component: {fileID: 5031321846787085409}
   - component: {fileID: 6121328610738906304}
   - component: {fileID: 5466885018164934278}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Clusters_Medium_1A3_LOD_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -231,6 +239,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -0.0000018924475, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8792432047621524224}
   m_RootOrder: 0
@@ -254,10 +263,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -282,3 +293,4 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}

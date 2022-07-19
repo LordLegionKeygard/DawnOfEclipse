@@ -177,8 +177,8 @@ GameObject:
   - component: {fileID: 989895031458017843}
   - component: {fileID: 989895031458017848}
   - component: {fileID: 989895031458017847}
-  - component: {fileID: 989895031458017846}
   - component: {fileID: 989895031458017845}
+  - component: {fileID: 5791400610808097384}
   m_Layer: 3
   m_Name: Small_Rock_1A5
   m_TagString: Untagged
@@ -253,20 +253,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &989895031458017846
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 989895031458017842}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 6422707304574445947, guid: 8dfbfafd7cda53a459eab1c6a145077e, type: 3}
 --- !u!205 &989895031458017845
 LODGroup:
   m_ObjectHideFlags: 0
@@ -294,3 +280,17 @@ LODGroup:
     renderers:
     - renderer: {fileID: 989895030726206910}
   m_Enabled: 1
+--- !u!136 &5791400610808097384
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 989895031458017842}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.325603
+  m_Height: 0.6815268
+  m_Direction: 2
+  m_Center: {x: 0.016800284, y: 0.14198714, z: 0.013049066}

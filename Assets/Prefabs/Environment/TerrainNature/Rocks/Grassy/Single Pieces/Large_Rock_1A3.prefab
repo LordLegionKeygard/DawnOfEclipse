@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6655519093978445632}
   - component: {fileID: 6655519093978445634}
   - component: {fileID: 6655519093978445635}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Large_Rock_1A3_LOD_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28,6 +28,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6655519094778123143}
   m_RootOrder: 0
@@ -51,10 +52,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -79,6 +82,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &6655519094778123140
 GameObject:
   m_ObjectHideFlags: 0
@@ -92,8 +96,7 @@ GameObject:
   - component: {fileID: 6655519094778123147}
   - component: {fileID: 6655519094778123144}
   - component: {fileID: 6655519094778123145}
-  - component: {fileID: 6655519094778123142}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Large_Rock_1A3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -110,6 +113,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6655519093978445632}
   - {fileID: 6655519095271261159}
@@ -135,10 +139,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -163,6 +169,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!64 &6655519094778123144
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -172,9 +179,9 @@ MeshCollider:
   m_GameObject: {fileID: 6655519094778123140}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -15040051457648738, guid: 8dfbfafd7cda53a459eab1c6a145077e, type: 3}
 --- !u!205 &6655519094778123145
@@ -204,20 +211,6 @@ LODGroup:
     renderers:
     - renderer: {fileID: 6655519095271261158}
   m_Enabled: 1
---- !u!136 &6655519094778123142
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6655519094778123140}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 2.7057157
-  m_Height: 5.0329275
-  m_Direction: 1
-  m_Center: {x: 0.056205153, y: 1.670046, z: -0.26636934}
 --- !u!1 &6655519095271261156
 GameObject:
   m_ObjectHideFlags: 0
@@ -229,7 +222,7 @@ GameObject:
   - component: {fileID: 6655519095271261159}
   - component: {fileID: 6655519095271261161}
   - component: {fileID: 6655519095271261158}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Large_Rock_1A3_LOD_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -246,6 +239,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6655519094778123143}
   m_RootOrder: 1
@@ -269,10 +263,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -297,3 +293,4 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}

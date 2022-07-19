@@ -179,7 +179,6 @@ GameObject:
   - component: {fileID: 3767467381898714733}
   - component: {fileID: 3767467381898714732}
   - component: {fileID: 3767467381898714723}
-  - component: {fileID: 3767467381898714722}
   m_Layer: 3
   m_Name: Large_Rock_1A5
   m_TagString: Untagged
@@ -295,17 +294,3 @@ LODGroup:
     renderers:
     - renderer: {fileID: 3767467381348678376}
   m_Enabled: 1
---- !u!136 &3767467381898714722
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3767467381898714720}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 3.2478504
-  m_Height: 7.576631
-  m_Direction: 1
-  m_Center: {x: 0.0063000917, y: 2.582258, z: -0.1346674}

@@ -16,7 +16,7 @@ MonoBehaviour:
   Price: 250
   IsDefaultItem: 0
   IsStackable: 0
-  IsUsedItem: 0
+  UsedItemId: 0
   IsTome: 0
   IsSetEffect: 1
   Name:
@@ -32,7 +32,7 @@ MonoBehaviour:
   ArmorSetEnum: 12
   AllArmorSetInfo: {fileID: 11400000, guid: 576352ffa1b746b4c872fd49153b9308, type: 2}
   equipSlot: 1
-  armorModifier: 32
+  armorModifier: 52
   MagicArmorModifier: 0
   Meshes:
   - {fileID: 7780214833880847724, guid: c74888ef6c5fdcb4d92d0f0e51b4f193, type: 3}

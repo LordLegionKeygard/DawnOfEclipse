@@ -16,7 +16,8 @@ MonoBehaviour:
   Price: 250
   IsDefaultItem: 0
   IsStackable: 0
-  IsUsedItem: 0
+  UsedItemId: 0
+  IsTome: 0
   IsSetEffect: 1
   Name:
   - Sand Golem Bracers
@@ -31,7 +32,7 @@ MonoBehaviour:
   ArmorSetEnum: 17
   AllArmorSetInfo: {fileID: 11400000, guid: 576352ffa1b746b4c872fd49153b9308, type: 2}
   equipSlot: 10
-  armorModifier: 18
+  armorModifier: 24
   MagicArmorModifier: 0
   Meshes:
   - {fileID: 1348574481690686602, guid: 6e93c20c88cc1aa46a49464121829f84, type: 3}
@@ -44,7 +45,7 @@ MonoBehaviour:
   canChangehead: 0
   weapon: 0
   twoHandedWeapon: 0
-  shield: 0
+  extraItem: 0
   shieldBlockArmorModifier: 0
   FirstAttachmentNumber: 0
   SecondAttachmentNumber: 0

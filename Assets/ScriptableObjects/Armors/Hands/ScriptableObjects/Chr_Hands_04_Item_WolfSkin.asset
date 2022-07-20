@@ -16,7 +16,8 @@ MonoBehaviour:
   Price: 250
   IsDefaultItem: 0
   IsStackable: 0
-  IsUsedItem: 0
+  UsedItemId: 0
+  IsTome: 0
   IsSetEffect: 1
   Name:
   - Wolf Skin Gloves
@@ -31,7 +32,7 @@ MonoBehaviour:
   ArmorSetEnum: 1
   AllArmorSetInfo: {fileID: 11400000, guid: 576352ffa1b746b4c872fd49153b9308, type: 2}
   equipSlot: 6
-  armorModifier: 7
+  armorModifier: 15
   MagicArmorModifier: 0
   Meshes:
   - {fileID: 334276913682476881, guid: debfa118de988cb4990e39691a0bda40, type: 3}
@@ -44,7 +45,7 @@ MonoBehaviour:
   canChangehead: 0
   weapon: 0
   twoHandedWeapon: 0
-  shield: 0
+  extraItem: 0
   shieldBlockArmorModifier: 0
   FirstAttachmentNumber: 0
   SecondAttachmentNumber: 0

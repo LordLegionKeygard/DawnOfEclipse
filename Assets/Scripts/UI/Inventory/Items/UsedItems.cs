@@ -18,8 +18,8 @@ public enum PotionType
     Health = 0,
     Speed = 1,
     Mana = 2,
-    Mead = 3, //медовуха
-    Wine = 4, //вино
-    Ale = 5, //Эль
-    Rum = 6, //Ром
+    Mead = 3,
+    Wine = 4,
+    Ale = 5,
+    Rum = 6,
 }

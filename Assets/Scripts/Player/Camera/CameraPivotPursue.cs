@@ -11,6 +11,7 @@ public class CameraPivotPursue : MonoBehaviour
     private void OnEnable()
     {
         CustomEvents.OnCameraCanMove += CanPursue;
+        transform.position = _character.transform.position;
     }
 
     private void LateUpdate()

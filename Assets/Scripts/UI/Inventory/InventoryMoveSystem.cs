@@ -6,26 +6,10 @@ public class InventoryMoveSystem : MonoBehaviour
 {
     [SerializeField] private TransformGetSiblingIndex _transformGetSiblingIndex;
     [SerializeField] private GameObject[] _panels;
-    private int _number = 0;
+    private int _number;
     private bool _canMove;
-    private void FixedUpdate()
+    private void Update()
     {
-        if (_panels[_number].transform.position.x > 1800)
-        {
-            _panels[_number].transform.position = new Vector3(1799, _panels[_number].transform.position.y, _panels[_number].transform.position.z);           
-        }
-        if (_panels[_number].transform.position.x < 100)
-        {
-            _panels[_number].transform.position = new Vector3(101, _panels[_number].transform.position.y, _panels[_number].transform.position.z);
-        }
-        if (_panels[_number].transform.position.y > 1050)
-        {
-            _panels[_number].transform.position = new Vector3(_panels[_number].transform.position.x, 1049, _panels[_number].transform.position.z);
-        }
-        if (_panels[_number].transform.position.y < 20)
-        {
-            _panels[_number].transform.position = new Vector3(_panels[_number].transform.position.x, 21, _panels[_number].transform.position.z);
-        }
         if (!_canMove) return;
 
         _panels[_number].transform.position = Input.mousePosition;
@@ -34,6 +18,28 @@ public class InventoryMoveSystem : MonoBehaviour
     public void MoveToggle(bool state)
     {
         _canMove = (state);
+        CheckTransform();
+    }
+
+    private void CheckTransform()
+    {
+        var trans = _panels[_number].transform.position;
+        if (trans.x > Screen.width)
+        {
+            _panels[_number].transform.position = new Vector3(Screen.width - 100, trans.y, trans.z);
+        }
+        else if (trans.x < 100)
+        {
+            _panels[_number].transform.position = new Vector3(100, trans.y, trans.z);
+        }
+        else if (trans.y > Screen.height)
+        {
+            _panels[_number].transform.position = new Vector3(trans.x, Screen.height - 100, trans.z);
+        }
+        else if (trans.y < 20)
+        {
+            _panels[_number].transform.position = new Vector3(trans.x, 100, trans.z);
+        }
     }
 
     public void ChangePanelsNumber(int number)

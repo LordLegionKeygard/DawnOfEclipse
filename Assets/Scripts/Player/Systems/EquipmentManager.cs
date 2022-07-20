@@ -102,7 +102,7 @@ public class EquipmentManager : MonoBehaviour
 
         if (newItem.equipSlot == EquipmentSlot.LeftRing)
         {
-            if (_magicArmorControl.RightRingMagicArmor == 0)
+            if (_magicArmorControl.RightRingMagicArmor == DefaultArmor.Ring)
             {
                 Unequip(slotIndex + 1);
                 _currentEquipment[slotIndex + 1] = newItem;
@@ -118,7 +118,7 @@ public class EquipmentManager : MonoBehaviour
 
         if (newItem.equipSlot == EquipmentSlot.LeftEarring)
         {
-            if (_magicArmorControl.RightEarringMagicArmor == 0)
+            if (_magicArmorControl.RightEarringMagicArmor == DefaultArmor.Earring)
             {
                 Unequip(slotIndex + 1);
                 _currentEquipment[slotIndex + 1] = newItem;
@@ -141,10 +141,6 @@ public class EquipmentManager : MonoBehaviour
                 _onEquipmentChanged.Invoke(newItem, oldItem);
             }
         }
-
-
-
-
 
         _currentEquipment[slotIndex] = newItem;
         AttachToMesh(newItem, slotIndex);

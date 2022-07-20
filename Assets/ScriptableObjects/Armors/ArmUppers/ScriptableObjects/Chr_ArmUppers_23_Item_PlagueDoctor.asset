@@ -16,7 +16,8 @@ MonoBehaviour:
   Price: 250
   IsDefaultItem: 0
   IsStackable: 0
-  IsUsedItem: 0
+  UsedItemId: 0
+  IsTome: 0
   IsSetEffect: 1
   Name:
   - Plague Doctor Forearms
@@ -31,7 +32,7 @@ MonoBehaviour:
   ArmorSetEnum: 6
   AllArmorSetInfo: {fileID: 11400000, guid: 576352ffa1b746b4c872fd49153b9308, type: 2}
   equipSlot: 8
-  armorModifier: 4
+  armorModifier: 9
   MagicArmorModifier: 0
   Meshes:
   - {fileID: 2049716478299212711, guid: 38e8083383c60c748baf1f9646107491, type: 3}
@@ -44,7 +45,7 @@ MonoBehaviour:
   canChangehead: 0
   weapon: 0
   twoHandedWeapon: 0
-  shield: 0
+  extraItem: 0
   shieldBlockArmorModifier: 0
   FirstAttachmentNumber: 0
   SecondAttachmentNumber: 0

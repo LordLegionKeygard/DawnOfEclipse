@@ -16,7 +16,8 @@ MonoBehaviour:
   Price: 250
   IsDefaultItem: 0
   IsStackable: 0
-  IsUsedItem: 0
+  UsedItemId: 0
+  IsTome: 0
   IsSetEffect: 1
   Name:
   - Plague Doctor Gloves
@@ -31,7 +32,7 @@ MonoBehaviour:
   ArmorSetEnum: 6
   AllArmorSetInfo: {fileID: 11400000, guid: 576352ffa1b746b4c872fd49153b9308, type: 2}
   equipSlot: 6
-  armorModifier: 4
+  armorModifier: 12
   MagicArmorModifier: 0
   Meshes:
   - {fileID: 7737027158091597231, guid: afbdca7edf56205459cdeb97885c259f, type: 3}
@@ -44,7 +45,7 @@ MonoBehaviour:
   canChangehead: 0
   weapon: 0
   twoHandedWeapon: 0
-  shield: 0
+  extraItem: 0
   shieldBlockArmorModifier: 0
   FirstAttachmentNumber: 0
   SecondAttachmentNumber: 0

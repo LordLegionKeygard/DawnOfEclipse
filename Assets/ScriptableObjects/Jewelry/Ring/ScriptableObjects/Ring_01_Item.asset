@@ -16,7 +16,8 @@ MonoBehaviour:
   Price: 250
   IsDefaultItem: 0
   IsStackable: 0
-  IsUsedItem: 0
+  UsedItemId: 0
+  IsTome: 0
   IsSetEffect: 0
   Name:
   - Ring of Darkness
@@ -24,7 +25,6 @@ MonoBehaviour:
   ItemType:
   - Accessories
   - "\u0410\u043A\u0441\u0435\u0441\u0441\u0443\u0430\u0440\u044B"
-  Amount: 0
   ItemInfo:
   - 'M. Def. : 1'
   - "\u041C\u0430\u0433. \u0417\u0430\u0449. : 1"
@@ -32,7 +32,7 @@ MonoBehaviour:
   AllArmorSetInfo: {fileID: 0}
   equipSlot: 22
   armorModifier: 0
-  MagicArmorModifier: 1
+  MagicArmorModifier: 10
   Meshes: []
   prefab: {fileID: 0}
   hatNumber: 0
@@ -40,7 +40,7 @@ MonoBehaviour:
   canChangehead: 0
   weapon: 0
   twoHandedWeapon: 0
-  shield: 0
+  extraItem: 0
   shieldBlockArmorModifier: 0
   FirstAttachmentNumber: 0
   SecondAttachmentNumber: 0

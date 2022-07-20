@@ -16,7 +16,8 @@ MonoBehaviour:
   Price: 250
   IsDefaultItem: 0
   IsStackable: 0
-  IsUsedItem: 0
+  UsedItemId: 0
+  IsTome: 0
   IsSetEffect: 1
   Name:
   - Dark Elven Gloves
@@ -31,7 +32,7 @@ MonoBehaviour:
   ArmorSetEnum: 18
   AllArmorSetInfo: {fileID: 11400000, guid: 576352ffa1b746b4c872fd49153b9308, type: 2}
   equipSlot: 6
-  armorModifier: 12
+  armorModifier: 20
   MagicArmorModifier: 0
   Meshes:
   - {fileID: 3935021125678446923, guid: 92988ab3612c44f49abd64fa8fe45e92, type: 3}
@@ -44,7 +45,7 @@ MonoBehaviour:
   canChangehead: 0
   weapon: 0
   twoHandedWeapon: 0
-  shield: 0
+  extraItem: 0
   shieldBlockArmorModifier: 0
   FirstAttachmentNumber: 0
   SecondAttachmentNumber: 0

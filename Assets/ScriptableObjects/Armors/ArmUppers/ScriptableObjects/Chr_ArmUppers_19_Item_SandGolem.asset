@@ -16,7 +16,8 @@ MonoBehaviour:
   Price: 250
   IsDefaultItem: 0
   IsStackable: 0
-  IsUsedItem: 0
+  UsedItemId: 0
+  IsTome: 0
   IsSetEffect: 1
   Name:
   - Sand Golem Forearms
@@ -31,7 +32,7 @@ MonoBehaviour:
   ArmorSetEnum: 17
   AllArmorSetInfo: {fileID: 11400000, guid: 576352ffa1b746b4c872fd49153b9308, type: 2}
   equipSlot: 8
-  armorModifier: 10
+  armorModifier: 15
   MagicArmorModifier: 0
   Meshes:
   - {fileID: 6284164393026868083, guid: dade0b1a755008c459764cd5704c52f7, type: 3}
@@ -44,7 +45,7 @@ MonoBehaviour:
   canChangehead: 0
   weapon: 0
   twoHandedWeapon: 0
-  shield: 0
+  extraItem: 0
   shieldBlockArmorModifier: 0
   FirstAttachmentNumber: 0
   SecondAttachmentNumber: 0

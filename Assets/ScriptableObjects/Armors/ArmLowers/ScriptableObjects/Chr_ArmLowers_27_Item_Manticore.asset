@@ -16,7 +16,8 @@ MonoBehaviour:
   Price: 250
   IsDefaultItem: 0
   IsStackable: 0
-  IsUsedItem: 0
+  UsedItemId: 0
+  IsTome: 0
   IsSetEffect: 1
   Name:
   - Manticore Skin Bracers
@@ -31,7 +32,7 @@ MonoBehaviour:
   ArmorSetEnum: 5
   AllArmorSetInfo: {fileID: 11400000, guid: 576352ffa1b746b4c872fd49153b9308, type: 2}
   equipSlot: 10
-  armorModifier: 4
+  armorModifier: 10
   MagicArmorModifier: 0
   Meshes:
   - {fileID: 6478187663224322003, guid: 910043cf2662a3c46a6ec61ca7b2c8b1, type: 3}
@@ -44,7 +45,7 @@ MonoBehaviour:
   canChangehead: 0
   weapon: 0
   twoHandedWeapon: 0
-  shield: 0
+  extraItem: 0
   shieldBlockArmorModifier: 0
   FirstAttachmentNumber: 0
   SecondAttachmentNumber: 0

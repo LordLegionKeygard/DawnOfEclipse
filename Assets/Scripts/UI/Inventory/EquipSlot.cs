@@ -30,7 +30,7 @@ public class EquipSlot : Slots
         ChangeSetEffectTextColor(new Color(0.3882353f, 0.2705882f, 0, 1));
         IsItemSelect = false;
         CustomEvents.FireSelectItem(false);
-        CustomEvents.FireTooltipToggle(false,0);
+        CustomEvents.FireTooltipToggle(false, 0);
         SelectSlot(false);
         if (Inventory.InventoryStatic.FullInventory)
         {
@@ -45,28 +45,27 @@ public class EquipSlot : Slots
         switch ((int)_equipmentSlot)
         {
             case 0:
-                _armorControl.HeadSlotArmor = 0;
+                _armorControl.HeadSlotArmor = DefaultArmor.HeadSlot;
                 _equipmentManager.AllHeadElementsToggle(true);
                 _equipmentManager.InActiveAllHeadAttachment();
                 break;
             case 1:
-                _equipmentManager.Equip(_equipmentManager.DefaultEquipment[0]); //torso
+                _equipmentManager.Equip(_equipmentManager.DefaultEquipment[0]);
                 break;
             case 2:
-                _equipmentManager.Equip(_equipmentManager.DefaultEquipment[1]); //hips
+                _equipmentManager.Equip(_equipmentManager.DefaultEquipment[1]);
                 break;
             case 4:
-                // _equipmentManager.Equip(_equipmentManager.DefaultEquipment[5]);
+                _armorControl.LegsArmor = DefaultArmor.Legs;
                 break;
             case 6:
-                // _equipmentManager.Equip(_equipmentManager.DefaultEquipment[2]);
-                _armorControl.HandsArmor = 0;
+                _armorControl.HandsArmor = DefaultArmor.Hands;
                 break;
             case 8:
-                // _equipmentManager.Equip(_equipmentManager.DefaultEquipment[4]);
+                _armorControl.ArmUppers = DefaultArmor.ArmUppers;
                 break;
             case 10:
-                // _equipmentManager.Equip(_equipmentManager.DefaultEquipment[3]);
+                _armorControl.ArmLowers = DefaultArmor.ArmLowers;
                 break;
             case 11:
                 _magicArmorControl.BackAttachmentMagicArmor = 0;
@@ -100,19 +99,19 @@ public class EquipSlot : Slots
                 _armorControl.ShieldArmorPassive = 0;
                 break;
             case 22:
-                _magicArmorControl.LeftRingMagicArmor = 0;
+                _magicArmorControl.LeftRingMagicArmor = DefaultArmor.Ring;
                 break;
             case 23:
-                _magicArmorControl.RightRingMagicArmor = 0;
+                _magicArmorControl.RightRingMagicArmor = DefaultArmor.Ring;
                 break;
             case 24:
-                _magicArmorControl.LeftEarringMagicArmor = 0;
+                _magicArmorControl.LeftEarringMagicArmor = DefaultArmor.Earring;
                 break;
             case 25:
-                _magicArmorControl.RightEarringMagicArmor = 0;
+                _magicArmorControl.RightEarringMagicArmor = DefaultArmor.Earring;
                 break;
             case 26:
-                _magicArmorControl.NecklaceMagicArmor = 0;
+                _magicArmorControl.NecklaceMagicArmor = DefaultArmor.Necklace;
                 break;
         }
         _armorControl.UpdateArmor();
@@ -132,25 +131,26 @@ public class EquipSlot : Slots
             SelectItemInfo.UpdateItemInfoText(Item.Name[Language.LanguageNumber], Item.ItemType[Language.LanguageNumber], Item.ItemInfo[Language.LanguageNumber]);
             if (Item.IsSetEffect)
             {
+                var p = Item.AllArmorSetInfo.intArray[Language.LanguageNumber];
                 SelectItemInfo.UpdateItemSetEffectInfoText
-               (Item.AllArmorSetInfo.intArray[Language.LanguageNumber].HelmetInfo[(int)Item.ArmorSetEnum],
-                Item.AllArmorSetInfo.intArray[Language.LanguageNumber].ShouldersInfo[(int)Item.ArmorSetEnum],
-                Item.AllArmorSetInfo.intArray[Language.LanguageNumber].TorsoInfo[(int)Item.ArmorSetEnum],
-                Item.AllArmorSetInfo.intArray[Language.LanguageNumber].ForearmsInfo[(int)Item.ArmorSetEnum],
-                Item.AllArmorSetInfo.intArray[Language.LanguageNumber].ElbowsInfo[(int)Item.ArmorSetEnum],
-                Item.AllArmorSetInfo.intArray[Language.LanguageNumber].BracersInfo[(int)Item.ArmorSetEnum],
-                Item.AllArmorSetInfo.intArray[Language.LanguageNumber].GlovesInfo[(int)Item.ArmorSetEnum],
-                Item.AllArmorSetInfo.intArray[Language.LanguageNumber].HipsInfo[(int)Item.ArmorSetEnum],
-                Item.AllArmorSetInfo.intArray[Language.LanguageNumber].KneesInfo[(int)Item.ArmorSetEnum],
-                Item.AllArmorSetInfo.intArray[Language.LanguageNumber].BootsInfo[(int)Item.ArmorSetEnum],
-                Item.AllArmorSetInfo.intArray[Language.LanguageNumber].ThreePiecesInfo[(int)Item.ArmorSetEnum],
-                Item.AllArmorSetInfo.intArray[Language.LanguageNumber].FourPiecesInfo[(int)Item.ArmorSetEnum],
-                Item.AllArmorSetInfo.intArray[Language.LanguageNumber].FivePiecesInfo[(int)Item.ArmorSetEnum],
-                Item.AllArmorSetInfo.intArray[Language.LanguageNumber].SixPiecesInfo[(int)Item.ArmorSetEnum],
-                Item.AllArmorSetInfo.intArray[Language.LanguageNumber].SevenPiecesInfo[(int)Item.ArmorSetEnum],
-                Item.AllArmorSetInfo.intArray[Language.LanguageNumber].EightPiecesInfo[(int)Item.ArmorSetEnum],
-                Item.AllArmorSetInfo.intArray[Language.LanguageNumber].NinePiecesInfo[(int)Item.ArmorSetEnum],
-                Item.AllArmorSetInfo.intArray[Language.LanguageNumber].TenPiecesInfo[(int)Item.ArmorSetEnum]);
+               (p.HelmetInfo[(int)Item.ArmorSetEnum],
+                p.ShouldersInfo[(int)Item.ArmorSetEnum],
+                p.TorsoInfo[(int)Item.ArmorSetEnum],
+                p.ForearmsInfo[(int)Item.ArmorSetEnum],
+                p.ElbowsInfo[(int)Item.ArmorSetEnum],
+                p.BracersInfo[(int)Item.ArmorSetEnum],
+                p.GlovesInfo[(int)Item.ArmorSetEnum],
+                p.HipsInfo[(int)Item.ArmorSetEnum],
+                p.KneesInfo[(int)Item.ArmorSetEnum],
+                p.BootsInfo[(int)Item.ArmorSetEnum],
+                p.ThreePiecesInfo[(int)Item.ArmorSetEnum],
+                p.FourPiecesInfo[(int)Item.ArmorSetEnum],
+                p.FivePiecesInfo[(int)Item.ArmorSetEnum],
+                p.SixPiecesInfo[(int)Item.ArmorSetEnum],
+                p.SevenPiecesInfo[(int)Item.ArmorSetEnum],
+                p.EightPiecesInfo[(int)Item.ArmorSetEnum],
+                p.NinePiecesInfo[(int)Item.ArmorSetEnum],
+                p.TenPiecesInfo[(int)Item.ArmorSetEnum]);
             }
             else
             {
@@ -158,7 +158,7 @@ public class EquipSlot : Slots
             }
             UpdateSelectItemInfoTransform();
             CustomEvents.FireCheckEquipItemSetNumber((int)Item.ArmorSetEnum);
-            CustomEvents.FireTooltipToggle(true,0);
+            CustomEvents.FireTooltipToggle(true, 0);
         }
 
         else

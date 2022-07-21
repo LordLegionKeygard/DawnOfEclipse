@@ -16,7 +16,8 @@ MonoBehaviour:
   Price: 250
   IsDefaultItem: 0
   IsStackable: 0
-  IsUsedItem: 0
+  UsedItemId: 0
+  IsTome: 0
   IsSetEffect: 1
   Name:
   - Bandit Boots
@@ -38,12 +39,7 @@ MonoBehaviour:
   - {fileID: 1945530838732896698, guid: b9aeffb18eb38de4f8d85887a5b446f3, type: 3}
   - {fileID: 7604592110160971999, guid: f9c80bb7a82d17f46897d18c8f2e0cd5, type: 3}
   prefab: {fileID: 0}
-  hatNumber: 0
-  noHair: 0
-  canChangehead: 0
   weapon: 0
   twoHandedWeapon: 0
-  shield: 0
+  extraItem: 0
   shieldBlockArmorModifier: 0
-  FirstAttachmentNumber: 0
-  SecondAttachmentNumber: 0

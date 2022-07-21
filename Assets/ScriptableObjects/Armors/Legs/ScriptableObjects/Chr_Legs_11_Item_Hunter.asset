@@ -16,7 +16,8 @@ MonoBehaviour:
   Price: 250
   IsDefaultItem: 0
   IsStackable: 0
-  IsUsedItem: 0
+  UsedItemId: 0
+  IsTome: 0
   IsSetEffect: 1
   Name:
   - Hunter Boots
@@ -38,12 +39,7 @@ MonoBehaviour:
   - {fileID: 3744370270508535933, guid: 5f4307ea2cb3c5646ac96936b2c2f2fd, type: 3}
   - {fileID: 5011324708549398636, guid: 07f9f8caeaf7ca14394928c9816d8de4, type: 3}
   prefab: {fileID: 0}
-  hatNumber: 0
-  noHair: 0
-  canChangehead: 0
   weapon: 0
   twoHandedWeapon: 0
-  shield: 0
+  extraItem: 0
   shieldBlockArmorModifier: 0
-  FirstAttachmentNumber: 0
-  SecondAttachmentNumber: 0

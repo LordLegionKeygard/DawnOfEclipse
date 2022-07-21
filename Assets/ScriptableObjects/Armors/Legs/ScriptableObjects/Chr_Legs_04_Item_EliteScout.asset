@@ -16,7 +16,8 @@ MonoBehaviour:
   Price: 250
   IsDefaultItem: 0
   IsStackable: 0
-  IsUsedItem: 0
+  UsedItemId: 0
+  IsTome: 0
   IsSetEffect: 1
   Name:
   - Elite Scout Boots
@@ -39,12 +40,7 @@ MonoBehaviour:
   - {fileID: 7118144567740127464, guid: 9d21cdefe5d99dc40894c8ae3c1364f4, type: 3}
   - {fileID: 4980438202139524164, guid: b6100782b21b62d438bc395f89f66ee8, type: 3}
   prefab: {fileID: 0}
-  hatNumber: 0
-  noHair: 0
-  canChangehead: 0
   weapon: 0
   twoHandedWeapon: 0
-  shield: 0
+  extraItem: 0
   shieldBlockArmorModifier: 0
-  FirstAttachmentNumber: 0
-  SecondAttachmentNumber: 0

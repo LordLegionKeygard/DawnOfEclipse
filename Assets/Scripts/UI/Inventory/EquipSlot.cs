@@ -46,8 +46,6 @@ public class EquipSlot : Slots
         {
             case 0:
                 _armorControl.HeadSlotArmor = DefaultArmor.HeadSlot;
-                _equipmentManager.AllHeadElementsToggle(true);
-                _equipmentManager.InActiveAllHeadAttachment();
                 break;
             case 1:
                 _equipmentManager.Equip(_equipmentManager.DefaultEquipment[0]);
@@ -87,6 +85,7 @@ public class EquipSlot : Slots
                 _equipmentManager.Unequip(29);
                 _equipmentManager.Unequip(30);
                 _equipmentManager.Unequip(32);
+                _equipmentManager.Unequip(33);
                 if (_equipmentManager._leftHandSlotListener.enabled == false)
                 {
                     _equipmentManager.UnequipTwoHandedWeaponFromShield();

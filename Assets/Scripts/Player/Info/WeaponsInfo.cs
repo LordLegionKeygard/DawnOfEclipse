@@ -36,26 +36,6 @@ public class WeaponsInfo : MonoBehaviour
         StaminaRoll = 12;
     }
 
-    public void CurvedSword()
-    {
-        _fistDamageColliderController.FistDamageColliderToggle(false);
-        TimeR1 = 0;
-        TimeR2 = 0;
-        StaminaAttack = 10;
-        StaminaJump = 26;
-        StaminaRoll = 10;
-    }
-
-    public void CurvedGreatSword()
-    {
-        _fistDamageColliderController.FistDamageColliderToggle(false);
-        TimeR1 = 0;
-        TimeR2 = 0;
-        StaminaAttack = 15;
-        StaminaJump = 35;
-        StaminaRoll = 15;
-    }
-
     public void Daggers()
     {
         _fistDamageColliderController.FistDamageColliderToggle(false);
@@ -66,14 +46,14 @@ public class WeaponsInfo : MonoBehaviour
         StaminaRoll = 7;
     }
 
-    public void Fists()
+    public void Claws()
     {
         _fistDamageColliderController.FistDamageColliderToggle(false);
-        TimeR1 = 0;
-        TimeR2 = 0;
-        StaminaAttack = 9;
-        StaminaJump = 23;
-        StaminaRoll = 9;
+        TimeR1 = 0.4f;
+        TimeR2 = 0.5f;
+        StaminaAttack = 7;
+        StaminaJump = 20;
+        StaminaRoll = 7;
     }
 
     public void GreatHammer()
@@ -105,30 +85,11 @@ public class WeaponsInfo : MonoBehaviour
         StaminaRoll = 15;
     }
 
-    public void Halberd()
-    {
-        _fistDamageColliderController.FistDamageColliderToggle(false);
-        TimeR1 = 0;
-        TimeR2 = 0;
-        StaminaAttack = 15;
-        StaminaJump = 35;
-        StaminaRoll = 15;
-    }
-
     public void Hammer()
     {
         _fistDamageColliderController.FistDamageColliderToggle(false);
         TimeR1 = 0.3f;
         TimeR2 = 0.5f;
-        StaminaAttack = 12;
-        StaminaJump = 32;
-        StaminaRoll = 12;
-    }
-    public void Katana()
-    {
-        _fistDamageColliderController.FistDamageColliderToggle(false);
-        TimeR1 = 0;
-        TimeR2 = 0;
         StaminaAttack = 12;
         StaminaJump = 32;
         StaminaRoll = 12;
@@ -151,25 +112,6 @@ public class WeaponsInfo : MonoBehaviour
         StaminaAttack = 10;
         StaminaJump = 26;
         StaminaRoll = 10;
-    }
-
-    public void PiercingSword()
-    {
-        _fistDamageColliderController.FistDamageColliderToggle(false);
-        TimeR1 = 0;
-        TimeR2 = 0;
-        StaminaAttack = 10;
-        StaminaJump = 26;
-        StaminaRoll = 10;
-    }
-    public void UltraGreatSword()
-    {
-        _fistDamageColliderController.FistDamageColliderToggle(false);
-        TimeR1 = 0;
-        TimeR2 = 0;
-        StaminaAttack = 22;
-        StaminaJump = 45;
-        StaminaRoll = 22;
     }
 
     public void Staff()

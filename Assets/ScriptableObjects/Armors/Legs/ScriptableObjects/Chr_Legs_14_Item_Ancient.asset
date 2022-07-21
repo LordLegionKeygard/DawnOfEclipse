@@ -16,7 +16,8 @@ MonoBehaviour:
   Price: 250
   IsDefaultItem: 0
   IsStackable: 0
-  IsUsedItem: 0
+  UsedItemId: 0
+  IsTome: 0
   IsSetEffect: 1
   Name:
   - Ancient Boots
@@ -38,12 +39,7 @@ MonoBehaviour:
   - {fileID: 3286123036909484741, guid: 1cbd7efa8e8448841862f17a09442f99, type: 3}
   - {fileID: 6621579217926583954, guid: 35abd3e8c9083a544a924b6405168412, type: 3}
   prefab: {fileID: 0}
-  hatNumber: 0
-  noHair: 0
-  canChangehead: 0
   weapon: 0
   twoHandedWeapon: 0
-  shield: 0
+  extraItem: 0
   shieldBlockArmorModifier: 0
-  FirstAttachmentNumber: 0
-  SecondAttachmentNumber: 0

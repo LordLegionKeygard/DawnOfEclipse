@@ -1,36 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1560239521
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1560239522}
-  m_Layer: 13
-  m_Name: SpellFirePoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1560239522
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1560239521}
-  m_LocalRotation: {x: 0.0016405712, y: 0.27288327, z: -0.013095959, w: 0.9619566}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 5466549628804280412}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0.59, y: 31.668, z: -1.393}
 --- !u!1 &436638572290608816
 GameObject:
   m_ObjectHideFlags: 0
@@ -175,7 +144,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 094f636ea08643e4f84c6e304584357d, type: 2}
+  - {fileID: 2100000, guid: 99a0f4dcafff86f4d83c0cf848904fdc, type: 2}
+  - {fileID: 2100000, guid: 193659febb5895042882469b9be95c47, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -315,7 +285,6 @@ Transform:
   - {fileID: 642925248898584148}
   - {fileID: 556295049143667200}
   - {fileID: 6195517354861605375}
-  - {fileID: 1560239522}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

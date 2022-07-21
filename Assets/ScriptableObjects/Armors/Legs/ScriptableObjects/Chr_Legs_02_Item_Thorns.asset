@@ -16,7 +16,8 @@ MonoBehaviour:
   Price: 250
   IsDefaultItem: 0
   IsStackable: 0
-  IsUsedItem: 0
+  UsedItemId: 0
+  IsTome: 0
   IsSetEffect: 1
   Name:
   - Thorns Boots
@@ -38,12 +39,7 @@ MonoBehaviour:
   - {fileID: 787519533494539417, guid: 86525d219b41d374aaf83f680bf41912, type: 3}
   - {fileID: 5918444147662411552, guid: e8676cabb9e97fe4fabad5f5db6dcf08, type: 3}
   prefab: {fileID: 0}
-  hatNumber: 0
-  noHair: 0
-  canChangehead: 0
   weapon: 0
   twoHandedWeapon: 0
-  shield: 0
+  extraItem: 0
   shieldBlockArmorModifier: 0
-  FirstAttachmentNumber: 0
-  SecondAttachmentNumber: 0

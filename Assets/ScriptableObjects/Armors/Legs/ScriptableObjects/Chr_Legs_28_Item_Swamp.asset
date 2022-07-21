@@ -16,7 +16,8 @@ MonoBehaviour:
   Price: 250
   IsDefaultItem: 0
   IsStackable: 0
-  IsUsedItem: 0
+  UsedItemId: 0
+  IsTome: 0
   IsSetEffect: 1
   Name:
   - Swamp Boots
@@ -38,12 +39,7 @@ MonoBehaviour:
   - {fileID: 7505127632129283711, guid: cf91a18b5b4382d45ba3dfba1e9b6174, type: 3}
   - {fileID: 5298388228557127627, guid: f28afbcb379e93644969e4e44e74b0f1, type: 3}
   prefab: {fileID: 0}
-  hatNumber: 0
-  noHair: 0
-  canChangehead: 0
   weapon: 0
   twoHandedWeapon: 0
-  shield: 0
+  extraItem: 0
   shieldBlockArmorModifier: 0
-  FirstAttachmentNumber: 0
-  SecondAttachmentNumber: 0

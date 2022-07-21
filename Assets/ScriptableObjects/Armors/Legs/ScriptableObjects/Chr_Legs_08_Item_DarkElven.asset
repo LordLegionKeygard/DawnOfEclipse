@@ -16,7 +16,8 @@ MonoBehaviour:
   Price: 250
   IsDefaultItem: 0
   IsStackable: 0
-  IsUsedItem: 0
+  UsedItemId: 0
+  IsTome: 0
   IsSetEffect: 1
   Name:
   - Dark Elven Boots
@@ -38,12 +39,7 @@ MonoBehaviour:
   - {fileID: 7505127632129283711, guid: a6e28a45efdaf51469710504e3ac9c88, type: 3}
   - {fileID: 5298388228557127627, guid: 205cac9ca3863694d9d434cfacafa017, type: 3}
   prefab: {fileID: 0}
-  hatNumber: 0
-  noHair: 0
-  canChangehead: 0
   weapon: 0
   twoHandedWeapon: 0
-  shield: 0
+  extraItem: 0
   shieldBlockArmorModifier: 0
-  FirstAttachmentNumber: 0
-  SecondAttachmentNumber: 0

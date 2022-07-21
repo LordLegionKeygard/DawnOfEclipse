@@ -16,7 +16,8 @@ MonoBehaviour:
   Price: 250
   IsDefaultItem: 0
   IsStackable: 0
-  IsUsedItem: 0
+  UsedItemId: 0
+  IsTome: 0
   IsSetEffect: 1
   Name:
   - Desert Boots
@@ -38,12 +39,7 @@ MonoBehaviour:
   - {fileID: 7118144567740127464, guid: 288dba72046860a47adcda1d16601dc0, type: 3}
   - {fileID: 4980438202139524164, guid: 55bfd09be4054a945a5bb017b87323d0, type: 3}
   prefab: {fileID: 0}
-  hatNumber: 0
-  noHair: 0
-  canChangehead: 0
   weapon: 0
   twoHandedWeapon: 0
-  shield: 0
+  extraItem: 0
   shieldBlockArmorModifier: 0
-  FirstAttachmentNumber: 0
-  SecondAttachmentNumber: 0

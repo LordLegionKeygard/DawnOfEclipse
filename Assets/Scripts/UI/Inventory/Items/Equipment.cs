@@ -10,16 +10,11 @@ public class Equipment : Item
     public int MagicArmorModifier;
     public SkinnedMeshRenderer[] Meshes;
     public GameObject prefab;
-    public int hatNumber;
-    public int noHair; // 0 = withHair, 1 = noHair & noEars, 2 = fullHelmet(noAll)
-    public bool canChangehead;
     public bool weapon;
     public bool twoHandedWeapon;
     public bool extraItem;
     public int shieldBlockArmorModifier;
-    public int FirstAttachmentNumber;
-    public int SecondAttachmentNumber;
-    
+
     public override void Use()
     {
         base.Use();
@@ -62,4 +57,5 @@ public enum EquipmentSlot
     Bow = 30,
     QuiverArrow = 31,
     Spear = 32,
+    Claws = 33,
 }

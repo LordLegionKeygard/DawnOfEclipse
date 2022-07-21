@@ -16,7 +16,8 @@ MonoBehaviour:
   Price: 250
   IsDefaultItem: 0
   IsStackable: 0
-  IsUsedItem: 0
+  UsedItemId: 0
+  IsTome: 0
   IsSetEffect: 1
   Name:
   - Memorable Boots
@@ -38,12 +39,7 @@ MonoBehaviour:
   - {fileID: 3351033010041255440, guid: e209c9154cefbc640b7eaa5fc719ecd6, type: 3}
   - {fileID: 6255451817788644317, guid: a9e27efd29c27e14295c50a263ae67ef, type: 3}
   prefab: {fileID: 0}
-  hatNumber: 0
-  noHair: 0
-  canChangehead: 0
   weapon: 0
   twoHandedWeapon: 0
-  shield: 0
+  extraItem: 0
   shieldBlockArmorModifier: 0
-  FirstAttachmentNumber: 0
-  SecondAttachmentNumber: 0

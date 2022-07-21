@@ -16,7 +16,8 @@ MonoBehaviour:
   Price: 250
   IsDefaultItem: 0
   IsStackable: 0
-  IsUsedItem: 0
+  UsedItemId: 0
+  IsTome: 0
   IsSetEffect: 1
   Name:
   - Manticore Skin Boots
@@ -39,12 +40,7 @@ MonoBehaviour:
   - {fileID: 3744370270508535933, guid: a7c4c54f389a93048b351d314c9efbe5, type: 3}
   - {fileID: 5011324708549398636, guid: f58a3519f603c0649b768d2ed29450ab, type: 3}
   prefab: {fileID: 0}
-  hatNumber: 0
-  noHair: 0
-  canChangehead: 0
   weapon: 0
   twoHandedWeapon: 0
-  shield: 0
+  extraItem: 0
   shieldBlockArmorModifier: 0
-  FirstAttachmentNumber: 0
-  SecondAttachmentNumber: 0

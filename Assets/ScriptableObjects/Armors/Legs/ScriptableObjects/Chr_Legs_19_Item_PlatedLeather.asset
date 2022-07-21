@@ -16,7 +16,8 @@ MonoBehaviour:
   Price: 250
   IsDefaultItem: 0
   IsStackable: 0
-  IsUsedItem: 0
+  UsedItemId: 0
+  IsTome: 0
   IsSetEffect: 1
   Name:
   - Plated Leather Boots
@@ -39,12 +40,7 @@ MonoBehaviour:
   - {fileID: 5162142188130540641, guid: 8f7dc819fc939f0419d3c0b2853ca709, type: 3}
   - {fileID: 3092929759128288430, guid: 8c902bd96848cb648860a8c6ad24ad24, type: 3}
   prefab: {fileID: 0}
-  hatNumber: 0
-  noHair: 0
-  canChangehead: 0
   weapon: 0
   twoHandedWeapon: 0
-  shield: 0
+  extraItem: 0
   shieldBlockArmorModifier: 0
-  FirstAttachmentNumber: 0
-  SecondAttachmentNumber: 0

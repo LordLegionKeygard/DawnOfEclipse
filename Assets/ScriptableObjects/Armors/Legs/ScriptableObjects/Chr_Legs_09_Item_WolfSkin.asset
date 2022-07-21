@@ -16,7 +16,8 @@ MonoBehaviour:
   Price: 250
   IsDefaultItem: 0
   IsStackable: 0
-  IsUsedItem: 0
+  UsedItemId: 0
+  IsTome: 0
   IsSetEffect: 1
   Name:
   - Wolf Skin Boots
@@ -39,12 +40,7 @@ MonoBehaviour:
   - {fileID: 3339615522613617468, guid: 36fd0fd616f0c6e448207445658c69b5, type: 3}
   - {fileID: 7523457566410887920, guid: df4b22e079103c64191d888412eb13ff, type: 3}
   prefab: {fileID: 0}
-  hatNumber: 0
-  noHair: 0
-  canChangehead: 0
   weapon: 0
   twoHandedWeapon: 0
-  shield: 0
+  extraItem: 0
   shieldBlockArmorModifier: 0
-  FirstAttachmentNumber: 0
-  SecondAttachmentNumber: 0

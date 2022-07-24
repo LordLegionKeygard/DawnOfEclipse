@@ -16,7 +16,8 @@ MonoBehaviour:
   Price: 250
   IsDefaultItem: 0
   IsStackable: 0
-  IsUsedItem: 0
+  UsedItemId: 0
+  IsTome: 0
   IsSetEffect: 0
   Name:
   - Bearskin Cloak
@@ -25,7 +26,6 @@ MonoBehaviour:
   ItemType:
   - Cloack
   - "\u041F\u043B\u0430\u0449"
-  Amount: 0
   ItemInfo:
   - 'M. Def. : 4'
   - "\u041C\u0430\u0433. \u0417\u0430\u0449. : 4"
@@ -35,14 +35,9 @@ MonoBehaviour:
   armorModifier: 0
   MagicArmorModifier: 4
   Meshes:
-  - {fileID: 6067311284788868895, guid: a3103115ec8071a46a928828a17f57d6, type: 3}
+  - {fileID: -4251069529235103759, guid: b17dde67ce99d27498c6f1fd9830d890, type: 3}
   prefab: {fileID: 0}
-  hatNumber: 0
-  noHair: 0
-  canChangehead: 0
   weapon: 0
   twoHandedWeapon: 0
-  shield: 0
+  extraItem: 0
   shieldBlockArmorModifier: 0
-  FirstAttachmentNumber: 0
-  SecondAttachmentNumber: 0
